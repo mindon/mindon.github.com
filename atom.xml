@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-02-20T16:03:49+08:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[Mindon.IDEA Blog]]></title>
+  <link href="http://mindon.github.com/atom.xml" rel="self"/>
+  <link href="http://mindon.github.com/"/>
+  <updated>2012-02-20T16:54:44+08:00</updated>
+  <id>http://mindon.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Mindon Feng]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
+    <link href="http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/"/>
+    <updated>2012-02-20T16:39:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start</id>
+    <content type="html"><![CDATA[<p>Frameworks &amp; tools for web developer.</p>
+
+<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in &#8230;</p>
+
+<p>Learning web tech &amp; apply them to solve daily problems!</p>
+
+<p>Air off, Mind on ~ :-) 2012</p>
+]]></content>
+  </entry>
   
 </feed>
