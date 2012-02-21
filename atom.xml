@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Mindon.IDEA Blog]]></title>
+  <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-20T16:54:44+08:00</updated>
+  <updated>2012-02-21T13:30:45+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Picking the right NoSQL Database]]></title>
+    <link href="http://mindon.github.com/blog/2012/02/21/nosql-databases/"/>
+    <updated>2012-02-21T13:22:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/02/21/nosql-databases</id>
+    <content type="html"><![CDATA[<p>NoSQL = Not Only SQL</p>
+
+<p>Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison
+http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis</p>
+
+<p>8种Nosql数据库系统对比
+http://article.yeeyan.org/view/271351/239915</p>
+
+<p>Picking the right NoSQL database tool
+http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/</p>
+
+<ol>
+<li>Key-values Stores.
+Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB</li>
+</ol>
+
+
+<p>Content caching (Focus on scaling to huge amounts of data, designed to handle massive load), logging, etc.</p>
+
+<p>Strengths: Fast lookups
+Weaknesses: Stored data has no schema</p>
+
+<ol>
+<li>Column Family Stores.
+Cassandra, HBase, Riak</li>
+</ol>
+
+
+<p>Distributed file systems</p>
+
+<p>Strengths: Fast lookups, good distributed storage of data
+Weaknesses: Very low-level API</p>
+
+<ol>
+<li>Document Databases.
+CouchDB, MongoDB</li>
+</ol>
+
+
+<p>Web applications (Similar to Key-Value stores, but the DB knows what the Value is)</p>
+
+<p>Strengths: Tolerant of incomplete data
+Weaknesses: Query performance, no standard query syntax</p>
+
+<ol>
+<li>Graph Databases.
+Neo4J, InfoGrid, Infinite Graph</li>
+</ol>
+
+
+<p>Social networking, Recommendations (Focus on modeling the structure of data – interconnectivity)</p>
+
+<p>Strengths: Graph algorithms e.g. shortest path, connectedness, n degree relationships, etc.
+Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not easy to cluster.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
