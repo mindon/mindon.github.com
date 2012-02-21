@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-21T13:54:12+08:00</updated>
+  <updated>2012-02-21T14:43:01+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -20,14 +20,11 @@
     <id>http://mindon.github.com/blog/2012/02/21/nosql-databases</id>
     <content type="html"><![CDATA[<p>NoSQL = Not Only SQL</p>
 
-<p>Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison
-[http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis]</p>
+<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison</a></p>
 
-<p>8种Nosql数据库系统对比
-[http://article.yeeyan.org/view/271351/239915]</p>
+<p><a href="http://article.yeeyan.org/view/271351/239915">8种Nosql数据库系统对比</a></p>
 
-<p>Picking the right NoSQL database tool
-[http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/]</p>
+<p><a href="http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/">Picking the right NoSQL database tool</a></p>
 
 <ol>
 <li>Key-values Stores.
