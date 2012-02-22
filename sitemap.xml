@@ -2,18 +2,26 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/</loc>
-        <lastmod>2012-02-21T14:39:58+08:00</lastmod>
+        <lastmod>2012-02-22T15:46:46+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/02/21/nosql-databases/</loc>
-        <lastmod>2012-02-21T14:39:58+08:00</lastmod>
+        <lastmod>2012-02-22T09:45:36+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/02/22/web-images-optimization/</loc>
+        <lastmod>2012-02-22T15:41:50+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/</loc>
+        <lastmod>2012-02-22T15:48:19+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-02-21T13:58:56+08:00</lastmod>
+        <lastmod>2012-02-22T15:48:19+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-02-21T14:15:58+08:00</lastmod>
+        <lastmod>2012-02-22T15:48:19+08:00</lastmod>
     </url>
 </urlset>
