@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-22T17:07:17+08:00</updated>
+  <updated>2012-02-23T14:00:08+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Water Walking]]></title>
+    <link href="http://mindon.github.com/blog/2012/02/23/water-walking/"/>
+    <updated>2012-02-23T13:53:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/02/23/water-walking</id>
+    <content type="html"><![CDATA[<p>A water layer was sprinkled with Thymol Blue, which established the Marangoni convection responsible for the evident fine-scale texture. The layer was lit from below, giving the flow a natural luminescence. Stopping vortices shed during the deceleration phase of the strider&#8217;s motion are evident in Figure 2.  The dipolar vortices shed by the driving legs during each stroke are evident in Figure 3, and mark the path of the strider. The starburst in Figure 3 is associated with the relatively large particle of thymol blue evident at its centre: the Thymol Blue reduces the local surface tension, thus prompting surface divergence that clears the surface of blue dye.  The water striders are light-seeking, and so drawn to the starbursts.</p>
+
+<p><img src="http://www-math.mit.edu/~dhu/Striderweb/icarus.jpg" alt="Water Walking" /></p>
+
+<p>Read detail from <a href="http://www-math.mit.edu/~dhu/Striderweb/striderweb.html">http://www-math.mit.edu/~dhu/Striderweb/striderweb.html</a>
+<a href="http://www.me.gatech.edu/hu/">http://www.me.gatech.edu/hu/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dive into Node.JS]]></title>
