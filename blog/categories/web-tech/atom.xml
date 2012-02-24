@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-24T14:34:03+08:00</updated>
+  <updated>2012-02-24T14:51:52+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -20,6 +20,9 @@
     <id>http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js</id>
     <content type="html"><![CDATA[<p>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 <a href="http://nodejs.org">http://nodejs.org</a></p>
+
+<!--more-->
+
 
 <p>Felix's Node.js Guide
 <a href="http://nodeguide.com/">http://nodeguide.com/</a></p>
@@ -69,7 +72,16 @@ Command:</p>
 
 <p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
 
+<!--more-->
+
+
 <p>Reference from <a href="http://www.welefen.com/image-optimization.html">前端优化之图片优化自动化</a></p>
+
+<p>12 Really Useful Image Optimization Tools For Web Designers
+<a href="http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/">http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/</a></p>
+
+<p>Optimizing Web Graphics: Compression
+<a href="http://www.webreference.com/dev/graphics/compress.html">http://www.webreference.com/dev/graphics/compress.html</a></p>
 ]]></content>
   </entry>
   
@@ -94,6 +106,9 @@ Command:</p>
 
 <p>Strengths: Fast lookups
 Weaknesses: Stored data has no schema</p>
+
+<!--more-->
+
 
 <h2>Column Family Stores</h2>
 

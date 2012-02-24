@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-24T14:34:03+08:00</updated>
+  <updated>2012-02-24T14:51:52+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -25,6 +25,13 @@
 <ol>
 <li><p>Magnetism is familiar to every fifth grader, but describing it can confound even the most brilliant physicist.</p></li>
 <li><p>Take the case of <a href="http://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a>. When asked to explain magnetism, he <a href="http://www.youtube.com/watch?v=wMFPe-DwULM">urged his BBC interviewer to take it on faith</a> (video). After seven minutes of stonewalling, he finally said, “I really can’t do a good job, any job, of explaining magnetic force in terms of something else that you’re more familiar with because I don’t understand it in terms of anything else that you’re more familiar with.”</p></li>
+</ol>
+
+
+<!--more-->
+
+
+<ol>
 <li><p>He did break down and try for a few seconds before abandoning the attempt. Those seconds were packed with oversimplifications: “All the electrons [in a magnet] are spinning in the same direction.”</p></li>
 <li><p>But who better than Feynman would have known that not all electrons spin in the same direction?</p></li>
 <li><p>And they don’t actually spin. “<a href="http://en.wikipedia.org/wiki/Spin_%28physics%29">Spin</a>” is just a physicist’s term for the little magnetic north and south poles baked into every electron. The orientation of those poles defines the direction of the electron’s (somewhat imaginary) rotation.</p></li>
@@ -69,6 +76,9 @@
     <id>http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js</id>
     <content type="html"><![CDATA[<p>Node.js is a platform built on Chrome&#8217;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 <a href="http://nodejs.org">http://nodejs.org</a></p>
+
+<!--more-->
+
 
 <p>Felix&#8217;s Node.js Guide
 <a href="http://nodeguide.com/">http://nodeguide.com/</a></p>
@@ -118,7 +128,16 @@ Command:</p>
 
 <p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
 
+<!--more-->
+
+
 <p>Reference from <a href="http://www.welefen.com/image-optimization.html">前端优化之图片优化自动化</a></p>
+
+<p>12 Really Useful Image Optimization Tools For Web Designers
+<a href="http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/">http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/</a></p>
+
+<p>Optimizing Web Graphics: Compression
+<a href="http://www.webreference.com/dev/graphics/compress.html">http://www.webreference.com/dev/graphics/compress.html</a></p>
 ]]></content>
   </entry>
   
@@ -143,6 +162,9 @@ Command:</p>
 
 <p>Strengths: Fast lookups
 Weaknesses: Stored data has no schema</p>
+
+<!--more-->
+
 
 <h2>Column Family Stores</h2>
 
