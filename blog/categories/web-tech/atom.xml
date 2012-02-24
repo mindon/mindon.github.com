@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
+  <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
   <updated>2012-02-24T10:35:02+08:00</updated>
   <id>http://mindon.github.com/</id>
@@ -14,28 +14,14 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Water Walking]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/23/water-walking/"/>
-    <updated>2012-02-23T13:53:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/23/water-walking</id>
-    <content type="html"><![CDATA[<p>A water layer was sprinkled with Thymol Blue, which established the Marangoni convection responsible for the evident fine-scale texture. The layer was lit from below, giving the flow a natural luminescence. Stopping vortices shed during the deceleration phase of the strider&#8217;s motion are evident in Figure 2.  The dipolar vortices shed by the driving legs during each stroke are evident in Figure 3, and mark the path of the strider. The starburst in Figure 3 is associated with the relatively large particle of thymol blue evident at its centre: the Thymol Blue reduces the local surface tension, thus prompting surface divergence that clears the surface of blue dye.  The water striders are light-seeking, and so drawn to the starbursts.</p>
-
-<p><img src="http://www-math.mit.edu/~dhu/Striderweb/icarus.jpg" alt="Water Walking" /></p>
-
-<p>Read detail from <a href="http://www-math.mit.edu/~dhu/Striderweb/striderweb.html">http://www-math.mit.edu/~dhu/Striderweb/striderweb.html</a>
-<a href="http://www.me.gatech.edu/hu/">http://www.me.gatech.edu/hu/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Dive into Node.JS]]></title>
     <link href="http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/"/>
     <updated>2012-02-22T15:29:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js</id>
-    <content type="html"><![CDATA[<p>Node.js is a platform built on Chrome&#8217;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+    <content type="html"><![CDATA[<p>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 <a href="http://nodejs.org">http://nodejs.org</a></p>
 
-<p>Felix&#8217;s Node.js Guide
+<p>Felix's Node.js Guide
 <a href="http://nodeguide.com/">http://nodeguide.com/</a></p>
 
 <ul>
@@ -135,21 +121,6 @@ Weaknesses: Query performance, no standard query syntax</p>
 
 <p>Strengths: Graph algorithms e.g. shortest path, connectedness, n degree relationships, etc.
 Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not easy to cluster.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/"/>
-    <updated>2012-02-20T16:39:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start</id>
-    <content type="html"><![CDATA[<p>Frameworks &amp; tools for web developer.</p>
-
-<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in &#8230;</p>
-
-<p>Learning web tech &amp; apply them to solve daily problems!</p>
-
-<p>Air off, Mind on ~ :-) 2012</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
+  <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
+  <link href="http://mindon.github.com/"/>
+  <updated>2012-02-24T10:35:02+08:00</updated>
+  <id>http://mindon.github.com/</id>
+  <author>
+    <name><![CDATA[Mindon Feng]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
+    <link href="http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/"/>
+    <updated>2012-02-20T16:39:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start</id>
+    <content type="html"><![CDATA[<p>Frameworks &amp; tools for web developer.</p>
+
+<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in ...</p>
+
+<p>Learning web tech &amp; apply them to solve daily problems!</p>
+
+<p>Air off, Mind on ~ :-) 2012</p>
+]]></content>
+  </entry>
+  
+</feed>
