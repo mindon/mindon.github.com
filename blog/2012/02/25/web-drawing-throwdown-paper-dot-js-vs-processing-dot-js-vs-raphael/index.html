@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Sci - Mindon.IDEA</title>
+  <title>Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Category: Sci">
+  <meta name="description" content="<!-- google_ad_client = "ca-pub-6997921015773263"; /* git-post */ google_ad_slot = "5984167509"; google_ad_width = 300; google_ad_height = 250 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.comblog/categories/sci">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,50 +80,199 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Sci</h1>
+    
+      <h1 class="entry-title">Web-Drawing Throwdown: Paper.js vs. Processing.js vs. Raphael</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-25T23:18:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
 
-  
-  <h2>2012</h2>
+<div class="entry-content">
 
-<article>
-  
-<h1><a href="/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/">20 Things You Didn't Know About... Magnetism</a></h1>
-<time datetime="2012-02-24T13:37:00+08:00" pubdate><span class='month'>Feb</span> <span class='day'>24</span> <span class='year'>2012</span></time>
+	<div style="float:left;margin: 16px 16px 16px 0;">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/sci/'>Sci</a></span>
-</footer>
+<p>Before drawing anything in a browser, ask yourself three questions:</p>
 
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/02/23/water-walking/">Water Walking</a></h1>
-<time datetime="2012-02-23T13:53:00+08:00" pubdate><span class='month'>Feb</span> <span class='day'>23</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/sci/'>Sci</a></span>
-</footer>
+<ol>
+<li><em>Do you need to support older browsers?</em></li>
+</ol>
 
 
-</article>
+<p>If the answer is yes, then your only choice is Raphaël. It handles browsers all the way back to IE 7 and Firefox 3. Raphaël even has some support for IE 6, although some of its underlying technology cannot be implemented there.</p>
+
+<ol>
+<li><em>Do you need to support Android?</em></li>
+</ol>
+
+
+<p>Android doesn’t support SVG, so you’ll have to use Paper.js or Processing.js. Some rumors say that Android 4 will handle SVG, but the majority of Android devices won’t support it for years.</p>
+
+<ol>
+<li><em>Is your drawing interactive?</em></li>
+</ol>
+
+
+<p>Raphaël and Paper.js focus on interaction with drawn elements through clicking, dragging and touch. Processing.js doesn’t support any object-level events, so responding to user gestures is very difficult. Processing.js can draw a cool animation on your home page, but the other tools are better for interactive applications.</p>
+
+<p>Paper.js, Processing.js and Raphaël are the leading libraries for drawing on the Web right now. A couple of others are up and coming, and you can always use Flash, but these three work well with HTML5 and have the widest support among browser vendors.</p>
+
+<p>Choosing the right framework will determine the success of your project. This article covers the advantages and disadvantages of each, and the information you need to make the best choice.</p>
+
+<p>All of the code in this article is open source and can be run on the demo page that accompanies this article.</p>
+
+<p>[Note: Have you already pre-ordered your copy of our Printed Smashing Book #3? The book is a professional guide on how to redesign websites and it also introduces a whole new mindset for progressive Web design, written by experts in the industry for you. Pre-order now and add your name into the book!]</p>
+
+<h2>Overview</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left">Paper.js</th>
+<th align="right">Processing.js</th>
+<th align="center">Raphaël.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">Technology</td>
+<td align="right">canvas tag</td>
+<td align="center">canvas tag|SVG|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">Language</td>
+<td align="right">PaperScript</td>
+<td align="center">Processing script|JavaScript|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">Browsers</td>
+<td align="right">IE 9</td>
+<td align="center">IE 9|IE 7|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">Mobile</td>
+<td align="right">Yes</td>
+<td align="center">Yes|iOS only|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">Model</td>
+<td align="right">Vector and raster</td>
+<td align="center">Raster|Vector|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">Size</td>
+<td align="right">56 KB</td>
+<td align="center">64 KB|20 KB|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Full article could be found from <em>Zack Grossbart</em>&#8217;s <a href="http://coding.smashingmagazine.com/2012/02/22/web-drawing-throwdown-paper-processing-raphael/">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a></p>
+
+<p>with demos <a href="http://zgrossbart.github.com/3gears/">http://zgrossbart.github.com/3gears/</a></p>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-25T23:18:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/" title="Previous Post: 20 Things You Didn't Know About... Magnetism">&laquo; 20 Things You Didn't Know About... Magnetism</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 
 </div>
 
@@ -243,7 +392,10 @@
       var disqus_shortname = 'mindon';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

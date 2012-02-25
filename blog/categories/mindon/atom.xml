@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-02-24T18:22:16+08:00</updated>
+  <updated>2012-02-25T23:50:04+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -25,6 +25,13 @@
 <p>Learning web tech &amp; apply them to solve daily problems!</p>
 
 <p>Air off, Mind on ~ :-) 2012</p>
+
+<p>with following tech &amp; tools:
+Git tool
+github pages
+Ruby &amp; Ruby DevKit
+RubyGem
+Octopress</p>
 ]]></content>
   </entry>
   

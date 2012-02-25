@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/</loc>
-        <lastmod>2012-02-24T09:44:17+08:00</lastmod>
+        <lastmod>2012-02-25T23:14:32+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/02/21/nosql-databases/</loc>
@@ -24,7 +24,13 @@
         <loc>
             http://mindon.github.com/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/
         </loc>
-        <lastmod>2012-02-24T14:47:34+08:00</lastmod>
+        <lastmod>2012-02-25T22:49:18+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/
+        </loc>
+        <lastmod>2012-02-25T23:42:54+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/about/</loc>
@@ -32,14 +38,14 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-02-24T14:51:44+08:00</lastmod>
+        <lastmod>2012-02-25T23:42:54+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
-        <lastmod>2012-02-24T18:21:38+08:00</lastmod>
+        <lastmod>2012-02-25T22:20:08+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-02-24T14:51:44+08:00</lastmod>
+        <lastmod>2012-02-25T23:42:54+08:00</lastmod>
     </url>
 </urlset>
