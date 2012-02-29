@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Picking the right NoSQL Database - Mindon.IDEA</title>
+  <title>GoAgent -- Make your own fast proxy with GAE - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/21/nosql-databases">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -84,7 +84,7 @@
   
   <header>
     
-      <h1 class="entry-title">Picking the Right NoSQL Database</h1>
+      <h1 class="entry-title">GoAgent -- Make Your Own Fast Proxy With GAE</h1>
     
     
       <p class="meta">
@@ -100,7 +100,7 @@
   
 
 
-<time datetime="2012-02-21T13:22:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+<time datetime="2012-02-29T23:44:00+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2012</time>
         
       </p>
     
@@ -124,52 +124,24 @@
 		</script>
 	</div>
 
-<p>NoSQL = Not Only SQL</p>
+<p>在这个神奇的国家里，有很过好东西被阻止了，很多烂东西倒是放进来了。不想自己的大脑成为次品，还是要多学习新知识的，那就缺少不了Proxy这东西。</p>
 
-<p><a href="http://article.yeeyan.org/view/271351/239915">8种Nosql数据库系统对比</a></p>
+<p>GoAgent 确实是个不错的东西，之前用过LocalProxy，总有些奇怪的原因导致不能用。最近在同事的微博看到了GoAgent，搭了一下，速度还真不错 :D</p>
 
-<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison</a></p>
+<p>我是装有GAE SDK的，自行上传App的，没有使用 GoAgent 提供的 uploader.bat。
+这里简单记录一下用GAE（Google App Engine）搭建GoAgent Proxy的要点：
+（最权威的指南还是去 <a href="http://code.google.com/p/goagent/">http://code.google.com/p/goagent/</a> 看最好了:p ）</p>
 
-<p><a href="http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/">Picking the right NoSQL database tool</a></p>
-
-<h2>Key-values Stores</h2>
-
-<p>Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB</p>
-
-<p>Content caching (Focus on scaling to huge amounts of data, designed to handle massive load), logging, etc.</p>
-
-<p>Strengths: Fast lookups
-Weaknesses: Stored data has no schema</p>
-
-<!--more-->
+<ol>
+<li>要装有Python2.7</li>
+<li>GAE里建的APP要是新的才会支持 High Replication Datastore</li>
+<li>设置 app.yaml 里的 appid</li>
+</ol>
 
 
-<h2>Column Family Stores</h2>
+<p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
 
-<p>Cassandra, HBase, Riak</p>
-
-<p>Distributed file systems</p>
-
-<p>Strengths: Fast lookups, good distributed storage of data
-Weaknesses: Very low-level API</p>
-
-<h2>Document Databases</h2>
-
-<p>CouchDB, MongoDB</p>
-
-<p>Web applications (Similar to Key-Value stores, but the DB knows what the Value is)</p>
-
-<p>Strengths: Tolerant of incomplete data
-Weaknesses: Query performance, no standard query syntax</p>
-
-<h2>Graph Databases</h2>
-
-<p>Neo4J, InfoGrid, Infinite Graph</p>
-
-<p>Social networking, Recommendations (Focus on modeling the structure of data - interconnectivity)</p>
-
-<p>Strengths: Graph algorithms e.g. shortest path, connectedness, n degree relationships, etc.
-Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not easy to cluster.</p>
+<p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 
 </div>
 
@@ -193,7 +165,7 @@ Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not
   
 
 
-<time datetime="2012-02-21T13:22:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+<time datetime="2012-02-29T23:44:00+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2012</time>
       
 
 <span class="categories">
@@ -207,7 +179,7 @@ Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/21/nosql-databases/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/21/nosql-databases/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -220,10 +192,8 @@ Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/20/mindon-github-blog-start/" title="Previous Post: Mindon GitHub Blog Start">&laquo; Mindon GitHub Blog Start</a>
+        <a class="basic-alignment left" href="/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/" title="Previous Post: Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael">&laquo; Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/22/web-images-optimization/" title="Next Post: Web Images Optimization">Web Images Optimization &raquo;</a>
       
     </p>
   </footer>
@@ -359,8 +329,8 @@ Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/21/nosql-databases/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/02/21/nosql-databases/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/';
         var disqus_script = 'embed.js';
       
     (function () {
