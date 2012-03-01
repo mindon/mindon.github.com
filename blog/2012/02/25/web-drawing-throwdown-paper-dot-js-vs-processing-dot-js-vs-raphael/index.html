@@ -138,12 +138,12 @@
 
 <p>Raphaël and Paper.js focus on interaction with drawn elements through clicking, dragging and touch. Processing.js doesn’t support any object-level events, so responding to user gestures is very difficult. Processing.js can draw a cool animation on your home page, but the other tools are better for interactive applications.</p>
 
-<!--more-->
-
-
 <p>Paper.js, Processing.js and Raphaël are the leading libraries for drawing on the Web right now. A couple of others are up and coming, and you can always use Flash, but these three work well with HTML5 and have the widest support among browser vendors.</p>
 
 <p>Choosing the right framework will determine the success of your project. This article covers the advantages and disadvantages of each, and the information you need to make the best choice.</p>
+
+<!--more-->
+
 
 <p>All of the code in this article is open source and can be run on the demo page that accompanies this article.</p>
 
@@ -200,6 +200,28 @@
 </tbody>
 </table>
 
+
+<p>It’s all JavaScript once the page runs, but the frameworks take different paths to get there. Raphaël is written directly in JavaScript, but Paper.js uses PaperScript, and Processing.js uses its own script. They all support Firefox, Chrome and Safari, but Internet Explorer is an issue — Paper.js and Processing.js use the canvas tag and thus require IE 9.</p>
+
+<div style="float:right">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6997921015773263";
+/* git-post-body2 */
+google_ad_slot = "9585845910";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+<p>PaperScript is a JavaScript extension that makes it possible to write scripts that don’t pollute the global namespace. This cuts down on JavaScript conflicts. PaperScript also supports direct math on objects such as Point and Size: you can add two points together as if they were numbers.</p>
+
+<p>Processing.js is based on a framework named Processing, which runs in the Java Virtual Machine. You define int and float instead of var, and you can use classes with Java-style inheritance. While the Processing.js script looks a little like Java, it’s more like JavaScript and doesn’t require many of the more complex features of Java.
+Using all three libraries is easy if you have some familiarity with JavaScript.</p>
 
 <p>Full article could be found from <em>Zack Grossbart</em>&#8217;s <a href="http://coding.smashingmagazine.com/2012/02/22/web-drawing-throwdown-paper-processing-raphael/">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a></p>
 
