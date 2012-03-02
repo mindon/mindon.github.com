@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-02T22:30:44+08:00</updated>
+  <updated>2012-03-02T23:12:34+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -22,6 +22,9 @@
 
 <p>GoAgent 确实是个不错的东西，之前用过LocalProxy，总有些奇怪的原因导致不能用。最近在同事的微博看到了GoAgent，搭了一下，速度还真不错 :D</p>
 
+<!--more-->
+
+
 <p>我是装有GAE SDK的，自行上传App的，没有使用 GoAgent 提供的 uploader.bat。
 这里简单记录一下用GAE（Google App Engine）搭建GoAgent Proxy的要点：
 （最权威的指南还是去 <a href="http://code.google.com/p/goagent/">http://code.google.com/p/goagent/</a> 看最好了:p ）</p>
@@ -36,6 +39,17 @@
 <p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
+
+<p><div id="google_translate_element"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></p>
 ]]></content>
   </entry>
   
