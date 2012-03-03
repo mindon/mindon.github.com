@@ -56,7 +56,7 @@
         <loc>
             http://mindon.github.com/blog/2012/03/03/beauty-and-the-beast-the-rare-moment-a-tornado-and-a-rainbow-come-head-to-head-in-colorado-sky/
         </loc>
-        <lastmod>2012-03-03T14:38:35+08:00</lastmod>
+        <lastmod>2012-03-03T19:25:42+08:00</lastmod>
     </url>
     <url>
         <loc>
@@ -65,8 +65,12 @@
         <lastmod>2012-03-03T14:45:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://mindon.github.com/blog/2012/03/03/chrome-app-i-love-you/</loc>
-        <lastmod>2012-03-03T15:24:22+08:00</lastmod>
+        <loc>http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you/</loc>
+        <lastmod>2012-03-03T19:25:20+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/</loc>
+        <lastmod>2012-03-03T19:25:12+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/about/</loc>
@@ -74,7 +78,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-03-03T15:24:22+08:00</lastmod>
+        <lastmod>2012-03-03T19:25:42+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -82,6 +86,6 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-03-03T15:24:22+08:00</lastmod>
+        <lastmod>2012-03-03T19:25:42+08:00</lastmod>
     </url>
 </urlset>
