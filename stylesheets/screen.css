@@ -2,3 +2,5 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 ul ul li, ul ol li { list-style: disc !important; margin-left: 1.3em !important; }
 li b {font-weight: bold;}
+
+.entry-title span {font-size: 0.6em;}

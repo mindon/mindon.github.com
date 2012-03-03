@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chinese-Balance-Heal | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chinese-balance-heal/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-02T23:12:34+08:00</updated>
+  <updated>2012-03-03T14:45:54+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -104,7 +104,13 @@ function googleTranslateElementInit() {
     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
 }
-</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></p>
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(job, s);
+})();
+</script></p>
 ]]></content>
   </entry>
   
