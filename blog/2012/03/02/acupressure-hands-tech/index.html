@@ -61,13 +61,18 @@
   
 <form action="http://www.google.com" id="cse-search-box">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:mindon.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
     <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
     <input type="hidden" name="ie" value="UTF-8" />
   </fieldset>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
@@ -202,7 +207,7 @@
 
 <p><strong>小技巧</strong>：击打疼痛部位时，力度要适中，但击打松弛的肌肉时就要增加力度了。</p>
 
-<div id="google_translate_element"></div>
+<div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div>
 
 
 <script>
@@ -218,7 +223,7 @@ function googleTranslateElementInit() {
 (function() {
   var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
   job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(job, s);
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
 })();
 </script>
 

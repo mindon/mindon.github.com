@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-03T19:25:42+08:00</updated>
+  <updated>2012-03-03T23:09:47+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -40,7 +40,7 @@
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 
-<p><div id="google_translate_element"></div><script>
+<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'zh-CN',
@@ -53,7 +53,7 @@ function googleTranslateElementInit() {
 (function() {
   var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
   job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(job, s);
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
 })();
 </script></p>
 ]]></content>

@@ -61,13 +61,18 @@
   
 <form action="http://www.google.com" id="cse-search-box">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:mindon.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
     <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
     <input type="hidden" name="ie" value="UTF-8" />
   </fieldset>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
