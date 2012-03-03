@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
+  <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
+  <link href="http://mindon.github.com/"/>
+  <updated>2012-03-03T15:25:00+08:00</updated>
+  <id>http://mindon.github.com/</id>
+  <author>
+    <name><![CDATA[Mindon Feng]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chrome App: I Love You]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/03/chrome-app-i-love-you/"/>
+    <updated>2012-03-03T15:07:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/03/chrome-app-i-love-you</id>
+    <content type="html"><![CDATA[<p>Saying "I love you" in different languages, was to show my love to my dear fiancée - Aby, before our wedding.</p>
+
+<p>I promised her: one new language will be appended each year.</p>
+
+<p>You can visit the webpage with roses <a href="http://mindon.appspot.com/i-love-u">http://mindon.appspot.com/i-love-u</a>.</p>
+
+<p>The "I love you" languages are connected with Locations in Google Maps (If you are in China Mainland, you may need a proxy to see the map. Please check <a href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/">GoAgent -- Make Your Own Fast Proxy With GAE</a> or search GoAgen in Google.)</p>
+
+<p>If you like to keep this offline. You may choose the Chrome App "I Love You" from Chrome Store: <a href="https://chrome.google.com/webstore/detail/efpkdgnjlkhjdfpnopfkdoigbjambdkf">Say I Love You in different languages(audio version)</a></p>
+
+<p><img src="/images/blog/i-love-you.png" alt="I Love You" /></p>
+]]></content>
+  </entry>
+  
+</feed>
