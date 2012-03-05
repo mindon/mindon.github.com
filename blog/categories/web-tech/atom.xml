@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T06:38:42+08:00</updated>
+  <updated>2012-03-06T06:42:32+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -37,7 +37,7 @@
 
 <p><a href="http://www.infoq.com/articles/Web-Sockets-Proxy-Servers">How HTML5 Web Sockets Interact With Proxy Servers</a></p>
 
-<p><img src="websocket-proxy.png" alt="Websocket Interact with proxy" /></p>
+<p><img src="/images/blog/websocket-proxy.png" alt="Websocket Interact with proxy" /></p>
 
 <blockquote><p>Using TLS/SSL is advised not only when you need to encrypt the traffic but also when you need to bypass proxy servers and firewalls, that otherwise will just block or not understand WebSockets connections.
 <a href="http://showmetheco.de/articles/2011/2/diving-into-html5-with-websockets-and-perl.html">Diving into HTML5 with WebSockets and Perl</a></p></blockquote>
