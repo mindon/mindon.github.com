@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-04T10:09:03+08:00</updated>
+  <updated>2012-03-05T21:56:33+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Inside the Lytro: Light Field Camera]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/05/inside-the-lytro-light-field-camera/"/>
+    <updated>2012-03-05T21:32:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/05/inside-the-lytro-light-field-camera</id>
+    <content type="html"><![CDATA[<p>The New York Times: <a href="http://www.nytimes.com/interactive/2012/03/01/business/inside-the-lytro.html">Inside the Lytro</a></p>
+
+<p>The Lytro camera is the first consumer “light field camera.” It uses a new technology to create photos that can have their focus changed after they have been taken. Because of this, there is no need to auto-focus, resulting in virtually no shutter delay. Here’s how it works.</p>
+
+<h2>Camera Overview</h2>
+
+<p>A Lytro camera is made up of two sections. An anodized aluminum shell contains the lens assembly, while the electronics are housed within a silicone rubber grip.</p>
+
+<p><img src="http://mindon.github.com/images/blog/lytro-cross-section.jpg" alt="" /></p>
+
+<!--more-->
+
+
+<h2>Capturing Light</h2>
+
+<p>Lytro’s light field sensor captures not only the color, intensity and position of the light, but also its direction, which is lost in traditional cameras.</p>
+
+<h2>Changing Focus</h2>
+
+<p>Because all the directional information of the entering light is captured, software can change the focal plane. Clicking any point on the image brings that area into focus, whether raindrops on the surface of a window or buildings beyond.</p>
+
+<h2>Light Field Sensor</h2>
+
+<p>Consists of a standard digital camera CMOS sensor coupled with a micro-lens array. The array contains thousands of miniature lenses.</p>
+
+<h2>Micro-Lens Array</h2>
+
+<p>Tiny lenses divide the CMOS sensor’s pixels into multiple areas, each showing the image at a slightly different angle. Software uses this data to triangulate the image in 3-D space.</p>
+
+<h2>Controlling the Camera</h2>
+
+<p>Lytro uses a 1.46-inch touch screen. Swiping back and forth allows you to view previous or later photos, while swiping up brings up a menu bar. The shutter button and a slider for the zoom are molded into the top of the unit, while the power button and a USB connector are on the bottom.</p>
+
+<p><a href="https://www.lytro.com/science_inside">Lytro: Science Inside</a>, <a href="http://www.lytro.com/">Lytro</a></p>
+
+<p><a href="http://graphics.stanford.edu/papers/fourierphoto/">http://graphics.stanford.edu/papers/fourierphoto/</a></p>
+
+<p>Lytro是一家位于硅谷的创业公司，源于公司CEO Ren Ng在斯坦福的一项研究，其目标很简单：凭借其光场（light field）相机「硬件和软件」，Lytro可以从很多方面改变照相技术，因为有了它你无需对焦。</p>
+
+<p>与此同时，这家公司的投资方包括Andreessen Horowitz和Greylock等知名投资机构，其技术团队包括Silicon Graphics联合创始人以及Palm webOS的首席架构师。那么Lytro的魅力到底在哪里呢？</p>
+
+<p>答案是「光场（light field）照相」或者说「全光（plenoptic）照相」。Lytro背后的核心思维源于斯坦福的一篇论文「PDF文档」，原理非常简单。普通相机的工作原理和肉眼差不多，前面的镜头可以收集来自前方的光线，然后通过传感器上的光圈「单反相机上的硅胶套或眼睛里的视网膜」。为了聚焦眼睛或普通照相机，你通过不同方式调整镜头，以捕捉来自不同方向的光线，将其收集到传感器中。这会带来很多副作用，其中之一就是只能有一个焦点。这让问题变得复杂，当然如果手法得当的话可以拍出漂亮的照片。</p>
+
+<p>但Lytro的技术之一就是在相机传感器前面布有大量微镜头。你可以把它们想象成苍蝇眼睛上的数千个微型镜头。其中的物理学和数学知识有点复杂，但最后的结果是这样的：相机传感器记录下的不是单一的图像「由镜头、光圈等设置决定」，Lytro相机可以用复杂的方式记录下来自前方场景各个部位的光线，而不仅仅是普通相机那样只能记下聚焦范围中的光线。然后Lytro软件会对图像进行解码。</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XMjc5NDc5NDY4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>这就是神奇之处。因为这个系统可以捕捉有关场景光线方向的信息，因此它可以“聚焦”照片中的任何深度，哪怕在拍照后数年。一瞬间你就可以获得理想的照片，相机可以去掉笨重、耗电和昂贵的聚焦系统，你可以更快地完成拍照，即便非专业摄影师也不必担心对焦问题。镜头还可以捕捉弱光环境下的光线。这会产生很大的影响，可能会对整个相机业带来巨大变革。</p>
+
+<p>&#8230; 36氪<a href="http://www.36kr.com/p/30873.html">Lytro光场相机原理和应用浅析</a></p>
+
+<div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div>
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Walking in Chrome]]></title>
