@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T22:31:41+08:00</updated>
+  <updated>2012-03-06T22:36:19+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -134,7 +134,19 @@
 
 <p>It’s all JavaScript once the page runs, but the frameworks take different paths to get there. Raphaël is written directly in JavaScript, but Paper.js uses PaperScript, and Processing.js uses its own script. They all support Firefox, Chrome and Safari, but Internet Explorer is an issue — Paper.js and Processing.js use the canvas tag and thus require IE 9.</p>
 
-<p>{% include custom/gad-post.html %}</p>
+<p><div style="float:right">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6997921015773263";
+/* git-post-body2 */
+google_ad_slot = "9585845910";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></p>
 
 <p>PaperScript is a JavaScript extension that makes it possible to write scripts that don’t pollute the global namespace. This cuts down on JavaScript conflicts. PaperScript also supports direct math on objects such as Point and Size: you can add two points together as if they were numbers.</p>
 

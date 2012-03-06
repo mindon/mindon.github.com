@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-Air-Water-M-Sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T22:31:41+08:00</updated>
+  <updated>2012-03-06T22:36:19+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -91,7 +91,22 @@
 
 <p>... 36氪<a href="http://www.36kr.com/p/30873.html">Lytro光场相机原理和应用浅析</a></p>
 
-<p>{% include custom/ze.html %}</p>
+<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script></p>
 ]]></content>
   </entry>
   

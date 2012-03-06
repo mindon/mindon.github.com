@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T22:31:41+08:00</updated>
+  <updated>2012-03-06T22:36:19+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -59,7 +59,22 @@
 
 <p>----- 麥盾，二零一二年三月六日，深圳</p>
 
-<p>{% include custom/ze.html %}</p>
+<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script></p>
 ]]></content>
   </entry>
   
@@ -103,7 +118,22 @@
 <p>【译言网】 <a href="http://article.yeeyan.org/view/222604/197644">亨利·卡蒂尔-布雷松的经典摄影</a>
 【Fondation Henri Cartier-Bresson】 <a href="http://www.henricartierbresson.org/">http://www.henricartierbresson.org/</a></p>
 
-<p>{% include custom/ze.html %}</p>
+<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script></p>
 ]]></content>
   </entry>
   
@@ -134,7 +164,22 @@
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 
-<p>{% include custom/ze.html %}</p>
+<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'zh-CN',
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script></p>
 ]]></content>
   </entry>
   
