@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T06:42:32+08:00</updated>
+  <updated>2012-03-06T22:31:41+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[落叶——中西医有感]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/06/falling-leafs-life-system/"/>
+    <updated>2012-03-06T20:21:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/06/falling-leafs-life-system</id>
+    <content type="html"><![CDATA[<p>最近，路边有一种阔叶树开始掉叶子了——这种树在三月里的几天内叶子大片大片往下掉，直至全部叶子都掉光。我第一次看到满地叶子、树干光秃秃的时候，还以为世界末日临近了呢——满树的绿叶几天内变黄落了满地。</p>
+
+<p>可是意外的是，再过一个星期，这树又满树的绿叶嫩芽了，长新叶子的速度跟落叶的速度一样——快得令人诧异。</p>
+
+<p>这种现象，要是放到医学里头会是很有趣的事情：</p>
+
+<!--more-->
+
+
+<h2>西医</h2>
+
+<p>基于检测的西医，发现突然树没叶子了，定会下结论——这树生病了，而且病得非常严重——必需住院治疗了。</p>
+
+<p>住院嘛，主要任务就是检测了——于是，X光、抽液、剥皮取样——一通检测下来，还是没能发现毛病——只能给树输液吧，什么营养液，杀虫剂，生长激素——只要跟长叶子可能相关的措施都施展一遍，还是没有什么效果。</p>
+
+<p>过了几天之后，树又开始长叶子了，于是西医觉得自己的治疗措施起作用了……</p>
+
+<h2>中医</h2>
+
+<p>中医从来不把病症作为割裂的现象来看待，系统分析、强调变化和个体差异、环境和气候影响……是中医的特点。</p>
+
+<p>中医仅仅树生长的规律、特性，便能下结论——这现象是正常的生长代谢的过程，而不是病症，无需采取任何措施。</p>
+
+<h2>思考</h2>
+
+<p>近来天气返潮特别严重，屋里的很多东西由于潮湿开始长霉。Aby有一天就发现浴室里的一个木梳长霉了（此木梳已经很久没有使用了），费了很大的劲才清洗干净，放在阳台晾晒干了。又放回了浴室的篮子里…</p>
+
+<p>这个是典型的类似西医治疗方式的处理：不理会梳子长霉的原因，只对梳子上的异常进行处理——因为没有消除长霉的根源，所以梳子过些日子必然继续长霉——需要继续处理。</p>
+
+<p>然而，中医式的处理则会追究梳子长霉的根源——湿气太重：于是，唯有除湿并晾晒梳子才能让其避免继续或者未来的发霉。对于梳子，脱离湿气重的环境才是最佳的处理方式——放到浴室之外，远离湿气。</p>
+
+<p>虽说，中医的理论体系——系统化、动态化要比机械化和数据硬性的西医治疗模式要先进得多，不过现代城市和社会里，要找个靠谱的中医何其难？于是，我们只会看到西医院里人头攒动——人气旺得很是热闹：人们没有选择，加上洗脑式的社会宣传和推销，庞大的利益链条的推动，这是很自然的现象，也是最可悲的事情。</p>
+
+<p>最近看了N年前一位台湾中医大夫写的书《医钥》：里面描述的台湾医疗现状何尝不是今天大陆医疗的隐忧？</p>
+
+<p>不究病因的依赖抗生素的西医治疗方式下，毛病只会越来越多，越来越无法治疗。悲哉！</p>
+
+<p>推薦閱讀：<a href="http://ishare.iask.sina.com.cn/f/15423125.html">中醫之鑰（6寸版pdf）</a> 彭奕竣 《醫鑰》</p>
+
+<p>----- 麥盾，二零一二年三月六日，深圳</p>
+
+<p>{% include custom/ze.html %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Crush tradition! Photograph things as they are!]]></title>
@@ -53,22 +103,7 @@
 <p>【译言网】 <a href="http://article.yeeyan.org/view/222604/197644">亨利·卡蒂尔-布雷松的经典摄影</a>
 【Fondation Henri Cartier-Bresson】 <a href="http://www.henricartierbresson.org/">http://www.henricartierbresson.org/</a></p>
 
-<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'zh-CN',
-    gaTrack: true,
-    gaId: 'UA-28048168-2',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-
-(function() {
-  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
-  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
-})();
-</script></p>
+<p>{% include custom/ze.html %}</p>
 ]]></content>
   </entry>
   
@@ -99,22 +134,7 @@ function googleTranslateElementInit() {
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 
-<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'zh-CN',
-    gaTrack: true,
-    gaId: 'UA-28048168-2',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-
-(function() {
-  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
-  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
-})();
-</script></p>
+<p>{% include custom/ze.html %}</p>
 ]]></content>
   </entry>
   
