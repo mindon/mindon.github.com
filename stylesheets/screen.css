@@ -4,3 +4,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 li b {font-weight: bold;}
 
 .entry-title span {font-size: 0.6em;}
+.category-index-extend {margin-left: 1.6em;}
+.category-index-extend h2 i {font-size: 0.8em; color:#666;}
+.category-index-extend h2 span{font-size: 0.8em;}

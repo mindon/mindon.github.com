@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-Air-Water-M-Sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-06T23:01:39+08:00</updated>
+  <updated>2012-03-07T22:54:06+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -90,23 +90,6 @@
 <p>这就是神奇之处。因为这个系统可以捕捉有关场景光线方向的信息，因此它可以“聚焦”照片中的任何深度，哪怕在拍照后数年。一瞬间你就可以获得理想的照片，相机可以去掉笨重、耗电和昂贵的聚焦系统，你可以更快地完成拍照，即便非专业摄影师也不必担心对焦问题。镜头还可以捕捉弱光环境下的光线。这会产生很大的影响，可能会对整个相机业带来巨大变革。</p>
 
 <p>... 36氪<a href="http://www.36kr.com/p/30873.html">Lytro光场相机原理和应用浅析</a></p>
-
-<p><div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div><script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'zh-CN',
-    gaTrack: true,
-    gaId: 'UA-28048168-2',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-
-(function() {
-  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
-  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
-})();
-</script></p>
 ]]></content>
   </entry>
   

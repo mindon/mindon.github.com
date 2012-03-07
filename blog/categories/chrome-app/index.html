@@ -52,6 +52,7 @@
     <h2>Air off, Mind on ~ / Javascript, NodeJS, Sci, Health... /</h2>
   
 </hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
 
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -76,7 +77,6 @@
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/categories">Category</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/blog/categories/chrome-app">Chrome/App</a></li>
   <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="63" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
@@ -94,7 +94,33 @@
     
   </header>
   
-  <div id="blog-archives" class="category">
+  
+  <div class="category-index-extend">
+  <ul>
+    <li>
+<h2><i>Software:</i> iHosts <span>(<a href="/soft/ihosts_120125.7z">下载/Download</a>, 143 KB)</span></h2>
+<p>Portable: hosts file management tool (win2k/vista/win7)</p>
+<p>绿色软件: 维护hosts文件的工具，可分组管理，有冲突提醒！</p>
+    </li>
+    <li>
+<h2><i>Software:</i> XZoom <span>(<a href="/soft/xzoom.zip">下载/Download</a>, 27.9 KB)</span></h2>
+<p>Portable: Screen zoomer, color picker; Alt + Space hide/show, right mouse click to hide; scroll to change zoom ratio, middle mouse click to reset default zoom ratio.</p>
+<p>绿色软件: 倍数及大小设置，屏幕取色; Alt + Space切换隐藏/显示，右键点击隐藏；滚轮改变放大倍数，中键恢复缺省放大倍数。</p>
+    </li>
+    <li>
+<h2><i>Software:</i> Letup <span>(<a href="/soft/letup_110715.7z">下载/Download</a>, 140 KB)</span></h2>
+<p>Portable: Lock up your screen when time to have a break！For your good health. (win2k/vista/win7) <b style="color:red">DO NOT run it when playing games :-)</b></p>
+<p>绿色软件: 定时锁屏提醒休息，守护健康。右下角密码唤醒功能。</p>
+    </li>
+    <li>
+<h2><i>Web App:</i> Mindon Eka <span>(<a href="/soft/letup_110715.7z">访问/Launch</a>)</span></h2>
+<img src="/soft/eka.png" width="106" height="60" align="left" style="margin-right:1.2em;" /><p>Portable: Memory your accounts on the web; Bookmarklet, or Chrome App / Extension; Mail backup feature, password safe reminder.</b></p>
+<p>绿色软件: Eka服务为了方便管理和访问网站注册的众多帐号，提供Chrome应用/扩展、书签形式，邮件备份，安全密码回忆特性。</p>
+    </li>
+  </ul>
+</div>
+
+<div id="blog-archives" class="category">
 
 
 
@@ -156,17 +182,17 @@
   <h1>Categories</h1>
   <ul>
 
-    <li><b><a class='category' href="/blog/categories/mindon/">Mindon</a></b> ( 4 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 4 )</li>
 
-    <li><b><a class='category' href="/blog/categories/web-tech/">Web-Tech</a></b> ( 5 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 5 )</li>
 
-    <li><b><a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a></b> ( 5 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 5 )</li>
 
-    <li><b><a class='category' href="/blog/categories/readings/">Readings</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 2 )</li>
 
-    <li><b><a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 2 )</li>
 
-    <li><b><a class='category' href="/blog/categories/chrome-app/">Chrome-App</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 2 )</li>
 
   </ul>
 </section>
@@ -268,6 +294,26 @@
   Copyright &copy; 2012 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script>
+
 
 </footer>
   

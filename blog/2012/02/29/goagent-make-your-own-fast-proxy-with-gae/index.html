@@ -52,6 +52,7 @@
     <h2>Air off, Mind on ~ / Javascript, NodeJS, Sci, Health... /</h2>
   
 </hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
 
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -76,7 +77,6 @@
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/categories">Category</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/blog/categories/chrome-app">Chrome/App</a></li>
   <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="63" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
@@ -152,27 +152,6 @@
 <p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
-
-<div id="google_translate_element" style="position: absolute; top: 35px; right: 16px;"></div>
-
-
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'zh-CN',
-    gaTrack: true,
-    gaId: 'UA-28048168-2',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-
-(function() {
-  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
-  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
-})();
-</script>
-
 
 </div>
 
@@ -263,17 +242,17 @@ function googleTranslateElementInit() {
   <h1>Categories</h1>
   <ul>
 
-    <li><b><a class='category' href="/blog/categories/mindon/">Mindon</a></b> ( 4 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 4 )</li>
 
-    <li><b><a class='category' href="/blog/categories/web-tech/">Web-Tech</a></b> ( 5 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 5 )</li>
 
-    <li><b><a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a></b> ( 5 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 5 )</li>
 
-    <li><b><a class='category' href="/blog/categories/readings/">Readings</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 2 )</li>
 
-    <li><b><a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 2 )</li>
 
-    <li><b><a class='category' href="/blog/categories/chrome-app/">Chrome-App</a></b> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 2 )</li>
 
   </ul>
 </section>
@@ -375,6 +354,26 @@ function googleTranslateElementInit() {
   Copyright &copy; 2012 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+})();
+</script>
+
 
 </footer>
   
