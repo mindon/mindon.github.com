@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-08T21:04:27+08:00</updated>
+  <updated>2012-03-10T15:24:13+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[激情 - Passion]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made/"/>
+    <updated>2012-03-10T14:04:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made</id>
+    <content type="html"><![CDATA[<h2>Passion</h2>
+
+<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
+
+<p>That’s passion!</p>
+
+<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
+
+<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
+
+<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
+
+<!--more-->
+
+
+<p><a href="http://swizec.com/blog/programmers-are-born-not-made/swizec/3369">Programmers are born not made</a></p>
+
+<h2>激情</h2>
+
+<blockquote><p>有时候，当你给一个有上进心的年轻心灵(任何愿意学习编程的人，年龄不是问题)两种工具和一个难题。他会使用这两种工具创造出4种工具。他会搜索互联网，发现更多的工具…很快，他有了20种工具，请问你还让我解决什么问题？</p>
+
+<p>这就是激情！</p>
+
+<p>心无杂念的对编程的激情。没有问题需要解决时仍然对编程入迷，甚至兴奋。甚至把解决一个已知的问题也当作一次普通的练习…这就是卓越之处。</p>
+
+<p>多大岁数才开始学习编程，这并不重要——很多研究显示，在我们这个世界里，编程的工龄并不是水平的指示符——重要的是你对这个行业有个充满激情的心。</p>
+
+<p>因为，一旦有了激情，你就拥有了所有其它的一切。</p></blockquote>
+
+<p>做任何事情，如果没有激情，就没法做得比别人更好！</p>
+
+<p>在IBG数年，有两个同事说的话一直让我印象深刻：</p>
+
+<ol>
+<li><p>技术，要有激情！ —— Teddy</p></li>
+<li><p>同样的事情，你来做和别人做能有什么不一样？ —— Flying</p></li>
+</ol>
+
+
+<p>今天看到【外刊IT评论】的这篇文章（<a href="http://www.aqee.net/programmers-are-born-not-made/">一个人是否能成为程序员是上天注定的</a>），深有感触！特以此文自勉。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[For my darling: Aby]]></title>
@@ -197,28 +245,6 @@
 <p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
 
 <p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/"/>
-    <updated>2012-02-20T16:39:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start</id>
-    <content type="html"><![CDATA[<p>Frameworks &amp; tools for web developer.</p>
-
-<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in ...</p>
-
-<p>Learning web tech &amp; apply them to solve daily problems!</p>
-
-<p>Air off, Mind on ~ :-) 2012</p>
-
-<p>with following tech &amp; tools:
-Git tool
-github pages
-Ruby &amp; Ruby DevKit
-RubyGem
-Octopress</p>
 ]]></content>
   </entry>
   

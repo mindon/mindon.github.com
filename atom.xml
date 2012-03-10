@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-08T21:04:27+08:00</updated>
+  <updated>2012-03-10T15:24:13+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,128 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Key of TCM -- Recommended Books]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/10/key-of-tcm-recommending-books/"/>
+    <updated>2012-03-10T15:13:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/10/key-of-tcm-recommending-books</id>
+    <content type="html"><![CDATA[<h2>《醫鑰》推薦閱讀</h2>
+
+<ul>
+<li><p>《黃帝內經》</p></li>
+<li><p>《神農本草經》</p></li>
+<li><p>《傷寒論》</p></li>
+<li><p>《金匱》</p></li>
+<li><p>《針灸大成》</p></li>
+<li><p>《傷寒雜病論》</p></li>
+<li><p>《千金藥方翼方》（古籍部分）</p></li>
+</ul>
+
+
+<p><strong>近代書籍</strong></p>
+
+<ul>
+<li><p>《中西匯通醫書五種》（四川 唐容川 字宗海 著）</p></li>
+<li><p>《傷寒發微，金匱發微》（江蘇淮陰 曹穎甫 著）</p></li>
+<li><p>《傷寒論新義，金匱要略新義》（餘無言著）</p></li>
+<li><p>《單穴治病選萃》（人民衛生出版社）</p></li>
+<li><p>《疾病預測學》（楊力 著，北京科學出版社）</p></li>
+<li><p>《經方實驗錄》（姜佐景 著）</p></li>
+<li><p>《針灸大成》（明朝 楊繼州 編寫）</p></li>
+</ul>
+
+
+<h2>麥盾推薦閱讀</h2>
+
+<ul>
+<li><p>《<a href="http://big5.ifeng.com/gate/big5/book.ifeng.com/lianzai/detail_2010_02/07/339087_0.shtml">問中醫幾度秋涼(艾寧)</a>》</p></li>
+<li><p>《<a href="http://www.verycd.com/topics/2824440/">醫鑰——揭開中醫的奧秘(彭奕竣)</a>》</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Key of TCM -- Recommended Books]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/10/key-of-tcm-recommended-books/"/>
+    <updated>2012-03-10T15:13:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/10/key-of-tcm-recommended-books</id>
+    <content type="html"><![CDATA[<h2>《醫鑰》推薦閱讀</h2>
+
+<ul>
+<li><p>《黃帝內經》</p></li>
+<li><p>《神農本草經》</p></li>
+<li><p>《傷寒論》</p></li>
+<li><p>《金匱》</p></li>
+<li><p>《針灸大成》</p></li>
+<li><p>《傷寒雜病論》</p></li>
+<li><p>《千金藥方翼方》（古籍部分）</p></li>
+</ul>
+
+
+<p><strong>近代書籍</strong></p>
+
+<ul>
+<li><p>《中西匯通醫書五種》（四川 唐容川 字宗海 著）</p></li>
+<li><p>《傷寒發微，金匱發微》（江蘇淮陰 曹穎甫 著）</p></li>
+<li><p>《傷寒論新義，金匱要略新義》（餘無言著）</p></li>
+<li><p>《單穴治病選萃》（人民衛生出版社）</p></li>
+<li><p>《疾病預測學》（楊力 著，北京科學出版社）</p></li>
+<li><p>《經方實驗錄》（姜佐景 著）</p></li>
+<li><p>《針灸大成》（明朝 楊繼州 編寫）</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[激情 - Passion]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made/"/>
+    <updated>2012-03-10T14:04:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made</id>
+    <content type="html"><![CDATA[<h2>Passion</h2>
+
+<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
+
+<p>That’s passion!</p>
+
+<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
+
+<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
+
+<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
+
+<!--more-->
+
+
+<p><a href="http://swizec.com/blog/programmers-are-born-not-made/swizec/3369">Programmers are born not made</a></p>
+
+<h2>激情</h2>
+
+<blockquote><p>有时候，当你给一个有上进心的年轻心灵(任何愿意学习编程的人，年龄不是问题)两种工具和一个难题。他会使用这两种工具创造出4种工具。他会搜索互联网，发现更多的工具…很快，他有了20种工具，请问你还让我解决什么问题？</p>
+
+<p>这就是激情！</p>
+
+<p>心无杂念的对编程的激情。没有问题需要解决时仍然对编程入迷，甚至兴奋。甚至把解决一个已知的问题也当作一次普通的练习…这就是卓越之处。</p>
+
+<p>多大岁数才开始学习编程，这并不重要——很多研究显示，在我们这个世界里，编程的工龄并不是水平的指示符——重要的是你对这个行业有个充满激情的心。</p>
+
+<p>因为，一旦有了激情，你就拥有了所有其它的一切。</p></blockquote>
+
+<p>做任何事情，如果没有激情，就没法做得比别人更好！</p>
+
+<p>在IBG数年，有两个同事说的话一直让我印象深刻：</p>
+
+<ol>
+<li><p>技术，要有激情！ —— Teddy</p></li>
+<li><p>同样的事情，你来做和别人做能有什么不一样？ —— Flying</p></li>
+</ol>
+
+
+<p>今天看到【外刊IT评论】的这篇文章（<a href="http://www.aqee.net/programmers-are-born-not-made/">一个人是否能成为程序员是上天注定的</a>），深有感触！特以此文自勉。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[For my darling: Aby]]></title>
@@ -852,123 +974,6 @@ Find out where node.js makes sense, and how to get management to see the benefit
 
 <p>NodeJS – The what, why, how and when
 <a href="http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/">http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Images Optimization]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/22/web-images-optimization/"/>
-    <updated>2012-02-22T15:16:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/22/web-images-optimization</id>
-    <content type="html"><![CDATA[<p>Use PNG! with ImageMagick</p>
-
-<h2>GIF Animation</h2>
-
-<p>Tool: <a href="http://www.lcdf.org/gifsicle/">GitSlice</a>
-Command:</p>
-
-<p>  gifsicle -o  test-optimized.gif test.gif</p>
-
-<h2>PNG</h2>
-
-<p>Tool: <a href="http://pmt.sourceforge.net/pngcrush/">PNGCrush</a>
-Command:</p>
-
-<p>  pngcrush -rem alla -brute -reduce test.jpg test-optimized.jpg</p>
-
-<h2>JPEG</h2>
-
-<p>Tool: <a href="http://jpegclub.org/jpegtran/">JPEGTran</a>
-Command:</p>
-
-<p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
-
-<!--more-->
-
-
-<p>Reference from <a href="http://www.welefen.com/image-optimization.html">前端优化之图片优化自动化</a></p>
-
-<p>12 Really Useful Image Optimization Tools For Web Designers
-<a href="http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/">http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/</a></p>
-
-<p>Optimizing Web Graphics: Compression
-<a href="http://www.webreference.com/dev/graphics/compress.html">http://www.webreference.com/dev/graphics/compress.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Picking the right NoSQL Database]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/21/nosql-databases/"/>
-    <updated>2012-02-21T13:22:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/21/nosql-databases</id>
-    <content type="html"><![CDATA[<p>NoSQL = Not Only SQL</p>
-
-<p><a href="http://article.yeeyan.org/view/271351/239915">8种Nosql数据库系统对比</a></p>
-
-<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison</a></p>
-
-<p><a href="http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/">Picking the right NoSQL database tool</a></p>
-
-<h2>Key-values Stores</h2>
-
-<p>Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB</p>
-
-<p>Content caching (Focus on scaling to huge amounts of data, designed to handle massive load), logging, etc.</p>
-
-<p>Strengths: Fast lookups
-Weaknesses: Stored data has no schema</p>
-
-<!--more-->
-
-
-<h2>Column Family Stores</h2>
-
-<p>Cassandra, HBase, Riak</p>
-
-<p>Distributed file systems</p>
-
-<p>Strengths: Fast lookups, good distributed storage of data
-Weaknesses: Very low-level API</p>
-
-<h2>Document Databases</h2>
-
-<p>CouchDB, MongoDB</p>
-
-<p>Web applications (Similar to Key-Value stores, but the DB knows what the Value is)</p>
-
-<p>Strengths: Tolerant of incomplete data
-Weaknesses: Query performance, no standard query syntax</p>
-
-<h2>Graph Databases</h2>
-
-<p>Neo4J, InfoGrid, Infinite Graph</p>
-
-<p>Social networking, Recommendations (Focus on modeling the structure of data - interconnectivity)</p>
-
-<p>Strengths: Graph algorithms e.g. shortest path, connectedness, n degree relationships, etc.
-Weaknesses: Has to traverse the entire graph to achieve a definitive answer. Not easy to cluster.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mindon GitHub Blog Start]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start/"/>
-    <updated>2012-02-20T16:39:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/20/mindon-github-blog-start</id>
-    <content type="html"><![CDATA[<p>Frameworks &amp; tools for web developer.</p>
-
-<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in &#8230;</p>
-
-<p>Learning web tech &amp; apply them to solve daily problems!</p>
-
-<p>Air off, Mind on ~ :-) 2012</p>
-
-<p>with following tech &amp; tools:
-Git tool
-github pages
-Ruby &amp; Ruby DevKit
-RubyGem
-Octopress</p>
 ]]></content>
   </entry>
   
