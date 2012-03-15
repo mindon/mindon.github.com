@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael - Mindon.IDEA</title>
+  <title>Lasers Can Be Used to Steer Lightning In Mid-Strike - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Web-Drawing Throwdown: Paper.js vs. Processing.js vs. Raphael</h1>
+      <h1 class="entry-title">Lasers Can Be Used to Steer Lightning in Mid-Strike</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-02-25T23:18:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+<time datetime="2012-03-15T22:23:00+08:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
         
       </p>
     
@@ -131,108 +131,17 @@
 		</script>
 	</div>
 
-<p>Before drawing anything in a browser, ask yourself three questions:</p>
+<p>Laser light can not only trigger lightning but redirect it, causing it to strike in the same place over and over, according to new research. This means lasers could serve as lightning rods. Because that would be awesome.</p>
 
-<h2>Do you need to support older browsers?</h2>
+<p>Laser lightning rods have been a research subject for several decades, because they could trigger lightning and guide it to a specific place. Firing a laser would create an ionized channel in the atmosphere, which could conduct the lightning to the ground. Laser lightning rods could be an alternative to lightning rockets, according to Aurlien Houard of the Laboratoire d&#8217;Optique Appliquée in Palaiseau, France, a co-author of this study. Lightning rockets can apparently trigger a lightning strike by bringing a conductive material, like some type of salts, toward the static layer of a thunderhead. But a laser would be easier to control than a rocket.</p>
 
-<p>If the answer is yes, then your only choice is Raphaël. It handles browsers all the way back to IE 7 and Firefox 3. Raphaël even has some support for IE 6, although some of its underlying technology cannot be implemented there.</p>
+<p>A team of French researchers set out to test how well lasers can harness and control lightning. They sent a laser beam past a spherical electrode toward an oppositely charged flat electrode. The laser stripped away the outer electrons from the atoms in its way, ionizing the pathway between the electrodes and creating a plasma filament — like lab lightning — that channeled an electrical discharge from the flat electrode to the spherical one.</p>
 
-<h2>Do you need to support Android?</h2>
+<p>Then the team added a longer, pointed electrode to their set of electrode shapes and watched what happened. Left to its own devices, lightning follows the path of least resistance, striking the first thing it comes across — in a thunderstorm, that’s the tallest thing, and in this experiment, it’s the nearest thing. With no laser lightning rod, the discharge predictably hit the tall pointed electrode first. But when the researchers used the laser filament to guide it, the electrical discharge followed the ionized path and hit the spherical electrode instead.</p>
 
-<p>Android doesn’t support SVG, so you’ll have to use Paper.js or Processing.js. Some rumors say that Android 4 will handle SVG, but the majority of Android devices won’t support it for years.</p>
+<p>The team found they could pull this off even after the discharge was already on its way, meaning they could divert the path of lightning. The research appears in the American Institute of Physics journal <a href="http://aipadvances.aip.org/resource/1/aaidbi/v2/i1/p012151_s1?bypassSSO=1">AIP Advances</a>.</p>
 
-<h2>Is your drawing interactive?</h2>
-
-<p>Raphaël and Paper.js focus on interaction with drawn elements through clicking, dragging and touch. Processing.js doesn’t support any object-level events, so responding to user gestures is very difficult. Processing.js can draw a cool animation on your home page, but the other tools are better for interactive applications.</p>
-
-<p>Paper.js, Processing.js and Raphaël are the leading libraries for drawing on the Web right now. A couple of others are up and coming, and you can always use Flash, but these three work well with HTML5 and have the widest support among browser vendors.</p>
-
-<p>Choosing the right framework will determine the success of your project. This article covers the advantages and disadvantages of each, and the information you need to make the best choice.</p>
-
-<!--more-->
-
-
-<p>All of the code in this article is open source and can be run on the demo page that accompanies this article.</p>
-
-<p>[Note: Have you already pre-ordered your copy of our Printed Smashing Book #3? The book is a professional guide on how to redesign websites and it also introduces a whole new mindset for progressive Web design, written by experts in the industry for you. Pre-order now and add your name into the book!]</p>
-
-<h2>Overview</h2>
-
-<table>
-<thead>
-<tr>
-<th> </th>
-<th align="center"> Paper.js </th>
-<th align="center"> Processing.js </th>
-<th align="center"> Raphaël.js</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Technology </td>
-<td align="center"> canvas tag </td>
-<td align="center"> canvas tag </td>
-<td align="center"> SVG</td>
-</tr>
-<tr>
-<td>Language </td>
-<td align="center"> PaperScript </td>
-<td align="center"> Processing script </td>
-<td align="center"> JavaScript</td>
-</tr>
-<tr>
-<td>Browsers </td>
-<td align="center"> IE 9 </td>
-<td align="center"> IE 9 </td>
-<td align="center"> IE 7</td>
-</tr>
-<tr>
-<td>Mobile </td>
-<td align="center"> Yes </td>
-<td align="center"> Yes </td>
-<td align="center"> iOS only</td>
-</tr>
-<tr>
-<td>Model </td>
-<td align="center"> Vector and raster </td>
-<td align="center"> Raster </td>
-<td align="center"> Vector</td>
-</tr>
-<tr>
-<td>Size </td>
-<td align="center"> 56 KB </td>
-<td align="center"> 64 KB </td>
-<td align="center"> 20 KB</td>
-</tr>
-</tbody>
-</table>
-
-
-<p>It’s all JavaScript once the page runs, but the frameworks take different paths to get there. Raphaël is written directly in JavaScript, but Paper.js uses PaperScript, and Processing.js uses its own script. They all support Firefox, Chrome and Safari, but Internet Explorer is an issue — Paper.js and Processing.js use the canvas tag and thus require IE 9.</p>
-
-<div style="float:right">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6997921015773263";
-/* git-post-body2 */
-google_ad_slot = "9585845910";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-
-
-<p>PaperScript is a JavaScript extension that makes it possible to write scripts that don’t pollute the global namespace. This cuts down on JavaScript conflicts. PaperScript also supports direct math on objects such as Point and Size: you can add two points together as if they were numbers.</p>
-
-<p>Processing.js is based on a framework named Processing, which runs in the Java Virtual Machine. You define int and float instead of var, and you can use classes with Java-style inheritance. While the Processing.js script looks a little like Java, it’s more like JavaScript and doesn’t require many of the more complex features of Java.
-Using all three libraries is easy if you have some familiarity with JavaScript.</p>
-
-<p>Full article could be found from <em>Zack Grossbart</em>&#8217;s <a href="http://coding.smashingmagazine.com/2012/02/22/web-drawing-throwdown-paper-processing-raphael/">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a></p>
-
-<p>with demos <a href="http://zgrossbart.github.com/3gears/">http://zgrossbart.github.com/3gears/</a></p>
+<p>Original from POPSCI: <a href="http://www.popsci.com/technology/article/2012-03/lightning-can-strike-twice-if-you-have-some-lasers">Lasers Can Be Used to Steer Lightning In Mid-Strike</a></p>
 
 </div>
 
@@ -256,12 +165,12 @@ Using all three libraries is easy if you have some familiarity with JavaScript.<
   
 
 
-<time datetime="2012-02-25T23:18:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+<time datetime="2012-03-15T22:23:00+08:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/light-air-water-m-sci/'>Light-Air-Water-M-Sci</a>
   
 </span>
 
@@ -270,7 +179,7 @@ Using all three libraries is easy if you have some familiarity with JavaScript.<
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -283,10 +192,8 @@ Using all three libraries is easy if you have some familiarity with JavaScript.<
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/" title="Previous Post: 20 Things You Didn't Know About... Magnetism">&laquo; 20 Things You Didn't Know About... Magnetism</a>
+        <a class="basic-alignment left" href="/blog/2012/03/15/words-that-sound-different/" title="Previous Post: Absurd">&laquo; Absurd</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/" title="Next Post: GoAgent -- Make your own fast proxy with GAE">GoAgent -- Make your own fast proxy with GAE &raquo;</a>
       
     </p>
   </footer>
@@ -471,8 +378,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/';
         var disqus_script = 'embed.js';
       
     (function () {
