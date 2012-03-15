@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-12T22:48:08+08:00</updated>
+  <updated>2012-03-15T21:47:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Absurd]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/15/words-that-sound-different/"/>
+    <updated>2012-03-15T20:30:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/15/words-that-sound-different</id>
+    <content type="html"><![CDATA[<p>The video from youtube <a href="http://www.youtube.com/watch?v=R281PhQufHo"><strong>GDC 2012</strong> - Porting your game to NaCl</a>.</p>
+
+<p>When I finished watching this video at noon, I visit the speaker's Google+. There I see this sentence as his motto</p>
+
+<p><strong>Colt McAnlis</strong> -- "If at first, the idea is not absurd, then there is no hope for it"</p>
+
+<p>This is the first time I met the word: <strong>absurd</strong>!</p>
+
+<p>Another article “Man, give it five minutes.”</p>
+
+<p><a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">http://37signals.com/svn/posts/3124-give-it-five-minutes</a></p>
+
+<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p>
+
+<p>Dismissing an idea is so easy because it doesn’t involve any work. You can scoff at it. You can ignore it. You can puff some smoke at it. That’s easy. The hard thing to do is protect it, think about it, let it marinate, explore it, riff on it, and try it. The right idea could start out life as the wrong idea.</p>
+
+<p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
+
+<p>“Your first design may be the best, but you won't know until you can't find a better one.”</p>
+
+<p><a href="http://blog.intercom.io/criticism-and-two-way-streets/">http://blog.intercom.io/criticism-and-two-way-streets/</a></p>
+
+<h2>Working on TikTalk</h2>
+
+<p>This time, when we start a new product. I need a name for it: I choose tiktalk hoping the product could be someting like a drop of water in the ocean of internet: providing a kind of driving force of a website's life.</p>
+
+<p>A name for product is importance to express our idea, activate our creative power to push it forward. (I learn this from the global mail project last year.)</p>
+
+<p>It's a hard work during these 3 weeks:</p>
+
+<ol>
+<li><p>Design the front-end &amp; back-end frameworks</p></li>
+<li><p>Setup service of back-end</p></li>
+<li><p>Rewrite front-end codes</p></li>
+</ol>
+
+
+<p>Today, finish front-end demo: a few features in detail, fixing bugs...</p>
+
+<p>TikTalk is working fine! :-)</p>
+
+<p>Next week, making back-end service more stable &amp; flexible is big challenge for me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[激情 - Passion]]></title>
@@ -216,35 +266,6 @@
 
 <p>【译言网】 <a href="http://article.yeeyan.org/view/222604/197644">亨利·卡蒂尔-布雷松的经典摄影</a>
 【Fondation Henri Cartier-Bresson】 <a href="http://www.henricartierbresson.org/">http://www.henricartierbresson.org/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GoAgent -- Make your own fast proxy with GAE]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/"/>
-    <updated>2012-02-29T23:44:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae</id>
-    <content type="html"><![CDATA[<p>在这个神奇的国家里，有很过好东西被阻止了，很多烂东西倒是放进来了。不想自己的大脑成为次品，还是要多学习新知识的，那就缺少不了Proxy这东西。</p>
-
-<p>GoAgent 确实是个不错的东西，之前用过LocalProxy，总有些奇怪的原因导致不能用。最近在同事的微博看到了GoAgent，搭了一下，速度还真不错 :D</p>
-
-<!--more-->
-
-
-<p>我是装有GAE SDK的，自行上传App的，没有使用 GoAgent 提供的 uploader.bat。
-这里简单记录一下用GAE（Google App Engine）搭建GoAgent Proxy的要点：
-（最权威的指南还是去 <a href="http://code.google.com/p/goagent/">http://code.google.com/p/goagent/</a> 看最好了:p ）</p>
-
-<ol>
-<li>要装有Python2.7</li>
-<li>GAE里建的APP要是新的才会支持 High Replication Datastore</li>
-<li>设置 app.yaml 里的 appid</li>
-</ol>
-
-
-<p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
-
-<p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 ]]></content>
   </entry>
   

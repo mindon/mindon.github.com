@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-12T22:48:08+08:00</updated>
+  <updated>2012-03-15T21:47:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Absurd]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/15/words-that-sound-different/"/>
+    <updated>2012-03-15T20:30:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/15/words-that-sound-different</id>
+    <content type="html"><![CDATA[<p>The video from youtube <a href="http://www.youtube.com/watch?v=R281PhQufHo"><strong>GDC 2012</strong> - Porting your game to NaCl</a>.</p>
+
+<p>When I finished watching this video at noon, I visit the speaker&#8217;s Google+. There I see this sentence as his motto</p>
+
+<p><strong>Colt McAnlis</strong> &#8211; &#8220;If at first, the idea is not absurd, then there is no hope for it&#8221;</p>
+
+<p>This is the first time I met the word: <strong>absurd</strong>!</p>
+
+<p>Another article “Man, give it five minutes.”</p>
+
+<p><a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">http://37signals.com/svn/posts/3124-give-it-five-minutes</a></p>
+
+<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p>
+
+<p>Dismissing an idea is so easy because it doesn’t involve any work. You can scoff at it. You can ignore it. You can puff some smoke at it. That’s easy. The hard thing to do is protect it, think about it, let it marinate, explore it, riff on it, and try it. The right idea could start out life as the wrong idea.</p>
+
+<p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
+
+<p>“Your first design may be the best, but you won&#8217;t know until you can&#8217;t find a better one.”</p>
+
+<p><a href="http://blog.intercom.io/criticism-and-two-way-streets/">http://blog.intercom.io/criticism-and-two-way-streets/</a></p>
+
+<h2>Working on TikTalk</h2>
+
+<p>This time, when we start a new product. I need a name for it: I choose tiktalk hoping the product could be someting like a drop of water in the ocean of internet: providing a kind of driving force of a website&#8217;s life.</p>
+
+<p>A name for product is importance to express our idea, activate our creative power to push it forward. (I learn this from the global mail project last year.)</p>
+
+<p>It&#8217;s a hard work during these 3 weeks:</p>
+
+<ol>
+<li><p>Design the front-end &amp; back-end frameworks</p></li>
+<li><p>Setup service of back-end</p></li>
+<li><p>Rewrite front-end codes</p></li>
+</ol>
+
+
+<p>Today, finish front-end demo: a few features in detail, fixing bugs&#8230;</p>
+
+<p>TikTalk is working fine! :-)</p>
+
+<p>Next week, making back-end service more stable &amp; flexible is big challenge for me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Key of TCM -- Recommended Books]]></title>
@@ -942,47 +992,6 @@ Find out where node.js makes sense, and how to get management to see the benefit
 
 <p>NodeJS – The what, why, how and when
 <a href="http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/">http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Images Optimization]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/22/web-images-optimization/"/>
-    <updated>2012-02-22T15:16:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/22/web-images-optimization</id>
-    <content type="html"><![CDATA[<p>Use PNG! with ImageMagick</p>
-
-<h2>GIF Animation</h2>
-
-<p>Tool: <a href="http://www.lcdf.org/gifsicle/">GitSlice</a>
-Command:</p>
-
-<p>  gifsicle -o  test-optimized.gif test.gif</p>
-
-<h2>PNG</h2>
-
-<p>Tool: <a href="http://pmt.sourceforge.net/pngcrush/">PNGCrush</a>
-Command:</p>
-
-<p>  pngcrush -rem alla -brute -reduce test.jpg test-optimized.jpg</p>
-
-<h2>JPEG</h2>
-
-<p>Tool: <a href="http://jpegclub.org/jpegtran/">JPEGTran</a>
-Command:</p>
-
-<p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
-
-<!--more-->
-
-
-<p>Reference from <a href="http://www.welefen.com/image-optimization.html">前端优化之图片优化自动化</a></p>
-
-<p>12 Really Useful Image Optimization Tools For Web Designers
-<a href="http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/">http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/</a></p>
-
-<p>Optimizing Web Graphics: Compression
-<a href="http://www.webreference.com/dev/graphics/compress.html">http://www.webreference.com/dev/graphics/compress.html</a></p>
 ]]></content>
   </entry>
   
