@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-15T22:27:04+08:00</updated>
+  <updated>2012-03-17T13:35:33+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,237 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[MongoDB: The internal file structure]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/17/mongodb-the-internal-file-structure/"/>
+    <updated>2012-03-17T11:43:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/17/mongodb-the-internal-file-structure</id>
+    <content type="html"><![CDATA[<p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+
+<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+
+<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+
+<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+
+<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+
+<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+
+<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
+
+<h2>MongoDB数据文件内部结构</h2>
+
+<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
+
+<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+
+<!--more-->
+
+
+<p>每一个数据库都有自己独立的文件。如果你开启了directoryperdb选项，那你每个库的文件会单独放在一个文件夹里。</p>
+
+<p>数据库文件在内部会被切分成单个的块，每个块只保存一个名字空间的数据。在MongoDB中，名字空间用于区分不同的存储类别。比如每个collection有一个独立的名字空间，每个索引也有自己的名字空间。</p>
+
+<p>在一个块中，会保存多条记录，每条记录是BSON格式的，记录与记录之间通过双向链表进行连接。</p>
+
+<p>索引数据也存在数据文件中，不过索引是被组织成B-Tree结构，而不是双向链表。</p>
+
+<p>对每个数据库，有一个命名空间文件，用于保存每个名字空间对应的元数据。我们通过查询这些元数据来找到对应的名字空间的存储块位置。</p>
+
+<p>如果你开启了jorunaling日志，那么还会有一些文件存储着你所有的操作记录。</p>
+
+<p>下面图片摘自10gen工程师Mathias Stearn在MongoSV2011大会上的发言稿，手绘的数据文件结构。</p>
+
+<ol>
+<li><p><strong>每个数据库有相应的数据文件和命名空间文件</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/1.jpg" alt="" /></p></li>
+<li><p><strong>数据文件从16MB开始，新的数据文件比上一个文件大一倍，最大为2GB</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/2.jpg" alt="" /></p></li>
+<li><p><strong>文件使用MMAP进行内存映射，会将所有数据文件映射到内存中，但是只是虚拟内存，只有访问到这块数据时才会交换到物理内存。</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/3.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/3-0.jpg" alt="" /></p></li>
+<li><p><strong>MongoDB的数据文件映射到内存表中的位置</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/4.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/4-0.jpg" alt="" /></p></li>
+<li><p><strong>使用32位机器的话，内存地址最大可以标识4GB内存</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/5.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/5-0.jpg" alt="" /></p></li>
+<li><p><strong>但是在32位机器上，4GB内存会有1GB被内核战用，大约0.5GB会用于mongod进程的stack空间，只剩下大约2.5GB可用于映射数据文件。</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/6.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/6-0.jpg" alt="" /></p></li>
+<li><p><strong>在64位机器上则最多可以表示128TB的空间</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/7.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/7-0.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/7-1.jpg" alt="" /></p></li>
+<li><p><strong>每个数据文件会被分成一个一个的数据块，块与块之间用双向链表连接</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/8.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/8.jpg" alt="" /></p></li>
+<li><p><strong>在名字空间文件中，保存的是一个hash table，保存了每个名字空间的存储信息元数据，包括其大小，块数，第一块位置，最后一块位置，被删除的块的链表以及索引信息</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/9.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/9-0.jpg" alt="" /></p></li>
+<li><p><strong>这些位置通过DiskLoc数据结构进行存储，存储了数据文件编号和块在文件中的位置</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/a.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/a-0.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/a-1.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/a-2.jpg" alt="" /></p></li>
+<li><p><strong>对每一个块来说，其头部包含了一些块的元数据，比如自己的位置，上一个和下一个块的位置以及块中第一条和最后一条记录的位置指针。剩下的部分用于存储具体的数据，具体数据之间也是通过双向链接来进行连接。</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/b.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/b-0.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/b-1.jpg" alt="" /></p></li>
+<li><p><strong>下面是B-Tree的存储结构和工作原理</strong>
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-0.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-1.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-2.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-3.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-4.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-5.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-6.jpg" alt="" />
+<img src="http://mindon.github.com/images/blog/mongodb-internal/c-7.jpg" alt="" /></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on MongoDB]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/17/notes-on-mongodb/"/>
+    <updated>2012-03-17T11:12:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/17/notes-on-mongodb</id>
+    <content type="html"><![CDATA[<p><strong>MongoDB资料汇总专题</strong>
+<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
+
+<h2>MongoDB 最佳实践</h2>
+
+<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
+
+<p><strong>1. 始终启用备份</strong></p>
+
+<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
+二节点可以迅速启用，你的应用不会中断。</p>
+
+<p><strong>2. 使用最新版本</strong></p>
+
+<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
+和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
+，你应该尽快升级。</p>
+
+<!--more-->
+
+
+<p><strong>3. 不要在32位的系统上跑MongoDB</strong></p>
+
+<p>MongoDB在32位系统上有“2.5GB数据限制”。它的存储引擎使用
+内存映射来读取文件以获得更好的性能。这个功能依赖于内存
+寻址，而32位系统的内存不能超过4GB。</p>
+
+<p><strong>4. 默认开启日志</strong></p>
+
+<p>MongoDB支持数据库操作的提前日志（write-ahead journaling
+）。这个功能有助于灾难恢复。</p>
+
+<p><strong>5. 注意你数据文件的位置</strong></p>
+
+<p>你应该保证你的MongoDB的数据文件是存储在物理驱动器上，例
+如 /data/mongodb。当然你也可以使用虚拟的驱动器，但是必
+须非常小心。因为它有可能会影响到你的集群架构。我们建议
+你使用 Amazon EBS 来存放你的数据库文件。</p>
+
+<p><strong>6. 保证足够大的内存</strong></p>
+
+<p>为了保证整个集群的性能，你要确保整个所有MongoDB的工作实
+例（working set）包括索引可以完全装入内存。如果你发现
+“page faults”的概率在增加，很有可能mongoDB的数据量超出
+了你的内存。在这种情况下你有两种选择：加内存，或者创建
+分片集群（Sharding）。我们建议你先考虑加内存。</p>
+
+<p><strong>7. 保持 65% 以内的压力</strong></p>
+
+<p>如果你发现你的集群压力达到了65%，那么你应该考虑扩大你的
+集群了。通常，你应该保证数据库压力低于65%。</p>
+
+<p><strong>8. 特别小心分片集群</strong></p>
+
+<p>分片集群需要你充分理解你应用的数据访问方式。你应该充分
+了解MongoDB的分片工作方式，并且确认你确实需要这个功能。
+还有，选择一个分片钥匙（sharding key）是对于性能也是很
+重要的。</p>
+
+<p>配置服务器对于一个集群的健康也是很重要的。在分片集群的
+环境中，你必须有三台配置服务器。永远不要删除配置服务器
+的数据，时常备份这些数据。这些配置服务器也需要64位的环
+境。还有，不要把三台配置服务器放在同一台机器上！</p>
+
+<p><strong>9. 使用 Mongo MMS 来图形化的监控你的数据库</strong></p>
+
+<p>如果你还没有使用 Mongo MMS的话，我强烈推荐这个工具。
+10gen 正在大力开发这个产品。它提供了一个非常友好的可视
+化的界面来监控你的MongoDB集群。</p>
+
+<p><strong>10. MongoDB 资源</strong></p>
+
+<p>技术总是在不断进步，你需要市场关注这些信息：</p>
+
+<ul>
+<li>Documentation: <a href="http://www.mongodb.org/display/DOCS/Home">http://www.mongodb.org/display/DOCS/Home</a></li>
+<li>Google Group: <a href="http://groups.google.com/group/mongodb-user">http://groups.google.com/group/mongodb-user</a></li>
+<li>Bugs: <a href="https://jira.mongodb.org">https://jira.mongodb.org</a></li>
+<li>Blog: <a href="http://blog.mongodb.org/">http://blog.mongodb.org/</a></li>
+</ul>
+
+
+<p><a href="http://www.engineyard.com/blog/2011/mongodb-best-practices/"><strong>MongoDB Best Practices</strong></a> <a href="http://www.programmer.com.cn/9999/">中文</a></p>
+
+<p><strong>MongoDB运行状态、性能监控，分析</strong>:
+<a href="http://blog.nosqlfan.com/html/3346.html">http://blog.nosqlfan.com/html/3346.html</a></p>
+
+<p><strong>MongoDB容量规划</strong>:
+<a href="http://blog.nosqlfan.com/html/3322.html">http://blog.nosqlfan.com/html/3322.html</a></p>
+
+<p><strong>MongoQ</strong>:
+<a href="https://github.com/zzdhidden/mongoq">https://github.com/zzdhidden/mongoq</a></p>
+
+<p><strong>MongoSpy, MongoWatch及MongoDB数据压缩</strong></p>
+
+<p><a href="http://blog.nosqlfan.com/html/3205.html">http://blog.nosqlfan.com/html/3205.html</a></p>
+
+<h2>五步优化你的MongoDB</h2>
+
+<ol>
+<li><p><strong>查询优化</strong>
+确认你的查询是否充分利用到了索引，用explain命令查看一下查询执行的情况，添加必要的索引，避免扫表操作。</p></li>
+<li><p><strong>搞清你的热数据大小</strong>
+可能你的数据集非常大，但是这并不那么重要，重要的是你的热数据集有多大，你经常访问的数据有多大（包括经常访问的数据和所有索引数据）。使用MongoDB，你最好保证你的热数据在你机器的内存大小之下，保证内存能容纳所有热数据。</p></li>
+<li><p><strong>选择正确的文件系统</strong>
+MongoDB的数据文件是采用的预分配模式，并且在Replication里面，Master和Replica Sets的非Arbiter节点都是会预先创建足够的空文件用以存储操作日志。这些文件分配操作在一些文件系统上可能会非常慢，导致进程被Block。所以我们应该选择那些空间分配快速的文件系统。这里的结论是尽量不要用ext3，用ext4或者xfs。</p></li>
+<li><p><strong>选择合适的硬盘</strong>
+这里的选择包括了对磁盘RAID的选择，也包括了磁盘与SSD的对比选择。</p></li>
+<li><p><strong>Shard分片</strong>
+在单个节点压力太大时，我们可以考虑使用MongoDB的auto-sharding机制来将数据分片到多个节点以缓解压力。</p></li>
+</ol>
+
+
+<p>火丁筆記: <a href="http://huoding.com/2011/08/09/104">记一次MongoDB性能问题</a></p>
+
+<p><strong>NUMA Problem（Warn)</strong>
+<a href="http://www.mongodb.org/display/DOCS/NUMA">http://www.mongodb.org/display/DOCS/NUMA</a></p>
+
+<p>shell> numactl &#8211;interleave=all /path/to/mongod</p>
+
+<p>NUMA下，内存是按照物理CPU来划分的，不是按逻辑CPU/核划分的</p>
+
+<p>每个核访问分配给自己的内存会比访问分配给其它核的内存要快，有下面几种访问控制策略：</p>
+
+<ol>
+<li><p>缺省(default)：总是在本地节点分配（分配在当前进程运行的节点上）；</p></li>
+<li><p>绑定(bind)：强制分配到指定节点上；3.交叉(interleave)：在所有节点或者指定的节点上交织分配；</p></li>
+<li><p>优先(preferred)：在指定节点上分配，失败则在其他节点上分配。</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lasers Can Be Used to Steer Lightning In Mid-Strike]]></title>
@@ -924,62 +1155,6 @@ Using all three libraries is easy if you have some familiarity with JavaScript.<
 <p>Full article could be found from <em>Zack Grossbart</em>&#8217;s <a href="http://coding.smashingmagazine.com/2012/02/22/web-drawing-throwdown-paper-processing-raphael/">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a></p>
 
 <p>with demos <a href="http://zgrossbart.github.com/3gears/">http://zgrossbart.github.com/3gears/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[20 Things You Didn't Know About... Magnetism]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/"/>
-    <updated>2012-02-24T13:37:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism</id>
-    <content type="html"><![CDATA[<ol>
-<li><p>Magnetism is familiar to every fifth grader, but describing it can confound even the most brilliant physicist.</p></li>
-<li><p>Take the case of <a href="http://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a>. When asked to explain magnetism, he <a href="http://www.youtube.com/watch?v=wMFPe-DwULM">urged his BBC interviewer to take it on faith</a> (video). After seven minutes of stonewalling, he finally said, “I really can’t do a good job, any job, of explaining magnetic force in terms of something else that you’re more familiar with because I don’t understand it in terms of anything else that you’re more familiar with.”</p></li>
-</ol>
-
-
-<!--more-->
-
-
-<ol>
-<li><p>He did break down and try for a few seconds before abandoning the attempt. Those seconds were packed with oversimplifications: “All the electrons [in a magnet] are spinning in the same direction.”</p></li>
-<li><p>But who better than Feynman would have known that not all electrons spin in the same direction?</p></li>
-<li><p>And they don’t actually spin. “<a href="http://en.wikipedia.org/wiki/Spin_%28physics%29">Spin</a>” is just a physicist’s term for the little magnetic north and south poles baked into every electron. The orientation of those poles defines the direction of the electron’s (somewhat imaginary) rotation.</p></li>
-<li><p>Why does every electron have those poles? As soon as someone finds out, we’ll get back to you.</p></li>
-<li><p>Here is what we do know. Within an atom, each electron is usually paired with an opposite- oriented electron so that their magnetic pulls cancel each other out.</p></li>
-<li><p>But if some of the electrons are unpaired, they can be induced to move around so that their poles line up, creating a net magnetic field. The arrangement of the electrons in metals makes them particularly open to magnetic peer pressure.</p></li>
-<li><p>DIY refrigerator magnet: Apply an external magnetic field to some hot metal. Cool it so the aligned electrons get frozen in place. Slap on your local plumber’s business card, and—voilà!</p></li>
-<li><p><a href="http://www.britannica.com/EBchecked/topic/653297/yinyang">Yin Seeks Yang</a> for Magnetic Relationship. All magnets have north and south poles, and opposite poles attract: North poles seek south poles seek north poles seek south poles seek . . .</p></li>
-<li><p>You are standing on a magnet right now. The earth’s magnetic field is created by electric currents in an ocean of molten iron at its core. That’s why the north pole of a compass needle points . . . er . . . why north? Since north poles are attracted to south poles, the “north” arrow on your compass actually points toward the earth’s south magnetic pole, which is the one up north. Got it?</p></li>
-<li><p>And the earth’s <a href="http://en.wikipedia.org/wiki/North_Magnetic_Pole">magnetic south</a> (aka “north”) pole isn’t even precisely at the geographic north pole. Right now it is in the Arctic Ocean, near northern Canada.</p></li>
-<li><p>Worse still, it is constantly drifting in response to currents in the earth’s core. It is moving toward Siberia at a rate of up to 35 miles per year, according to the U.S. Geological Survey. Hey, shift happens.</p></li>
-<li><p>Ancient mariners navigated by <a href="http://en.wikipedia.org/wiki/Lodestone">lodestone</a>, naturally occurring magnetic rocks.</p></li>
-<li><p>Where lodestones come from is another mystery of magnetism. Some geologists think they are created when lighting strikes iron-rich rocks.</p></li>
-<li><p>Microbes, birds, and some other animals have magnetic crystals inside their bodies that allow them to orient themselves.</p></li>
-<li><p>That is probably why <a href="http://en.wikipedia.org/wiki/Loggerhead_sea_turtle">loggerhead turtles</a> can migrate 8,000 miles in unfamiliar waters while humans can get lost looking for the restroom at Olive Garden.</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/Magnetic_resonance_imaging">Magnetic Resonance Imaging</a> (MRI) machines generate a field 60,000 times as intense as the earth’s to vibrate the hydrogen atoms in your body; in response, the atoms emit radio waves that are analyzed to produce a map of your insides.</p></li>
-<li><p>Using a sensor the size of a sugar cube, researchers from the <a href="http://www.nist.gov/index.html">National Institute of Standards and Technology</a> can <a href="http://www.nist.gov/pml/div688/magnetic_101310.cfm">track the magnetic pattern of a human heart</a>.</p></li>
-<li><p>The signal is faint, but the good news is that science has proved attraction is quantifiable. Word up, Hallmark.</p></li>
-</ol>
-
-
-<p>from <a href="http://discovermagazine.com/2011/jul-aug/20-things-you-didnt-know-about-magnetism">http://discovermagazine.com/2011/jul-aug/20-things-you-didnt-know-about-magnetism</a></p>
-
-<p>Chinese version (中文: 关于磁&#8211;你所不知道的二十件事) <a href="http://article.yeeyan.org/view/159732/253517">http://article.yeeyan.org/view/159732/253517</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Water Walking]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/23/water-walking/"/>
-    <updated>2012-02-23T13:53:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/23/water-walking</id>
-    <content type="html"><![CDATA[<p>A water layer was sprinkled with Thymol Blue, which established the Marangoni convection responsible for the evident fine-scale texture. The layer was lit from below, giving the flow a natural luminescence. Stopping vortices shed during the deceleration phase of the strider&#8217;s motion are evident in Figure 2.  The dipolar vortices shed by the driving legs during each stroke are evident in Figure 3, and mark the path of the strider. The starburst in Figure 3 is associated with the relatively large particle of thymol blue evident at its centre: the Thymol Blue reduces the local surface tension, thus prompting surface divergence that clears the surface of blue dye.  The water striders are light-seeking, and so drawn to the starbursts.</p>
-
-<p><img src="http://www-math.mit.edu/~dhu/Striderweb/icarus.jpg" alt="Water Walking" /></p>
-
-<p>Read detail from <a href="http://www-math.mit.edu/~dhu/Striderweb/striderweb.html">http://www-math.mit.edu/~dhu/Striderweb/striderweb.html</a>
-<a href="http://www.me.gatech.edu/hu/">http://www.me.gatech.edu/hu/</a></p>
 ]]></content>
   </entry>
   
