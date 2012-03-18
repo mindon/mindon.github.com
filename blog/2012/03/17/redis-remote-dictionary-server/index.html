@@ -145,6 +145,9 @@
 <p><strong>Salvatore Sanfilippo：</strong>
 Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
 
+<!--more-->
+
+
 <p>大的库也并不总是每个方面都没有瑕疵的。例如，Libevent的稳定发布版在运行时对事件的数组做无意义的重新分配（Libevent在2.0版本里改进了这一点，但是这个版本还不是稳定的）。我修改了ae.c让它模块化，并且通过多分配一些内存为代价来避免在事件循环内部的各种类型的O(N)操作（但是这个多分配的内存对于Redis这个内存数据库来说并不是一个问题，因为可能只占总占用内存的0.001% :)）。现在添加和删除一个event是O(1)了，这对于有10K个客户端连接来说很重要。现在我们在Redis里面仅仅使用一个Timer，但是如果以后我们需要更多的，我可以修改ae.c通过使用skip list（跳跃表）来达到O(log(N))。我们现在有了2个模块：ae_select.c和ae_epoll.c，考虑到写一个新的模块的工作是如此的少，我肯定会增加ae_kevent.c。</p>
 
 <p><strong>Sergey Shepelev：</strong>
