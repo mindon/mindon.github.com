@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Redis tutorial These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the &hellip;">
+  <meta name="description" content="This is a modification version of John Resig&#8217;s Javascript Micro-Templating (function(){ var cache = {}; // Added by Mindon this.tmplCall = { &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,104 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-21T10:52:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<pre><code>(function(){
+  var cache = {};
+
+  // Added by Mindon
+  this.tmplCall = {
+    nohtml: function(v) {
+      return typeof v == 'string'
+        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
+        : v;
+    }
+  , br: function(v) {
+      return typeof v == 'string'
+        ? v.replace(/\n{2,}/g, '&lt;br/&gt;&lt;br/&gt;').replace(/\n/g, '&lt;br/&gt;')
+        : v;
+    }
+  };
+
+  // Updated by mindon@gmail.com Nov. 3, 2011 ( options parameter append )
+  this.tmpl = function tmpl(str, data, opt){
+    var _t, _f; // added by Mindon
+
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+        tmpl(document.getElementById(str).innerHTML, 0, opt) : // updated by Mindon
+
+      // Appended by Mindon
+      ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
+        (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
+        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0// fields: function(){return {fieldName: handlefn(v){}}}
+      ) ||
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("d",
+        "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
+          +_t +",_v=function(k,v){" 
+          +(opt &amp;&amp; opt.time ? 'if(k=="time"&amp;&amp;!/[^\\d]/.test(v))return (window.timefmt &amp;&amp; window.timefmt(v)) || new Date(v);':'')
+          +'return tmplCall.br('
+          +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
+          +(_t?'_t(v)':'v'):'') +")};" + // updated
+
+        // Introduce the data as local variables using with(){}
+        "p.push('" +
+
+        // Convert the template into pure JavaScript
+        str.replace(/[\r\t\n]/g, " ")
+          .split("&lt;%").join("\t")
+          .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%&gt;/g, "',_v('$1',d['$1']),'") // updated
+          .split("\t").join("');")
+          .split("%&gt;").join("p.push('")
+          .split("\r").join("\\'")
+      + "');return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+})();
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -450,57 +548,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/programmers-are-born-not-made/">激情 - Passion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T14:04:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Passion</h2>
-
-<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
-
-<p>That’s passion!</p>
-
-<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
-
-<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
-
-<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/10/programmers-are-born-not-made/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -533,7 +580,7 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 7 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 8 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 9 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 6 )</li>
 
@@ -548,6 +595,10 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a>
@@ -583,10 +634,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
     
       <li class="post">
         <a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Socket.IO behind proxy or firewall</a>
       </li>
     
   </ul>

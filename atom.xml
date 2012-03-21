@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-18T22:55:20+08:00</updated>
+  <updated>2012-03-21T11:13:16+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Javascript Micro-Templating]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/21/javascript-micro-templating/"/>
+    <updated>2012-03-21T10:52:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/21/javascript-micro-templating</id>
+    <content type="html"><![CDATA[<p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<pre><code>(function(){
+  var cache = {};
+
+  // Added by Mindon
+  this.tmplCall = {
+    nohtml: function(v) {
+      return typeof v == 'string'
+        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
+        : v;
+    }
+  , br: function(v) {
+      return typeof v == 'string'
+        ? v.replace(/\n{2,}/g, '&lt;br/&gt;&lt;br/&gt;').replace(/\n/g, '&lt;br/&gt;')
+        : v;
+    }
+  };
+
+  // Updated by mindon@gmail.com Nov. 3, 2011 ( options parameter append )
+  this.tmpl = function tmpl(str, data, opt){
+    var _t, _f; // added by Mindon
+
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+        tmpl(document.getElementById(str).innerHTML, 0, opt) : // updated by Mindon
+
+      // Appended by Mindon
+      ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
+        (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
+        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0// fields: function(){return {fieldName: handlefn(v){}}}
+      ) ||
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("d",
+        "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
+          +_t +",_v=function(k,v){" 
+          +(opt &amp;&amp; opt.time ? 'if(k=="time"&amp;&amp;!/[^\\d]/.test(v))return (window.timefmt &amp;&amp; window.timefmt(v)) || new Date(v);':'')
+          +'return tmplCall.br('
+          +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
+          +(_t?'_t(v)':'v'):'') +")};" + // updated
+
+        // Introduce the data as local variables using with(){}
+        "p.push('" +
+
+        // Convert the template into pure JavaScript
+        str.replace(/[\r\t\n]/g, " ")
+          .split("&lt;%").join("\t")
+          .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%&gt;/g, "',_v('$1',d['$1']),'") // updated
+          .split("\t").join("');")
+          .split("%&gt;").join("p.push('")
+          .split("\r").join("\\'")
+      + "');return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+})();
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Redis: REmote DIctionary Server]]></title>
@@ -1090,35 +1161,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <p><strong>I</strong> don&#8217;t know what will happen next. I don&#8217;t know what I&#8217;m going to be, what I&#8217;m going to learn, but what I do know is this—life, all life, is about asking questions, not about knowing answers. It is wanting to see what&#8217;s over the next hill that keeps us all going. We have to keep asking questions, wanting to understand. Even when we know we&#8217;ll never find the answers, we have to keep on asking the questions.</p>
 
 <p><strong>M</strong>y mother always talked to me a lot about the sky. She liked to watch the clouds in the day and the stars at night&#8230;especially the stars. We would play a game sometimes, a game called &#8220;What&#8217;s Beyond the Sky?&#8221; We would imagine darkness or a blinding light or something else that we didn&#8217;t know how to name. But of course, that was just a game. There&#8217;s nothing beyond the sky. The sky just is, and it goes on and on, and we play all of our games beneath it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GoAgent -- Make your own fast proxy with GAE]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/"/>
-    <updated>2012-02-29T23:44:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae</id>
-    <content type="html"><![CDATA[<p>在这个神奇的国家里，有很过好东西被阻止了，很多烂东西倒是放进来了。不想自己的大脑成为次品，还是要多学习新知识的，那就缺少不了Proxy这东西。</p>
-
-<p>GoAgent 确实是个不错的东西，之前用过LocalProxy，总有些奇怪的原因导致不能用。最近在同事的微博看到了GoAgent，搭了一下，速度还真不错 :D</p>
-
-<!--more-->
-
-
-<p>我是装有GAE SDK的，自行上传App的，没有使用 GoAgent 提供的 uploader.bat。
-这里简单记录一下用GAE（Google App Engine）搭建GoAgent Proxy的要点：
-（最权威的指南还是去 <a href="http://code.google.com/p/goagent/">http://code.google.com/p/goagent/</a> 看最好了:p ）</p>
-
-<ol>
-<li>要装有Python2.7</li>
-<li>GAE里建的APP要是新的才会支持 High Replication Datastore</li>
-<li>设置 app.yaml 里的 appid</li>
-</ol>
-
-
-<p>配合 Chrome 的插件 <a href="https://chrome.google.com/webstore/detail/dpplabbmogkhghncfbfdeeokoefdjegm">Proxy SwitchySharp</a> 效果相当好，推荐！</p>
-
-<p>最新GoAgent Snapshot 网址 <a href="http://repo.or.cz/w/goagent.git/">http://repo.or.cz/w/goagent.git/</a></p>
 ]]></content>
   </entry>
   
