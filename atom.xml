@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-21T11:13:16+08:00</updated>
+  <updated>2012-03-23T08:42:45+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,11 +14,64 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Magic Code Switching Comment Syntax]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/"/>
+    <updated>2012-03-22T23:58:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax</id>
+    <content type="html"><![CDATA[<p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Javascript Micro-Templating]]></title>
     <link href="http://mindon.github.com/blog/2012/03/21/javascript-micro-templating/"/>
     <updated>2012-03-21T10:52:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/03/21/javascript-micro-templating</id>
     <content type="html"><![CDATA[<p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<p>The modifications are mostly about filter for field values:</p>
+
+<p>Example: change some value in different formats.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
 
 <pre><code>(function(){
   var cache = {};
@@ -27,7 +80,8 @@
   this.tmplCall = {
     nohtml: function(v) {
       return typeof v == 'string'
-        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
+        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;')
+           .replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
         : v;
     }
   , br: function(v) {
@@ -50,7 +104,8 @@
       // Appended by Mindon
       ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
         (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
-        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0// fields: function(){return {fieldName: handlefn(v){}}}
+        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0
+        // fields: function(){return {fieldName: handlefn(v){}}}
       ) ||
 
       // Generate a reusable function that will serve as a template
@@ -58,7 +113,6 @@
       new Function("d",
         "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
           +_t +",_v=function(k,v){" 
-          +(opt &amp;&amp; opt.time ? 'if(k=="time"&amp;&amp;!/[^\\d]/.test(v))return (window.timefmt &amp;&amp; window.timefmt(v)) || new Date(v);':'')
           +'return tmplCall.br('
           +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
           +(_t?'_t(v)':'v'):'') +")};" + // updated
@@ -1080,87 +1134,6 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
 <p><strong>功效</strong>：促进血液循环，镇定神经。</p>
 
 <p><strong>小技巧</strong>：击打疼痛部位时，力度要适中，但击打松弛的肌肉时就要增加力度了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Allie Narrations in 《Taken》]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/01/allie-narrations-in-taken/"/>
-    <updated>2012-03-01T22:04:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/01/allie-narrations-in-taken</id>
-    <content type="html"><![CDATA[<p><strong>M</strong>y mother always talked to me a lot about the sky. She liked to watch the clouds in the day and the stars at night&#8230;especially the stars. We would play a game sometimes; a game called &#8220;What&#8217;s Beyond the Sky?&#8221; We would imagine darkness or a blinding light or something else that we didn&#8217;t know how to name. But of course, that was just a game. There&#8217;s nothing beyond the sky. The sky just is, and it goes on and on, and we play all of our games beneath it.</p>
-
-<p><strong>P</strong>eople are lonely in this world for lots of different reasons. Some people have something in their disposition. Maybe they were just born too mean, or maybe they were born too tender. But most people are brought to where they are by circumstance, by calamity or a broken heart or something else happening in their lives that wasn&#8217;t anything they planned on. People are lonely in this world for lots of different reasons. The one thing that I do know is, it doesn&#8217;t matter what any one of them might tell you&#8211;nobody wants to be alone.</p>
-
-<p><strong>S</strong>ome people have given up all hope of anything in their lives every changing. They just go on with it day by day, and if something were to come along and make things different they probably wouldn&#8217;t even notice it right off, except for that kind of nervous feeling you get in your stomach. My mom and I used to call that &#8220;the car trip feeling&#8221;, because it was how I&#8217;d feel whenever I knew we were going to go somewhere far away or something new.</p>
-
-<!--more-->
-
-
-<p><strong>T</strong>hat summer, a lot of things had happened that people couldn&#8217;t explain. There had been lights in the sky and stories in the paper about saucers crashing. John had come, and then he had gone. For a while, life went back to being life, and almost everyone forgot the things that that summer had brought with it from out of the sky.</p>
-
-<p><strong>W</strong>hen you&#8217;re a kid, all you ever want is for the stories your mom reads you to be true. You think you can crawl inside the world that&#8217;s in every book and live in the pictures on every page, but deep down you know that this isn&#8217;t something that could ever happen. And it&#8217;s knowing that the magic isn&#8217;t quite there, that it&#8217;s just over the next hill or maybe in the next story, that makes you feel safe in your bed at night. You really wouldn&#8217;t want it to be any other way.</p>
-
-<p><strong>T</strong>here are times when it seems like the whole world is afraid&#8230;when the fear is something you have to live with day in day out. When people get scared, they do a lot of different things. They fight, or they run, they destroy the thing they&#8217;re afraid of, or they put a lot of distance between it and them&#8230;make it something you can shoot at with a friction-action gun.</p>
-
-<p><strong>M</strong>y father liked to say that there were these things in life that didn&#8217;t make any sense, and they could never make any sense, and if you were anywhere near smart, you knew that. But your job was not to give up, to keep on trying to make sense out of them anyway, trying to understand things that could never be understood. I guess maybe people will always find different names for their answers, but the one thing is, their questions will always be the same.</p>
-
-<p><strong>C</strong>hristmas is all about hope. Kids hope for new toys. You get older, and the toys get bigger, but the hope stays the same. Some people might hope for peace on Earth or maybe for a better tomorrow, whatever their idea of that might be, but most people still just want something bright and shiny and new.</p>
-
-<p><strong>W</strong>hy do people want so desperately not to be alone? Why is it more comforting to think you are being watched than to know that no one at all is watching? And why, really, does that make us any less alone? In the end, if there are others out there, then wouldn&#8217;t we be, all of us, still alone together?</p>
-
-<p><strong>W</strong>hen you&#8217;re little, you like to think you know everything, but the last thing you really want is to know too much. What you really want is for grownups to make the world a safe place where dreams can come true and promises are never broken. And when you&#8217;re little, it doesn&#8217;t seem like a lot to ask.</p>
-
-<p><strong>P</strong>eople believe what they want to believe. They find meaning where they can, and they cling to it. In the end, it really doesn&#8217;t matter what&#8217;s a trick and what&#8217;s true. What matters is that people believe.</p>
-
-<p><strong>P</strong>eople like to examine the things that frighten them, to look at them and give them names, so saints look for God, and scientists look for evidence. They&#8217;re both just trying to take away the mystery, to take away the fear.</p>
-
-<p><strong>W</strong>e all like to think that we have some control over the events in our lives, and a lot of the time we can fool ourselves into thinking that we really are in charge. But then something happens to remind us that the world runs by its own rules and not ours and that we&#8217;re just along for the ride.</p>
-
-<p><strong>Y</strong>ou know in cartoons, the way someone can run off a cliff and they&#8217;re fine, they don&#8217;t fall until they look down? My mom always said that was the secret of life. Never look down. But it&#8217;s more than that. It&#8217;s not just about not looking. It&#8217;s about not ever realizing that you&#8217;re in the middle of the air and you don&#8217;t know how to fly.</p>
-
-<p><strong>T</strong>he world is made up of the big things that happen and the small ones. And the part that&#8217;s so unfair is that we call them &#8220;big&#8221; and &#8220;small,&#8221; because when something happens to you, when you lose something or someone that you really care about, that&#8217;s all there is. The world may be blowing up around you, but you don&#8217;t care about that. You don&#8217;t care about that at all.</p>
-
-<p><strong>I</strong> have this idea about why people do the terrible things they do. Same reason little kids push each other on the schoolyard. If you&#8217;re the one doing the pushing, then you&#8217;re not going to be the one who gets pushed. If you&#8217;re the monster, then nothing will be waiting in the shadows to jump out at you. It&#8217;s pretty simple, really. People do the terrible things they do because they&#8217;re sacred.</p>
-
-<p><strong>W</strong>e&#8217;re all standing on the edge of a cliff, all the time, every day, a cliff we&#8217;re all going over. Our choice isn&#8217;t about that. Our choice is about whether we want to go kicking and screaming or whether we might want to open our eyes and our hearts to what happens once we start to fall.</p>
-
-<p><strong>W</strong>hat makes us human? That we can think? That we can feel sorrow and pain? Maybe. That we can laugh? I hope so. We can hurt and we can laugh, and we know a past and a present, and in some ways a future. Maybe what makes us human is that we know just enough to think and know where we&#8217;re going.&#8221;</p>
-
-<p><strong>I</strong> asked my dad once about his dad, my grandfather. I knew he&#8217;d had some hard times, but I didn&#8217;t know a lot more than that. I said to my dad &#8216;I guess maybe he was kind of lost&#8217;. &#8216;Not lost, really,&#8221; my dad said, &#8216;but for a while, he was definitely bewildered.</p>
-
-<p><strong>I</strong> remember my mom telling me that she only went to church once, with her mother on Easter Sunday. When the minister said that the Kingdom of Heaven was within her, that scared her half to death. It meant it was all up to her. People want the comfort of strong arms. They look to the voices in their heads. To drugs. They look to the sky.</p>
-
-<p>ever played tig tag toe with a chicken -Chad</p>
-
-<div style="float:right">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6997921015773263";
-/* git-post-body2 */
-google_ad_slot = "9585845910";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-
-
-<p><strong>W</strong>hen I was very little, my mother would read nursery rhymes to me. I always hated &#8220;Humpty Dumpty.&#8221; That&#8217;s a very scary poem. No one knows how to put it back together again—not all the king&#8217;s horses or all the king&#8217;s men. No one wants to think that there&#8217;s anything in the world that could fall apart that badly, but of course&#8230;anything can. I guess that&#8217;s what&#8217;s so scary about &#8220;Humpty Dumpty.&#8221;</p>
-
-<p><strong>I</strong> had done what I could. I tried to make the soldiers think that their plan to use me as bait hadn&#8217;t worked, that I had been taken away. I thought that if I could make them believe that I was gone, then they wouldn&#8217;t bother me anymore and I could go back to who I used to be. But too much had happened to all us by then for anything to go back to how it was.</p>
-
-<p><strong>P</strong>eople talk a lot as if the most important thing in life is to always see things for what they really are. But everything we do, every plan we make is kind of a lie. We&#8217;re closing our eyes and pretending the day won&#8217;t ever come when we won&#8217;t need to make any more plans. Hope is the biggest lie there is, and it is the best. You have to keep going as if it all mattered, or else we wouldn&#8217;t keep going at all.</p>
-
-<p><strong>H</strong>ow do you let someone go? How do you understand that that&#8217;s alright, that everything changes? How do you find a way for that to make you feel good about life instead of breaking your heart? The hardest thing you&#8217;ll ever learn is how to say good-bye.</p>
-
-<p><strong>T</strong>hey will be coming soon, coming to try to stop what was going to happen next. But maybe they could be stopped. Maybe something could happen that would make it hard for them to do what they wanted to do.</p>
-
-<p><strong>I</strong> don&#8217;t know what will happen next. I don&#8217;t know what I&#8217;m going to be, what I&#8217;m going to learn, but what I do know is this—life, all life, is about asking questions, not about knowing answers. It is wanting to see what&#8217;s over the next hill that keeps us all going. We have to keep asking questions, wanting to understand. Even when we know we&#8217;ll never find the answers, we have to keep on asking the questions.</p>
-
-<p><strong>M</strong>y mother always talked to me a lot about the sky. She liked to watch the clouds in the day and the stars at night&#8230;especially the stars. We would play a game sometimes, a game called &#8220;What&#8217;s Beyond the Sky?&#8221; We would imagine darkness or a blinding light or something else that we didn&#8217;t know how to name. But of course, that was just a game. There&#8217;s nothing beyond the sky. The sky just is, and it goes on and on, and we play all of our games beneath it.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-21T11:13:16+08:00</updated>
+  <updated>2012-03-23T08:42:45+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,11 +14,64 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Magic Code Switching Comment Syntax]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/"/>
+    <updated>2012-03-22T23:58:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax</id>
+    <content type="html"><![CDATA[<p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Javascript Micro-Templating]]></title>
     <link href="http://mindon.github.com/blog/2012/03/21/javascript-micro-templating/"/>
     <updated>2012-03-21T10:52:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/03/21/javascript-micro-templating</id>
     <content type="html"><![CDATA[<p>This is a modification version of <strong>John Resig</strong>'s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<p>The modifications are mostly about filter for field values:</p>
+
+<p>Example: change some value in different formats.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it's really simple, easy-to-use.</p>
 
 <pre><code>(function(){
   var cache = {};
@@ -27,7 +80,8 @@
   this.tmplCall = {
     nohtml: function(v) {
       return typeof v == 'string'
-        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
+        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;')
+           .replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
         : v;
     }
   , br: function(v) {
@@ -50,7 +104,8 @@
       // Appended by Mindon
       ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
         (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
-        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0// fields: function(){return {fieldName: handlefn(v){}}}
+        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0
+        // fields: function(){return {fieldName: handlefn(v){}}}
       ) ||
 
       // Generate a reusable function that will serve as a template
@@ -58,7 +113,6 @@
       new Function("d",
         "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
           +_t +",_v=function(k,v){" 
-          +(opt &amp;&amp; opt.time ? 'if(k=="time"&amp;&amp;!/[^\\d]/.test(v))return (window.timefmt &amp;&amp; window.timefmt(v)) || new Date(v);':'')
           +'return tmplCall.br('
           +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
           +(_t?'_t(v)':'v'):'') +")};" + // updated
@@ -386,43 +440,6 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
 <li><p>优先(preferred)：在指定节点上分配，失败则在其他节点上分配。</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Socket.IO behind proxy or firewall]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/"/>
-    <updated>2012-03-06T06:32:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall</id>
-    <content type="html"><![CDATA[<p>Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected network outage can close your connection. Why is it a problem? It’s problematic when a disconnection happens as you may loose server side events if you don’t architect your application correctly.</p>
-
-<ul>
-<li><strong>long-polling</strong>: between reconnection, servers side events may happens and if they aren’t persisted, those events will never reach your client.</li>
-<li><strong>websocket</strong>: Websocket are new and most if not all firewall will close them after some X idle times. Again, all server sides events will be lost</li>
-<li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
-<li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.</li>
-</ul>
-
-
-<!--more-->
-
-
-<p><a href="https://github.com/LearnBoost/socket.io-client/issues/331">Query string management is messed up</a></p>
-
-<p><a href="https://github.com/LearnBoost/socket.io/wiki/Socket.IO-and-firewall-software">Socket.IO and firewall software</a></p>
-
-<p><a href="http://www.infoq.com/articles/Web-Sockets-Proxy-Servers">How HTML5 Web Sockets Interact With Proxy Servers</a></p>
-
-<p><img src="/images/blog/websocket-proxy.png" alt="Websocket Interact with proxy" /></p>
-
-<blockquote><p>Using TLS/SSL is advised not only when you need to encrypt the traffic but also when you need to bypass proxy servers and firewalls, that otherwise will just block or not understand WebSockets connections.
-<a href="http://showmetheco.de/articles/2011/2/diving-into-html5-with-websockets-and-perl.html">Diving into HTML5 with WebSockets and Perl</a></p></blockquote>
-
-<p>Socket.IO server configuring: <strong>match origin protocol</strong></p>
-
-<p><a href="https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO">https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO</a></p>
-
-<p><a href="http://www.letseehere.com/reverse-proxy-web-sockets">Reverse Proxy Web Sockets with Nginx and Socket.IO</a></p>
 ]]></content>
   </entry>
   

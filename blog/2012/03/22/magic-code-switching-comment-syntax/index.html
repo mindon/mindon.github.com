@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Water Walking - Mindon.IDEA</title>
+  <title>Magic Code Switching Comment Syntax - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/23/water-walking">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Water Walking</h1>
+      <h1 class="entry-title">Magic Code Switching Comment Syntax</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-02-23T13:53:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2012</time>
+<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
         
       </p>
     
@@ -131,12 +131,45 @@
 		</script>
 	</div>
 
-<p>A water layer was sprinkled with Thymol Blue, which established the Marangoni convection responsible for the evident fine-scale texture. The layer was lit from below, giving the flow a natural luminescence. Stopping vortices shed during the deceleration phase of the strider&#8217;s motion are evident in Figure 2.  The dipolar vortices shed by the driving legs during each stroke are evident in Figure 3, and mark the path of the strider. The starburst in Figure 3 is associated with the relatively large particle of thymol blue evident at its centre: the Thymol Blue reduces the local surface tension, thus prompting surface divergence that clears the surface of blue dye.  The water striders are light-seeking, and so drawn to the starbursts.</p>
+<p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
 
-<p><img src="http://www-math.mit.edu/~dhu/Striderweb/icarus.jpg" alt="Water Walking" /></p>
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
 
-<p>Read detail from <a href="http://www-math.mit.edu/~dhu/Striderweb/striderweb.html">http://www-math.mit.edu/~dhu/Striderweb/striderweb.html</a>
-<a href="http://www.me.gatech.edu/hu/">http://www.me.gatech.edu/hu/</a></p>
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
 
 </div>
 
@@ -160,12 +193,12 @@
   
 
 
-<time datetime="2012-02-23T13:53:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2012</time>
+<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/light-air-water-m-sci/'>Light-Air-Water-M-Sci</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>, <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
   
 </span>
 
@@ -174,7 +207,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/23/water-walking/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/23/water-walking/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -187,10 +220,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/22/dive-into-node-dot-js/" title="Previous Post: Dive into Node.JS">&laquo; Dive into Node.JS</a>
+        <a class="basic-alignment left" href="/blog/2012/03/21/javascript-micro-templating/" title="Previous Post: Javascript Micro-Templating">&laquo; Javascript Micro-Templating</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/" title="Next Post: 20 Things You Didn't Know About... Magnetism">20 Things You Didn't Know About... Magnetism &raquo;</a>
       
     </p>
   </footer>
@@ -381,8 +412,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/23/water-walking/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/02/23/water-walking/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/03/22/magic-code-switching-comment-syntax/';
         var disqus_script = 'embed.js';
       
     (function () {

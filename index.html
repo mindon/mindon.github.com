@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="This is a modification version of John Resig&#8217;s Javascript Micro-Templating (function(){ var cache = {}; // Added by Mindon this.tmplCall = { &hellip;">
+  <meta name="description" content="This a kind of c-style code comments to switch two blocks of code for debug or testing. /*/ //... Section A (commented)
+/*/ //... Section B (working &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,7 +80,7 @@
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/blog/categories/chrome-app">Chrome/App</a></li>
-  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="63" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="58" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
   <li><a href="/about">About</a></li>
 </ul>
 
@@ -88,6 +89,80 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -119,6 +194,12 @@
 
   <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
 
+<p>The modifications are mostly about filter for field values:</p>
+
+<p>Example: change some value in different formats.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
+
 <pre><code>(function(){
   var cache = {};
 
@@ -126,7 +207,8 @@
   this.tmplCall = {
     nohtml: function(v) {
       return typeof v == 'string'
-        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
+        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;')
+           .replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
         : v;
     }
   , br: function(v) {
@@ -149,7 +231,8 @@
       // Appended by Mindon
       ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
         (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
-        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0// fields: function(){return {fieldName: handlefn(v){}}}
+        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0
+        // fields: function(){return {fieldName: handlefn(v){}}}
       ) ||
 
       // Generate a reusable function that will serve as a template
@@ -157,7 +240,6 @@
       new Function("d",
         "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
           +_t +",_v=function(k,v){" 
-          +(opt &amp;&amp; opt.time ? 'if(k=="time"&amp;&amp;!/[^\\d]/.test(v))return (window.timefmt &amp;&amp; window.timefmt(v)) || new Date(v);':'')
           +'return tmplCall.br('
           +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
           +(_t?'_t(v)':'v'):'') +")};" + // updated
@@ -479,75 +561,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM &#8211; Recommended Books</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T15:13:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>《醫鑰》推薦閱讀</h2>
-
-<ul>
-<li><p>《黃帝內經》</p></li>
-<li><p>《神農本草經》</p></li>
-<li><p>《傷寒論》</p></li>
-<li><p>《金匱》</p></li>
-<li><p>《針灸大成》</p></li>
-<li><p>《傷寒雜病論》</p></li>
-<li><p>《千金藥方翼方》（古籍部分）</p></li>
-</ul>
-
-
-<p><strong>近代書籍</strong></p>
-
-<ul>
-<li><p>《中西匯通醫書五種》（四川 唐容川 字宗海 著）</p></li>
-<li><p>《傷寒發微，金匱發微》（江蘇淮陰 曹穎甫 著）</p></li>
-<li><p>《傷寒論新義，金匱要略新義》（餘無言著）</p></li>
-<li><p>《單穴治病選萃》（人民衛生出版社）</p></li>
-<li><p>《疾病預測學》（楊力 著，北京科學出版社）</p></li>
-<li><p>《經方實驗錄》（姜佐景 著）</p></li>
-<li><p>《針灸大成》（明朝 楊繼州 編寫）</p></li>
-</ul>
-
-
-<h2>麥盾推薦閱讀</h2>
-
-<ul>
-<li><p>《<a href="http://big5.ifeng.com/gate/big5/book.ifeng.com/lianzai/detail_2010_02/07/339087_0.shtml">問中醫幾度秋涼(艾寧)</a>》</p></li>
-<li><p>《<a href="http://www.verycd.com/topics/2824440/">醫鑰——揭開中醫的奧秘(彭奕竣)</a>》</p></li>
-<li><p> <a href="http://jicheng.sabi.tw/jcw/">笈成資料庫</a>: 笈成是一個收集、整理中醫藥典籍的開放計畫，未來也會考慮納入醫家、中藥、方劑、方歌資料的整理。</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -578,9 +591,9 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 8 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 9 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 10 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 6 )</li>
 
@@ -595,6 +608,10 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a>
@@ -630,10 +647,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
     
       <li class="post">
         <a href="/blog/2012/03/08/for-my-dear-aby/">For my darling: Aby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a>
       </li>
     
   </ul>
