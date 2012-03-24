@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mindon.IDEA</title>
+  <title>Start a NodeJS addon under windows - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Use PNG! with ImageMagick GIF Animation Tool: GitSlice
-Command: gifsicle -o test-optimized.gif test.gif PNG Tool: PNGCrush
-Command: pngcrush -rem &hellip;">
+  <meta name="description" content="<!-- google_ad_client = "ca-pub-6997921015773263"; /* git-post */ google_ad_slot = "5984167509"; google_ad_width = 300; google_ad_height = 250 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Command: pngcrush -rem &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/page/5">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -88,15 +86,12 @@ Command: pngcrush -rem &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/02/22/web-images-optimization/">Web Images Optimization</a></h1>
+      <h1 class="entry-title">Start a NodeJS Addon Under Windows</h1>
     
     
       <p class="meta">
@@ -112,113 +107,159 @@ Command: pngcrush -rem &hellip;">
   
 
 
-<time datetime="2012-02-22T15:16:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+<time datetime="2012-03-24T12:15:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use PNG! with ImageMagick</p>
 
-<h2>GIF Animation</h2>
+<div class="entry-content">
 
-<p>Tool: <a href="http://www.lcdf.org/gifsicle/">GitSlice</a>
-Command:</p>
+	<div style="float:left;margin: 16px 16px 16px 0;">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
 
-<p>  gifsicle -o  test-optimized.gif test.gif</p>
+<h2>Code &amp; tools preparation</h2>
 
-<h2>PNG</h2>
+<p><strong>NodeJS source code</strong>
+<a href="https://github.com/joyent/node">https://github.com/joyent/node</a></p>
 
-<p>Tool: <a href="http://pmt.sourceforge.net/pngcrush/">PNGCrush</a>
-Command:</p>
+<p><strong>VISUAL C++ 2010 EXPRESS</strong>
+Free tools to create applications on Windows using Visual C++.
+(Needs SP3 under winxp)</p>
 
-<p>  pngcrush -rem alla -brute -reduce test.jpg test-optimized.jpg</p>
+<p><a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 EXPRESS</a></p>
 
-<h2>JPEG</h2>
+<p><strong>Python 2.6 or 2.7</strong>
+<a href="http://www.python.org/download/">http://www.python.org/download/</a></p>
 
-<p>Tool: <a href="http://jpegclub.org/jpegtran/">JPEGTran</a>
-Command:</p>
+<h2>Compile your NodeJS</h2>
 
-<p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
+<p>Run vcbuild.bat under NodeJS source folder.</p>
+
+<h2>Compile the Hello-world</h2>
+
+<p><strong>General Steps also fit for other addons</strong></p>
+
+<!--more-->
+
+
+<p>Get into folder test\addons\hello-world\ of NodeJS source</p>
+
+<ol>
+<li>Edit binding.cc
+Add <strong>NODE_MODULE_EXPORT </strong> before <strong>void init</strong></li>
+</ol>
+
+
+<p>This could help avoid running &#8220;Unkown error&#8221; when require the addon in nodejs.</p>
+
+<ol>
+<li>Generate project files</li>
+</ol>
+
+
+<pre><code>set NODE_ROOT=your-node-js-src-root 
+python %NODE_ROOT%\tools\gyp_addon binding.gyp
+</code></pre>
+
+<ol>
+<li>Setup VC ENV variables
+Run</li>
+</ol>
+
+
+<pre><code>"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+</code></pre>
+
+<ol>
+<li>Build</li>
+</ol>
+
+
+<pre><code>@set Configuration=Release
+</code></pre>
+
+<ol>
+<li>Test</li>
+</ol>
+
+
+<pre><code>node
+&gt;require('./Release/binding')
+</code></pre>
+
+<h2>Compile node-expat</h2>
+
+<ol>
+<li><p>Install Expat under windows
+<a href="http://nchc.dl.sourceforge.net/project/expat/expat_win32/2.0.1/expat-win32bin-2.0.1.exe">http://nchc.dl.sourceforge.net/project/expat/expat_win32/2.0.1/expat-win32bin-2.0.1.exe</a></p></li>
+<li><p>Prepare GYP build file</p></li>
+</ol>
+
+
+<pre><code>{
+  'targets': [
+    {
+      'target_name': 'node-expat',
+      'sources': [ 'node-expat.cc' ],
+      'include_dirs': [ 'expat-install-folder/include' ],
+      'libraries': [ '-lexpat-install-folder/lib/libexpat.lib'  ],
+    }
+  ]
+}
+</code></pre>
+
+<h2>Compile node-xmpp</h2>
+
+<ol>
+<li><p>ICU unicode
+<a href="http://site.icu-project.org/download/49">http://site.icu-project.org/download/49</a></p></li>
+<li><p>node-stringprep windows version
+<a href="https://github.com/andreasbotsikas/node-stringprep/tree/windows-build">https://github.com/andreasbotsikas/node-stringprep/tree/windows-build</a></p></li>
+<li><p>node-xmpp</p></li>
+</ol>
+
+
+<p><a href="https://github.com/astro/node-xmpp">https://github.com/astro/node-xmpp</a></p>
+
+<p><a href="http://www.adarshr.com/papers/xmpp">http://www.adarshr.com/papers/xmpp</a></p>
+
+<h2>Reference</h2>
+
+<ul>
+<li><p><strong>Addons NodeJS document</strong>
+<a href="http://nodejs.org/docs/latest/api/addons.html">http://nodejs.org/docs/latest/api/addons.html</a></p></li>
+<li><p><strong>Windows上编译NodeJS native extension</strong>
+<a href="http://cnodejs.org/topic/4f1fa3ed817ae4105c040fb4">http://cnodejs.org/topic/4f1fa3ed817ae4105c040fb4</a></p></li>
+<li><p><strong>Building a Node.js Windows C/C++ Addon</strong>
+<a href="http://coderesearchlabs.com/articles/BNWCA.pdf">http://coderesearchlabs.com/articles/BNWCA.pdf</a></p></li>
+</ul>
+
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/02/22/web-images-optimization/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/21/nosql-databases/">Picking the Right NoSQL Database</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
 
-<time datetime="2012-02-21T13:22:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>NoSQL = Not Only SQL</p>
-
-<p><a href="http://article.yeeyan.org/view/271351/239915">8种Nosql数据库系统对比</a></p>
-
-<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison</a></p>
-
-<p><a href="http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/">Picking the right NoSQL database tool</a></p>
-
-<h2>Key-values Stores</h2>
-
-<p>Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB</p>
-
-<p>Content caching (Focus on scaling to huge amounts of data, designed to handle massive load), logging, etc.</p>
-
-<p>Strengths: Fast lookups
-Weaknesses: Stored data has no schema</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/02/21/nosql-databases/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/20/mindon-github-blog-start/">Mindon GitHub Blog Start</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -230,42 +271,49 @@ Weaknesses: Stored data has no schema</p>
   
 
 
-<time datetime="2012-02-20T16:39:00+08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-03-24T12:15:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Frameworks &amp; tools for web developer.</p>
-
-<p>Javascript, NodeJS, Chrome App, CorelDraw plug-in &#8230;</p>
-
-<p>Learning web tech &amp; apply them to solve daily problems!</p>
-
-<p>Air off, Mind on ~ :-) 2012</p>
-
-<p>with following tech &amp; tools:
-Git tool
-github pages
-Ruby &amp; Ruby DevKit
-RubyGem
-Octopress</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/24/how-to-write-a-mail-in-html/" title="Previous Post: How to write a mail in HTML">&laquo; How to write a mail in HTML</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -343,7 +391,7 @@ Octopress</p>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM &#8211; Recommended Books</a>
+        <a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM -- Recommended Books</a>
       </li>
     
   </ul>
@@ -406,6 +454,7 @@ Octopress</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -440,7 +489,10 @@ function googleTranslateElementInit() {
       var disqus_shortname = 'mindon';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -79,7 +79,7 @@
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/blog/categories/chrome-app">Chrome/App</a></li>
-  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="58" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="35" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
   <li><a href="/about">About</a></li>
 </ul>
 
@@ -133,13 +133,61 @@
 
 <p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
 
-<p>The modifications are mostly about filter for field values:</p>
-
-<p>Example: change some value in different formats.</p>
+<p>The modifications are mostly about filters for field values.</p>
 
 <p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
 
-<pre><code>(function(){
+<blockquote><p>I&#8217;ve had a little utility that I&#8217;ve been kicking around for some time now that I&#8217;ve found to be quite useful in my JavaScript application-building endeavors. It&#8217;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
+
+<!--more-->
+
+
+<blockquote><p>Here&#8217;s the source code to the templating function (a more-refined version of this code will be in my upcoming book Secrets of the <a href="http://jsninja.com/">JavaScript Ninja</a>):</p></blockquote>
+
+<p>original code:</p>
+
+<pre><code>// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
+(function(){
+  var cache = {};
+
+  this.tmpl = function tmpl(str, data){
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+        tmpl(document.getElementById(str).innerHTML) :
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("obj",
+        "var p=[],print=function(){p.push.apply(p,arguments);};" +
+
+        // Introduce the data as local variables using with(){}
+        "with(obj){p.push('" +
+
+        // Convert the template into pure JavaScript
+        str
+          .replace(/[\r\t\n]/g, " ")
+          .split("&lt;%").join("\t")
+          .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%&gt;/g, "',$1,'")
+          .split("\t").join("');")
+          .split("%&gt;").join("p.push('")
+          .split("\r").join("\\'")
+      + "');}return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+})();
+</code></pre>
+
+<p>modified code:</p>
+
+<pre><code>// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
+(function(){
   var cache = {};
 
   // Added by Mindon
@@ -200,6 +248,29 @@
     return data ? fn( data ) : fn;
   };
 })();
+</code></pre>
+
+<p>Templates example:</p>
+
+<pre><code>&lt;script type="text/html" id="item_tmpl"&gt;
+  &lt;div id="&lt;%=id%&gt;" class="&lt;%=(i % 2 == 1 ? " even" : "")%&gt;"&gt;
+    &lt;div class="grid_1 alpha right"&gt;
+      &lt;img class="righted" src="&lt;%=profile_image_url%&gt;"/&gt;
+    &lt;/div&gt;
+    &lt;div class="grid_6 omega contents"&gt;
+      &lt;p&gt;&lt;b&gt;&lt;a href="/&lt;%=from_user%&gt;"&gt;&lt;%=from_user%&gt;&lt;/a&gt;:&lt;/b&gt; &lt;%=text%&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+</code></pre>
+
+<p>Another with inline script:</p>
+
+<pre><code>&lt;script type="text/html" id="user_tmpl"&gt;
+  &lt;% for ( var i = 0; i &lt; users.length; i++ ) { %&gt;
+    &lt;li&gt;&lt;a href="&lt;%=users[i].url%&gt;"&gt;&lt;%=users[i].name%&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;% } %&gt;
+&lt;/script&gt;
 </code></pre>
 
 </div>
@@ -293,7 +364,7 @@
 
     <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 8 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 10 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 12 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 6 )</li>
 
@@ -308,6 +379,14 @@
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/24/start-a-nodejs-addon-under-windows/">Start a NodeJS addon under windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/24/how-to-write-a-mail-in-html/">How to write a mail in HTML</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a>
@@ -339,14 +418,6 @@
     
       <li class="post">
         <a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM -- Recommended Books</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/10/programmers-are-born-not-made/">激情 - Passion</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/08/for-my-dear-aby/">For my darling: Aby</a>
       </li>
     
   </ul>
