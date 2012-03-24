@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-24T14:22:24+08:00</updated>
+  <updated>2012-03-24T18:21:55+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrade winxp from sp2 to sp3]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/"/>
+    <updated>2012-03-24T17:59:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve tried more than 3 times before:</p>
+
+<p>to upgrade my HP Mini winxp to sp3</p>
+
+<p>Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade problem.</p>
+
+<p>The problem i faced last time is &#8220;A Problem is preventing windows from accurately checking the license&#8221;. 0x80070002</p>
+
+<p>Who knows what the hell was happening, my winxp is lisenced!</p>
+
+<p>Tons of softwares need sp3 &#8211; something like &#8220;Visual C++ 2010 Express&#8221;.</p>
+
+<p>That&#8217;s why I need sp3 package installed.</p>
+
+<p>Here are the steps I followed, to upgrade sp3:</p>
+
+<ol>
+<li><p>download sp3 package from microsoft
+<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24</a></p></li>
+<li><p>backup following files from windows/system32</p></li>
+</ol>
+
+
+<pre><code>dpcdll.dll   
+pidgen.dll   
+uxtheme.dll  
+wpa.dbl      
+</code></pre>
+
+<ol>
+<li><p>Restart my winxp &amp; press F8 to start from safe mode</p></li>
+<li><p>Install sp3</p></li>
+<li><p>Restart &amp; press F8 to start from safe mode</p></li>
+<li><p>Backup new files from sp3 version</p></li>
+</ol>
+
+
+<pre><code>dpcdll.dll   
+pidgen.dll   
+uxtheme.dll  
+wpa.dbl      
+</code></pre>
+
+<ol>
+<li><p>Replace these files with the old files backuped in step 2</p></li>
+<li><p>Restart</p></li>
+<li><p>Done!</p></li>
+</ol>
+
+
+<p>I don&#8217;t know if my steps make it or the sp3 package is different or something else &#8230;</p>
+
+<p>But i do upgrade my HP Mini windows xp from sp2 to sp3 successfully this time :-)</p>
+
+<p>God bless you!</p>
+
+<p>Thanks for <a href="http://hi.baidu.com/xiaohuibai/blog/item/69fa16f4b7e1e8f77609d7d9.html">this blog</a> (in Chinese) &#8211; I didn&#8217;t use any files it provides.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Start a NodeJS addon under windows]]></title>
@@ -1259,65 +1324,6 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
 <p>This could be a breakthrough, says chemical engineer Richard Wool of the University of Delaware, Newark. Wool, who specializes in the chemistry of glass, says the ability of the material to combine high energy storage and high breakdown strength, as well as its low cost, gives it an advantage over currently used materials.</p>
 
 <p>Orignal form <strong>Science Magazine</strong> <a href="http://news.sciencemag.org/sciencenow/2009/05/05-02.html">You Really Can Catch Lightning in a Bottle</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Beauty and the Beast: The rare moment a tornado and a rainbow come head to head in Colorado sky]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/03/beauty-and-the-beast-the-rare-moment-a-tornado-and-a-rainbow-come-head-to-head-in-colorado-sky/"/>
-    <updated>2012-03-03T14:06:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/03/beauty-and-the-beast-the-rare-moment-a-tornado-and-a-rainbow-come-head-to-head-in-colorado-sky</id>
-    <content type="html"><![CDATA[<p>这是一个罕见的瞬间：一条美丽的彩虹和猛烈的暴风云的短兵相接在天空中创造了一副绚丽的景象。</p>
-
-<p>当巨大的龙卷风开始覆盖美国科罗拉多州上方的天空时，人们大部分都已经关好了门窗。</p>
-
-<p>但是当龙卷风的威胁变小时，一群幸运的风暴追逐着们看到了罕见的一幕：一条彩虹看上去似乎和龙卷风仅仅相隔了几英里。</p>
-
-<p>【译言网】全文: <a href="http://article.yeeyan.org/view/281379/254395">美女与野兽：美国科罗拉多州天空的罕见瞬间——龙卷风与彩虹的短兵相接</a></p>
-
-<p>This is the rare moment a beautiful rainbow and violent storm cloud came head to head creating a stunning scene high in the sky.
-As the monster tornado began to dominate the skies over Colorado, USA, most people would have been locking their doors and windows.
-But as the threat diminished one lucky group of storm chasers saw the rare sight of a rainbow and tornado seemingly just a few miles apart.</p>
-
-<p><img src="http://mindon.github.com/law-ms/tornado-rainbow.jpg" alt="Tornado and Rainbow " />
-Rare sight: As the monster tornado began to dominate the skies over Colorado, USA, most people would have been locking their doors and windows, but one lucky group of storm chasers saw the rare sight of a rainbow and tornado</p>
-
-<!--more-->
-
-
-<p>The magnificent moment was captured by dedicated Dutch storm chaser Peter Gude, 47, who couldn&#8217;t believe his eyes as he spotted the unusual scene.</p>
-
-<p>With the month of March looming, United States tornado chasers are already watching the Southeast as a nasty storm brews with the potential to spin off a batch of tornadoes.</p>
-
-<p>But if funnel clouds develop Thursday or Friday as some forecasters believe, they won&#8217;t be the first.</p>
-
-<p>This tornado season got an early and deadly start in late January when two people were killed by separate twisters in Alabama.</p>
-
-<p>Preliminary reports showed 95 tornadoes struck last month, compared with 16 in January during a particularly stormy 2011.</p>
-
-<p>The season usually starts in March and then ramps up for the next couple of months, but forecasting these storm seasons is even more imprecise than predicting hurricane seasons.</p>
-
-<p>Tornadoes are too small and too short-lived for scientists to make seasonal predictions.</p>
-
-<p>They don&#8217;t develop like blizzards and hurricanes, which are easier to project.</p>
-
-<p>They pop in and pop out. The storms that give them birth may last only a few hours. Hurricanes and blizzards are lumbering beasts that spend days moving across the satellite maps.</p>
-
-<p>When a hurricane approaches, coastlines get days warning to evacuate.</p>
-
-<p>With a tornado, if the weather service can let people know 20 minutes in advance, it&#8217;s considered a victory.</p>
-
-<p>&#8216;The Joplin (Missouri) tornado (that killed 158 people last May) wasn&#8217;t violent until just about the time it got to the hospital,&#8221; said Harold Brooks, a research scientist at the National Oceanic and Atmospheric Administration&#8217;s National Severe Storms Laboratory, in Norman, Oklahoma.</p>
-
-<p>&#8216;Even when you&#8217;re in the field, there are still times when you&#8217;re surprised by the intensity of the event and how quickly it started.&#8217;</p>
-
-<p>If a forecast for a hurricane or blizzard is off by a mile, it&#8217;s still bad weather. But a mile difference means no damage in a tornado, Brooks said: &#8216;It&#8217;s so much finer in time and space on the tornado, it does make it a harder problem.&#8217;</p>
-
-<p>It takes a piece of debris only a few seconds to fly around an entire tornado; it takes hours to circle a hurricane. But tornadoes, though smaller, can have stronger winds.</p>
-
-<p>Since 1950, there have been 58 tornadoes in the U.S. with winds exceeding 200 mph; six last year alone. Only three hurricanes have made U.S. landfall with winds more than 155 mph.</p>
-
-<p>Original from <strong>MailOnline</strong> <a href="http://www.dailymail.co.uk/sciencetech/article-2105422/Beauty-Beast-The-moment-twister-rainbow-battle-space-sky.html">Beauty and the Beast: The rare moment a tornado and a rainbow come head to head in Colorado sky</a></p>
 ]]></content>
   </entry>
   

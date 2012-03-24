@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Notes on MongoDB - Mindon.IDEA</title>
+  <title>Upgrade winxp from sp2 to sp3 - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/17/notes-on-mongodb">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Notes on MongoDB</h1>
+      <h1 class="entry-title">Upgrade Winxp From Sp2 to Sp3</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-03-17T11:12:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2012-03-24T17:59:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
         
       </p>
     
@@ -131,136 +131,63 @@
 		</script>
 	</div>
 
-<p><strong>MongoDB资料汇总专题</strong>
-<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
+<p>I&#8217;ve tried more than 3 times before:</p>
 
-<h2>MongoDB 最佳实践</h2>
+<p>to upgrade my HP Mini winxp to sp3</p>
 
-<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
+<p>Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade problem.</p>
 
-<p><strong>1. 始终启用备份</strong></p>
+<p>The problem i faced last time is &#8220;A Problem is preventing windows from accurately checking the license&#8221;. 0x80070002</p>
 
-<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
-二节点可以迅速启用，你的应用不会中断。</p>
+<p>Who knows what the hell was happening, my winxp is lisenced!</p>
 
-<p><strong>2. 使用最新版本</strong></p>
+<p>Tons of softwares need sp3 &#8211; something like &#8220;Visual C++ 2010 Express&#8221;.</p>
 
-<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
-和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
-，你应该尽快升级。</p>
+<p>That&#8217;s why I need sp3 package installed.</p>
 
-<!--more-->
-
-
-<p><strong>3. 不要在32位的系统上跑MongoDB</strong></p>
-
-<p>MongoDB在32位系统上有“2.5GB数据限制”。它的存储引擎使用
-内存映射来读取文件以获得更好的性能。这个功能依赖于内存
-寻址，而32位系统的内存不能超过4GB。</p>
-
-<p><strong>4. 默认开启日志</strong></p>
-
-<p>MongoDB支持数据库操作的提前日志（write-ahead journaling
-）。这个功能有助于灾难恢复。</p>
-
-<p><strong>5. 注意你数据文件的位置</strong></p>
-
-<p>你应该保证你的MongoDB的数据文件是存储在物理驱动器上，例
-如 /data/mongodb。当然你也可以使用虚拟的驱动器，但是必
-须非常小心。因为它有可能会影响到你的集群架构。我们建议
-你使用 Amazon EBS 来存放你的数据库文件。</p>
-
-<p><strong>6. 保证足够大的内存</strong></p>
-
-<p>为了保证整个集群的性能，你要确保整个所有MongoDB的工作实
-例（working set）包括索引可以完全装入内存。如果你发现
-“page faults”的概率在增加，很有可能mongoDB的数据量超出
-了你的内存。在这种情况下你有两种选择：加内存，或者创建
-分片集群（Sharding）。我们建议你先考虑加内存。</p>
-
-<p><strong>7. 保持 65% 以内的压力</strong></p>
-
-<p>如果你发现你的集群压力达到了65%，那么你应该考虑扩大你的
-集群了。通常，你应该保证数据库压力低于65%。</p>
-
-<p><strong>8. 特别小心分片集群</strong></p>
-
-<p>分片集群需要你充分理解你应用的数据访问方式。你应该充分
-了解MongoDB的分片工作方式，并且确认你确实需要这个功能。
-还有，选择一个分片钥匙（sharding key）是对于性能也是很
-重要的。</p>
-
-<p>配置服务器对于一个集群的健康也是很重要的。在分片集群的
-环境中，你必须有三台配置服务器。永远不要删除配置服务器
-的数据，时常备份这些数据。这些配置服务器也需要64位的环
-境。还有，不要把三台配置服务器放在同一台机器上！</p>
-
-<p><strong>9. 使用 Mongo MMS 来图形化的监控你的数据库</strong></p>
-
-<p>如果你还没有使用 Mongo MMS的话，我强烈推荐这个工具。
-10gen 正在大力开发这个产品。它提供了一个非常友好的可视
-化的界面来监控你的MongoDB集群。</p>
-
-<p><strong>10. MongoDB 资源</strong></p>
-
-<p>技术总是在不断进步，你需要市场关注这些信息：</p>
-
-<ul>
-<li>Documentation: <a href="http://www.mongodb.org/display/DOCS/Home">http://www.mongodb.org/display/DOCS/Home</a></li>
-<li>Google Group: <a href="http://groups.google.com/group/mongodb-user">http://groups.google.com/group/mongodb-user</a></li>
-<li>Bugs: <a href="https://jira.mongodb.org">https://jira.mongodb.org</a></li>
-<li>Blog: <a href="http://blog.mongodb.org/">http://blog.mongodb.org/</a></li>
-</ul>
-
-
-<p><a href="http://www.engineyard.com/blog/2011/mongodb-best-practices/"><strong>MongoDB Best Practices</strong></a> <a href="http://www.programmer.com.cn/9999/">中文</a></p>
-
-<p><strong>MongoDB运行状态、性能监控，分析</strong>:
-<a href="http://blog.nosqlfan.com/html/3346.html">http://blog.nosqlfan.com/html/3346.html</a></p>
-
-<p><strong>MongoDB容量规划</strong>:
-<a href="http://blog.nosqlfan.com/html/3322.html">http://blog.nosqlfan.com/html/3322.html</a></p>
-
-<p><strong>MongoQ</strong>:
-<a href="https://github.com/zzdhidden/mongoq">https://github.com/zzdhidden/mongoq</a></p>
-
-<p><strong>MongoSpy, MongoWatch及MongoDB数据压缩</strong></p>
-
-<p><a href="http://blog.nosqlfan.com/html/3205.html">http://blog.nosqlfan.com/html/3205.html</a></p>
-
-<h2>五步优化你的MongoDB</h2>
+<p>Here are the steps I followed, to upgrade sp3:</p>
 
 <ol>
-<li><p><strong>查询优化</strong>
-确认你的查询是否充分利用到了索引，用explain命令查看一下查询执行的情况，添加必要的索引，避免扫表操作。</p></li>
-<li><p><strong>搞清你的热数据大小</strong>
-可能你的数据集非常大，但是这并不那么重要，重要的是你的热数据集有多大，你经常访问的数据有多大（包括经常访问的数据和所有索引数据）。使用MongoDB，你最好保证你的热数据在你机器的内存大小之下，保证内存能容纳所有热数据。</p></li>
-<li><p><strong>选择正确的文件系统</strong>
-MongoDB的数据文件是采用的预分配模式，并且在Replication里面，Master和Replica Sets的非Arbiter节点都是会预先创建足够的空文件用以存储操作日志。这些文件分配操作在一些文件系统上可能会非常慢，导致进程被Block。所以我们应该选择那些空间分配快速的文件系统。这里的结论是尽量不要用ext3，用ext4或者xfs。</p></li>
-<li><p><strong>选择合适的硬盘</strong>
-这里的选择包括了对磁盘RAID的选择，也包括了磁盘与SSD的对比选择。</p></li>
-<li><p><strong>Shard分片</strong>
-在单个节点压力太大时，我们可以考虑使用MongoDB的auto-sharding机制来将数据分片到多个节点以缓解压力。</p></li>
+<li><p>download sp3 package from microsoft
+<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24</a></p></li>
+<li><p>backup following files from windows/system32</p></li>
 </ol>
 
 
-<p>火丁筆記: <a href="http://huoding.com/2011/08/09/104">记一次MongoDB性能问题</a></p>
-
-<p><strong>NUMA Problem（Warn)</strong>
-<a href="http://www.mongodb.org/display/DOCS/NUMA">http://www.mongodb.org/display/DOCS/NUMA</a></p>
-
-<p>shell> numactl &#8211;interleave=all /path/to/mongod</p>
-
-<p>NUMA下，内存是按照物理CPU来划分的，不是按逻辑CPU/核划分的</p>
-
-<p>每个核访问分配给自己的内存会比访问分配给其它核的内存要快，有下面几种访问控制策略：</p>
+<pre><code>dpcdll.dll   
+pidgen.dll   
+uxtheme.dll  
+wpa.dbl      
+</code></pre>
 
 <ol>
-<li><p>缺省(default)：总是在本地节点分配（分配在当前进程运行的节点上）；</p></li>
-<li><p>绑定(bind)：强制分配到指定节点上；3.交叉(interleave)：在所有节点或者指定的节点上交织分配；</p></li>
-<li><p>优先(preferred)：在指定节点上分配，失败则在其他节点上分配。</p></li>
+<li><p>Restart my winxp &amp; press F8 to start from safe mode</p></li>
+<li><p>Install sp3</p></li>
+<li><p>Restart &amp; press F8 to start from safe mode</p></li>
+<li><p>Backup new files from sp3 version</p></li>
 </ol>
 
+
+<pre><code>dpcdll.dll   
+pidgen.dll   
+uxtheme.dll  
+wpa.dbl      
+</code></pre>
+
+<ol>
+<li><p>Replace these files with the old files backuped in step 2</p></li>
+<li><p>Restart</p></li>
+<li><p>Done!</p></li>
+</ol>
+
+
+<p>I don&#8217;t know if my steps make it or the sp3 package is different or something else &#8230;</p>
+
+<p>But i do upgrade my HP Mini windows xp from sp2 to sp3 successfully this time :-)</p>
+
+<p>God bless you!</p>
+
+<p>Thanks for <a href="http://hi.baidu.com/xiaohuibai/blog/item/69fa16f4b7e1e8f77609d7d9.html">this blog</a> (in Chinese) &#8211; I didn&#8217;t use any files it provides.</p>
 
 </div>
 
@@ -284,12 +211,12 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
   
 
 
-<time datetime="2012-03-17T11:12:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2012-03-24T17:59:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>
   
 </span>
 
@@ -298,7 +225,7 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/17/notes-on-mongodb/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/17/notes-on-mongodb/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -311,10 +238,8 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/" title="Previous Post: Lasers Can Be Used to Steer Lightning In Mid-Strike">&laquo; Lasers Can Be Used to Steer Lightning In Mid-Strike</a>
+        <a class="basic-alignment left" href="/blog/2012/03/24/start-a-nodejs-addon-under-windows/" title="Previous Post: Start a NodeJS addon under windows">&laquo; Start a NodeJS addon under windows</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/17/mongodb-the-internal-file-structure/" title="Next Post: MongoDB: The internal file structure">MongoDB: The internal file structure &raquo;</a>
       
     </p>
   </footer>
@@ -505,8 +430,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/17/notes-on-mongodb/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/03/17/notes-on-mongodb/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/';
         var disqus_script = 'embed.js';
       
     (function () {
