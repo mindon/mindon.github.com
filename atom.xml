@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-24T22:05:29+08:00</updated>
+  <updated>2012-03-24T22:19:49+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -157,8 +157,8 @@ Run</li>
     {
       'target_name': 'node-expat',
       'sources': [ 'node-expat.cc' ],
-      'include_dirs': [ 'expat-install-folder/include' ],
-      'libraries': [ '-lexpat-install-folder/lib/libexpat.lib'  ],
+      'include_dirs': [ 'expat-install-folder/Source/lib' ],
+      'libraries': [ '-lexpat-install-folder/Bin/libexpat.lib'  ],
     }
   ]
 }
