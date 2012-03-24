@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-24T18:31:56+08:00</updated>
+  <updated>2012-03-24T22:05:29+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -92,7 +92,7 @@ Run</li>
 
 <ol>
 <li><p>Install Expat under windows
-<a href="http://nchc.dl.sourceforge.net/project/expat/expat_win32/2.0.1/expat-win32bin-2.0.1.exe">http://nchc.dl.sourceforge.net/project/expat/expat_win32/2.0.1/expat-win32bin-2.0.1.exe</a></p></li>
+<a href="http://sourceforge.net/projects/expat/files/latest/download">http://sourceforge.net/projects/expat/files/latest/download</a></p></li>
 <li><p>Prepare GYP build file</p></li>
 </ol>
 
@@ -113,7 +113,7 @@ Run</li>
 
 <ol>
 <li><p>ICU unicode
-<a href="http://site.icu-project.org/download/49">http://site.icu-project.org/download/49</a></p></li>
+<a href="http://site.icu-project.org/download/48">http://site.icu-project.org/download/48</a></p></li>
 <li><p>node-stringprep windows version
 <a href="https://github.com/andreasbotsikas/node-stringprep/tree/windows-build">https://github.com/andreasbotsikas/node-stringprep/tree/windows-build</a></p></li>
 <li><p>node-xmpp</p></li>
