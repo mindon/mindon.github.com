@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-26T21:58:41+08:00</updated>
+  <updated>2012-03-26T23:06:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Amazing WebGL and HTML Apps]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps/"/>
+    <updated>2012-03-26T22:13:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps</id>
+    <content type="html"><![CDATA[<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
+
+<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
+
+<ul>
+<li><pre><code>**Firefox**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></p>
+
+<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the "webgl.osmesalib" variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use "gl" prefixes, not "mgl".
+You can also try setting the "webgl.force-enabled" variable to true if WebGL is not working. Variables can be accessed by typing "about:config" in the address bar.</p>
+
+<ul>
+<li><pre><code>**Safari**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
+
+<p>After downloading and installing the browser, open the Terminal and type the following:</p>
+
+<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
+</code></pre>
+
+<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
+
+<ul>
+<li><pre><code>**Chrome**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
+
+<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
+
+<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
+
+<ul>
+<li><pre><code>**Opera**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
+
+<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL</a></p>
+
+<h2>Amazing WebGL Experiments</h2>
+
+<ul>
+<li><pre><code>**Cell Cycle**
+</code></pre>
+
+<p>Creating 3d-printable cellular models.</p></li>
+</ul>
+
+
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<p><img src="/images/chrome/nervous.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Fluid Simulation with Turing Patterns**
+</code></pre>
+
+<p>Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></p></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov's fluid simulation.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+<p><img src="/images/chrome/fluid.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Zygote Body**
+</code></pre>
+
+<p>Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></p></li>
+</ul>
+
+
+<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
+
+<p><img src="/images/chrome/body.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Google Maps - Street View**
+</code></pre></li>
+</ul>
+
+
+<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
+
+<p>Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
+
+<p><img src="/images/chrome/amazon.jpg" alt="" /></p>
+
+<p>More will be appended ...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Start a NodeJS addon under windows]]></title>
@@ -452,80 +569,6 @@ font-* 族的CSS属性不允许使用缩写，请分别定义 font-size, font-we
   &lt;% } %&gt;
 &lt;/script&gt;
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Redis: REmote DIctionary Server]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server/"/>
-    <updated>2012-03-17T22:54:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server</id>
-    <content type="html"><![CDATA[<h2>Redis tutorial</h2>
-
-<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
-
-<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
-
-<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
-
-<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
-<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
-
-<!--more-->
-
-
-<p>大的库也并不总是每个方面都没有瑕疵的。例如，Libevent的稳定发布版在运行时对事件的数组做无意义的重新分配（Libevent在2.0版本里改进了这一点，但是这个版本还不是稳定的）。我修改了ae.c让它模块化，并且通过多分配一些内存为代价来避免在事件循环内部的各种类型的O(N)操作（但是这个多分配的内存对于Redis这个内存数据库来说并不是一个问题，因为可能只占总占用内存的0.001% :)）。现在添加和删除一个event是O(1)了，这对于有10K个客户端连接来说很重要。现在我们在Redis里面仅仅使用一个Timer，但是如果以后我们需要更多的，我可以修改ae.c通过使用skip list（跳跃表）来达到O(log(N))。我们现在有了2个模块：ae_select.c和ae_epoll.c，考虑到写一个新的模块的工作是如此的少，我肯定会增加ae_kevent.c。</p>
-
-<p><strong>Sergey Shepelev：</strong>
-Yeah，Libevent比较差劲，相反，libev是一个小巧、well thought、clean的库，它并没有提供任何高级的feature比如Http，但是它确实提供了非常好的底层feature。可以试一下：<a href="http://software.schmorp.de/pkg/libev.html">http://software.schmorp.de/pkg/libev.html</a></p>
-
-<p><strong>Pedro Melo：</strong>
-赞同使用Libev，使用它，你将会非常高兴满意。:)</p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-现在Redis已经支持kevents了，请看一下我在ae.c里面的新实现，它是多么简单的支持添加一个新模块，添加、删除事件都是O(1)的。底层的模块像ae_epoll.c ae_select.c ae_kevent.c仅仅导出一个最小的完美的API接口，上层则关注当前活跃的最大的FD和管理上层的状态。</p>
-
-<p>我认为我们能够满足当前的实现而根本不用添加额外的依赖，另外这也不排除在某个时候，我们将会让我们的事件循环有一个更有意思的语义，for instance for LOCK if it will ever get implemented and for Virtual Memory (ability to "pause" events, ability to read chunks of on-disk files in background and so forth).例如：实现VM的时候，能够LOCK住事件循环，暂停事件，后台从磁盘读取文件等。我们也许要修改ae.c足够的多来让它和我们的代码一起工作而不是通过链接其他东西到Redis。当然，这有很多工作要做。</p>
-
-<p><strong>Pedro Melo：</strong>
-我的提议并不是关于添加这些模块有多简单或者复杂，我关注的是正确性。请看一下Libev的ChangLog，and seach for broken：所有这些高速的网络API都被相同OS的不同版本，或者更差的是不同的OS之间的小的不兼容困扰过。我认为Redis的主要努力不是为了创建另一个事件驱动的IO库，因此对我来说，“重用”一个已经仔细考虑过这些问题的库是更加明智的，然后把精力放在safe, working, backends上。</p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-我认为从软件工程的观点来看你是正确的，通过重用一个已经很好测试过的库，Redis的事件循环出现bug的概率会小很多。这是阻止我做正确选择的一系列things，顺便说一下，我也并不要求它们被客观接受。因此我对分歧所涉及的问题理解的很清楚：</p>
-
-<ul>
-<li><p>许多库在理论上被很好测试过了，但是如果通过一种和使用它的前N个项目不同的方式来用它，还是会发现bug的。例如，Redis唯一使用的外部代码：LZF压缩已经存在很多年了。在使用它一些天后，我发现了一个内存崩溃的bug。几乎所有人都在使用它，它也被很好测试过，但是bug仍然存在。</p></li>
-<li><p>我计划以后使用很多timer。所有这些库都使用一个0(N)的定时器算法，这至少是我从源码中看到的。一个平衡树或者跳跃表可以用来提升性能。当我将需要时，我能够自己实现而不用等待外部的开发者来合并我的修改。</p></li>
-<li><p>我讨厌 ./configure。事实上，在像事件循环库这种事情上，configure的魔法实际上只针对X个知名的系统。我对现在使用Redis的zero-configuration的体验非常满意。当然不使用./configure的另一种选择就是直接把代码放到Redis里面并且在发现问题时及时升级，但是我也并不想依赖于外部的源码。</p></li>
-<li><p>我需要在任何地方使用 zfree/zmalloc。</p></li>
-<li><p>写另一个事件循环库也是有一定价值的，如果这个库比其他的要易于阅读。例如，一些天前，我就看到某位同学在Twitter上推荐ae.c是一个关于简单事件循环很好的阅读对象，并且是能够在真实世界正确工作的。</p></li>
-</ul>
-
-
-<p>因此，从一个绝对的观点来看，你是正确的。但是我有一些我自己的主观原因在Redis中使用ae.c。</p>
-
-<p><strong>Pedro Melo：</strong>
-当然，不存在没有bug的库。我仅仅能够说的是libev非常的活跃，作者对在maillist上报告的bug也反应的非常快。我相信timer是O(log(N))，你可以看看文档的算法复杂度部分：http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP... 。事实上，libev是将它使用的算法的复杂度文档化的少有的几个库之一。总之，我确信它将能够很好的工作。</p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Pedro，没有任何问题，我认为你的观点是很好的，我今天读了一会儿libev代码后，也同意libev的代码很好。如果我们把这个问题当作一个纯粹的软件工程问题，换句话说，假如我们将为宇宙飞船写一个组件，毫无疑问正确的做法是使用能够工作并且被很好测试过的库。</p>
-
-<p>但是也有其他可能的观点，并且我感觉这些观点也同等的重要（也一样不是客观的）。我认为这个讨论与编写软件最大的动机问题有很深的联系（I think this discussion has some deep link with the most important motivations for writing software.）。我认为简洁代码的价值不仅在于能够做需要做的事情，而且在于易于阅读。库是一个让伟大工作快速完成的伟大想法。Libraries are a great idea to accomplish great things in short time, but things like libev finish to  resemble every day more what they wanted to avoid, after all there was libevent already. 毕竟已经有Libevent了，它有很多bug吗？既然这样为什么不fix呢？或者开出分支出来？因为Libevent非常复杂，一团糟等等。但是最终，这些库包括libev，试图毁坏每个人最初的简单设计。需要在同一个FD上注册更多完全相同的事件？对我来说，这是一个设计错误。对通用的库来说，这是一个feature，因为有同学在使用。等等。</p>
-
-<p>没有外部依赖也很有价值。我没有证据，但是我打赌，Redis开始吸引一些用户不仅仅是由于它作为数据库的优点，也在于它是如此易于上手。能够非常容易的理解它是怎么工作的，很容易的编译，运行甚至不需要配置。它的语义是如此的简单，以至于我知道一些同学使用不同的语言（Erlang, Java, Javascript, ... ）实现Redis的山寨版仅仅为了乐趣。</p>
-
-<p>If you take the street of simplicity this should be adopted in everything, from the protocol to the fact there are no dependencies, and that everybody with some C skill can open ae.c and understand how an event loop works.</p>
-
-<p>如果你认可“简洁”，也可以拓展到其他方面：从协议到没有依赖的事实，到每一个有一定C技能的同学可以打开ae.c并且理解一个事件循环是如何工作的。</p>
-
-<p>当然我也不太确定，因为它是全新的代码。我几乎是从头编写的ae.c，但是如果有bug的话，我将能够很快的fix掉。我认为这付出的努力是值得的。顺便说下，最后一次提交之后，我已经进入了feature freeze阶段。我将利用下个月在发布rc1前的时间来从头阅读整份代码，并且做很多的测试，“简洁”在这个时候就非常有帮助了。</p>
-
-<h2>Node.js Redis Client</h2>
-
-<p>https://github.com/mranney/node_redis</p>
 ]]></content>
   </entry>
   

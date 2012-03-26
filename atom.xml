@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-26T21:58:41+08:00</updated>
+  <updated>2012-03-26T23:06:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Amazing WebGL and HTML Apps]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps/"/>
+    <updated>2012-03-26T22:13:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps</id>
+    <content type="html"><![CDATA[<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
+
+<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
+
+<ul>
+<li><pre><code>**Firefox**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></p>
+
+<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the &#8220;webgl.osmesalib&#8221; variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use &#8220;gl&#8221; prefixes, not &#8220;mgl&#8221;.
+You can also try setting the &#8220;webgl.force-enabled&#8221; variable to true if WebGL is not working. Variables can be accessed by typing &#8220;about:config&#8221; in the address bar.</p>
+
+<ul>
+<li><pre><code>**Safari**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
+
+<p>After downloading and installing the browser, open the Terminal and type the following:</p>
+
+<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
+</code></pre>
+
+<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
+
+<ul>
+<li><pre><code>**Chrome**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
+
+<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
+
+<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
+
+<ul>
+<li><pre><code>**Opera**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
+
+<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL</a></p>
+
+<h2>Amazing WebGL Experiments</h2>
+
+<ul>
+<li><pre><code>**Cell Cycle**
+</code></pre>
+
+<p>Creating 3d-printable cellular models.</p></li>
+</ul>
+
+
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<p><img src="http://mindon.github.com/images/chrome/nervous.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Fluid Simulation with Turing Patterns**
+</code></pre>
+
+<p>Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></p></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+<p><img src="http://mindon.github.com/images/chrome/fluid.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Zygote Body**
+</code></pre>
+
+<p>Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></p></li>
+</ul>
+
+
+<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
+
+<p><img src="http://mindon.github.com/images/chrome/body.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Google Maps - Street View**
+</code></pre></li>
+</ul>
+
+
+<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
+
+<p>Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
+
+<p><img src="http://mindon.github.com/images/chrome/amazon.jpg" alt="" /></p>
+
+<p>More will be appended &#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[眼干或视力模糊（中医验方）]]></title>
@@ -45,6 +162,9 @@
 <p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
 
 <p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
+
+<!--more-->
+
 
 <h2>4.银杞明目汤（民间方）</h2>
 
@@ -1428,29 +1548,6 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
 ( No network requests in this extension, BTW: inside Chrome Web Store, it keeps still&#8230; )</p>
 
 <p><img src="http://mindon.github.com/images/blog/walking-in-chrome.png" alt="Walking in Chrome" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to say 'I Love You']]></title>
-    <link href="http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you/"/>
-    <updated>2012-03-03T15:07:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you</id>
-    <content type="html"><![CDATA[<p>用30種不同語言說“我愛你/我爱你”（語音版/语音版）—— 送給你愛的她/他</p>
-
-<p>跟隨愛的語言遊歷全世界 <a href="http://mindon.appspot.com/i-love-u">http://mindon.appspot.com/i-love-u</a></p>
-
-<p>Saying &#8220;I love you&#8221; in different languages, was to show my love to my dear fiancée - Aby, before our wedding.</p>
-
-<p>I promised her: one new language will be appended each year.</p>
-
-<p>You can visit the webpage with roses <a href="http://mindon.appspot.com/i-love-u">http://mindon.appspot.com/i-love-u</a>.</p>
-
-<p>The &#8220;I love you&#8221; languages are connected with Locations in Google Maps (If you are in China Mainland, you may need a proxy to see the map. Please check <a href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/">GoAgent &#8211; Make Your Own Fast Proxy With GAE</a> or search GoAgen in Google.)</p>
-
-<p>If you like to keep this offline. You may choose the Chrome App &#8220;I Love You&#8221; from Chrome Store: <a href="https://chrome.google.com/webstore/detail/efpkdgnjlkhjdfpnopfkdoigbjambdkf">Say &#8220;I Love You&#8221; in different languages(audio version)</a></p>
-
-<p><img src="http://mindon.github.com/images/blog/i-love-you.png" alt="I Love You" /></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Improve eyes dry or eyesight blur problem 1.枸杞鲫鱼汤（中医验方） 主治：近视眼，视物模糊。 配方：鲫鱼一尾（约2000克），枸杞10克。 用法：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。 按注：一方用白鱼或其他鱼代鲫鱼也可。 2.牛奶鸡蛋饮（民间方 &hellip;">
+  <meta name="description" content="Enable WebGL in Chrome - about:flags Getting a WebGL Implementation **Firefox** WebGL is supported in Firefox/4.0 For testing/debugging purposes, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +94,150 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html-apps/">Amazing WebGL and HTML Apps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T22:13:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
+
+<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
+
+<ul>
+<li><pre><code>**Firefox**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></p>
+
+<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the &#8220;webgl.osmesalib&#8221; variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use &#8220;gl&#8221; prefixes, not &#8220;mgl&#8221;.
+You can also try setting the &#8220;webgl.force-enabled&#8221; variable to true if WebGL is not working. Variables can be accessed by typing &#8220;about:config&#8221; in the address bar.</p>
+
+<ul>
+<li><pre><code>**Safari**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
+
+<p>After downloading and installing the browser, open the Terminal and type the following:</p>
+
+<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
+</code></pre>
+
+<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
+
+<ul>
+<li><pre><code>**Chrome**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
+
+<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
+
+<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
+
+<ul>
+<li><pre><code>**Opera**
+</code></pre></li>
+</ul>
+
+
+<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
+
+<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL</a></p>
+
+<h2>Amazing WebGL Experiments</h2>
+
+<ul>
+<li><pre><code>**Cell Cycle**
+</code></pre>
+
+<p>Creating 3d-printable cellular models.</p></li>
+</ul>
+
+
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<p><img src="/images/chrome/nervous.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Fluid Simulation with Turing Patterns**
+</code></pre>
+
+<p>Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></p></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+<p><img src="/images/chrome/fluid.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Zygote Body**
+</code></pre>
+
+<p>Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></p></li>
+</ul>
+
+
+<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
+
+<p>Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
+
+<p><img src="/images/chrome/body.png" alt="" /></p>
+
+<ul>
+<li><pre><code>**Google Maps - Street View**
+</code></pre></li>
+</ul>
+
+
+<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
+
+<p>Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
+
+<p><img src="/images/chrome/amazon.jpg" alt="" /></p>
+
+<p>More will be appended &#8230;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
     
     
@@ -145,139 +289,12 @@
 
 <p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
 
-<h2>4.银杞明目汤（民间方）</h2>
-
-<p><strong>主治</strong>：肝肾两虚之近视。</p>
-
-<p><strong>配方</strong>：银耳20克，枸杞20克，茉莉花10克。</p>
-
-<p><strong>用法</strong>：上述各味水煎汤饮，每日1剂，连服数日。</p>
-
-<h2>5.枸杞炖猪肝（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼，迎风流泪。</p>
-
-<p><strong>配方</strong>：枸杞子20克，猪肝300克，食油、葱、姜、白糖、黄酒、淀粉各少许。</p>
-
-<p><strong>用法</strong>：用猪肝洗净，同枸杞放入锅内，加水适量煮1小时，捞出猪肝切片备用。油锅烧热，葱、姜炝锅放入猪肝片炒，烹白糖、黄酒兑入原汤少许，收汁，勾入淀粉，汤汁明透即成。</p>
-
-<h2>6.醒目汤（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：枸杞10克，陈皮3克，桂圆肉10个，蜂蜜1匙。</p>
-
-<p><strong>用法</strong>：将枸杞子、陈皮放在纱布内扎好，然后与桂圆肉一起，放在锅内，加水适量，煮沸半小时后，取桂圆肉及汤，并加蜂蜜，当点心吃。</p>
-
-<h2>7.羊肝粥《中医脏器食疗学》</h2>
-
-<p><strong>主治</strong>：肝血不足所致的近视、目昏等症。</p>
-
-<p><strong>配方</strong>：羊肝一具，葱子30克，大米30克。</p>
-
-<p><strong>用法</strong>：将羊肝切细，大米淘净。先将葱子水煎取汁，加羊肝、大米煮为稀粥。待熟后调入食盐适量服食。</p>
-
-<h2>8.猪肝羹《圣惠方》</h2>
-
-<p><strong>主治</strong>：血不养肝，远视无力。</p>
-
-<p><strong>配方</strong>：猪肝125克，葱白15克，鸡蛋1个，豉汁适量。</p>
-
-<p><strong>用法</strong>：将猪肝切成薄片，葱白去须根，切成短节，入豉汁中作羹，临熟，将鸡蛋打破，混匀蛋白蛋黄，入汤内成羹，单食或佐餐服食。</p>
-
-<h2>9.桂杞山萸眼（中医验方）</h2>
-
-<p><strong>主治</strong>：近视。</p>
-
-<p><strong>配方</strong>：桂圆肉15克，枸杞子15克，山萸肉15克，猪（牛、羊）眼1对。</p>
-
-<p><strong>用法</strong>：猪眼洗净加桂圆肉、枸杞、山萸肉隔火炖服之。</p>
-
-<h2>10.菠菜猪肝汤（民间方）</h2>
-
-<p><strong>主治</strong>：血虚视力减退。</p>
-
-<p><strong>配方</strong>：菠菜125克，猪肝125克，熟猪油、生姜、葱白、清汤、食盐、水豆粉、味精各适量。</p>
-
-<p><strong>用法</strong>：菠菜洗净，在沸水中烫片刻，脱去涩味，切段，将猪肝切成薄片，与食盐、味精、水豆粉拌匀，将清汤浇沸，加入洗净拍破的生姜、切成短节的葱白、熟猪油等。煮几分钟后，放入拌好的猪肝片及菠菜，至肝片、菠菜煮熟即可，佐餐常服。</p>
-
-<h2>11.冰糖木耳（民间方）</h2>
-
-<p><strong>主治</strong>：高血压眼底出血、红眼目糊、视力不清。</p>
-
-<p><strong>配方</strong>：黑木耳适量，冰糖适量。</p>
-
-<p><strong>用法</strong>：将黑木耳洗净，用清水浸泡一夜取出，蒸一小时，加冰糖。每次用黑木耳6克，冰糖适量，睡前服用，连服至症状缓解为止。</p>
-
-<p><strong>按注</strong>：用本方加黑豆煎成羹也可。</p>
-
-<h2>12.炒羊肝（民间方）</h2>
-
-<p><strong>主治</strong>：目暗昏花，夜盲，视神经萎缩，中心性视肉膜炎，白内障等。</p>
-
-<p><strong>配方</strong>：羊肝200克。</p>
-
-<p><strong>用法</strong>：洗净切片，包芡素油爆炒，调以佐料，佐餐。</p>
-
-<h2>13.枸杞粥（中医验方）</h2>
-
-<p><strong>主治</strong>：肝虚目暗，老年多泪，目眩等。</p>
-
-<p><strong>配方</strong>：枸杞子30克，大豆100克。</p>
-
-<p><strong>用法</strong>：同煮为粥。</p>
-
-<h2>14.猪肝粥（民间方）</h2>
-
-<p><strong>主治</strong>：眼生翳膜，暴发火眼，视网膜出血，虹膜睫状体炎。</p>
-
-<p><strong>配方</strong>：荠菜200克，大米100克。</p>
-
-<p><strong>用法</strong>：同煮为粥。</p>
-
-<h2>15.猪肝粥（民间方）</h2>
-
-<p><strong>主治</strong>：各种慢性虚性眼病。</p>
-
-<p><strong>配方</strong>：新鲜猪肝100~200克，大米适量。</p>
-
-<p><strong>用法</strong>：猪肝洗净切碎，与米同煮烂熟加调味品食之。</p>
-
-<h2>16.杞实粥（中医验方）</h2>
-
-<p><strong>主治</strong>：各种虚性眼病，肝虚雀目。</p>
-
-<p><strong>配方</strong>：枸杞子20克，芡实30克，大米适量。</p>
-
-<p><strong>用法</strong>：煮至浓烂后加调味品食之。</p>
-
-<h2>17.山药杞子瘦肉汤（中医验方）</h2>
-
-<p><strong>主治</strong>：慢性虚性眼病。</p>
-
-<p><strong>配方</strong>：淮山药30克，枸杞子15克，瘦猪肉100克（洗净切碎）。</p>
-
-<p><strong>用法</strong>：加水煲至烂熟，加调味品食之。</p>
-
-<h2>18.羊肝羹《健美与抗衰老菜谱》</h2>
-
-<p><strong>主治</strong>：目疾，贫血。</p>
-
-<p><strong>配方</strong>：羊肝250克，菠菜100克，鸡蛋1只。精盐、味精、葱花、姜末、生油、羊肉汤。</p>
-
-<p><strong>用法</strong>：锅中加油烧热，加入羊肝、葱、姜煸炒，加入羊肉汤、精盐共煮，煮至羊肝熟烂，将菠菜加入锅中，将鸡蛋打破入锅，稍搅动，煮至菠菜、鸡蛋熟即可，用味精调味出锅。</p>
-
-<h2>19.韭菜羊肝粥《药粥治百病》</h2>
-
-<p><strong>主治</strong>：目视不明。</p>
-
-<p><strong>配方</strong>：韭菜150克，羊肝200克，大米100克。</p>
-
-<p><strong>用法</strong>：韭菜洗净，切碎，羊肝切小块，与大米同煮为粥即可。随意服用。</p>
-
-<p>orginal from web.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -598,59 +615,6 @@ Free tools to create applications on Windows using Visual C++.
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Redis tutorial</h2>
-
-<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
-
-<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
-
-<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
-
-<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
-<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/redis-remote-dictionary-server/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -683,7 +647,7 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 9 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 12 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 13 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 6 )</li>
 
@@ -691,13 +655,17 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 4 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 2 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 3 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/26/amazing-webgl-and-html-apps/">Amazing WebGL and HTML Apps</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a>
@@ -733,10 +701,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
     
       <li class="post">
         <a href="/blog/2012/03/17/notes-on-mongodb/">Notes on MongoDB</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/">Lasers Can Be Used to Steer Lightning In Mid-Strike</a>
       </li>
     
   </ul>
