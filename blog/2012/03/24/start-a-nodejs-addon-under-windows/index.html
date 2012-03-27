@@ -158,47 +158,35 @@ Free tools to create applications on Windows using Visual C++.
 
 <p>Get into folder test\addons\hello-world\ of NodeJS source</p>
 
-<ol>
-<li>Edit binding.cc
-Add <strong>NODE_MODULE_EXPORT </strong> before <strong>void init</strong></li>
-</ol>
+<p>1, <strong>Edit binding.cc</strong></p>
 
+<p>Add <strong>NODE_MODULE_EXPORT</strong> before <strong>void init</strong>
+or Add <strong>NODE_EXTERN</strong> between <strong>void</strong> and <strong>init</strong></p>
 
 <p>This could help avoid running &#8220;Unkown error&#8221; when require the addon in nodejs.</p>
 
-<ol>
-<li>Generate project files</li>
-</ol>
-
+<p>2, <strong>Generate project files</strong></p>
 
 <pre><code>set NODE_ROOT=your-node-js-src-root 
 python %NODE_ROOT%\tools\gyp_addon binding.gyp
 </code></pre>
 
-<ol>
-<li>Setup VC ENV variables
-Run</li>
-</ol>
+<p>3, <strong>Setup VC ENV variables</strong></p>
 
+<p>Run</p>
 
 <pre><code>"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
 </code></pre>
 
-<ol>
-<li>Build</li>
-</ol>
-
+<p>4, <strong>Build</strong></p>
 
 <pre><code>@set Configuration=Release
 </code></pre>
 
-<ol>
-<li>Test</li>
-</ol>
-
+<p>5, <strong>Test</strong></p>
 
 <pre><code>node
-&gt;require('./Release/binding')
+require('./Release/binding')
 </code></pre>
 
 <h2>Compile node-expat</h2>
@@ -357,7 +345,7 @@ Run</li>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/03/26/amazing-webgl-and-html-apps/">Amazing WebGL and HTML Apps</a>
+        <a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a>
       </li>
     
       <li class="post">

@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Enable WebGL in Chrome - about:flags Getting a WebGL Implementation **Firefox** WebGL is supported in Firefox/4.0 For testing/debugging purposes, &hellip;">
+  <meta name="description" content="Cell Cycle
+Creating 3d-printable cellular models. You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,7 +95,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html-apps/">Amazing WebGL and HTML Apps</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a></h1>
     
     
       <p class="meta">
@@ -117,117 +118,34 @@
   </header>
 
 
-  <div class="entry-content"><p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
-
-<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
-
-<ul>
-<li><pre><code>**Firefox**
-</code></pre></li>
-</ul>
-
-
-<p>WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></p>
-
-<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the &#8220;webgl.osmesalib&#8221; variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use &#8220;gl&#8221; prefixes, not &#8220;mgl&#8221;.
-You can also try setting the &#8220;webgl.force-enabled&#8221; variable to true if WebGL is not working. Variables can be accessed by typing &#8220;about:config&#8221; in the address bar.</p>
-
-<ul>
-<li><pre><code>**Safari**
-</code></pre></li>
-</ul>
-
-
-<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
-
-<p>After downloading and installing the browser, open the Terminal and type the following:</p>
-
-<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
-</code></pre>
-
-<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
-
-<ul>
-<li><pre><code>**Chrome**
-</code></pre></li>
-</ul>
-
-
-<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
-
-<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
-
-<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
-
-<ul>
-<li><pre><code>**Opera**
-</code></pre></li>
-</ul>
-
-
-<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
-
-<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL</a></p>
-
-<h2>Amazing WebGL Experiments</h2>
-
-<ul>
-<li><pre><code>**Cell Cycle**
-</code></pre>
-
-<p>Creating 3d-printable cellular models.</p></li>
+  <div class="entry-content"><ul>
+<li><strong>Cell Cycle</strong>
+Creating 3d-printable cellular models.</li>
 </ul>
 
 
 <p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
 
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<p><img src="/images/chrome/nervous.png" alt="" /></p>
+<p><img src="/images/blog/chrome/nervous.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
 
 <ul>
-<li><pre><code>**Fluid Simulation with Turing Patterns**
-</code></pre>
-
-<p>Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></p></li>
+<li><strong>Fluid Simulation with Turing Patterns</strong>
+Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
 </ul>
 
 
 <p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
 
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+<p><img src="/images/blog/chrome/fluid.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
 
-<p><img src="/images/chrome/fluid.png" alt="" /></p>
-
-<ul>
-<li><pre><code>**Zygote Body**
-</code></pre>
-
-<p>Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></p></li>
-</ul>
-
-
-<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
-
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
-
-<p><img src="/images/chrome/body.png" alt="" /></p>
-
-<ul>
-<li><pre><code>**Google Maps - Street View**
-</code></pre></li>
-</ul>
-
-
-<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
-
-<p>Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
-
-<p><img src="/images/chrome/amazon.jpg" alt="" /></p>
-
-<p>More will be appended &#8230;</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -664,7 +582,7 @@ Free tools to create applications on Windows using Visual C++.
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/03/26/amazing-webgl-and-html-apps/">Amazing WebGL and HTML Apps</a>
+        <a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a>
       </li>
     
       <li class="post">

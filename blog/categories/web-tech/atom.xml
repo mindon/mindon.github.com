@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-26T23:06:20+08:00</updated>
+  <updated>2012-03-27T20:39:35+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,28 +14,71 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Amazing WebGL and HTML Apps]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps/"/>
+    <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps/"/>
     <updated>2012-03-26T22:13:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html-apps</id>
-    <content type="html"><![CDATA[<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
-
-<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
-
-<ul>
-<li><pre><code>**Firefox**
-</code></pre></li>
+    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps</id>
+    <content type="html"><![CDATA[<ul>
+<li><strong>Cell Cycle</strong>
+Creating 3d-printable cellular models.</li>
 </ul>
 
 
-<p>WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></p>
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p><img src="/images/blog/chrome/nervous.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<ul>
+<li><strong>Fluid Simulation with Turing Patterns</strong>
+Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov's fluid simulation.</p>
+
+<p><img src="/images/blog/chrome/fluid.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+<!--more-->
+
+
+<ul>
+<li><strong>Zygote Body</strong>
+Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></li>
+</ul>
+
+
+<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
+
+<p><img src="/images/blog/chrome/body.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
+
+<ul>
+<li><strong>Google Maps - Street View</strong></li>
+</ul>
+
+
+<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
+
+<p><img src="/images/blog/chrome/amazon.jpg" alt="" />
+Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
+
+<p>More will be appended ...</p>
+
+<h2>How to get WebGL enable?</h2>
+
+<ul>
+<li><strong>Firefox</strong>
+WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></li>
+</ul>
+
 
 <p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the "webgl.osmesalib" variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use "gl" prefixes, not "mgl".
 You can also try setting the "webgl.force-enabled" variable to true if WebGL is not working. Variables can be accessed by typing "about:config" in the address bar.</p>
 
 <ul>
-<li><pre><code>**Safari**
-</code></pre></li>
+<li><strong>Safari</strong></li>
 </ul>
 
 
@@ -49,8 +92,7 @@ You can also try setting the "webgl.force-enabled" variable to true if WebGL is 
 <p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
 
 <ul>
-<li><pre><code>**Chrome**
-</code></pre></li>
+<li><strong>Chrome</strong></li>
 </ul>
 
 
@@ -58,75 +100,20 @@ You can also try setting the "webgl.force-enabled" variable to true if WebGL is 
 
 <p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
 
+<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
+
 <p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
 
 <ul>
-<li><pre><code>**Opera**
-</code></pre></li>
+<li><strong>Opera</strong></li>
 </ul>
 
 
 <p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
 
-<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL</a></p>
+<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
 
-<h2>Amazing WebGL Experiments</h2>
-
-<ul>
-<li><pre><code>**Cell Cycle**
-</code></pre>
-
-<p>Creating 3d-printable cellular models.</p></li>
-</ul>
-
-
-<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
-
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<p><img src="/images/chrome/nervous.png" alt="" /></p>
-
-<ul>
-<li><pre><code>**Fluid Simulation with Turing Patterns**
-</code></pre>
-
-<p>Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></p></li>
-</ul>
-
-
-<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov's fluid simulation.</p>
-
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
-
-<p><img src="/images/chrome/fluid.png" alt="" /></p>
-
-<ul>
-<li><pre><code>**Zygote Body**
-</code></pre>
-
-<p>Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></p></li>
-</ul>
-
-
-<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
-
-<p>Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
-
-<p><img src="/images/chrome/body.png" alt="" /></p>
-
-<ul>
-<li><pre><code>**Google Maps - Street View**
-</code></pre></li>
-</ul>
-
-
-<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
-
-<p>Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
-
-<p><img src="/images/chrome/amazon.jpg" alt="" /></p>
-
-<p>More will be appended ...</p>
+<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL!</a></p>
 ]]></content>
   </entry>
   
@@ -162,47 +149,35 @@ Free tools to create applications on Windows using Visual C++.
 
 <p>Get into folder test\addons\hello-world\ of NodeJS source</p>
 
-<ol>
-<li>Edit binding.cc
-Add <strong>NODE_MODULE_EXPORT </strong> before <strong>void init</strong></li>
-</ol>
+<p>1, <strong>Edit binding.cc</strong></p>
 
+<p>Add <strong>NODE_MODULE_EXPORT</strong> before <strong>void init</strong>
+or Add <strong>NODE_EXTERN</strong> between <strong>void</strong> and <strong>init</strong></p>
 
 <p>This could help avoid running "Unkown error" when require the addon in nodejs.</p>
 
-<ol>
-<li>Generate project files</li>
-</ol>
-
+<p>2, <strong>Generate project files</strong></p>
 
 <pre><code>set NODE_ROOT=your-node-js-src-root 
 python %NODE_ROOT%\tools\gyp_addon binding.gyp
 </code></pre>
 
-<ol>
-<li>Setup VC ENV variables
-Run</li>
-</ol>
+<p>3, <strong>Setup VC ENV variables</strong></p>
 
+<p>Run</p>
 
 <pre><code>"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
 </code></pre>
 
-<ol>
-<li>Build</li>
-</ol>
-
+<p>4, <strong>Build</strong></p>
 
 <pre><code>@set Configuration=Release
 </code></pre>
 
-<ol>
-<li>Test</li>
-</ol>
-
+<p>5, <strong>Test</strong></p>
 
 <pre><code>node
-&gt;require('./Release/binding')
+require('./Release/binding')
 </code></pre>
 
 <h2>Compile node-expat</h2>
