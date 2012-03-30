@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-28T23:13:57+08:00</updated>
+  <updated>2012-03-31T01:02:23+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Match encrypt &amp; decrypt in PHP and NodeJS]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/"/>
+    <updated>2012-03-31T00:20:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs</id>
+    <content type="html"><![CDATA[<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+<p>PHP</p>
+
+<pre><code>&lt;?php
+function hex2bin($hex_string) {
+    return pack('H*', $hex_string);
+}
+$text = 'Clipher Message';
+$key = 'abcdefghijklmnop';
+$iv = '0123456789123456'
+
+function iEncrypt($data, $key, $iv) {
+    $blocksize = 16;
+    $pad = $blocksize - (strlen($data) % $blocksize);
+    $data = $data . str_repeat(chr($pad), $pad);
+    return bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $data, MCRYPT_MODE_CBC, $iv));
+}
+
+function iDecrypt($data, $key, $iv) {
+    return mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, hex2bin($data), MCRYPT_MODE_CBC, $iv));
+}
+
+$encrypted = iEncrypt($text, $key, iv);
+echo $encrypted.'&lt;br/&gt;';
+echo iDecrypt($encrypted, $key, iv);
+?&gt;
+</code></pre>
+
+<p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
+
+<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data &#8220;bit by bit&#8221; (or &#8220;byte by byte&#8221;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
+
+<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the &#8220;256&#8221; is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
+
+<p>With CBC mode, the input data must have a length multiple of the block length, so it is customary to add PKCS#5 padding: if the block length is n, then at least 1 byte is added, at most n, such that the total size is a multiple of n, and the last added bytes (possibly all of them) have numerical value k where k is the number of added bytes. Upon decryption, it suffices to look at the last decrypted byte to recover k and thus know how many padding bytes must be ultimately removed.</p>
+
+<p>Hence, with CBC mode and AES, assuming PKCS#5 padding, if the input data has length d then the encrypted length is (d + 16) &amp; ~15. I am using C-like notation here; in plain words, the length is between d+1 and d+16, and multiple of 16.</p>
+
+<p>There is a mode called CTR (as &#8220;counter&#8221;) in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
+
+<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&#8217;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
+
+<p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
@@ -1508,21 +1583,6 @@ MongoDB的数据文件是采用的预分配模式，并且在Replication里面�
 <p>这就是神奇之处。因为这个系统可以捕捉有关场景光线方向的信息，因此它可以“聚焦”照片中的任何深度，哪怕在拍照后数年。一瞬间你就可以获得理想的照片，相机可以去掉笨重、耗电和昂贵的聚焦系统，你可以更快地完成拍照，即便非专业摄影师也不必担心对焦问题。镜头还可以捕捉弱光环境下的光线。这会产生很大的影响，可能会对整个相机业带来巨大变革。</p>
 
 <p>&#8230; 36氪<a href="http://www.36kr.com/p/30873.html">Lytro光场相机原理和应用浅析</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Walking in Chrome]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/"/>
-    <updated>2012-03-03T18:27:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome</id>
-    <content type="html"><![CDATA[<p>Chrome插件&#8221;Walking in Chrome&#8221;是个有趣的应用，想法来自于“运动”概念：了解天天坐电脑前面的自己用鼠标在网上移动的距离究竟有多远，点击了多少次，为了滚动网页手指动了多少下。这些数字究竟有多大你是无法想象的 :-p
-( 插件无需网络链接，在Chrome Store网站内无法统计 )</p>
-
-<p>Find out how far you have walked on the web in Chrome, and how many clicks you&#8217;ve made or how many scrolls on your finger tip.
-( No network requests in this extension, BTW: inside Chrome Web Store, it keeps still&#8230; )</p>
-
-<p><img src="http://mindon.github.com/images/blog/walking-in-chrome.png" alt="Walking in Chrome" /></p>
 ]]></content>
   </entry>
   

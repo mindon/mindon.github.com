@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-28T23:13:57+08:00</updated>
+  <updated>2012-03-31T01:02:23+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Match encrypt &amp; decrypt in PHP and NodeJS]]></title>
+    <link href="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/"/>
+    <updated>2012-03-31T00:20:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs</id>
+    <content type="html"><![CDATA[<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+<p>PHP</p>
+
+<pre><code>&lt;?php
+function hex2bin($hex_string) {
+    return pack('H*', $hex_string);
+}
+$text = 'Clipher Message';
+$key = 'abcdefghijklmnop';
+$iv = '0123456789123456'
+
+function iEncrypt($data, $key, $iv) {
+    $blocksize = 16;
+    $pad = $blocksize - (strlen($data) % $blocksize);
+    $data = $data . str_repeat(chr($pad), $pad);
+    return bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $data, MCRYPT_MODE_CBC, $iv));
+}
+
+function iDecrypt($data, $key, $iv) {
+    return mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, hex2bin($data), MCRYPT_MODE_CBC, $iv));
+}
+
+$encrypted = iEncrypt($text, $key, iv);
+echo $encrypted.'&lt;br/&gt;';
+echo iDecrypt($encrypted, $key, iv);
+?&gt;
+</code></pre>
+
+<p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
+
+<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data "bit by bit" (or "byte by byte"). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
+
+<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the "256" is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
+
+<p>With CBC mode, the input data must have a length multiple of the block length, so it is customary to add PKCS#5 padding: if the block length is n, then at least 1 byte is added, at most n, such that the total size is a multiple of n, and the last added bytes (possibly all of them) have numerical value k where k is the number of added bytes. Upon decryption, it suffices to look at the last decrypted byte to recover k and thus know how many padding bytes must be ultimately removed.</p>
+
+<p>Hence, with CBC mode and AES, assuming PKCS#5 padding, if the input data has length d then the encrypted length is (d + 16) &amp; ~15. I am using C-like notation here; in plain words, the length is between d+1 and d+16, and multiple of 16.</p>
+
+<p>There is a mode called CTR (as "counter") in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
+
+<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that's an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
+
+<p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
@@ -395,155 +470,6 @@ font-* 族的CSS属性不允许使用缩写，请分别定义 font-size, font-we
 <li><p>Fun</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Javascript Micro-Templating]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/21/javascript-micro-templating/"/>
-    <updated>2012-03-21T10:52:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/21/javascript-micro-templating</id>
-    <content type="html"><![CDATA[<p>This is a modification version of <strong>John Resig</strong>'s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
-
-<p>The modifications are mostly about filters for field values.</p>
-
-<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it's really simple, easy-to-use.</p>
-
-<blockquote><p>I've had a little utility that I've been kicking around for some time now that I've found to be quite useful in my JavaScript application-building endeavors. It's a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
-
-<!--more-->
-
-
-<blockquote><p>Here's the source code to the templating function (a more-refined version of this code will be in my upcoming book Secrets of the <a href="http://jsninja.com/">JavaScript Ninja</a>):</p></blockquote>
-
-<p>original code:</p>
-
-<pre><code>// Simple JavaScript Templating
-// John Resig - http://ejohn.org/ - MIT Licensed
-(function(){
-  var cache = {};
-
-  this.tmpl = function tmpl(str, data){
-    // Figure out if we're getting a template, or if we need to
-    // load the template - and be sure to cache the result.
-    var fn = !/\W/.test(str) ?
-      cache[str] = cache[str] ||
-        tmpl(document.getElementById(str).innerHTML) :
-
-      // Generate a reusable function that will serve as a template
-      // generator (and which will be cached).
-      new Function("obj",
-        "var p=[],print=function(){p.push.apply(p,arguments);};" +
-
-        // Introduce the data as local variables using with(){}
-        "with(obj){p.push('" +
-
-        // Convert the template into pure JavaScript
-        str
-          .replace(/[\r\t\n]/g, " ")
-          .split("&lt;%").join("\t")
-          .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")
-          .replace(/\t=(.*?)%&gt;/g, "',$1,'")
-          .split("\t").join("');")
-          .split("%&gt;").join("p.push('")
-          .split("\r").join("\\'")
-      + "');}return p.join('');");
-
-    // Provide some basic currying to the user
-    return data ? fn( data ) : fn;
-  };
-})();
-</code></pre>
-
-<p>modified code:</p>
-
-<pre><code>// Simple JavaScript Templating
-// John Resig - http://ejohn.org/ - MIT Licensed
-(function(){
-  var cache = {};
-
-  // Added by Mindon
-  this.tmplCall = {
-    nohtml: function(v) {
-      return typeof v == 'string'
-        ? v.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;')
-           .replace(/&gt;/g,'&amp;gt;').replace(/[ ]{2}/g, '&amp;nbsp; ')
-        : v;
-    }
-  , br: function(v) {
-      return typeof v == 'string'
-        ? v.replace(/\n{2,}/g, '&lt;br/&gt;&lt;br/&gt;').replace(/\n/g, '&lt;br/&gt;')
-        : v;
-    }
-  };
-
-  // Updated by mindon@gmail.com Nov. 3, 2011 ( options parameter append )
-  this.tmpl = function tmpl(str, data, opt){
-    var _t, _f; // added by Mindon
-
-    // Figure out if we're getting a template, or if we need to
-    // load the template - and be sure to cache the result.
-    var fn = !/\W/.test(str) ?
-      cache[str] = cache[str] ||
-        tmpl(document.getElementById(str).innerHTML, 0, opt) : // updated by Mindon
-
-      // Appended by Mindon
-      ( (_t = opt &amp;&amp; opt.html ? 1: 'tmplCall.nohtml') &amp;&amp; 
-        (_f = opt &amp;&amp; opt.fields ? '(' +opt.fields +')(d)' : 1) &amp;&amp;
-        ((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0
-        // fields: function(){return {fieldName: handlefn(v){}}}
-      ) ||
-
-      // Generate a reusable function that will serve as a template
-      // generator (and which will be cached).
-      new Function("d",
-        "var p=[],print=function(){p.push.apply(p,arguments);}, _f=" + _f +", _t="
-          +_t +",_v=function(k,v){" 
-          +'return tmplCall.br('
-          +(_f?'_f[k]?_f[k](':'') +(_t?'_t(v)':'v') +(_f?'):'
-          +(_t?'_t(v)':'v'):'') +")};" + // updated
-
-        // Introduce the data as local variables using with(){}
-        "p.push('" +
-
-        // Convert the template into pure JavaScript
-        str.replace(/[\r\t\n]/g, " ")
-          .split("&lt;%").join("\t")
-          .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")
-          .replace(/\t=(.*?)%&gt;/g, "',_v('$1',d['$1']),'") // updated
-          .split("\t").join("');")
-          .split("%&gt;").join("p.push('")
-          .split("\r").join("\\'")
-      + "');return p.join('');");
-
-    // Provide some basic currying to the user
-    return data ? fn( data ) : fn;
-  };
-})();
-</code></pre>
-
-<p>Templates example:</p>
-
-<pre><code>&lt;script type="text/html" id="item_tmpl"&gt;
-  &lt;div id="&lt;%=id%&gt;" class="&lt;%=(i % 2 == 1 ? " even" : "")%&gt;"&gt;
-    &lt;div class="grid_1 alpha right"&gt;
-      &lt;img class="righted" src="&lt;%=profile_image_url%&gt;"/&gt;
-    &lt;/div&gt;
-    &lt;div class="grid_6 omega contents"&gt;
-      &lt;p&gt;&lt;b&gt;&lt;a href="http://mindon.github.com/&lt;%=from_user%&gt;"&gt;&lt;%=from_user%&gt;&lt;/a&gt;:&lt;/b&gt; &lt;%=text%&gt;&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/script&gt;
-</code></pre>
-
-<p>Another with inline script:</p>
-
-<pre><code>&lt;script type="text/html" id="user_tmpl"&gt;
-  &lt;% for ( var i = 0; i &lt; users.length; i++ ) { %&gt;
-    &lt;li&gt;&lt;a href="&lt;%=users[i].url%&gt;"&gt;&lt;%=users[i].name%&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;% } %&gt;
-&lt;/script&gt;
-</code></pre>
 ]]></content>
   </entry>
   

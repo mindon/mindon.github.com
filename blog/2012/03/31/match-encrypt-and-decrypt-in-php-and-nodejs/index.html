@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Walking in Chrome - Mindon.IDEA</title>
+  <title>Match encrypt &amp; decrypt in PHP and NodeJS - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Walking in Chrome</h1>
+      <h1 class="entry-title">Match Encrypt &amp; Decrypt in PHP and NodeJS</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-03-03T18:27:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+<time datetime="2012-03-31T00:20:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
         
       </p>
     
@@ -131,13 +131,73 @@
 		</script>
 	</div>
 
-<p>Chrome插件&#8221;Walking in Chrome&#8221;是个有趣的应用，想法来自于“运动”概念：了解天天坐电脑前面的自己用鼠标在网上移动的距离究竟有多远，点击了多少次，为了滚动网页手指动了多少下。这些数字究竟有多大你是无法想象的 :-p
-( 插件无需网络链接，在Chrome Store网站内无法统计 )</p>
+<p>NodeJS</p>
 
-<p>Find out how far you have walked on the web in Chrome, and how many clicks you&#8217;ve made or how many scrolls on your finger tip.
-( No network requests in this extension, BTW: inside Chrome Web Store, it keeps still&#8230; )</p>
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
 
-<p><img src="/images/blog/walking-in-chrome.png" alt="Walking in Chrome" /></p>
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+<p>PHP</p>
+
+<pre><code>&lt;?php
+function hex2bin($hex_string) {
+    return pack('H*', $hex_string);
+}
+$text = 'Clipher Message';
+$key = 'abcdefghijklmnop';
+$iv = '0123456789123456'
+
+function iEncrypt($data, $key, $iv) {
+    $blocksize = 16;
+    $pad = $blocksize - (strlen($data) % $blocksize);
+    $data = $data . str_repeat(chr($pad), $pad);
+    return bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $data, MCRYPT_MODE_CBC, $iv));
+}
+
+function iDecrypt($data, $key, $iv) {
+    return mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, hex2bin($data), MCRYPT_MODE_CBC, $iv));
+}
+
+$encrypted = iEncrypt($text, $key, iv);
+echo $encrypted.'&lt;br/&gt;';
+echo iDecrypt($encrypted, $key, iv);
+?&gt;
+</code></pre>
+
+<p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
+
+<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data &#8220;bit by bit&#8221; (or &#8220;byte by byte&#8221;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
+
+<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the &#8220;256&#8221; is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
+
+<p>With CBC mode, the input data must have a length multiple of the block length, so it is customary to add PKCS#5 padding: if the block length is n, then at least 1 byte is added, at most n, such that the total size is a multiple of n, and the last added bytes (possibly all of them) have numerical value k where k is the number of added bytes. Upon decryption, it suffices to look at the last decrypted byte to recover k and thus know how many padding bytes must be ultimately removed.</p>
+
+<p>Hence, with CBC mode and AES, assuming PKCS#5 padding, if the input data has length d then the encrypted length is (d + 16) &amp; ~15. I am using C-like notation here; in plain words, the length is between d+1 and d+16, and multiple of 16.</p>
+
+<p>There is a mode called CTR (as &#8220;counter&#8221;) in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
+
+<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&#8217;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
+
+<p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
 
 </div>
 
@@ -161,12 +221,12 @@
   
 
 
-<time datetime="2012-03-03T18:27:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+<time datetime="2012-03-31T00:20:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/chrome-app/'>Chrome-App</a>
+    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
   
 </span>
 
@@ -175,7 +235,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -188,10 +248,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/03/chrome-app-say-i-love-you/" title="Previous Post: How to say 'I Love You'">&laquo; How to say 'I Love You'</a>
+        <a class="basic-alignment left" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/" title="Previous Post: Amazing WebGL and HTML5 Apps">&laquo; Amazing WebGL and HTML5 Apps</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/05/inside-the-lytro-light-field-camera/" title="Next Post: Inside the Lytro: Light Field Camera">Inside the Lytro: Light Field Camera &raquo;</a>
       
     </p>
   </footer>
@@ -382,8 +440,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/';
         var disqus_script = 'embed.js';
       
     (function () {
