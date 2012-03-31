@@ -131,9 +131,11 @@
 		</script>
 	</div>
 
-<p>String encoded in PHP needs to decode in NodeJS?
-or Encoded in NodeJS needs to decode in PHP?
-Here&#8217;s a match method &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+<p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
 
 <p>NodeJS</p>
 
@@ -159,6 +161,9 @@ decrypted += decipher.final('utf-8');
 // decrypted
 console.log(decrypted);
 </code></pre>
+
+<!--more-->
+
 
 <p>PHP</p>
 

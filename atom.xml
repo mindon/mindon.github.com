@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-03-31T23:58:05+08:00</updated>
+  <updated>2012-04-01T01:20:45+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -18,9 +18,11 @@
     <link href="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/"/>
     <updated>2012-03-31T00:20:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs</id>
-    <content type="html"><![CDATA[<p>String encoded in PHP needs to decode in NodeJS?
-or Encoded in NodeJS needs to decode in PHP?
-Here&#8217;s a match method &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+    <content type="html"><![CDATA[<p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
 
 <p>NodeJS</p>
 
@@ -46,6 +48,9 @@ decrypted += decipher.final('utf-8');
 // decrypted
 console.log(decrypted);
 </code></pre>
+
+<!--more-->
+
 
 <p>PHP</p>
 
