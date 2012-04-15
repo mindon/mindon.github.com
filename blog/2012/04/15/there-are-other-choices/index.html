@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Web Images Optimization - Mindon.IDEA</title>
+  <title>There are other choices - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/22/web-images-optimization">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/04/15/there-are-other-choices">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Web Images Optimization</h1>
+      <h1 class="entry-title">There Are Other Choices</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-02-22T15:16:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+<time datetime="2012-04-15T10:29:00+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>
         
       </p>
     
@@ -131,39 +131,42 @@
 		</script>
 	</div>
 
-<p>Use PNG! with ImageMagick</p>
+<p>昨天送Aby到机场，从地铁出来往机场的中途有个扶手电梯正在维修中。因为拖着很沉的大箱子的缘故，第一想法就是糟了——要怎么拖下那个楼梯？虽然有斜坡，但那也是不容易的事情。</p>
 
-<h2>GIF Animation</h2>
+<p>幸运的是，旁边一个路人提醒了——左手边上有电梯！太好了！问题解决了——然而，为什么看到扶手电梯不可用的时候，只想到了旁边的楼梯，而没考虑过这样的地方一定会有直升电梯的呢？就如地铁里总有直升电梯，给不方便的人群提供选择。</p>
 
-<p>Tool: <a href="http://www.lcdf.org/gifsicle/">GitSlice</a>
-Command:</p>
+<p>如果独我一人这样也就算了，当我回来的时候，发现陆续走过的人也在面临同样的问题时——我提醒他们了，旁边有电梯可用——觉得这个问题其实是很普遍的。</p>
 
-<p>  gifsicle -o  test-optimized.gif test.gif</p>
+<p>这个事情的关键是：在问题的最接近的地方提供了一种选择（解决方案），并且最好的选择被放置在一个不容易发现的地方，且没有指示。</p>
 
-<h2>PNG</h2>
+<p>手动扶梯有问题了，最近且最容易被发现的解决方案是走楼梯，在没有任何提醒的情况下大多数人都没有考虑可能有别的选择——另一种就在不远处，且更好的解决方案。</p>
 
-<p>Tool: <a href="http://pmt.sourceforge.net/pngcrush/">PNGCrush</a>
-Command:</p>
+<p>当然，要解决这个问题其实是很简单的，就是在问题发生处，箭头指示替代方案所在。</p>
 
-<p>  pngcrush -rem alla -brute -reduce test.jpg test-optimized.jpg</p>
+<p>在做产品过程中，这个案例是有所启发的。特此警醒自己。</p>
 
-<h2>JPEG</h2>
+<hr />
 
-<p>Tool: <a href="http://jpegclub.org/jpegtran/">JPEGTran</a>
-Command:</p>
-
-<p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
+<p>由这个现象，我想起了以前碰到的另外一件事情：</p>
 
 <!--more-->
 
 
-<p>Reference from <a href="http://www.welefen.com/image-optimization.html">前端优化之图片优化自动化</a></p>
+<p>相信大家对于门禁都有使用经验，刷卡的时候门禁绿灯应该会闪一下，并发出嘀的声音提醒，然后推门通过。</p>
 
-<p>12 Really Useful Image Optimization Tools For Web Designers
-<a href="http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/">http://www.webdesignbooth.com/12-really-useful-image-optimization-tools-for-web-designers/</a></p>
+<p>有不止一次，发现3到5个人在门禁处等待，并在轮流刷卡，门禁并没有动静，于是大家等待一个可以刷出反应的卡的到来。</p>
 
-<p>Optimizing Web Graphics: Compression
-<a href="http://www.webreference.com/dev/graphics/compress.html">http://www.webreference.com/dev/graphics/compress.html</a></p>
+<p>事实是，门禁其实出故障了（具体原因未知，可能是断电了，因为灯没亮），门是开着的，只要推一下就能进去了。</p>
+
+<p>然而，我们的判断确是：是不是自己的卡出问题了，下一张看应该可以刷开吧？却没有人动手推一下那门。</p>
+
+<p>这个事情源于我们的思维惯性：推门动作发生总应该在门禁给出通过提示的时候进行，于是故障出现时，就出现了大家都会诧异自己为什么没有推门试试的一幕。</p>
+
+<hr />
+
+<p>总结：问题发生时，解决方案不一定是唯一的，要想到有别的解决方案存在的可能。</p>
+
+<p><strong>There will be a door! Don&#8217;t hit the wall :-p</strong></p>
 
 </div>
 
@@ -187,12 +190,12 @@ Command:</p>
   
 
 
-<time datetime="2012-02-22T15:16:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+<time datetime="2012-04-15T10:29:00+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>
   
 </span>
 
@@ -201,7 +204,7 @@ Command:</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/22/web-images-optimization/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/22/web-images-optimization/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/04/15/there-are-other-choices/" data-via="" data-counturl="http://mindon.github.com/blog/2012/04/15/there-are-other-choices/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -214,10 +217,10 @@ Command:</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/21/nosql-databases/" title="Previous Post: Picking the right NoSQL Database">&laquo; Picking the right NoSQL Database</a>
+        <a class="basic-alignment left" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/" title="Previous Post: Match encrypt &amp; decrypt in PHP and NodeJS">&laquo; Match encrypt &amp; decrypt in PHP and NodeJS</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/02/22/dive-into-node-dot-js/" title="Next Post: Dive into Node.JS">Dive into Node.JS &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/04/15/matching-method-predictably-irrational/" title="Next Post: Matching method: Predictably Irrational">Matching method: Predictably Irrational &raquo;</a>
       
     </p>
   </footer>
@@ -408,8 +411,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/22/web-images-optimization/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/02/22/web-images-optimization/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/04/15/there-are-other-choices/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/04/15/there-are-other-choices/';
         var disqus_script = 'embed.js';
       
     (function () {
