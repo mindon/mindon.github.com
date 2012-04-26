@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-04-25T08:32:45+08:00</updated>
+  <updated>2012-04-26T08:27:28+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,149 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Profiling Node.JS Application]]></title>
+    <link href="http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application/"/>
+    <updated>2012-04-26T07:22:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application</id>
+    <content type="html"><![CDATA[<h2>NodeJS</h2>
+
+<p>Running with --prof to generate the v8.log</p>
+
+<pre><code>node --prof --prof_lazy app.js
+</code></pre>
+
+<p>with tools in /node/deps/v8/, you can get report like following:</p>
+
+<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
+
+<pre><code>[Shared libraries]:
+   ticks  total  nonlib   name
+      3    0.0%    0.0%  .../libc-2.13.so
+
+[JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%    0.0%  Stub: InstanceofStub
+
+[C++]:
+   ticks  total  nonlib   name
+     1    0.0%    0.0%  __write
+     ...
+
+[GC]:
+   ticks  total  nonlib   name
+     15    0.0%
+
+[Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+   ...
+</code></pre>
+
+<p>trace log</p>
+
+<pre><code>strace -o trace.log -cf node app.js:
+</code></pre>
+
+<p>or simple get the time</p>
+
+<pre><code>time node app.js
+</code></pre>
+
+<h2>Other Modules &amp; Tools</h2>
+
+<ul>
+<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
+</ul>
+
+
+<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
+
+<pre><code>dtrace -o stacks.out -n 'profile-97/execname == "node" &amp;&amp; arg1/{
+  @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }'
+</code></pre>
+
+<ul>
+<li><strong>v8-profiler</strong></li>
+</ul>
+
+
+<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a></p>
+
+<!--more-->
+
+
+<pre><code>var profiler = require('v8-profiler');
+
+profiler.startProfiling('startup');
+slowStartupFoo();
+profiler.stopProfiling('startup');
+
+profiler.takeSnapshot('beforeLeak');
+leakyFoo();
+profiler.takeSnapshot('afterLeak');
+</code></pre>
+
+<ul>
+<li><strong>node-inspector</strong></li>
+</ul>
+
+
+<p>@Github <a href="https://github.com/dannycoates/node-inspector">https://github.com/dannycoates/node-inspector</a></p>
+
+<pre><code>node --debug app.js
+</code></pre>
+
+<ul>
+<li><strong>node-profiler</strong></li>
+</ul>
+
+
+<p>@Github <a href="https://github.com/bnoordhuis/node-profiler">https://github.com/bnoordhuis/node-profiler</a></p>
+
+<pre><code>var profiler = require('profiler');
+//
+// &lt;here be code you don't want to profile&gt;
+//
+profiler.resume();
+//
+// &lt;performance critical code here&gt;
+//
+profiler.pause();
+</code></pre>
+
+<ul>
+<li><strong>Nodetime</strong>
+<a href="http://nodetime.com/">http://nodetime.com/</a></li>
+</ul>
+
+
+<p>Nodetime reveals response time and other internals of HTTP requests and underlying HTTP / database calls in your Node.js application. Coupled with related process and OS state information it enables tracing performance problems down to the root cause. Nodetime supports multiple native and external APIs and libraries.</p>
+
+<pre><code>var nodetime = require('nodetime');
+nodetime.on('session', function(id) {
+  // do something with session id here
+});
+nodetime.profile();
+</code></pre>
+
+<ul>
+<li><strong>Callgrind</strong></li>
+</ul>
+
+
+<p>Callgrind is a profiling tool that records the call history among functions in a program's run as a call-graph. By default, the collected data consists of the number of instructions executed, their relationship to source lines, the caller/callee relationship between functions, and the numbers of such calls. Optionally, cache simulation and/or branch prediction (similar to Cachegrind) can produce further information about the runtime behavior of an application.</p>
+
+<p><a href="http://valgrind.org/docs/manual/cl-manual.html">http://valgrind.org/docs/manual/cl-manual.html</a></p>
+
+<pre><code>valgrind --tool=callgrind node app.js
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aby is on the road: Lhasa]]></title>
@@ -500,36 +643,6 @@ unique4(d) : [1, 2, '2', 3]
 <p>你亲爱的</p>
 
 <p>爸爸</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Matching method: Predictably Irrational]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/15/matching-method-predictably-irrational/"/>
-    <updated>2012-04-15T16:38:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/15/matching-method-predictably-irrational</id>
-    <content type="html"><![CDATA[<p>对于正在寻求或建立长期关系的朋友，怪诞行为学（Predictably Irrational）里提到 “独木舟与夫妻关系”片段，绝对是要学习和参考的：</p>
-
-<p><strong>遇到问题时，是会相互抱怨还是一起寻找原因，同心协力解决问题？</strong></p>
-
-<!--more-->
-
-
-<p>以下是相关的中文版本原文：</p>
-
-<blockquote><p> 既然完全避免有关和无关的情绪影响是不可能的，我们是否有办法避免夫妻关系这样恶化呢？最简单的一条忠告是，选择一位不会造成这样螺旋下降的伴侣。当然了，你可以寻求数以百计的选配方法，从星相学到统计学，但是我认为你只需要一条河、一只独木舟、两只桨。</p>
-
-<p> 我每次去划独木舟，总会看到夫妻或者情人因为无意中把船弄得直打转或撞到石头上而争论不休。独木舟看似容易，真正划起来却不简单，因此很容易把夫妻带到战争的边缘。我和一些夫妻一起喝酒或者去他们家吃饭，很少遇到他们发生争论，这不完全因为人们尽量要做到举止得体（说到底，难道两口子在划船时就不想举止得体吗）。我认为，这与人们有关平日正常活动的即成行为模式有关（当着生人在饭桌上激烈争论，在大多数家庭中都是绝对禁止的）。</p>
-
-<p> 但是一到了河面上，情况就大不相同了。没有现成的规则，河水流速及流向无法预测，独木舟一会儿漂流，一会儿打转，很难预见和控制。（生活也一样，充满着意外的压力和障碍。）前后之间没有明确的劳动分工。在这种环境下，倒是有充分的机会建立和观察新鲜的行为模式。</p>
-
-<p> <strong>如果你是夫妻中的一员，划船过程中会发生些什么？只要船不听话，你们是否就会互相抱怨（“你难道没看见那块礁石”），你们是否会一直吵得不可开交，弃船跳水，游到岸上，整整一个钟头谁也不理谁？或者，你们碰到了礁石，会不会一起找原因，弄清楚应该注意什么，同心协力继续前进？</strong></p>
-
-<p> 这就是说，在确立长期关系之前你们应该首先寻找一种环境，那里没有现成的社交规则，来探索你们在其中的共同行为（例如，我认为那女双方在决定结婚之前应该先规划他们的婚礼）。还有，应该密切注意那些可能导致关系恶化的行为方式。一旦观察到早期的警示迹象，我们应该立即采取行动，绕开不理想的路径。</p>
-
-<p> 最后的一条教训是：不管是划船还是在现实生活中，先冷静下来，再决定采取何种行动对我们才是有利的。否则，我们的决定将来一定会碰壁。</p></blockquote>
-
-<p>“不过，人一旦被情绪控制，谁能说得准呢？” :p</p>
 ]]></content>
   </entry>
   

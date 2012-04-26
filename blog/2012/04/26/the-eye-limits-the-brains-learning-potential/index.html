@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Redis: REmote DIctionary Server - Mindon.IDEA</title>
+  <title>The eye limits the brain's learning potential - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Redis: REmote DIctionary Server</h1>
+      <h1 class="entry-title">The Eye Limits the Brain's Learning Potential</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2012-04-26T08:12:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2012</time>
         
       </p>
     
@@ -131,72 +131,32 @@
 		</script>
 	</div>
 
-<h2>Redis tutorial</h2>
+<p>The concept of a critical period for visual development early in life during which sensory experience is essential to normal neural development is now well established. However recent evidence suggests that a limited degree of plasticity remains after this period and well into adulthood. Here, we ask the question, &#8220;what limits the degree of plasticity in adulthood?&#8221; Although this limit has been assumed to be due to neural factors, we show that the optical quality of the retinal image ultimately limits the brain potential for change. We correct the high-order aberrations (HOAs) normally present in the eye&#8217;s optics using adaptive optics, and reveal a greater degree of neuronal plasticity than previously appreciated.</p>
 
-<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
+<p>[<a href="http://www.nature.com/srep/2012/120413/srep00364/full/srep00364.html">read the full version article</a>]</p>
 
-<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+<p>Nature集团新刊《Scientific Reports》于4月16日在线发表了中国科学技术大学脑功能与脑疾病中科院重点实验室及生命科学学院周逸峰研究小组和中国科学院成都光电技术研究所自适应光学重点实验室张雨东研究小组的合作研究成果。</p>
 
-<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
-
-<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
-<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
+<p>他们通过实验证明，即便是发育成熟之后正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于人眼的光学系统质量。在使用人眼自适应光学矫正仪提高人眼光学系统质量后进行知觉学习训练可以大幅度提高正常成人的视觉功能。</p>
 
 <!--more-->
 
 
-<p>大的库也并不总是每个方面都没有瑕疵的。例如，Libevent的稳定发布版在运行时对事件的数组做无意义的重新分配（Libevent在2.0版本里改进了这一点，但是这个版本还不是稳定的）。我修改了ae.c让它模块化，并且通过多分配一些内存为代价来避免在事件循环内部的各种类型的O(N)操作（但是这个多分配的内存对于Redis这个内存数据库来说并不是一个问题，因为可能只占总占用内存的0.001% :)）。现在添加和删除一个event是O(1)了，这对于有10K个客户端连接来说很重要。现在我们在Redis里面仅仅使用一个Timer，但是如果以后我们需要更多的，我可以修改ae.c通过使用skip list（跳跃表）来达到O(log(N))。我们现在有了2个模块：ae_select.c和ae_epoll.c，考虑到写一个新的模块的工作是如此的少，我肯定会增加ae_kevent.c。</p>
+<p>视觉神经科学中的一个基本理论是“视皮层的发育具有关键期”，在关键期关闭之前视皮层较容易被改变，而关键期关闭之后则较难被改变。目前，很多知觉学习上的证据表明，即使是成年的视皮层也存在一定的可塑性。然而，对正常成人而言，这种在知觉学习过程中体现出的可塑性虽然存在，其程度却非常小。这极大的限制了知觉学习在提高成人视功能中应用。</p>
 
-<p><strong>Sergey Shepelev：</strong>
-Yeah，Libevent比较差劲，相反，libev是一个小巧、well thought、clean的库，它并没有提供任何高级的feature比如Http，但是它确实提供了非常好的底层feature。可以试一下：<a href="http://software.schmorp.de/pkg/libev.html">http://software.schmorp.de/pkg/libev.html</a></p>
+<p>另一方面，视光学领域的研究者发现：人眼并非一个完美的光学系统，除了大家所熟知的近视、远视和散光等在内的低阶像差外，还存在大量的难以用普通光学手段测量和矫正的高阶像差。近些年来，使用原先应用在天文学上的自适应光学矫正技术，视光学领域的研究者们通过矫正人眼高阶像差部分提高了成人视功能。但对正常成人而言，这种视功能上的提高很微弱，远达不到理论期望值；且无法脱离自适应光学矫正仪器而存在，因此也无法有效应用于成人视力的提高中。</p>
 
-<p><strong>Pedro Melo：</strong>
-赞同使用Libev，使用它，你将会非常高兴满意。:)</p>
+<p>尽管视知觉学习与人眼自适应光学这两个领域的研究者们对如何更好的提高视功能都报以极大的研究热情，但限于研究手段的单一，目前两方面的研究都在一定程度上达到了瓶颈。双方都迫切需要跨学科的先进技术与之结合来扩展思路。而到目前为止，结合自适应光学技术研究视知觉学习的学习效果、相关机制及应用的研究鲜有报道。在此背景下，周逸峰研究小组和张雨东研究小组将视知觉学习与人眼自适应光学技术相结合，取得了创新研究成果。</p>
 
-<p><strong>Salvatore Sanfilippo：</strong>
-现在Redis已经支持kevents了，请看一下我在ae.c里面的新实现，它是多么简单的支持添加一个新模块，添加、删除事件都是O(1)的。底层的模块像ae_epoll.c ae_select.c ae_kevent.c仅仅导出一个最小的完美的API接口，上层则关注当前活跃的最大的FD和管理上层的状态。</p>
+<p>他们比较了在矫正人眼高阶像差情况下（此时有较理想的人眼光学系统）对比度检测任务的知觉学习和不矫正人眼高阶像差情况下（普通的人眼光学系统）同样任务的知觉学习中，被试者对比敏感度和视力提高程度的差异。结果发现，在知觉学习训练后高阶像差矫正组在对比敏感度和视力上都有了显著的提高，而且这种提高至少可以维持5个月以上；而非高阶像差矫正组对比敏感度只有少量提高，视力水平无显著提高。</p>
 
-<p>我认为我们能够满足当前的实现而根本不用添加额外的依赖，另外这也不排除在某个时候，我们将会让我们的事件循环有一个更有意思的语义，for instance for LOCK if it will ever get implemented and for Virtual Memory (ability to &#8220;pause&#8221; events, ability to read chunks of on-disk files in background and so forth).例如：实现VM的时候，能够LOCK住事件循环，暂停事件，后台从磁盘读取文件等。我们也许要修改ae.c足够的多来让它和我们的代码一起工作而不是通过链接其他东西到Redis。当然，这有很多工作要做。</p>
+<p>他们的结果表明，发育关键期之后的正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于训练时人眼的光学系统成像质量。只有当高阶像差被矫正时，视觉系统的可塑性才能得到发挥。该发现可以用于探索新的治疗方法来提高视力低下患者的视功能。同时，还为结合人眼自适应光学矫正技术和视知觉学习来达到“超视力”提供了可能。</p>
 
-<p><strong>Pedro Melo：</strong>
-我的提议并不是关于添加这些模块有多简单或者复杂，我关注的是正确性。请看一下Libev的ChangLog，and seach for broken：所有这些高速的网络API都被相同OS的不同版本，或者更差的是不同的OS之间的小的不兼容困扰过。我认为Redis的主要努力不是为了创建另一个事件驱动的IO库，因此对我来说，“重用”一个已经仔细考虑过这些问题的库是更加明智的，然后把精力放在safe, working, backends上。</p>
+<p>这项研究工作是在国家重点基础研究发展计划973项目、国家自然科学基金重点项目、成都光电所前沿研究项目等基金的共同资助下完成。加拿大McGill大学视觉研究所所长Robert Hess教授一起合作完成了部分实验设计、数据处理及论文写作工作。本工作的技术部分于2011年9月20日获得两项美国发明专利授权。</p>
 
-<p><strong>Salvatore Sanfilippo：</strong>
-我认为从软件工程的观点来看你是正确的，通过重用一个已经很好测试过的库，Redis的事件循环出现bug的概率会小很多。这是阻止我做正确选择的一系列things，顺便说一下，我也并不要求它们被客观接受。因此我对分歧所涉及的问题理解的很清楚：</p>
+<p><a href="http://biox.ustc.edu.cn/xydt/201204/t20120417_133360.html">来源 - 中科大生命学院</a></p>
 
-<ul>
-<li><p>许多库在理论上被很好测试过了，但是如果通过一种和使用它的前N个项目不同的方式来用它，还是会发现bug的。例如，Redis唯一使用的外部代码：LZF压缩已经存在很多年了。在使用它一些天后，我发现了一个内存崩溃的bug。几乎所有人都在使用它，它也被很好测试过，但是bug仍然存在。</p></li>
-<li><p>我计划以后使用很多timer。所有这些库都使用一个0(N)的定时器算法，这至少是我从源码中看到的。一个平衡树或者跳跃表可以用来提升性能。当我将需要时，我能够自己实现而不用等待外部的开发者来合并我的修改。</p></li>
-<li><p>我讨厌 ./configure。事实上，在像事件循环库这种事情上，configure的魔法实际上只针对X个知名的系统。我对现在使用Redis的zero-configuration的体验非常满意。当然不使用./configure的另一种选择就是直接把代码放到Redis里面并且在发现问题时及时升级，但是我也并不想依赖于外部的源码。</p></li>
-<li><p>我需要在任何地方使用 zfree/zmalloc。</p></li>
-<li><p>写另一个事件循环库也是有一定价值的，如果这个库比其他的要易于阅读。例如，一些天前，我就看到某位同学在Twitter上推荐ae.c是一个关于简单事件循环很好的阅读对象，并且是能够在真实世界正确工作的。</p></li>
-</ul>
-
-
-<p>因此，从一个绝对的观点来看，你是正确的。但是我有一些我自己的主观原因在Redis中使用ae.c。</p>
-
-<p><strong>Pedro Melo：</strong>
-当然，不存在没有bug的库。我仅仅能够说的是libev非常的活跃，作者对在maillist上报告的bug也反应的非常快。我相信timer是O(log(N))，你可以看看文档的算法复杂度部分：http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP&#8230; 。事实上，libev是将它使用的算法的复杂度文档化的少有的几个库之一。总之，我确信它将能够很好的工作。</p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Pedro，没有任何问题，我认为你的观点是很好的，我今天读了一会儿libev代码后，也同意libev的代码很好。如果我们把这个问题当作一个纯粹的软件工程问题，换句话说，假如我们将为宇宙飞船写一个组件，毫无疑问正确的做法是使用能够工作并且被很好测试过的库。</p>
-
-<p>但是也有其他可能的观点，并且我感觉这些观点也同等的重要（也一样不是客观的）。我认为这个讨论与编写软件最大的动机问题有很深的联系（I think this discussion has some deep link with the most important motivations for writing software.）。我认为简洁代码的价值不仅在于能够做需要做的事情，而且在于易于阅读。库是一个让伟大工作快速完成的伟大想法。Libraries are a great idea to accomplish great things in short time, but things like libev finish to  resemble every day more what they wanted to avoid, after all there was libevent already. 毕竟已经有Libevent了，它有很多bug吗？既然这样为什么不fix呢？或者开出分支出来？因为Libevent非常复杂，一团糟等等。但是最终，这些库包括libev，试图毁坏每个人最初的简单设计。需要在同一个FD上注册更多完全相同的事件？对我来说，这是一个设计错误。对通用的库来说，这是一个feature，因为有同学在使用。等等。</p>
-
-<p>没有外部依赖也很有价值。我没有证据，但是我打赌，Redis开始吸引一些用户不仅仅是由于它作为数据库的优点，也在于它是如此易于上手。能够非常容易的理解它是怎么工作的，很容易的编译，运行甚至不需要配置。它的语义是如此的简单，以至于我知道一些同学使用不同的语言（Erlang, Java, Javascript, &#8230; ）实现Redis的山寨版仅仅为了乐趣。</p>
-
-<p>If you take the street of simplicity this should be adopted in everything, from the protocol to the fact there are no dependencies, and that everybody with some C skill can open ae.c and understand how an event loop works.</p>
-
-<p>如果你认可“简洁”，也可以拓展到其他方面：从协议到没有依赖的事实，到每一个有一定C技能的同学可以打开ae.c并且理解一个事件循环是如何工作的。</p>
-
-<p>当然我也不太确定，因为它是全新的代码。我几乎是从头编写的ae.c，但是如果有bug的话，我将能够很快的fix掉。我认为这付出的努力是值得的。顺便说下，最后一次提交之后，我已经进入了feature freeze阶段。我将利用下个月在发布rc1前的时间来从头阅读整份代码，并且做很多的测试，“简洁”在这个时候就非常有帮助了。</p>
-
-<h2>Node.js Redis Client</h2>
-
-<p>https://github.com/mranney/node_redis</p>
+<p><a href="http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp?recid=CN200910262470.4&amp;leixin=fmzl&amp;title=%C8%CB%D1%DB%D7%D4%CA%CA%D3%A6%B9%E2%D1%A7%CA%D3%D6%AA%BE%F5%D1%A7%CF%B0%D1%B5%C1%B7%B7%BD%B7%A8%BA%CD%D1%A7%CF%B0%D1%B5%C1%B7%D2%C7">国家专利链接</a></p>
 
 </div>
 
@@ -220,12 +180,12 @@ Pedro，没有任何问题，我认为你的观点是很好的，我今天读了
   
 
 
-<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2012-04-26T08:12:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/light-air-water-m-sci/'>Light-Air-Water-M-Sci</a>
   
 </span>
 
@@ -234,7 +194,7 @@ Pedro，没有任何问题，我认为你的观点是很好的，我今天读了
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server/" data-via="" data-counturl="http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/" data-via="" data-counturl="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -247,10 +207,8 @@ Pedro，没有任何问题，我认为你的观点是很好的，我今天读了
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/17/mongodb-the-internal-file-structure/" title="Previous Post: MongoDB: The internal file structure">&laquo; MongoDB: The internal file structure</a>
+        <a class="basic-alignment left" href="/blog/2012/04/26/profiling-nodejs-application/" title="Previous Post: Profiling Node.JS Application">&laquo; Profiling Node.JS Application</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/21/javascript-micro-templating/" title="Next Post: Javascript Micro-Templating">Javascript Micro-Templating &raquo;</a>
       
     </p>
   </footer>
@@ -442,8 +400,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/03/17/redis-remote-dictionary-server/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/';
         var disqus_script = 'embed.js';
       
     (function () {

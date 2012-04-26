@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-Air-Water-M-Sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-04-25T08:32:45+08:00</updated>
+  <updated>2012-04-26T08:27:28+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The eye limits the brain's learning potential]]></title>
+    <link href="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/"/>
+    <updated>2012-04-26T08:12:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential</id>
+    <content type="html"><![CDATA[<p>The concept of a critical period for visual development early in life during which sensory experience is essential to normal neural development is now well established. However recent evidence suggests that a limited degree of plasticity remains after this period and well into adulthood. Here, we ask the question, "what limits the degree of plasticity in adulthood?" Although this limit has been assumed to be due to neural factors, we show that the optical quality of the retinal image ultimately limits the brain potential for change. We correct the high-order aberrations (HOAs) normally present in the eye's optics using adaptive optics, and reveal a greater degree of neuronal plasticity than previously appreciated.</p>
+
+<p>[<a href="http://www.nature.com/srep/2012/120413/srep00364/full/srep00364.html">read the full version article</a>]</p>
+
+<p>Nature集团新刊《Scientific Reports》于4月16日在线发表了中国科学技术大学脑功能与脑疾病中科院重点实验室及生命科学学院周逸峰研究小组和中国科学院成都光电技术研究所自适应光学重点实验室张雨东研究小组的合作研究成果。</p>
+
+<p>他们通过实验证明，即便是发育成熟之后正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于人眼的光学系统质量。在使用人眼自适应光学矫正仪提高人眼光学系统质量后进行知觉学习训练可以大幅度提高正常成人的视觉功能。</p>
+
+<!--more-->
+
+
+<p>视觉神经科学中的一个基本理论是“视皮层的发育具有关键期”，在关键期关闭之前视皮层较容易被改变，而关键期关闭之后则较难被改变。目前，很多知觉学习上的证据表明，即使是成年的视皮层也存在一定的可塑性。然而，对正常成人而言，这种在知觉学习过程中体现出的可塑性虽然存在，其程度却非常小。这极大的限制了知觉学习在提高成人视功能中应用。</p>
+
+<p>另一方面，视光学领域的研究者发现：人眼并非一个完美的光学系统，除了大家所熟知的近视、远视和散光等在内的低阶像差外，还存在大量的难以用普通光学手段测量和矫正的高阶像差。近些年来，使用原先应用在天文学上的自适应光学矫正技术，视光学领域的研究者们通过矫正人眼高阶像差部分提高了成人视功能。但对正常成人而言，这种视功能上的提高很微弱，远达不到理论期望值；且无法脱离自适应光学矫正仪器而存在，因此也无法有效应用于成人视力的提高中。</p>
+
+<p>尽管视知觉学习与人眼自适应光学这两个领域的研究者们对如何更好的提高视功能都报以极大的研究热情，但限于研究手段的单一，目前两方面的研究都在一定程度上达到了瓶颈。双方都迫切需要跨学科的先进技术与之结合来扩展思路。而到目前为止，结合自适应光学技术研究视知觉学习的学习效果、相关机制及应用的研究鲜有报道。在此背景下，周逸峰研究小组和张雨东研究小组将视知觉学习与人眼自适应光学技术相结合，取得了创新研究成果。</p>
+
+<p>他们比较了在矫正人眼高阶像差情况下（此时有较理想的人眼光学系统）对比度检测任务的知觉学习和不矫正人眼高阶像差情况下（普通的人眼光学系统）同样任务的知觉学习中，被试者对比敏感度和视力提高程度的差异。结果发现，在知觉学习训练后高阶像差矫正组在对比敏感度和视力上都有了显著的提高，而且这种提高至少可以维持5个月以上；而非高阶像差矫正组对比敏感度只有少量提高，视力水平无显著提高。</p>
+
+<p>他们的结果表明，发育关键期之后的正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于训练时人眼的光学系统成像质量。只有当高阶像差被矫正时，视觉系统的可塑性才能得到发挥。该发现可以用于探索新的治疗方法来提高视力低下患者的视功能。同时，还为结合人眼自适应光学矫正技术和视知觉学习来达到“超视力”提供了可能。</p>
+
+<p>这项研究工作是在国家重点基础研究发展计划973项目、国家自然科学基金重点项目、成都光电所前沿研究项目等基金的共同资助下完成。加拿大McGill大学视觉研究所所长Robert Hess教授一起合作完成了部分实验设计、数据处理及论文写作工作。本工作的技术部分于2011年9月20日获得两项美国发明专利授权。</p>
+
+<p><a href="http://biox.ustc.edu.cn/xydt/201204/t20120417_133360.html">来源 - 中科大生命学院</a></p>
+
+<p><a href="http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp?recid=CN200910262470.4&amp;leixin=fmzl&amp;title=%C8%CB%D1%DB%D7%D4%CA%CA%D3%A6%B9%E2%D1%A7%CA%D3%D6%AA%BE%F5%D1%A7%CF%B0%D1%B5%C1%B7%B7%BD%B7%A8%BA%CD%D1%A7%CF%B0%D1%B5%C1%B7%D2%C7">国家专利链接</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lasers Can Be Used to Steer Lightning In Mid-Strike]]></title>
@@ -198,48 +232,6 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
 <p>Since 1950, there have been 58 tornadoes in the U.S. with winds exceeding 200 mph; six last year alone. Only three hurricanes have made U.S. landfall with winds more than 155 mph.</p>
 
 <p>Original from <strong>MailOnline</strong> <a href="http://www.dailymail.co.uk/sciencetech/article-2105422/Beauty-Beast-The-moment-twister-rainbow-battle-space-sky.html">Beauty and the Beast: The rare moment a tornado and a rainbow come head to head in Colorado sky</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[20 Things You Didn't Know About... Magnetism]]></title>
-    <link href="http://mindon.github.com/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism/"/>
-    <updated>2012-02-24T13:37:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism</id>
-    <content type="html"><![CDATA[<ol>
-<li><p>Magnetism is familiar to every fifth grader, but describing it can confound even the most brilliant physicist.</p></li>
-<li><p>Take the case of <a href="http://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a>. When asked to explain magnetism, he <a href="http://www.youtube.com/watch?v=wMFPe-DwULM">urged his BBC interviewer to take it on faith</a> (video). After seven minutes of stonewalling, he finally said, “I really can’t do a good job, any job, of explaining magnetic force in terms of something else that you’re more familiar with because I don’t understand it in terms of anything else that you’re more familiar with.”</p></li>
-</ol>
-
-
-<!--more-->
-
-
-<ol>
-<li><p>He did break down and try for a few seconds before abandoning the attempt. Those seconds were packed with oversimplifications: “All the electrons [in a magnet] are spinning in the same direction.”</p></li>
-<li><p>But who better than Feynman would have known that not all electrons spin in the same direction?</p></li>
-<li><p>And they don’t actually spin. “<a href="http://en.wikipedia.org/wiki/Spin_%28physics%29">Spin</a>” is just a physicist’s term for the little magnetic north and south poles baked into every electron. The orientation of those poles defines the direction of the electron’s (somewhat imaginary) rotation.</p></li>
-<li><p>Why does every electron have those poles? As soon as someone finds out, we’ll get back to you.</p></li>
-<li><p>Here is what we do know. Within an atom, each electron is usually paired with an opposite- oriented electron so that their magnetic pulls cancel each other out.</p></li>
-<li><p>But if some of the electrons are unpaired, they can be induced to move around so that their poles line up, creating a net magnetic field. The arrangement of the electrons in metals makes them particularly open to magnetic peer pressure.</p></li>
-<li><p>DIY refrigerator magnet: Apply an external magnetic field to some hot metal. Cool it so the aligned electrons get frozen in place. Slap on your local plumber’s business card, and—voilà!</p></li>
-<li><p><a href="http://www.britannica.com/EBchecked/topic/653297/yinyang">Yin Seeks Yang</a> for Magnetic Relationship. All magnets have north and south poles, and opposite poles attract: North poles seek south poles seek north poles seek south poles seek . . .</p></li>
-<li><p>You are standing on a magnet right now. The earth’s magnetic field is created by electric currents in an ocean of molten iron at its core. That’s why the north pole of a compass needle points . . . er . . . why north? Since north poles are attracted to south poles, the “north” arrow on your compass actually points toward the earth’s south magnetic pole, which is the one up north. Got it?</p></li>
-<li><p>And the earth’s <a href="http://en.wikipedia.org/wiki/North_Magnetic_Pole">magnetic south</a> (aka “north”) pole isn’t even precisely at the geographic north pole. Right now it is in the Arctic Ocean, near northern Canada.</p></li>
-<li><p>Worse still, it is constantly drifting in response to currents in the earth’s core. It is moving toward Siberia at a rate of up to 35 miles per year, according to the U.S. Geological Survey. Hey, shift happens.</p></li>
-<li><p>Ancient mariners navigated by <a href="http://en.wikipedia.org/wiki/Lodestone">lodestone</a>, naturally occurring magnetic rocks.</p></li>
-<li><p>Where lodestones come from is another mystery of magnetism. Some geologists think they are created when lighting strikes iron-rich rocks.</p></li>
-<li><p>Microbes, birds, and some other animals have magnetic crystals inside their bodies that allow them to orient themselves.</p></li>
-<li><p>That is probably why <a href="http://en.wikipedia.org/wiki/Loggerhead_sea_turtle">loggerhead turtles</a> can migrate 8,000 miles in unfamiliar waters while humans can get lost looking for the restroom at Olive Garden.</p></li>
-<li><p><a href="http://en.wikipedia.org/wiki/Magnetic_resonance_imaging">Magnetic Resonance Imaging</a> (MRI) machines generate a field 60,000 times as intense as the earth’s to vibrate the hydrogen atoms in your body; in response, the atoms emit radio waves that are analyzed to produce a map of your insides.</p></li>
-<li><p>Using a sensor the size of a sugar cube, researchers from the <a href="http://www.nist.gov/index.html">National Institute of Standards and Technology</a> can <a href="http://www.nist.gov/pml/div688/magnetic_101310.cfm">track the magnetic pattern of a human heart</a>.</p></li>
-<li><p>The signal is faint, but the good news is that science has proved attraction is quantifiable. Word up, Hallmark.</p></li>
-</ol>
-
-
-<p>from <a href="http://discovermagazine.com/2011/jul-aug/20-things-you-didnt-know-about-magnetism">http://discovermagazine.com/2011/jul-aug/20-things-you-didnt-know-about-magnetism</a></p>
-
-<p>Chinese version (中文: 关于磁--你所不知道的二十件事) <a href="http://article.yeeyan.org/view/159732/253517">http://article.yeeyan.org/view/159732/253517</a></p>
 ]]></content>
   </entry>
   

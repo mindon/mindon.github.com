@@ -191,12 +191,22 @@
         <lastmod>2012-04-25T08:32:27+08:00</lastmod>
     </url>
     <url>
+        <loc>http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application/</loc>
+        <lastmod>2012-04-26T08:04:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/
+        </loc>
+        <lastmod>2012-04-26T08:27:27+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://mindon.github.com/about/</loc>
         <lastmod>2012-04-20T08:14:37+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-04-25T08:32:27+08:00</lastmod>
+        <lastmod>2012-04-26T08:27:27+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -204,7 +214,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-04-25T08:32:27+08:00</lastmod>
+        <lastmod>2012-04-26T08:27:27+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>
