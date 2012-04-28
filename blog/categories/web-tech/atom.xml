@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-04-26T08:27:28+08:00</updated>
+  <updated>2012-04-28T08:37:22+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -19,6 +19,8 @@
     <updated>2012-04-26T07:22:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application</id>
     <content type="html"><![CDATA[<h2>NodeJS</h2>
+
+<p>Call something like "ulimit -n 8192" in your NodeJS App start shell script, before start your nodejs service.</p>
 
 <p>Running with --prof to generate the v8.log</p>
 
