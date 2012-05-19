@@ -66,11 +66,11 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you/</loc>
-        <lastmod>2012-03-03T19:25:20+08:00</lastmod>
+        <lastmod>2012-05-19T15:41:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/03/03/chrome-app-walking-in-chrome/</loc>
-        <lastmod>2012-03-03T19:25:12+08:00</lastmod>
+        <lastmod>2012-05-19T15:19:48+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/03/05/inside-the-lytro-light-field-camera/</loc>
@@ -223,12 +223,26 @@
         <lastmod>2012-05-19T14:11:34+08:00</lastmod>
     </url>
     <url>
+        <loc>http://mindon.github.com/blog/2012/05/19/letup-take-a-break/</loc>
+        <lastmod>2012-05-19T15:25:02+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/05/19/xzoom-a-simple-screen-zoomer/</loc>
+        <lastmod>2012-05-19T15:25:21+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/
+        </loc>
+        <lastmod>2012-05-19T15:59:21+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://mindon.github.com/about/</loc>
         <lastmod>2012-04-20T08:14:37+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-05-19T14:40:28+08:00</lastmod>
+        <lastmod>2012-05-19T15:59:21+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -236,7 +250,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-05-19T14:40:28+08:00</lastmod>
+        <lastmod>2012-05-19T15:59:21+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>
@@ -244,6 +258,6 @@
     </url>
     <url>
         <loc>http://mindon.github.com/trouble/</loc>
-        <lastmod>2012-04-22T09:27:20+08:00</lastmod>
+        <lastmod>2012-05-19T15:54:52+08:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-05-19T14:40:28+08:00</updated>
+  <updated>2012-05-19T15:59:21+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,174 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lunar generator plug-in for CorelDraw]]></title>
+    <link href="http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/"/>
+    <updated>2012-05-19T15:40:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw</id>
+    <content type="html"><![CDATA[<h2>麦盾月历生成器</h2>
+
+<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
+
+<p>原创产品，别的地方找不到的！</p>
+
+<p><img src="/images/blog/soft/lunar.png" alt="" /></p>
+
+<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
+
+<!--more-->
+
+
+<p><strong>1. 软件完全版提供一个MindonLunar.gms文件及一个序列号。</strong></p>
+
+<p>可广泛应用于设计台历/挂历/月历/日历DIY或专业印刷场合, 以减少人工输入的不便及容易出现的差错.</p>
+
+<p>设计与月历相关产品以及贺卡、用照片DIY台历制作必不可少的绝好帮手。</p>
+
+<p>用来制作团体、公司等组织或个人的台历、年历、月历/日历都是很好的工具 :-)</p>
+
+<p>能够很好地管理特殊日子、纪念日、特别节日等等，一次输入，随时可用！</p>
+
+<p>这个插件只提供日历部分的生成便利，其他的还是要靠您自己的创意和想法了。</p>
+
+<p><strong>2. 运行环境：win2000/XP/2003/win7, CorelDraw 9或以上版本，带VBA支持</strong></p>
+
+<p><strong>3. 月份范围：1901年到2050年之间的所有月份</strong></p>
+
+<p><strong>注意：</strong></p>
+
+<p>须提供一个有效邮箱以获得此文件以及序列号，以及终身通过此邮箱重新获取此gms文件以及序列号。</p>
+
+<p><strong>功能：</strong></p>
+
+<p>插件可选定月份生成相应的农历/阳历/星期，您可以定制字体及相应的颜色、节日定制、并且将每个月份自动单独导出成透明背景tif文件（存放在c:\mindon.lunar目录）</p>
+
+<p>购买了此软件的您拥有免费获取gms文件的升级版本的权利。</p>
+
+<p>插件特色功能：特别节日定制--- 支持农历节日设置，月份星期节日设置（如父亲节等）。</p>
+
+<p><strong>用法：</strong></p>
+
+<p>把GMS文件放到 Draw/GMS/ 目录（确认已安装CorelDraw的VBA功能），</p>
+
+<p><img src="/images/blog/soft/lunar-a.png" alt="" /></p>
+
+<p><img src="/images/blog/soft/lunar-b.png" alt="" /></p>
+
+<p>麦盾月历生成器CorelDraw插件界面</p>
+
+<p><img src="/images/blog/soft/lunar-c.png" alt="" /></p>
+
+<p><strong>输出结果样例：</strong></p>
+
+<p><img src="/images/blog/soft/lunar-d.png" alt="" /></p>
+
+<p>月历结果是矢量，透明背景，提供批量 tiff/png 输出供其它软件使用。</p>
+
+<p>用这个插件来做你的个性台历，绝对超值 :-)</p>
+
+<p><strong>常见问题：</strong></p>
+
+<p>如果CorelDraw出现无法设置英文字体情况，请设置系统输入法的缺省键盘为英语-美式键盘</p>
+
+<p><img src="/images/blog/soft/lunar-faq.gif" alt="" /></p>
+
+<p>淘宝链接：<a href="http://item.taobao.com/item.htm?id=8707971102">http://item.taobao.com/item.htm?id=8707971102</a></p>
+
+<p>有兴趣可以看看麦盾自家的台历 <a href="http://mindon.appspot.com/and/calendar/2011">http://mindon.appspot.com/and/calendar/2011</a></p>
+
+<p><a href="/blog/categories/chrome-app">麦盾免费工具及应用</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[XZoom: A simple screen zoomer]]></title>
+    <link href="http://mindon.github.com/blog/2012/05/19/xzoom-a-simple-screen-zoomer/"/>
+    <updated>2012-05-19T14:49:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/05/19/xzoom-a-simple-screen-zoomer</id>
+    <content type="html"><![CDATA[<p><strong>麥盾屏幕放大鏡</strong> （<a href="/soft/xzoom.zip">下载</a>）</p>
+
+<p>这个小工具历史比“<a href="/blog/2012/05/19/letup-take-a-break/">Letup休息提醒器</a>”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。</p>
+
+<p>其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了，采用了隐藏-重现的方式获取屏幕最新状态。</p>
+
+<p><strong>麥盾軟件</strong>，需要VB Runtime支持。绿色，无需安装，点击运行。（win 2k/xp, win7 支持）</p>
+
+<p>系統圖標點擊左鍵打開設置界面</p>
+
+<p><img src="/images/blog/soft/xzoom-settings.png" alt="" /></p>
+
+<p><strong>支持操作</strong></p>
+
+<ul>
+<li><p>设置放大区域尺寸；</p></li>
+<li><p>Alt + Space Bar 顯示或隱藏放大鏡；</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<ul>
+<li><p>右鍵隱藏放大鏡</p></li>
+<li><p>左鍵取色，通過右下角的獲取顏色點得到顏色值（左鍵取#FFFFFF格式，右鍵取RGB(255,255,255)格式）</p></li>
+<li><p>滾輪改變放大倍數</p></li>
+<li><p>中鍵點擊恢復缺省放大倍數</p></li>
+</ul>
+
+
+<p><img src="/images/blog/soft/xzoom-sample.png" alt="" /></p>
+
+<p>当你的演讲需要演示代码或者web操作的时候，用这个可以让大家看得更清楚 :-)</p>
+
+<p><a href="/soft/xzoom.zip">下载XZoom屏幕放大鏡</a>, <a href="/blog/categories/chrome-app/">更多麦盾作品...</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Letup: Take a break]]></title>
+    <link href="http://mindon.github.com/blog/2012/05/19/letup-take-a-break/"/>
+    <updated>2012-05-19T14:49:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/05/19/letup-take-a-break</id>
+    <content type="html"><![CDATA[<h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
+
+<p>Talk a break, good for your health :-)</p>
+
+<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
+
+<p>**正在玩游戲者切勿運行，否則后果自負。</p>
+
+<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAME.**</p>
+
+<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
+
+<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
+
+<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
+
+<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
+
+<p>Alt + “+键” 顯示設置界面</p>
+
+<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
+
+<!--more-->
+
+
+<p>屏幕保護狀態，屏幕右下角休息中斷操作模式。(取消休息 3次/天，每次休息可以延迟6分钟1次，延迟2分钟3次)</p>
+
+<p><img src="/images/blog/soft/letup-rc.png" alt="" /></p>
+
+<p>防电脑病必备 :-p  几分钟，会中断自己处理事情，可是却能保证你更能健康，更有效率，你会选择哪个？</p>
+
+<p>部门里已经很多同事使用了，公司内外也有一定的使用人群了。</p>
+
+<p>软件无需安装，下载点击运行即可。</p>
+
+<p><a href="/soft/letup_110715.7z">下载Letup休息提醒器</a>, <a href="/blog/categories/chrome-app/">更多麦盾作品...</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
@@ -129,29 +297,10 @@ You can also try setting the "webgl.force-enabled" variable to true if WebGL is 
 ( No network requests in this extension, BTW: inside Chrome Web Store, it keeps still... )</p>
 
 <p><img src="/images/blog/walking-in-chrome.png" alt="Walking in Chrome" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to say 'I Love You']]></title>
-    <link href="http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you/"/>
-    <updated>2012-03-03T15:07:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/03/chrome-app-say-i-love-you</id>
-    <content type="html"><![CDATA[<p>用30種不同語言說“我愛你/我爱你”（語音版/语音版）—— 送給你愛的她/他</p>
 
-<p>跟隨愛的語言遊歷全世界 <a href="http://mindon.appspot.com/i-love-u">http://mindon.appspot.com/i-love-u</a></p>
+<p>Visit <a href="https://chrome.google.com/webstore/detail/pacjmfodicicobdolgmgmijclblmmehf?utm_source=mindon-git">Google Chrome Store</a> to get the app.</p>
 
-<p>Saying "I love you" in different languages, was to show my love to my dear fiancée - Aby, before our wedding.</p>
-
-<p>I promised her: one new language will be appended each year.</p>
-
-<p>You can visit the webpage with roses <a href="http://mindon.appspot.com/i-love-u">http://mindon.appspot.com/i-love-u</a>.</p>
-
-<p>The "I love you" languages are connected with Locations in Google Maps (If you are in China Mainland, you may need a proxy to see the map. Please check <a href="http://mindon.github.com/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae/">GoAgent -- Make Your Own Fast Proxy With GAE</a> or search GoAgen in Google.)</p>
-
-<p>If you like to keep this offline. You may choose the Chrome App "I Love You" from Chrome Store: <a href="https://chrome.google.com/webstore/detail/efpkdgnjlkhjdfpnopfkdoigbjambdkf">Say "I Love You" in different languages(audio version)</a></p>
-
-<p><img src="/images/blog/i-love-you.png" alt="I Love You" /></p>
+<p><a href="/blog/categories/chrome-app/">更多麦盾作品...</a></p>
 ]]></content>
   </entry>
   
