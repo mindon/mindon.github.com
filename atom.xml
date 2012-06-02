@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-05-19T16:07:06+08:00</updated>
+  <updated>2012-06-02T20:17:23+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[中国象棋棋谱生成器(CD插件)]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/"/>
+    <updated>2012-06-02T19:06:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw</id>
+    <content type="html"><![CDATA[<p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
+
+<p>可按棋谱生成矢量图。</p>
+
+<p><img src="http://mindon.github.com/soft/chinese-chess.png" alt="" /></p>
+
+<p>下载：<a href="http://mindon.github.com/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
+
+<h2>使用说明：</h2>
+
+<p>  1，把gms文件放到draw/GMS/文件夹</p>
+
+<p>  2，运行CorelDraw</p>
+
+<!--more-->
+
+
+<p>  3，选择菜单 &#8220;Tools(工具)&#8221;&#8211;&#8220;Visual Basic&#8221;&#8211;&#8220;Play(播放)&#8221;</p>
+
+<p>  4，选择 XQPrint(Mindon.XQPrint.gms)</p>
+
+<p>  5，点击QPrint.XiangQi项目</p>
+
+<p>  6，点击Run(运行)按钮</p>
+
+<p>  7，在弹出的软件窗口中，点击“浏览”找到象棋棋谱文件(目前支持XQF和PGN格式)</p>
+
+<p>  8，在右边列出的棋谱中点击相应的步骤即可绘制相应棋谱图</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lunar generator plug-in for CorelDraw]]></title>
@@ -150,7 +186,7 @@
 
 <p>**正在玩游戲者切勿運行，否則后果自負。</p>
 
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAME.**</p>
+<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
 
 <p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
 
@@ -285,7 +321,7 @@
     <id>http://mindon.github.com/blog/2012/05/19/final-solution</id>
     <content type="html"><![CDATA[<p><strong>若一切皆可實現，我們會如何解決眼前的問題？</strong>  &#8211; 麥盾</p>
 
-<p>对于这个问题的思考，大概是从讨论行人创红绿灯过马路的事情开始的。</p>
+<p>对于这个问题的思考，大概是从讨论行人闯红绿灯过马路的事情开始的。</p>
 
 <p>前段时间看个视频，讨论关于道德的问题，看后同事Carl说道：这类选择本就与道德无关，均是基于自我保护（损害最小）的选择——真是一语道中了问题核心。</p>
 
@@ -1702,61 +1738,6 @@ You can also try setting the &#8220;webgl.force-enabled&#8221; variable to true 
 <p><strong>用法</strong>：韭菜洗净，切碎，羊肝切小块，与大米同煮为粥即可。随意服用。</p>
 
 <p>orginal from web.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Upgrade winxp from sp2 to sp3]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/"/>
-    <updated>2012-03-24T17:59:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve tried more than 3 times before:</p>
-
-<p>to upgrade my HP Mini winxp to sp3</p>
-
-<p>Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade problem.</p>
-
-<p>The problem i faced last time is &#8220;A Problem is preventing windows from accurately checking the license&#8221;. 0x80070002</p>
-
-<p>Who knows what the hell was happening, my winxp is lisenced!</p>
-
-<p>Tons of softwares need sp3 &#8211; something like &#8220;Visual C++ 2010 Express&#8221;.</p>
-
-<p>That&#8217;s why I need sp3 package installed.</p>
-
-<p>Here are the steps I followed, to upgrade sp3:</p>
-
-<ol>
-<li><p>download sp3 package from microsoft
-<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24</a></p></li>
-<li><p>backup following files from windows/system32</p>
-
-<p>   dpcdll.dll <br/>
-   pidgen.dll <br/>
-   uxtheme.dll<br/>
-   wpa.dbl</p></li>
-<li><p>Restart my winxp &amp; press F8 to start from safe mode</p></li>
-<li><p>Install sp3</p></li>
-<li><p>Restart &amp; press F8 to start from safe mode</p></li>
-<li><p>Backup new files from sp3 version</p>
-
-<p>   dpcdll.dll <br/>
-   pidgen.dll <br/>
-   uxtheme.dll<br/>
-   wpa.dbl</p></li>
-<li><p>Replace these files with the old files backuped in step 2</p></li>
-<li><p>Restart</p></li>
-<li><p>Done!</p></li>
-</ol>
-
-
-<p>I don&#8217;t know if my steps make it or the sp3 package is different or something else &#8230;</p>
-
-<p>But i do upgrade my HP Mini windows xp from sp2 to sp3 successfully this time :-)</p>
-
-<p>God bless you!</p>
-
-<p>Thanks for <a href="http://hi.baidu.com/xiaohuibai/blog/item/69fa16f4b7e1e8f77609d7d9.html">this blog</a> (in Chinese) &#8211; I didn&#8217;t use any files it provides.</p>
 ]]></content>
   </entry>
   
