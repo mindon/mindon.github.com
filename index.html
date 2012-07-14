@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p 可按棋谱生成矢量图。 下载：CD插件：中国象棋棋谱生成器 使用说明： 1，把gms文件放到draw/GMS/文件夹 2，运行CorelDraw ">
+  <meta name="description" content="昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。 目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,268 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T22:40:00+08:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T23:00:00+08:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When we want our product &#8211; a webpage for example &#8211; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&#8217;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &#8230;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/12/serve-in-multi-languages/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/11/build-node-expat-under-windows/">Build Node-Expat Under Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T09:22:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Preparea Developemtn Environment</h2>
+
+<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
+
+<ul>
+<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent&#8217;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Get and install Python 2.7</p></li>
+<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
+</ul>
+
+
+<h2>Tools for building a NodeJS Module</h2>
+
+<ul>
+<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
+<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/11/build-node-expat-under-windows/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Zettabyte FileSystem: ZFS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-08T10:50:00+08:00" pubdate data-updated="true">Jun 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。</p>
+
+<p>因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— Joyent已经把这个基于Illumos的操作系统开源了。（2010 年 8 月 3 日，illumos 正式可用。「Illumos」这个词来自 Illuminare，也即拉丁语的 Illuminate，「照明、照亮」的意思。illumos 项目的最终目标有两个：一是使用开源代码取代所有仍在 OpenSolaris 使用的专有代码，二是围绕之前的OpenSolaris 代码库建立一个独立的社区。）</p>
+
+<p>SmartOS由Illumos内核（包括ZFS，DTrace，Zones，OS级虚拟化以及下一代KVM）、BSD包管理器和GNU工具链组成。【<a href="https://github.com/joyent/smartos-live">源码</a>】,【<a href="https://download.joyent.com/pub/iso/">Live ISO</a>】</p>
+
+<h2>Why SmartOS?</h2>
+
+<ul>
+<li>Scale as fast and big as you need</li>
+</ul>
+
+
+<p>SmartOS is a hypervisor lean enough to run entirely in memory, powerful enough to run as much as you want to throw at it. Provisioning is blindingly fast, thanks to zones and ZFS file system creation.</p>
+
+<ul>
+<li>Trust it to keep your data safe</li>
+</ul>
+
+
+<p>The ZFS file system guarantees data integrity, with particular emphasis on preventing silent data corruption.</p>
+
+<ul>
+<li>Keep your system secure with &#8220;double hulled&#8221; virtualization</li>
+</ul>
+
+
+<p>OS virtualization with highly secure sparse zones (most system software is read-only), and KVM for legacy apps, provide the most secure virtualization on the market.</p>
+
+<ul>
+<li>Rely on It</li>
+</ul>
+
+
+<p>Based on the <a href="http://illumos.org/">illumos</a> kernel, a descendant of Solaris - the most trusted enterprise operating system in computing history. Additionally, SmartOS runs from a live image: there&#8217;s no such thing as a failed upgrade when you can simply roll back to an earlier image.</p>
+
+<ul>
+<li>Use and extend freely: it’s open source</li>
+</ul>
+
+
+<p>SmartOS is and will remain <a href="http://smartos.org/cddl/">open source</a>. Joyent contributes <a href="https://github.com/joyent/smartos-live">our core kernel</a> work to the <a href="http://illumos.org/">illumos</a> project.</p>
+
+<ul>
+<li>Manage resources better</li>
+</ul>
+
+
+<p>The Service Management Facility (SMF) helps you recover more quickly from system failures and manage through service slowdowns. Fair share scheduling, CPU caps, and disk I/O throttling ensure good neighbor behavior in massively multi-tenant environments.</p>
+
+<ul>
+<li>See what’s going on throughout the software stack, in real time</li>
+</ul>
+
+
+<p>When something doesn’t behave as it should, you need to be able to find out quickly what is wrong and why. <a href="http://wiki.smartos.org/display/DOC/DTrace+Resources">Dynamic tracing</a> lets you see everything that&#8217;s happening throughout the software stack - safely, in real time, in production.</p>
+
+<h2>ZFS特性介绍(转载)</h2>
+
+<p><img src="/images/blog/zfstour.png" alt="" /></p>
+
+<p>from <a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/source">http://hub.opensolaris.org/bin/view/Community+Group+zfs/source</a></p>
+
+<p>ZFS是第一个128位的文件系统，同时ZFS又被Sun Microsystems称作史上最后一个文件系统。因为这个文件系统含有多项创新技术，不仅成功地解决现有文件系统的问题和陋习，而且前瞻性地考量了未来对存储空间的需求，单个文件系统可以达到256 quadrillion（264） Zettabytes（221）。ZFS不仅符合POSIX文件系统的标准，而且提供了许多高级功能比如：Quota(配额)，Reservation(预留), Compression(压缩)， Snapshot(快照)，Clone（克隆）等。如果你还在坚持使用现有32位或者64位的文件系统，如果你还在“痛并不快乐着”地用着各式各样的Volume Manager，那就很值得看看这里列出的使用ZFS的十条理由。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -250,291 +512,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/letup-take-a-break/">Letup: Take a Break</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/letup-take-a-break/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/children-learn-what-they-live/">Children Learn What They Live</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:31:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>孩子在生活中学习</strong></p>
-
-<p>by <strong>Dorothy Law Nolte</strong>, Ph.D.</p>
-
-<p>美國的著名社會學家及精神治療師，1924年1月12日－2005年11月6日</p>
-
-<p>If children live with criticism, they learn to condemn.</p>
-
-<p>批评中长大的孩子，责难他人。</p>
-
-<p>If children live with hostility, they learn to fight.</p>
-
-<p>敌意中长大的孩子，喜欢争斗。</p>
-
-<p>If children live with fear, they learn to be apprehensive.</p>
-
-<p>恐惧中长大的孩子，常常担忧。</p>
-
-<p>If children live with pity, they learn to feel sorry for themselves.</p>
-
-<p>怜悯中成长的孩子，自怨自艾。</p>
-
-<p>If children live with ridicule, they learn to feel shy.</p>
-
-<p>嘲笑中长大的孩子，容易退缩。</p>
-
-<p>If children live with jealousy, they learn to feel envy.</p>
-
-<p>猜忌中长大的孩子，滋生怨恨。</p>
-
-<p>If children live with shame, they learn to feel guilty.</p>
-
-<p>羞耻中长大的孩子，内疚自责。</p>
-
-<p>If children live with encouragement, they learn confidence.</p>
-
-<p>鼓励中长大的孩子，深具自信。</p>
-
-<p>If children live with tolerance, they learn patience.</p>
-
-<p>宽容中长大的孩子，能够忍耐。</p>
-
-<p>If children live with praise, they learn appreciation.</p>
-
-<p>称赞中长大的孩子，懂得感恩。</p>
-
-<p>If children live with acceptance, they learn to love.</p>
-
-<p>承诺中长大的孩子，学会珍爱。</p>
-
-<p>If children live with approval, they learn to like themselves.</p>
-
-<p>认可中长大的孩子，收获自信。</p>
-
-<p>If children live with recognition, they learn it is good to have a goal.</p>
-
-<p>赏识中长大的孩子，树立目标。</p>
-
-<p>If children live with sharing, they learn generosity.</p>
-
-<p>分享中长大的孩子，慷慨大方。</p>
-
-<p>If children live with honesty, they learn truthfulness.</p>
-
-<p>诚信中长大的孩子，理解真理。</p>
-
-<p>If children live with fairness, they learn justice.</p>
-
-<p>公正中长大的孩子，极富正义。</p>
-
-<p>If children live with kindness and consideration, they learn respect.</p>
-
-<p>尊重中长大的孩子，懂得尊敬。</p>
-
-<p>If children live with security, they learn to have faith in themselves and in those about them.</p>
-
-<p>安定中长大的孩子，信任自己和他人。</p>
-
-<p>If children live with friendliness, they learn the world is a nice place in which to live.</p>
-
-<p>友善中长大的孩子，眼里是美好世界。</p>
-
-<p>Copyright © 1972 by Dorothy Law Nolte</p>
-
-<hr />
-
-<p>Different versions of this poem:</p>
-
-<p><a href="http://www.noogenesis.com/pineapple/Kristone.html">http://www.noogenesis.com/pineapple/Kristone.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/final-solution/">Final Solution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:21:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>若一切皆可實現，我們會如何解決眼前的問題？</strong>  &#8211; 麥盾</p>
-
-<p>对于这个问题的思考，大概是从讨论行人闯红绿灯过马路的事情开始的。</p>
-
-<p>前段时间看个视频，讨论关于道德的问题，看后同事Carl说道：这类选择本就与道德无关，均是基于自我保护（损害最小）的选择——真是一语道中了问题核心。</p>
-
-<p>至少，若是方圆几里都没车的话，等人行绿灯就是个死板的傻行为，没什么值得称赞的。因为红绿灯系统并不是个很完善的产品。（对于闯红灯的认可，那些不要命想要跟汽车赛跑闯红灯的案例除外）</p>
-
-<p>现在，让我们假设能做到一切，那么红绿灯系统改是怎么样的？</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/final-solution/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Good and Bad Reasons for Believing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:04:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>(這篇文章找到英文的還真不容易，中文的都沒有註明英文文出處。曾在七年前在敏思博客上轉載過。——麥盾)</p>
-
-<p>by <strong>Richard Dawkins</strong></p>
-
-<p>&#8220;Tell a devout Christian that his wife is cheating on him, or that frozen yogurt can make a man invisible, and he is likely to require as much evidence as anyone else, and to be persuaded only to the extent that you give it. Tell him that the book he keeps by his bed was written by an invisible deity who will punish him with fire for eternity if he fails to accept its every incredible claim about the universe, and he seems to require no evidence whatsoever.&#8221; —SAM HARRIS</p>
-
-<p>NOTE: The following letter was written by Richard Dawkins, one of the world&#8217;s most respected scientists. It is addressed to his daughter Juliet, who was ten years old at the time. The letter originally appeared as the last chapter of his 2003 book, A Devil&#8217;s Chaplain. It is reprinted as an appendix in my book, Thank God for Evolution, by permission of the author. I included it for three reasons. First, it powerfully distinguishes the relative value today of, what I like to call, private and public revelation. Second, it provides an invaluable critique of traditional, flat-earth faith, while offering sound guidance for an evidence-based, naturalized faith. Third, it shows why scientific, historical, and cross-cultural evidence provide a far more accurate and useful map of reality than do tradition and authority.</p>
-
-<p>&#8220;Good and Bad Reasons for Believing&#8221; — by Richard Dawkins</p>
-
-<p>（注：附中文译文）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -565,9 +542,9 @@
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 17 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 20 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 16 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 19 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 7 )</li>
 
@@ -582,6 +559,22 @@
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/11/build-node-expat-under-windows/">Build Node-Expat Under Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Zettabyte FileSystem: ZFS</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">中国象棋棋谱生成器(CD插件)</a>
@@ -605,22 +598,6 @@
     
       <li class="post">
         <a href="/blog/2012/05/19/final-solution/">Final solution</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Good and Bad Reasons for Believing</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/11/spleen-power-and-health/">健脾與養生</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/">Artist Suspends Objects In Parks Around The World</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a>
       </li>
     
   </ul>
@@ -675,6 +652,16 @@
 		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
 		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
 	</ul>
+</section>
+<section>
+<div style="margin-left:4px">
+<script type="text/javascript"> 
+alimama_pid="mm_24476855_3181338_10496202"; 
+alimama_width=250; 
+alimama_height=250; 
+document.write('<script src="http://a.alimama.cn/inf.js"><\/script>');
+</script> 
+</div>
 </section>
 
 <!--

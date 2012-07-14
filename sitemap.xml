@@ -140,7 +140,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/03/24/start-a-nodejs-addon-under-windows/</loc>
-        <lastmod>2012-03-27T20:38:17+08:00</lastmod>
+        <lastmod>2012-06-11T10:54:14+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/</loc>
@@ -243,12 +243,28 @@
         <lastmod>2012-06-02T20:03:35+08:00</lastmod>
     </url>
     <url>
+        <loc>http://mindon.github.com/blog/2012/06/08/zettabyte-filesystem-zfs/</loc>
+        <lastmod>2012-06-08T11:58:24+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows/</loc>
+        <lastmod>2012-06-12T20:40:50+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/</loc>
+        <lastmod>2012-06-15T07:40:44+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way/</loc>
+        <lastmod>2012-06-15T08:27:15+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://mindon.github.com/about/</loc>
         <lastmod>2012-06-02T20:16:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2012-06-02T20:03:35+08:00</lastmod>
+        <lastmod>2012-06-15T08:27:15+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -256,7 +272,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2012-06-02T20:03:35+08:00</lastmod>
+        <lastmod>2012-06-15T08:27:15+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>
@@ -264,6 +280,6 @@
     </url>
     <url>
         <loc>http://mindon.github.com/trouble/</loc>
-        <lastmod>2012-06-02T16:14:16+08:00</lastmod>
+        <lastmod>2012-07-15T00:08:48+08:00</lastmod>
     </url>
 </urlset>

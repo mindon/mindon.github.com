@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-06-02T20:17:23+08:00</updated>
+  <updated>2012-07-15T00:19:14+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,209 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lost in the Tech Way]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way/"/>
+    <updated>2012-06-14T22:40:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way</id>
+    <content type="html"><![CDATA[<p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/"/>
+    <updated>2012-06-12T23:00:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages</id>
+    <content type="html"><![CDATA[<p>When we want our product -- a webpage for example -- servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It's a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites ...</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+<!--more-->
+
+
+<p><img src="/images/blog/multi-langs.png" alt="" /></p>
+
+<p>(pro: proposition, con: contradition)</p>
+
+<h2>Template</h2>
+
+<ul>
+<li><strong>Raw language text as text-resource-id</strong></li>
+</ul>
+
+
+<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
+
+<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
+
+<h1>q/s#: Could we make maual-process auto?</h1>
+
+<ul>
+<li><strong>Named ID as text-resource-id</strong></li>
+</ul>
+
+
+<p>pro: Avoid repeat work on same phrases or sentences.</p>
+
+<p>con: Named IDs' management, unintuitive templates using named IDs.</p>
+
+<h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Build Node-Expat Under Windows]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows/"/>
+    <updated>2012-06-11T09:22:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows</id>
+    <content type="html"><![CDATA[<h2>Preparea Developemtn Environment</h2>
+
+<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
+
+<ul>
+<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent's github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Get and install Python 2.7</p></li>
+<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
+</ul>
+
+
+<h2>Tools for building a NodeJS Module</h2>
+
+<ul>
+<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
+<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<p>if they are not exists, try get it from the latest tag from github of joyent-node ( Left of Files tab, find branch --> Tags ).</p>
+
+<p>( You could use tools/<strong>gyp_node</strong> directly )</p>
+
+<h2>Node-Expat Dependencis:</h2>
+
+<ul>
+<li><p>Install Expat under windows
+<a href="http://sourceforge.net/projects/expat/files/latest/download">http://sourceforge.net/projects/expat/files/latest/download</a></p></li>
+<li><p>Env variable set <strong>EXPAT_ROOT</strong>=<em>where-your-Expat-installed</em></p></li>
+<li><p>Append the <strong>Bin/</strong> of Expat to <strong>PATH</strong> env.</p></li>
+</ul>
+
+
+<h2>Building Node-Expat:</h2>
+
+<ul>
+<li><p>Prepare <strong>build.gyp</strong> ( need to change D:/Expat to your expat root )</p>
+
+<pre><code>{
+  'variables' : {
+    'target_arch': 'ia32'
+  },
+  'targets': [
+    {
+      'target_name': 'node-expat',
+      'sources': [ 'node-expat.cc' ],
+      'include_dirs': [
+    'd:/Expat/Source/lib/'
+      ],
+      'libraries': [
+    '-ld:/Expat/Bin/libexpat.lib'
+      ]
+    }
+  ],
+}
+</code></pre></li>
+<li><p>Run following commands</p></li>
+</ul>
+
+
+<p>to setup build version and msbuild tool env.</p>
+
+<pre><code>@set Configuration=Release
+"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+</code></pre>
+
+<p>then</p>
+
+<pre><code>python d:\joyent-node\tools\gyp_addon build.gyp
+
+msbuild build\build.sln
+</code></pre>
+
+<p>Now you should build the Node-Expat. But you may meet other problems:</p>
+
+<h2>Testing</h2>
+
+<p>if run node and require("./build/Release/node-expat") fail, it may be caused by following reasons:</p>
+
+<p><strong>a)</strong>  check the node-expat.cc, and make sure there's a <strong>NODE_MODULE_EXPORT</strong> or <strong>NODE_EXTERN</strong> before the <em>void init</em></p>
+
+<p>something like this: <code>extern "C" NODE_EXTERN void init(Handle&lt;Object&gt; target)</code></p>
+
+<p><strong>b)</strong> if "unable to load shared library" error, try copy <strong>libexpat.dll</strong> to the folder of <strong>node.exe</strong> located.</p>
+
+<ul>
+<li> <strong>node test.js</strong></li>
+</ul>
+
+
+<p>if when you run <code>node test.js</code> of expat, it may fail. Then you need following code to fix it.</p>
+
+<pre><code>char *toCString(v8::Local&lt;v8::Value&gt; value, const char *fallback = "") {
+    if (value-&gt;IsString()) {
+    v8::String::Utf8Value string(value);
+    char *str = (char *) malloc(string.length() + 1);
+    strcpy(str, *string);
+    return str;
+    }
+    char *str = (char *) malloc(strlen(fallback) + 1);
+    strcpy(str, fallback);
+    return str;
+}
+</code></pre>
+
+<p>add these code below <code>using namespace node;</code>.</p>
+
+<p>then change the line around 155 before or 165 after code above added</p>
+
+<pre><code>return XML_ParseBuffer(parser, len, isFinal) != XML_STATUS_ERROR;
+</code></pre>
+
+<p> into</p>
+
+<pre><code>return XML_Parse(parser, toCString(&amp;str, ""), len, isFinal) != XML_STATUS_ERROR;
+</code></pre>
+
+<p>This patch could help to remove the error "<strong>not well-formed (invalid token)</strong>".</p>
+
+<p>Now, your node-epxat under windows is ready for node-soap, you would need this for something like WSDL!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Final solution]]></title>
@@ -223,348 +426,6 @@ nodetime.profile();
 
 <pre><code>valgrind --tool=callgrind node app.js
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aby is on the road: Lhasa]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/25/aby-is-on-the-road-lhasa/"/>
-    <updated>2012-04-25T07:59:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/25/aby-is-on-the-road-lhasa</id>
-    <content type="html"><![CDATA[<h2>Aby在路上…</h2>
-
-<p>这一趟，Aby出门时间比较久。</p>
-
-<p>先是飞由天津回家，在家里帮着忙活新装修的家选购家具什么的。</p>
-
-<p>之后再经由天津往北京和可心汇合，考察大导咖啡馆的事宜，并准备一起前往西藏拉萨。</p>
-
-<p>她们先是飞达西宁，在那去感受了一下青海湖——“早上的青海湖变了一个颜色，让人心悸的淡蓝。羊群跑上公路，水鸟飞起，如果是夏季定会更美。”（<a href="http://weibo.com/1416075644/yg3hZBuel">来源</a>）</p>
-
-<p>接着就乘坐火车前往目的地——拉萨。</p>
-
-<p>“坐上开往拉萨的列车，好好睡一觉，等待明天的美景。” （<a href="http://weibo.com/1416075644/yfZu49FvY">来源</a>）</p>
-
-<!--more-->
-
-
-<p>前往拉萨的火车旅途听说都是震撼之旅，感觉那会是刷新大脑的一个经历。</p>
-
-<p>“早上醒来外面无边无际的白，一时分不清是雪还是盐，直到看到雪地加油站才确定是雪。不时看到远处有野驴、野牛、鹿还是藏羚羊？不禁感叹真是片神奇的土地！”（<a href="http://weibo.com/1416075644/yg3hZBuel">来源</a>）</p>
-
-<p>若是我在这样的旅途中，可能会一整天都盯着车窗外面的天地，不知疲倦，去捕捉闪现眼前的那些由海拔就的景致和生命。</p>
-
-<p>“到那曲看到下雪了，我还跑出去看了下”（短信）</p>
-
-<p>Aby路途中带了一本书：</p>
-
-<p>“感受到旅行的壮阔后，开始趴在中铺看《最好的时光在路上》，临走前麦盾推荐给我的书。序是‘旅行的意义’，只翻到第二页却开始泪流满面，不知是缅甸年青人的梦想，还是因为‘如果没有你，良辰美景堪舆谁说？’还是还是，被自然所震撼？还是，听到了自己？窗外的雪山变成了褐色的土地，突然不知道身在何处…”</p>
-
-<p>旅行，我们习惯了一起，感受旅途、美景、美食——不同的天地景观，不一样的人文风俗。</p>
-
-<p>我们相约在五一在成都碰面，休闲成都，然后一起回来。</p>
-
-<p>今年的四月，是我们AND旅游的季节 :-)</p>
-
-<hr />
-
-<p>Aby，在拉萨，要注意休息，多喝水。健健康康、开开心心的！</p>
-
-<p>这些日子的深圳 —— 刮风、下雨、缺少了Aby和美食 …</p>
-
-<p>-- 麦盾，April 25, 2012 早晨，深圳</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Find out Unique Elements in a Javascript Array]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements/"/>
-    <updated>2012-04-17T22:53:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements</id>
-    <content type="html"><![CDATA[<p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
-
-<h2>Algorithm 1</h2>
-
-<pre><code>function unique1(d) {
-  var o = {}, i, l = d.length, r = [];
-  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
-  for(i in o) r.push(o[i]);
-  return r;
-};
-</code></pre>
-
-<p>This method has 2 loops, that's a big time-cost problem.</p>
-
-<h2>Algorithm 2</h2>
-
-<p>reduce one loop from the algorithm 1, improve a litter bit</p>
-
-<pre><code>function unique2(d) {
-  var r = [], i = {}, j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(!i[d[k]]) {
-      i[d[k]] = 1;
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<h2>Algorithm 3</h2>
-
-<p>In ECMA-262 standard, there's a indexOf method for Array object, we use it to improve a lot.</p>
-
-<pre><code>function unique3(d) {
-  var r = [], j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(r.indexOf(d[k]) &lt; 0) {
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<p>and it could be better...</p>
-
-<!--more-->
-
-
-<h2>Algorithm 4</h2>
-
-<p>jQuery.unique source ( Sizzle.uniqueSort ), it's the fastest one.</p>
-
-<pre><code>function unique4( d ) {
-  d.sort();
-  for (var i = 1; i &lt; d.length; i++ ) {
-    if ( d[i] === d[ i - 1 ] ) {
-      d.splice( i--, 1 );
-    }
-  }
-
-  return d;
-};
-</code></pre>
-
-<h2>Compare these 4 algorithms:</h2>
-
-<p>Speed(Performance): 4 > 3 > 2 > 1</p>
-
-<p>Testing code:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-
-function test(fn, count) {
-  var t = new Date().getTime();
-  for(var k =0 ; k &lt; count; k++) {
-    fn(d);
-  }
-
-  return new Date().getTime() - t;
-}
-
-var t1 = test(unique1, 100000);
-var t2 = test(unique2, 100000);
-var t3 = test(unique3, 100000);
-var t4 = test(unique4, 100000);
-</code></pre>
-
-<p>Time consume result sample:</p>
-
-<p>IE 9(in Editplus):</p>
-
-<pre><code>[t1,t2,t3,t4] = [93, 55, 25, 25]
-</code></pre>
-
-<p>IE 9(Browser):</p>
-
-<pre><code>[t1,t2,t3,t4] = [508, 449, 432, 271]
-</code></pre>
-
-<p>Chrome 18:</p>
-
-<pre><code>[t1,t2,t3,t4] = [141, 59, 43, 43]
-</code></pre>
-
-<p>Firefox 11:</p>
-
-<pre><code>[t1,t2,t3,t4] = [129, 118, 25, 37]
-</code></pre>
-
-<p>(use == instead of === in unique4 will make it a little bit faster.)</p>
-
-<h2>Problems</h2>
-
-<p>handling a array with different data types:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-</code></pre>
-
-<p>results:</p>
-
-<pre><code>unique1(d) : [1, '2', 3]
-
-unique2(d) : [1, 3, 2]
-
-unique3(d) : [1, 3, 2, '2']
-
-unique4(d) : [1, 2, '2', 3]
-</code></pre>
-
-<p>if we change the === in unique4 into ==, then the new result will be</p>
-
-<pre><code>unique4(d) : [1, 2, 3]
-</code></pre>
-
-<p>Another issue is the order problem:</p>
-
-<p>unique1 and unique4 will re-order elements.</p>
-
-<p>unique2 and unique3 will keep the original order.</p>
-
-<p>Algorithm 3: unique3 depends on indexOf of ECMA-262 standard implement, and it cannot handle different data types.</p>
-
-<h2>Conclusion</h2>
-
-<ul>
-<li>Same data-type elements</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong></p>
-
-<ul>
-<li>Different data-type elements ( thinking '2' is the same as 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique2</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: change === into == )</p>
-
-<ul>
-<li>Different data-type elements ( thinking '2' is different from 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: keep === )</p>
-
-<p>以上为去除数组中的重复元素的各种算法，性能及问题。</p>
-
-<p>--- Mindon(麦盾) Apri 18, 2012 Shenzhen(深圳)</p>
-
-<p>（整理这样一篇东西还挺耗时的，子时了zZzZZz... ）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[外出Aby发回的菜谱]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/17/abys-menu/"/>
-    <updated>2012-04-17T22:41:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/17/abys-menu</id>
-    <content type="html"><![CDATA[<p>Aby 不在身边，吃饭的事情也不能马虎了。给我特意准备了菜单，提醒我注意饮食：</p>
-
-<hr />
-
-<h2>早餐选择：</h2>
-
-<p>1、花卷+豆浆</p>
-
-<p>2、牛奶+吐司（夹蛋）</p>
-
-<p>吐司可从岁宝可颂坊买，或者买白吐司。</p>
-
-<p>3、粥</p>
-
-<p>可配菜：</p>
-
-<p>香菜炒蛋、酱炒蛋（冰箱里有）</p>
-
-<!--more-->
-
-
-<p>4、面条：冰箱里的细面</p>
-
-<p>1）先煎蛋，双面煎，不用煎特别透，盛出</p>
-
-<p>2）加水煮面，水开后5分钟左右，加入青菜，至熟，加盐，淋芝麻油。</p>
-
-<p>5、意粉</p>
-
-<p>1）可先煎蛋</p>
-
-<p>2）加水煮意粉，可加些胡萝卜、黄瓜块。</p>
-
-<p>6、云吞</p>
-
-<p>煮熟可加香菜、虾皮，淋芝麻油。</p>
-
-<h2>正餐：</h2>
-
-<p>1、排骨汤</p>
-
-<p>买扇骨，可加花生、马蹄</p>
-
-<p>配料：玉竹、百合、党参、淮山 （冰箱里有）</p>
-
-<p>2、苦瓜炒蛋 或炒肉片 （做法同，可加适量酱油）</p>
-
-<p>1）苦瓜过水</p>
-
-<p>2）炒蛋盛出</p>
-
-<p>3）再加油炒苦瓜，放入鸡蛋，调盐。</p>
-
-<p>3、小瓜炒蛋/肉</p>
-
-<p>1）切蒜备用</p>
-
-<p>2）炒蛋或肉，盛出。如炒肉，肉需先用淀粉、料酒腌下</p>
-
-<p>3）加油，先炒蒜，加入小瓜，加入肉，加少许酱油，盐、芝麻油。</p>
-
-<p>4、黄花菜炒肉</p>
-
-<p>黄花菜放在橱柜最下面放调料的抽屉。炒法同上。</p>
-
-<p>5、香菇炒肉</p>
-
-<p>1）肉切片，拿少许淀粉、酱油、香油腌5分钟</p>
-
-<p>2）香菇1切2块，葱切小段</p>
-
-<p>3）放油，炒肉，变色盛出</p>
-
-<p>4）下香菇，放少许料酒、酱油，炒至有出水情况，放入肉片，加盐、淋芝麻油，加小葱出锅。</p>
-
-<p>6、拌黄瓜</p>
-
-<p>黄瓜削皮，切蒜末，放入盐、酱油少许、醋、芝麻油。</p>
-
-<p>7、素炒豆芽</p>
-
-<p>8、木须肉</p>
-
-<p>1）泡发木耳</p>
-
-<p>2）1个鸡蛋打散，炒蛋，盛出</p>
-
-<p>3）肉切片，用少许淀粉、酱油、香油腌一下</p>
-
-<p>4）炒肉至变色，盛出</p>
-
-<p>5）加油，加入葱（大葱）、姜丝炝锅，炒木耳，3分钟左右，再放入肉片，加入酱油少许，放入鸡蛋，放盐、淋芝麻油，出锅。</p>
-
-<hr />
-
-<p>材料、做法和步骤都给列出来了 :-)</p>
-
-<p>嗯，一定会参考着来喂好自己的。</p>
 ]]></content>
   </entry>
   

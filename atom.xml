@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-06-02T20:17:23+08:00</updated>
+  <updated>2012-07-15T00:19:14+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,374 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lost in the Tech Way]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way/"/>
+    <updated>2012-06-14T22:40:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way</id>
+    <content type="html"><![CDATA[<p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/"/>
+    <updated>2012-06-12T23:00:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages</id>
+    <content type="html"><![CDATA[<p>When we want our product &#8211; a webpage for example &#8211; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&#8217;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &#8230;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+<!--more-->
+
+
+<p><img src="http://mindon.github.com/images/blog/multi-langs.png" alt="" /></p>
+
+<p>(pro: proposition, con: contradition)</p>
+
+<h2>Template</h2>
+
+<ul>
+<li><strong>Raw language text as text-resource-id</strong></li>
+</ul>
+
+
+<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
+
+<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
+
+<h1>q/s#: Could we make maual-process auto?</h1>
+
+<ul>
+<li><strong>Named ID as text-resource-id</strong></li>
+</ul>
+
+
+<p>pro: Avoid repeat work on same phrases or sentences.</p>
+
+<p>con: Named IDs&#8217; management, unintuitive templates using named IDs.</p>
+
+<h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Build Node-Expat Under Windows]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows/"/>
+    <updated>2012-06-11T09:22:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows</id>
+    <content type="html"><![CDATA[<h2>Preparea Developemtn Environment</h2>
+
+<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
+
+<ul>
+<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent&#8217;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Get and install Python 2.7</p></li>
+<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
+</ul>
+
+
+<h2>Tools for building a NodeJS Module</h2>
+
+<ul>
+<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
+<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<p>if they are not exists, try get it from the latest tag from github of joyent-node ( Left of Files tab, find branch &#8211;> Tags ).</p>
+
+<p>( You could use tools/<strong>gyp_node</strong> directly )</p>
+
+<h2>Node-Expat Dependencis:</h2>
+
+<ul>
+<li><p>Install Expat under windows
+<a href="http://sourceforge.net/projects/expat/files/latest/download">http://sourceforge.net/projects/expat/files/latest/download</a></p></li>
+<li><p>Env variable set <strong>EXPAT_ROOT</strong>=<em>where-your-Expat-installed</em></p></li>
+<li><p>Append the <strong>Bin/</strong> of Expat to <strong>PATH</strong> env.</p></li>
+</ul>
+
+
+<h2>Building Node-Expat:</h2>
+
+<ul>
+<li><p>Prepare <strong>build.gyp</strong> ( need to change D:/Expat to your expat root )</p>
+
+<pre><code>{
+  'variables' : {
+    'target_arch': 'ia32'
+  },
+  'targets': [
+    {
+      'target_name': 'node-expat',
+      'sources': [ 'node-expat.cc' ],
+      'include_dirs': [
+    'd:/Expat/Source/lib/'
+      ],
+      'libraries': [
+    '-ld:/Expat/Bin/libexpat.lib'
+      ]
+    }
+  ],
+}
+</code></pre></li>
+<li><p>Run following commands</p></li>
+</ul>
+
+
+<p>to setup build version and msbuild tool env.</p>
+
+<pre><code>@set Configuration=Release
+"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+</code></pre>
+
+<p>then</p>
+
+<pre><code>python d:\joyent-node\tools\gyp_addon build.gyp
+
+msbuild build\build.sln
+</code></pre>
+
+<p>Now you should build the Node-Expat. But you may meet other problems:</p>
+
+<h2>Testing</h2>
+
+<p>if run node and require(&#8220;./build/Release/node-expat&#8221;) fail, it may be caused by following reasons:</p>
+
+<p><strong>a)</strong>  check the node-expat.cc, and make sure there&#8217;s a <strong>NODE_MODULE_EXPORT</strong> or <strong>NODE_EXTERN</strong> before the <em>void init</em></p>
+
+<p>something like this: <code>extern "C" NODE_EXTERN void init(Handle&lt;Object&gt; target)</code></p>
+
+<p><strong>b)</strong> if &#8220;unable to load shared library&#8221; error, try copy <strong>libexpat.dll</strong> to the folder of <strong>node.exe</strong> located.</p>
+
+<ul>
+<li> <strong>node test.js</strong></li>
+</ul>
+
+
+<p>if when you run <code>node test.js</code> of expat, it may fail. Then you need following code to fix it.</p>
+
+<pre><code>char *toCString(v8::Local&lt;v8::Value&gt; value, const char *fallback = "") {
+    if (value-&gt;IsString()) {
+    v8::String::Utf8Value string(value);
+    char *str = (char *) malloc(string.length() + 1);
+    strcpy(str, *string);
+    return str;
+    }
+    char *str = (char *) malloc(strlen(fallback) + 1);
+    strcpy(str, fallback);
+    return str;
+}
+</code></pre>
+
+<p>add these code below <code>using namespace node;</code>.</p>
+
+<p>then change the line around 155 before or 165 after code above added</p>
+
+<pre><code>return XML_ParseBuffer(parser, len, isFinal) != XML_STATUS_ERROR;
+</code></pre>
+
+<p> into</p>
+
+<pre><code>return XML_Parse(parser, toCString(&amp;str, ""), len, isFinal) != XML_STATUS_ERROR;
+</code></pre>
+
+<p>This patch could help to remove the error &#8221;<strong>not well-formed (invalid token)</strong>&#8221;.</p>
+
+<p>Now, your node-epxat under windows is ready for node-soap, you would need this for something like WSDL!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zettabyte FileSystem: ZFS]]></title>
+    <link href="http://mindon.github.com/blog/2012/06/08/zettabyte-filesystem-zfs/"/>
+    <updated>2012-06-08T10:50:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/06/08/zettabyte-filesystem-zfs</id>
+    <content type="html"><![CDATA[<p>知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。</p>
+
+<p>因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— Joyent已经把这个基于Illumos的操作系统开源了。（2010 年 8 月 3 日，illumos 正式可用。「Illumos」这个词来自 Illuminare，也即拉丁语的 Illuminate，「照明、照亮」的意思。illumos 项目的最终目标有两个：一是使用开源代码取代所有仍在 OpenSolaris 使用的专有代码，二是围绕之前的OpenSolaris 代码库建立一个独立的社区。）</p>
+
+<p>SmartOS由Illumos内核（包括ZFS，DTrace，Zones，OS级虚拟化以及下一代KVM）、BSD包管理器和GNU工具链组成。【<a href="https://github.com/joyent/smartos-live">源码</a>】,【<a href="https://download.joyent.com/pub/iso/">Live ISO</a>】</p>
+
+<h2>Why SmartOS?</h2>
+
+<ul>
+<li>Scale as fast and big as you need</li>
+</ul>
+
+
+<p>SmartOS is a hypervisor lean enough to run entirely in memory, powerful enough to run as much as you want to throw at it. Provisioning is blindingly fast, thanks to zones and ZFS file system creation.</p>
+
+<ul>
+<li>Trust it to keep your data safe</li>
+</ul>
+
+
+<p>The ZFS file system guarantees data integrity, with particular emphasis on preventing silent data corruption.</p>
+
+<ul>
+<li>Keep your system secure with &#8220;double hulled&#8221; virtualization</li>
+</ul>
+
+
+<p>OS virtualization with highly secure sparse zones (most system software is read-only), and KVM for legacy apps, provide the most secure virtualization on the market.</p>
+
+<ul>
+<li>Rely on It</li>
+</ul>
+
+
+<p>Based on the <a href="http://illumos.org/">illumos</a> kernel, a descendant of Solaris - the most trusted enterprise operating system in computing history. Additionally, SmartOS runs from a live image: there&#8217;s no such thing as a failed upgrade when you can simply roll back to an earlier image.</p>
+
+<ul>
+<li>Use and extend freely: it’s open source</li>
+</ul>
+
+
+<p>SmartOS is and will remain <a href="http://smartos.org/cddl/">open source</a>. Joyent contributes <a href="https://github.com/joyent/smartos-live">our core kernel</a> work to the <a href="http://illumos.org/">illumos</a> project.</p>
+
+<ul>
+<li>Manage resources better</li>
+</ul>
+
+
+<p>The Service Management Facility (SMF) helps you recover more quickly from system failures and manage through service slowdowns. Fair share scheduling, CPU caps, and disk I/O throttling ensure good neighbor behavior in massively multi-tenant environments.</p>
+
+<ul>
+<li>See what’s going on throughout the software stack, in real time</li>
+</ul>
+
+
+<p>When something doesn’t behave as it should, you need to be able to find out quickly what is wrong and why. <a href="http://wiki.smartos.org/display/DOC/DTrace+Resources">Dynamic tracing</a> lets you see everything that&#8217;s happening throughout the software stack - safely, in real time, in production.</p>
+
+<h2>ZFS特性介绍(转载)</h2>
+
+<p><img src="http://mindon.github.com/images/blog/zfstour.png" alt="" /></p>
+
+<p>from <a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/source">http://hub.opensolaris.org/bin/view/Community+Group+zfs/source</a></p>
+
+<p>ZFS是第一个128位的文件系统，同时ZFS又被Sun Microsystems称作史上最后一个文件系统。因为这个文件系统含有多项创新技术，不仅成功地解决现有文件系统的问题和陋习，而且前瞻性地考量了未来对存储空间的需求，单个文件系统可以达到256 quadrillion（264） Zettabytes（221）。ZFS不仅符合POSIX文件系统的标准，而且提供了许多高级功能比如：Quota(配额)，Reservation(预留), Compression(压缩)， Snapshot(快照)，Clone（克隆）等。如果你还在坚持使用现有32位或者64位的文件系统，如果你还在“痛并不快乐着”地用着各式各样的Volume Manager，那就很值得看看这里列出的使用ZFS的十条理由。</p>
+
+<!--more-->
+
+
+<ol>
+<li><p><strong>再也不需要fsck, scandisk</strong></p>
+
+<p>不管你是在用Linux，UNIX还是Windows，相信大家都有过类似的体会：当系统意外断电或者非法关机，系统重起后发现文件系统有inconsistent的问题，这时 候就需要fsck或者scandisk 来修复，这段时间是非常耗时而且最后不一定能够修复成功。更糟糕的是，如果这是一台服务器需要做fsck的时候，只能offline（下线），而且现有应用往往都是大硬盘，相应fsck修 复时间也很长，这对许多使用该服务器的用户来说几乎不能忍受的。</p>
+
+<p>而使用ZFS后大家可以彻底抛弃fsck这种工具，因为ZFS是一个基于COW（Copy on Write）机制的文件系统。COW是不会对硬盘上现有的文件进行重写，保证所有硬盘上的文件都是有效的。所以不会有这种inconsistent的概念，自然就不需要这种工具了。</p></li>
+<li><p><strong>管理简单</strong></p>
+
+<p>ZFS作为一个全新的文件系统，全面抛弃传统File System + Volume Manager + Storage的架构，所有的存储设备是通过ZFS Pool进行管理，只要把各种存储设备加 入同一个ZFS Pool，大家就可以轻松的在这个ZFS Pool管理配置文件系统。大家再也不用牢记各种专业概念，各种命令newfs, metinit及各种Volume Manager的用法。在ZFS中我们只需要两个命令，zpool(针 对ZFS Pool管理)和zfs(针对ZFS文件系统的管理)，就可以轻松管理128位的文件系统。举个例子，我们经常会遇到系统数据增长过 快，现有存储容量不够，需要添加硬盘，如果依照传统的Volume Manager管理方式，那我 们需要预先要考虑很多现有因素，还要预先根据应用计算出需要配置的各种参数。在ZFS情况下，我们的系统管理员可以彻底解放，再也不需要这种人为的复杂 考虑和计算，我们可以把这些交给ZFS，因为ZFS Pool会自动调节，动态适应需求。我们只需一个简单的命令为 这个ZFS Pool加入新的硬盘就可以了：</p>
+
+<pre><code>zpool add zfs_pool mirror c4t0d0 c5t0d0
+</code></pre>
+
+<p>基于这个动态调节的ZFS Pool之上的所有的文件系统就可以立即使用到这个新的硬盘，并且会自动的选择最优化的参数。</p></li>
+<li><p><strong>没有任何容量限制</strong></p>
+
+<p>ZFS（Zettabyte File System）文件系统就如其名字所预示，可以提供真正的海量存储，在现实中几乎不可能遇到容量问题。在现有的64位kernel（内 核）下，它可以容纳达到16 Exabytes(264)大小的单个文件，可以使用264个存储设备，可以创建264个文件系统。</p></li>
+<li><p><strong>完全保证 数据 的正确和完整</strong></p>
+
+<p>由于ZFS所有的数据操作都是基 于Transaction（事务），一组相应的操作会被ZFS解 析为一个事务操作，事务的操作就代表着一组操作要么一起失败，要么一起成功。而且如前所说，ZFS对 所有的操作是基于COW（Copy on Write）， 从而保证设备上的数 据始终都是有效的，再也不会因为系统崩溃或者意外掉电导致数据文件的inconsistent。</p>
+
+<p>还有一种潜在威胁 数据的可能是来自于硬件设备的问题，比如磁 盘，RAID卡的硬件问题或者驱动bug。现有文件系统通常遇到这个问题，往往只是简单的把错误数据直接交给上层应用，通常我们把这个问题称作Silent Data Corruption。而在ZFS中，对所有数据不管是用户数据还是文件系统自身的metadata数 据都进行256位的Checksum（校 验），当ZFS在提交数据时会进行校验，彻底杜绝这种Silent Data Corruption情况。</p></li>
+<li><p><strong>提供优异 性能和扩展性</strong></p>
+
+<p>和传统File System + Volume Manager + Storage架构不同，ZFS则是直接基于存储设备提供所有的功能，因此有自己独有的创新特性，性能自然非比寻常。</p>
+
+<p><strong>Dynamic Striping vs. Static Striping</strong></p>
+
+<p>由于ZFS是基于COW和一个全局动态的ZFS Pool，任何一次写 操作，都是对一块新数据块（Block）的一次写操作。ZFS从ZFS Pool中动态挑选出一个最优的设备，并且以一个transaction（事 务）线性写入，充分有效地利用了现有设备的带宽，我们把这个特性称为Dynamic Striping。而相对应的Static Striping则是传统文件系统所使用的方式，Static Striping需要管理员预先对这组Stripe进行正确地计算人为 设置，而且如果加入新的设备则需要再次人为的计算和设置，更为严重的是如果人为计算错误，则会直接影响系统的性能。而在使用Dynamic Striping这种特性之后，我们根本不需要人为介入，ZFS会自动调整，智能的为你 提供最佳的设备，最快的操作方式。</p>
+
+<p><strong>支持多种 大小的数据块（Multiple Block Size）</strong></p>
+
+<p>ZFS支持多种大小的数据块定义，从512字节到1M字节。和传统文件系统往往都是固定大小数据块不同，ZFS则是可以动态的根据不同 大小的文件进行计算，动态的选择最佳的数据块。</p>
+
+<p>因为不同大小数据 块，直接影响到实际使用硬盘容量和读取速度。如果使用较小的数据块，存储文件所导致的碎片则较少，读写小文件更快一些，但是会导致需要创建更多的metadata，读写大文件则会更费时。如果使用较大的数据块，使用的metadata较少，更利于读写大文件，但是会导致更多的碎片。ZFS根据实际调查现有文件使 用的情况，分析出一个选择数据块大小的算法，动态的根据实际文件大小确定最佳的数据块。所以ZFS是 非常智能的，在不需要系统管理员介入，就可以得到一个自我调优的结果。当然ZFS也支持用户对单个文件或者整个文件系统 所使用的数据块大小的自定义设置。</p>
+
+<p><strong>智能预读取（Intelligent Prefetch）</strong></p>
+
+<p>多数的操作系统都 有这种将数据预先读取的功能，而ZFS则是建立在文件系统上直接提供的一种更加智能的数据预读取功能。它不仅可以智能地识别出多种读取模式， 进 行提前读取数据，而且可以对每个读取数据流进行这种预读取智能识别，这个对许多流媒体提供者来说是件非常好的事情。</p>
+
+<p>在扩展性上，和现有文件系统多是基于一个受限的静态模型不同，ZFS是采用ZFS Pool这个动态概念，它的metadata也是动态，并且读写操作都是可并行的，并且具有优先级概念，所以即使在大数据量，多设备的情况下仍可以保证性能的线性增长。</p></li>
+<li><p><strong>自我修复功能</strong></p>
+
+<p><strong>ZFS Mirror 和 RAID-Z</strong></p>
+
+<p>传统的硬盘Mirror及RAID 4，RAID 5阵列方式都会遇到前面提到过的问题：Silent Data Corruption。如果发生了某块硬盘物理问题导致数据错误，现有的Mirror，包括RAID 4，RAID 5阵列会默默地把这个错误数据提交给上层应用。如果这个错误发生在Metadata中，则会直接导致系统的Panic。 而且还有一种更为严重的情况是：在RAID 4和RAID 5阵列中，如果系统正在计算Parity数值，并再次写入新数据和新Parity值的时候发生断电，那么整个阵列的所有存储的数据都毫无意义了。</p>
+
+<p>在ZFS中则提出了相对应的ZFS Mirror和RAID-Z方式，它在负责读取数据的时候会自动和256位校验码进行校验，会主动发现这种Silent Data Corruption，然后通过相应的Mirror硬 盘或者通过RAID-Z阵列中其他硬盘得到正确的数据返回给上层应用，并且同时自动修复原硬盘的Data Corruption 。</p>
+
+<p><strong>Fault Manager</strong></p>
+
+<p>在Solaris 10中，包含 一个ZFS诊断引擎和Solaris的 Fault Manager（这也是Solaris 10的 另一个新特性）交互，可以实时地诊断分析并且报告ZFS Pool和存储设备的错误，用户可以通过Fault Manager及时得到一个非常友善的消息。这个诊断引擎虽然不会采取主动的行为去修复或者解决 问题，但是会在消息中提示系统管理员可采取的动作。类似下面一个ZFS报错消息，其中REC-ACTION就是建议采取的动作：</p>
+
+<pre><code>SUNW-MSG-ID: ZFS-8000-D3, TYPE: Fault, VER: 1, SEVERITY: Major
+EVENT-TIME: Fri Mar 10 11:09:06 MST 2006
+PLATFORM: SUNW,Ultra-60, CSN: -, HOSTNAME: neo
+SOURCE: zfs-diagnosis, REV: 1.0
+EVENT-ID: b55ee13b-cd74-4dff-8aff-ad575c372ef8
+DESC: A ZFS device failed. Refer to &lt;http://sun.com/msg/ZFS-8000-D3&gt; for more information.
+AUTO-RESPONSE: No automated response will occur.
+IMPACT: Fault tolerance of the pool maybe compromised.
+REC-ACTION: Run ’zpool status -x’ and replace the bad device.
+</code></pre></li>
+<li><p><strong>安全</strong></p>
+
+<p>在安全上，ZFS支持类似NT风格NFSv4版的ACL（读取控制列表）。而且前面所提到的256位验证码，用户可选择多种验证方式，包括SHA-256验证算法，从而在物理存储单元级别上保证数据的安全性。</p></li>
+<li><p><strong>超强功能</strong></p>
+
+<p>ZFS作为“最后一个文件系统”，涵盖了基本的文件系统和Volume管理的功能，同时 一并提供许多企业级别的超强功能：Quota(配额)，Reservation(预留), Compression(压 缩)， Snapshot(快照)，Clone（克隆）。并且速度非常快。有了这个文件系统，大家再也不需要任何Volume Manager了。</p></li>
+<li><p><strong>兼容性</strong></p></li>
+</ol>
+
+
+<p>ZFS是一个完全兼容POSIX规范的文件系统，所以处于上层的应用程序是完全不受影响。ZFS也提供一个Emulated Volume模块，可以把任何一个ZFS文件系统作为普通的块设备使用。同时ZFS也可以使用基于Volume Manager构建的Volume作为存储设备单 元。这样在不需要修改应用程序，不修改已有文件系统下，给了大家最大的自由度去获得ZFS提供的各 种特性。</p>
+
+<p>10。 <strong>开源</strong></p>
+
+<p>ZFS是Sun Microsystems公 司作为OpenSolaris的一个开源项目运作并且完全免费使用，点击这里(<a href="http://www.opensolaris.org/os/community/zfs/source/">http://www.opensolaris.org/os/community/zfs/source/</a>) 可以直接浏览到ZFS的代码。 这就代表着我们不仅同时可以享受商业公司的高质量，也可以获得开源模式的优点。</p>
+
+<p>虽然目前只有Solaris支持该文件系统，但是这种开源的模式必定会促进更多基于ZFS的应用。现在已经有国外开发者正在将ZFS移植到Linux和Mac OS上来。如果想要体验一下ZFS，由于目前它和Solaris 10绑定在一起，所以需要下载最新版的Solaris 10 6/06 (<a href="http://www.sun.com/software/solaris/get.jsp">http://www.sun.com/software/solaris/get.jsp</a>)。</p>
+
+<p><strong>参考:</strong></p>
+
+<p>Solaris ZFS Administration Guide: <a href="http://docs.sun.com/app/docs/doc/819-5461?l=zh&amp;q=ZFS">http://docs.sun.com/app/docs/doc/819-5461?l=zh&amp;q=ZFS</a></p>
+
+<p>Solaris 10 Zone FAQ: <a href="http://www.sun.com/software/solaris/faqs/zfs.xml">http://www.sun.com/software/solaris/faqs/zfs.xml</a>
+Automatic Performance Tuning in the Zettabyte File System:  <a href="http://tesla.hpl.hp.com/self-manage03/Finals/henson-self-tune.pdf">http://tesla.hpl.hp.com/self-manage03/Finals/henson-self-tune.pdf</a></p>
+
+<p>Other: <a href="http://www.ibm.com/developerworks/cn/linux/l-zfs/">在 Linux 上运行 ZFS</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[中国象棋棋谱生成器(CD插件)]]></title>
@@ -1336,408 +1704,6 @@ unique4(d) : [1, 2, '2', 3]
 <p> 最后的一条教训是：不管是划船还是在现实生活中，先冷静下来，再决定采取何种行动对我们才是有利的。否则，我们的决定将来一定会碰壁。</p></blockquote>
 
 <p>“不过，人一旦被情绪控制，谁能说得准呢？” :p</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[There are other choices]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/15/there-are-other-choices/"/>
-    <updated>2012-04-15T10:29:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/15/there-are-other-choices</id>
-    <content type="html"><![CDATA[<p>昨天送Aby到机场，从地铁出来往机场的中途有个扶手电梯正在维修中。因为拖着很沉的大箱子的缘故，第一想法就是糟了——要怎么拖下那个楼梯？虽然有斜坡，但那也是不容易的事情。</p>
-
-<p>幸运的是，旁边一个路人提醒了——左手边上有电梯！太好了！问题解决了——然而，为什么看到扶手电梯不可用的时候，只想到了旁边的楼梯，而没考虑过这样的地方一定会有直升电梯的呢？就如地铁里总有直升电梯，给不方便的人群提供选择。</p>
-
-<p>如果独我一人这样也就算了，当我回来的时候，发现陆续走过的人也在面临同样的问题时——我提醒他们了，旁边有电梯可用——觉得这个问题其实是很普遍的。</p>
-
-<p>这个事情的关键是：在问题的最接近的地方提供了一种选择（解决方案），并且最好的选择被放置在一个不容易发现的地方，且没有指示。</p>
-
-<p>手动扶梯有问题了，最近且最容易被发现的解决方案是走楼梯，在没有任何提醒的情况下大多数人都没有考虑可能有别的选择——另一种就在不远处，且更好的解决方案。</p>
-
-<p>当然，要解决这个问题其实是很简单的，就是在问题发生处，箭头指示替代方案所在。</p>
-
-<p>在做产品过程中，这个案例是有所启发的。特此警醒自己。</p>
-
-<hr />
-
-<p>由这个现象，我想起了以前碰到的另外一件事情：</p>
-
-<!--more-->
-
-
-<p>相信大家对于门禁都有使用经验，刷卡的时候门禁绿灯应该会闪一下，并发出嘀的声音提醒，然后推门通过。</p>
-
-<p>有不止一次，发现3到5个人在门禁处等待，并在轮流刷卡，门禁并没有动静，于是大家等待一个可以刷出反应的卡的到来。</p>
-
-<p>事实是，门禁其实出故障了（具体原因未知，可能是断电了，因为灯没亮），门是开着的，只要推一下就能进去了。</p>
-
-<p>然而，我们的判断确是：是不是自己的卡出问题了，下一张看应该可以刷开吧？却没有人动手推一下那门。</p>
-
-<p>这个事情源于我们的思维惯性：推门动作发生总应该在门禁给出通过提示的时候进行，于是故障出现时，就出现了大家都会诧异自己为什么没有推门试试的一幕。</p>
-
-<hr />
-
-<p>总结：问题发生时，解决方案不一定是唯一的，要想到有别的解决方案存在的可能。</p>
-
-<p><strong>There will be a door! Don&#8217;t hit the wall :-p</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Match encrypt &amp; decrypt in PHP and NodeJS]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/"/>
-    <updated>2012-03-31T00:20:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs</id>
-    <content type="html"><![CDATA[<p>String encoded in PHP needs to decode in NodeJS?</p>
-
-<p>Or encoded in NodeJS needs to decode in PHP?</p>
-
-<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
-
-<p>NodeJS</p>
-
-<pre><code>var crypto = require('crypto')
-  , key = 'abcdefghijklmnop'
-  , iv = '0123456789123456'
-  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
-
-var text = 'Clipher Message'
-  , crypted = cipher.update(text, 'utf-8', 'hex');
-
-crypted += cipher.final('hex');
-
-// encrypted
-console.log(crypted);
-
-
-var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
-  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
-
-decrypted += decipher.final('utf-8');
-
-// decrypted
-console.log(decrypted);
-</code></pre>
-
-<!--more-->
-
-
-<p>PHP</p>
-
-<pre><code>&lt;?php
-function hex2bin($hex_string) {
-    return pack('H*', $hex_string);
-}
-$text = 'Clipher Message';
-$key = 'abcdefghijklmnop';
-$iv = '0123456789123456';
-
-function iEncrypt($data, $key, $iv) {
-    $blocksize = 16;
-    $pad = $blocksize - (strlen($data) % $blocksize);
-    $data = $data . str_repeat(chr($pad), $pad);
-    return bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $data, MCRYPT_MODE_CBC, $iv));
-}
-
-function iDecrypt($data, $key, $iv) {
-    return mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, hex2bin($data), MCRYPT_MODE_CBC, $iv);
-}
-
-$encrypted = iEncrypt($text, $key, $iv);
-echo $encrypted.'&lt;br/&gt;';
-echo iDecrypt($encrypted, $key, $iv);
-?&gt;
-</code></pre>
-
-<p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
-
-<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data &#8220;bit by bit&#8221; (or &#8220;byte by byte&#8221;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
-
-<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the &#8220;256&#8221; is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
-
-<p>With CBC mode, the input data must have a length multiple of the block length, so it is customary to add PKCS#5 padding: if the block length is n, then at least 1 byte is added, at most n, such that the total size is a multiple of n, and the last added bytes (possibly all of them) have numerical value k where k is the number of added bytes. Upon decryption, it suffices to look at the last decrypted byte to recover k and thus know how many padding bytes must be ultimately removed.</p>
-
-<p>Hence, with CBC mode and AES, assuming PKCS#5 padding, if the input data has length d then the encrypted length is (d + 16) &amp; ~15. I am using C-like notation here; in plain words, the length is between d+1 and d+16, and multiple of 16.</p>
-
-<p>There is a mode called CTR (as &#8220;counter&#8221;) in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
-
-<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&#8217;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
-
-<p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps/"/>
-    <updated>2012-03-26T22:13:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps</id>
-    <content type="html"><![CDATA[<ul>
-<li><strong>Cell Cycle</strong>
-Creating 3d-printable cellular models.</li>
-</ul>
-
-
-<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
-
-<p><img src="http://mindon.github.com/images/blog/chrome/nervous.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<ul>
-<li><strong>Fluid Simulation with Turing Patterns</strong>
-Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
-</ul>
-
-
-<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
-
-<p><img src="http://mindon.github.com/images/blog/chrome/fluid.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
-
-<!--more-->
-
-
-<ul>
-<li><strong>Zygote Body</strong>
-Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></li>
-</ul>
-
-
-<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
-
-<p><img src="http://mindon.github.com/images/blog/chrome/body.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
-
-<ul>
-<li><strong>Google Maps - Street View</strong></li>
-</ul>
-
-
-<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
-
-<p><img src="http://mindon.github.com/images/blog/chrome/amazon.jpg" alt="" />
-Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
-
-<p>More will be appended &#8230;</p>
-
-<h2>How to get WebGL enable?</h2>
-
-<ul>
-<li><strong>Firefox</strong>
-WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></li>
-</ul>
-
-
-<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the &#8220;webgl.osmesalib&#8221; variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use &#8220;gl&#8221; prefixes, not &#8220;mgl&#8221;.
-You can also try setting the &#8220;webgl.force-enabled&#8221; variable to true if WebGL is not working. Variables can be accessed by typing &#8220;about:config&#8221; in the address bar.</p>
-
-<ul>
-<li><strong>Safari</strong></li>
-</ul>
-
-
-<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
-
-<p>After downloading and installing the browser, open the Terminal and type the following:</p>
-
-<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
-</code></pre>
-
-<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
-
-<ul>
-<li><strong>Chrome</strong></li>
-</ul>
-
-
-<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
-
-<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
-
-<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
-
-<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
-
-<ul>
-<li><strong>Opera</strong></li>
-</ul>
-
-
-<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
-
-<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
-
-<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL!</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[眼干或视力模糊（中医验方）]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/"/>
-    <updated>2012-03-26T21:43:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem</id>
-    <content type="html"><![CDATA[<p>Improve eyes dry or eyesight blur problem</p>
-
-<h2>1.枸杞鲫鱼汤（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼，视物模糊。</p>
-
-<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
-
-<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
-
-<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
-
-<h2>2.牛奶鸡蛋饮（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
-
-<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
-
-<h2>3.猪肝蛋汤（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
-
-<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
-
-<!--more-->
-
-
-<h2>4.银杞明目汤（民间方）</h2>
-
-<p><strong>主治</strong>：肝肾两虚之近视。</p>
-
-<p><strong>配方</strong>：银耳20克，枸杞20克，茉莉花10克。</p>
-
-<p><strong>用法</strong>：上述各味水煎汤饮，每日1剂，连服数日。</p>
-
-<h2>5.枸杞炖猪肝（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼，迎风流泪。</p>
-
-<p><strong>配方</strong>：枸杞子20克，猪肝300克，食油、葱、姜、白糖、黄酒、淀粉各少许。</p>
-
-<p><strong>用法</strong>：用猪肝洗净，同枸杞放入锅内，加水适量煮1小时，捞出猪肝切片备用。油锅烧热，葱、姜炝锅放入猪肝片炒，烹白糖、黄酒兑入原汤少许，收汁，勾入淀粉，汤汁明透即成。</p>
-
-<h2>6.醒目汤（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：枸杞10克，陈皮3克，桂圆肉10个，蜂蜜1匙。</p>
-
-<p><strong>用法</strong>：将枸杞子、陈皮放在纱布内扎好，然后与桂圆肉一起，放在锅内，加水适量，煮沸半小时后，取桂圆肉及汤，并加蜂蜜，当点心吃。</p>
-
-<h2>7.羊肝粥《中医脏器食疗学》</h2>
-
-<p><strong>主治</strong>：肝血不足所致的近视、目昏等症。</p>
-
-<p><strong>配方</strong>：羊肝一具，葱子30克，大米30克。</p>
-
-<p><strong>用法</strong>：将羊肝切细，大米淘净。先将葱子水煎取汁，加羊肝、大米煮为稀粥。待熟后调入食盐适量服食。</p>
-
-<h2>8.猪肝羹《圣惠方》</h2>
-
-<p><strong>主治</strong>：血不养肝，远视无力。</p>
-
-<p><strong>配方</strong>：猪肝125克，葱白15克，鸡蛋1个，豉汁适量。</p>
-
-<p><strong>用法</strong>：将猪肝切成薄片，葱白去须根，切成短节，入豉汁中作羹，临熟，将鸡蛋打破，混匀蛋白蛋黄，入汤内成羹，单食或佐餐服食。</p>
-
-<h2>9.桂杞山萸眼（中医验方）</h2>
-
-<p><strong>主治</strong>：近视。</p>
-
-<p><strong>配方</strong>：桂圆肉15克，枸杞子15克，山萸肉15克，猪（牛、羊）眼1对。</p>
-
-<p><strong>用法</strong>：猪眼洗净加桂圆肉、枸杞、山萸肉隔火炖服之。</p>
-
-<h2>10.菠菜猪肝汤（民间方）</h2>
-
-<p><strong>主治</strong>：血虚视力减退。</p>
-
-<p><strong>配方</strong>：菠菜125克，猪肝125克，熟猪油、生姜、葱白、清汤、食盐、水豆粉、味精各适量。</p>
-
-<p><strong>用法</strong>：菠菜洗净，在沸水中烫片刻，脱去涩味，切段，将猪肝切成薄片，与食盐、味精、水豆粉拌匀，将清汤浇沸，加入洗净拍破的生姜、切成短节的葱白、熟猪油等。煮几分钟后，放入拌好的猪肝片及菠菜，至肝片、菠菜煮熟即可，佐餐常服。</p>
-
-<h2>11.冰糖木耳（民间方）</h2>
-
-<p><strong>主治</strong>：高血压眼底出血、红眼目糊、视力不清。</p>
-
-<p><strong>配方</strong>：黑木耳适量，冰糖适量。</p>
-
-<p><strong>用法</strong>：将黑木耳洗净，用清水浸泡一夜取出，蒸一小时，加冰糖。每次用黑木耳6克，冰糖适量，睡前服用，连服至症状缓解为止。</p>
-
-<p><strong>按注</strong>：用本方加黑豆煎成羹也可。</p>
-
-<h2>12.炒羊肝（民间方）</h2>
-
-<p><strong>主治</strong>：目暗昏花，夜盲，视神经萎缩，中心性视肉膜炎，白内障等。</p>
-
-<p><strong>配方</strong>：羊肝200克。</p>
-
-<p><strong>用法</strong>：洗净切片，包芡素油爆炒，调以佐料，佐餐。</p>
-
-<h2>13.枸杞粥（中医验方）</h2>
-
-<p><strong>主治</strong>：肝虚目暗，老年多泪，目眩等。</p>
-
-<p><strong>配方</strong>：枸杞子30克，大豆100克。</p>
-
-<p><strong>用法</strong>：同煮为粥。</p>
-
-<h2>14.猪肝粥（民间方）</h2>
-
-<p><strong>主治</strong>：眼生翳膜，暴发火眼，视网膜出血，虹膜睫状体炎。</p>
-
-<p><strong>配方</strong>：荠菜200克，大米100克。</p>
-
-<p><strong>用法</strong>：同煮为粥。</p>
-
-<h2>15.猪肝粥（民间方）</h2>
-
-<p><strong>主治</strong>：各种慢性虚性眼病。</p>
-
-<p><strong>配方</strong>：新鲜猪肝100~200克，大米适量。</p>
-
-<p><strong>用法</strong>：猪肝洗净切碎，与米同煮烂熟加调味品食之。</p>
-
-<h2>16.杞实粥（中医验方）</h2>
-
-<p><strong>主治</strong>：各种虚性眼病，肝虚雀目。</p>
-
-<p><strong>配方</strong>：枸杞子20克，芡实30克，大米适量。</p>
-
-<p><strong>用法</strong>：煮至浓烂后加调味品食之。</p>
-
-<h2>17.山药杞子瘦肉汤（中医验方）</h2>
-
-<p><strong>主治</strong>：慢性虚性眼病。</p>
-
-<p><strong>配方</strong>：淮山药30克，枸杞子15克，瘦猪肉100克（洗净切碎）。</p>
-
-<p><strong>用法</strong>：加水煲至烂熟，加调味品食之。</p>
-
-<h2>18.羊肝羹《健美与抗衰老菜谱》</h2>
-
-<p><strong>主治</strong>：目疾，贫血。</p>
-
-<p><strong>配方</strong>：羊肝250克，菠菜100克，鸡蛋1只。精盐、味精、葱花、姜末、生油、羊肉汤。</p>
-
-<p><strong>用法</strong>：锅中加油烧热，加入羊肝、葱、姜煸炒，加入羊肉汤、精盐共煮，煮至羊肝熟烂，将菠菜加入锅中，将鸡蛋打破入锅，稍搅动，煮至菠菜、鸡蛋熟即可，用味精调味出锅。</p>
-
-<h2>19.韭菜羊肝粥《药粥治百病》</h2>
-
-<p><strong>主治</strong>：目视不明。</p>
-
-<p><strong>配方</strong>：韭菜150克，羊肝200克，大米100克。</p>
-
-<p><strong>用法</strong>：韭菜洗净，切碎，羊肝切小块，与大米同煮为粥即可。随意服用。</p>
-
-<p>orginal from web.</p>
 ]]></content>
   </entry>
   
