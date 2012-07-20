@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-07-15T00:19:14+08:00</updated>
+  <updated>2012-07-20T22:48:28+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Solve NodeJS 0.8 Build Problem]]></title>
+    <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
+    <updated>2012-07-20T22:04:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
+    <content type="html"><![CDATA[<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
+
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming...</p>
+
+<p>Here's a few pre-conditions for a successful make of NodeJS v0.8+:</p>
+
+<ol>
+<li><p>GNU make 3.8.1+</p></li>
+<li><p>Python 2.6 or 2.7</p></li>
+<li><p>setenv FLOCK or export FLOCK</p></li>
+</ol>
+
+
+<p>setenv LINK g++ or export LINK=g++</p>
+
+<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
@@ -500,192 +524,6 @@ nodetime.profile();
 
 <pre><code>valgrind --tool=callgrind node app.js
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Find out Unique Elements in a Javascript Array]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements/"/>
-    <updated>2012-04-17T22:53:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements</id>
-    <content type="html"><![CDATA[<p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
-
-<h2>Algorithm 1</h2>
-
-<pre><code>function unique1(d) {
-  var o = {}, i, l = d.length, r = [];
-  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
-  for(i in o) r.push(o[i]);
-  return r;
-};
-</code></pre>
-
-<p>This method has 2 loops, that's a big time-cost problem.</p>
-
-<h2>Algorithm 2</h2>
-
-<p>reduce one loop from the algorithm 1, improve a litter bit</p>
-
-<pre><code>function unique2(d) {
-  var r = [], i = {}, j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(!i[d[k]]) {
-      i[d[k]] = 1;
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<h2>Algorithm 3</h2>
-
-<p>In ECMA-262 standard, there's a indexOf method for Array object, we use it to improve a lot.</p>
-
-<pre><code>function unique3(d) {
-  var r = [], j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(r.indexOf(d[k]) &lt; 0) {
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<p>and it could be better...</p>
-
-<!--more-->
-
-
-<h2>Algorithm 4</h2>
-
-<p>jQuery.unique source ( Sizzle.uniqueSort ), it's the fastest one.</p>
-
-<pre><code>function unique4( d ) {
-  d.sort();
-  for (var i = 1; i &lt; d.length; i++ ) {
-    if ( d[i] === d[ i - 1 ] ) {
-      d.splice( i--, 1 );
-    }
-  }
-
-  return d;
-};
-</code></pre>
-
-<h2>Compare these 4 algorithms:</h2>
-
-<p>Speed(Performance): 4 > 3 > 2 > 1</p>
-
-<p>Testing code:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-
-function test(fn, count) {
-  var t = new Date().getTime();
-  for(var k =0 ; k &lt; count; k++) {
-    fn(d);
-  }
-
-  return new Date().getTime() - t;
-}
-
-var t1 = test(unique1, 100000);
-var t2 = test(unique2, 100000);
-var t3 = test(unique3, 100000);
-var t4 = test(unique4, 100000);
-</code></pre>
-
-<p>Time consume result sample:</p>
-
-<p>IE 9(in Editplus):</p>
-
-<pre><code>[t1,t2,t3,t4] = [93, 55, 25, 25]
-</code></pre>
-
-<p>IE 9(Browser):</p>
-
-<pre><code>[t1,t2,t3,t4] = [508, 449, 432, 271]
-</code></pre>
-
-<p>Chrome 18:</p>
-
-<pre><code>[t1,t2,t3,t4] = [141, 59, 43, 43]
-</code></pre>
-
-<p>Firefox 11:</p>
-
-<pre><code>[t1,t2,t3,t4] = [129, 118, 25, 37]
-</code></pre>
-
-<p>(use == instead of === in unique4 will make it a little bit faster.)</p>
-
-<h2>Problems</h2>
-
-<p>handling a array with different data types:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-</code></pre>
-
-<p>results:</p>
-
-<pre><code>unique1(d) : [1, '2', 3]
-
-unique2(d) : [1, 3, 2]
-
-unique3(d) : [1, 3, 2, '2']
-
-unique4(d) : [1, 2, '2', 3]
-</code></pre>
-
-<p>if we change the === in unique4 into ==, then the new result will be</p>
-
-<pre><code>unique4(d) : [1, 2, 3]
-</code></pre>
-
-<p>Another issue is the order problem:</p>
-
-<p>unique1 and unique4 will re-order elements.</p>
-
-<p>unique2 and unique3 will keep the original order.</p>
-
-<p>Algorithm 3: unique3 depends on indexOf of ECMA-262 standard implement, and it cannot handle different data types.</p>
-
-<h2>Conclusion</h2>
-
-<ul>
-<li>Same data-type elements</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong></p>
-
-<ul>
-<li>Different data-type elements ( thinking '2' is the same as 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique2</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: change === into == )</p>
-
-<ul>
-<li>Different data-type elements ( thinking '2' is different from 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: keep === )</p>
-
-<p>以上为去除数组中的重复元素的各种算法，性能及问题。</p>
-
-<p>--- Mindon(麦盾) Apri 18, 2012 Shenzhen(深圳)</p>
-
-<p>（整理这样一篇东西还挺耗时的，子时了zZzZZz... ）</p>
 ]]></content>
   </entry>
   

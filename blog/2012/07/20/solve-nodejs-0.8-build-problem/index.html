@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Dive into Node.JS - Mindon.IDEA</title>
+  <title>Solve NodeJS 0.8 Build Problem - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Dive Into Node.JS</h1>
+      <h1 class="entry-title">Solve NodeJS 0.8 Build Problem</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-02-22T15:29:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+<time datetime="2012-07-20T22:04:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
         
       </p>
     
@@ -131,29 +131,22 @@
 		</script>
 	</div>
 
-<p>Node.js is a platform built on Chrome&#8217;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
-<a href="http://nodejs.org">http://nodejs.org</a></p>
+<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
 
-<!--more-->
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming&#8230;</p>
 
+<p>Here&#8217;s a few pre-conditions for a successful make of NodeJS v0.8+:</p>
 
-<p>Felix&#8217;s Node.js Guide
-<a href="http://nodeguide.com/">http://nodeguide.com/</a></p>
-
-<ul>
-<li><p><a href="http://nodeguide.com/beginner.html">Node.js Beginner Guide</a>
-If you are new to node.js, this guide will take you from hello world to deploying your first app.</p></li>
-<li><p><a href="http://nodeguide.com/style.html">Node.js Style Guide</a>
-The general JavaScript style I recommend to use with node.js. A lot of this is personal preferences, but hopefully rather consistent.</p></li>
-<li><p><a href="http://nodeguide.com/community.html">Node.js Community Guide</a>
-Get to know some of the node.js community and find out where they hang out.</p></li>
-<li><p><a href="http://nodeguide.com/convincing_the_boss.html">Node.js Convincing The Boss Guide</a>
-Find out where node.js makes sense, and how to get management to see the benefits.</p></li>
-</ul>
+<ol>
+<li><p>GNU make 3.8.1+</p></li>
+<li><p>Python 2.6 or 2.7</p></li>
+<li><p>setenv FLOCK or export FLOCK</p></li>
+</ol>
 
 
-<p>NodeJS – The what, why, how and when
-<a href="http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/">http://blog.xebia.com/2011/08/16/nodejs-the-what-why-how-and-when/</a></p>
+<p>setenv LINK g++ or export LINK=g++</p>
+
+<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
 
 </div>
 
@@ -177,12 +170,12 @@ Find out where node.js makes sense, and how to get management to see the benefit
   
 
 
-<time datetime="2012-02-22T15:29:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+<time datetime="2012-07-20T22:04:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>, <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
   
 </span>
 
@@ -191,7 +184,7 @@ Find out where node.js makes sense, and how to get management to see the benefit
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/" data-via="" data-counturl="http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/" data-via="" data-counturl="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -204,10 +197,8 @@ Find out where node.js makes sense, and how to get management to see the benefit
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/22/web-images-optimization/" title="Previous Post: Web Images Optimization">&laquo; Web Images Optimization</a>
+        <a class="basic-alignment left" href="/blog/2012/06/14/lost-in-the-tech-way/" title="Previous Post: Lost in the Tech Way">&laquo; Lost in the Tech Way</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/23/water-walking/" title="Next Post: Water Walking">Water Walking &raquo;</a>
       
     </p>
   </footer>
@@ -412,8 +403,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/02/22/dive-into-node-dot-js/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/';
         var disqus_script = 'embed.js';
       
     (function () {
