@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-07-20T22:48:28+08:00</updated>
+  <updated>2012-07-21T11:08:33+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Auto-Resize Images in Web Pages]]></title>
+    <link href="http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages/"/>
+    <updated>2012-07-21T10:34:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages</id>
+    <content type="html"><![CDATA[<p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
+
+<p>Use this meta in your HTML header could reisze the web page to the device&#8217;s resolution.</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code></pre>
+
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
+
+<p>Here&#8217;s the simple HTML code:</p>
+
+<pre><code>&lt;style type="text/css"&gt;img {display:block}&lt;/style&gt;
+&lt;table width="100%" style="table-layout:fixed"&gt;
+  &lt;tr&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Most Terrible Thing]]></title>
+    <link href="http://mindon.github.com/blog/2012/07/21/the-most-terrible-thing/"/>
+    <updated>2012-07-21T09:32:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/07/21/the-most-terrible-thing</id>
+    <content type="html"><![CDATA[<h2>最可怕的是什么？</h2>
+
+<p>其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。</p>
+
+<p>现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。</p>
+
+<p>有一个词能非常清楚地对最可怕的东西做一个总结，那就是——<strong>幻象</strong>。</p>
+
+<p>当你在高山峻岭间驾车时，看到了一条其实并不存在的路，……</p>
+
+<p>当你站在楼顶边缘，却看到眼前是一片广阔草原，……</p>
+
+<!--more-->
+
+
+<p>美剧X-files（X档案）中有若干场景是主角持枪，看到眼前的异形怪物（而真实情况——那是自己最好的搭档），……</p>
+
+<p>当在你眼里，老虎变成了小猫，……</p>
+
+<p>当你在沙漠中追逐一个海市蜃楼的湖的时候，……</p>
+
+<p>当你梦游把别人脑袋当西瓜的时候，……</p>
+
+<p><strong>幻象</strong> 大多时候是极其危险的。于是，人类把幻象类的疾病称之为人格分裂，精神病……</p>
+
+<p>有一种精神不正常的场景很常见：就是一个人在大街上自言自语。而今移动生活的时代，这种场景开始越来越多地出现在精神正常的人们身上，因为他们一边走路一边讲电话。—— 试想，如果这个人用蓝牙耳机，或科技再先进一点，使用的移动电话是植入人体里的，……</p>
+
+<p>或许，那些自言自语的人们只不过在跟他们可以通话的对象说话，这些说话对象可能是幻象，或者想象力更丰富一点——是另外一个世界的，甚至是可以通过脑电波交流的外星人。（医学对精神失常的判别是绝对有严重问题的，正常人放到精神病院也会成为精神病，这个事情不用多做探讨——毕竟人类能给一切判断找到“非常合理”的解释。）</p>
+
+<p>总之，<strong>幻象</strong> —— 是能令任何人想起来都从内心深处感觉到恐惧的东西，你还能想到比这个更可怕的吗？</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Solve NodeJS 0.8 Build Problem]]></title>
@@ -1502,202 +1571,6 @@ unique4(d) : [1, 2, '2', 3]
 <p>&#8212; Mindon(麦盾) Apri 18, 2012 Shenzhen(深圳)</p>
 
 <p>（整理这样一篇东西还挺耗时的，子时了zZzZZz&#8230; ）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[外出Aby发回的菜谱]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/17/abys-menu/"/>
-    <updated>2012-04-17T22:41:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/17/abys-menu</id>
-    <content type="html"><![CDATA[<p>Aby 不在身边，吃饭的事情也不能马虎了。给我特意准备了菜单，提醒我注意饮食：</p>
-
-<hr />
-
-<h2>早餐选择：</h2>
-
-<p>1、花卷+豆浆</p>
-
-<p>2、牛奶+吐司（夹蛋）</p>
-
-<p>吐司可从岁宝可颂坊买，或者买白吐司。</p>
-
-<p>3、粥</p>
-
-<p>可配菜：</p>
-
-<p>香菜炒蛋、酱炒蛋（冰箱里有）</p>
-
-<!--more-->
-
-
-<p>4、面条：冰箱里的细面</p>
-
-<p>1）先煎蛋，双面煎，不用煎特别透，盛出</p>
-
-<p>2）加水煮面，水开后5分钟左右，加入青菜，至熟，加盐，淋芝麻油。</p>
-
-<p>5、意粉</p>
-
-<p>1）可先煎蛋</p>
-
-<p>2）加水煮意粉，可加些胡萝卜、黄瓜块。</p>
-
-<p>6、云吞</p>
-
-<p>煮熟可加香菜、虾皮，淋芝麻油。</p>
-
-<h2>正餐：</h2>
-
-<p>1、排骨汤</p>
-
-<p>买扇骨，可加花生、马蹄</p>
-
-<p>配料：玉竹、百合、党参、淮山 （冰箱里有）</p>
-
-<p>2、苦瓜炒蛋 或炒肉片 （做法同，可加适量酱油）</p>
-
-<p>1）苦瓜过水</p>
-
-<p>2）炒蛋盛出</p>
-
-<p>3）再加油炒苦瓜，放入鸡蛋，调盐。</p>
-
-<p>3、小瓜炒蛋/肉</p>
-
-<p>1）切蒜备用</p>
-
-<p>2）炒蛋或肉，盛出。如炒肉，肉需先用淀粉、料酒腌下</p>
-
-<p>3）加油，先炒蒜，加入小瓜，加入肉，加少许酱油，盐、芝麻油。</p>
-
-<p>4、黄花菜炒肉</p>
-
-<p>黄花菜放在橱柜最下面放调料的抽屉。炒法同上。</p>
-
-<p>5、香菇炒肉</p>
-
-<p>1）肉切片，拿少许淀粉、酱油、香油腌5分钟</p>
-
-<p>2）香菇1切2块，葱切小段</p>
-
-<p>3）放油，炒肉，变色盛出</p>
-
-<p>4）下香菇，放少许料酒、酱油，炒至有出水情况，放入肉片，加盐、淋芝麻油，加小葱出锅。</p>
-
-<p>6、拌黄瓜</p>
-
-<p>黄瓜削皮，切蒜末，放入盐、酱油少许、醋、芝麻油。</p>
-
-<p>7、素炒豆芽</p>
-
-<p>8、木须肉</p>
-
-<p>1）泡发木耳</p>
-
-<p>2）1个鸡蛋打散，炒蛋，盛出</p>
-
-<p>3）肉切片，用少许淀粉、酱油、香油腌一下</p>
-
-<p>4）炒肉至变色，盛出</p>
-
-<p>5）加油，加入葱（大葱）、姜丝炝锅，炒木耳，3分钟左右，再放入肉片，加入酱油少许，放入鸡蛋，放盐、淋芝麻油，出锅。</p>
-
-<hr />
-
-<p>材料、做法和步骤都给列出来了 :-)</p>
-
-<p>嗯，一定会参考着来喂好自己的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Modern Superstitions]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/15/modern-superstitions/"/>
-    <updated>2012-04-15T17:42:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/15/modern-superstitions</id>
-    <content type="html"><![CDATA[<h2>现代迷信</h2>
-
-<p>相信任何事的三个坏理由：<strong>传统</strong>、<strong>权威</strong>和<strong>启示</strong>。</p>
-
-<p>互联网时代，也是谣言、谎话、虚假广告、洗脑流行的时代，你有什么根据相信你所听到的、看到的文字或这画面？</p>
-
-<p>大多时候，我们其实毫无根据——就是相信了。</p>
-
-<p>大脑被商业化广告植入了太多的无根据信任。</p>
-
-<!--more-->
-
-
-<h2>医院迷信</h2>
-
-<p>医院，已然成为迷信。有几个医生能回答您2个为什么吗？</p>
-
-<ul>
-<li>Q: 为什么就生病了？</li>
-</ul>
-
-
-<p>A: 生病是因为什么什么分泌不正常了，什么什么发炎了？</p>
-
-<ul>
-<li>Q: 为什么会发炎或者不正常了？</li>
-</ul>
-
-
-<p>A: …… 可能是因为什么什么吧？！</p>
-
-<p>可能！这就是我们相信医院，并把健康和性命交付给他们的理由吗？</p>
-
-<p>嗯！他们有仪器、检测手段…… 能把人当成机器一样解剖、分析处理。</p>
-
-<p>不说人体是何等复杂的系统，就是计算机这样的系统出问题时，特别是软件问题，你相信显微切片和化学分析能帮你恢复一个丢失的文档吗？</p>
-
-<p>当然，不能一棍子打死——我说的只是我们身边的医院。:p</p>
-
-<p>推荐阅读：《走近中医》（唐云）<a href="http://www.360doc.com/content/10/1007/17/300026_59111599.shtml">阅读</a> <a href="http://product.dangdang.com/product.aspx?product_id=8854176">购买</a></p>
-
-<h2>科学迷信</h2>
-
-<p>科学的进化链；假想——理论——验证——预测，这是个没有终点的循环。</p>
-
-<p>不由分说想当然地直接否定，不是科学态度。</p>
-
-<p>事实和实验，才是理论支撑的根本。你相信的东西，有没有提供这些？</p>
-
-<p>科学是不断进化的东西，每一次进化都会否定掉一些之前认为绝对正确的东西，看起来不合情理的事情，才是科学进步的突破口。</p>
-
-<h2>生活迷信</h2>
-
-<p>拍婚纱照是不是理所当然的事情？</p>
-
-<p>钻石戒指是不是结婚理所当然的事情？</p>
-
-<p>节日庆祝是不是理所当然的事情？</p>
-
-<p>旅游购物是不是理所当然的事情？</p>
-
-<p>拥有某样东西是显得自己更时尚和优越的事情？</p>
-
-<p>仔细想想，确实如此吗？有没有觉得，这是商家所要在大家大脑里建立的一种迷信——通过洗脑让你觉得这样才是理所当然的。</p>
-
-<p>商业化需要推销，推销就是要让你坚信：产品对你是最好的，你的选择没错。</p>
-
-<p>关于投资、保险、环保、成功…… 何尝不是另一种迷信呢？</p>
-
-<p>（关于环保，请不要忘记，自然是一个生态系统，任何环境的过分破坏或者过分保护都会造成生态系统的平衡受到破坏。一般的环保，似乎过于强调保护，而忽视生态平衡。）</p>
-
-<p>想起了《盗梦空间》(Inception)最后成功在所有观影人脑海中植入了一个想法：</p>
-
-<p>旋转的陀螺是验证在梦境或现实的依据。</p>
-
-<p>Inception的这个想法的植入得非常成功，关于片子的讨论大多围绕着这个植入的点。</p>
-
-<h2>关于相信：好的理由和坏的理由</h2>
-
-<p>七年前，那还是在敏思博客写博客的日子，曾经转过一篇文章：</p>
-
-<p><a href="http://mindon.github.com/blog/2012/05/19/good-and-bad-reasons-for-believing/">【<strong>关于相信：好的理由和坏的理由</strong>】（一个父亲给自己10岁的女儿写的信）</a></p>
 ]]></content>
   </entry>
   

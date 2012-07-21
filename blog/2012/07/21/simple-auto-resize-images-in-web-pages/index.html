@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Artist Suspends Objects In Parks Around The World - Mindon.IDEA</title>
+  <title>Simple Auto-Resize Images in Web Pages - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Artist Suspends Objects in Parks Around the World</h1>
+      <h1 class="entry-title">Simple Auto-Resize Images in Web Pages</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-04-28T08:18:00+08:00" pubdate data-updated="true">Apr 28<span>th</span>, 2012</time>
+<time datetime="2012-07-21T10:34:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
         
       </p>
     
@@ -131,24 +131,29 @@
 		</script>
 	</div>
 
-<p>German artist <a href="http://www.cokonrads.de/">Cornelia Konrads</a> goes around the world installing gravity-defying artworks in natural settings like public parks and private gardens.</p>
+<p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
 
-<p>Her large-scale installations consist of objects like logs and fences suspended mid-air, giving off the illusion of weightlessness created by an “invisible” force.</p>
+<p>Use this meta in your HTML header could reisze the web page to the device&#8217;s resolution.</p>
 
-<p>Check out her “magical” works displayed in countries like Germany, France and Japan below.</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code></pre>
 
-<p><img src="/images/blog/iv-force/8.jpg" alt="" /></p>
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
 
-<!--more-->
+<p>Here&#8217;s the simple HTML code:</p>
 
+<pre><code>&lt;style type="text/css"&gt;img {display:block}&lt;/style&gt;
+&lt;table width="100%" style="table-layout:fixed"&gt;
+  &lt;tr&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
 
-<p><img src="/images/blog/iv-force/1.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/3.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/4.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/5.jpg" alt="" /></p>
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
 
 </div>
 
@@ -172,12 +177,12 @@
   
 
 
-<time datetime="2012-04-28T08:18:00+08:00" pubdate data-updated="true">Apr 28<span>th</span>, 2012</time>
+<time datetime="2012-07-21T10:34:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/readings/'>Readings</a>
+    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
   
 </span>
 
@@ -186,7 +191,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/" data-via="" data-counturl="http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages/" data-via="" data-counturl="http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -199,10 +204,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/" title="Previous Post: The eye limits the brain's learning potential">&laquo; The eye limits the brain's learning potential</a>
+        <a class="basic-alignment left" href="/blog/2012/07/21/the-most-terrible-thing/" title="Previous Post: The Most Terrible Thing">&laquo; The Most Terrible Thing</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/05/11/spleen-power-and-health/" title="Next Post: 健脾與養生">健脾與養生 &raquo;</a>
       
     </p>
   </footer>
@@ -414,8 +417,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/07/21/simple-auto-resize-images-in-web-pages/';
         var disqus_script = 'embed.js';
       
     (function () {
