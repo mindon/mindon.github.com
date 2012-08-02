@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-07-21T11:08:33+08:00</updated>
+  <updated>2012-08-02T08:24:59+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[一棵植物的再生能力]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/02/regeneration-of-a-plant/"/>
+    <updated>2012-08-02T08:02:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/02/regeneration-of-a-plant</id>
+    <content type="html"><![CDATA[<p>说到再生，可能大家首先会想到的是壁虎的尾巴，或是蝾螈这类爬行动物。关于这个话题，曾看过TED的一个演讲：</p>
+
+<p><a href="http://www.ted.com/talks/lang/zh-cn/alan_russell_on_regenerating_our_bodies.html">Alan Russell: The potential of regenerative medicine - 再生医学</a></p>
+
+<p>再生对于人类来说是很神奇的现象。对于植物，这种能力是司空见惯的。</p>
+
+<p>上个星期台风“韦森特”来袭，造成深圳市11.5万棵树受损。我们家阳台长了好几个星期的一株淮山也受到了重创：这株爬了一米都高的植物，大部分叶子都被那个晚上的狂风撕掉了。开始我有点担心，失去了那么大部分叶子，这株细细的藤类植物供水及光合作用一定会跟不上，可能会难以维持下去了。</p>
+
+<p>然而，过了若干天之后，就在十余个叶子被刮掉的地方，又出现了嫩芽，并慢慢长成小小的新叶子…</p>
+
+<p>这也是个神奇的事情：它是怎么察觉叶子没了？又怎么启动的修复机制？</p>
+
+<!--more-->
+
+
+<p><img src="http://mindon.github.com/images/blog/regenerate.png" alt="" /></p>
+
+<p>植物从种子或者块状根的一部分，或是一根折下的枝杈，就能长成一株完整的植株，是一件不可思议的事情。结合泥土或水中的养分，一点点阳光和空气，就能制造出那么精致完美的叶子、花和种子，实在是令人叹为观止的制造技术。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Simple Auto-Resize Images in Web Pages]]></title>
@@ -1385,192 +1411,6 @@ nodetime.profile();
 <p>这些日子的深圳 —— 刮风、下雨、缺少了Aby和美食 …</p>
 
 <p>&#8211; 麦盾，April 25, 2012 早晨，深圳</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Find out Unique Elements in a Javascript Array]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements/"/>
-    <updated>2012-04-17T22:53:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/17/find-out-unique-javascript-array-elements</id>
-    <content type="html"><![CDATA[<p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
-
-<h2>Algorithm 1</h2>
-
-<pre><code>function unique1(d) {
-  var o = {}, i, l = d.length, r = [];
-  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
-  for(i in o) r.push(o[i]);
-  return r;
-};
-</code></pre>
-
-<p>This method has 2 loops, that&#8217;s a big time-cost problem.</p>
-
-<h2>Algorithm 2</h2>
-
-<p>reduce one loop from the algorithm 1, improve a litter bit</p>
-
-<pre><code>function unique2(d) {
-  var r = [], i = {}, j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(!i[d[k]]) {
-      i[d[k]] = 1;
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<h2>Algorithm 3</h2>
-
-<p>In ECMA-262 standard, there&#8217;s a indexOf method for Array object, we use it to improve a lot.</p>
-
-<pre><code>function unique3(d) {
-  var r = [], j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(r.indexOf(d[k]) &lt; 0) {
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<p>and it could be better&#8230;</p>
-
-<!--more-->
-
-
-<h2>Algorithm 4</h2>
-
-<p>jQuery.unique source ( Sizzle.uniqueSort ), it&#8217;s the fastest one.</p>
-
-<pre><code>function unique4( d ) {
-  d.sort();
-  for (var i = 1; i &lt; d.length; i++ ) {
-    if ( d[i] === d[ i - 1 ] ) {
-      d.splice( i--, 1 );
-    }
-  }
-
-  return d;
-};
-</code></pre>
-
-<h2>Compare these 4 algorithms:</h2>
-
-<p>Speed(Performance): 4 > 3 > 2 > 1</p>
-
-<p>Testing code:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-
-function test(fn, count) {
-  var t = new Date().getTime();
-  for(var k =0 ; k &lt; count; k++) {
-    fn(d);
-  }
-
-  return new Date().getTime() - t;
-}
-
-var t1 = test(unique1, 100000);
-var t2 = test(unique2, 100000);
-var t3 = test(unique3, 100000);
-var t4 = test(unique4, 100000);
-</code></pre>
-
-<p>Time consume result sample:</p>
-
-<p>IE 9(in Editplus):</p>
-
-<pre><code>[t1,t2,t3,t4] = [93, 55, 25, 25]
-</code></pre>
-
-<p>IE 9(Browser):</p>
-
-<pre><code>[t1,t2,t3,t4] = [508, 449, 432, 271]
-</code></pre>
-
-<p>Chrome 18:</p>
-
-<pre><code>[t1,t2,t3,t4] = [141, 59, 43, 43]
-</code></pre>
-
-<p>Firefox 11:</p>
-
-<pre><code>[t1,t2,t3,t4] = [129, 118, 25, 37]
-</code></pre>
-
-<p>(use == instead of === in unique4 will make it a little bit faster.)</p>
-
-<h2>Problems</h2>
-
-<p>handling a array with different data types:</p>
-
-<pre><code>var d = [1, 3, 2, '2'];
-</code></pre>
-
-<p>results:</p>
-
-<pre><code>unique1(d) : [1, '2', 3]
-
-unique2(d) : [1, 3, 2]
-
-unique3(d) : [1, 3, 2, '2']
-
-unique4(d) : [1, 2, '2', 3]
-</code></pre>
-
-<p>if we change the === in unique4 into ==, then the new result will be</p>
-
-<pre><code>unique4(d) : [1, 2, 3]
-</code></pre>
-
-<p>Another issue is the order problem:</p>
-
-<p>unique1 and unique4 will re-order elements.</p>
-
-<p>unique2 and unique3 will keep the original order.</p>
-
-<p>Algorithm 3: unique3 depends on indexOf of ECMA-262 standard implement, and it cannot handle different data types.</p>
-
-<h2>Conclusion</h2>
-
-<ul>
-<li>Same data-type elements</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong></p>
-
-<ul>
-<li>Different data-type elements ( thinking &#8216;2&#8217; is the same as 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique2</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: change === into == )</p>
-
-<ul>
-<li>Different data-type elements ( thinking &#8216;2&#8217; is different from 2 )</li>
-</ul>
-
-
-<p>orgianl order: <strong>unique3</strong></p>
-
-<p>sorted: <strong>unique4</strong> (!NOTICE: keep === )</p>
-
-<p>以上为去除数组中的重复元素的各种算法，性能及问题。</p>
-
-<p>&#8212; Mindon(麦盾) Apri 18, 2012 Shenzhen(深圳)</p>
-
-<p>（整理这样一篇东西还挺耗时的，子时了zZzZZz&#8230; ）</p>
 ]]></content>
   </entry>
   
