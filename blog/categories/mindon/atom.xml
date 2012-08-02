@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-02T08:24:59+08:00</updated>
+  <updated>2012-08-03T06:49:55+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bed Early, Better Efficiency]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/03/bed-early-better-efficiency/"/>
+    <updated>2012-08-03T06:12:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/03/bed-early-better-efficiency</id>
+    <content type="html"><![CDATA[<p>早睡早起，能不能做到，是一个习惯问题。如果您经常睡得很晚，那么真的要好好思考这个坏习惯会给您身体状况造成的伤害了。</p>
+
+<p>健康问题绝大部分来自不良的起居饮食习惯，若是不愿意去改变习惯，只想靠药物维持一种数据上看起来比较健康的状态，后果如何，都是可以想象得到的。</p>
+
+<p>大脑在活动一整天之后，亟需切换到另外一个极端重要任务的执行——身体机能的修复和废物清理。这就是“困”这个信号的重要意义。</p>
+
+<p><img src="/images/blog/bedup.png" alt="" /></p>
+
+<p>您觉得，处于活动状态一整天之后的大脑有效率呢？还是休息了一个晚上之后早上醒过来的脑子更有效率？</p>
+
+<!--more-->
+
+
+<p><img src="/images/blog/life-history.jpg" alt="" /></p>
+
+<p>和生物进化亿年级别，人类进化百万年级别的时间相比，您习惯形成的十年级别，哪个对健康的生命更有决定权？</p>
+
+<p>为了您的健康，宝贵的时间更有效率，还是养成早睡早起的习惯吧（注：冬天就不要起太早了）。—— 也不能起太早，太阳升起之前寒气重。</p>
+
+<p><strong><em>（警醒自己，要调整好作息时间！）</em></strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[一棵植物的再生能力]]></title>
@@ -121,54 +149,6 @@
 <p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
 
 <p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/"/>
-    <updated>2012-06-12T23:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages</id>
-    <content type="html"><![CDATA[<p>When we want our product -- a webpage for example -- servered in multi-languages, what would we do?</p>
-
-<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It's a hard and dirty work.</p>
-
-<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
-
-<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites ...</p>
-
-<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
-
-<!--more-->
-
-
-<p><img src="/images/blog/multi-langs.png" alt="" /></p>
-
-<p>(pro: proposition, con: contradition)</p>
-
-<h2>Template</h2>
-
-<ul>
-<li><strong>Raw language text as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
-
-<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
-
-<h1>q/s#: Could we make maual-process auto?</h1>
-
-<ul>
-<li><strong>Named ID as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Avoid repeat work on same phrases or sentences.</p>
-
-<p>con: Named IDs' management, unintuitive templates using named IDs.</p>
-
-<h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
 ]]></content>
   </entry>
   

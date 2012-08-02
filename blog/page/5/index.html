@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="I&#8217;ve tried more than 3 times before: to upgrade my HP Mini winxp to sp3 Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade &hellip;">
+  <meta name="description" content="Improve eyes dry or eyesight blur problem 1.枸杞鲫鱼汤（中医验方） 主治：近视眼，视物模糊。 配方：鲫鱼一尾（约2000克），枸杞10克。 用法：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。 按注：一方用白鱼或其他鱼代鲫鱼也可。 2.牛奶鸡蛋饮（民间方 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T21:43:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Improve eyes dry or eyesight blur problem</p>
+
+<h2>1.枸杞鲫鱼汤（中医验方）</h2>
+
+<p><strong>主治</strong>：近视眼，视物模糊。</p>
+
+<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
+
+<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
+
+<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
+
+<h2>2.牛奶鸡蛋饮（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
+
+<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
+
+<h2>3.猪肝蛋汤（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
+
+<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -457,65 +524,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
-
-<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
-
-<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
-
-<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
-
-<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
-
-<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
-
-<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
-
-<h2>MongoDB数据文件内部结构</h2>
-
-<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
-
-<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -548,7 +556,7 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 23 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 24 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 21 )</li>
 
@@ -565,6 +573,10 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/03/bed-early-better-efficiency/">Bed Early, Better Efficiency</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/08/02/regeneration-of-a-plant/">一棵植物的再生能力</a>
@@ -600,10 +612,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
     
       <li class="post">
         <a href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">中国象棋棋谱生成器(CD插件)</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Lunar generator plug-in for CorelDraw</a>
       </li>
     
   </ul>
@@ -659,7 +667,7 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
 	</ul>
 </section>
-<section>
+<!-- section>
 <div style="margin-left:4px">
 <script type="text/javascript"> 
 alimama_pid="mm_24476855_3181338_10496202"; 
@@ -668,12 +676,13 @@ alimama_height=250;
 document.write('<script src="http://a.alimama.cn/inf.js"><\/script>');
 </script> 
 </div>
-</section>
+</section -->
 <section>
     <h1>Learn More</h1>
 	<ul>
 		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
 		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
 	</ul>
 </section>
 
