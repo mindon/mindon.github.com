@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-03T06:49:55+08:00</updated>
+  <updated>2012-08-04T17:49:26+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Lab]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/04/web-lab/"/>
+    <updated>2012-08-04T17:28:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/04/web-lab</id>
+    <content type="html"><![CDATA[<p>&#8220;Web Lab. A series of interactive Chrome Experiments made by Google. See the magic of the web brought to life. Open to the world online. Live from the Science Museum, London. &#8221;</p>
+
+<p>这是个很好玩的实验室。Google建的一个位于伦敦的科学馆。科学馆里配置了一些设备：如乐器和沙绘机器人（Sketchbots）。您可以通过他们的网站来编曲演奏乐器，跟世界上其他地方的人合奏。也可以通过摄像头拍照，让科学馆的机器人绘制您的头像——所有这一切，您都可以通过现场摄像头看到真实科学馆的设备看到设备的现场实时操作。很不可思议吧？您在体验一家位于伦敦的科学馆。</p>
+
+<p>体验一下？<a href="http://www.chromeweblab.com/">Web Lab</a> :-) You need a <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser</a>(<a href="https://www.google.com/intl/zh-CN/chrome/browser/">中文版</a>), I think.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[China Hospital Medical - The Pressure Maker]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/04/china-hospital-medical-the-pressure-maker/"/>
+    <updated>2012-08-04T16:41:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/04/china-hospital-medical-the-pressure-maker</id>
+    <content type="html"><![CDATA[<p>亲身体验和周边朋友的经历，似乎都在说明这么一个事情：医院已然成为了压力制造者。——这里我说的压力大多是精神上的压力。而对一些人来说更是经济上的压力。不知道何时开始，医疗机构开始采用了恐吓的方式来制造压力，达成治疗目的。这让人很容易就联想起了港片里专门帮人讨债的镜头。</p>
+
+<p>本来，病患本身已经遭受身体及精神上的折磨，而医院为了让患者接受治疗——不管无效还是有效——而通过类似恐吓的方式来制造进一步的精神压力，这似乎不应该是作为治病救人应有的做法。</p>
+
+<p>医疗，不应单单是从物理上消除病症，而且要从精神层面上缓解压力。</p>
+
+<!--more-->
+
+
+<p>2月份时候血糖很高（喝了大量果汁饮料），住了一个多星期的院，血糖有所控制，但在10左右，时高时低，对胰岛素很敏感——降得很快，打了一般都会在半夜血糖偏低。住院期间，就折腾各种检查了，结果一切正常。然而，咳嗽都没治好；糖尿病是什么型的也没有结论，只是怀疑是1型——什么原因也没弄清楚。后来去复诊，也是一样的模棱两可，后来又说是2型——因为没打胰岛素也控制得很好。后来没吃药，也一切正常；米饭、粥、汤都正常。偶尔测得高点的时候，吃了半片都1/4片0.5克的二甲双胍片。后来更奇怪的事情，到社区医疗中心开药的时候（注：属南山医院支持区的），竟然说我没有任何糖尿病记录，需要重新登记——难道之前的记录都是摆乌龙？之前在社区医疗中心记录过一次，而且，难道住院了还没有任何记录？不可思议！</p>
+
+<p>各种奇怪的事情只要稍作思考，就会让你对医疗过程产生一大箩筐的疑问。真的，绝对经不起问3个为什么的，只要你敢问。</p>
+
+<p>现在，我还是会隔段时间测一下血糖，虽然有所怀疑，不过没有别的选择——至少目前还没有更好的处理方式。（提示：我在喝党参，淮山煲的骨头汤之后，测的血糖值都非常理想。个人感觉党参对自己的血糖改善很有效果。）</p>
+
+<p>对于血糖值，我建议大家不要对2以内的波动值过于敏感，以免徒增精神压力。</p>
+
+<p>我用的血糖仪（罗氏 PerformaaNano）使用说明书77页上有这么一句：（AST&#8211;采血检测）</p>
+
+<p>“如果你考虑推荐您的患者进行AST，您需要理解<strong>指尖/手掌和替代点</strong>的血糖检测结果间<strong>有可能存在很大的不同</strong>。”</p>
+
+<p>不知道大家对“<strong>有可能存在很大的不同</strong>”怎么理解，不过，实际试验的结果是：不同的手指，甚至同一滴血，结果可能差异范围是：0 ～ 1.6。没错，1.6可能是空腹和饭后2小时的标准值差异了。这个检测结果意义只在于判断离健康标准比较大的血糖值，如10+，或4-。更精细的判断大可不必过分敏感。</p>
+
+<p><strong>亲身感受</strong>：书店里的降血糖食物相关的书不靠谱，医生说的不能吃什么也不靠谱，适量有氧运动还不错。喝对汤水也能制造神奇效果。按时吃饭、休息好、减轻精神压力更重要。蔗糖（白砂糖）类的东西，还是不要吃，很多患者都是喝冰糖/白糖水或者大量喝果汁饮料而收获高血糖待遇的。</p>
+
+<p>推荐：辅助降血糖穴位</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XMjg5NDM1NzA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>推荐：辅助降血压穴位</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XMjg5NDM1Mjgw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>推荐阅读：<a href="http://jicheng.tw/jcw/book/%E5%9C%93%E9%81%8B%E5%8B%95%E7%9A%84%E5%8F%A4%E4%B8%AD%E9%86%AB%E5%AD%B8/index">《圓運動的古中醫學》</a> &#8211; 彭子益 (1947年丁亥版為底本)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[B-Z Reaction]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/04/b-z-reaction/"/>
+    <updated>2012-08-04T10:40:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/04/b-z-reaction</id>
+    <content type="html"><![CDATA[<p>　　1921年，伯克利加州大学的布雷(Bray，William)在用碘作催化剂使过氧化氢分解为水和氧气时，第一次发现了振荡式的化学反应。但依据经典热力学第二定律，认为任何化学反应只能走向退化的平衡态，因而当时的化学家否定了这个发现。</p>
+
+<p>　　1952年，英国数学家图灵通过数学计算的方法，在理论上预见了化学振荡这类现象的可能性。1958年，俄国化学家别洛索夫(Belousov) 和扎鲍廷斯基(Zhabotinskii)首次报道了以金属铈作催化剂，柠檬酸在酸性条件下被溴酸钾氧化时可呈现化学振荡现象：溶液在无色和淡黄色两种状态间进行着规则的周期振荡。该反应即被称为Belousov- Zhabotinskii反应，简称B-Z反应。</p>
+
+<p><img src="http://mindon.github.com/images/blog/250px-The_Belousov-Zhabotinsky_Reaction.gif" alt="" /></p>
+
+<p>Computer simulation of the Belousov–Zhabotinsky reaction occurring in a Petri dish.</p>
+
+<!--more-->
+
+
+<p>　　在1959年，B.P.Belousov首先观察到并随后为A.M.Zhabotinsky深入研究，丙二酸在溶液有硫酸铈的酸性溶液中被溴酸钾氧化的反应，随后人们发现了一大批可呈现化学振荡反应现象的含溴酸盐的反应系统。人们称之为B-Z反应。</p>
+
+<p>　　1969年，现代动力学奠基人普里戈金提出耗散结构理论，人们才清楚的认识到振荡反应产生的原因：当体系远离平衡态时，即在非平衡非线性区，无序的均匀态并不总是稳定的。在特定的动力学条件下，无序的均匀定态可以失去稳定性，产生时空有序的状态，这种状态称之为耗散结构。例如浓度随时间有序的变化(化学振荡)，浓度随时间和空间有序的变化(化学波)等。耗散结构理论的建立为振荡反应提供了理论基础，从此，振荡反应赢得了重视，它的研究得到了迅速发展。</p>
+
+<p>　　化学振荡是一类机理非常复杂的化学过程，Field、Koros、Noyes三位科学家经过四年的努力，于1972年提出俄勒冈（FKN）模型，用来解释并描述B-Z振荡反应的很多性质。该模型包括20个基元反应步骤，其中三个有关的变量通过三个非线性微分方程组成的方程组联系起来，该模型如此复杂以至20世纪的数学尚不能一般地解出这类问题，只能引入各种近似方法。</p>
+
+<p>The discovery of the phenomenon is credited to Boris Belousov. He noted, some time in the 1950s (various sources date ranges from 1951 to 1958), that in a mix of potassium bromate, cerium(IV) sulfate, propanedioic acid and citric acid in dilute sulfuric acid, the ratio of concentration of the cerium(IV) and cerium(III) ions oscillated, causing the colour of the solution to oscillate between a yellow solution and a colorless solution. This is due to the cerium(IV) ions being reduced by propanedioic acid to cerium(III) ions, which are then oxidized back to cerium(IV) ions by bromate(V) ions.</p>
+
+<p>Belousov made two attempts to publish his finding, but was rejected on the grounds that he could not explain his results to the satisfaction of the editors of the journals to which he submitted his results. His work was finally published in a less respectable, non-reviewed journal.</p>
+
+<p>Later, in 1961, a graduate student named Anatol Zhabotinsky rediscovered this reaction sequence; however, the results of these men&#8217;s work were still not widely disseminated, and were not known in the West until a conference in Prague in 1968.</p>
+
+<p>http://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bed Early, Better Efficiency]]></title>
@@ -1184,211 +1271,6 @@ Automatic Performance Tuning in the Zettabyte File System:  <a href="http://tesl
 <p><strong>氣海</strong>&#8212;&#8212;常用艾灸此穴，補元氣，暖脾陽，強壯後天之本，祛病養生延年。</p>
 
 <p>（本文转自<a href="http://www.relativehumanity.com.tw/cm/cm134.htm">中醫世界</a>）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Artist Suspends Objects In Parks Around The World]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/"/>
-    <updated>2012-04-28T08:18:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world</id>
-    <content type="html"><![CDATA[<p>German artist <a href="http://www.cokonrads.de/">Cornelia Konrads</a> goes around the world installing gravity-defying artworks in natural settings like public parks and private gardens.</p>
-
-<p>Her large-scale installations consist of objects like logs and fences suspended mid-air, giving off the illusion of weightlessness created by an “invisible” force.</p>
-
-<p>Check out her “magical” works displayed in countries like Germany, France and Japan below.</p>
-
-<p><img src="http://mindon.github.com/images/blog/iv-force/8.jpg" alt="" /></p>
-
-<!--more-->
-
-
-<p><img src="http://mindon.github.com/images/blog/iv-force/1.jpg" alt="" /></p>
-
-<p><img src="http://mindon.github.com/images/blog/iv-force/3.jpg" alt="" /></p>
-
-<p><img src="http://mindon.github.com/images/blog/iv-force/4.jpg" alt="" /></p>
-
-<p><img src="http://mindon.github.com/images/blog/iv-force/5.jpg" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The eye limits the brain's learning potential]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/"/>
-    <updated>2012-04-26T08:12:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential</id>
-    <content type="html"><![CDATA[<p>The concept of a critical period for visual development early in life during which sensory experience is essential to normal neural development is now well established. However recent evidence suggests that a limited degree of plasticity remains after this period and well into adulthood. Here, we ask the question, &#8220;what limits the degree of plasticity in adulthood?&#8221; Although this limit has been assumed to be due to neural factors, we show that the optical quality of the retinal image ultimately limits the brain potential for change. We correct the high-order aberrations (HOAs) normally present in the eye&#8217;s optics using adaptive optics, and reveal a greater degree of neuronal plasticity than previously appreciated.</p>
-
-<p>[<a href="http://www.nature.com/srep/2012/120413/srep00364/full/srep00364.html">read the full version article</a>]</p>
-
-<p>Nature集团新刊《Scientific Reports》于4月16日在线发表了中国科学技术大学脑功能与脑疾病中科院重点实验室及生命科学学院周逸峰研究小组和中国科学院成都光电技术研究所自适应光学重点实验室张雨东研究小组的合作研究成果。</p>
-
-<p>他们通过实验证明，即便是发育成熟之后正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于人眼的光学系统质量。在使用人眼自适应光学矫正仪提高人眼光学系统质量后进行知觉学习训练可以大幅度提高正常成人的视觉功能。</p>
-
-<!--more-->
-
-
-<p>视觉神经科学中的一个基本理论是“视皮层的发育具有关键期”，在关键期关闭之前视皮层较容易被改变，而关键期关闭之后则较难被改变。目前，很多知觉学习上的证据表明，即使是成年的视皮层也存在一定的可塑性。然而，对正常成人而言，这种在知觉学习过程中体现出的可塑性虽然存在，其程度却非常小。这极大的限制了知觉学习在提高成人视功能中应用。</p>
-
-<p>另一方面，视光学领域的研究者发现：人眼并非一个完美的光学系统，除了大家所熟知的近视、远视和散光等在内的低阶像差外，还存在大量的难以用普通光学手段测量和矫正的高阶像差。近些年来，使用原先应用在天文学上的自适应光学矫正技术，视光学领域的研究者们通过矫正人眼高阶像差部分提高了成人视功能。但对正常成人而言，这种视功能上的提高很微弱，远达不到理论期望值；且无法脱离自适应光学矫正仪器而存在，因此也无法有效应用于成人视力的提高中。</p>
-
-<p>尽管视知觉学习与人眼自适应光学这两个领域的研究者们对如何更好的提高视功能都报以极大的研究热情，但限于研究手段的单一，目前两方面的研究都在一定程度上达到了瓶颈。双方都迫切需要跨学科的先进技术与之结合来扩展思路。而到目前为止，结合自适应光学技术研究视知觉学习的学习效果、相关机制及应用的研究鲜有报道。在此背景下，周逸峰研究小组和张雨东研究小组将视知觉学习与人眼自适应光学技术相结合，取得了创新研究成果。</p>
-
-<p>他们比较了在矫正人眼高阶像差情况下（此时有较理想的人眼光学系统）对比度检测任务的知觉学习和不矫正人眼高阶像差情况下（普通的人眼光学系统）同样任务的知觉学习中，被试者对比敏感度和视力提高程度的差异。结果发现，在知觉学习训练后高阶像差矫正组在对比敏感度和视力上都有了显著的提高，而且这种提高至少可以维持5个月以上；而非高阶像差矫正组对比敏感度只有少量提高，视力水平无显著提高。</p>
-
-<p>他们的结果表明，发育关键期之后的正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于训练时人眼的光学系统成像质量。只有当高阶像差被矫正时，视觉系统的可塑性才能得到发挥。该发现可以用于探索新的治疗方法来提高视力低下患者的视功能。同时，还为结合人眼自适应光学矫正技术和视知觉学习来达到“超视力”提供了可能。</p>
-
-<p>这项研究工作是在国家重点基础研究发展计划973项目、国家自然科学基金重点项目、成都光电所前沿研究项目等基金的共同资助下完成。加拿大McGill大学视觉研究所所长Robert Hess教授一起合作完成了部分实验设计、数据处理及论文写作工作。本工作的技术部分于2011年9月20日获得两项美国发明专利授权。</p>
-
-<p><a href="http://biox.ustc.edu.cn/xydt/201204/t20120417_133360.html">来源 - 中科大生命学院</a></p>
-
-<p><a href="http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp?recid=CN200910262470.4&amp;leixin=fmzl&amp;title=%C8%CB%D1%DB%D7%D4%CA%CA%D3%A6%B9%E2%D1%A7%CA%D3%D6%AA%BE%F5%D1%A7%CF%B0%D1%B5%C1%B7%B7%BD%B7%A8%BA%CD%D1%A7%CF%B0%D1%B5%C1%B7%D2%C7">国家专利链接</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Profiling Node.JS Application]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application/"/>
-    <updated>2012-04-26T07:22:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/26/profiling-nodejs-application</id>
-    <content type="html"><![CDATA[<h2>NodeJS</h2>
-
-<p>Call something like &#8220;ulimit -n 8192&#8221; in your NodeJS App start shell script, before start your nodejs service.</p>
-
-<p>Running with &#8211;prof to generate the v8.log</p>
-
-<pre><code>node --prof --prof_lazy app.js
-</code></pre>
-
-<p>with tools in /node/deps/v8/, you can get report like following:</p>
-
-<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
-
-<pre><code>[Shared libraries]:
-   ticks  total  nonlib   name
-      3    0.0%    0.0%  .../libc-2.13.so
-
-[JavaScript]:
-   ticks  total  nonlib   name
-      1    0.0%    0.0%  Stub: InstanceofStub
-
-[C++]:
-   ticks  total  nonlib   name
-     1    0.0%    0.0%  __write
-     ...
-
-[GC]:
-   ticks  total  nonlib   name
-     15    0.0%
-
-[Bottom up (heavy) profile]:
-  Note: percentage shows a share of a particular caller in the total
-  amount of its parent calls.
-  Callers occupying less than 2.0% are not shown.
-
-   ticks parent  name
-   ...
-</code></pre>
-
-<p>trace log</p>
-
-<pre><code>strace -o trace.log -cf node app.js:
-</code></pre>
-
-<p>or simple get the time</p>
-
-<pre><code>time node app.js
-</code></pre>
-
-<h2>Other Modules &amp; Tools</h2>
-
-<ul>
-<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
-</ul>
-
-
-<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
-
-<pre><code>dtrace -o stacks.out -n 'profile-97/execname == "node" &amp;&amp; arg1/{
-  @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }'
-</code></pre>
-
-<ul>
-<li><strong>v8-profiler</strong></li>
-</ul>
-
-
-<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a></p>
-
-<!--more-->
-
-
-<pre><code>var profiler = require('v8-profiler');
-
-profiler.startProfiling('startup');
-slowStartupFoo();
-profiler.stopProfiling('startup');
-
-profiler.takeSnapshot('beforeLeak');
-leakyFoo();
-profiler.takeSnapshot('afterLeak');
-</code></pre>
-
-<ul>
-<li><strong>node-inspector</strong></li>
-</ul>
-
-
-<p>@Github <a href="https://github.com/dannycoates/node-inspector">https://github.com/dannycoates/node-inspector</a></p>
-
-<pre><code>node --debug app.js
-</code></pre>
-
-<ul>
-<li><strong>node-profiler</strong></li>
-</ul>
-
-
-<p>@Github <a href="https://github.com/bnoordhuis/node-profiler">https://github.com/bnoordhuis/node-profiler</a></p>
-
-<pre><code>var profiler = require('profiler');
-//
-// &lt;here be code you don't want to profile&gt;
-//
-profiler.resume();
-//
-// &lt;performance critical code here&gt;
-//
-profiler.pause();
-</code></pre>
-
-<ul>
-<li><strong>Nodetime</strong>
-<a href="http://nodetime.com/">http://nodetime.com/</a></li>
-</ul>
-
-
-<p>Nodetime reveals response time and other internals of HTTP requests and underlying HTTP / database calls in your Node.js application. Coupled with related process and OS state information it enables tracing performance problems down to the root cause. Nodetime supports multiple native and external APIs and libraries.</p>
-
-<pre><code>var nodetime = require('nodetime');
-nodetime.on('session', function(id) {
-  // do something with session id here
-});
-nodetime.profile();
-</code></pre>
-
-<ul>
-<li><strong>Callgrind</strong></li>
-</ul>
-
-
-<p>Callgrind is a profiling tool that records the call history among functions in a program&#8217;s run as a call-graph. By default, the collected data consists of the number of instructions executed, their relationship to source lines, the caller/callee relationship between functions, and the numbers of such calls. Optionally, cache simulation and/or branch prediction (similar to Cachegrind) can produce further information about the runtime behavior of an application.</p>
-
-<p><a href="http://valgrind.org/docs/manual/cl-manual.html">http://valgrind.org/docs/manual/cl-manual.html</a></p>
-
-<pre><code>valgrind --tool=callgrind node app.js
-</code></pre>
 ]]></content>
   </entry>
   
