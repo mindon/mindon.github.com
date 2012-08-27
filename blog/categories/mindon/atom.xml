@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-04T17:49:26+08:00</updated>
+  <updated>2012-08-28T02:24:57+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20年后的再次相聚]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/28/again-we-met-after-20-years/"/>
+    <updated>2012-08-28T01:32:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/28/again-we-met-after-20-years</id>
+    <content type="html"><![CDATA[<p>20年，一生之后不会有太多个二十年的。这次高中同学相识20周年聚会，回想起来，也是个相当大的项目。从几个热心活跃同学最初冒出的想法，到后来联系天南海北的旧日同学，以及班长的高度重视以及精心组织，而且逐个同学、老师通知并确认。</p>
+
+<p>饮食、住宿以及期间活动的安排，都是异常劳心费力的事情。除了几个无法联系以及特殊情况的同学之外，四十余位旧日同窗分别在周六（8/18）汇聚岑溪，有从湛江冒着13级台风连夜赶火车，凌晨3点多到达的同学，也有18日一大早从广州开车回来的同学…</p>
+
+<!--more-->
+
+
+<p>（我是17日搭了老高的顺风车，因为我还没学车，全程都是老高一人开车，真是辛苦了，近6个小时的车程。19日的回程则搭了老蔡到广州的车… 一个人开车这么远的路程还是相当辛苦的。）</p>
+
+<p>回到岑溪已经是夜里十点，筹委会的同学们准备好了美味宵夜迎接，家乡的味道还是很亲切的。相聚的热情更是让赶回来的同学们忘却了路途的奔波和困累。</p>
+
+<p>18日早晨开始，一直到中午，同学们陆续赶来签到、拍照、领纪念品。十多年未见的同学很多都是熟悉的面容，却想不起名字。即便如此，在短短的一个小时之内，大家又如当初在学校里一样的亲切和熟悉了。20年的时光在各自的头上、脸上以及肚子上都留下了不同的痕迹，不变的是我们的同学情谊，那颗青春依旧、充满热情的心。</p>
+
+<p>20年，同学们又再次相聚了，一起欢颜笑语，抛开生活的压力，现实的种种，重返了校园——在那早已翻天覆地变化的校园里找寻往日的记忆。回味那些无忧无虑，点点滴滴的高中生活。</p>
+
+<p>聚会安排了1天半时间，全程有拍照、录像，各种水果（龙眼最多），相互留言签名，晚会，唱K，第2天上午的早餐，篮球排球活动…</p>
+
+<p>估计好多同学跟我一样，很久没有打球了，在球场里奔跑、跳跃、投篮、扣球——大汗淋漓也是非常痛快的事情。</p>
+
+<p>20年的再次相聚，其实更多的内容是聊天，聊各自的生活、工作、事业。其实每个同学这期间都在为自己的精彩而拼搏奋斗，谱写着自己独特的人生。有些收获了美满幸福的生活，有的则事业有成，有的升官进爵…… 看到大家十多年的付出的艰辛和血汗，换来今日的成绩，也是同学之间深感自豪和骄傲的事情。</p>
+
+<p>大家之间的相互激励、启发和合作互助，会是聚会更大的一个收获。</p>
+
+<p>感谢班长老盘，还有筹委会的同学们，给我们组织了这么精彩难忘的20周年聚会。祝愿大家都健康、幸福、快乐！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[China Hospital Medical - The Pressure Maker]]></title>
@@ -144,30 +176,6 @@
 <p>或许，那些自言自语的人们只不过在跟他们可以通话的对象说话，这些说话对象可能是幻象，或者想象力更丰富一点——是另外一个世界的，甚至是可以通过脑电波交流的外星人。（医学对精神失常的判别是绝对有严重问题的，正常人放到精神病院也会成为精神病，这个事情不用多做探讨——毕竟人类能给一切判断找到“非常合理”的解释。）</p>
 
 <p>总之，<strong>幻象</strong> —— 是能令任何人想起来都从内心深处感觉到恐惧的东西，你还能想到比这个更可怕的吗？</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solve NodeJS 0.8 Build Problem]]></title>
-    <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
-    <updated>2012-07-20T22:04:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
-    <content type="html"><![CDATA[<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
-
-<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming...</p>
-
-<p>Here's a few pre-conditions for a successful make of NodeJS v0.8+:</p>
-
-<ol>
-<li><p>GNU make 3.8.1+</p></li>
-<li><p>Python 2.6 or 2.7</p></li>
-<li><p>setenv FLOCK or export FLOCK</p></li>
-</ol>
-
-
-<p>setenv LINK g++ or export LINK=g++</p>
-
-<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
 ]]></content>
   </entry>
   

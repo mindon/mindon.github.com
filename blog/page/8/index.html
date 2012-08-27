@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Chrome插件&#8221;Walking in Chrome&#8221;是个有趣的应用，想法来自于“运动”概念：了解天天坐电脑前面的自己用鼠标在网上移动的距离究竟有多远，点击了多少次，为了滚动网页手指动了多少下。这些数字究竟有多大你是无法想象的 :-p
-( 插件无需网络链接，在Chrome &hellip;">
+  <meta name="description" content="Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,7 +79,7 @@
   <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
   <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
   <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
-  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="35" height="27" alt="CBH" border="0" align="absmiddle" /></a></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="35" height="27" alt="CBH" title="Chinese Balance Heal" border="0" align="absmiddle" /></a></li>
   <li><a href="/about">About</a></li>
 </ul>
 
@@ -89,6 +88,147 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Socket.IO Behind Proxy or Firewall</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T06:32:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected network outage can close your connection. Why is it a problem? It’s problematic when a disconnection happens as you may loose server side events if you don’t architect your application correctly.</p>
+
+<ul>
+<li><strong>long-polling</strong>: between reconnection, servers side events may happens and if they aren’t persisted, those events will never reach your client.</li>
+<li><strong>websocket</strong>: Websocket are new and most if not all firewall will close them after some X idle times. Again, all server sides events will be lost</li>
+<li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
+<li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are/">Crush Tradition! Photograph Things as They Are!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T05:24:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p><a href="http://en.wikipedia.org/wiki/Henri_Cartier-Bresson"><strong>Henri Cartier-Bresson</strong></a> (August 22, 1908 – August 3, 2004) was a French photographer considered to be the father of modern photojournalism. He was an early adopter of 35 mm format, and the master of candid photography. He helped develop the &#8220;street photography&#8221; or &#8220;real life reportage&#8221; style that has influenced generations of photographers who followed.</p></blockquote>
+
+<p><img src="/images/blog/henri-cartier-bresson.jpg" alt="Henri Cartier-Bresson" /></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/05/inside-the-lytro-light-field-camera/">Inside the Lytro: Light Field Camera</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-05T21:32:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The New York Times: <a href="http://www.nytimes.com/interactive/2012/03/01/business/inside-the-lytro.html">Inside the Lytro</a></p>
+
+<p>The Lytro camera is the first consumer “light field camera.” It uses a new technology to create photos that can have their focus changed after they have been taken. Because of this, there is no need to auto-focus, resulting in virtually no shutter delay. Here’s how it works.</p>
+
+<h2>Camera Overview</h2>
+
+<p>A Lytro camera is made up of two sections. An anodized aluminum shell contains the lens assembly, while the electronics are housed within a silicone rubber grip.</p>
+
+<p><img src="/images/blog/lytro-cross-section.jpg" alt="" /></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/05/inside-the-lytro-light-field-camera/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -293,150 +433,6 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/03/why-china-will-have-an-economic-crisis/">Why China Will Have an Economic Crisis</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-03T13:23:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><hr />
-
-<p>投资过剩，房产泡沫，政府负债，银行坏账。 昌盛的国家各有各的繁华，而危机笼罩下的国家，却都是相似的。 都是些老生常谈，争来争去逃不出了钱字。 作者虽非经济学专业人士，但也详尽阐述了一个西方人对于中国经济的看法。
-【译言网】全文: <a href="http://select.yeeyan.org/view/205314/255491">时代周刊：为什么中国将发生经济危机</a></p>
-
-<p>The view in most of the world is that China is indestructible. Shrugging off the crises multiplying elsewhere, China seems to surge from strength to strength, its spectacular growth marching on no matter what headwinds may come. It appears inevitable that China will overtake a U.S. mired in debt and division to become the world’s indispensable economy. Those businessmen and policymakers looking to the future believe China’s “state capitalism” may be a superior form of economic organization in dealing with the challenges of the modern global economy.</p>
-
-<p>My answer to all of this is: think again.</p>
-
-<p>I don’t doubt for a second that China will be a major economic superpower with an increasingly influential role in the global economy. In many respects, it already is a superpower. But that doesn’t mean the economy is free from problems, a good number of them created by the very statist system lauded by pundits in the U.S. and Europe. And in my opinion, if China doesn’t change course, and in a big way, the country will experience an economic crisis.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/03/why-china-will-have-an-economic-crisis/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/02/acupressure-hands-tech/">穴位按摩方法(Acupressure)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-02T22:07:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>穴位按摩有多种方法．常用的有按、拿、推、揉等，并不是每个身体部位适合所有的方法，需要根据病症不同，选择相应的刺激方法。</p>
-
-<h2>掌平推法</h2>
-
-<p><strong>方法</strong>：手掌在身体部位上做直线单方向移动。</p>
-
-<p><strong>小技巧</strong>：力道缓和，接触身体面积大，慢慢平推，使手掌的热度传至皮肤。</p>
-
-<p><strong>功效</strong>：行气活血，多用于治疗腰腿痛，肩背痛，颈椎病，胸腹胀痛等症。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/02/acupressure-hands-tech/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/01/allie-narrations-in-taken/">Allie Narrations in 《Taken》</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-01T22:04:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>M</strong>y mother always talked to me a lot about the sky. She liked to watch the clouds in the day and the stars at night&#8230;especially the stars. We would play a game sometimes; a game called &#8220;What&#8217;s Beyond the Sky?&#8221; We would imagine darkness or a blinding light or something else that we didn&#8217;t know how to name. But of course, that was just a game. There&#8217;s nothing beyond the sky. The sky just is, and it goes on and on, and we play all of our games beneath it.</p>
-
-<p><strong>P</strong>eople are lonely in this world for lots of different reasons. Some people have something in their disposition. Maybe they were just born too mean, or maybe they were born too tender. But most people are brought to where they are by circumstance, by calamity or a broken heart or something else happening in their lives that wasn&#8217;t anything they planned on. People are lonely in this world for lots of different reasons. The one thing that I do know is, it doesn&#8217;t matter what any one of them might tell you&#8211;nobody wants to be alone.</p>
-
-<p><strong>S</strong>ome people have given up all hope of anything in their lives every changing. They just go on with it day by day, and if something were to come along and make things different they probably wouldn&#8217;t even notice it right off, except for that kind of nervous feeling you get in your stomach. My mom and I used to call that &#8220;the car trip feeling&#8221;, because it was how I&#8217;d feel whenever I knew we were going to go somewhere far away or something new.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/01/allie-narrations-in-taken/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -469,15 +465,15 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 25 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 26 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 22 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 9 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 11 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 5 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 5 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 6 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 7 )</li>
 
@@ -486,6 +482,18 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/28/again-we-met-after-20-years/">20年后的再次相聚</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/ted-danny-hillis/">TED: Danny Hillis</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/15/amazing-pollen/">Amazing Pollen</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/08/04/web-lab/">Web Lab</a>
@@ -513,18 +521,6 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
     
       <li class="post">
         <a href="/blog/2012/07/21/the-most-terrible-thing/">The Most Terrible Thing</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/20/solve-nodejs-0.8-build-problem/">Solve NodeJS 0.8 Build Problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a>
       </li>
     
   </ul>
