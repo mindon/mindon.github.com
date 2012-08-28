@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-28T02:24:57+08:00</updated>
+  <updated>2012-08-28T21:52:32+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3 Tai-Chi Diagram]]></title>
+    <link href="http://mindon.github.com/blog/2012/08/28/css3-tai-chi/"/>
+    <updated>2012-08-28T21:25:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/08/28/css3-tai-chi</id>
+    <content type="html"><![CDATA[<p>If you cannot see a Tai-Chi diagram, then your browser is old enough. Maybe you should update it to a morden one: IE9+, Safari, Chrome or Firefox, or Opera.</p>
+
+<p>If you could see a rolling Tai-Chi, then your browser is ready for CSS3, that will be great.</p>
+
+<!--more-->
+
+
+<p>Here's the Chinese Tai-Chi diagram:</p>
+
+<p><link rel="stylesheet" type="css/text" href="http://mindon.github.com/blog/styles/tai-chi.css" /></p>
+
+<div class="yinyang">
+  <div class="yin"><div class="yinc"><div class="yind"></div></div></div>
+  <div class="yang"><div class="yangc"><div class="yangd"></div></div></div>
+</div>
+
+
+<!--[if lt IE 9]>
+It's a pitty, you are using a browser out of the date.
+<![endif]-->
+
+
+<p>Wood-Fire-Metal-Water-Earth! The 5 fundamental elements running circle balance in a human body.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Lab]]></title>
@@ -126,138 +157,6 @@
 <p>con: Named IDs' management, unintuitive templates using named IDs.</p>
 
 <h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Build Node-Expat Under Windows]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows/"/>
-    <updated>2012-06-11T09:22:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/11/build-node-expat-under-windows</id>
-    <content type="html"><![CDATA[<h2>Preparea Developemtn Environment</h2>
-
-<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
-
-<ul>
-<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
-<li><p>Download and unzip the NodeJS source code from Joyent's github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
-<li><p>Get and install Python 2.7</p></li>
-<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
-</ul>
-
-
-<h2>Tools for building a NodeJS Module</h2>
-
-<ul>
-<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
-<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<p>if they are not exists, try get it from the latest tag from github of joyent-node ( Left of Files tab, find branch --> Tags ).</p>
-
-<p>( You could use tools/<strong>gyp_node</strong> directly )</p>
-
-<h2>Node-Expat Dependencis:</h2>
-
-<ul>
-<li><p>Install Expat under windows
-<a href="http://sourceforge.net/projects/expat/files/latest/download">http://sourceforge.net/projects/expat/files/latest/download</a></p></li>
-<li><p>Env variable set <strong>EXPAT_ROOT</strong>=<em>where-your-Expat-installed</em></p></li>
-<li><p>Append the <strong>Bin/</strong> of Expat to <strong>PATH</strong> env.</p></li>
-</ul>
-
-
-<h2>Building Node-Expat:</h2>
-
-<ul>
-<li><p>Prepare <strong>build.gyp</strong> ( need to change D:/Expat to your expat root )</p>
-
-<pre><code>{
-  'variables' : {
-    'target_arch': 'ia32'
-  },
-  'targets': [
-    {
-      'target_name': 'node-expat',
-      'sources': [ 'node-expat.cc' ],
-      'include_dirs': [
-    'd:/Expat/Source/lib/'
-      ],
-      'libraries': [
-    '-ld:/Expat/Bin/libexpat.lib'
-      ]
-    }
-  ],
-}
-</code></pre></li>
-<li><p>Run following commands</p></li>
-</ul>
-
-
-<p>to setup build version and msbuild tool env.</p>
-
-<pre><code>@set Configuration=Release
-"D:\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
-</code></pre>
-
-<p>then</p>
-
-<pre><code>python d:\joyent-node\tools\gyp_addon build.gyp
-
-msbuild build\build.sln
-</code></pre>
-
-<p>Now you should build the Node-Expat. But you may meet other problems:</p>
-
-<h2>Testing</h2>
-
-<p>if run node and require("./build/Release/node-expat") fail, it may be caused by following reasons:</p>
-
-<p><strong>a)</strong>  check the node-expat.cc, and make sure there's a <strong>NODE_MODULE_EXPORT</strong> or <strong>NODE_EXTERN</strong> before the <em>void init</em></p>
-
-<p>something like this: <code>extern "C" NODE_EXTERN void init(Handle&lt;Object&gt; target)</code></p>
-
-<p><strong>b)</strong> if "unable to load shared library" error, try copy <strong>libexpat.dll</strong> to the folder of <strong>node.exe</strong> located.</p>
-
-<ul>
-<li> <strong>node test.js</strong></li>
-</ul>
-
-
-<p>if when you run <code>node test.js</code> of expat, it may fail. Then you need following code to fix it.</p>
-
-<pre><code>char *toCString(v8::Local&lt;v8::Value&gt; value, const char *fallback = "") {
-    if (value-&gt;IsString()) {
-    v8::String::Utf8Value string(value);
-    char *str = (char *) malloc(string.length() + 1);
-    strcpy(str, *string);
-    return str;
-    }
-    char *str = (char *) malloc(strlen(fallback) + 1);
-    strcpy(str, fallback);
-    return str;
-}
-</code></pre>
-
-<p>add these code below <code>using namespace node;</code>.</p>
-
-<p>then change the line around 155 before or 165 after code above added</p>
-
-<pre><code>return XML_ParseBuffer(parser, len, isFinal) != XML_STATUS_ERROR;
-</code></pre>
-
-<p> into</p>
-
-<pre><code>return XML_Parse(parser, toCString(&amp;str, ""), len, isFinal) != XML_STATUS_ERROR;
-</code></pre>
-
-<p>This patch could help to remove the error "<strong>not well-formed (invalid token)</strong>".</p>
-
-<p>Now, your node-epxat under windows is ready for node-soap, you would need this for something like WSDL!</p>
 ]]></content>
   </entry>
   
