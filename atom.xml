@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-28T21:52:32+08:00</updated>
+  <updated>2012-09-05T23:37:31+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,89 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7 Issues]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/"/>
+    <updated>2012-09-05T22:56:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play</id>
+    <content type="html"><![CDATA[<p>I bought <strong>Nexus 7</strong> from a online shop on <strong>taobao</strong> at July. It was got from Google Play from US.</p>
+
+<p>An android device with hardware: NFC, GPS, Camera, Motion detect, &#8230; latest app from Google, that is what I want.</p>
+
+<p>I got my Nexus 7 before August. I love it before and when I touch it. It looks great, runs fast &amp; smooth.</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-love.png" alt="" /></p>
+
+<p>And I still love it now, even it will be ill sometimes.</p>
+
+<ul>
+<li>Screen Touch Problem</li>
+</ul>
+
+
+<p>It doesn&#8217;t work well sometimes, and could be fixed by switching it to sleep mode and wake it back immediately.</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-touch.png" alt="" /></p>
+
+<ul>
+<li>Cannot see and run Google Play Books outside US.</li>
+</ul>
+
+
+<p>I did not activate the device with an US VPN, that made these Books &amp; Magazine disabled from Nexus 7. It make me very upset. But I don&#8217;t want to root it any way.</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-app.png" alt="" /></p>
+
+<!--more-->
+
+
+<ul>
+<li>Flicker when wifi signal is poor</li>
+</ul>
+
+
+<p>At first, I thought it was from the auto-adjust of the lightness. But Google result tells me, the poor wifi makes it happen.</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-flicker.gif" alt="" /></p>
+
+<ul>
+<li>Zero power status</li>
+</ul>
+
+
+<p>When its power is zero, the charging does not help the device start. Maybe there&#8217;s some problem to charge the battery, 10 minutes charge does not help. Nexus 7 cannot start sometimes in low power.</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-power.png" alt="" /></p>
+
+<ul>
+<li>Fail to start when poor power, even charging</li>
+</ul>
+
+
+<p>Maybe battery charge is failed, After the Nexus 7 ( It&#8217;s hard to make it sometimes ), the screen turns into scratch lines &#8230;</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-dash.png" alt="" /></p>
+
+<ul>
+<li>Slow battery charge</li>
+</ul>
+
+
+<p>Today, problem 4. and 5. found. and another issue is 8 hours charging only reaches to 65%&#8230; :-(</p>
+
+<p><img src="http://mindon.github.com/images/blog/nexus/n7-charge.png" alt="" /></p>
+
+<ul>
+<li>It seems the screen working fine when the battery with 10%+ power.</li>
+</ul>
+
+
+<p>Even with these problems, It&#8217;s still an amazing android device for me.</p>
+
+<p>Maybe WP8 tablet could be better, or Kindle Fire 2 may be better. But the Nexus 7 is still a device worth to own.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS3 Tai-Chi Diagram]]></title>
@@ -27,17 +110,16 @@
 
 <p>Here&#8217;s the Chinese Tai-Chi diagram:</p>
 
-<p><link rel="stylesheet" type="css/text" href="http://mindon.github.com/blog/styles/tai-chi.css" /></p>
-
+<div>
+<link rel="stylesheet" type="text/css" href="http://mindon.github.com/blog/styles/tai-chi.css" >
 <div class="yinyang">
   <div class="yin"><div class="yinc"><div class="yind"></div></div></div>
   <div class="yang"><div class="yangc"><div class="yangd"></div></div></div>
 </div>
-
-
 <!--[if lt IE 9]>
 It&#8217;s a pitty, you are using a browser out of the date.
 <![endif]-->
+</div>
 
 
 <p>Wood-Fire-Metal-Water-Earth! The 5 fundamental elements running circle balance in a human body.</p>
@@ -908,50 +990,6 @@ Automatic Performance Tuning in the Zettabyte File System:  <a href="http://tesl
 <p>当你的演讲需要演示代码或者web操作的时候，用这个可以让大家看得更清楚 :-)</p>
 
 <p><a href="http://mindon.github.com/soft/xzoom.zip">下载XZoom屏幕放大鏡</a>, <a href="http://mindon.github.com/blog/categories/chrome-app/">更多麦盾作品&#8230;</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Letup: Take a break]]></title>
-    <link href="http://mindon.github.com/blog/2012/05/19/letup-take-a-break/"/>
-    <updated>2012-05-19T14:49:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/05/19/letup-take-a-break</id>
-    <content type="html"><![CDATA[<h2><strong>Letup休息提醒器</strong> （<a href="http://mindon.github.com/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/letup-settings.png" alt="" /></p>
-
-<!--more-->
-
-
-<p>屏幕保護狀態，屏幕右下角休息中斷操作模式。(取消休息 3次/天，每次休息可以延迟6分钟1次，延迟2分钟3次)</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/letup-rc.png" alt="" /></p>
-
-<p>防电脑病必备 :-p  几分钟，会中断自己处理事情，可是却能保证你更能健康，更有效率，你会选择哪个？</p>
-
-<p>部门里已经很多同事使用了，公司内外也有一定的使用人群了。</p>
-
-<p>软件无需安装，下载点击运行即可。</p>
-
-<p><a href="http://mindon.github.com/soft/letup_110715.7z">下载Letup休息提醒器</a>, <a href="http://mindon.github.com/blog/categories/chrome-app/">更多麦盾作品&#8230;</a></p>
 ]]></content>
   </entry>
   

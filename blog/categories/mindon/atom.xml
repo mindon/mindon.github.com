@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-08-28T21:52:32+08:00</updated>
+  <updated>2012-09-05T23:37:31+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,89 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7 Issues]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/"/>
+    <updated>2012-09-05T22:56:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play</id>
+    <content type="html"><![CDATA[<p>I bought <strong>Nexus 7</strong> from a online shop on <strong>taobao</strong> at July. It was got from Google Play from US.</p>
+
+<p>An android device with hardware: NFC, GPS, Camera, Motion detect, ... latest app from Google, that is what I want.</p>
+
+<p>I got my Nexus 7 before August. I love it before and when I touch it. It looks great, runs fast &amp; smooth.</p>
+
+<p><img src="/images/blog/nexus/n7-love.png" alt="" /></p>
+
+<p>And I still love it now, even it will be ill sometimes.</p>
+
+<ul>
+<li>Screen Touch Problem</li>
+</ul>
+
+
+<p>It doesn't work well sometimes, and could be fixed by switching it to sleep mode and wake it back immediately.</p>
+
+<p><img src="/images/blog/nexus/n7-touch.png" alt="" /></p>
+
+<ul>
+<li>Cannot see and run Google Play Books outside US.</li>
+</ul>
+
+
+<p>I did not activate the device with an US VPN, that made these Books &amp; Magazine disabled from Nexus 7. It make me very upset. But I don't want to root it any way.</p>
+
+<p><img src="/images/blog/nexus/n7-app.png" alt="" /></p>
+
+<!--more-->
+
+
+<ul>
+<li>Flicker when wifi signal is poor</li>
+</ul>
+
+
+<p>At first, I thought it was from the auto-adjust of the lightness. But Google result tells me, the poor wifi makes it happen.</p>
+
+<p><img src="/images/blog/nexus/n7-flicker.gif" alt="" /></p>
+
+<ul>
+<li>Zero power status</li>
+</ul>
+
+
+<p>When its power is zero, the charging does not help the device start. Maybe there's some problem to charge the battery, 10 minutes charge does not help. Nexus 7 cannot start sometimes in low power.</p>
+
+<p><img src="/images/blog/nexus/n7-power.png" alt="" /></p>
+
+<ul>
+<li>Fail to start when poor power, even charging</li>
+</ul>
+
+
+<p>Maybe battery charge is failed, After the Nexus 7 ( It's hard to make it sometimes ), the screen turns into scratch lines ...</p>
+
+<p><img src="/images/blog/nexus/n7-dash.png" alt="" /></p>
+
+<ul>
+<li>Slow battery charge</li>
+</ul>
+
+
+<p>Today, problem 4. and 5. found. and another issue is 8 hours charging only reaches to 65%... :-(</p>
+
+<p><img src="/images/blog/nexus/n7-charge.png" alt="" /></p>
+
+<ul>
+<li>It seems the screen working fine when the battery with 10%+ power.</li>
+</ul>
+
+
+<p>Even with these problems, It's still an amazing android device for me.</p>
+
+<p>Maybe WP8 tablet could be better, or Kindle Fire 2 may be better. But the Nexus 7 is still a device worth to own.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20年后的再次相聚]]></title>
@@ -138,44 +221,6 @@
 <p><img src="/images/blog/regenerate.png" alt="" /></p>
 
 <p>植物从种子或者块状根的一部分，或是一根折下的枝杈，就能长成一株完整的植株，是一件不可思议的事情。结合泥土或水中的养分，一点点阳光和空气，就能制造出那么精致完美的叶子、花和种子，实在是令人叹为观止的制造技术。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Most Terrible Thing]]></title>
-    <link href="http://mindon.github.com/blog/2012/07/21/the-most-terrible-thing/"/>
-    <updated>2012-07-21T09:32:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/07/21/the-most-terrible-thing</id>
-    <content type="html"><![CDATA[<h2>最可怕的是什么？</h2>
-
-<p>其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。</p>
-
-<p>现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。</p>
-
-<p>有一个词能非常清楚地对最可怕的东西做一个总结，那就是——<strong>幻象</strong>。</p>
-
-<p>当你在高山峻岭间驾车时，看到了一条其实并不存在的路，……</p>
-
-<p>当你站在楼顶边缘，却看到眼前是一片广阔草原，……</p>
-
-<!--more-->
-
-
-<p>美剧X-files（X档案）中有若干场景是主角持枪，看到眼前的异形怪物（而真实情况——那是自己最好的搭档），……</p>
-
-<p>当在你眼里，老虎变成了小猫，……</p>
-
-<p>当你在沙漠中追逐一个海市蜃楼的湖的时候，……</p>
-
-<p>当你梦游把别人脑袋当西瓜的时候，……</p>
-
-<p><strong>幻象</strong> 大多时候是极其危险的。于是，人类把幻象类的疾病称之为人格分裂，精神病……</p>
-
-<p>有一种精神不正常的场景很常见：就是一个人在大街上自言自语。而今移动生活的时代，这种场景开始越来越多地出现在精神正常的人们身上，因为他们一边走路一边讲电话。—— 试想，如果这个人用蓝牙耳机，或科技再先进一点，使用的移动电话是植入人体里的，……</p>
-
-<p>或许，那些自言自语的人们只不过在跟他们可以通话的对象说话，这些说话对象可能是幻象，或者想象力更丰富一点——是另外一个世界的，甚至是可以通过脑电波交流的外星人。（医学对精神失常的判别是绝对有严重问题的，正常人放到精神病院也会成为精神病，这个事情不用多做探讨——毕竟人类能给一切判断找到“非常合理”的解释。）</p>
-
-<p>总之，<strong>幻象</strong> —— 是能令任何人想起来都从内心深处感觉到恐惧的东西，你还能想到比这个更可怕的吗？</p>
 ]]></content>
   </entry>
   
