@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-09-05T23:37:31+08:00</updated>
+  <updated>2012-09-09T22:40:17+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Quantum Locking]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/09/quantum-levitation-n-quantum-locking/"/>
+    <updated>2012-09-09T22:26:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/09/quantum-levitation-n-quantum-locking</id>
+    <content type="html"><![CDATA[<p>I watched this TED video last week. It&#8217;s amazing!</p>
+
+<p>&#8220;How can a super-thin 3-inch disk levitate something 70,000 times its own weight? In a riveting demonstration, Boaz Almog shows how a phenomenon known as quantum locking allows a superconductor disk to float over a magnetic rail &#8211; completely frictionlessly and with zero energy loss. Experiment: Prof. Guy Deutscher, Mishael Azoulay, Boaz Almog, of the High Tc Superconductivity Group, School of Physics and Astronomy, Tel Aviv University.&#8221;</p>
+
+<!--more-->
+
+
+
+
+<object width="526" height="374"><param name="movie" value="http://video.ted.com/assets/player/swf/EmbedPlayer.swf"></param><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always"/><param name="wmode" value="transparent"></param><param name="bgColor" value="#ffffff"></param><param name="flashvars" value="vu=http://video.ted.com/talk/stream/2012G/Blank/BoazAlmog_2012G-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/BoazAlmog_2012G-embed.jpg&vw=512&vh=288&ap=0&ti=1495&lang=zh-cn&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=boaz_almog_levitates_a_superconductor;year=2012;theme=presentation_innovation;theme=what_s_next_in_tech;event=TEDGlobal+2012;tag=demo;tag=innovation;tag=magic;tag=physics;tag=science;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;" /><embed src="http://video.ted.com/assets/player/swf/EmbedPlayer.swf" pluginspace="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" bgColor="#ffffff" width="526" height="374" allowFullScreen="true" allowScriptAccess="always" flashvars="vu=http://video.ted.com/talk/stream/2012G/Blank/BoazAlmog_2012G-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/BoazAlmog_2012G-embed.jpg&vw=512&vh=288&ap=0&ti=1495&lang=en&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=boaz_almog_levitates_a_superconductor;year=2012;theme=presentation_innovation;theme=what_s_next_in_tech;event=TEDGlobal+2012;tag=demo;tag=innovation;tag=magic;tag=physics;tag=science;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;"></embed></object>
+
+
+<blockquote><p>The phenomenon you saw here for a brief moment is called quantum levitation and quantum locking. And the object that was levitating here is called a superconductor. Superconductivity is a quantum state of matter, and it occurs only below a certain critical temperature.</p>
+
+<p>你们在这里看到的这个短暂的现象是 被称为量子悬浮和量子锁定。 这个悬浮在这里的物体 被称为超导体。 超导是物质的一种量子状态， 只在特定的关键温度下发生。</p>
+
+<p>Now, it&#8217;s quite an old phenomenon; it was discovered 100 years ago. However, only recently, due to several technological advancements, we are now able to demonstrate to you quantum levitation and quantum locking.</p>
+
+<p>现在，这是一个比较老的现象了； 100年前被发现。 然而，就在最近， 由于若干科技进步， 我们现在能够向你们展示 量子悬浮和量子锁定。</p>
+
+<p>So, a superconductor is defined by two properties. The first is zero electrical resistance, and the second is the expulsion of a magnetic field from the interior of the superconductor. That sounds complicated, right? But what is electrical resistance? So, electricity is the flow of electrons inside a material. And these electrons, while flowing, they collide with the atoms, and in these collisions they lose a certain amount of energy. And they dissipate this energy in the form of heat, and you know that effect. However, inside a superconductor there are no collisions, so there is no energy dissipation.</p>
+
+<p>那么，超导体具备两种特性。 第一种特性是零电阻， 第二种特性是从超导体的内部驱逐磁场。 这听起来有点复杂，是吗？ 但什么是电阻呢？ 那么，电就是物体内部的电子流。 这些电子，当他们流动时， 它们与原子相撞，在碰撞过程中 它们损失一定的能量。 这种能量以热的形式消耗， 你们知道这种效果的。 然而，在超导体的内部，不存在这种碰撞， 因此也就没有能量消耗。</p></blockquote>
+
+<p>超导体让电流无阻，却完全隔离磁场，这个挺有意思的。有没有让磁场无阻，电流完全隔离的东西呢？</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[天才在左，疯子在右]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/09/genius-on-the-left-madness-on-the-right/"/>
+    <updated>2012-09-09T21:31:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/09/genius-on-the-left-madness-on-the-right</id>
+    <content type="html"><![CDATA[<p>《天才在做，疯子在右》这书名其实挺早之前就知道了，一直没有动力去读。最近看公司内的一个分享，里面提到了“你也是蘑菇”的案例。这引起了我的兴趣，于是周五晚上就在Kindle上读了一下，没想到一发不可收拾，周六就把整本书看完了。当然，最吸引我的是那些不同的世界观的案例，可以说跟TED很类似，能激发思考。</p>
+
+<p>看到“生化奴隶”这一篇的时候，想起来前段时间在“译言网”上看到过一篇文章“<a href="http://select.yeeyan.org/view/279625/311822">微生物造就人类</a>”——人类不只是人类，同样也是由大量微生物组成的个体。</p>
+
+<p><img src="http://cdn.yeeyan.org/upload/image/2012/08/19030420_17652.jpg" alt="" /></p>
+
+<p>世界观特别的精神病人是很有意思的，即使他们描述的是事实，所谓“正常人”也是不能接受的，因为人们已经把他们放到了“精神病人”这个类别，认同他们相当于把自己也归于此类——这往往是大家所避讳的。</p>
+
+<p>其中有些案例，如果当事人把想法写成PPT，到TED分享，那也是走在科学前沿的IDEA :-)</p>
+
+<p>《天才在做，疯子在右》，作者 高铭，网易读书上链接：<a href="http://data.book.163.com/book/home/009200190005/0000JYfK.html">阅读</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to make a Tai-Chi]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/09/how-to-make-a-tai-chi/"/>
+    <updated>2012-09-09T20:41:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/09/how-to-make-a-tai-chi</id>
+    <content type="html"><![CDATA[<p>Tai-Chi diagram is a very important symbol in Chinese culture.</p>
+
+<p>It merges &#8220;阴yin&#8221; and &#8220;阳yang&#8221; into one, the balance of two different sides of one.</p>
+
+<p>Two large round component &amp; two half size round component: combining into one, that&#8217;s how comes the tai-chi.</p>
+
+<p><img src="http://mindon.github.com/images/blog/tai-chi.png" alt="" /></p>
+
+<!--more-->
+
+
+<p>Here&#8217;s how to make a two sides tai-chi with paper. ( Two large round component, four half size component )</p>
+
+<p><img src="http://mindon.github.com/images/blog/tai-chi.jpg" alt="" /></p>
+
+<p>Same componets with different size &amp; different status make up a perfect tai-chi. Also the real complex world.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nexus 7 Issues]]></title>
@@ -830,166 +906,6 @@ REC-ACTION: Run ’zpool status -x’ and replace the bad device.
 Automatic Performance Tuning in the Zettabyte File System:  <a href="http://tesla.hpl.hp.com/self-manage03/Finals/henson-self-tune.pdf">http://tesla.hpl.hp.com/self-manage03/Finals/henson-self-tune.pdf</a></p>
 
 <p>Other: <a href="http://www.ibm.com/developerworks/cn/linux/l-zfs/">在 Linux 上运行 ZFS</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[中国象棋棋谱生成器(CD插件)]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/"/>
-    <updated>2012-06-02T19:06:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw</id>
-    <content type="html"><![CDATA[<p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
-
-<p>可按棋谱生成矢量图。</p>
-
-<p><img src="http://mindon.github.com/soft/chinese-chess.png" alt="" /></p>
-
-<p>下载：<a href="http://mindon.github.com/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
-
-<h2>使用说明：</h2>
-
-<p>  1，把gms文件放到draw/GMS/文件夹</p>
-
-<p>  2，运行CorelDraw</p>
-
-<!--more-->
-
-
-<p>  3，选择菜单 &#8220;Tools(工具)&#8221;&#8211;&#8220;Visual Basic&#8221;&#8211;&#8220;Play(播放)&#8221;</p>
-
-<p>  4，选择 XQPrint(Mindon.XQPrint.gms)</p>
-
-<p>  5，点击QPrint.XiangQi项目</p>
-
-<p>  6，点击Run(运行)按钮</p>
-
-<p>  7，在弹出的软件窗口中，点击“浏览”找到象棋棋谱文件(目前支持XQF和PGN格式)</p>
-
-<p>  8，在右边列出的棋谱中点击相应的步骤即可绘制相应棋谱图</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lunar generator plug-in for CorelDraw]]></title>
-    <link href="http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/"/>
-    <updated>2012-05-19T15:40:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw</id>
-    <content type="html"><![CDATA[<h2>麦盾月历生成器</h2>
-
-<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
-
-<p>原创产品，别的地方找不到的！</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar.png" alt="" /></p>
-
-<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
-
-<!--more-->
-
-
-<p><strong>1. 软件完全版提供一个MindonLunar.gms文件及一个序列号。</strong></p>
-
-<p>可广泛应用于设计台历/挂历/月历/日历DIY或专业印刷场合, 以减少人工输入的不便及容易出现的差错.</p>
-
-<p>设计与月历相关产品以及贺卡、用照片DIY台历制作必不可少的绝好帮手。</p>
-
-<p>用来制作团体、公司等组织或个人的台历、年历、月历/日历都是很好的工具 :-)</p>
-
-<p>能够很好地管理特殊日子、纪念日、特别节日等等，一次输入，随时可用！</p>
-
-<p>这个插件只提供日历部分的生成便利，其他的还是要靠您自己的创意和想法了。</p>
-
-<p><strong>2. 运行环境：win2000/XP/2003/win7, CorelDraw 9或以上版本，带VBA支持</strong></p>
-
-<p><strong>3. 月份范围：1901年到2050年之间的所有月份</strong></p>
-
-<p><strong>注意：</strong></p>
-
-<p>须提供一个有效邮箱以获得此文件以及序列号，以及终身通过此邮箱重新获取此gms文件以及序列号。</p>
-
-<p><strong>功能：</strong></p>
-
-<p>插件可选定月份生成相应的农历/阳历/星期，您可以定制字体及相应的颜色、节日定制、并且将每个月份自动单独导出成透明背景tif文件（存放在c:\mindon.lunar目录）</p>
-
-<p>购买了此软件的您拥有免费获取gms文件的升级版本的权利。</p>
-
-<p>插件特色功能：特别节日定制&#8212; 支持农历节日设置，月份星期节日设置（如父亲节等）。</p>
-
-<p><strong>用法：</strong></p>
-
-<p>把GMS文件放到 Draw/GMS/ 目录（确认已安装CorelDraw的VBA功能），</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar-a.png" alt="" /></p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar-b.png" alt="" /></p>
-
-<p>麦盾月历生成器CorelDraw插件界面</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar-c.png" alt="" /></p>
-
-<p><strong>输出结果样例：</strong></p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar-d.png" alt="" /></p>
-
-<p>月历结果是矢量，透明背景，提供批量 tiff/png 输出供其它软件使用。</p>
-
-<p>用这个插件来做你的个性台历，绝对超值 :-)</p>
-
-<p><strong>常见问题：</strong></p>
-
-<p>如果CorelDraw出现无法设置英文字体情况，请设置系统输入法的缺省键盘为英语-美式键盘</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/lunar-faq.gif" alt="" /></p>
-
-<p>淘宝链接：<a href="http://item.taobao.com/item.htm?id=8707971102">http://item.taobao.com/item.htm?id=8707971102</a></p>
-
-<p>有兴趣可以看看麦盾自家的台历 <a href="http://mindon.appspot.com/and/calendar/2011">http://mindon.appspot.com/and/calendar/2011</a></p>
-
-<p><a href="http://mindon.github.com/blog/categories/chrome-app">麦盾免费工具及应用</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[XZoom: A simple screen zoomer]]></title>
-    <link href="http://mindon.github.com/blog/2012/05/19/xzoom-a-simple-screen-zoomer/"/>
-    <updated>2012-05-19T14:49:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/05/19/xzoom-a-simple-screen-zoomer</id>
-    <content type="html"><![CDATA[<p><strong>麥盾屏幕放大鏡</strong> （<a href="http://mindon.github.com/soft/xzoom.zip">下载</a>）</p>
-
-<p>这个小工具历史比“<a href="http://mindon.github.com/blog/2012/05/19/letup-take-a-break/">Letup休息提醒器</a>”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。</p>
-
-<p>其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了，采用了隐藏-重现的方式获取屏幕最新状态。</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。绿色，无需安装，点击运行。（win 2k/xp, win7 支持）</p>
-
-<p>系統圖標點擊左鍵打開設置界面</p>
-
-<p><img src="http://mindon.github.com/images/blog/soft/xzoom-settings.png" alt="" /></p>
-
-<p><strong>支持操作</strong></p>
-
-<ul>
-<li><p>设置放大区域尺寸；</p></li>
-<li><p>Alt + Space Bar 顯示或隱藏放大鏡；</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<ul>
-<li><p>右鍵隱藏放大鏡</p></li>
-<li><p>左鍵取色，通過右下角的獲取顏色點得到顏色值（左鍵取#FFFFFF格式，右鍵取RGB(255,255,255)格式）</p></li>
-<li><p>滾輪改變放大倍數</p></li>
-<li><p>中鍵點擊恢復缺省放大倍數</p></li>
-</ul>
-
-
-<p><img src="http://mindon.github.com/images/blog/soft/xzoom-sample.png" alt="" /></p>
-
-<p>当你的演讲需要演示代码或者web操作的时候，用这个可以让大家看得更清楚 :-)</p>
-
-<p><a href="http://mindon.github.com/soft/xzoom.zip">下载XZoom屏幕放大鏡</a>, <a href="http://mindon.github.com/blog/categories/chrome-app/">更多麦盾作品&#8230;</a></p>
 ]]></content>
   </entry>
   
