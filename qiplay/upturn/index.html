@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html><!-- manifest="offline.appcache"-->
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="mindon/at/gmail.com" site="http://mindon.github.com/" />
+    <title>
+Memory Cards
+    </title>
+
+    <style type="text/css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, section, header, footer, nav {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+html * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ul { list-style: none; }
+
+#gameboard {
+	width: 350px;
+	margin: 0 auto;
+  overflow: hidden;
+	position: relative;
+}
+
+html, body {
+  background: #666;
+  color:#fff;
+  margin: 0;
+  padding: 0;
+}
+
+#gameboard div {
+  font: 14pt/2em Tahoma,Arial,sans-serif;
+}
+
+.cards {
+	width: 330px;
+	height: 330px;
+	
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.5s;
+	
+	padding: 20px 0 0 20px;
+	
+	background: #666;
+}
+
+.card {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 20px 20px 0;
+    float: left;
+    display: inline;
+    -webkit-perspective: 500;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+}
+
+.card span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 90px;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    box-shadow: #000 0 1px 2px;
+    -webkit-box-shadow: #000 0 1px 2px;
+    -moz-box-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+
+    -webkit-transform: rotateY(0deg);
+    background: #fff url(img/cardback.png) no-repeat 50% 50%;
+    -webkit-background-size: 90px 90px;
+    z-index: 900;
+}
+
+
+.card span.back {
+    -webkit-transform: rotateY(-180deg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    z-index: 800;
+}
+
+.card-touched span {
+    -webkit-transform: rotateY(180deg);
+    height: 106px;
+    width: 106px;
+    top: -9px;
+    left: -9px;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    box-shadow: #333 0 2px 4px;
+    -webkit-box-shadow: #333 0 2px 4px;
+}
+
+.card-touched span.back {
+    -webkit-transform: rotateY(0deg);
+    z-index: 1000;
+}
+
+.card-alt span {
+    -webkit-transform: rotateX(0deg);
+}
+
+.card-alt span.back {
+    -webkit-transform: rotateX(-180deg);
+}
+
+.card-alt.card-touched span {
+    -webkit-transform: rotateX(180deg);
+}
+
+.card-alt.card-touched span.back {
+    -webkit-transform: rotateX(0);
+}
+
+
+#gameboard-alt1 ul {
+    -webkit-transform: rotate(90deg);
+}
+
+#gameboard-alt1 ul .card {
+    -webkit-transform: rotate(-90deg);
+}
+
+#gameboard-alt2 ul {
+    -webkit-transform: rotate(-90deg);
+}
+
+#gameboard-alt2 ul .card {
+    -webkit-transform: rotate(90deg);
+}
+
+
+@-webkit-keyframes fade-in {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade-out {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes highlight {
+	0% { color: #999; }
+	50% { color: #fff; }
+	100% { color: #999; }
+}
+
+#gameboard .win {
+	width: 100%;
+	height: 40px;
+	
+	position: absolute;
+	top: 10%;
+	right: 0;
+  text-align: center;
+  color: #fff;
+	
+	display: none;
+	
+	text-shadow: rgba(0,0,0,0.5) 0 -1px 0;
+	-webkit-text-shadow: rgba(0,0,0,0.5) 0 -1px 0;
+}
+
+.play-record {
+	-webkit-animation-name: highlight;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: infinite;
+  color: #ff6600;
+}
+
+#gameboard .info {
+  position: absolute;
+	width: 100%;
+  top: 45%;
+  display: none;
+  text-align: center;
+  color: #fff;
+}
+
+.play-start {
+  cursor: pointer;
+  font-size: 17pt;
+  font-weight: bold;
+  margin-top: 16px;
+
+  -webkit-animation-name: highlight;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.notify {
+  font-size: 11pt;
+  color: #999;
+  text-align: center;
+  display: block;
+  color: #00ffff;
+  text-decoration: underline;
+  margin-bottom: 2em;
+}
+
+.notify b {
+  color: #ff0;
+}
+
+.play-ad {
+  color: #ff6;
+  font-size: 11pt;
+}
+
+.play-click h2 {
+  color: #66ccff;
+}
+#myrules {
+  font-size: 9pt;
+  line-height: 2em;
+  text-align: center;
+}
+
+#myrules b {
+  padding: 0 3px;
+  background-color:#c60;
+}
+
+#activate {
+  display: none;
+  width: 350px;
+  margin: 0 auto;
+}
+</style>
+<style id="mycss">
+.card-1 span.back {
+  background-position: 0 0;
+}
+.card-2 span.back {
+  background-position: -106px 0;
+}
+.card-3 span.back {
+  background-position: -212px 0;
+}
+.card-4 span.back {
+  background-position: -318px 0;
+}
+.card-5 span.back {
+  background-position: -424px 0;
+}
+</style>
+  </head>
+<body>
+
+<div id="gameboard">
+  <ul class="cards"></ul>
+  <div class="win">
+    <p class="play-click">with <b>0</b> Clicks</p>
+    <h2 class="play-record">New High Record!</h2>
+  </div>
+  <div class="info">
+    <p class="play-ad"><b>Have a good time in WeChat!</b></p>
+    <p class="play-start">Click to Restart</p>
+  </div>
+  <div id="myrules">Find every <b>2</b> matched cards!<br />Less clicks, More BONUS!</div>
+  <a class="notify" href="http://weixin.qq.com/r/XHVhbhvEziWxhwoNnyB4">Add "<b>QiPlay</b>" to play more games</a>
+</div>
+<div id="activate"></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript">
+var QiPlayCONF = {_BACKGROUND: '../slot/img/products.jpg', _SPRITE: 15, _HEIGHT: 106}
+  , qstr = window.location.search || '?reading';
+
+if(/\?reading/i.test(qstr) ) {
+  QiPlayCONF = {_BACKGROUND: '../slot/img/reading.jpg', _SPRITE: 10, _HEIGHT: 106};
+
+} else if(/\?star/i.test(qstr) ) {
+  QiPlayCONF = {_BACKGROUND: '../slot/img/star.jpg', _SPRITE: 10, _HEIGHT: 106};
+
+} else if(/\?media/i.test(qstr) ) {
+  QiPlayCONF = {_BACKGROUND: '../slot/img/media.jpg', _SPRITE: 10, _HEIGHT: 106};
+
+} else if( Math.random() > 0.75 || /\?browser/i.test(window.location.search) ) {
+
+  QiPlayCONF = {_BACKGROUND: '../slot/img/browsers.jpg', _SPRITE: 6, _HEIGHT: 100};
+}
+
+if( Math.random() < 0.21 )
+  QiPlayCONF._MATCH = 3;
+
+$(document.getElementsByTagName('head')[0]).append('<style>.card span.back {background-image: url('+QiPlayCONF._BACKGROUND+');-webkit-background-size:'+(106*QiPlayCONF._SPRITE)+'px '+ QiPlayCONF._HEIGHT+'px}</style>');
+
+function shuffleCards(){var e=[],t;for(var n=0,r=logos.length;n<r;n++){do t=Math.floor(Math.random()*_SPRITE);while(e.indexOf(t)>-1);e.push(t),logos[n]=t}var i=document.getElementById("mycss");i&&(i.innerHTML=".card-1 span.back {background-position:-"+logos[0]*106+"px "+_TOP+"px}.card-2 span.back {background-position:-"+logos[1]*106+"px "+_TOP+"px}.card-3 span.back {background-position:-"+logos[2]*106+"px "+_TOP+"px}.card-4 span.back {background-position:-"+logos[3]*106+"px "+_TOP+"px}.card-5 span.back {background-position:-"+logos[4]*106+"px "+_TOP+"px}")}function shuffle(e,t,n){var r=e*t,i=Math.ceil(r/n),s=0,o=[];for(var u=0;u<r;u++)o[u]=0;for(var u=0;u<i;u++)for(var a=0;a<n;a++){if(s<r){do var f=Math.floor(Math.random()*r);while(o[f]);o[f]=u+1,s++}if(s==r)break}return o}function resetCards(){shuffleCards();var e=shuffle(m,n,x),t="";for(var r=0;r<e.length;r++)t+='<li class="card card-'+e[r]+(Math.random()<.37?" card-alt":"")+'"><span></span><span class="back"></span></li>';$("#gameboard .card").unbind("click"),$("#gameboard .cards").html(t).find(".card").bind("click",touchCard),covered=0,clicked=0}function touchCard(){if($(this).hasClass("card-found"))return;$(".card:not(.card-touched)").removeClass("card-touched"),animating||$(this).addClass("card-touched"),clicked===0&&(tick=-(new Date).getTime()),clicked++,$(".card-touched").size()>=x?checkCards():!animating&&covered<=x&&covered==$(".card-touched").size()&&checkCards($(this).attr("class").replace(/[^\d]+/g,""))}function checkCards(e){e=e||0;if(!e)for(var t=1;t<=mn;t++)if($(".card-touched.card-"+t).size()>=x){e=t;break}e>0&&foundCards(e),animating=!0,setTimeout(function(){$(".card").removeClass("card-touched"),animating=!1},750)}function foundCards(e){var t=$(".card-"+e).size();$(".card-"+e).delay(100).animate({opacity:0},320,function(){$(this).addClass("card-found").css("visibility","hidden"),t--;var r=newidx[parseInt(e)-1]+1;covered=$(".card:not(.card-found)").size(),t===0&&conf.activate&&typeof conf.activate=="function"&&conf.activate(r,logos[r-1],covered===0);if(covered===0){$("body").addClass("epic-win"),$(".win, .info").fadeIn(250),tick+=(new Date).getTime();var i=record(clicked,tick);$(".play-click").html("<h2>BONUS: "+i+"</h2> ( <b>"+clicked+"</b> clicks in <b>"+(tick/1e3).toFixed(1)+" seconds )")}else t===0&&setTimeout(turnBoard,1e3)})}function turnBoard(){$(".card:not(.card-found)").size()>x&&Math.random()<.25&&$("#gameboard").attr("class","gameboard gameboard-alt"+Math.ceil(Math.random()*2))}function resetBoard(){$("#gameboard").animate({opacity:0},400,function(){$(".win, .info").fadeOut(250),resetCards(),$("#activate .ginfo").size()>0&&$("#summary").append($("#activate .ginfo")),$("#gameboard").animate({opacity:1},400)})}function record(e,t){$(".play-record").hide();var n=450-(e-9)*10+Math.round(Math.max(2e4-t,0)/1e3)*20;if(window.localStorage){if(!localStorage["bonus-UT"]||parseInt(localStorage["bonus-UT"])<n)localStorage["bonus-UT"]=n,$(".play-record").show();localStorage.bonus=(localStorage.bonus?parseInt(localStorage.bonus,10)||0:0)+n;if(!localStorage["tick-UT"]||localStorage["tick-UT"]>t)localStorage["tick-UT"]=t;if(!localStorage["click-UT"]||localStorage["click-UT"]>e)localStorage["click-UT"]=e}return n}var newidx=[0,1,2,3,4],logos=newidx.slice(0),conf=window.QiPlayCONF||{},_SPRITE=conf._SPRITE||15,_TOP=Math.floor((106-(conf._HEIGHT||106))/2);Array.prototype.indexOf||(Array.prototype.indexOf=function(e,t){for(var n=t||0,r=this.length;n<r;n++)if(this[n]===e)return n;return-1});var m=3,n=3,mn=m*n,x=conf._MATCH||2,covered=0,clicked=0,tick=0;$(document).ready(function(){resetCards(),$(".play-start").click(function(){resetBoard()}),$("#activate").mouseup(function(){$(this).hide()}),$("#myrules b").html(x)});var animating;
+</script>
+</body>
+</html>

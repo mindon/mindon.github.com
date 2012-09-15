@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="mindon/at/gmail.com" site="http://mindon.github.com/" />
+    <title>
+Slot Machine
+    </title>
+
+    <style type="text/css">
+html, body {
+  font: 14pt/2em Tahoma,Arial,sans-serif;
+  background: #666;
+  color:#fff;
+  margin: 0;
+  padding: 0;
+}
+html * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+#gameboard {
+  width: 320px;
+  margin: 6px auto;
+  text-align: center;
+  overflow:hidden;
+}
+
+.bonus {
+  background: #999;
+  background: -moz-linear-gradient(top, #999 1%, #343 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#999), color-stop(100%,#343)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #999 1%,#343 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #999 1%,#343 100%); /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #999 1%,#343 100%); /* W3C */
+
+  padding-top: 8px;
+  padding-bottom: 16px;
+  cursor: default;
+}
+
+.bonus p {
+  margin:0;
+}
+
+#mybonus {
+  font-size: 33pt;
+  font-weight: bold;
+  color: #ff0;
+}
+
+#myspin {
+  width: 100%;
+  background: #c60;
+  font-size: 33pt;
+  height: 2em;
+  line-height: 2em;
+  cursor: pointer;
+  font-weight: bold;
+
+  background: -moz-linear-gradient(top, #dc0 0%, #c60 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dc0), color-stop(100%,#c60)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dc0 0%,#c60 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dc0 0%,#c60 100%); /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #dc0 0%,#c60 100%); /* W3C */
+}
+#myspin:active {
+  background: #f90;
+  color: #ff0;
+}
+
+#myspin.disabled {
+  background:#999;
+  color:#ff6;
+
+  background: -moz-linear-gradient(top, rgba(14,14,14,1) 0%, rgba(125,126,125,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(14,14,14,1)), color-stop(100%,rgba(125,126,125,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-8 */
+}
+
+#slots {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#slots div {
+  width: 106px;
+  height: 180px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#slot1, #slot3 {
+  margin: 0;
+}
+
+#slot2 {
+  margin: 0 1px;
+}
+
+.q {
+  width: 106px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.q li, .product {
+  margin:0;
+  padding:0;
+  background-repeat: none;
+}
+
+.product {
+  width:106px;
+  margin:16px auto;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.mask-top, .mask-bot {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  height: 35px;
+  background-color: #333;
+  position: absolute;
+}
+
+.mask-top {
+  top: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
+  border-bottom: 1px solid #999;
+
+}
+.mask-bot {
+  bottom: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-8 */
+  border-top: 1px solid #999;
+}
+
+#myfaq {
+  background-color: #666;
+  padding: 0 10px;
+  margin-left: 16px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: help;
+}
+
+#myhelp, #myintro {
+  position: absolute;
+  width: 320px;
+  height: 328px;
+  top: 50px;
+}
+#myhelp {
+  background: url(img/bonus.jpg) no-repeat 0 0;
+  display: none;
+}
+
+#myintro {
+  color: #000;
+  cursor: default;
+  display: none;
+  background: rgb(252,234,187); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-8 */
+}
+
+.notify {
+  font-size: 11pt;
+  color: #999;
+  text-align: center;
+  display: block;
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.notify b {
+  color: #ff0;
+}
+</style>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .mask-top, .mask-bot, #myspin.disabled, #myintro {
+       filter: none;
+    }
+    .mask-top {
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    }
+    .mask-bot {
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    }
+    #myintro {
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZWFiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZjY2Q0ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2Y4YjUwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYmRmOTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    }
+  </style>
+<![endif]-->
+  </head>
+<body>
+  <div id="gameboard">
+    <div class="bonus">
+      <p>Your Bonus<a id="myfaq">?</a></p>
+      <p id="mybonus">Welcome!</p>
+    </div>
+    <div id="slots"><div id="slot1"><img src="img/spin.gif" width="106" /><ul class="q"></ul></div><div id="slot2"><img src="img/spin.gif" width="106" /><ul class="q"></ul></div><div id="slot3"><img src="img/spin.gif" width="106" /><ul class="q"></ul></div><p class="mask-top"></p><p class="mask-bot"></p></div>
+    <div id="myspin" class="disabled"> SP!N </div>
+    <div id="myhelp"></div>
+    <div id="myintro"><h2>More Infomation</h2><div id="mydetail"></div><p>Learn more link ...</p><p>click to hide</p></div>
+  <a class="notify" href="http://weixin.qq.com/r/XHVhbhvEziWxhwoNnyB4">Add "<b>QiPlay</b>" to play more games</a>
+  </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript">
+var iw = ['products.jpg', 106]
+  , QiPlayCONF = {}
+  , qstr = window.location.search;
+if( /\?browser/i.test(qstr) ) {
+  iw = ['browsers.jpg', 100];
+  QiPlayCONF = {_SPRITE: 6, _WHEEL: 15, _KPI: 5, _HEIGHT: iw[1], _COST: 50};
+} else if( /\?reading/i.test(qstr) ) {
+  iw = ['reading.jpg', 106];
+  QiPlayCONF = {_SPRITE: 10, _WHEEL: 23, _KPI: 0, _HEIGHT: iw[1], _COST: 10};
+} else if( /\?star/i.test(qstr) ) {
+  iw = ['star.jpg', 106];
+  QiPlayCONF = {_SPRITE: 10, _WHEEL: 23, _KPI: 0, _HEIGHT: iw[1], _COST: 10};
+} else if( /\?media/i.test(qstr) ) {
+  iw = ['media.jpg', 106];
+  QiPlayCONF = {_SPRITE: 10, _WHEEL: 23, _KPI: 0, _HEIGHT: iw[1], _COST: 10};
+}
+
+
+$(document.getElementsByTagName('head')[0]).append('<style>.q li, .product{height: '+iw[1]+'px; background-image: url("img/'+iw[0]+'")}</style>');
+
+function booth(e){conf.view&&typeof conf.view=="function"?conf.view():($("#mydetail").html('<div class="product" style="background-position:-'+_WIDTH*e+'px 0;"></div>'),$("#myintro").show())}function rand(e,t){return Math.floor(Math.random()*e+(t||0))}function shuffle(e,t){var n="",r=[],i;for(i=0;i<t;i++)r[i]=-1;var s=Math.ceil(t/15),o=0;for(i=0;i<_SPRITE;i++)for(var u=0;u<1+(_KPI==i?1:rand(s));u++){if(o<t){do var a=rand(t);while(r[a]!=-1);r[a]=i,o++}if(o==t)break}for(i=0;i<t;i++)r[i]==-1&&(r[i]=rand(_SPRITE)),n+='<li style="background-position: -'+r[i]*_WIDTH+'px 0"></li>';return e.html(n),r}function spin(e,t){var n=spiv[e-1]=rand(_WHEEL);return t!==!0&&$("#slot"+e+" .q").css("top",-n*_HEIGHT+_OFFSET),n}function fin(e){$("#slot"+e+" img:first").hide(),$("#slot"+e+" .q").show().animate({top:-spiv[e-1]*_HEIGHT+_OFFSET},{duration:500,easing:"elasticOut",complete:function(){spinning--,spinning===0&&bonus()}})}function bonus(){slot1d[spiv[0]]===slot2d[spiv[1]]&&slot2d[spiv[1]]===slot3d[spiv[2]]?credit(slot1d[spiv[0]]==_KPI?1e3:500):slot1d[spiv[0]]===slot2d[spiv[1]]?credit(slot3d[spiv[2]]===_KPI?300:200):slot1d[spiv[0]]===_KPI&&slot2d[spiv[1]]===slot3d[spiv[2]]?credit(100):slot2d[spiv[1]]===_KPI&&slot1d[spiv[0]]===slot3d[spiv[2]]?credit(50):slot1d[spiv[0]]===_KPI||slot2d[spiv[1]]===_KPI||slot3d[spiv[2]]===_KPI?credit(20*((slot1d[spiv[0]]===_KPI?1:0)+(slot2d[spiv[1]]===1?_KPI:0)+(slot3d[spiv[2]]===_KPI?1:0))):(record(parseInt($("#mybonus").html(),10)),setTimeout(function(){$("#myspin").removeClass("disabled")},50))}function credit(e){var t=parseInt($("#mybonus").html(),10)||0,n=t+e;record(n),$("#mybonus").css("credit",t).animate({credit:e},{duration:360+e,easing:"easeOut",step:function(e){$(this).html(t+Math.round(e))},complete:function(){$(this).html(n),$("#myspin").removeClass("disabled")}})}function record(e){window.localStorage&&(typeof e=="number"?localStorage.bonus=e:($("#mybonus").html(localStorage.bonus||_SPARK),localStorage.bonus||(localStorage.bonus=_SPARK)))}$.extend($.easing,{bounceOut:function(e,t,n,r,i){return(t/=i)<1/2.75?r*7.5625*t*t+n:t<2/2.75?r*(7.5625*(t-=1.5/2.75)*t+.75)+n:t<2.5/2.75?r*(7.5625*(t-=2.25/2.75)*t+.9375)+n:r*(7.5625*(t-=2.625/2.75)*t+.984375)+n},easeOut:function(e,t,n,r,i){return-r*(t/=i)*(t-2)+n},elasticOut:function(e,t,n,r,i){var s=1.70158,o=0,u=r;if(t==0)return n;if((t/=i)==1)return n+r;o||(o=i*.3);if(u<Math.abs(r)){u=r;var s=o/4}else var s=o/(2*Math.PI)*Math.asin(r/u);return u*Math.pow(2,-10*t)*Math.sin((t*i-s)*2*Math.PI/o)+r+n}});var conf=window.QiPlayCONF||{},_SPRITE=conf._SPRITE||15,_KPI=typeof conf._KPI=="number"?conf._KPI:1,_WHEEL=conf._WHEEL||25,_SPARK=conf._SPARK||100,_WIDTH=conf._WIDTH||106,_HEIGHT=conf._HEIGHT||106,_OFFSET=37,_COST=conf._COST||10,slot1d=[],slot2d=[],slot3d=[],spiv=[0,0,0],spinning=0;$(document).ready(function(){/^\d+$/.test($("#mybonus").html())||$("#mybonus").html(_SPARK),_OFFSET=($("#slots").height()-_HEIGHT)/2,$("#myhelp, #myintro").hide().click(function(){$(this).hide()}),$(".bonus").click(function(){$("#myhelp").slideToggle()}),$("#slots .q").css("height",_HEIGHT*_WHEEL),$("#slots > div").find("img:first").hide(),slot1d=shuffle($("#slot1 .q"),_WHEEL),spin(1),slot2d=shuffle($("#slot2 .q"),_WHEEL),spin(2),slot3d=shuffle($("#slot3 .q"),_WHEEL),spin(3),record(),$("#slots").click(function(e){if(spinning>0)return;var t=$(this).offset(),n=e.clientX-t.left,r;n<107?r=slot1d[spiv[0]]:n<214?r=slot2d[spiv[1]]:r=slot3d[spiv[2]],booth(r)}),$("#myspin").removeClass("disabled").click(function(){var e=parseInt($("#mybonus").html(),10);$("#mybonus").html(e-_COST);if($(this).hasClass("disabled"))return!1;$(this).addClass("disabled"),$("#slots > div").find("img:first").show(),$("#slots .q").hide(),spin(1,!0),spin(2,!0),spin(3,!0),spinning=3,setTimeout(function(){fin(1)},700+rand(960)),setTimeout(function(){fin(2)},800+rand(850)),setTimeout(function(){fin(3)},750+rand(900))})});
+</script>
+</body>
+</html>
