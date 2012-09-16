@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-Air-Water-M-Sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-09-15T15:16:52+08:00</updated>
+  <updated>2012-09-16T22:29:58+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EyeWriter]]></title>
+    <link href="http://mindon.github.com/blog/2012/09/16/eyewriter/"/>
+    <updated>2012-09-16T20:19:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/09/16/eyewriter</id>
+    <content type="html"><![CDATA[<p>这两年对Open Source Hardware有点兴趣，不过也只是限于了解一丁点而已。知道 EyeWriter 是今天看到了TED分享--<strong>Mick Ebeling</strong>: <a href="http://www.ted.com/talks/lang/zh-cn/mick_ebeling_the_invention_that_unlocked_a_locked_in_artist.html">The invention that unlocked a locked-in artist</a>。这是个开源装置——是为了解决神经疾病ALS（肌肉萎缩性脊髓侧索硬化症）病人的表达问题而诞生的。</p>
+
+<p>EyeWriter 的项目网址是：<a href="">http://www.eyewriter.org/diy/</a></p>
+
+<!--more-->
+
+
+<p><img src="/images/blog/ew.jpg" alt="" /></p>
+
+<p>制作步骤可以参见：<a href="http://www.instructables.com/id/The-EyeWriter-20/">Instructables 网站的指引--英文</a></p>
+
+<blockquote><p> The EyeWriter software is two parts — an eye-tracking software designed for use with our low-cost glasses, and a drawing software designed for drawing with eye movements. The source code for the project is currently being hosted at: <a href="">https://github.com/eyewriter</a>.
+The software for both parts has been developed using openframeworks, a cross platform c++ library for creative development. In order to compile and develop the EyeWriter source code, you will need to download openframeworks (pre release v0.06). Documentation, setup guides and more information can be found at <a href="">http://openframeworks.cc</a>.</p></blockquote>
+
+<p>EyeWriter 的软件用到了 GSL (GNU Scientific Library) <a href="">https://github.com/LuaDist/gsl</a> 也是头一次听说。</p>
+
+<p>要是，这个设备不用接电脑，做成手机应用，配合音频口数据通信技术(Data Transfer over Audio Port)，整个系统应该能做得更轻量级。</p>
+
+<p><a href="http://labs.perceptdev.com/iphone-rs232-at-1200-baud-no-jailbreak-required-using-2-0-sdk/">iPhone RS232 at 1200 baud – no Jailbreak required, using 2.0 SDK</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TED: Danny Hillis]]></title>
@@ -128,40 +155,6 @@
 <p>Later, in 1961, a graduate student named Anatol Zhabotinsky rediscovered this reaction sequence; however, the results of these men's work were still not widely disseminated, and were not known in the West until a conference in Prague in 1968.</p>
 
 <p>http://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The eye limits the brain's learning potential]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/"/>
-    <updated>2012-04-26T08:12:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/26/the-eye-limits-the-brains-learning-potential</id>
-    <content type="html"><![CDATA[<p>The concept of a critical period for visual development early in life during which sensory experience is essential to normal neural development is now well established. However recent evidence suggests that a limited degree of plasticity remains after this period and well into adulthood. Here, we ask the question, "what limits the degree of plasticity in adulthood?" Although this limit has been assumed to be due to neural factors, we show that the optical quality of the retinal image ultimately limits the brain potential for change. We correct the high-order aberrations (HOAs) normally present in the eye's optics using adaptive optics, and reveal a greater degree of neuronal plasticity than previously appreciated.</p>
-
-<p>[<a href="http://www.nature.com/srep/2012/120413/srep00364/full/srep00364.html">read the full version article</a>]</p>
-
-<p>Nature集团新刊《Scientific Reports》于4月16日在线发表了中国科学技术大学脑功能与脑疾病中科院重点实验室及生命科学学院周逸峰研究小组和中国科学院成都光电技术研究所自适应光学重点实验室张雨东研究小组的合作研究成果。</p>
-
-<p>他们通过实验证明，即便是发育成熟之后正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于人眼的光学系统质量。在使用人眼自适应光学矫正仪提高人眼光学系统质量后进行知觉学习训练可以大幅度提高正常成人的视觉功能。</p>
-
-<!--more-->
-
-
-<p>视觉神经科学中的一个基本理论是“视皮层的发育具有关键期”，在关键期关闭之前视皮层较容易被改变，而关键期关闭之后则较难被改变。目前，很多知觉学习上的证据表明，即使是成年的视皮层也存在一定的可塑性。然而，对正常成人而言，这种在知觉学习过程中体现出的可塑性虽然存在，其程度却非常小。这极大的限制了知觉学习在提高成人视功能中应用。</p>
-
-<p>另一方面，视光学领域的研究者发现：人眼并非一个完美的光学系统，除了大家所熟知的近视、远视和散光等在内的低阶像差外，还存在大量的难以用普通光学手段测量和矫正的高阶像差。近些年来，使用原先应用在天文学上的自适应光学矫正技术，视光学领域的研究者们通过矫正人眼高阶像差部分提高了成人视功能。但对正常成人而言，这种视功能上的提高很微弱，远达不到理论期望值；且无法脱离自适应光学矫正仪器而存在，因此也无法有效应用于成人视力的提高中。</p>
-
-<p>尽管视知觉学习与人眼自适应光学这两个领域的研究者们对如何更好的提高视功能都报以极大的研究热情，但限于研究手段的单一，目前两方面的研究都在一定程度上达到了瓶颈。双方都迫切需要跨学科的先进技术与之结合来扩展思路。而到目前为止，结合自适应光学技术研究视知觉学习的学习效果、相关机制及应用的研究鲜有报道。在此背景下，周逸峰研究小组和张雨东研究小组将视知觉学习与人眼自适应光学技术相结合，取得了创新研究成果。</p>
-
-<p>他们比较了在矫正人眼高阶像差情况下（此时有较理想的人眼光学系统）对比度检测任务的知觉学习和不矫正人眼高阶像差情况下（普通的人眼光学系统）同样任务的知觉学习中，被试者对比敏感度和视力提高程度的差异。结果发现，在知觉学习训练后高阶像差矫正组在对比敏感度和视力上都有了显著的提高，而且这种提高至少可以维持5个月以上；而非高阶像差矫正组对比敏感度只有少量提高，视力水平无显著提高。</p>
-
-<p>他们的结果表明，发育关键期之后的正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于训练时人眼的光学系统成像质量。只有当高阶像差被矫正时，视觉系统的可塑性才能得到发挥。该发现可以用于探索新的治疗方法来提高视力低下患者的视功能。同时，还为结合人眼自适应光学矫正技术和视知觉学习来达到“超视力”提供了可能。</p>
-
-<p>这项研究工作是在国家重点基础研究发展计划973项目、国家自然科学基金重点项目、成都光电所前沿研究项目等基金的共同资助下完成。加拿大McGill大学视觉研究所所长Robert Hess教授一起合作完成了部分实验设计、数据处理及论文写作工作。本工作的技术部分于2011年9月20日获得两项美国发明专利授权。</p>
-
-<p><a href="http://biox.ustc.edu.cn/xydt/201204/t20120417_133360.html">来源 - 中科大生命学院</a></p>
-
-<p><a href="http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp?recid=CN200910262470.4&amp;leixin=fmzl&amp;title=%C8%CB%D1%DB%D7%D4%CA%CA%D3%A6%B9%E2%D1%A7%CA%D3%D6%AA%BE%F5%D1%A7%CF%B0%D1%B5%C1%B7%B7%BD%B7%A8%BA%CD%D1%A7%CF%B0%D1%B5%C1%B7%D2%C7">国家专利链接</a></p>
 ]]></content>
   </entry>
   
