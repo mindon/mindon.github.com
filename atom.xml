@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-09-16T22:29:58+08:00</updated>
+  <updated>2012-09-29T00:17:01+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -196,7 +196,7 @@ The software for both parts has been developed using openframeworks, a cross pla
 </ul>
 
 
-<p>Today, problem 4. and 5. found. and another issue is 8 hours charging only reaches to 65%&#8230; :-(</p>
+<p>Today, problem 4. and 5. found. and another issue is 8 hours charging (USB then Plug) only reaches to 65%&#8230; :-(</p>
 
 <p><img src="http://mindon.github.com/images/blog/nexus/n7-charge.png" alt="" /></p>
 
