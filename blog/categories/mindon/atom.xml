@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-09T07:26:10+08:00</updated>
+  <updated>2012-10-11T07:17:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[梦惊醒：末日降临]]></title>
+    <link href="http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream/"/>
+    <updated>2012-10-11T06:55:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream</id>
+    <content type="html"><![CDATA[<p>先是置身一地面结构复杂但并不大的一块斜坡，大家（同事）在玩一种钢球类游戏，斜坡本身是游戏场地。后来聊到双曲线什么的。忘了是如何切换到看天上千变万化的快速变化的云，跟一个不是那么熟的好像是同事的人说起天气的不可预测性问题，天气预报是需要不断调整的。非常突然地，看到云层后的背景中闪现现了一抹颜色，一小段橘色，形如彩虹片段垂直的 - 显得异常不自然。正在纳闷中，更不可思议的东西出现在快速移动的云层后的背景上了 - 一个纯黑色的圆，带白边（和自己平时用的矢量绘图软件画的黑圆无异）。感觉有点日全食的形象，只不过黑圆稍大。黑圆出现后一瞬间，大地颤抖，大家楞了一下，闪过我脑海的是 - 被类似巨型激光武器瞄准了？！然而云层后晃动着更多大小不一样的类似黑圆，太诡异了，大地振晃地越发激烈。人群惊慌奔跑着（在一个缓斜坡的绿草地往下坡方向），而我边跑边拿出Nexus 7来想拍下天空的异状 - 末日的景象，奇怪着摄像头画面没有被可能的强电磁场干扰，只是我没按到开始录制或拍照的按键。就i接着就在末日的惊恐中吓醒了。</p>
+
+<p><img src="/images/blog/end.jpg" alt="" /></p>
+
+<p>头一次梦到末日场景，末日降临得异常突然并且简单。2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[社交关系的潜能]]></title>
@@ -154,89 +167,6 @@ The software for both parts has been developed using openframeworks, a cross pla
 <p><img src="/images/blog/tai-chi.jpg" alt="" /></p>
 
 <p>Same componets with different size &amp; different status make up a perfect tai-chi. Also the real complex world.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nexus 7 Issues]]></title>
-    <link href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/"/>
-    <updated>2012-09-05T22:56:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play</id>
-    <content type="html"><![CDATA[<p>I bought <strong>Nexus 7</strong> from a online shop on <strong>taobao</strong> at July. It was got from Google Play from US.</p>
-
-<p>An android device with hardware: NFC, GPS, Camera, Motion detect, ... latest app from Google, that is what I want.</p>
-
-<p>I got my Nexus 7 before August. I love it before and when I touch it. It looks great, runs fast &amp; smooth.</p>
-
-<p><img src="/images/blog/nexus/n7-love.png" alt="" /></p>
-
-<p>And I still love it now, even it will be ill sometimes.</p>
-
-<ul>
-<li>Screen Touch Problem</li>
-</ul>
-
-
-<p>It doesn't work well sometimes, and could be fixed by switching it to sleep mode and wake it back immediately.</p>
-
-<p><img src="/images/blog/nexus/n7-touch.png" alt="" /></p>
-
-<ul>
-<li>Cannot see and run Google Play Books outside US.</li>
-</ul>
-
-
-<p>I did not activate the device with an US VPN, that made these Books &amp; Magazine disabled from Nexus 7. It make me very upset. But I don't want to root it any way.</p>
-
-<p><img src="/images/blog/nexus/n7-app.png" alt="" /></p>
-
-<!--more-->
-
-
-<ul>
-<li>Flicker when wifi signal is poor</li>
-</ul>
-
-
-<p>At first, I thought it was from the auto-adjust of the lightness. But Google result tells me, the poor wifi makes it happen.</p>
-
-<p><img src="/images/blog/nexus/n7-flicker.gif" alt="" /></p>
-
-<ul>
-<li>Zero power status</li>
-</ul>
-
-
-<p>When its power is zero, the charging does not help the device start. Maybe there's some problem to charge the battery, 10 minutes charge does not help. Nexus 7 cannot start sometimes in low power.</p>
-
-<p><img src="/images/blog/nexus/n7-power.png" alt="" /></p>
-
-<ul>
-<li>Fail to start when poor power, even charging</li>
-</ul>
-
-
-<p>Maybe battery charge is failed, After the Nexus 7 ( It's hard to make it sometimes ), the screen turns into scratch lines ...</p>
-
-<p><img src="/images/blog/nexus/n7-dash.png" alt="" /></p>
-
-<ul>
-<li>Slow battery charge</li>
-</ul>
-
-
-<p>Today, problem 4. and 5. found. and another issue is 8 hours charging (USB then Plug) only reaches to 65%... :-(</p>
-
-<p><img src="/images/blog/nexus/n7-charge.png" alt="" /></p>
-
-<ul>
-<li>It seems the screen working fine when the battery with 10%+ power.</li>
-</ul>
-
-
-<p>Even with these problems, It's still an amazing android device for me.</p>
-
-<p>Maybe WP8 tablet could be better, or Kindle Fire 2 may be better. But the Nexus 7 is still a device worth to own.</p>
 ]]></content>
   </entry>
   

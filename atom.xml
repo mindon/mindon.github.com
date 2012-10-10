@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-09T07:26:10+08:00</updated>
+  <updated>2012-10-11T07:15:56+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[梦惊醒：末日降临]]></title>
+    <link href="http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream/"/>
+    <updated>2012-10-11T06:55:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream</id>
+    <content type="html"><![CDATA[<p>先是置身一地面结构复杂但并不大的一块斜坡，大家（同事）在玩一种钢球类游戏，斜坡本身是游戏场地。后来聊到双曲线什么的。忘了是如何切换到看天上千变万化的快速变化的云，跟一个不是那么熟的好像是同事的人说起天气的不可预测性问题，天气预报是需要不断调整的。非常突然地，看到云层后的背景中闪现现了一抹颜色，一小段橘色，形如彩虹片段垂直的 - 显得异常不自然。正在纳闷中，更不可思议的东西出现在快速移动的云层后的背景上了 - 一个纯黑色的圆，带白边（和自己平时用的矢量绘图软件画的黑圆无异）。感觉有点日全食的形象，只不过黑圆稍大。黑圆出现后一瞬间，大地颤抖，大家楞了一下，闪过我脑海的是 - 被类似巨型激光武器瞄准了？！然而云层后晃动着更多大小不一样的类似黑圆，太诡异了，大地振晃地越发激烈。人群惊慌奔跑着（在一个缓斜坡的绿草地往下坡方向），而我边跑边拿出Nexus 7来想拍下天空的异状 - 末日的景象，奇怪着摄像头画面没有被可能的强电磁场干扰，只是我没按到开始录制或拍照的按键。就i接着就在末日的惊恐中吓醒了。</p>
+
+<p><img src="http://mindon.github.com/images/blog/end.jpg" alt="" /></p>
+
+<p>头一次梦到末日场景，末日降临得异常突然并且简单。2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[社交关系的潜能]]></title>
@@ -662,54 +675,6 @@ It&#8217;s a pitty, you are using a browser out of the date.
 <p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
 
 <p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/"/>
-    <updated>2012-06-12T23:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages</id>
-    <content type="html"><![CDATA[<p>When we want our product &#8211; a webpage for example &#8211; servered in multi-languages, what would we do?</p>
-
-<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&#8217;s a hard and dirty work.</p>
-
-<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
-
-<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &#8230;</p>
-
-<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
-
-<!--more-->
-
-
-<p><img src="http://mindon.github.com/images/blog/multi-langs.png" alt="" /></p>
-
-<p>(pro: proposition, con: contradition)</p>
-
-<h2>Template</h2>
-
-<ul>
-<li><strong>Raw language text as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
-
-<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
-
-<h1>q/s#: Could we make maual-process auto?</h1>
-
-<ul>
-<li><strong>Named ID as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Avoid repeat work on same phrases or sentences.</p>
-
-<p>con: Named IDs&#8217; management, unintuitive templates using named IDs.</p>
-
-<h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
 ]]></content>
   </entry>
   
