@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-11T07:15:56+08:00</updated>
+  <updated>2012-10-14T11:14:15+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[我的移动电子产品]]></title>
+    <link href="http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices/"/>
+    <updated>2012-10-14T10:27:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices</id>
+    <content type="html"><![CDATA[<p>首先，我没有买iPhone，没有<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iphone%205">iPhone 5</a>，也没有iPhone 4S，没有iPhone 4，连iPhone 3都没。因为我只购买自己需要的移动电子产品。iPhone目前都没在考虑之列。</p>
+
+<p>iOS设备的优越体验是不容置疑的，这是为什么全世界有那么多人为之疯狂的缘由。我在自己的iPod Touch 3(8G, 2ng的硬件)上也能感受得到，最直接的感受来自输入法——即使是Google的Nexus 7里的输入法，和iOS里的输入法也是有些差距的。</p>
+
+<p>对于iPhone，我一直异想天开地提倡基本通讯（电话/短信）和其他功能的用电分离——当然，至少目前都没有迹象说Apple会这么设计。于是，我和Aby目前的方案都是Nokia普通手机 + iTouch（iPod Touch的简称）。这样组合的好处是：你不需要担心没电导致电话和短信这样的基本通讯缺失；另外一方面可以无忧无虑地享受iTouch带来的娱乐和wifi网络功能——其实3G或者4G功能使用场合并不多，我们台湾自由行时候就是wifi + 网络电话解决的通讯问题，也没有感觉不方便什么的。</p>
+
+<p>这是我目前装备的移动电子产品：Nokia 5000，iPod Touch 2.5（3 with 3ng hardware），Kindle Touch 和 Nexus 7。</p>
+
+<p><img src="http://mindon.github.com/images/blog/mindon-devices.jpg" alt="" /></p>
+
+<!--more-->
+
+
+<h2>Nokia 5000</h2>
+
+<p>(Nokia 5000](http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000) 当初花大概 ~900RMB 左右买的，现在这种手机价格已经很低了。很满意它的电池、电话和短信功能，拍照用到微博上也是足够的；不足的地方是容量真的很小——即使对于短信和简单拍照来说都不足够。（我的这个手机拍照也有点问题了，效果见“<a href="http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city/">早8点，城市活跃点</a>”）</p>
+
+<h2>iPod Touch</h2>
+
+<p>苹果公司(Apple Inc.)的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iPod%20Touch">iPod Touch</a> 当年花了 ~1,800RMB 购买。已经使用数年，记事/记账/阅读/上网/娱乐（视频/音乐/照片/游戏）是最常用的功能。还有开发测试用途 :-p iTouch小巧，4代更薄。使用体验确实好。不过比较烦App Store的速度和体验，Web App对比原生App差距还是不小的。</p>
+
+<h2>Kindle Touch</h2>
+
+<p>Amazon的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Kindle">Kindle</a>是使用电子墨水的设备，跟其它电子产品不一样，显示效果就是打印在纸上的效果——刚接触这个设备的时候，你会以为屏幕上贴的广告纸没撕下来 :-D 现在的新版<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Kindle%20Whitepaper">Kindle Whitepaper</a>改进了很多，增加了前置光源，非常棒的阅读器。<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=%E7%94%B5%E5%AD%90%E5%A2%A8%E6%B0%B4">电子墨水</a>设备是需要外来光源照明的，跟读纸质书是一样的，只不过它的墨水是可以变化的，印在纸上的墨水是固定的。电池很耐用，充一次就可以用很久。非常喜欢这个设备，花了800RMB买的，超值。</p>
+
+<h2>Nexus 7</h2>
+
+<p>Google的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nexus%207">Nexus 7</a>由于配备了GPS全球定位，NFC近场感应（目前应用主要是读公交卡余额：深圳通，八达通&#8230;），具备重力感应器，速度及磁场感应得各种功能。虽然硬件上有点缺陷（参见“<a href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/">Nexus 7 Issues</a>”），但对于一台花 1,700RMB就能买到的设备来说，是超值了的。Nexus 7的屏幕大小、单手握感，用于阅读、上网、图片和文档操作都是感觉不错的选择。</p>
+
+<p>这一堆设备加起来的价钱也就大概一台iPhone 5的价钱，对比起 iPhone 5 来，我还是喜欢这几台和需求吻合得更好的电子产品。还是那句话，萝卜白菜各有所爱。我也喜欢最新的设备，不过更喜欢用够“值”的产品。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[早8点，城市活跃点]]></title>
+    <link href="http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city/"/>
+    <updated>2012-10-14T07:53:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city</id>
+    <content type="html"><![CDATA[<p>对于一个现代城市来说，车这种垃圾以及其产生的噪声，几乎就是大多现代城市的特征。而匆匆忙忙的节奏便是大多城市的脉搏——特别像是深圳这样的都市。</p>
+
+<p>然而，即使是深圳。也还有一种最充满活力的地方：公园。</p>
+
+<p>您如果在一个城市里需要感受活力，早上8点钟，走进离您最近的一个大型公园——就能感受到城市里最强劲的活力。</p>
+
+<p>荔香公园，就是这么一个地方。</p>
+
+<p><img src="http://mindon.github.com/images/blog/park/yoga.jpg" alt="" /></p>
+
+<!--more-->
+
+
+<p>早上8点，荔香公园里各式人群，熙熙攘攘：跑步、打球（篮球、羽毛球居多）、广场舞、太极、空竹&#8230; 大家都在享受着自己的锻炼方式，不管是男女老少</p>
+
+<p><img src="http://mindon.github.com/images/blog/park/diabolo-g1.jpg" alt="" /></p>
+
+<p><img src="http://mindon.github.com/images/blog/park/diabolo-g2.jpg" alt="" /></p>
+
+<p>其实世界是从太阳升起那一刻便苏醒过来的。</p>
+
+<p>周末的公园，更是一个值得让你早起去体验的地方，不管你身在何处。</p>
+
+<p>(注：配图是用我的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000">Nokia 5000</a>拍的, @<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=%E6%B7%B1%E5%9C%B3%20%E8%8D%94%E9%A6%99%E5%85%AC%E5%9B%AD">荔香公园</a>)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[梦惊醒：末日降临]]></title>
@@ -628,53 +698,6 @@ It&#8217;s a pitty, you are using a browser out of the date.
 <p>或许，那些自言自语的人们只不过在跟他们可以通话的对象说话，这些说话对象可能是幻象，或者想象力更丰富一点——是另外一个世界的，甚至是可以通过脑电波交流的外星人。（医学对精神失常的判别是绝对有严重问题的，正常人放到精神病院也会成为精神病，这个事情不用多做探讨——毕竟人类能给一切判断找到“非常合理”的解释。）</p>
 
 <p>总之，<strong>幻象</strong> —— 是能令任何人想起来都从内心深处感觉到恐惧的东西，你还能想到比这个更可怕的吗？</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solve NodeJS 0.8 Build Problem]]></title>
-    <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
-    <updated>2012-07-20T22:04:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
-    <content type="html"><![CDATA[<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
-
-<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming&#8230;</p>
-
-<p>Here&#8217;s a few pre-conditions for a successful make of NodeJS v0.8+:</p>
-
-<ol>
-<li><p>GNU make 3.8.1+</p></li>
-<li><p>Python 2.6 or 2.7</p></li>
-<li><p>setenv FLOCK or export FLOCK</p></li>
-</ol>
-
-
-<p>setenv LINK g++ or export LINK=g++</p>
-
-<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lost in the Tech Way]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way/"/>
-    <updated>2012-06-14T22:40:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/14/lost-in-the-tech-way</id>
-    <content type="html"><![CDATA[<p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
-
-<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
-
-<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
-
-<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
-
-<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
-
-<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
-
-<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
-
-<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
 ]]></content>
   </entry>
   
