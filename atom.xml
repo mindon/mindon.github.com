@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-14T11:14:15+08:00</updated>
+  <updated>2012-10-17T08:31:36+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -18,13 +18,13 @@
     <link href="http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices/"/>
     <updated>2012-10-14T10:27:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices</id>
-    <content type="html"><![CDATA[<p>首先，我没有买iPhone，没有<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iphone%205">iPhone 5</a>，也没有iPhone 4S，没有iPhone 4，连iPhone 3都没。因为我只购买自己需要的移动电子产品。iPhone目前都没在考虑之列。</p>
+    <content type="html"><![CDATA[<p>首先，我没有<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iphone%205">iPhone 5</a>，也没有iPhone 4S，没有iPhone 4，连iPhone 3都没。因为我只购买自己需要的移动电子产品。iPhone目前都没在考虑之列。</p>
 
 <p>iOS设备的优越体验是不容置疑的，这是为什么全世界有那么多人为之疯狂的缘由。我在自己的iPod Touch 3(8G, 2ng的硬件)上也能感受得到，最直接的感受来自输入法——即使是Google的Nexus 7里的输入法，和iOS里的输入法也是有些差距的。</p>
 
 <p>对于iPhone，我一直异想天开地提倡基本通讯（电话/短信）和其他功能的用电分离——当然，至少目前都没有迹象说Apple会这么设计。于是，我和Aby目前的方案都是Nokia普通手机 + iTouch（iPod Touch的简称）。这样组合的好处是：你不需要担心没电导致电话和短信这样的基本通讯缺失；另外一方面可以无忧无虑地享受iTouch带来的娱乐和wifi网络功能——其实3G或者4G功能使用场合并不多，我们台湾自由行时候就是wifi + 网络电话解决的通讯问题，也没有感觉不方便什么的。</p>
 
-<p>这是我目前装备的移动电子产品：Nokia 5000，iPod Touch 2.5（3 with 3ng hardware），Kindle Touch 和 Nexus 7。</p>
+<p>这是我目前装备的移动电子产品：Nokia 5000，iPod Touch 2.5（3 with 2ng hardware），Kindle Touch 和 Nexus 7。</p>
 
 <p><img src="http://mindon.github.com/images/blog/mindon-devices.jpg" alt="" /></p>
 
@@ -33,7 +33,7 @@
 
 <h2>Nokia 5000</h2>
 
-<p>(Nokia 5000](http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000) 当初花大概 ~900RMB 左右买的，现在这种手机价格已经很低了。很满意它的电池、电话和短信功能，拍照用到微博上也是足够的；不足的地方是容量真的很小——即使对于短信和简单拍照来说都不足够。（我的这个手机拍照也有点问题了，效果见“<a href="http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city/">早8点，城市活跃点</a>”）</p>
+<p><a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000">Nokia 5000</a> 当初花大概 ~900RMB 左右买的，现在这种手机价格已经很低了。很满意它的电池、电话和短信功能，拍照用到微博上也是足够的；不足的地方是容量真的很小——即使对于短信和简单拍照来说都不足够。（我的这个手机拍照也有点问题了，效果见“<a href="http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city/">早8点，城市活跃点</a>”）</p>
 
 <h2>iPod Touch</h2>
 
@@ -48,6 +48,8 @@
 <p>Google的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nexus%207">Nexus 7</a>由于配备了GPS全球定位，NFC近场感应（目前应用主要是读公交卡余额：深圳通，八达通&#8230;），具备重力感应器，速度及磁场感应得各种功能。虽然硬件上有点缺陷（参见“<a href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/">Nexus 7 Issues</a>”），但对于一台花 1,700RMB就能买到的设备来说，是超值了的。Nexus 7的屏幕大小、单手握感，用于阅读、上网、图片和文档操作都是感觉不错的选择。</p>
 
 <p>这一堆设备加起来的价钱也就大概一台iPhone 5的价钱，对比起 iPhone 5 来，我还是喜欢这几台和需求吻合得更好的电子产品。还是那句话，萝卜白菜各有所爱。我也喜欢最新的设备，不过更喜欢用够“值”的产品。</p>
+
+<p>（微软Microsoft的Surface平板，Apple的iPad mini - 10月23日发布会也是不错的选择，不过价钱铁定没Nexus 7实惠啦）</p>
 ]]></content>
   </entry>
   
@@ -88,11 +90,17 @@
     <link href="http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream/"/>
     <updated>2012-10-11T06:55:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream</id>
-    <content type="html"><![CDATA[<p>先是置身一地面结构复杂但并不大的一块斜坡，大家（同事）在玩一种钢球类游戏，斜坡本身是游戏场地。后来聊到双曲线什么的。忘了是如何切换到看天上千变万化的快速变化的云，跟一个不是那么熟的好像是同事的人说起天气的不可预测性问题，天气预报是需要不断调整的。非常突然地，看到云层后的背景中闪现现了一抹颜色，一小段橘色，形如彩虹片段垂直的 - 显得异常不自然。正在纳闷中，更不可思议的东西出现在快速移动的云层后的背景上了 - 一个纯黑色的圆，带白边（和自己平时用的矢量绘图软件画的黑圆无异）。感觉有点日全食的形象，只不过黑圆稍大。黑圆出现后一瞬间，大地颤抖，大家楞了一下，闪过我脑海的是 - 被类似巨型激光武器瞄准了？！然而云层后晃动着更多大小不一样的类似黑圆，太诡异了，大地振晃地越发激烈。人群惊慌奔跑着（在一个缓斜坡的绿草地往下坡方向），而我边跑边拿出Nexus 7来想拍下天空的异状 - 末日的景象，奇怪着摄像头画面没有被可能的强电磁场干扰，只是我没按到开始录制或拍照的按键。就i接着就在末日的惊恐中吓醒了。</p>
+    <content type="html"><![CDATA[<p>先是置身一地面结构复杂但并不大的一块斜坡，大家（同事）在玩一种钢球类游戏，斜坡本身是游戏场地。后来聊到双曲线什么的。忘了是如何切换到看天上千变万化的快速变化的云，跟一个不是那么熟的好像是同事的人说起天气的不可预测性问题，天气预报是需要不断调整的。</p>
+
+<p>非常突然地，看到云层后的背景中闪现了一抹颜色，一小段橘色，形如彩虹片段垂直的 - 显得异常不自然。</p>
+
+<p>正在纳闷中，更不可思议的东西出现在快速移动的云层后的背景上了 - 一个纯黑色的圆，带白边（和自己平时用的矢量绘图软件画的黑圆无异）。感觉有点日全食的形象，只不过黑圆稍大。黑圆出现后一瞬间，大地颤抖，大家楞了一下，闪过我脑海的是 - 地球被类似外星巨型激光武器击中了？！然而云层后快速晃动出更多大小不一样的类似黑圆，太诡异了！大地振晃地越发激烈。人群惊慌奔跑着（在一个缓斜坡的绿草地往下坡方向），而我边跑边拿出Nexus 7来想录下天空的异状 - 末日的景象，同时纳闷：摄像头画面没有被可能的强电磁场干扰？而我却忘了按开始录制或拍照的按键。接着就在末日的惊恐中吓醒了。</p>
 
 <p><img src="http://mindon.github.com/images/blog/end.jpg" alt="" /></p>
 
-<p>头一次梦到末日场景，末日降临得异常突然并且简单。2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
+<p>头一次梦到末日场景，末日降临得异常突然并且简单。</p>
+
+<p>2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
 ]]></content>
   </entry>
   
