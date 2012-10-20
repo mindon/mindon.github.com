@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。 目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL &hellip;">
+  <meta name="description" content="Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,166 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/simple-auto-resize-images-in-web-pages/">Simple Auto-Resize Images in Web Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-21T10:34:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
+
+<p>Use this meta in your HTML header could reisze the web page to the device&#8217;s resolution.</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code></pre>
+
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
+
+<p>Here&#8217;s the simple HTML code:</p>
+
+<pre><code>&lt;style type="text/css"&gt;img {display:block}&lt;/style&gt;
+&lt;table width="100%" style="table-layout:fixed"&gt;
+  &lt;tr&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/the-most-terrible-thing/">The Most Terrible Thing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-21T09:32:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>最可怕的是什么？</h2>
+
+<p>其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。</p>
+
+<p>现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。</p>
+
+<p>有一个词能非常清楚地对最可怕的东西做一个总结，那就是——<strong>幻象</strong>。</p>
+
+<p>当你在高山峻岭间驾车时，看到了一条其实并不存在的路，……</p>
+
+<p>当你站在楼顶边缘，却看到眼前是一片广阔草原，……</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/21/the-most-terrible-thing/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/20/solve-nodejs-0.8-build-problem/">Solve NodeJS 0.8 Build Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T22:04:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
+
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming&#8230;</p>
+
+<p>Here&#8217;s a few pre-conditions for a successful make of NodeJS v0.8+:</p>
+
+<ol>
+<li><p>GNU make 3.8.1+</p></li>
+<li><p>Python 2.6 or 2.7</p></li>
+<li><p>setenv FLOCK or export FLOCK</p></li>
+</ol>
+
+
+<p>setenv LINK g++ or export LINK=g++</p>
+
+<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -351,167 +511,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">中国象棋棋谱生成器(CD插件)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-02T19:06:00+08:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
-
-<p>可按棋谱生成矢量图。</p>
-
-<p><img src="/soft/chinese-chess.png" alt="" /></p>
-
-<p>下载：<a href="/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
-
-<h2>使用说明：</h2>
-
-<p>  1，把gms文件放到draw/GMS/文件夹</p>
-
-<p>  2，运行CorelDraw</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Lunar Generator Plug-in for CorelDraw</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T15:40:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>麦盾月历生成器</h2>
-
-<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
-
-<p>原创产品，别的地方找不到的！</p>
-
-<p><img src="/images/blog/soft/lunar.png" alt="" /></p>
-
-<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">XZoom: A Simple Screen Zoomer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>麥盾屏幕放大鏡</strong> （<a href="/soft/xzoom.zip">下载</a>）</p>
-
-<p>这个小工具历史比“<a href="/blog/2012/05/19/letup-take-a-break/">Letup休息提醒器</a>”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。</p>
-
-<p>其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了，采用了隐藏-重现的方式获取屏幕最新状态。</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。绿色，无需安装，点击运行。（win 2k/xp, win7 支持）</p>
-
-<p>系統圖標點擊左鍵打開設置界面</p>
-
-<p><img src="/images/blog/soft/xzoom-settings.png" alt="" /></p>
-
-<p><strong>支持操作</strong></p>
-
-<ul>
-<li><p>设置放大区域尺寸；</p></li>
-<li><p>Alt + Space Bar 顯示或隱藏放大鏡；</p></li>
-</ul>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -544,7 +543,7 @@
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 34 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 37 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 23 )</li>
 
@@ -561,6 +560,18 @@
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/20/street-lights-in-the-daylight/">白天的路灯</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/20/light-up-the-leaf-with-sunlight/">被阳光敲亮的叶子</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/20/walking-to-work/">走路上班的逆向足迹</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/14/mindon-mobile-devices/">我的移动电子产品</a>
@@ -588,18 +599,6 @@
     
       <li class="post">
         <a href="/blog/2012/09/09/genius-on-the-left-madness-on-the-right/">天才在左，疯子在右</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/09/how-to-make-a-tai-chi/">How to make a Tai-Chi</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/05/nexus-7-from-google-play/">Nexus 7 Issues</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/28/css3-tai-chi/">CSS3 Tai-Chi Diagram</a>
       </li>
     
   </ul>
