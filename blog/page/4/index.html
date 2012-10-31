@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes &hellip;">
+  <meta name="description" content="说到再生，可能大家首先会想到的是壁虎的尾巴，或是蝾螈这类爬行动物。关于这个话题，曾看过TED的一个演讲： Alan Russell: The potential of regenerative medicine - 再生医学 再生对于人类来说是很神奇的现象。对于植物，这种能力是司空见惯的。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/regeneration-of-a-plant/">一棵植物的再生能力</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T08:02:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>说到再生，可能大家首先会想到的是壁虎的尾巴，或是蝾螈这类爬行动物。关于这个话题，曾看过TED的一个演讲：</p>
+
+<p><a href="http://www.ted.com/talks/lang/zh-cn/alan_russell_on_regenerating_our_bodies.html">Alan Russell: The potential of regenerative medicine - 再生医学</a></p>
+
+<p>再生对于人类来说是很神奇的现象。对于植物，这种能力是司空见惯的。</p>
+
+<p>上个星期台风“韦森特”来袭，造成深圳市11.5万棵树受损。我们家阳台长了好几个星期的一株淮山也受到了重创：这株爬了一米都高的植物，大部分叶子都被那个晚上的狂风撕掉了。开始我有点担心，失去了那么大部分叶子，这株细细的藤类植物供水及光合作用一定会跟不上，可能会难以维持下去了。</p>
+
+<p>然而，过了若干天之后，就在十余个叶子被刮掉的地方，又出现了嫩芽，并慢慢长成小小的新叶子…</p>
+
+<p>这也是个神奇的事情：它是怎么察觉叶子没了？又怎么启动的修复机制？</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/08/02/regeneration-of-a-plant/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -407,110 +458,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Zettabyte FileSystem: ZFS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-08T10:50:00+08:00" pubdate data-updated="true">Jun 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。</p>
-
-<p>因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— Joyent已经把这个基于Illumos的操作系统开源了。（2010 年 8 月 3 日，illumos 正式可用。「Illumos」这个词来自 Illuminare，也即拉丁语的 Illuminate，「照明、照亮」的意思。illumos 项目的最终目标有两个：一是使用开源代码取代所有仍在 OpenSolaris 使用的专有代码，二是围绕之前的OpenSolaris 代码库建立一个独立的社区。）</p>
-
-<p>SmartOS由Illumos内核（包括ZFS，DTrace，Zones，OS级虚拟化以及下一代KVM）、BSD包管理器和GNU工具链组成。【<a href="https://github.com/joyent/smartos-live">源码</a>】,【<a href="https://download.joyent.com/pub/iso/">Live ISO</a>】</p>
-
-<h2>Why SmartOS?</h2>
-
-<ul>
-<li>Scale as fast and big as you need</li>
-</ul>
-
-
-<p>SmartOS is a hypervisor lean enough to run entirely in memory, powerful enough to run as much as you want to throw at it. Provisioning is blindingly fast, thanks to zones and ZFS file system creation.</p>
-
-<ul>
-<li>Trust it to keep your data safe</li>
-</ul>
-
-
-<p>The ZFS file system guarantees data integrity, with particular emphasis on preventing silent data corruption.</p>
-
-<ul>
-<li>Keep your system secure with &#8220;double hulled&#8221; virtualization</li>
-</ul>
-
-
-<p>OS virtualization with highly secure sparse zones (most system software is read-only), and KVM for legacy apps, provide the most secure virtualization on the market.</p>
-
-<ul>
-<li>Rely on It</li>
-</ul>
-
-
-<p>Based on the <a href="http://illumos.org/">illumos</a> kernel, a descendant of Solaris - the most trusted enterprise operating system in computing history. Additionally, SmartOS runs from a live image: there&#8217;s no such thing as a failed upgrade when you can simply roll back to an earlier image.</p>
-
-<ul>
-<li>Use and extend freely: it’s open source</li>
-</ul>
-
-
-<p>SmartOS is and will remain <a href="http://smartos.org/cddl/">open source</a>. Joyent contributes <a href="https://github.com/joyent/smartos-live">our core kernel</a> work to the <a href="http://illumos.org/">illumos</a> project.</p>
-
-<ul>
-<li>Manage resources better</li>
-</ul>
-
-
-<p>The Service Management Facility (SMF) helps you recover more quickly from system failures and manage through service slowdowns. Fair share scheduling, CPU caps, and disk I/O throttling ensure good neighbor behavior in massively multi-tenant environments.</p>
-
-<ul>
-<li>See what’s going on throughout the software stack, in real time</li>
-</ul>
-
-
-<p>When something doesn’t behave as it should, you need to be able to find out quickly what is wrong and why. <a href="http://wiki.smartos.org/display/DOC/DTrace+Resources">Dynamic tracing</a> lets you see everything that&#8217;s happening throughout the software stack - safely, in real time, in production.</p>
-
-<h2>ZFS特性介绍(转载)</h2>
-
-<p><img src="/images/blog/zfstour.png" alt="" /></p>
-
-<p>from <a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/source">http://hub.opensolaris.org/bin/view/Community+Group+zfs/source</a></p>
-
-<p>ZFS是第一个128位的文件系统，同时ZFS又被Sun Microsystems称作史上最后一个文件系统。因为这个文件系统含有多项创新技术，不仅成功地解决现有文件系统的问题和陋习，而且前瞻性地考量了未来对存储空间的需求，单个文件系统可以达到256 quadrillion（264） Zettabytes（221）。ZFS不仅符合POSIX文件系统的标准，而且提供了许多高级功能比如：Quota(配额)，Reservation(预留), Compression(压缩)， Snapshot(快照)，Clone（克隆）等。如果你还在坚持使用现有32位或者64位的文件系统，如果你还在“痛并不快乐着”地用着各式各样的Volume Manager，那就很值得看看这里列出的使用ZFS的十条理由。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -543,9 +490,9 @@
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 37 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 38 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 23 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 24 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
@@ -560,6 +507,10 @@
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/31/make-a-blackberry-10-webworks-app/">Make a Blackberry 10 WebWorks Application</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/20/street-lights-in-the-daylight/">白天的路灯</a>
@@ -595,10 +546,6 @@
     
       <li class="post">
         <a href="/blog/2012/09/09/quantum-levitation-n-quantum-locking/">Quantum Locking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/09/genius-on-the-left-madness-on-the-right/">天才在左，疯子在右</a>
       </li>
     
   </ul>

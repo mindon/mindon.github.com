@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-20T19:05:58+08:00</updated>
+  <updated>2012-10-31T22:25:30+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,338 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Make a Blackberry 10 WebWorks Application]]></title>
+    <link href="http://mindon.github.com/blog/2012/10/31/make-a-blackberry-10-webworks-app/"/>
+    <updated>2012-10-31T14:52:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/10/31/make-a-blackberry-10-webworks-app</id>
+    <content type="html"><![CDATA[<p>BlackBerry 10 from RIM ( Research In Motion ) is comming.</p>
+
+<p><a href="https://developer.blackberry.com/">BlackBerry Developer</a>, we could see the bb10 provides a variety of options to develop an app:  C/C++ Native SDK, HTML5 WebWorks, Action Script with Adobe AIR, Java in Android Runtime, or with Blackberry Java.</p>
+
+<p>What a platform! ( How's its performance? )</p>
+
+<p>Here I will focus on the <a href="https://developer.blackberry.com/html5/">HTML5 WebWorks</a> app, what kind of problems you need to face. ( All base on windows env. )</p>
+
+<h2>Prepareations</h2>
+
+<p>Following SDK and tools you could find <a href="https://developer.blackberry.com/html5/download/">here</a>.</p>
+
+<ul>
+<li><strong>Ripple emulator</strong></li>
+</ul>
+
+
+<p>It's a Chrome Extension to help you previewing the webworks app UI.</p>
+
+<ul>
+<li><strong>WebWorks SDK</strong></li>
+</ul>
+
+
+<p>Remember to append the path <strong>%WebWorksSDK_HOME%\dependencies\tools\bin</strong> to the Env variable PATH.</p>
+
+<p>Here the <strong>%WebWorksSDK_HOME%</strong> is the root folder you installed your WebWorks SDK. you could set it as an Env. Variable.</p>
+
+<ul>
+<li><strong>BlackBerry 10 Dev Alpha Simulator</strong></li>
+</ul>
+
+
+<p>You need VMWare Player to run the Simulator.</p>
+
+<ul>
+<li><strong>Native SDK</strong> (Optional: You will need this for an Native WebWorks Extension )</li>
+</ul>
+
+
+<p><a href="http://developer.blackberry.com/native/beta/download/">http://developer.blackberry.com/native/beta/download/</a></p>
+
+<ul>
+<li><strong>Android App Verify and Repackage tools</strong> (Optional: Try repackage some android app you like into bb10 )</li>
+</ul>
+
+
+<p><a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a></p>
+
+<h2>Ripple Emulator</h2>
+
+<ul>
+<li><p> Remember to "Start Ripple Services" first</p></li>
+<li><p> You need to serve your html5 webworks app folder as website - simplest as localhost. ( you make choose Nginx or some simple green web servers )</p></li>
+<li><p> Visit http://localhost/, and "Enable" the Ripple Mission. ( It will crashes your Chome sometimes ).</p></li>
+</ul>
+
+
+<h2>WebWorks SDK</h2>
+
+<ul>
+<li><p>It contains a node.exe for the SDK: <em>*%WebWorksSDK_HOME%\dependencies\node*</em>, you could get the latest node.exe from <a href="http://nodejs.org/">http://nodejs.org/</a> :-)</p></li>
+<li><p>The package tool bbwp is <strong>%WebWorksSDK_HOME%\bbwp.bat</strong>, which content is: "%~dp0dependencies\node\node.exe" "%~dp0lib\bbwp.js" %*</p>
+
+<p>full command will be like: <strong>%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js mydemo-app.zip</strong></p></li>
+<li><p>WebWorks App use JNEXT to run the HTML5 as an app ( JNEXT: <a href="http://jnext.org">http://jnext.org</a> )</p></li>
+</ul>
+
+
+<h2>BlackBerry 10 Dev Alpha Simulator</h2>
+
+<ul>
+<li><p>At first, you will be drived crazy by its full size screen in VMWare Player.</p></li>
+<li><p>A "Controller" tool installed with the simulator could help you manage the screen size in the vmware player:</p></li>
+</ul>
+
+
+<p>   1) Find the menu "Connection / connect", you need the IP left bottom of the bb10 simulator, some like "192.168.111.128", NOT the 169.254.0.1 which is for device not the simulator.</p>
+
+<p>   2) After success connect, find the menu "Device / Change Zoom Level" -- It could help you to resize the simulator screen to fit your host screen size.</p>
+
+<ul>
+<li><p>Other interest controll options could be found in the "Controller" tool. ( find it in your windows' shortcut from <strong> Start / All Programs / BlackBerry 10 Simulator </strong> , or in the VM folder directly )</p></li>
+<li><p>Want to install your app into the simulator? You need to turn on "Development Mode" in BB10 "Settings / Security and Privacy / Development Mode"</p></li>
+<li><p>The IP setting in the "Development Mode" is for device only</p></li>
+<li><p>Each time the device restart, you need to turn on the "Development Mode" again ( You won't face this problem in a simulator )</p></li>
+</ul>
+
+
+<h2>BB10 Device Software Update</h2>
+
+<p>Before Updating the BlackBerry 10 Dev Alpha Device Software, you need to</p>
+
+<ul>
+<li><p>Install Blackberry <strong>Desktop Software</strong> first: <a href="http://blackberry.com/desktop">http://blackberry.com/desktop</a></p></li>
+<li><p>Then use the <a href="https://developer.blackberry.com/blackberry10devalphas/update">App Loader</a> tool to update</p></li>
+<li><p>Remember, be really patient during the update processing :-)</p></li>
+</ul>
+
+
+<h1>Start the WebWorks App Development</h1>
+
+<p>You could find more sample and details from <a href="http://blackberry.github.com/webworks/index.html">blackberry's github project</a></p>
+
+<h2><strong> config.xml </strong></h2>
+
+<p>Chose those permisions and features your app needs:</p>
+
+<p><strong>Permissions</strong></p>
+
+<pre><code>  &lt;rim:permissions&gt;
+    &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;record_audio&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_location_services&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;bbm_connect&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_pimdomain_messages&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_pimdomain_contacts&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_pimdomain_calendars&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_pimdomain_notebooks&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;post_notifications&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_sms_mms&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_shared&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;access_internet&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;use_camera&lt;/rim:permit&gt;  
+    &lt;rim:permit&gt;run_native&lt;/rim:permit&gt;
+    &lt;rim:permit&gt;run_when_backgrounded&lt;/rim:permit&gt;
+  &lt;/rim:permissions&gt;
+</code></pre>
+
+<p><strong> Orientation </strong></p>
+
+<pre><code>  &lt;rim:orientation mode="auto"/&gt;
+</code></pre>
+
+<p><strong> Splash </strong></p>
+
+<pre><code>  &lt;rim:splash src="splash.jpg" /&gt;
+</code></pre>
+
+<p><strong> Features </strong></p>
+
+<pre><code>  &lt;feature id="blackberry.app.orientation"&gt;
+    &lt;param name="mode" value="portrait" /&gt;
+  &lt;/feature&gt;
+
+  &lt;feature id="blackberry.app"&gt;
+    &lt;param name="backgroundColor" value="0xFFFFFF00" /&gt;
+  &lt;/feature&gt;
+
+  &lt;feature id="blackberry.app.event"/&gt;
+  &lt;feature id="blackberry.invoke"/&gt;
+  &lt;feature id="blackberry.app" /&gt;
+  &lt;feature id="blackberry.ui.dialog" /&gt;
+  &lt;feature id="blackberry.ui.Spinner" /&gt;
+  &lt;feature id="blackberry.push" /&gt;
+  &lt;feature id="blackberry.message.sms" /&gt;
+  &lt;feature id="blackberry.ui.menu" /&gt;
+  &lt;feature id="blackberry.identity" /&gt;
+</code></pre>
+
+<p><strong> Access </strong></p>
+
+<pre><code>   &lt;access uri="*" subdomains="true" /&gt;
+</code></pre>
+
+<h2><strong> webworks.js </strong></h2>
+
+<p>You need this js in your HTML5 code!</p>
+
+<ul>
+<li><p>Latest version of webworks.js could be found in <em>*%WebWorksSDK_HOME%\Framework\clientFiles*</em></p></li>
+<li><p>DO REMEMBER copy and include it as your HTML5 webworks app resources before calling any Blackberry API from your javascript code.</p></li>
+</ul>
+
+
+<h2><strong> bbUI.js </strong></h2>
+
+<p><a href="https://github.com/blackberry/bbui.js">https://github.com/blackberry/bbui.js</a></p>
+
+<blockquote><p> The objective of the bbUI toolkit is to provide a BlackBerry® User Experience and Design Language for HTML5 applications using the BlackBerry WebWorks framework.</p></blockquote>
+
+<ul>
+<li><p>Try to use this for your demo. But sure you could use your own code to do these things.</p></li>
+<li><p>bbUI.js is using <strong>iScroll</strong> for its scroller effect from <a href="http://cubiq.org/iscroll-4">http://cubiq.org/iscroll-4</a></p></li>
+</ul>
+
+
+<h2>Shell Script help to Package and Install your webwoks app to BB10 simulator</h2>
+
+<p>Requirement NOTICE:</p>
+
+<p>1) you need install <a href="http://www.7-zip.org/">7z</a> and append its 7z.exe path to Env. variable PATH.</p>
+
+<p>2) set the WebWorksSDK_HOME env. variable for your webworks sdk installed real path.</p>
+
+<p>3) change the -device 192.168.111.128 to your simulator IP</p>
+
+<p>4) Update the device password, if you don't have one, remove the <strong>-password your-device-password</strong></p>
+
+<p>Then save following code as <strong>bb-pack-install.cmd</strong>, then drag-drop your app folder on on it.</p>
+
+<pre><code>@call :reverse "%*"
+
+FOR /F "tokens=1 delims=\" %%G IN ("%reverse.result%") DO @set adir=%%G
+
+@call :reverse "%adir%"
+
+echo ## Package and Install ## -- %reverse.result%
+echo -----------------------------------
+
+@if exist simulator\%reverse.result%.bar (
+  del simulator\%reverse.result%.bar
+)
+@if exist device\%reverse.result%.bar (
+  del device\%reverse.result%.bar
+)
+
+@if not exist %~dp0%reverse.result%.zip (
+  cd %reverse.result%
+  7z.exe a -tzip %~dp0%reverse.result%.zip ".\*" -r
+  cd %~dp0
+)
+
+@%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js %~dp0%reverse.result%.zip
+
+echo -----------------------------------
+
+@blackberry-deploy -installApp -password your-device-password -device 192.168.111.128 -package simulator\%reverse.result%.bar
+
+pause
+
+:reverse
+  @echo off
+  set reverse.tmp=%~1
+  set reverse.result=
+  :reverse.loop
+    set reverse.result=%reverse.tmp:~0,1%%reverse.Result%
+    set reverse.tmp=%reverse.tmp:~1,999%
+    if not "%reverse.tmp%"=="" goto:reverse.loop
+goto:eof
+eof:
+</code></pre>
+
+<h1>Signed your App for device</h1>
+
+<h2>Apply Signed Keys</h2>
+
+<p><a href="https://www.blackberry.com/SignedKeys/codesigning.html">https://www.blackberry.com/SignedKeys/codesigning.html</a></p>
+
+<p>Apply and get two key files: <strong>client-PBDT-#######.csj</strong>, <strong>client-RDK-#######.csj</strong></p>
+
+<p>DO REMEMBER the password you use to apply the key files ( as <strong>-csjpin</strong> value later )</p>
+
+<h2>Signer Tool</h2>
+
+<p>After you got the two files, download them and run following commend to sign the key files</p>
+
+<pre><code>blackberry-signer -proxyhost 123.45.67.89 -proxyport 8080 -register -csjpin csj-apply-password -cskpass my-store-password client-RDK-#######.csj client-PBDT-#######.csj
+</code></pre>
+
+<p>If you don't need proxy, remove the relative parameters. DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong> for <strong>blackberry-signer</strong>, if you put the somewhere else, it won't work.</p>
+
+<p>The <strong>-cskpass</strong> you choose here will be the <strong>-storepass</strong> value for generate the <strong>debug token</strong>.</p>
+
+<p>You could backup the 3 result files for other machine</p>
+
+<p><strong>author.p12</strong>, <strong>barsigner.csk</strong> and <strong>barsigner.db</strong></p>
+
+<ul>
+<li><p><strong>Windows XP</strong>: %HOMEPATH%\Local Settings\Application Data\Research In Motion\</p></li>
+<li><p><strong>Windows Vista and Windows 7</strong>: %HOMEPATH%\AppData\Local\Research In Motion\</p></li>
+<li><p><strong>Mac OS</strong>: ~/Library/Research In Motion/</p></li>
+<li><p><strong>UNIX or Linux</strong>: ~/.rim/</p></li>
+</ul>
+
+
+<p>By default, %HOMEPATH% is C:\Documents and Settings on Windows XP and C:\Users on Windows Vista and Windows 7.</p>
+
+<p><a href="https://developer.blackberry.com/html5/documentation/signing_setup_tablet_apps_1920009_11.html">More detail on this topic</a></p>
+
+<p>BTW: <strong>batchbar-signer</strong> for repackage android app DOES NOT support <strong>-proxyhost</strong> parameter when I write this blog. ( got this info by decompile the java class file used by this tool )</p>
+
+<h2>Debug Token</h2>
+
+<p>You need a debug token, the name of the debug token bar file could be chosen as you will.</p>
+
+<pre><code>blackberry-debugtokenrequest -proxyhost 123.45.67.89 -proxyport 8080 -storepass my-store-password -devicepin MY-DEVICE-PIN mindon_token.bar
+</code></pre>
+
+<p>DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong></p>
+
+<p>Install the token bar file into your simulater (IP 192.168.111.###) or device (IP 169.254.0.1).</p>
+
+<pre><code>blackberry-deploy -installApp -password my-device-password -device 192.168.111.128 -package %*
+</code></pre>
+
+<h2>Package and Signed your App</h2>
+
+<pre><code>@%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js -g my-store-password mydemo-app.zip
+</code></pre>
+
+<p>If you need to debug, add <strong>-d</strong> parameter before -g.</p>
+
+<h2>How to signed an repackage of android app?</h2>
+
+<pre><code>batchbar-signer myandroid-app.bar author.p12 my-store-password -t product\
+</code></pre>
+
+<p>The myandroid-app.bar is generated by command tool: <strong>apk2bar</strong> (It's not included in webworks sdk, and could fetch from <a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a> )</p>
+
+<h2>Another Issue when working an WebWorks Native Extension</h2>
+
+<p>If you got an error "Require Error Can't find /usr/lib/webplatform/plugins/jnext/***.so Libary cannot be found".</p>
+
+<p>Try telnet 192.168.111.128 with devuser/devuser as account and password, you could never find your .so file there in the path even it works.</p>
+
+<p>The error may comes from some other error - dependency missing or something else, who knows?</p>
+
+<p>Most problems you met during the development, few you could get the right and directly answer in the development documents from BB website or forum. Google helps sometimes, but not the right solution. Most casese, maybe you need to try or find the right develop guy in RIM.</p>
+
+<p>Wish this could be helpful.</p>
+
+<p>God bless you, dear BB10 developers :-)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS3 Tai-Chi Diagram]]></title>
@@ -108,54 +440,6 @@ It's a pitty, you are using a browser out of the date.
 <p>setenv LINK g++ or export LINK=g++</p>
 
 <p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Serve in Multi-Languages]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages/"/>
-    <updated>2012-06-12T23:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/12/serve-in-multi-languages</id>
-    <content type="html"><![CDATA[<p>When we want our product -- a webpage for example -- servered in multi-languages, what would we do?</p>
-
-<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It's a hard and dirty work.</p>
-
-<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
-
-<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites ...</p>
-
-<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
-
-<!--more-->
-
-
-<p><img src="/images/blog/multi-langs.png" alt="" /></p>
-
-<p>(pro: proposition, con: contradition)</p>
-
-<h2>Template</h2>
-
-<ul>
-<li><strong>Raw language text as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
-
-<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
-
-<h1>q/s#: Could we make maual-process auto?</h1>
-
-<ul>
-<li><strong>Named ID as text-resource-id</strong></li>
-</ul>
-
-
-<p>pro: Avoid repeat work on same phrases or sentences.</p>
-
-<p>con: Named IDs' management, unintuitive templates using named IDs.</p>
-
-<h1>q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</h1>
 ]]></content>
   </entry>
   
