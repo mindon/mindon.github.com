@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-31T22:52:29+08:00</updated>
+  <updated>2012-11-11T22:24:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -345,6 +345,8 @@ eof:
 <p>Wish this could be helpful.</p>
 
 <p>God bless you, dear BB10 developers :-)</p>
+
+<p><i id="link-tags">blackberry 10;webworks</i></p>
 ]]></content>
   </entry>
   
@@ -423,7 +425,7 @@ It's a pitty, you are using a browser out of the date.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Solve NodeJS 0.8 Build Problem]]></title>
+    <title type="html"><![CDATA[Solve NodeJS 0.8+ Build Problem]]></title>
     <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
     <updated>2012-07-20T22:04:00+08:00</updated>
     <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
@@ -436,13 +438,13 @@ It's a pitty, you are using a browser out of the date.
 <ol>
 <li><p>GNU make 3.8.1+</p></li>
 <li><p>Python 2.6 or 2.7</p></li>
-<li><p>setenv FLOCK or export FLOCK</p></li>
+<li><p>export LINK=g++ or setenv LINK g++</p></li>
 </ol>
 
 
-<p>setenv LINK g++ or export LINK=g++</p>
+<p>Do remember check these issues when you try to build new version (v0.8+) of NodeJS.</p>
 
-<p>Do remember check issues above when you meet problems building new version of NodeJS.</p>
+<p><i id="link-tags">make;python;nodejs</i></p>
 ]]></content>
   </entry>
   

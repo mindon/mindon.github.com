@@ -21,7 +21,7 @@
   <link rel="canonical" href="http://mindon.github.com/blog/2012/03/06/falling-leafs-life-system/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/modernizr-2.6.2.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
@@ -404,6 +404,12 @@ document.write('<script src="http://a.alimama.cn/inf.js"><\/script>');
   Copyright &copy; 2012 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
+<script>
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
 
 <script>
 function googleTranslateElementInit() {
@@ -418,11 +424,10 @@ function googleTranslateElementInit() {
 }
 // skip IE translate
 !document.attachEvent && (function() {
-  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
-  job.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s= null;
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
 })();
 </script>
+
 
 
 </footer>

@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-10-31T22:52:29+08:00</updated>
+  <updated>2012-11-11T22:24:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -345,6 +345,8 @@ eof:
 <p>Wish this could be helpful.</p>
 
 <p>God bless you, dear BB10 developers :-)</p>
+
+<p><i id="link-tags">blackberry 10;webworks</i></p>
 ]]></content>
   </entry>
   
@@ -368,7 +370,7 @@ eof:
 
 <p><img src="http://mindon.github.com/images/blog/leaf/DSC_4912.JPG" alt="" /></p>
 
-<p><small>(大量照片，3G or 4G手机上网的小心钱包 :-p)</small></p>
+<p><small id="more-tips">(大量照片，3G or 4G手机上网的小心钱包 :-p)</small></p>
 
 <!--more-->
 
@@ -420,7 +422,7 @@ eof:
 
 <p><img src="http://mindon.github.com/images/blog/walk/DSC_4814.JPG" alt="" /></p>
 
-<p><small>(大量照片，3G or 4G手机上网的小心钱包 :-p)</small></p>
+<p><small id="more-tips">(大量照片，3G or 4G手机上网的小心钱包 :-p)</small></p>
 
 <!--more-->
 
