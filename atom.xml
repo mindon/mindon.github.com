@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-11-11T22:24:42+08:00</updated>
+  <updated>2012-12-23T22:56:30+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,193 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
+    <link href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/"/>
+    <updated>2012-11-21T21:14:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app</id>
+    <content type="html"><![CDATA[<p>&#8220;Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30.&#8221;</p>
+
+<p>&#8220;QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements.&#8221;</p>
+
+<p>Here&#8217;s something I met during my first development using QML under Blackberry Native SDK IDE.</p>
+
+<ul>
+<li> Link error or &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221; issue</li>
+</ul>
+
+
+<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
+
+<p>Manage source folders and files, header folders to avoid &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221;</p>
+
+<!--more-->
+
+
+<ul>
+<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
+<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
+<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
+</ul>
+
+
+<p>e.g. demo.qml</p>
+
+<pre><code>import "demo.js" as Demo
+
+
+NavigationPane {
+    id: nav
+    function notify( message ) {
+    Demo.notify( message )
+    }
+}
+</code></pre>
+
+<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
+
+<pre><code>Page {
+    Container {
+        layout: StackLayout {
+        }
+        Button {
+                text: qsTr("Test")
+        onClicked: {
+          nav.notify("something")
+        }
+        }
+    }
+}
+</code></pre>
+
+<ul>
+<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
+</ul>
+
+
+<p>something like</p>
+
+<pre><code>import "share"
+//...
+ListView {
+            listItemComponents: [
+                ListItemComponent {
+                    type: "item"
+                    DemoItem {
+                    }
+                }
+        dataModel: GroupDataModel {
+                    id: recentlyDataModel
+        }
+        onCreationCompleted: {
+                recentlyDataModel.clear()
+            recentlyDataModel.insert({
+            "message": "Hello world",
+            "image": "asset:///images/demo.png"
+        })
+        }
+            ]
+}
+</code></pre>
+
+<ul>
+<li>Chat message display</li>
+</ul>
+
+
+<p>component to display chat message</p>
+
+<pre><code>TextArea {
+        editable: false
+    text: "Hello :-)"
+    inputMode: TextAreaInputMode.Chat
+}
+</code></pre>
+
+<ul>
+<li>Using system dialogs inside QML</li>
+</ul>
+
+
+<p>call these to import system dialog methods into QML</p>
+
+<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
+qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
+qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
+</code></pre>
+
+<ul>
+<li>Use subscribe/publish methods to comunicate between QML and C++</li>
+</ul>
+
+
+<p>set context</p>
+
+<pre><code>#include &lt;bb/cascades/Application&gt;
+#include &lt;bb/cascades/QmlDocument&gt;
+#include &lt;bb/cascades/NavigationPane&gt;
+
+#include &lt;bb/system/SystemDialog&gt;
+#include &lt;bb/system/SystemPrompt&gt;
+#include &lt;bb/system/SystemToast&gt;
+
+DemoTest::DemoTest(bb::cascades::Application *app)
+: QObject(app)
+{
+
+    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
+
+    // create root object for the UI
+    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
+
+    // set created root object as a scene
+    if (navPane) {
+    Demo *demo = new Demo();
+
+    qml-&gt;setContextProperty("*demo", demo);
+
+    // Set the main scene for the application to the NavigationPane.
+    Application::instance()-&gt;setScene(navPane);
+    }
+
+}
+</code></pre>
+
+<p>definition in Demo class</p>
+
+<pre><code>signals:
+    void publish(QString, QVariant);
+</code></pre>
+
+<p>called</p>
+
+<pre><code>QVariantMap info;
+info.insert( "from", "mindon" );
+info.insert( "to", "airoff" );
+info.insert( "message", "mindon.github.com" );
+
+emit publish( "MSG", info );
+</code></pre>
+
+<p>qml connect in demo.qml</p>
+
+<pre><code>function publish( type, data ) {
+
+}
+function subscribe( type, cb ) {
+
+}
+onCreationCompleted: {
+    demo.publish.connect( nav.publish )
+}
+</code></pre>
+
+<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
+
+<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make a Blackberry 10 WebWorks Application]]></title>
@@ -1067,38 +1254,6 @@ It&#8217;s a pitty, you are using a browser out of the date.
 <p><embed src="http://player.youku.com/player.php/sid/XMjg5NDM1Mjgw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
 
 <p>推荐阅读：<a href="http://jicheng.tw/jcw/book/%E5%9C%93%E9%81%8B%E5%8B%95%E7%9A%84%E5%8F%A4%E4%B8%AD%E9%86%AB%E5%AD%B8/index">《圓運動的古中醫學》</a> &#8211; 彭子益 (1947年丁亥版為底本)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[B-Z Reaction]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/04/b-z-reaction/"/>
-    <updated>2012-08-04T10:40:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/04/b-z-reaction</id>
-    <content type="html"><![CDATA[<p>　　1921年，伯克利加州大学的布雷(Bray，William)在用碘作催化剂使过氧化氢分解为水和氧气时，第一次发现了振荡式的化学反应。但依据经典热力学第二定律，认为任何化学反应只能走向退化的平衡态，因而当时的化学家否定了这个发现。</p>
-
-<p>　　1952年，英国数学家图灵通过数学计算的方法，在理论上预见了化学振荡这类现象的可能性。1958年，俄国化学家别洛索夫(Belousov) 和扎鲍廷斯基(Zhabotinskii)首次报道了以金属铈作催化剂，柠檬酸在酸性条件下被溴酸钾氧化时可呈现化学振荡现象：溶液在无色和淡黄色两种状态间进行着规则的周期振荡。该反应即被称为Belousov- Zhabotinskii反应，简称B-Z反应。</p>
-
-<p><img src="http://mindon.github.com/images/blog/250px-The_Belousov-Zhabotinsky_Reaction.gif" alt="" /></p>
-
-<p>Computer simulation of the Belousov–Zhabotinsky reaction occurring in a Petri dish.</p>
-
-<!--more-->
-
-
-<p>　　在1959年，B.P.Belousov首先观察到并随后为A.M.Zhabotinsky深入研究，丙二酸在溶液有硫酸铈的酸性溶液中被溴酸钾氧化的反应，随后人们发现了一大批可呈现化学振荡反应现象的含溴酸盐的反应系统。人们称之为B-Z反应。</p>
-
-<p>　　1969年，现代动力学奠基人普里戈金提出耗散结构理论，人们才清楚的认识到振荡反应产生的原因：当体系远离平衡态时，即在非平衡非线性区，无序的均匀态并不总是稳定的。在特定的动力学条件下，无序的均匀定态可以失去稳定性，产生时空有序的状态，这种状态称之为耗散结构。例如浓度随时间有序的变化(化学振荡)，浓度随时间和空间有序的变化(化学波)等。耗散结构理论的建立为振荡反应提供了理论基础，从此，振荡反应赢得了重视，它的研究得到了迅速发展。</p>
-
-<p>　　化学振荡是一类机理非常复杂的化学过程，Field、Koros、Noyes三位科学家经过四年的努力，于1972年提出俄勒冈（FKN）模型，用来解释并描述B-Z振荡反应的很多性质。该模型包括20个基元反应步骤，其中三个有关的变量通过三个非线性微分方程组成的方程组联系起来，该模型如此复杂以至20世纪的数学尚不能一般地解出这类问题，只能引入各种近似方法。</p>
-
-<p>The discovery of the phenomenon is credited to Boris Belousov. He noted, some time in the 1950s (various sources date ranges from 1951 to 1958), that in a mix of potassium bromate, cerium(IV) sulfate, propanedioic acid and citric acid in dilute sulfuric acid, the ratio of concentration of the cerium(IV) and cerium(III) ions oscillated, causing the colour of the solution to oscillate between a yellow solution and a colorless solution. This is due to the cerium(IV) ions being reduced by propanedioic acid to cerium(III) ions, which are then oxidized back to cerium(IV) ions by bromate(V) ions.</p>
-
-<p>Belousov made two attempts to publish his finding, but was rejected on the grounds that he could not explain his results to the satisfaction of the editors of the journals to which he submitted his results. His work was finally published in a less respectable, non-reviewed journal.</p>
-
-<p>Later, in 1961, a graduate student named Anatol Zhabotinsky rediscovered this reaction sequence; however, the results of these men&#8217;s work were still not widely disseminated, and were not known in the West until a conference in Prague in 1968.</p>
-
-<p>http://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction</p>
 ]]></content>
   </entry>
   

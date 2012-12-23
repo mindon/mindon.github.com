@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="MongoDB资料汇总专题
-http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http://www.oschina.net/question/12_38878 1. 始终启用备份 备份能保证你应用的高可用性。 &hellip;">
+  <meta name="description" content="Jared Rosoff Each logical db has its own set of files in your dbpath. You can find them as .. If you&#8217;re using directory-per-db option, then &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +88,65 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+
+<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+
+<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+
+<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+
+<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+
+<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+
+<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
+
+<h2>MongoDB数据文件内部结构</h2>
+
+<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
+
+<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -435,51 +493,6 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T20:21:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近，路边有一种阔叶树开始掉叶子了——这种树在三月里的几天内叶子大片大片往下掉，直至全部叶子都掉光。我第一次看到满地叶子、树干光秃秃的时候，还以为世界末日临近了呢——满树的绿叶几天内变黄落了满地。</p>
-
-<p>可是意外的是，再过一个星期，这树又满树的绿叶嫩芽了，长新叶子的速度跟落叶的速度一样——快得令人诧异。</p>
-
-<p>这种现象，要是放到医学里头会是很有趣的事情：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/falling-leafs-life-system/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -512,9 +525,9 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 38 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 39 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 24 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 25 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
@@ -529,6 +542,10 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/21/first-qml-blackberry-10-app/">Trying Cascades+QML App for Blackberry 10</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/31/make-a-blackberry-10-webworks-app/">Make a Blackberry 10 WebWorks Application</a>
@@ -566,10 +583,6 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
         <a href="/blog/2012/09/16/eyewriter/">EyeWriter</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2012/09/09/quantum-levitation-n-quantum-locking/">Quantum Locking</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -598,7 +611,7 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
 		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
 		<li><b>傳統中醫 TCM</b>
     <ul>
-      <li><a href="http://jicheng.sabi.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
       <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
       <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
       <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>

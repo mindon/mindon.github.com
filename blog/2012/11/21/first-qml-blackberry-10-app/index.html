@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>激情 - Passion - Mindon.IDEA</title>
+  <title>Trying Cascades+QML App for Blackberry 10 - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made/">
+  <link rel="canonical" href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.6.2.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">激情 - Passion</h1>
+      <h1 class="entry-title">Trying Cascades+QML App for Blackberry 10</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-03-10T14:04:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
+<time datetime="2012-11-21T21:14:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2012</time>
         
       </p>
     
@@ -131,46 +131,185 @@
 		</script>
 	</div>
 
-<h2>Passion</h2>
+<p>&#8220;Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30.&#8221;</p>
 
-<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
+<p>&#8220;QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements.&#8221;</p>
 
-<p>That’s passion!</p>
+<p>Here&#8217;s something I met during my first development using QML under Blackberry Native SDK IDE.</p>
 
-<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
+<ul>
+<li> Link error or &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221; issue</li>
+</ul>
 
-<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
 
-<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
+<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
+
+<p>Manage source folders and files, header folders to avoid &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221;</p>
 
 <!--more-->
 
 
-<p><a href="http://swizec.com/blog/programmers-are-born-not-made/swizec/3369">Programmers are born not made</a></p>
-
-<h2>激情</h2>
-
-<blockquote><p>有时候，当你给一个有上进心的年轻心灵(任何愿意学习编程的人，年龄不是问题)两种工具和一个难题。他会使用这两种工具创造出4种工具。他会搜索互联网，发现更多的工具…很快，他有了20种工具，请问你还让我解决什么问题？</p>
-
-<p>这就是激情！</p>
-
-<p>心无杂念的对编程的激情。没有问题需要解决时仍然对编程入迷，甚至兴奋。甚至把解决一个已知的问题也当作一次普通的练习…这就是卓越之处。</p>
-
-<p>多大岁数才开始学习编程，这并不重要——很多研究显示，在我们这个世界里，编程的工龄并不是水平的指示符——重要的是你对这个行业有个充满激情的心。</p>
-
-<p>因为，一旦有了激情，你就拥有了所有其它的一切。</p></blockquote>
-
-<p>做任何事情，如果没有激情，就没法做得比别人更好！</p>
-
-<p>在IBG数年，有两个同事说的话一直让我印象深刻：</p>
-
-<ol>
-<li><p>技术，要有激情！ —— Teddy</p></li>
-<li><p>同样的事情，你来做和别人做能有什么不一样？ —— Flying</p></li>
-</ol>
+<ul>
+<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
+<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
+<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
+</ul>
 
 
-<p>今天看到【外刊IT评论】的这篇文章（<a href="http://www.aqee.net/programmers-are-born-not-made/">一个人是否能成为程序员是上天注定的</a>），深有感触！特以此文自勉。</p>
+<p>e.g. demo.qml</p>
+
+<pre><code>import "demo.js" as Demo
+
+
+NavigationPane {
+    id: nav
+    function notify( message ) {
+    Demo.notify( message )
+    }
+}
+</code></pre>
+
+<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
+
+<pre><code>Page {
+    Container {
+        layout: StackLayout {
+        }
+        Button {
+                text: qsTr("Test")
+        onClicked: {
+          nav.notify("something")
+        }
+        }
+    }
+}
+</code></pre>
+
+<ul>
+<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
+</ul>
+
+
+<p>something like</p>
+
+<pre><code>import "share"
+//...
+ListView {
+            listItemComponents: [
+                ListItemComponent {
+                    type: "item"
+                    DemoItem {
+                    }
+                }
+        dataModel: GroupDataModel {
+                    id: recentlyDataModel
+        }
+        onCreationCompleted: {
+                recentlyDataModel.clear()
+            recentlyDataModel.insert({
+            "message": "Hello world",
+            "image": "asset:///images/demo.png"
+        })
+        }
+            ]
+}
+</code></pre>
+
+<ul>
+<li>Chat message display</li>
+</ul>
+
+
+<p>component to display chat message</p>
+
+<pre><code>TextArea {
+        editable: false
+    text: "Hello :-)"
+    inputMode: TextAreaInputMode.Chat
+}
+</code></pre>
+
+<ul>
+<li>Using system dialogs inside QML</li>
+</ul>
+
+
+<p>call these to import system dialog methods into QML</p>
+
+<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
+qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
+qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
+</code></pre>
+
+<ul>
+<li>Use subscribe/publish methods to comunicate between QML and C++</li>
+</ul>
+
+
+<p>set context</p>
+
+<pre><code>#include &lt;bb/cascades/Application&gt;
+#include &lt;bb/cascades/QmlDocument&gt;
+#include &lt;bb/cascades/NavigationPane&gt;
+
+#include &lt;bb/system/SystemDialog&gt;
+#include &lt;bb/system/SystemPrompt&gt;
+#include &lt;bb/system/SystemToast&gt;
+
+DemoTest::DemoTest(bb::cascades::Application *app)
+: QObject(app)
+{
+
+    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
+
+    // create root object for the UI
+    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
+
+    // set created root object as a scene
+    if (navPane) {
+    Demo *demo = new Demo();
+
+    qml-&gt;setContextProperty("*demo", demo);
+
+    // Set the main scene for the application to the NavigationPane.
+    Application::instance()-&gt;setScene(navPane);
+    }
+
+}
+</code></pre>
+
+<p>definition in Demo class</p>
+
+<pre><code>signals:
+    void publish(QString, QVariant);
+</code></pre>
+
+<p>called</p>
+
+<pre><code>QVariantMap info;
+info.insert( "from", "mindon" );
+info.insert( "to", "airoff" );
+info.insert( "message", "mindon.github.com" );
+
+emit publish( "MSG", info );
+</code></pre>
+
+<p>qml connect in demo.qml</p>
+
+<pre><code>function publish( type, data ) {
+
+}
+function subscribe( type, cb ) {
+
+}
+onCreationCompleted: {
+    demo.publish.connect( nav.publish )
+}
+</code></pre>
+
+<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
+
+<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
 
 </div>
 
@@ -194,12 +333,12 @@
   
 
 
-<time datetime="2012-03-10T14:04:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
+<time datetime="2012-11-21T21:14:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mindon/'>Mindon</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>, <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
   
 </span>
 
@@ -217,10 +356,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/08/for-my-dear-aby/" title="Previous Post: For my darling: Aby">&laquo; For my darling: Aby</a>
+        <a class="basic-alignment left" href="/blog/2012/10/31/make-a-blackberry-10-webworks-app/" title="Previous Post: Make a Blackberry 10 WebWorks Application">&laquo; Make a Blackberry 10 WebWorks Application</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/10/key-of-tcm-recommended-books/" title="Next Post: Key of TCM -- Recommended Books">Key of TCM -- Recommended Books &raquo;</a>
       
     </p>
   </footer>
@@ -438,8 +575,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/03/10/programmers-are-born-not-made/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/';
+        var disqus_url = 'http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/';
         var disqus_script = 'embed.js';
       
     (function () {

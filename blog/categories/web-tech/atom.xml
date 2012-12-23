@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-11-11T22:24:42+08:00</updated>
+  <updated>2012-12-23T22:56:30+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,193 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
+    <link href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/"/>
+    <updated>2012-11-21T21:14:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app</id>
+    <content type="html"><![CDATA[<p>"Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30."</p>
+
+<p>"QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements."</p>
+
+<p>Here's something I met during my first development using QML under Blackberry Native SDK IDE.</p>
+
+<ul>
+<li> Link error or "undefined reference to `vtable for someSymbol'" issue</li>
+</ul>
+
+
+<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
+
+<p>Manage source folders and files, header folders to avoid "undefined reference to `vtable for someSymbol'"</p>
+
+<!--more-->
+
+
+<ul>
+<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
+<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
+<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
+</ul>
+
+
+<p>e.g. demo.qml</p>
+
+<pre><code>import "demo.js" as Demo
+
+
+NavigationPane {
+    id: nav
+    function notify( message ) {
+    Demo.notify( message )
+    }
+}
+</code></pre>
+
+<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
+
+<pre><code>Page {
+    Container {
+        layout: StackLayout {
+        }
+        Button {
+                text: qsTr("Test")
+        onClicked: {
+          nav.notify("something")
+        }
+        }
+    }
+}
+</code></pre>
+
+<ul>
+<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
+</ul>
+
+
+<p>something like</p>
+
+<pre><code>import "share"
+//...
+ListView {
+            listItemComponents: [
+                ListItemComponent {
+                    type: "item"
+                    DemoItem {
+                    }
+                }
+        dataModel: GroupDataModel {
+                    id: recentlyDataModel
+        }
+        onCreationCompleted: {
+                recentlyDataModel.clear()
+            recentlyDataModel.insert({
+            "message": "Hello world",
+            "image": "asset:///images/demo.png"
+        })
+        }
+            ]
+}
+</code></pre>
+
+<ul>
+<li>Chat message display</li>
+</ul>
+
+
+<p>component to display chat message</p>
+
+<pre><code>TextArea {
+        editable: false
+    text: "Hello :-)"
+    inputMode: TextAreaInputMode.Chat
+}
+</code></pre>
+
+<ul>
+<li>Using system dialogs inside QML</li>
+</ul>
+
+
+<p>call these to import system dialog methods into QML</p>
+
+<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
+qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
+qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
+</code></pre>
+
+<ul>
+<li>Use subscribe/publish methods to comunicate between QML and C++</li>
+</ul>
+
+
+<p>set context</p>
+
+<pre><code>#include &lt;bb/cascades/Application&gt;
+#include &lt;bb/cascades/QmlDocument&gt;
+#include &lt;bb/cascades/NavigationPane&gt;
+
+#include &lt;bb/system/SystemDialog&gt;
+#include &lt;bb/system/SystemPrompt&gt;
+#include &lt;bb/system/SystemToast&gt;
+
+DemoTest::DemoTest(bb::cascades::Application *app)
+: QObject(app)
+{
+
+    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
+
+    // create root object for the UI
+    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
+
+    // set created root object as a scene
+    if (navPane) {
+    Demo *demo = new Demo();
+
+    qml-&gt;setContextProperty("*demo", demo);
+
+    // Set the main scene for the application to the NavigationPane.
+    Application::instance()-&gt;setScene(navPane);
+    }
+
+}
+</code></pre>
+
+<p>definition in Demo class</p>
+
+<pre><code>signals:
+    void publish(QString, QVariant);
+</code></pre>
+
+<p>called</p>
+
+<pre><code>QVariantMap info;
+info.insert( "from", "mindon" );
+info.insert( "to", "airoff" );
+info.insert( "message", "mindon.github.com" );
+
+emit publish( "MSG", info );
+</code></pre>
+
+<p>qml connect in demo.qml</p>
+
+<pre><code>function publish( type, data ) {
+
+}
+function subscribe( type, cb ) {
+
+}
+onCreationCompleted: {
+    demo.publish.connect( nav.publish )
+}
+</code></pre>
+
+<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
+
+<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make a Blackberry 10 WebWorks Application]]></title>
@@ -421,30 +608,6 @@ It's a pitty, you are using a browser out of the date.
 </code></pre>
 
 <p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solve NodeJS 0.8+ Build Problem]]></title>
-    <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
-    <updated>2012-07-20T22:04:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
-    <content type="html"><![CDATA[<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
-
-<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming...</p>
-
-<p>Here's a few pre-conditions for a successful make of NodeJS v0.8+:</p>
-
-<ol>
-<li><p>GNU make 3.8.1+</p></li>
-<li><p>Python 2.6 or 2.7</p></li>
-<li><p>export LINK=g++ or setenv LINK g++</p></li>
-</ol>
-
-
-<p>Do remember check these issues when you try to build new version (v0.8+) of NodeJS.</p>
-
-<p><i id="link-tags">make;python;nodejs</i></p>
 ]]></content>
   </entry>
   
