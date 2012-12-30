@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="To remove duplicate elements in a array, there are a few algorithms to implement. Algorithm 1 function unique1(d) { var o = {}, i, l = d.length, r &hellip;">
+  <meta name="description" content="NodeJS Call something like &#8220;ulimit -n 8192&#8221; in your NodeJS App start shell script, before start your nodejs service. Running with &#8211; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,167 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/26/profiling-nodejs-application/">Profiling Node.JS Application</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-26T07:22:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>NodeJS</h2>
+
+<p>Call something like &#8220;ulimit -n 8192&#8221; in your NodeJS App start shell script, before start your nodejs service.</p>
+
+<p>Running with &#8211;prof to generate the v8.log</p>
+
+<pre><code>node --prof --prof_lazy app.js
+</code></pre>
+
+<p>with tools in /node/deps/v8/, you can get report like following:</p>
+
+<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
+
+<pre><code>[Shared libraries]:
+   ticks  total  nonlib   name
+      3    0.0%    0.0%  .../libc-2.13.so
+
+[JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%    0.0%  Stub: InstanceofStub
+
+[C++]:
+   ticks  total  nonlib   name
+     1    0.0%    0.0%  __write
+     ...
+
+[GC]:
+   ticks  total  nonlib   name
+     15    0.0%
+
+[Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+   ...
+</code></pre>
+
+<p>trace log</p>
+
+<pre><code>strace -o trace.log -cf node app.js:
+</code></pre>
+
+<p>or simple get the time</p>
+
+<pre><code>time node app.js
+</code></pre>
+
+<h2>Other Modules &amp; Tools</h2>
+
+<ul>
+<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
+</ul>
+
+
+<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
+
+<pre><code>dtrace -o stacks.out -n 'profile-97/execname == "node" &amp;&amp; arg1/{
+  @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }'
+</code></pre>
+
+<ul>
+<li><strong>v8-profiler</strong></li>
+</ul>
+
+
+<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/26/profiling-nodejs-application/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Aby Is on the Road: Lhasa</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-25T07:59:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Aby在路上…</h2>
+
+<p>这一趟，Aby出门时间比较久。</p>
+
+<p>先是飞由天津回家，在家里帮着忙活新装修的家选购家具什么的。</p>
+
+<p>之后再经由天津往北京和可心汇合，考察大导咖啡馆的事宜，并准备一起前往西藏拉萨。</p>
+
+<p>她们先是飞达西宁，在那去感受了一下青海湖——“早上的青海湖变了一个颜色，让人心悸的淡蓝。羊群跑上公路，水鸟飞起，如果是夏季定会更美。”（<a href="http://weibo.com/1416075644/yg3hZBuel">来源</a>）</p>
+
+<p>接着就乘坐火车前往目的地——拉萨。</p>
+
+<p>“坐上开往拉萨的列车，好好睡一觉，等待明天的美景。” （<a href="http://weibo.com/1416075644/yfZu49FvY">来源</a>）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -381,137 +542,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Match Encrypt &amp; Decrypt in PHP and NodeJS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-31T00:20:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>String encoded in PHP needs to decode in NodeJS?</p>
-
-<p>Or encoded in NodeJS needs to decode in PHP?</p>
-
-<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
-
-<p>NodeJS</p>
-
-<pre><code>var crypto = require('crypto')
-  , key = 'abcdefghijklmnop'
-  , iv = '0123456789123456'
-  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
-
-var text = 'Clipher Message'
-  , crypted = cipher.update(text, 'utf-8', 'hex');
-
-crypted += cipher.final('hex');
-
-// encrypted
-console.log(crypted);
-
-
-var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
-  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
-
-decrypted += decipher.final('utf-8');
-
-// decrypted
-console.log(decrypted);
-</code></pre>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-26T22:13:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><strong>Cell Cycle</strong>
-Creating 3d-printable cellular models.</li>
-</ul>
-
-
-<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
-
-<p><img src="/images/blog/chrome/nervous.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<ul>
-<li><strong>Fluid Simulation with Turing Patterns</strong>
-Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
-</ul>
-
-
-<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
-
-<p><img src="/images/blog/chrome/fluid.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -544,9 +574,9 @@ Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-tu
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 39 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 41 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 25 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 24 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
@@ -556,11 +586,21 @@ Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-tu
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 7 )</li>
 
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 3 )</li>
+
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/30/learning-lately/">Learning Lately</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/30/living-area/">生活区域</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/11/21/first-qml-blackberry-10-app/">Trying Cascades+QML App for Blackberry 10</a>
@@ -592,14 +632,6 @@ Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-tu
     
       <li class="post">
         <a href="/blog/2012/10/11/the-end-of-the-world-in-a-dream/">梦惊醒：末日降临</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/08/relationship-abilities/">社交关系的潜能</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/16/eyewriter/">EyeWriter</a>
       </li>
     
   </ul>

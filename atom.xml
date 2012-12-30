@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-12-23T22:56:30+08:00</updated>
+  <updated>2012-12-30T15:10:34+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,107 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Lately]]></title>
+    <link href="http://mindon.github.com/blog/2012/12/30/learning-lately/"/>
+    <updated>2012-12-30T14:31:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/12/30/learning-lately</id>
+    <content type="html"><![CDATA[<p>这段时间接触和试验了不少新的东西：</p>
+
+<ul>
+<li>Blackberry 10 Webworks App Demo (HTML5)</li>
+</ul>
+
+
+<p>尝试了一下BB10的 Webworks App开发，HTML5的性能表现还是不错的，只不过即便如此，HTML5 App的性能表现和Native App的差距还是不小的。而且，BB10的Webworks用的 JNext 最新更新竟然还是2008年的东西…… 另外就是调试和.so的依赖方面会碰到不小的麻烦。</p>
+
+<p>中间还小试验了一下具有左右手差异内容滚动角度的UI表现。</p>
+
+<ul>
+<li>Blackberry 10 Cascades App Demo (QML + C++)</li>
+</ul>
+
+
+<p>在放弃了Webworks后，转向试验 Cascades 开发。使用作为UI描述的QML类似 JSON 形式，采用 Javascript 脚本实现 UI 交互。虽说UI有Chrome插件来预览，不过交互脚本的调试并不方便。不过应用的调试倒是比webworks app方便很多。</p>
+
+<ul>
+<li>Chrome App独立窗口应用</li>
+</ul>
+
+
+<p>Chrome 20版本开始支持独立窗口的应用，可以使用TCP建立监听及其他的一系列支持。独立窗口让Chrome App表现得更像桌面应用了。可惜目前这类应用在浏览器没有启动的时候独立启动的话，所有的Extension都会同时启动，使得启动缓慢——如果可以禁止掉独立应用窗口的插件加载就完美了。</p>
+
+<!--more-->
+
+
+<ul>
+<li>再玩CodeIgniter</li>
+</ul>
+
+
+<p>基于php的应用框架CodeIgniter其简单入手，良好性能，完备文档和活跃社区对于中小应用来说都是相当不错的选择。</p>
+
+<p>HydridAuth用来作为第三方的登录验证方式也是不错的选择。</p>
+
+<ul>
+<li>Go语言及Google AppEngine</li>
+</ul>
+
+
+<p>Google的Go语言确实是一门使用的编程语言，目的是为开发人员解决问题，而不是纠结于语言的设计。</p>
+
+<p>为了练习一下Go语言，就另外建了一个GAE App，用来作为最近的兴趣研究开发。</p>
+
+<ul>
+<li>Chrome App (Native Client)</li>
+</ul>
+
+
+<p>通过Chrome来实现跨平台应用，也是个比较好玩的途径。只进行了简单的开发环境搭建和试验，碰到了些问题——某些需要的接口因为会造成对系统的依赖，所以需要用第三方的实现方式。暂没做深入研究。</p>
+
+<ul>
+<li> 独立游戏和LUA</li>
+</ul>
+
+
+<p>前段时间在部门分享里听了一个来自互娱的同事分享关于独立游戏的状况，激起了对游戏的一点兴趣。而自己之前Javascript玩的几个HTML5小游戏，所以准备了解一下手机游戏的开发框架，如Corona SDK和MOAI SDK，这两个都是用Lua语言来开发跨平台游戏的，不过我对开源且支持Chrome Native Client的MOAI 比较关注。</p>
+
+<p>搭建了开发环境及Hello world，不过Moai App作为Chrome Nacl应用要带的库就有20+M大小，有点重了。</p>
+
+<p>Android下运行没能成功显示，不知何故，后续有时间再进行探讨。</p>
+
+<ul>
+<li>Firefox App</li>
+</ul>
+
+
+<p>这个是把之前整理的一个HTML5小游戏封装成了 Firefox package app for Firfox OS。 看起来Firefox Marketplace 跟 Chrome Webstore有几分相似：也分Host App/Package App。 搭的GAE Go App正好为提交 Host App 当了试验服务器。</p>
+
+<p><i id="link-tags">Blackberry 10;Webworks;Cascades;QML,Chrome App,Native Client;HydridAuth;CodeIgniter;MOAI SDK;Corona SDK;Lua;Firefox OS;Chrome Webstore</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[生活区域]]></title>
+    <link href="http://mindon.github.com/blog/2012/12/30/living-area/"/>
+    <updated>2012-12-30T13:59:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/12/30/living-area</id>
+    <content type="html"><![CDATA[<p>在这里已经生活了一年多时间了。整理一下这里的连接 :-)</p>
+
+<p><img src="http://mindon.github.com/images/blog/living-area.jpg" alt="" /></p>
+
+<p>虽然小区很旧了，不过生活得还算自在和舒适——要求不太高的话 :-p</p>
+
+<p>小区的连接是相当强大的，只可惜小区及外围的空地都定位成了停车场，让小区的价值和吸引力有所下调，否则将会是个相当具有竞争力的地方。这就比如一张宣纸，用来盛放食物和作为书法或艺术品载体一样，所具有的价值差别还是相当大的。</p>
+
+<p>小区的物业似乎仅在维持现有设施的正常运作之外，并没有什么其他表现。虽说是让人感觉自在，不过小区越来越美好的可能性降到了很低的水平。——类似一个很Nice但安于现状没啥追求的人。</p>
+
+<p>仅剩的绿色长廊、健身设施和小小的儿童玩乐场就是小区里最好的设施了。虽然空地都变成了停车场，不过比起半开放状态来说，停车问题貌似还是目前令大家非常头痛的问题。</p>
+
+<p>任何东西的价值除了其具备的连接，其所处的环境和自身定位也是相当关键的。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
@@ -197,6 +298,8 @@ onCreationCompleted: {
 <p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
 
 <p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
+
+<p><i id="link-tags">Blackberry;QML;Qt;Cascades</i></p>
 ]]></content>
   </entry>
   
@@ -1199,61 +1302,6 @@ It&#8217;s a pitty, you are using a browser out of the date.
 <p><img src="http://mindon.github.com/images/blog/pollen/7.jpg" alt="" /></p>
 
 <p><img src="http://mindon.github.com/images/blog/pollen/8.jpg" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Lab]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/04/web-lab/"/>
-    <updated>2012-08-04T17:28:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/04/web-lab</id>
-    <content type="html"><![CDATA[<p>&#8220;Web Lab. A series of interactive Chrome Experiments made by Google. See the magic of the web brought to life. Open to the world online. Live from the Science Museum, London. &#8221;</p>
-
-<p>这是个很好玩的实验室。Google建的一个位于伦敦的科学馆。科学馆里配置了一些设备：如乐器和沙绘机器人（Sketchbots）。您可以通过他们的网站来编曲演奏乐器，跟世界上其他地方的人合奏。也可以通过摄像头拍照，让科学馆的机器人绘制您的头像——所有这一切，您都可以通过现场摄像头看到真实科学馆的设备看到设备的现场实时操作。很不可思议吧？您在体验一家位于伦敦的科学馆。</p>
-
-<p>体验一下？<a href="http://www.chromeweblab.com/">Web Lab</a> :-) You need a <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser</a>(<a href="https://www.google.com/intl/zh-CN/chrome/browser/">中文版</a>), I think.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[China Hospital Medical - The Pressure Maker]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/04/china-hospital-medical-the-pressure-maker/"/>
-    <updated>2012-08-04T16:41:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/04/china-hospital-medical-the-pressure-maker</id>
-    <content type="html"><![CDATA[<p>亲身体验和周边朋友的经历，似乎都在说明这么一个事情：医院已然成为了压力制造者。——这里我说的压力大多是精神上的压力。而对一些人来说更是经济上的压力。不知道何时开始，医疗机构开始采用了恐吓的方式来制造压力，达成治疗目的。这让人很容易就联想起了港片里专门帮人讨债的镜头。</p>
-
-<p>本来，病患本身已经遭受身体及精神上的折磨，而医院为了让患者接受治疗——不管无效还是有效——而通过类似恐吓的方式来制造进一步的精神压力，这似乎不应该是作为治病救人应有的做法。</p>
-
-<p>医疗，不应单单是从物理上消除病症，而且要从精神层面上缓解压力。</p>
-
-<!--more-->
-
-
-<p>2月份时候血糖很高（喝了大量果汁饮料），住了一个多星期的院，血糖有所控制，但在10左右，时高时低，对胰岛素很敏感——降得很快，打了一般都会在半夜血糖偏低。住院期间，就折腾各种检查了，结果一切正常。然而，咳嗽都没治好；糖尿病是什么型的也没有结论，只是怀疑是1型——什么原因也没弄清楚。后来去复诊，也是一样的模棱两可，后来又说是2型——因为没打胰岛素也控制得很好。后来没吃药，也一切正常；米饭、粥、汤都正常。偶尔测得高点的时候，吃了半片都1/4片0.5克的二甲双胍片。后来更奇怪的事情，到社区医疗中心开药的时候（注：属南山医院支持区的），竟然说我没有任何糖尿病记录，需要重新登记——难道之前的记录都是摆乌龙？之前在社区医疗中心记录过一次，而且，难道住院了还没有任何记录？不可思议！</p>
-
-<p>各种奇怪的事情只要稍作思考，就会让你对医疗过程产生一大箩筐的疑问。真的，绝对经不起问3个为什么的，只要你敢问。</p>
-
-<p>现在，我还是会隔段时间测一下血糖，虽然有所怀疑，不过没有别的选择——至少目前还没有更好的处理方式。（提示：我在喝党参，淮山煲的骨头汤之后，测的血糖值都非常理想。个人感觉党参对自己的血糖改善很有效果。）</p>
-
-<p>对于血糖值，我建议大家不要对2以内的波动值过于敏感，以免徒增精神压力。</p>
-
-<p>我用的血糖仪（罗氏 PerformaaNano）使用说明书77页上有这么一句：（AST&#8211;采血检测）</p>
-
-<p>“如果你考虑推荐您的患者进行AST，您需要理解<strong>指尖/手掌和替代点</strong>的血糖检测结果间<strong>有可能存在很大的不同</strong>。”</p>
-
-<p>不知道大家对“<strong>有可能存在很大的不同</strong>”怎么理解，不过，实际试验的结果是：不同的手指，甚至同一滴血，结果可能差异范围是：0 ～ 1.6。没错，1.6可能是空腹和饭后2小时的标准值差异了。这个检测结果意义只在于判断离健康标准比较大的血糖值，如10+，或4-。更精细的判断大可不必过分敏感。</p>
-
-<p><strong>亲身感受</strong>：书店里的降血糖食物相关的书不靠谱，医生说的不能吃什么也不靠谱，适量有氧运动还不错。喝对汤水也能制造神奇效果。按时吃饭、休息好、减轻精神压力更重要。蔗糖（白砂糖）类的东西，还是不要吃，很多患者都是喝冰糖/白糖水或者大量喝果汁饮料而收获高血糖待遇的。</p>
-
-<p>推荐：辅助降血糖穴位</p>
-
-<p><embed src="http://player.youku.com/player.php/sid/XMjg5NDM1NzA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>推荐：辅助降血压穴位</p>
-
-<p><embed src="http://player.youku.com/player.php/sid/XMjg5NDM1Mjgw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>推荐阅读：<a href="http://jicheng.tw/jcw/book/%E5%9C%93%E9%81%8B%E5%8B%95%E7%9A%84%E5%8F%A4%E4%B8%AD%E9%86%AB%E5%AD%B8/index">《圓運動的古中醫學》</a> &#8211; 彭子益 (1947年丁亥版為底本)</p>
 ]]></content>
   </entry>
   

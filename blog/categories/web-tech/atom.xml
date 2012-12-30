@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2012-12-23T22:56:30+08:00</updated>
+  <updated>2012-12-30T15:10:34+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,526 +14,82 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
-    <link href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/"/>
-    <updated>2012-11-21T21:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app</id>
-    <content type="html"><![CDATA[<p>"Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30."</p>
-
-<p>"QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements."</p>
-
-<p>Here's something I met during my first development using QML under Blackberry Native SDK IDE.</p>
+    <title type="html"><![CDATA[Learning Lately]]></title>
+    <link href="http://mindon.github.com/blog/2012/12/30/learning-lately/"/>
+    <updated>2012-12-30T14:31:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/12/30/learning-lately</id>
+    <content type="html"><![CDATA[<p>这段时间接触和试验了不少新的东西：</p>
 
 <ul>
-<li> Link error or "undefined reference to `vtable for someSymbol'" issue</li>
+<li>Blackberry 10 Webworks App Demo (HTML5)</li>
 </ul>
 
 
-<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
+<p>尝试了一下BB10的 Webworks App开发，HTML5的性能表现还是不错的，只不过即便如此，HTML5 App的性能表现和Native App的差距还是不小的。而且，BB10的Webworks用的 JNext 最新更新竟然还是2008年的东西…… 另外就是调试和.so的依赖方面会碰到不小的麻烦。</p>
 
-<p>Manage source folders and files, header folders to avoid "undefined reference to `vtable for someSymbol'"</p>
+<p>中间还小试验了一下具有左右手差异内容滚动角度的UI表现。</p>
+
+<ul>
+<li>Blackberry 10 Cascades App Demo (QML + C++)</li>
+</ul>
+
+
+<p>在放弃了Webworks后，转向试验 Cascades 开发。使用作为UI描述的QML类似 JSON 形式，采用 Javascript 脚本实现 UI 交互。虽说UI有Chrome插件来预览，不过交互脚本的调试并不方便。不过应用的调试倒是比webworks app方便很多。</p>
+
+<ul>
+<li>Chrome App独立窗口应用</li>
+</ul>
+
+
+<p>Chrome 20版本开始支持独立窗口的应用，可以使用TCP建立监听及其他的一系列支持。独立窗口让Chrome App表现得更像桌面应用了。可惜目前这类应用在浏览器没有启动的时候独立启动的话，所有的Extension都会同时启动，使得启动缓慢——如果可以禁止掉独立应用窗口的插件加载就完美了。</p>
 
 <!--more-->
 
 
 <ul>
-<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
-<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
-<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
+<li>再玩CodeIgniter</li>
 </ul>
 
 
-<p>e.g. demo.qml</p>
+<p>基于php的应用框架CodeIgniter其简单入手，良好性能，完备文档和活跃社区对于中小应用来说都是相当不错的选择。</p>
 
-<pre><code>import "demo.js" as Demo
-
-
-NavigationPane {
-    id: nav
-    function notify( message ) {
-    Demo.notify( message )
-    }
-}
-</code></pre>
-
-<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
-
-<pre><code>Page {
-    Container {
-        layout: StackLayout {
-        }
-        Button {
-                text: qsTr("Test")
-        onClicked: {
-          nav.notify("something")
-        }
-        }
-    }
-}
-</code></pre>
+<p>HydridAuth用来作为第三方的登录验证方式也是不错的选择。</p>
 
 <ul>
-<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
+<li>Go语言及Google AppEngine</li>
 </ul>
 
 
-<p>something like</p>
+<p>Google的Go语言确实是一门使用的编程语言，目的是为开发人员解决问题，而不是纠结于语言的设计。</p>
 
-<pre><code>import "share"
-//...
-ListView {
-            listItemComponents: [
-                ListItemComponent {
-                    type: "item"
-                    DemoItem {
-                    }
-                }
-        dataModel: GroupDataModel {
-                    id: recentlyDataModel
-        }
-        onCreationCompleted: {
-                recentlyDataModel.clear()
-            recentlyDataModel.insert({
-            "message": "Hello world",
-            "image": "asset:///images/demo.png"
-        })
-        }
-            ]
-}
-</code></pre>
+<p>为了练习一下Go语言，就另外建了一个GAE App，用来作为最近的兴趣研究开发。</p>
 
 <ul>
-<li>Chat message display</li>
+<li>Chrome App (Native Client)</li>
 </ul>
 
 
-<p>component to display chat message</p>
-
-<pre><code>TextArea {
-        editable: false
-    text: "Hello :-)"
-    inputMode: TextAreaInputMode.Chat
-}
-</code></pre>
+<p>通过Chrome来实现跨平台应用，也是个比较好玩的途径。只进行了简单的开发环境搭建和试验，碰到了些问题——某些需要的接口因为会造成对系统的依赖，所以需要用第三方的实现方式。暂没做深入研究。</p>
 
 <ul>
-<li>Using system dialogs inside QML</li>
+<li> 独立游戏和LUA</li>
 </ul>
 
 
-<p>call these to import system dialog methods into QML</p>
+<p>前段时间在部门分享里听了一个来自互娱的同事分享关于独立游戏的状况，激起了对游戏的一点兴趣。而自己之前Javascript玩的几个HTML5小游戏，所以准备了解一下手机游戏的开发框架，如Corona SDK和MOAI SDK，这两个都是用Lua语言来开发跨平台游戏的，不过我对开源且支持Chrome Native Client的MOAI 比较关注。</p>
 
-<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
-qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
-qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
-</code></pre>
+<p>搭建了开发环境及Hello world，不过Moai App作为Chrome Nacl应用要带的库就有20+M大小，有点重了。</p>
+
+<p>Android下运行没能成功显示，不知何故，后续有时间再进行探讨。</p>
 
 <ul>
-<li>Use subscribe/publish methods to comunicate between QML and C++</li>
+<li>Firefox App</li>
 </ul>
 
 
-<p>set context</p>
+<p>这个是把之前整理的一个HTML5小游戏封装成了 Firefox package app for Firfox OS。 看起来Firefox Marketplace 跟 Chrome Webstore有几分相似：也分Host App/Package App。 搭的GAE Go App正好为提交 Host App 当了试验服务器。</p>
 
-<pre><code>#include &lt;bb/cascades/Application&gt;
-#include &lt;bb/cascades/QmlDocument&gt;
-#include &lt;bb/cascades/NavigationPane&gt;
-
-#include &lt;bb/system/SystemDialog&gt;
-#include &lt;bb/system/SystemPrompt&gt;
-#include &lt;bb/system/SystemToast&gt;
-
-DemoTest::DemoTest(bb::cascades::Application *app)
-: QObject(app)
-{
-
-    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
-
-    // create root object for the UI
-    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
-
-    // set created root object as a scene
-    if (navPane) {
-    Demo *demo = new Demo();
-
-    qml-&gt;setContextProperty("*demo", demo);
-
-    // Set the main scene for the application to the NavigationPane.
-    Application::instance()-&gt;setScene(navPane);
-    }
-
-}
-</code></pre>
-
-<p>definition in Demo class</p>
-
-<pre><code>signals:
-    void publish(QString, QVariant);
-</code></pre>
-
-<p>called</p>
-
-<pre><code>QVariantMap info;
-info.insert( "from", "mindon" );
-info.insert( "to", "airoff" );
-info.insert( "message", "mindon.github.com" );
-
-emit publish( "MSG", info );
-</code></pre>
-
-<p>qml connect in demo.qml</p>
-
-<pre><code>function publish( type, data ) {
-
-}
-function subscribe( type, cb ) {
-
-}
-onCreationCompleted: {
-    demo.publish.connect( nav.publish )
-}
-</code></pre>
-
-<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
-
-<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Make a Blackberry 10 WebWorks Application]]></title>
-    <link href="http://mindon.github.com/blog/2012/10/31/make-a-blackberry-10-webworks-app/"/>
-    <updated>2012-10-31T14:52:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/10/31/make-a-blackberry-10-webworks-app</id>
-    <content type="html"><![CDATA[<p>BlackBerry 10 from RIM ( Research In Motion ) is comming.</p>
-
-<p><a href="https://developer.blackberry.com/">BlackBerry Developer</a>, we could see the bb10 provides a variety of options to develop an app:  C/C++ Native SDK, HTML5 WebWorks, Action Script with Adobe AIR, Java in Android Runtime, or with Blackberry Java.</p>
-
-<p>What a platform! ( How's its performance? )</p>
-
-<p>Here I will focus on the <a href="https://developer.blackberry.com/html5/">HTML5 WebWorks</a> app, what kind of problems you need to face. ( All base on windows env. )</p>
-
-<h2>Prepareations</h2>
-
-<p>Following SDK and tools you could find <a href="https://developer.blackberry.com/html5/download/">here</a>.</p>
-
-<ul>
-<li><strong>Ripple emulator</strong></li>
-</ul>
-
-
-<p>It's a Chrome Extension to help you previewing the webworks app UI.</p>
-
-<ul>
-<li><strong>WebWorks SDK</strong></li>
-</ul>
-
-
-<p>Remember to append the path <strong>%WebWorksSDK_HOME%\dependencies\tools\bin</strong> to the Env variable PATH.</p>
-
-<p>Here the <strong>%WebWorksSDK_HOME%</strong> is the root folder you installed your WebWorks SDK. you could set it as an Env. Variable.</p>
-
-<ul>
-<li><strong>BlackBerry 10 Dev Alpha Simulator</strong></li>
-</ul>
-
-
-<p>You need VMWare Player to run the Simulator.</p>
-
-<ul>
-<li><strong>Native SDK</strong> (Optional: You will need this for an Native WebWorks Extension )</li>
-</ul>
-
-
-<p><a href="http://developer.blackberry.com/native/beta/download/">http://developer.blackberry.com/native/beta/download/</a></p>
-
-<ul>
-<li><strong>Android App Verify and Repackage tools</strong> (Optional: Try repackage some android app you like into bb10 )</li>
-</ul>
-
-
-<p><a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a></p>
-
-<!--more-->
-
-
-<h2>Ripple Emulator</h2>
-
-<ul>
-<li><p> Remember to "Start Ripple Services" first</p></li>
-<li><p> You need to serve your html5 webworks app folder as website - simplest as localhost. ( you make choose Nginx or some simple green web servers )</p></li>
-<li><p> Visit http://localhost/, and "Enable" the Ripple Mission. ( It will crashes your Chome sometimes ).</p></li>
-</ul>
-
-
-<h2>WebWorks SDK</h2>
-
-<ul>
-<li><p>It contains a node.exe for the SDK: <em>*%WebWorksSDK_HOME%\dependencies\node*</em>, you could get the latest node.exe from <a href="http://nodejs.org/">http://nodejs.org/</a> :-)</p></li>
-<li><p>The package tool bbwp is <strong>%WebWorksSDK_HOME%\bbwp.bat</strong>, which content is: "%~dp0dependencies\node\node.exe" "%~dp0lib\bbwp.js" %*</p>
-
-<p>full command will be like: <strong>%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js mydemo-app.zip</strong></p></li>
-<li><p>WebWorks App use JNEXT to run the HTML5 as an app ( JNEXT: <a href="http://jnext.org">http://jnext.org</a> )</p></li>
-</ul>
-
-
-<h2>BlackBerry 10 Dev Alpha Simulator</h2>
-
-<ul>
-<li><p>At first, you will be drived crazy by its full size screen in VMWare Player.</p></li>
-<li><p>A "Controller" tool installed with the simulator could help you manage the screen size in the vmware player:</p></li>
-</ul>
-
-
-<p>   1) Find the menu "Connection / connect", you need the IP left bottom of the bb10 simulator, some like "192.168.111.128", NOT the 169.254.0.1 which is for device not the simulator.</p>
-
-<p>   2) After success connect, find the menu "Device / Change Zoom Level" -- It could help you to resize the simulator screen to fit your host screen size.</p>
-
-<ul>
-<li><p>Other interest controll options could be found in the "Controller" tool. ( find it in your windows' shortcut from <strong> Start / All Programs / BlackBerry 10 Simulator </strong> , or in the VM folder directly )</p></li>
-<li><p>Want to install your app into the simulator? You need to turn on "Development Mode" in BB10 "Settings / Security and Privacy / Development Mode"</p></li>
-<li><p>The IP setting in the "Development Mode" is for device only</p></li>
-<li><p>Each time the device restart, you need to turn on the "Development Mode" again ( You won't face this problem in a simulator )</p></li>
-</ul>
-
-
-<h2>BB10 Device Software Update</h2>
-
-<p>Before Updating the BlackBerry 10 Dev Alpha Device Software, you need to</p>
-
-<ul>
-<li><p>Install Blackberry <strong>Desktop Software</strong> first: <a href="http://blackberry.com/desktop">http://blackberry.com/desktop</a></p></li>
-<li><p>Then use the <a href="https://developer.blackberry.com/blackberry10devalphas/update">App Loader</a> tool to update</p></li>
-<li><p>Remember, be really patient during the update processing :-)</p></li>
-</ul>
-
-
-<h1>Start the WebWorks App Development</h1>
-
-<p>You could find more sample and details from <a href="http://blackberry.github.com/webworks/index.html">blackberry's github project</a></p>
-
-<h2><strong> config.xml </strong></h2>
-
-<p>Chose those permisions and features your app needs:</p>
-
-<p><strong>Permissions</strong></p>
-
-<pre><code>  &lt;rim:permissions&gt;
-    &lt;rim:permit&gt;read_device_identifying_information&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;record_audio&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_location_services&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;bbm_connect&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_pimdomain_messages&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_pimdomain_contacts&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_pimdomain_calendars&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_pimdomain_notebooks&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;post_notifications&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_sms_mms&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_shared&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;access_internet&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;use_camera&lt;/rim:permit&gt;  
-    &lt;rim:permit&gt;run_native&lt;/rim:permit&gt;
-    &lt;rim:permit&gt;run_when_backgrounded&lt;/rim:permit&gt;
-  &lt;/rim:permissions&gt;
-</code></pre>
-
-<p><strong> Orientation </strong></p>
-
-<pre><code>  &lt;rim:orientation mode="auto"/&gt;
-</code></pre>
-
-<p><strong> Splash </strong></p>
-
-<pre><code>  &lt;rim:splash src="splash.jpg" /&gt;
-</code></pre>
-
-<p><strong> Features </strong></p>
-
-<pre><code>  &lt;feature id="blackberry.app.orientation"&gt;
-    &lt;param name="mode" value="portrait" /&gt;
-  &lt;/feature&gt;
-
-  &lt;feature id="blackberry.app"&gt;
-    &lt;param name="backgroundColor" value="0xFFFFFF00" /&gt;
-  &lt;/feature&gt;
-
-  &lt;feature id="blackberry.app.event"/&gt;
-  &lt;feature id="blackberry.invoke"/&gt;
-  &lt;feature id="blackberry.app" /&gt;
-  &lt;feature id="blackberry.ui.dialog" /&gt;
-  &lt;feature id="blackberry.ui.Spinner" /&gt;
-  &lt;feature id="blackberry.push" /&gt;
-  &lt;feature id="blackberry.message.sms" /&gt;
-  &lt;feature id="blackberry.ui.menu" /&gt;
-  &lt;feature id="blackberry.identity" /&gt;
-</code></pre>
-
-<p><strong> Access </strong></p>
-
-<pre><code>   &lt;access uri="*" subdomains="true" /&gt;
-</code></pre>
-
-<h2><strong> webworks.js </strong></h2>
-
-<p>You need this js in your HTML5 code!</p>
-
-<ul>
-<li><p>Latest version of webworks.js could be found in <em>*%WebWorksSDK_HOME%\Framework\clientFiles*</em></p></li>
-<li><p>DO REMEMBER copy and include it as your HTML5 webworks app resources before calling any Blackberry API from your javascript code.</p></li>
-</ul>
-
-
-<h2><strong> bbUI.js </strong></h2>
-
-<p><a href="https://github.com/blackberry/bbui.js">https://github.com/blackberry/bbui.js</a></p>
-
-<blockquote><p> The objective of the bbUI toolkit is to provide a BlackBerry® User Experience and Design Language for HTML5 applications using the BlackBerry WebWorks framework.</p></blockquote>
-
-<ul>
-<li><p>Try to use this for your demo. But sure you could use your own code to do these things.</p></li>
-<li><p>bbUI.js is using <strong>iScroll</strong> for its scroller effect from <a href="http://cubiq.org/iscroll-4">http://cubiq.org/iscroll-4</a></p></li>
-</ul>
-
-
-<h2>Shell Script help to Package and Install your webwoks app to BB10 simulator</h2>
-
-<p>Requirement NOTICE:</p>
-
-<p>1) you need install <a href="http://www.7-zip.org/">7z</a> and append its 7z.exe path to Env. variable PATH.</p>
-
-<p>2) set the WebWorksSDK_HOME env. variable for your webworks sdk installed real path.</p>
-
-<p>3) change the -device 192.168.111.128 to your simulator IP</p>
-
-<p>4) Update the device password, if you don't have one, remove the <strong>-password your-device-password</strong></p>
-
-<p>Then save following code as <strong>bb-pack-install.cmd</strong>, then drag-drop your app folder on on it.</p>
-
-<pre><code>@call :reverse "%*"
-
-FOR /F "tokens=1 delims=\" %%G IN ("%reverse.result%") DO @set adir=%%G
-
-@call :reverse "%adir%"
-
-echo ## Package and Install ## -- %reverse.result%
-echo -----------------------------------
-
-@if exist simulator\%reverse.result%.bar (
-  del simulator\%reverse.result%.bar
-)
-@if exist device\%reverse.result%.bar (
-  del device\%reverse.result%.bar
-)
-
-@if not exist %~dp0%reverse.result%.zip (
-  cd %reverse.result%
-  7z.exe a -tzip %~dp0%reverse.result%.zip ".\*" -r
-  cd %~dp0
-)
-
-@%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js %~dp0%reverse.result%.zip
-
-echo -----------------------------------
-
-@blackberry-deploy -installApp -password your-device-password -device 192.168.111.128 -package simulator\%reverse.result%.bar
-
-pause
-
-:reverse
-  @echo off
-  set reverse.tmp=%~1
-  set reverse.result=
-  :reverse.loop
-    set reverse.result=%reverse.tmp:~0,1%%reverse.Result%
-    set reverse.tmp=%reverse.tmp:~1,999%
-    if not "%reverse.tmp%"=="" goto:reverse.loop
-goto:eof
-eof:
-</code></pre>
-
-<h1>Signed your App for device</h1>
-
-<h2>Apply Signed Keys</h2>
-
-<p><a href="https://www.blackberry.com/SignedKeys/codesigning.html">https://www.blackberry.com/SignedKeys/codesigning.html</a></p>
-
-<p>Apply and get two key files: <strong>client-PBDT-#######.csj</strong>, <strong>client-RDK-#######.csj</strong></p>
-
-<p>DO REMEMBER the password you use to apply the key files ( as <strong>-csjpin</strong> value later )</p>
-
-<h2>Signer Tool</h2>
-
-<p>After you got the two files, download them and run following commend to sign the key files</p>
-
-<pre><code>blackberry-signer -proxyhost 123.45.67.89 -proxyport 8080 -register -csjpin csj-apply-password -cskpass my-store-password client-RDK-#######.csj client-PBDT-#######.csj
-</code></pre>
-
-<p>If you don't need proxy, remove the relative parameters. DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong> for <strong>blackberry-signer</strong>, if you put the somewhere else, it won't work.</p>
-
-<p>The <strong>-cskpass</strong> you choose here will be the <strong>-storepass</strong> value for generate the <strong>debug token</strong>.</p>
-
-<p>You could backup the 3 result files for other machine</p>
-
-<p><strong>author.p12</strong>, <strong>barsigner.csk</strong> and <strong>barsigner.db</strong></p>
-
-<ul>
-<li><p><strong>Windows XP</strong>: %HOMEPATH%\Local Settings\Application Data\Research In Motion\</p></li>
-<li><p><strong>Windows Vista and Windows 7</strong>: %HOMEPATH%\AppData\Local\Research In Motion\</p></li>
-<li><p><strong>Mac OS</strong>: ~/Library/Research In Motion/</p></li>
-<li><p><strong>UNIX or Linux</strong>: ~/.rim/</p></li>
-</ul>
-
-
-<p>By default, %HOMEPATH% is C:\Documents and Settings on Windows XP and C:\Users on Windows Vista and Windows 7.</p>
-
-<p><a href="https://developer.blackberry.com/html5/documentation/signing_setup_tablet_apps_1920009_11.html">More detail on this topic</a></p>
-
-<p>BTW: <strong>batchbar-signer</strong> for repackage android app DOES NOT support <strong>-proxyhost</strong> parameter when I write this blog. ( got this info by decompile the java class file used by this tool )</p>
-
-<h2>Debug Token</h2>
-
-<p>You need a debug token, the name of the debug token bar file could be chosen as you will.</p>
-
-<pre><code>blackberry-debugtokenrequest -proxyhost 123.45.67.89 -proxyport 8080 -storepass my-store-password -devicepin MY-DEVICE-PIN mindon_token.bar
-</code></pre>
-
-<p>DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong></p>
-
-<p>Install the token bar file into your simulater (IP 192.168.111.###) or device (IP 169.254.0.1).</p>
-
-<pre><code>blackberry-deploy -installApp -password my-device-password -device 192.168.111.128 -package %*
-</code></pre>
-
-<h2>Package and Signed your App</h2>
-
-<pre><code>@%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js -g my-store-password mydemo-app.zip
-</code></pre>
-
-<p>If you need to debug, add <strong>-d</strong> parameter before -g.</p>
-
-<h2>How to signed an repackage of android app?</h2>
-
-<pre><code>batchbar-signer myandroid-app.bar author.p12 my-store-password -t product\
-</code></pre>
-
-<p>The myandroid-app.bar is generated by command tool: <strong>apk2bar</strong> (It's not included in webworks sdk, and could fetch from <a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a> )</p>
-
-<h2>Another Issue when working an WebWorks Native Extension</h2>
-
-<p>If you got an error "Require Error Can't find /usr/lib/webplatform/plugins/jnext/***.so Libary cannot be found".</p>
-
-<p>Try telnet 192.168.111.128 with devuser/devuser as account and password, you could never find your .so file there in the path even it works.</p>
-
-<p>The error may comes from some other error - dependency missing or something else, who knows?</p>
-
-<p>Most problems you met during the development, few you could get the right and directly answer in the development documents from BB website or forum. Google helps sometimes, but not the right solution. Most casese, maybe you need to try or find the right develop guy in RIM.</p>
-
-<p>Wish this could be helpful.</p>
-
-<p>God bless you, dear BB10 developers :-)</p>
-
-<p><i id="link-tags">blackberry 10;webworks</i></p>
+<p><i id="link-tags">Blackberry 10;Webworks;Cascades;QML,Chrome App,Native Client;HydridAuth;CodeIgniter;MOAI SDK;Corona SDK;Lua;Firefox OS;Chrome Webstore</i></p>
 ]]></content>
   </entry>
   
@@ -608,6 +164,30 @@ It's a pitty, you are using a browser out of the date.
 </code></pre>
 
 <p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solve NodeJS 0.8+ Build Problem]]></title>
+    <link href="http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem/"/>
+    <updated>2012-07-20T22:04:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2012/07/20/solve-nodejs-0.8-build-problem</id>
+    <content type="html"><![CDATA[<p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
+
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming...</p>
+
+<p>Here's a few pre-conditions for a successful make of NodeJS v0.8+:</p>
+
+<ol>
+<li><p>GNU make 3.8.1+</p></li>
+<li><p>Python 2.6 or 2.7</p></li>
+<li><p>export LINK=g++ or setenv LINK g++</p></li>
+</ol>
+
+
+<p>Do remember check these issues when you try to build new version (v0.8+) of NodeJS.</p>
+
+<p><i id="link-tags">make;python;nodejs</i></p>
 ]]></content>
   </entry>
   
