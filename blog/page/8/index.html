@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="对于正在寻求或建立长期关系的朋友，怪诞行为学（Predictably Irrational）里提到 “独木舟与夫妻关系”片段，绝对是要学习和参考的： 遇到问题时，是会相互抱怨还是一起寻找原因，同心协力解决问题？ ">
+  <meta name="description" content="Aby在路上… 这一趟，Aby出门时间比较久。 先是飞由天津回家，在家里帮着忙活新装修的家选购家具什么的。 之后再经由天津往北京和可心汇合，考察大导咖啡馆的事宜，并准备一起前往西藏拉萨。 她们先是飞达西宁，在那去感受了一下青海湖——“早上的青海湖变了一个颜色，让人心悸的淡蓝。羊群跑上公路，水鸟飞起 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,251 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Aby Is on the Road: Lhasa</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-25T07:59:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Aby在路上…</h2>
+
+<p>这一趟，Aby出门时间比较久。</p>
+
+<p>先是飞由天津回家，在家里帮着忙活新装修的家选购家具什么的。</p>
+
+<p>之后再经由天津往北京和可心汇合，考察大导咖啡馆的事宜，并准备一起前往西藏拉萨。</p>
+
+<p>她们先是飞达西宁，在那去感受了一下青海湖——“早上的青海湖变了一个颜色，让人心悸的淡蓝。羊群跑上公路，水鸟飞起，如果是夏季定会更美。”（<a href="http://weibo.com/1416075644/yg3hZBuel">来源</a>）</p>
+
+<p>接着就乘坐火车前往目的地——拉萨。</p>
+
+<p>“坐上开往拉萨的列车，好好睡一觉，等待明天的美景。” （<a href="http://weibo.com/1416075644/yfZu49FvY">来源</a>）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Find Out Unique Elements in a Javascript Array</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-17T22:53:00+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
+
+<h2>Algorithm 1</h2>
+
+<pre><code>function unique1(d) {
+  var o = {}, i, l = d.length, r = [];
+  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
+  for(i in o) r.push(o[i]);
+  return r;
+};
+</code></pre>
+
+<p>This method has 2 loops, that&#8217;s a big time-cost problem.</p>
+
+<h2>Algorithm 2</h2>
+
+<p>reduce one loop from the algorithm 1, improve a litter bit</p>
+
+<pre><code>function unique2(d) {
+  var r = [], i = {}, j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(!i[d[k]]) {
+      i[d[k]] = 1;
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<h2>Algorithm 3</h2>
+
+<p>In ECMA-262 standard, there&#8217;s a indexOf method for Array object, we use it to improve a lot.</p>
+
+<pre><code>function unique3(d) {
+  var r = [], j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(r.indexOf(d[k]) &lt; 0) {
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<p>and it could be better&#8230;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/17/abys-menu/">外出Aby发回的菜谱</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-17T22:41:00+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Aby 不在身边，吃饭的事情也不能马虎了。给我特意准备了菜单，提醒我注意饮食：</p>
+
+<hr />
+
+<h2>早餐选择：</h2>
+
+<p>1、花卷+豆浆</p>
+
+<p>2、牛奶+吐司（夹蛋）</p>
+
+<p>吐司可从岁宝可颂坊买，或者买白吐司。</p>
+
+<p>3、粥</p>
+
+<p>可配菜：</p>
+
+<p>香菜炒蛋、酱炒蛋（冰箱里有）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/17/abys-menu/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/15/modern-superstitions/">Modern Superstitions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-15T17:42:00+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>现代迷信</h2>
+
+<p>相信任何事的三个坏理由：<strong>传统</strong>、<strong>权威</strong>和<strong>启示</strong>。</p>
+
+<p>互联网时代，也是谣言、谎话、虚假广告、洗脑流行的时代，你有什么根据相信你所听到的、看到的文字或这画面？</p>
+
+<p>大多时候，我们其实毫无根据——就是相信了。</p>
+
+<p>大脑被商业化广告植入了太多的无根据信任。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/15/modern-superstitions/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -259,277 +504,6 @@ console.log(decrypted);
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-26T22:13:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><strong>Cell Cycle</strong>
-Creating 3d-printable cellular models.</li>
-</ul>
-
-
-<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
-
-<p><img src="/images/blog/chrome/nervous.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<ul>
-<li><strong>Fluid Simulation with Turing Patterns</strong>
-Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
-</ul>
-
-
-<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
-
-<p><img src="/images/blog/chrome/fluid.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-26T21:43:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Improve eyes dry or eyesight blur problem</p>
-
-<h2>1.枸杞鲫鱼汤（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼，视物模糊。</p>
-
-<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
-
-<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
-
-<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
-
-<h2>2.牛奶鸡蛋饮（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
-
-<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
-
-<h2>3.猪肝蛋汤（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
-
-<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/">Upgrade Winxp From Sp2 to Sp3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-24T17:59:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve tried more than 3 times before:</p>
-
-<p>to upgrade my HP Mini winxp to sp3</p>
-
-<p>Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade problem.</p>
-
-<p>The problem i faced last time is &#8220;A Problem is preventing windows from accurately checking the license&#8221;. 0x80070002</p>
-
-<p>Who knows what the hell was happening, my winxp is lisenced!</p>
-
-<p>Tons of softwares need sp3 &#8211; something like &#8220;Visual C++ 2010 Express&#8221;.</p>
-
-<p>That&#8217;s why I need sp3 package installed.</p>
-
-<p>Here are the steps I followed, to upgrade sp3:</p>
-
-<ol>
-<li><p>download sp3 package from microsoft
-<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24</a></p></li>
-<li><p>backup following files from windows/system32</p>
-
-<p>   dpcdll.dll <br/>
-   pidgen.dll <br/>
-   uxtheme.dll<br/>
-   wpa.dbl</p></li>
-<li><p>Restart my winxp &amp; press F8 to start from safe mode</p></li>
-<li><p>Install sp3</p></li>
-<li><p>Restart &amp; press F8 to start from safe mode</p></li>
-<li><p>Backup new files from sp3 version</p>
-
-<p>   dpcdll.dll <br/>
-   pidgen.dll <br/>
-   uxtheme.dll<br/>
-   wpa.dbl</p></li>
-<li><p>Replace these files with the old files backuped in step 2</p></li>
-<li><p>Restart</p></li>
-<li><p>Done!</p></li>
-</ol>
-
-
-<p>I don&#8217;t know if my steps make it or the sp3 package is different or something else &#8230;</p>
-
-<p>But i do upgrade my HP Mini windows xp from sp2 to sp3 successfully this time :-)</p>
-
-<p>God bless you!</p>
-
-<p>Thanks for <a href="http://hi.baidu.com/xiaohuibai/blog/item/69fa16f4b7e1e8f77609d7d9.html">this blog</a> (in Chinese) &#8211; I didn&#8217;t use any files it provides.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/24/start-a-nodejs-addon-under-windows/">Start a NodeJS Addon Under Windows</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-24T12:15:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Code &amp; tools preparation</h2>
-
-<p><strong>NodeJS source code</strong>
-<a href="https://github.com/joyent/node">https://github.com/joyent/node</a></p>
-
-<p><strong>VISUAL C++ 2010 EXPRESS</strong>
-Free tools to create applications on Windows using Visual C++.
-(Needs SP3 under winxp)</p>
-
-<p><a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 EXPRESS</a></p>
-
-<p><strong>Python 2.6 or 2.7</strong>
-<a href="http://www.python.org/download/">http://www.python.org/download/</a></p>
-
-<h2>Compile your NodeJS</h2>
-
-<p>Run vcbuild.bat under NodeJS source folder.</p>
-
-<h2>Compile the Hello-world</h2>
-
-<p><strong>General Steps also fit for other addons</strong></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/24/start-a-nodejs-addon-under-windows/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -562,9 +536,9 @@ Free tools to create applications on Windows using Visual C++.
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 43 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 47 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 24 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 26 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
@@ -572,7 +546,7 @@ Free tools to create applications on Windows using Visual C++.
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 6 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 9 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 4 )</li>
 
@@ -581,6 +555,22 @@ Free tools to create applications on Windows using Visual C++.
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/19/design-t-shirts-on-teespring/">Design T-Shirts on Teespring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/19/learning-go-language/">Learning GO language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/01/06/era-of-hardware-browsers/">Era of Hardware Browsers</a>
@@ -604,22 +594,6 @@ Free tools to create applications on Windows using Visual C++.
     
       <li class="post">
         <a href="/blog/2012/10/31/make-a-blackberry-10-webworks-app/">Make a Blackberry 10 WebWorks Application</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/20/street-lights-in-the-daylight/">白天的路灯</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/20/light-up-the-leaf-with-sunlight/">被阳光敲亮的叶子</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/20/walking-to-work/">走路上班的逆向足迹</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/14/mindon-mobile-devices/">我的移动电子产品</a>
       </li>
     
   </ul>

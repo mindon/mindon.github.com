@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-06T23:56:22+08:00</updated>
+  <updated>2013-01-20T20:43:16+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,218 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
+    <updated>2013-01-19T14:46:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>
+    <content type="html"><![CDATA[<p>The game Ingress is spreading around the world.</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
+
+<p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
+
+<p>The idea to develop such an extension for Ingress comes from another extension "<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>" -- developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
+
+<p>I made some improvement in this totally re-design and develop extension.</p>
+
+<ol>
+<li><p>Simpler UI and faster start-speed;</p></li>
+<li><p>Area select from an embedded Google Map;</p></li>
+<li><p>Easy view for Level, Energy, Links and Mods;</p></li>
+<li><p>Cache same query in 5 minutes;</p></li>
+<li><p>Locate portals with an embedded Google Map;</p></li>
+<li><p>Help to find zero level portals;</p></li>
+<li><p>Show all portals in a single large Google Map;</p></li>
+<li><p>Usage leading page.</p></li>
+</ol>
+
+
+<!--more-->
+
+
+<p>When you click the extension icon:</p>
+
+<pre><code>if (NOT in ingress.com) then
+
+    return showing about and usage message.
+
+end if
+
+if (Cached) then
+
+    return get cache data and show results
+
+end if
+
+Show querying spin.
+
+Submit query.
+
+if (No Auth) then
+
+    return Show no auth message
+
+end if
+
+if (Failed) then
+
+    return Show failed message
+
+end if
+
+
+Cache result
+
+Show result through template
+
+
+:: JS template engine in a sandbox iframe;
+
+:: Google Map shows in a sandbox iframe;
+
+:: Using postMessage communicate between the sandbox iframe and the extension.
+</code></pre>
+
+<p>The extension spread from a Chinese Ingress QQ group, then to a community in Google+.</p>
+
+<p>First 2 days, 186 installation. and yesterday the installation reached 865, 143 G+ and 10 reviews in Chrome Web Store.</p>
+
+<p>It's amazing that someone outside there likes your app and appreciates your work.</p>
+
+<p><img src="/images/blog/chrome/find-ingress-portals.png" alt="" /></p>
+
+<p>The Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a></p>
+
+<p><i id="link-tags">Ingress;Chrome Extesion;QQ;Google Map</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Design T-Shirts on Teespring]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring/"/>
+    <updated>2013-01-19T14:44:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring</id>
+    <content type="html"><![CDATA[<p>Teespring是个特别的众筹网站。它个一般众筹网站不同的地方是它是一个T-Shirt设计的众筹，这也就意味着用户只需要提供设计稿和定价，剩下的事情都是网站运营方的了——如果购买的人数达到指定数目，运营方来印刷和发货。</p>
+
+<p>这种模式有点类似常规众筹网站和团购网的结合体。有众筹的特点，也有团购的便利。</p>
+
+<p>这对想玩一下T恤设计的我来说，是个挺有意思的事情——不管能否真的众筹成功，至少能让我过一下T恤设计的瘾。</p>
+
+<p><a href="http://teespring.com/mindon">http://teespring.com/mindon</a></p>
+
+<p><img src="/images/blog/t-mindon.png" alt="" /></p>
+
+<!--more-->
+
+
+<p>T-Shirts for Ingress Players:</p>
+
+<p><a href="http://teespring.com/ingress">General</a>, <a href="http://teespring.com/ingress-enlightened">Enlightened</a>, <a href="http://teespring.com/ingress-resistance">Resistance</a></p>
+
+<p>Here's another one "2013"</p>
+
+<p><a href="http://teespring.com/cc-2013">http://teespring.com/cc-2013</a></p>
+
+<p><img src="/images/blog/t-cc-2013.png" alt="" /></p>
+
+<p>To share T-shirts on <strong>Teespring.com</strong>, I develop a Chrome Extension - "Tee Share" to get both sides of the T-shirt together, and combin it with its name and URL :-)</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/tee-share/flljbdpjfdnbehijbekgkcodgmmcgofa?hl=en-US">Get "Tee Share"</a></p>
+
+<p><img src="/images/blog/chrome/tee-share.png" alt="" /></p>
+
+<p><i id="link-tags">Chrome Extension;TeeSpring;Ingress</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning GO language]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/19/learning-go-language/"/>
+    <updated>2013-01-19T14:14:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/19/learning-go-language</id>
+    <content type="html"><![CDATA[<p>Go语言几年前（2009）就出来了，喜欢其设计理念：简单、并行、实用和高效。</p>
+
+<p>因为大多数时间都作为Web前端跟javascript较劲的工程师，对Go的了解并不多。这两年倒是一直在关注Node.JS。</p>
+
+<p>Node.JS作为Web实时数据服务是非常不错的选择，曾用来做了好几个试验性质的产品，一个翻译平台（荒置中，新版正在用业余时间开发），一个支持多语言的反馈平台（在线），一个任意网站嵌入式的Web聊天平台（下线），一个推送微信官方消息的系统（闲置）。</p>
+
+<p>Node.JS用来做产品原型，或者SDK工具等工具类，是再适合不过了。Blackberry 10的WebWorks SDK里就用了Node.JS作为辅助工具。</p>
+
+<p>目前为止Node.JS还是我最喜欢的技术。然而，作为后台服务语言，其实Node.JS能做到的，大多其它语言也可以做得更好，除了Node.JS可以和前端使用同样的js库之外。Go这时重新进入了我的视野，也成为了新的学习任务。</p>
+
+<p>“Go is an expressive, concurrent, garbage-collected programming language.”</p>
+
+<p>官方网站 <a href="http://golang.org">Go official website</a> 不知道什么原因被列入了和谐名单（因为用的是Google的服务器吗？） 大家可以访问 <a href="https://code.google.com/p/go/">https://code.google.com/p/go/</a> 至少偶尔能访问一下。要不就得翻墙了。</p>
+
+<p>在这主要是想分享一下配置Go project时候的碰到的一个问题的解决办法（under windows）：</p>
+
+<!--more-->
+
+
+<p>GO project Windows env. settings:</p>
+
+<h2>set-env.bat content</h2>
+
+<pre><code>set GOPATH=f:\labs\go-learn\mindon
+set GOBIN=%GOPATH%\bin
+set PATH=%PATH%;%GOBIN%
+</code></pre>
+
+<ol>
+<li><p>configure your project path as GOPATH</p></li>
+<li><p>run set-env.bat in your DOS console</p></li>
+<li><p>go install</p></li>
+</ol>
+
+
+<p>These settings will eliminate the errors "can't load package" under Windows.</p>
+
+<p>另外一个是编译Go本身时候碰到的问题</p>
+
+<p>When building #Go under Windows, got following error:</p>
+
+<pre><code>cmd/dist/windows.c:119: warning: dereferencing type-punned pointer will break strict-aliasing rules
+</code></pre>
+
+<p>update the windows.c line 119</p>
+
+<pre><code>(Rune*)&amp;r --&gt; (Rune*)r
+</code></pre>
+
+<p>then run all.bat :-) works fine!</p>
+
+<p><i id="link-tags">GO;Node.JS;Blackberry 10</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Start DOS Console Minimized]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/17/start-dos-console-minimized/"/>
+    <updated>2013-01-17T07:59:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/17/start-dos-console-minimized</id>
+    <content type="html"><![CDATA[<p>How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code</p>
+
+<pre><code>@echo off
+
+if "%1"=="start-min" goto :begin
+start /min "" %0 start-min
+exit
+
+:begin
+title Hello Mini World
+
+echo Call something here
+
+pause
+exit
+@echo on
+</code></pre>
+
+<p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Era of Hardware Browsers]]></title>
@@ -29,348 +241,6 @@
 <p>That means the mobile app developers are in the same situation as the web front-end developers are. They are working for the mobile "Hardware Browser".</p>
 
 <p><i id="link-tags">Hardware Browser</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[激活连接体]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/05/get-connected-then-activated/"/>
-    <updated>2013-01-05T09:30:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/05/get-connected-then-activated</id>
-    <content type="html"><![CDATA[<p><strong>Get Connected then Activated</strong></p>
-
-<p>连接是一种普遍的客观存在，然而其价值却需要适合的环境才会激发出来。</p>
-
-<p>E=MC2: Motif * Connection * Context = Expression</p>
-
-<p>社区论坛，博客，微博，微信，QQ以及其他社交类，分享类，协作类，游戏类，交易类应用或者网站都提供了一个环境来建立各种连接。</p>
-
-<p>然而，只有电商类网站建立的连接是基于现实的、物质的。这种连接的目很明确——为了达成交易。并且所有的元素都是围绕着这么一个中心来构成其环境因素的。这大概就是亚马逊Amazon、淘宝这样的电商网站存在和崛起的生命力。</p>
-
-<p>可能你会说，其它的分享和交友类的应用和网站目的也同样明确 —— 没错，他们的目的也是很明确的 —— 那就是建立连接。可是，建立连接是塑造环境的最小功能，良好环境的魔力在于让连接形成表达并发挥功效。</p>
-
-<!--more-->
-
-
-<p>昨天在Amazon中国上买了一本《大连接》(Connected)，因为和最近自己的兴趣有点关联，参考一下MIT学者的研究 :-p</p>
-
-<p>连接其实并不是我们的目的，目的是通过连接传输的内容以及对网络成长的影响。《大连接》关注的方向和我关注的点还是有些不同的，在我看来，连接是在特定环境下的一种结果，当然这种结果同时也会影响到培育连接的环境。</p>
-
-<p>重要的是这个E=MC2模型如何应用来认识这个世界和指导我们的生活。</p>
-
-<p>比如，你想找到自己的另外一半——其实这个目的是建立连接。确实，现实中大多人的做法就如《大连接》里提到的，主要是通过社会网络的功能实现——通过朋友或朋友的朋友提供的连接。然而，除了直接获取三度连接，其实还有一种获取连接的方案：接近或者融入具有你想要的人的连接的环境中。即通过改变Context来获得Connect。</p>
-
-<p>通过Context的调节来获取Connection是一种主动的建立连接方式，而通过三度影响力建立的连接则大多是被动的——假设你的环境里已经具有符合连接的Context。</p>
-
-<p>《非诚勿扰》这个大型生活服务类节目创建了一个环境，然后挑选一些具有连接需求的男女放入其中，让其自由连接。这就是典型的通过构建Context来建立连接的方式。对于普通个体来说，更好的方式则是自己去寻找对象经常活跃的环境，让连接建立的几率增大。</p>
-
-<p>比如，你想找一个喜欢玩游戏的对象，那么你最好学着去了解游戏社区，学着玩游戏，感受游戏的魅力。如果你想找一个理科男，那么你可以了解一下理科男最常活动的环境是什么样的，怎么能靠近那样的环境，融入那个充满理科男生连接可能的区域。如果你喜欢爱喝酒、泡吧的对象，可能就要去酒吧这样的地方。如果你喜欢那些对性感有兴趣的对象，那么就可以把自己打扮得性感一些。如果想找容易被名牌和物质吸引的，那么就尽可以用名牌把自己包装好，展现自己物质方面的优势。当然，如果你想找一个对音乐感兴趣的对象，就得提升自己在音乐方面的认知和品味。如果想找一个爱读书的，那么常去图书馆和书店，参与豆瓣书评一定是有更多机会的。不管什么，只要你想要找的对象看重什么，你自己就多关注哪方面的东西。相反，如果你展示哪方面的东西越多，你找到的对象关注这类东西的可能性就越大。</p>
-
-<p>什么样连接建立，很大程度上反映了周边环境的状况。而环境也注定了形成的连接的类型。</p>
-
-<p>对于人作为连接主题来说，最近的环境莫过于自己的性格特征了，人生态度，再则是生活、学习、工作的环境。</p>
-
-<p>同样的连接主题在不同的环境下建立的连接表现是可以完全不同的：同样的水分子，在0摄氏度之上建立的连接是弹性，于是表现出来的形态是水；高温下连接则弱化而成为蒸汽；0度之下则形成冰晶，表现为刚硬的固态。</p>
-
-<p>碳原子正常压力下通过连接形成的是石墨，而在超高压下连接形态就能成为金刚石。</p>
-
-<p>不同的环境(Context)下会形成不同强度的连接，表现出不一样的特性和功能，这是世界的组织方式。</p>
-
-<p>人类个体之间异常复杂的社会网络，跟我们个体大脑里的神经网络一样，展现出不一样的社会智能——这种网络也在不断的生长、强盛和衰老，也会生病和短路。我们身在其中，社会网络的异常也有个体责任，虽说我们无法明了一切的机理，但这也正如我们无法明了大脑运作的机理一样。</p>
-
-<p>总之，要创造初始环境让连接形成，并针对连接强化环境，培养并激活连接，才能让连接开花结果。</p>
-
-<p><i id="link-tags">大连接;非诚勿扰;三度影响力;社会网络</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Lately]]></title>
-    <link href="http://mindon.github.com/blog/2012/12/30/learning-lately/"/>
-    <updated>2012-12-30T14:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/12/30/learning-lately</id>
-    <content type="html"><![CDATA[<p>这段时间接触和试验了不少新的东西：</p>
-
-<ul>
-<li>Blackberry 10 Webworks App Demo (HTML5)</li>
-</ul>
-
-
-<p>尝试了一下BB10的 Webworks App开发，HTML5的性能表现还是不错的，只不过即便如此，HTML5 App的性能表现和Native App的差距还是不小的。而且，BB10的Webworks用的 JNext 最新更新竟然还是2008年的东西…… 另外就是调试和.so的依赖方面会碰到不小的麻烦。</p>
-
-<p>中间还小试验了一下具有左右手差异内容滚动角度的UI表现。</p>
-
-<ul>
-<li>Blackberry 10 Cascades App Demo (QML + C++)</li>
-</ul>
-
-
-<p>在放弃了Webworks后，转向试验 Cascades 开发。使用作为UI描述的QML类似 JSON 形式，采用 Javascript 脚本实现 UI 交互。虽说UI有Chrome插件来预览，不过交互脚本的调试并不方便。不过应用的调试倒是比webworks app方便很多。</p>
-
-<ul>
-<li>Chrome App独立窗口应用</li>
-</ul>
-
-
-<p>Chrome 20版本开始支持独立窗口的应用，可以使用TCP建立监听及其他的一系列支持。独立窗口让Chrome App表现得更像桌面应用了。可惜目前这类应用在浏览器没有启动的时候独立启动的话，所有的Extension都会同时启动，使得启动缓慢——如果可以禁止掉独立应用窗口的插件加载就完美了。</p>
-
-<!--more-->
-
-
-<ul>
-<li>再玩CodeIgniter</li>
-</ul>
-
-
-<p>基于php的应用框架CodeIgniter其简单入手，良好性能，完备文档和活跃社区对于中小应用来说都是相当不错的选择。</p>
-
-<p>HydridAuth用来作为第三方的登录验证方式也是不错的选择。</p>
-
-<ul>
-<li>Go语言及Google AppEngine</li>
-</ul>
-
-
-<p>Google的Go语言确实是一门使用的编程语言，目的是为开发人员解决问题，而不是纠结于语言的设计。</p>
-
-<p>为了练习一下Go语言，就另外建了一个GAE App，用来作为最近的兴趣研究开发。</p>
-
-<ul>
-<li>Chrome App (Native Client)</li>
-</ul>
-
-
-<p>通过Chrome来实现跨平台应用，也是个比较好玩的途径。只进行了简单的开发环境搭建和试验，碰到了些问题——某些需要的接口因为会造成对系统的依赖，所以需要用第三方的实现方式。暂没做深入研究。</p>
-
-<ul>
-<li> 独立游戏和LUA</li>
-</ul>
-
-
-<p>前段时间在部门分享里听了一个来自互娱的同事分享关于独立游戏的状况，激起了对游戏的一点兴趣。而自己之前Javascript玩的几个HTML5小游戏，所以准备了解一下手机游戏的开发框架，如Corona SDK和MOAI SDK，这两个都是用Lua语言来开发跨平台游戏的，不过我对开源且支持Chrome Native Client的MOAI 比较关注。</p>
-
-<p>搭建了开发环境及Hello world，不过Moai App作为Chrome Nacl应用要带的库就有20+M大小，有点重了。</p>
-
-<p>Android下运行没能成功显示，不知何故，后续有时间再进行探讨。</p>
-
-<ul>
-<li>Firefox App</li>
-</ul>
-
-
-<p>这个是把之前整理的一个HTML5小游戏封装成了 Firefox package app for Firfox OS。 看起来Firefox Marketplace 跟 Chrome Webstore有几分相似：也分Host App/Package App。 搭的GAE Go App正好为提交 Host App 当了试验服务器。</p>
-
-<p><i id="link-tags">Blackberry 10;Webworks;Cascades;QML,Chrome App,Native Client;HydridAuth;CodeIgniter;MOAI SDK;Corona SDK;Lua;Firefox OS;Chrome Webstore</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[生活区域]]></title>
-    <link href="http://mindon.github.com/blog/2012/12/30/living-area/"/>
-    <updated>2012-12-30T13:59:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/12/30/living-area</id>
-    <content type="html"><![CDATA[<p>在这里已经生活了一年多时间了。整理一下这里的连接 :-)</p>
-
-<p><img src="/images/blog/living-area.jpg" alt="" /></p>
-
-<p>虽然小区很旧了，不过生活得还算自在和舒适——要求不太高的话 :-p</p>
-
-<p>小区的连接是相当强大的，只可惜小区及外围的空地都定位成了停车场，让小区的价值和吸引力有所下调，否则将会是个相当具有竞争力的地方。这就比如一张宣纸，用来盛放食物和作为书法或艺术品载体一样，所具有的价值差别还是相当大的。</p>
-
-<p>小区的物业似乎仅在维持现有设施的正常运作之外，并没有什么其他表现。虽说是让人感觉自在，不过小区越来越美好的可能性降到了很低的水平。——类似一个很Nice但安于现状没啥追求的人。</p>
-
-<p>仅剩的绿色长廊、健身设施和小小的儿童玩乐场就是小区里最好的设施了。虽然空地都变成了停车场，不过比起半开放状态来说，停车问题貌似还是目前令大家非常头痛的问题。</p>
-
-<p>任何东西的价值除了其具备的连接，其所处的环境和自身定位也是相当关键的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
-    <link href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/"/>
-    <updated>2012-11-21T21:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app</id>
-    <content type="html"><![CDATA[<p>"Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30."</p>
-
-<p>"QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements."</p>
-
-<p>Here's something I met during my first development using QML under Blackberry Native SDK IDE.</p>
-
-<ul>
-<li> Link error or "undefined reference to `vtable for someSymbol'" issue</li>
-</ul>
-
-
-<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
-
-<p>Manage source folders and files, header folders to avoid "undefined reference to `vtable for someSymbol'"</p>
-
-<!--more-->
-
-
-<ul>
-<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
-<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
-<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
-</ul>
-
-
-<p>e.g. demo.qml</p>
-
-<pre><code>import "demo.js" as Demo
-
-
-NavigationPane {
-    id: nav
-    function notify( message ) {
-    Demo.notify( message )
-    }
-}
-</code></pre>
-
-<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
-
-<pre><code>Page {
-    Container {
-        layout: StackLayout {
-        }
-        Button {
-                text: qsTr("Test")
-        onClicked: {
-          nav.notify("something")
-        }
-        }
-    }
-}
-</code></pre>
-
-<ul>
-<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
-</ul>
-
-
-<p>something like</p>
-
-<pre><code>import "share"
-//...
-ListView {
-            listItemComponents: [
-                ListItemComponent {
-                    type: "item"
-                    DemoItem {
-                    }
-                }
-        dataModel: GroupDataModel {
-                    id: recentlyDataModel
-        }
-        onCreationCompleted: {
-                recentlyDataModel.clear()
-            recentlyDataModel.insert({
-            "message": "Hello world",
-            "image": "asset:///images/demo.png"
-        })
-        }
-            ]
-}
-</code></pre>
-
-<ul>
-<li>Chat message display</li>
-</ul>
-
-
-<p>component to display chat message</p>
-
-<pre><code>TextArea {
-        editable: false
-    text: "Hello :-)"
-    inputMode: TextAreaInputMode.Chat
-}
-</code></pre>
-
-<ul>
-<li>Using system dialogs inside QML</li>
-</ul>
-
-
-<p>call these to import system dialog methods into QML</p>
-
-<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
-qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
-qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
-</code></pre>
-
-<ul>
-<li>Use subscribe/publish methods to comunicate between QML and C++</li>
-</ul>
-
-
-<p>set context</p>
-
-<pre><code>#include &lt;bb/cascades/Application&gt;
-#include &lt;bb/cascades/QmlDocument&gt;
-#include &lt;bb/cascades/NavigationPane&gt;
-
-#include &lt;bb/system/SystemDialog&gt;
-#include &lt;bb/system/SystemPrompt&gt;
-#include &lt;bb/system/SystemToast&gt;
-
-DemoTest::DemoTest(bb::cascades::Application *app)
-: QObject(app)
-{
-
-    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
-
-    // create root object for the UI
-    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
-
-    // set created root object as a scene
-    if (navPane) {
-    Demo *demo = new Demo();
-
-    qml-&gt;setContextProperty("*demo", demo);
-
-    // Set the main scene for the application to the NavigationPane.
-    Application::instance()-&gt;setScene(navPane);
-    }
-
-}
-</code></pre>
-
-<p>definition in Demo class</p>
-
-<pre><code>signals:
-    void publish(QString, QVariant);
-</code></pre>
-
-<p>called</p>
-
-<pre><code>QVariantMap info;
-info.insert( "from", "mindon" );
-info.insert( "to", "airoff" );
-info.insert( "message", "mindon.github.com" );
-
-emit publish( "MSG", info );
-</code></pre>
-
-<p>qml connect in demo.qml</p>
-
-<pre><code>function publish( type, data ) {
-
-}
-function subscribe( type, cb ) {
-
-}
-onCreationCompleted: {
-    demo.publish.connect( nav.publish )
-}
-</code></pre>
-
-<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
-
-<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
-
-<p><i id="link-tags">Blackberry;QML;Qt;Cascades</i></p>
 ]]></content>
   </entry>
   

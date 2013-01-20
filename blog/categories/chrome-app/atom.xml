@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-06T23:56:22+08:00</updated>
+  <updated>2013-01-20T20:43:16+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
+    <updated>2013-01-19T14:46:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>
+    <content type="html"><![CDATA[<p>The game Ingress is spreading around the world.</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
+
+<p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
+
+<p>The idea to develop such an extension for Ingress comes from another extension "<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>" -- developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
+
+<p>I made some improvement in this totally re-design and develop extension.</p>
+
+<ol>
+<li><p>Simpler UI and faster start-speed;</p></li>
+<li><p>Area select from an embedded Google Map;</p></li>
+<li><p>Easy view for Level, Energy, Links and Mods;</p></li>
+<li><p>Cache same query in 5 minutes;</p></li>
+<li><p>Locate portals with an embedded Google Map;</p></li>
+<li><p>Help to find zero level portals;</p></li>
+<li><p>Show all portals in a single large Google Map;</p></li>
+<li><p>Usage leading page.</p></li>
+</ol>
+
+
+<!--more-->
+
+
+<p>When you click the extension icon:</p>
+
+<pre><code>if (NOT in ingress.com) then
+
+    return showing about and usage message.
+
+end if
+
+if (Cached) then
+
+    return get cache data and show results
+
+end if
+
+Show querying spin.
+
+Submit query.
+
+if (No Auth) then
+
+    return Show no auth message
+
+end if
+
+if (Failed) then
+
+    return Show failed message
+
+end if
+
+
+Cache result
+
+Show result through template
+
+
+:: JS template engine in a sandbox iframe;
+
+:: Google Map shows in a sandbox iframe;
+
+:: Using postMessage communicate between the sandbox iframe and the extension.
+</code></pre>
+
+<p>The extension spread from a Chinese Ingress QQ group, then to a community in Google+.</p>
+
+<p>First 2 days, 186 installation. and yesterday the installation reached 865, 143 G+ and 10 reviews in Chrome Web Store.</p>
+
+<p>It's amazing that someone outside there likes your app and appreciates your work.</p>
+
+<p><img src="/images/blog/chrome/find-ingress-portals.png" alt="" /></p>
+
+<p>The Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a></p>
+
+<p><i id="link-tags">Ingress;Chrome Extesion;QQ;Google Map</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Design T-Shirts on Teespring]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring/"/>
+    <updated>2013-01-19T14:44:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring</id>
+    <content type="html"><![CDATA[<p>Teespring是个特别的众筹网站。它个一般众筹网站不同的地方是它是一个T-Shirt设计的众筹，这也就意味着用户只需要提供设计稿和定价，剩下的事情都是网站运营方的了——如果购买的人数达到指定数目，运营方来印刷和发货。</p>
+
+<p>这种模式有点类似常规众筹网站和团购网的结合体。有众筹的特点，也有团购的便利。</p>
+
+<p>这对想玩一下T恤设计的我来说，是个挺有意思的事情——不管能否真的众筹成功，至少能让我过一下T恤设计的瘾。</p>
+
+<p><a href="http://teespring.com/mindon">http://teespring.com/mindon</a></p>
+
+<p><img src="/images/blog/t-mindon.png" alt="" /></p>
+
+<!--more-->
+
+
+<p>T-Shirts for Ingress Players:</p>
+
+<p><a href="http://teespring.com/ingress">General</a>, <a href="http://teespring.com/ingress-enlightened">Enlightened</a>, <a href="http://teespring.com/ingress-resistance">Resistance</a></p>
+
+<p>Here's another one "2013"</p>
+
+<p><a href="http://teespring.com/cc-2013">http://teespring.com/cc-2013</a></p>
+
+<p><img src="/images/blog/t-cc-2013.png" alt="" /></p>
+
+<p>To share T-shirts on <strong>Teespring.com</strong>, I develop a Chrome Extension - "Tee Share" to get both sides of the T-shirt together, and combin it with its name and URL :-)</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/tee-share/flljbdpjfdnbehijbekgkcodgmmcgofa?hl=en-US">Get "Tee Share"</a></p>
+
+<p><img src="/images/blog/chrome/tee-share.png" alt="" /></p>
+
+<p><i id="link-tags">Chrome Extension;TeeSpring;Ingress</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[中国象棋棋谱生成器(CD插件)]]></title>
@@ -170,154 +295,6 @@
 <p>当你的演讲需要演示代码或者web操作的时候，用这个可以让大家看得更清楚 :-)</p>
 
 <p><a href="/soft/xzoom.zip">下载XZoom屏幕放大鏡</a>, <a href="/blog/categories/chrome-app/">更多麦盾作品...</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Letup: Take a break]]></title>
-    <link href="http://mindon.github.com/blog/2012/05/19/letup-take-a-break/"/>
-    <updated>2012-05-19T14:49:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/05/19/letup-take-a-break</id>
-    <content type="html"><![CDATA[<h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
-
-<!--more-->
-
-
-<p>屏幕保護狀態，屏幕右下角休息中斷操作模式。(取消休息 3次/天，每次休息可以延迟6分钟1次，延迟2分钟3次)</p>
-
-<p><img src="/images/blog/soft/letup-rc.png" alt="" /></p>
-
-<p>防电脑病必备 :-p  几分钟，会中断自己处理事情，可是却能保证你更能健康，更有效率，你会选择哪个？</p>
-
-<p>部门里已经很多同事使用了，公司内外也有一定的使用人群了。</p>
-
-<p>软件无需安装，下载点击运行即可。</p>
-
-<p><a href="/soft/letup_110715.7z">下载Letup休息提醒器</a>, <a href="/blog/categories/chrome-app/">更多麦盾作品...</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Amazing WebGL and HTML5 Apps]]></title>
-    <link href="http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps/"/>
-    <updated>2012-03-26T22:13:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/03/26/amazing-webgl-and-html5-apps</id>
-    <content type="html"><![CDATA[<ul>
-<li><strong>Cell Cycle</strong>
-Creating 3d-printable cellular models.</li>
-</ul>
-
-
-<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
-
-<p><img src="/images/blog/chrome/nervous.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
-
-<ul>
-<li><strong>Fluid Simulation with Turing Patterns</strong>
-Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
-</ul>
-
-
-<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov's fluid simulation.</p>
-
-<p><img src="/images/blog/chrome/fluid.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
-
-<!--more-->
-
-
-<ul>
-<li><strong>Zygote Body</strong>
-Author: <strong>Zygote</strong> <a href="http://www.zygote.com/">http://www.zygote.com/</a></li>
-</ul>
-
-
-<p>Explore a detailed 3D model of the human body. Zygote Body uses WebGL and taps directly into the GPU to accelerate rendering of 3D scenes. Take it for a spin and learn about different layers of anatomy by moving the slider or toggling layers on and off with the buttons. Not sure where something is? Try the search box</p>
-
-<p><img src="/images/blog/chrome/body.png" alt="" />
-Visit: <a href="http://www.chromeexperiments.com/detail/body-browser/">Chrome Experiments</a></p>
-
-<ul>
-<li><strong>Google Maps - Street View</strong></li>
-</ul>
-
-
-<p>Google Maps with Street View lets you explore places around the world through 360-degree street-level imagery. You can check out restaurants, plan your next trip or even visit the Amazon!</p>
-
-<p><img src="/images/blog/chrome/amazon.jpg" alt="" />
-Visit: <a href="http://maps.google.com/help/maps/streetview/gallery.html">Street View Gallery</a></p>
-
-<p>More will be appended ...</p>
-
-<h2>How to get WebGL enable?</h2>
-
-<ul>
-<li><strong>Firefox</strong>
-WebGL is supported in <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox/4.0</a></li>
-</ul>
-
-
-<p>For testing/debugging purposes, software rendering can be used through OSMesa (off-screen Mesa), by setting the "webgl.osmesalib" variable to point to the OSMesa shared library (typically /usr/lib/libOSMesa.so). Note that the OSMesa library is required to use "gl" prefixes, not "mgl".
-You can also try setting the "webgl.force-enabled" variable to true if WebGL is not working. Variables can be accessed by typing "about:config" in the address bar.</p>
-
-<ul>
-<li><strong>Safari</strong></li>
-</ul>
-
-
-<p>WebGL is supported on Mac OS X 10.6 in the <a href="http://nightly.webkit.org/">WebKit nightly builds</a>.</p>
-
-<p>After downloading and installing the browser, open the Terminal and type the following:</p>
-
-<pre><code>defaults write com.apple.Safari WebKitWebGLEnabled -bool YES
-</code></pre>
-
-<p>This command only needs to be run once. All future invocations of the browser will run with WebGL enabled.</p>
-
-<ul>
-<li><strong>Chrome</strong></li>
-</ul>
-
-
-<p>WebGL is available in the <a href="http://www.google.com/chrome/">stable release of Chrome</a>.</p>
-
-<p>Please report issues you find to either the <a href="https://www.khronos.org/webgl/public-mailing-list/">public WebGL mailing list</a> or via the <a href="http://code.google.com/p/chromium/issues/list">Chromium issue tracker</a>.</p>
-
-<p>Enable WebGL in Chrome - <a href="about:flags">about:flags</a></p>
-
-<p><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html?path=Win/">Chrome Nightly Build</a></p>
-
-<ul>
-<li><strong>Opera</strong></li>
-</ul>
-
-
-<p>WebGL is supported in <a href="http://www.opera.com/browser/next/">Opera 12 alpha</a>.</p>
-
-<p><a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation">Getting a WebGL Implementation</a></p>
-
-<p><a href="http://wjlgryx.iteye.com/blog/973961">开启WebGL!</a></p>
 ]]></content>
   </entry>
   
