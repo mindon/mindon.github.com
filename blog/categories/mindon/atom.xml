@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-20T20:43:16+08:00</updated>
+  <updated>2013-01-26T20:38:49+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,118 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
+    <updated>2013-01-26T15:00:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
+    <content type="html"><![CDATA[<p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>.</p>
+
+<p><img src="/images/blog/ingress/ingress-portals-finder-logo.png" alt="" /></p>
+
+<p>The extension has 3 windows:</p>
+
+<p><strong>About window</strong></p>
+
+<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
+
+<p><strong>Main window</strong></p>
+
+<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
+
+<p>The last one is the map window for all portals inside the bounds.</p>
+
+<p>Following describe is focusing on the features you need to know about this amazing helpful extension.</p>
+
+<!--more-->
+
+
+<h2><strong>A)</strong> Why an About window?</h2>
+
+<p>The <strong>Ingress Portals Finder</strong> works only in the <a href="http://www.ingress.com/intel">Ingress Map Offical Site</a>.</p>
+
+<p>That's why this extension needs an <strong>About</strong> window: when you click the extension icon in other tabs, the about window leads you to the proper website.</p>
+
+<p><img src="/images/blog/ingress/1-start.jpg" alt="" /></p>
+
+<h2><strong>B)</strong> A small donate may help.</h2>
+
+<p><img src="/images/blog/ingress/2-donate.jpg" alt="" /></p>
+
+<h2><strong>C)</strong> Main stage of Ingress Portals Finder</h2>
+
+<p>Click the extension icon on the tab where ingress.com/intel opened, you will see the main window of <strong>Ingress Portals Finder</strong>.</p>
+
+<p>First, you will need to set the bounds of the area you concern on.</p>
+
+<p><img src="/images/blog/ingress/3-bounds.jpg" alt="" /></p>
+
+<p>In 2 situations you may fail to call up the google map window, which would help a lot to select bounds. 1) Fail to access <a href="http://maps.google.com">http://maps.google.com</a>; 2) Default google map api daily quato running out. (Thanks, Google! The quato increased to 25k today)</p>
+
+<p>Even when map failed to show, you still could input the bounds to query.</p>
+
+<p>And another solution will be input your own google map api key to solve the quato problem.</p>
+
+<h2><strong>D)</strong>  Submit a query</h2>
+
+<p>When your bounds set, click "Query" to make the request.</p>
+
+<p>Here, to avoid stress on the official ingress server, the extension will cache 5 minutes for the same bounds.</p>
+
+<p><img src="/images/blog/ingress/4-query.jpg" alt="" /></p>
+
+<p>Be patient, the query may takes time, it depends on your network speed or the bounds area scale. But I don't think it will take more than 3 minutes.</p>
+
+<h2><strong>E)</strong> Filtering on the query result</h2>
+
+<p>The filter works on the query result. It won't stress on the server.</p>
+
+<p>1) Key words off the address;  2) Teams;  3) Levels</p>
+
+<p>There're tips on the level filtering:</p>
+
+<p><img src="/images/blog/ingress/5-level.jpg" alt="" /></p>
+
+<p>Click the <strong>[a]</strong> to select all levels. and you could press "Ctrl" + click to click levels you want to list.</p>
+
+<h2><strong>F)</strong> Which team is in charge?</h2>
+
+<p>The vertical bar beside the level number, you could see the status of portals -- more green or more blue.</p>
+
+<p><img src="/images/blog/ingress/6-vs.jpg" alt="" /></p>
+
+<h2><strong>G)</strong> Query result</h2>
+
+<p>The result includes name, photo, address, resonations, (level,energy,link,mods).</p>
+
+<p>You could get the location of the portal by click the google map icon.</p>
+
+<p><img src="/images/blog/ingress/7-locate.jpg" alt="" /></p>
+
+<p>The icon will call up an embed map window with marker of the portal. It will open a blank map window if the embed map api fails.</p>
+
+<h2><strong>H)</strong> Level, Enery, Links and Mods</h2>
+
+<p><img src="/images/blog/ingress/8-status.jpg" alt="" /></p>
+
+<h2><strong>I)</strong> List result portals in a full scale map</h2>
+
+<p>Left corner of the portal embed map window, you could find a transparent button "All".</p>
+
+<p><img src="/images/blog/ingress/9-all.jpg" alt="" /></p>
+
+<p>It opens a full map of the portals in the query result.</p>
+
+<p>And you could show the specific level on the map:</p>
+
+<p><img src="/images/blog/ingress/0-select.jpg" alt="" /></p>
+
+<p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
+
+<p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
@@ -222,25 +334,6 @@ exit
 </code></pre>
 
 <p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Era of Hardware Browsers]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/06/era-of-hardware-browsers/"/>
-    <updated>2013-01-06T23:27:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/06/era-of-hardware-browsers</id>
-    <content type="html"><![CDATA[<p>Years ago, I took all desktop apps as some specific browsers - only visiting specified data resources provided by IP or file path with fixed UIs. and the browsers load different function DLLs or SO(Share Object) by URL, which contains both data and runnable source code.</p>
-
-<p>Now days, The "Browsers" become hardware -- the mobiles and tablets. The apps are modules of the super "Hardware Browser", they are combining the local resources, remote resources provided by IPs or URLs. Traditional browser become a soft-module of the super "Hardware Browser".</p>
-
-<p>The mobile "Hardware Browser" never be parasitic on an PC any more, it takes less time to start, and cost less energy to perform the same or even more powerful functions.</p>
-
-<p>And the "Hardware Browser" is facing the same compatible problems as the "Software Browser" on PC. They own different screen resolutions, powered by different OS.</p>
-
-<p>That means the mobile app developers are in the same situation as the web front-end developers are. They are working for the mobile "Hardware Browser".</p>
-
-<p><i id="link-tags">Hardware Browser</i></p>
 ]]></content>
   </entry>
   

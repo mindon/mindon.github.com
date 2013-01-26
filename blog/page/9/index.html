@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Cell Cycle
-Creating 3d-printable cellular models. You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure. &hellip;">
+  <meta name="description" content="String encoded in PHP needs to decode in NodeJS? Or encoded in NodeJS needs to decode in PHP? Here&#8217;s a match result with aes-128-cbc &amp; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,7 +79,7 @@ Creating 3d-printable cellular models. You can shape, twist, and subdivide, tran
   <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
   <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
   <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
-  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/CBH.png" width="35" height="27" alt="CBH" title="Chinese Balance Heal" border="0" align="absmiddle" /></a></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
   <li><a href="/about">About</a></li>
 </ul>
 
@@ -89,6 +88,76 @@ Creating 3d-printable cellular models. You can shape, twist, and subdivide, tran
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Match Encrypt &amp; Decrypt in PHP and NodeJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-31T00:20:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+
+<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -486,53 +555,6 @@ Free tools to create applications on Windows using Visual C++.
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-21T10:52:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
-
-<p>The modifications are mostly about filters for field values.</p>
-
-<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
-
-<blockquote><p>I&#8217;ve had a little utility that I&#8217;ve been kicking around for some time now that I&#8217;ve found to be quite useful in my JavaScript application-building endeavors. It&#8217;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/21/javascript-micro-templating/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -565,7 +587,7 @@ Free tools to create applications on Windows using Visual C++.
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 47 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 48 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 26 )</li>
 
@@ -575,7 +597,7 @@ Free tools to create applications on Windows using Visual C++.
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 6 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 9 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 10 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 4 )</li>
 
@@ -584,6 +606,10 @@ Free tools to create applications on Windows using Visual C++.
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/">Ingress Portals Finder - A Chrome Extension for the Game</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals</a>
@@ -619,10 +645,6 @@ Free tools to create applications on Windows using Visual C++.
     
       <li class="post">
         <a href="/blog/2012/11/21/first-qml-blackberry-10-app/">Trying Cascades+QML App for Blackberry 10</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/31/make-a-blackberry-10-webworks-app/">Make a Blackberry 10 WebWorks Application</a>
       </li>
     
   </ul>
