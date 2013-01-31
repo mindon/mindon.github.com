@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-29T23:12:38+08:00</updated>
+  <updated>2013-01-31T23:36:37+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/"/>
+    <updated>2013-01-31T22:16:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down</id>
+    <content type="html"><![CDATA[<p>Learning GO language a few weeks before. Now the LISP.</p>
+
+<p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
+
+<p>The definition of Scheme tells what attracts me to learn this language. It is what it describes.</p>
+
+<p>I spared a few hours learning from <a href="http://www.htdp.org/2003-09-26/Book/">How to Design Programs</a> with exercises. Another great book from MIT <a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html">Structure and Interpretation
+of Computer Programs</a>.</p>
+
+<p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
+
+<p>I don&#8217;t think I have any chances to use it. Go and Node.JS are enough.</p>
+
+<p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
+
+<p>And this morning, I got an E-mail from Google Chrome Web Store &#8211; Removal Notification for &#8220;Ingress Portals Finder&#8221;</p>
+
+<blockquote><p>Your Google Chrome item, &#8220;Ingress Portals Finder,&#8221; did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
+
+<!--more-->
+
+
+<p>What a pity. It&#8217;s the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
+
+<p>That&#8217;s the TAKEN DOWN.</p>
+
+<p>It won&#8217;t stress much on the Ingress server, instead, it will less stress.</p>
+
+<ol>
+<li><p>high quality developed.</p></li>
+<li><p>welcome and really useful with nice UI.</p></li>
+<li><p>avoid variety tool versions with almost same functions, controllable third-party tool entrance.</p></li>
+</ol>
+
+
+<p>But it&#8217;s true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
+
+<p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
+
+<p>No matter what, I&#8217;m on the way to my next app, useful and helpful with UI satisfy me first.</p>
+
+<p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
@@ -24,15 +74,15 @@
 
 <p>The extension has 3 windows:</p>
 
-<p><strong>About window</strong></p>
-
-<p><img src="http://mindon.github.com/images/blog/ingress/about.jpg" alt="" /></p>
-
 <p><strong>Main window</strong></p>
 
 <p><img src="http://mindon.github.com/images/blog/ingress/main.jpg" alt="" /></p>
 
-<p>The last one is the map window for all portals inside the bounds.</p>
+<p><strong>About window</strong></p>
+
+<p><img src="http://mindon.github.com/images/blog/ingress/about.jpg" alt="" /></p>
+
+<p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
@@ -136,6 +186,12 @@
 <p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
 
 <p>Wish the chrome extension &#8221;<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>&#8221; help you in playing the game. Enjoy!</p>
+
+<p>It&#8217;s down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.2.5.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+
+<p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</p>
+
+<p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
   </entry>
   
@@ -1405,39 +1461,6 @@ The software for both parts has been developed using openframeworks, a cross pla
 <p>要是，这个设备不用接电脑，做成手机应用，配合音频口数据通信技术(Data Transfer over Audio Port)，整个系统应该能做得更轻量级。</p>
 
 <p><a href="http://labs.perceptdev.com/iphone-rs232-at-1200-baud-no-jailbreak-required-using-2-0-sdk/">iPhone RS232 at 1200 baud – no Jailbreak required, using 2.0 SDK</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Quantum Locking]]></title>
-    <link href="http://mindon.github.com/blog/2012/09/09/quantum-levitation-n-quantum-locking/"/>
-    <updated>2012-09-09T22:26:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/09/09/quantum-levitation-n-quantum-locking</id>
-    <content type="html"><![CDATA[<p>I watched this TED video last week. It&#8217;s amazing!</p>
-
-<p>&#8220;How can a super-thin 3-inch disk levitate something 70,000 times its own weight? In a riveting demonstration, Boaz Almog shows how a phenomenon known as quantum locking allows a superconductor disk to float over a magnetic rail &#8211; completely frictionlessly and with zero energy loss. Experiment: Prof. Guy Deutscher, Mishael Azoulay, Boaz Almog, of the High Tc Superconductivity Group, School of Physics and Astronomy, Tel Aviv University.&#8221;</p>
-
-<!--more-->
-
-
-
-
-<object width="526" height="374"><param name="movie" value="http://video.ted.com/assets/player/swf/EmbedPlayer.swf"></param><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always"/><param name="wmode" value="transparent"></param><param name="bgColor" value="#ffffff"></param><param name="flashvars" value="vu=http://video.ted.com/talk/stream/2012G/Blank/BoazAlmog_2012G-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/BoazAlmog_2012G-embed.jpg&vw=512&vh=288&ap=0&ti=1495&lang=zh-cn&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=boaz_almog_levitates_a_superconductor;year=2012;theme=presentation_innovation;theme=what_s_next_in_tech;event=TEDGlobal+2012;tag=demo;tag=innovation;tag=magic;tag=physics;tag=science;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;" /><embed src="http://video.ted.com/assets/player/swf/EmbedPlayer.swf" pluginspace="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" bgColor="#ffffff" width="526" height="374" allowFullScreen="true" allowScriptAccess="always" flashvars="vu=http://video.ted.com/talk/stream/2012G/Blank/BoazAlmog_2012G-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/BoazAlmog_2012G-embed.jpg&vw=512&vh=288&ap=0&ti=1495&lang=en&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=boaz_almog_levitates_a_superconductor;year=2012;theme=presentation_innovation;theme=what_s_next_in_tech;event=TEDGlobal+2012;tag=demo;tag=innovation;tag=magic;tag=physics;tag=science;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;"></embed></object>
-
-
-<blockquote><p>The phenomenon you saw here for a brief moment is called quantum levitation and quantum locking. And the object that was levitating here is called a superconductor. Superconductivity is a quantum state of matter, and it occurs only below a certain critical temperature.</p>
-
-<p>你们在这里看到的这个短暂的现象是 被称为量子悬浮和量子锁定。 这个悬浮在这里的物体 被称为超导体。 超导是物质的一种量子状态， 只在特定的关键温度下发生。</p>
-
-<p>Now, it&#8217;s quite an old phenomenon; it was discovered 100 years ago. However, only recently, due to several technological advancements, we are now able to demonstrate to you quantum levitation and quantum locking.</p>
-
-<p>现在，这是一个比较老的现象了； 100年前被发现。 然而，就在最近， 由于若干科技进步， 我们现在能够向你们展示 量子悬浮和量子锁定。</p>
-
-<p>So, a superconductor is defined by two properties. The first is zero electrical resistance, and the second is the expulsion of a magnetic field from the interior of the superconductor. That sounds complicated, right? But what is electrical resistance? So, electricity is the flow of electrons inside a material. And these electrons, while flowing, they collide with the atoms, and in these collisions they lose a certain amount of energy. And they dissipate this energy in the form of heat, and you know that effect. However, inside a superconductor there are no collisions, so there is no energy dissipation.</p>
-
-<p>那么，超导体具备两种特性。 第一种特性是零电阻， 第二种特性是从超导体的内部驱逐磁场。 这听起来有点复杂，是吗？ 但什么是电阻呢？ 那么，电就是物体内部的电子流。 这些电子，当他们流动时， 它们与原子相撞，在碰撞过程中 它们损失一定的能量。 这种能量以热的形式消耗， 你们知道这种效果的。 然而，在超导体的内部，不存在这种碰撞， 因此也就没有能量消耗。</p></blockquote>
-
-<p>超导体让电流无阻，却完全隔离磁场，这个挺有意思的。有没有让磁场无阻，电流完全隔离的东西呢？</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-29T23:12:38+08:00</updated>
+  <updated>2013-01-31T23:36:37+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/"/>
+    <updated>2013-01-31T22:16:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down</id>
+    <content type="html"><![CDATA[<p>Learning GO language a few weeks before. Now the LISP.</p>
+
+<p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
+
+<p>The definition of Scheme tells what attracts me to learn this language. It is what it describes.</p>
+
+<p>I spared a few hours learning from <a href="http://www.htdp.org/2003-09-26/Book/">How to Design Programs</a> with exercises. Another great book from MIT <a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html">Structure and Interpretation
+of Computer Programs</a>.</p>
+
+<p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
+
+<p>I don't think I have any chances to use it. Go and Node.JS are enough.</p>
+
+<p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
+
+<p>And this morning, I got an E-mail from Google Chrome Web Store -- Removal Notification for "Ingress Portals Finder"</p>
+
+<blockquote><p>Your Google Chrome item, "Ingress Portals Finder," did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
+
+<!--more-->
+
+
+<p>What a pity. It's the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
+
+<p>That's the TAKEN DOWN.</p>
+
+<p>It won't stress much on the Ingress server, instead, it will less stress.</p>
+
+<ol>
+<li><p>high quality developed.</p></li>
+<li><p>welcome and really useful with nice UI.</p></li>
+<li><p>avoid variety tool versions with almost same functions, controllable third-party tool entrance.</p></li>
+</ol>
+
+
+<p>But it's true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
+
+<p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
+
+<p>No matter what, I'm on the way to my next app, useful and helpful with UI satisfy me first.</p>
+
+<p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
@@ -24,15 +74,15 @@
 
 <p>The extension has 3 windows:</p>
 
-<p><strong>About window</strong></p>
-
-<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
-
 <p><strong>Main window</strong></p>
 
 <p><img src="/images/blog/ingress/main.jpg" alt="" /></p>
 
-<p>The last one is the map window for all portals inside the bounds.</p>
+<p><strong>About window</strong></p>
+
+<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
+
+<p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
@@ -136,6 +186,12 @@
 <p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
+
+<p>It's down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.2.5.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+
+<p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
   </entry>
   
@@ -297,86 +353,6 @@ Show result through template
 <p>  7，在弹出的软件窗口中，点击“浏览”找到象棋棋谱文件(目前支持XQF和PGN格式)</p>
 
 <p>  8，在右边列出的棋谱中点击相应的步骤即可绘制相应棋谱图</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lunar generator plug-in for CorelDraw]]></title>
-    <link href="http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/"/>
-    <updated>2012-05-19T15:40:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw</id>
-    <content type="html"><![CDATA[<h2>麦盾月历生成器</h2>
-
-<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
-
-<p>原创产品，别的地方找不到的！</p>
-
-<p><img src="/images/blog/soft/lunar.png" alt="" /></p>
-
-<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
-
-<!--more-->
-
-
-<p><strong>1. 软件完全版提供一个MindonLunar.gms文件及一个序列号。</strong></p>
-
-<p>可广泛应用于设计台历/挂历/月历/日历DIY或专业印刷场合, 以减少人工输入的不便及容易出现的差错.</p>
-
-<p>设计与月历相关产品以及贺卡、用照片DIY台历制作必不可少的绝好帮手。</p>
-
-<p>用来制作团体、公司等组织或个人的台历、年历、月历/日历都是很好的工具 :-)</p>
-
-<p>能够很好地管理特殊日子、纪念日、特别节日等等，一次输入，随时可用！</p>
-
-<p>这个插件只提供日历部分的生成便利，其他的还是要靠您自己的创意和想法了。</p>
-
-<p><strong>2. 运行环境：win2000/XP/2003/win7, CorelDraw 9或以上版本，带VBA支持</strong></p>
-
-<p><strong>3. 月份范围：1901年到2050年之间的所有月份</strong></p>
-
-<p><strong>注意：</strong></p>
-
-<p>须提供一个有效邮箱以获得此文件以及序列号，以及终身通过此邮箱重新获取此gms文件以及序列号。</p>
-
-<p><strong>功能：</strong></p>
-
-<p>插件可选定月份生成相应的农历/阳历/星期，您可以定制字体及相应的颜色、节日定制、并且将每个月份自动单独导出成透明背景tif文件（存放在c:\mindon.lunar目录）</p>
-
-<p>购买了此软件的您拥有免费获取gms文件的升级版本的权利。</p>
-
-<p>插件特色功能：特别节日定制--- 支持农历节日设置，月份星期节日设置（如父亲节等）。</p>
-
-<p><strong>用法：</strong></p>
-
-<p>把GMS文件放到 Draw/GMS/ 目录（确认已安装CorelDraw的VBA功能），</p>
-
-<p><img src="/images/blog/soft/lunar-a.png" alt="" /></p>
-
-<p><img src="/images/blog/soft/lunar-b.png" alt="" /></p>
-
-<p>麦盾月历生成器CorelDraw插件界面</p>
-
-<p><img src="/images/blog/soft/lunar-c.png" alt="" /></p>
-
-<p><strong>输出结果样例：</strong></p>
-
-<p><img src="/images/blog/soft/lunar-d.png" alt="" /></p>
-
-<p>月历结果是矢量，透明背景，提供批量 tiff/png 输出供其它软件使用。</p>
-
-<p>用这个插件来做你的个性台历，绝对超值 :-)</p>
-
-<p><strong>常见问题：</strong></p>
-
-<p>如果CorelDraw出现无法设置英文字体情况，请设置系统输入法的缺省键盘为英语-美式键盘</p>
-
-<p><img src="/images/blog/soft/lunar-faq.gif" alt="" /></p>
-
-<p>淘宝链接：<a href="http://item.taobao.com/item.htm?id=8707971102">http://item.taobao.com/item.htm?id=8707971102</a></p>
-
-<p>有兴趣可以看看麦盾自家的台历 <a href="http://mindon.appspot.com/and/calendar/2011">http://mindon.appspot.com/and/calendar/2011</a></p>
-
-<p><a href="/blog/categories/chrome-app">麦盾免费工具及应用</a></p>
 ]]></content>
   </entry>
   

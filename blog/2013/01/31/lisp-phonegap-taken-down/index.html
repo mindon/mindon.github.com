@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Learning GO language - Mindon.IDEA</title>
+  <title>LISP, PhoneGap and TAKEN DOWN - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2013/01/19/learning-go-language/">
+  <link rel="canonical" href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.6.2.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Learning GO Language</h1>
+      <h1 class="entry-title">LISP, PhoneGap and TAKEN DOWN</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2013-01-19T14:14:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
+<time datetime="2013-01-31T22:16:00+08:00" pubdate data-updated="true">Jan 31<span>st</span>, 2013</time>
         
       </p>
     
@@ -131,58 +131,48 @@
 		</script>
 	</div>
 
-<p>Go语言几年前（2009）就出来了，喜欢其设计理念：简单、并行、实用和高效。</p>
+<p>Learning GO language a few weeks before. Now the LISP.</p>
 
-<p>因为大多数时间都作为Web前端跟javascript较劲的工程师，对Go的了解并不多。这两年倒是一直在关注Node.JS。</p>
+<p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
 
-<p>Node.JS作为Web实时数据服务是非常不错的选择，曾用来做了好几个试验性质的产品，一个翻译平台（荒置中，新版正在用业余时间开发），一个支持多语言的反馈平台（在线），一个任意网站嵌入式的Web聊天平台（下线），一个推送微信官方消息的系统（闲置）。</p>
+<p>The definition of Scheme tells what attracts me to learn this language. It is what it describes.</p>
 
-<p>Node.JS用来做产品原型，或者SDK工具等工具类，是再适合不过了。Blackberry 10的WebWorks SDK里就用了Node.JS作为辅助工具。</p>
+<p>I spared a few hours learning from <a href="http://www.htdp.org/2003-09-26/Book/">How to Design Programs</a> with exercises. Another great book from MIT <a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html">Structure and Interpretation
+of Computer Programs</a>.</p>
 
-<p>目前为止Node.JS还是我最喜欢的技术。然而，作为后台服务语言，其实Node.JS能做到的，大多其它语言也可以做得更好，除了Node.JS可以和前端使用同样的js库之外。Go这时重新进入了我的视野，也成为了新的学习任务。</p>
+<p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
 
-<p>“Go is an expressive, concurrent, garbage-collected programming language.”</p>
+<p>I don&#8217;t think I have any chances to use it. Go and Node.JS are enough.</p>
 
-<p>官方网站 <a href="http://golang.org">Go official website</a> 不知道什么原因被列入了和谐名单（因为用的是Google的服务器吗？） 大家可以访问 <a href="https://code.google.com/p/go/">https://code.google.com/p/go/</a> 至少偶尔能访问一下。要不就得翻墙了。</p>
+<p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
 
-<p>在这主要是想分享一下配置Go project时候的碰到的一个问题的解决办法（under windows）：</p>
+<p>And this morning, I got an E-mail from Google Chrome Web Store &#8211; Removal Notification for &#8220;Ingress Portals Finder&#8221;</p>
+
+<blockquote><p>Your Google Chrome item, &#8220;Ingress Portals Finder,&#8221; did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
 
 <!--more-->
 
 
-<p>GO project Windows env. settings:</p>
+<p>What a pity. It&#8217;s the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
 
-<h2>set-env.bat content</h2>
+<p>That&#8217;s the TAKEN DOWN.</p>
 
-<pre><code>set GOPATH=f:\labs\go-learn\mindon
-set GOBIN=%GOPATH%\bin
-set PATH=%PATH%;%GOBIN%
-</code></pre>
+<p>It won&#8217;t stress much on the Ingress server, instead, it will less stress.</p>
 
 <ol>
-<li><p>configure your project path as GOPATH</p></li>
-<li><p>run set-env.bat in your DOS console</p></li>
-<li><p>go install</p></li>
+<li><p>high quality developed.</p></li>
+<li><p>welcome and really useful with nice UI.</p></li>
+<li><p>avoid variety tool versions with almost same functions, controllable third-party tool entrance.</p></li>
 </ol>
 
 
-<p>These settings will eliminate the errors &#8220;can&#8217;t load package&#8221; under Windows.</p>
+<p>But it&#8217;s true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
 
-<p>另外一个是编译Go本身时候碰到的问题</p>
+<p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
 
-<p>When building #Go under Windows, got following error:</p>
+<p>No matter what, I&#8217;m on the way to my next app, useful and helpful with UI satisfy me first.</p>
 
-<pre><code>cmd/dist/windows.c:119: warning: dereferencing type-punned pointer will break strict-aliasing rules
-</code></pre>
-
-<p>update the windows.c line 119</p>
-
-<pre><code>(Rune*)&amp;r --&gt; (Rune*)r
-</code></pre>
-
-<p>then run all.bat :-) works fine!</p>
-
-<p><i id="link-tags">GO;Node.JS;Blackberry 10</i></p>
+<p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
 
 </div>
 
@@ -206,12 +196,12 @@ set PATH=%PATH%;%GOBIN%
   
 
 
-<time datetime="2013-01-19T14:14:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
+<time datetime="2013-01-31T22:16:00+08:00" pubdate data-updated="true">Jan 31<span>st</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mindon/'>Mindon</a>, <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/chrome-app/'>Chrome-App</a>, <a class='category' href='/blog/categories/mindon/'>Mindon</a>
   
 </span>
 
@@ -229,10 +219,8 @@ set PATH=%PATH%;%GOBIN%
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/17/start-dos-console-minimized/" title="Previous Post: Start DOS Console Minimized">&laquo; Start DOS Console Minimized</a>
+        <a class="basic-alignment left" href="/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/" title="Previous Post: Ingress Portals Finder - A Chrome Extension for the Game">&laquo; Ingress Portals Finder - A Chrome Extension for the Game</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/19/design-t-shirts-on-teespring/" title="Next Post: Design T-Shirts on Teespring">Design T-Shirts on Teespring &raquo;</a>
       
     </p>
   </footer>
@@ -452,8 +440,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2013/01/19/learning-go-language/';
-        var disqus_url = 'http://mindon.github.com/blog/2013/01/19/learning-go-language/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/';
+        var disqus_url = 'http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/';
         var disqus_script = 'embed.js';
       
     (function () {

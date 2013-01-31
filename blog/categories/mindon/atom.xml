@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-29T23:12:38+08:00</updated>
+  <updated>2013-01-31T23:36:37+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
+    <link href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/"/>
+    <updated>2013-01-31T22:16:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down</id>
+    <content type="html"><![CDATA[<p>Learning GO language a few weeks before. Now the LISP.</p>
+
+<p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
+
+<p>The definition of Scheme tells what attracts me to learn this language. It is what it describes.</p>
+
+<p>I spared a few hours learning from <a href="http://www.htdp.org/2003-09-26/Book/">How to Design Programs</a> with exercises. Another great book from MIT <a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html">Structure and Interpretation
+of Computer Programs</a>.</p>
+
+<p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
+
+<p>I don't think I have any chances to use it. Go and Node.JS are enough.</p>
+
+<p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
+
+<p>And this morning, I got an E-mail from Google Chrome Web Store -- Removal Notification for "Ingress Portals Finder"</p>
+
+<blockquote><p>Your Google Chrome item, "Ingress Portals Finder," did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
+
+<!--more-->
+
+
+<p>What a pity. It's the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
+
+<p>That's the TAKEN DOWN.</p>
+
+<p>It won't stress much on the Ingress server, instead, it will less stress.</p>
+
+<ol>
+<li><p>high quality developed.</p></li>
+<li><p>welcome and really useful with nice UI.</p></li>
+<li><p>avoid variety tool versions with almost same functions, controllable third-party tool entrance.</p></li>
+</ol>
+
+
+<p>But it's true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
+
+<p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
+
+<p>No matter what, I'm on the way to my next app, useful and helpful with UI satisfy me first.</p>
+
+<p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
@@ -24,15 +74,15 @@
 
 <p>The extension has 3 windows:</p>
 
-<p><strong>About window</strong></p>
-
-<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
-
 <p><strong>Main window</strong></p>
 
 <p><img src="/images/blog/ingress/main.jpg" alt="" /></p>
 
-<p>The last one is the map window for all portals inside the bounds.</p>
+<p><strong>About window</strong></p>
+
+<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
+
+<p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
@@ -136,6 +186,12 @@
 <p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
+
+<p>It's down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.2.5.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+
+<p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
   </entry>
   
@@ -321,33 +377,6 @@ set PATH=%PATH%;%GOBIN%
 <p>then run all.bat :-) works fine!</p>
 
 <p><i id="link-tags">GO;Node.JS;Blackberry 10</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Start DOS Console Minimized]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/17/start-dos-console-minimized/"/>
-    <updated>2013-01-17T07:59:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/17/start-dos-console-minimized</id>
-    <content type="html"><![CDATA[<p>How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code</p>
-
-<pre><code>@echo off
-
-if "%1"=="start-min" goto :begin
-start /min "" %0 start-min
-exit
-
-:begin
-title Hello Mini World
-
-echo Call something here
-
-pause
-exit
-@echo on
-</code></pre>
-
-<p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
 ]]></content>
   </entry>
   
