@@ -406,11 +406,17 @@
         <loc>
             http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/
         </loc>
-        <lastmod>2013-01-31T23:20:20+08:00</lastmod>
+        <lastmod>2013-02-06T00:19:02+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/</loc>
         <lastmod>2013-01-31T23:35:28+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/
+        </loc>
+        <lastmod>2013-02-06T00:13:18+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/about/</loc>
@@ -418,7 +424,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2013-01-31T23:35:28+08:00</lastmod>
+        <lastmod>2013-02-06T00:19:02+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -426,7 +432,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2013-01-31T23:35:28+08:00</lastmod>
+        <lastmod>2013-02-06T00:19:02+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>

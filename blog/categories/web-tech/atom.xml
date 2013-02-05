@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-31T23:36:37+08:00</updated>
+  <updated>2013-02-06T00:19:14+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The PHP-CLD: Chromium Compact Language Detector for PHP]]></title>
+    <link href="http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/"/>
+    <updated>2013-02-06T00:05:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php</id>
+    <content type="html"><![CDATA[<p>Find a fantasy extension for php to detect string language.</p>
+
+<p><a href="https://github.com/lstrojny/php-cld">https://github.com/lstrojny/php-cld</a></p>
+
+<p><a href="http://code.google.com/p/chromium-compact-language-detector/">http://code.google.com/p/chromium-compact-language-detector/</a></p>
+
+<p>It needs some changes to complie as dll in VC++ 2010 Express. But easy to make the so under linux.</p>
+
+<p>I'd spent the whole day to make research on language detect modules for php, it's the best and now works fine in my project.</p>
+
+<p>Thanks, <a href="https://github.com/lstrojny">Lars Strojny</a> from github.</p>
+
+<p>Don't hesitate to use php-cld when you need something like this in php.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning GO language]]></title>
@@ -207,19 +228,6 @@ It's a pitty, you are using a browser out of the date.
 
 
 <p>Wood-Fire-Metal-Water-Earth! The 5 fundamental elements running circle balance in a human body.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Lab]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/04/web-lab/"/>
-    <updated>2012-08-04T17:28:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/04/web-lab</id>
-    <content type="html"><![CDATA[<p>"Web Lab. A series of interactive Chrome Experiments made by Google. See the magic of the web brought to life. Open to the world online. Live from the Science Museum, London. "</p>
-
-<p>这是个很好玩的实验室。Google建的一个位于伦敦的科学馆。科学馆里配置了一些设备：如乐器和沙绘机器人（Sketchbots）。您可以通过他们的网站来编曲演奏乐器，跟世界上其他地方的人合奏。也可以通过摄像头拍照，让科学馆的机器人绘制您的头像——所有这一切，您都可以通过现场摄像头看到真实科学馆的设备看到设备的现场实时操作。很不可思议吧？您在体验一家位于伦敦的科学馆。</p>
-
-<p>体验一下？<a href="http://www.chromeweblab.com/">Web Lab</a> :-) You need a <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser</a>(<a href="https://www.google.com/intl/zh-CN/chrome/browser/">中文版</a>), I think.</p>
 ]]></content>
   </entry>
   

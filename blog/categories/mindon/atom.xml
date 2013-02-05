@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-31T23:36:37+08:00</updated>
+  <updated>2013-02-06T00:19:14+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The PHP-CLD: Chromium Compact Language Detector for PHP]]></title>
+    <link href="http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/"/>
+    <updated>2013-02-06T00:05:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php</id>
+    <content type="html"><![CDATA[<p>Find a fantasy extension for php to detect string language.</p>
+
+<p><a href="https://github.com/lstrojny/php-cld">https://github.com/lstrojny/php-cld</a></p>
+
+<p><a href="http://code.google.com/p/chromium-compact-language-detector/">http://code.google.com/p/chromium-compact-language-detector/</a></p>
+
+<p>It needs some changes to complie as dll in VC++ 2010 Express. But easy to make the so under linux.</p>
+
+<p>I'd spent the whole day to make research on language detect modules for php, it's the best and now works fine in my project.</p>
+
+<p>Thanks, <a href="https://github.com/lstrojny">Lars Strojny</a> from github.</p>
+
+<p>Don't hesitate to use php-cld when you need something like this in php.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
@@ -85,6 +106,16 @@ of Computer Programs</a>.</p>
 <p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
+
+<h2>The CRX file (v1.3.6)</h2>
+
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+
+<p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
+
+<h2>More Details</h2>
 
 <p>Following describe is focusing on the features you need to know about this amazing helpful extension.</p>
 
@@ -187,9 +218,13 @@ of Computer Programs</a>.</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
 
-<p>It's down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.2.5.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+<h2>The CRX file (v1.3.6)</h2>
+
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
 
 <p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
 
 <p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
@@ -317,66 +352,6 @@ Show result through template
 <p><img src="/images/blog/chrome/tee-share.png" alt="" /></p>
 
 <p><i id="link-tags">Chrome Extension;TeeSpring;Ingress</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning GO language]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/19/learning-go-language/"/>
-    <updated>2013-01-19T14:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/19/learning-go-language</id>
-    <content type="html"><![CDATA[<p>Go语言几年前（2009）就出来了，喜欢其设计理念：简单、并行、实用和高效。</p>
-
-<p>因为大多数时间都作为Web前端跟javascript较劲的工程师，对Go的了解并不多。这两年倒是一直在关注Node.JS。</p>
-
-<p>Node.JS作为Web实时数据服务是非常不错的选择，曾用来做了好几个试验性质的产品，一个翻译平台（荒置中，新版正在用业余时间开发），一个支持多语言的反馈平台（在线），一个任意网站嵌入式的Web聊天平台（下线），一个推送微信官方消息的系统（闲置）。</p>
-
-<p>Node.JS用来做产品原型，或者SDK工具等工具类，是再适合不过了。Blackberry 10的WebWorks SDK里就用了Node.JS作为辅助工具。</p>
-
-<p>目前为止Node.JS还是我最喜欢的技术。然而，作为后台服务语言，其实Node.JS能做到的，大多其它语言也可以做得更好，除了Node.JS可以和前端使用同样的js库之外。Go这时重新进入了我的视野，也成为了新的学习任务。</p>
-
-<p>“Go is an expressive, concurrent, garbage-collected programming language.”</p>
-
-<p>官方网站 <a href="http://golang.org">Go official website</a> 不知道什么原因被列入了和谐名单（因为用的是Google的服务器吗？） 大家可以访问 <a href="https://code.google.com/p/go/">https://code.google.com/p/go/</a> 至少偶尔能访问一下。要不就得翻墙了。</p>
-
-<p>在这主要是想分享一下配置Go project时候的碰到的一个问题的解决办法（under windows）：</p>
-
-<!--more-->
-
-
-<p>GO project Windows env. settings:</p>
-
-<h2>set-env.bat content</h2>
-
-<pre><code>set GOPATH=f:\labs\go-learn\mindon
-set GOBIN=%GOPATH%\bin
-set PATH=%PATH%;%GOBIN%
-</code></pre>
-
-<ol>
-<li><p>configure your project path as GOPATH</p></li>
-<li><p>run set-env.bat in your DOS console</p></li>
-<li><p>go install</p></li>
-</ol>
-
-
-<p>These settings will eliminate the errors "can't load package" under Windows.</p>
-
-<p>另外一个是编译Go本身时候碰到的问题</p>
-
-<p>When building #Go under Windows, got following error:</p>
-
-<pre><code>cmd/dist/windows.c:119: warning: dereferencing type-punned pointer will break strict-aliasing rules
-</code></pre>
-
-<p>update the windows.c line 119</p>
-
-<pre><code>(Rune*)&amp;r --&gt; (Rune*)r
-</code></pre>
-
-<p>then run all.bat :-) works fine!</p>
-
-<p><i id="link-tags">GO;Node.JS;Blackberry 10</i></p>
 ]]></content>
   </entry>
   

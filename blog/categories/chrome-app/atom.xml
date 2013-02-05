@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-01-31T23:36:37+08:00</updated>
+  <updated>2013-02-06T00:19:14+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -85,6 +85,16 @@ of Computer Programs</a>.</p>
 <p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
+
+<h2>The CRX file (v1.3.6)</h2>
+
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+
+<p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
+
+<h2>More Details</h2>
 
 <p>Following describe is focusing on the features you need to know about this amazing helpful extension.</p>
 
@@ -187,9 +197,13 @@ of Computer Programs</a>.</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
 
-<p>It's down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.2.5.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+<h2>The CRX file (v1.3.6)</h2>
+
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
 
 <p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
+
+<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
 
 <p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
