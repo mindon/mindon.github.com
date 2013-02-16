@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-06T00:19:14+08:00</updated>
+  <updated>2013-02-16T23:13:58+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[若有实验室版的微信 - 不仅仅是聊天]]></title>
+    <link href="http://mindon.github.com/blog/2013/02/16/its-more-than-chatting-the-wechat/"/>
+    <updated>2013-02-16T23:01:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/02/16/its-more-than-chatting-the-wechat</id>
+    <content type="html"><![CDATA[<p>假设微信不是一个聊天工具，重新将其功能DIY一下会得到怎样的一个应用呢？</p>
+
+<p>于是，尝试使用Context - Connected - Contagious的3C思维来整理一下对微信体验。</p>
+
+<p>首先，微信已经成功创造并形成了一个相当好的Context(毫无疑问，这个Context形成于QQ和QQ邮箱这样良好的Contexts下)，在这个Context下让QQ用户之间，用户与服务提供者，公众人物建立起了新的关联 - Connected! 其传染途径-朋友圈，分享，共振(摇一摇-动作，附近-区域，漂流瓶-心理)，二维码。</p>
+
+<p>关联之后有两类必然目的: I/O 输入/输出。</p>
+
+<p><strong>输入类</strong>: 价值获取，情感影响
+<strong>输出类</strong>: 分享(有价值，有情感触动)，自我表达</p>
+
+<p>输入的目的-输出更有效; 输出的目的-传染并收获新的关联-从而强化I/O循环，形成回路结构体。</p>
+
+<p>基于这个3C思维分析，如何对微信这样一个日益复杂的产品体验进形DIY呢?</p>
+
+<!--more-->
+
+
+<h2>-   输入</h2>
+
+<p>获取输入的唯一途径是关联: 已有关联在这里是不被关注的，除非关联内客或其影响发生了变化。关联不足是输入最亟需解决的问题，而常用的方案就是关联发现。同时，营造关朕不足感也是促进输入成长的关键要素。而下一步则是提高输入品质，解决新关联建立导致的输入膨胀的问题。</p>
+
+<p>于是，朋友圈更新，最喜欢的订阅，最关注的公众人物成为第一类主体，而当这类内容不足或不够活跃时，提供关联发现; 内容到一定量时，提供过滤筛选功能。</p>
+
+<h2>-   输出</h2>
+
+<p>如果缺乏关联，输出只能算是一种笔记积累或自娱自乐。而输出最期待的结果是反馈-特别是正面的回馈。</p>
+
+<p>分享属于把输入直接传递，自我表达则是强化形像获取认可的更佳途径。</p>
+
+<p>由于分享源于输入，故输出重点是自我表达-向具体关联对象或群体, 或自己表达自我情感，自己的作品。</p>
+
+<p>输出的关键是具有传染特性，只有这样才可以维持关联的活跃度，提升新关联建立的机率。</p>
+
+<p>基于对输入和输出的认识，可以发现：刺激关联不足感和辅助提升输入品质，强化表达的传染特性是最核心的任务──即培养关联的Context创建。</p>
+
+<p><img src="http://mindon.github.com/images/blog/wechat-more-than-chatting.png" alt="" /></p>
+
+<p><i id="link-tags">WeChat;微信</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The PHP-CLD: Chromium Compact Language Detector for PHP]]></title>
@@ -89,7 +136,7 @@ of Computer Programs</a>.</p>
     <link href="http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
     <updated>2013-01-26T15:00:00+08:00</updated>
     <id>http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
-    <content type="html"><![CDATA[<p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>.</p>
+    <content type="html"><![CDATA[<p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a> (TAKEN DOWN, the blog provides the link of the CRX file for manual installation).</p>
 
 <p><img src="http://mindon.github.com/images/blog/ingress/ingress-portals-finder-logo.png" alt="" /></p>
 
@@ -109,11 +156,11 @@ of Computer Programs</a>.</p>
 
 <h2>The CRX file (v1.3.6)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY, md5: <strong>ed1f5b0b8984f474b8fecebf9e6c7a99</strong>)</p>
 
 <p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</p>
 
-<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
+<hr />
 
 <h2>More Details</h2>
 
@@ -220,11 +267,11 @@ of Computer Programs</a>.</p>
 
 <h2>The CRX file (v1.3.6)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY)</p>
+<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.6.crx">Ingress Portals Finder</a> (NOTICE: CANNOT INSTALL DIRECTLY, MD5: <strong>ed1f5b0b8984f474b8fecebf9e6c7a99</strong>)</p>
 
 <p>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</p>
 
-<h2>NOTICE: DO NOT QUERY FREQUENTLY IN A SHORT TIME!</h2>
+<hr />
 
 <p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
@@ -1407,68 +1454,6 @@ eof:
 <p>头一次梦到末日场景，末日降临得异常突然并且简单。</p>
 
 <p>2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[社交关系的潜能]]></title>
-    <link href="http://mindon.github.com/blog/2012/10/08/relationship-abilities/"/>
-    <updated>2012-10-08T21:44:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/10/08/relationship-abilities</id>
-    <content type="html"><![CDATA[<p>关键词：<strong>关系能力</strong> <strong>有效输出</strong></p>
-
-<p>社交关系，对于像facebook, twitter, Google+ 以及微博, qq, wechat这样的产品来说，都是核心价值，对于拥有这些产品的公司而言——就是核心竞争力。然而，大多数时候我们看到的都只是社交关系链给产品所有者带来的价值——主要是用于精确投放广告。</p>
-
-<p>其实，社交关系链另一方面的巨大价值却被忽视了——那就是对于关系链中成员的价值。</p>
-
-<p>我们在衡量一个人的能力时，往往只看到其自身的能力——其实这部分能力主要是通过学习和实践积累下来的，是有限的。而其相关的关系所带来的，则是一种动态的无限的能力，这种能力被传统的能力评估模型所忽视。确切地说，关系可以看作是一种能力的来源，即是能力的一部分。每一个人与人之间的关联都会影响到相关人的某些能力的增强或者减弱。</p>
-
-<p>关系能力，非常类似人类大脑里的神经元之间的轴突，智能是神经元通过轴突之间的关联才形成的。而人与人之间的关联而形成的社交关系网链，应该是更高层次上的一种智能结构，可以称之为“高级轴突”——这种关联会影响到每个高级“神经元”——个体人——的才能，以及整个社交网络的“智能”。</p>
-
-<!--more-->
-
-
-<p>从这个角度来看，其实我们中国社会重视“家庭”，讲究关系建立和礼尚往来这类观念和活动，其实还是非常有意义的，对社会智能以及资源利用还是有帮助的。</p>
-
-<p>从社交关系链的价值思考，到把关系纳入能力范畴，必然要将关系和个人能力评估体系联系到一起。这引发了对自己这样的个人能力输出产生了另外一种思考和整理。</p>
-
-<h2><strong>输入及输出模型</strong>：</h2>
-
-<p><img src="http://mindon.github.com/images/blog/ar/a0.png" alt="" /></p>
-
-<p>每个人的产出都会分为三个部分：耗散，消耗和输出。耗散部分是由于缺乏关联而不再产生价值的，消耗部分是自身需要而必须的，核心输出是具有关联，能够为关系网络提供价值的部分——真正能成为输出的东西。</p>
-
-<p>输入部分，则可以从主动输入和被动输入进行区分。</p>
-
-<p>不同输入及输出比例就形成了不同性格和状态的人。如自闭症，就是欠缺具有关联的输出，大部分比例的产出耗散掉了。</p>
-
-<h2><strong>输出成份模型</strong>：</h2>
-
-<p><img src="http://mindon.github.com/images/blog/ar/a1.png" alt="" /></p>
-
-<p>对于核心输出部分，划分为才能和体力的输出。而一部分的才能和体力会转化为资金、工具和物品三个层次的输出。</p>
-
-<p>对于资金、工具、物品及体力的输出，都比较容易理解；我们重点关注一下才能的输出：才能的输出一部分会关联到知识分享库类——某种传媒的常量形式存在，另外一部分则是通过社交关系输出到相关个体——以变量形式存在。</p>
-
-<h2><strong>才能的形成和输出模型</strong>：</h2>
-
-<p><img src="http://mindon.github.com/images/blog/ar/a2.png" alt="" /></p>
-
-<p>才能通过知识学习，以及与其他个体的建立关联而形成；而才能的输出则是自身才能的积累，还有由于关联而形成的关系才能输出两部分构成。自身才能总是有限的，而关系才能则是动态变化，可以无限强大的——不可忽视的能力构成。</p>
-
-<h2><strong>自身才能和关系才能模型</strong>：</h2>
-
-<p><img src="http://mindon.github.com/images/blog/ar/a3.png" alt="" /></p>
-
-<p>个体的某种能力An = 自身能力 An,0 + 关系比重系数 Rn × ( 关系1能力系数 rn,1 × 关联能力 A&#8217;n,1 + &#8230;)</p>
-
-<p>可见，关系链的关联量直接影响到能力的强大与否——其实关系是最重要的才能来源。也就是说，在自身能力里面，创造、维持和协调关系的能力其实是至关重要的。这种能力对才能输出起到类似放大器的作用，能够动态地影响到关系链中的“轴突”的强弱，进而影响网络智能的水平。</p>
-
-<p>才能强者有三类：知识（常量）输出强——科学家/专家类；关系能力（变量）输出强——管理/销售类；综合类——具有影响力的天才。</p>
-
-<p>当然还有资金输出强者——富豪类，工具输出强者——发明家，物品输出强者——生产商，体力输出强者——体力劳动者。</p>
-
-<p>社交关系链，在个体能力增强和发挥方面是很有价值的——谁能首先挖掘到这一大金矿呢？关系才能的重视，对自身的能力思考又会带来什么样的冲击？我们的才能构成是什么样的？我们的有效输出又是什么？</p>
 ]]></content>
   </entry>
   

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Learning GO language - Mindon.IDEA</title>
+  <title>若有实验室版的微信 - 不仅仅是聊天 - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2013/01/19/learning-go-language/">
+  <link rel="canonical" href="http://mindon.github.com/blog/2013/02/16/its-more-than-chatting-the-wechat/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.6.2.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">Learning GO Language</h1>
+      <h1 class="entry-title">若有实验室版的微信 - 不仅仅是聊天</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2013-01-19T14:14:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
+<time datetime="2013-02-16T23:01:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time>
         
       </p>
     
@@ -131,58 +131,45 @@
 		</script>
 	</div>
 
-<p>Go语言几年前（2009）就出来了，喜欢其设计理念：简单、并行、实用和高效。</p>
+<p>假设微信不是一个聊天工具，重新将其功能DIY一下会得到怎样的一个应用呢？</p>
 
-<p>因为大多数时间都作为Web前端跟javascript较劲的工程师，对Go的了解并不多。这两年倒是一直在关注Node.JS。</p>
+<p>于是，尝试使用Context - Connected - Contagious的3C思维来整理一下对微信体验。</p>
 
-<p>Node.JS作为Web实时数据服务是非常不错的选择，曾用来做了好几个试验性质的产品，一个翻译平台（荒置中，新版正在用业余时间开发），一个支持多语言的反馈平台（在线），一个任意网站嵌入式的Web聊天平台（下线），一个推送微信官方消息的系统（闲置）。</p>
+<p>首先，微信已经成功创造并形成了一个相当好的Context(毫无疑问，这个Context形成于QQ和QQ邮箱这样良好的Contexts下)，在这个Context下让QQ用户之间，用户与服务提供者，公众人物建立起了新的关联 - Connected! 其传染途径-朋友圈，分享，共振(摇一摇-动作，附近-区域，漂流瓶-心理)，二维码。</p>
 
-<p>Node.JS用来做产品原型，或者SDK工具等工具类，是再适合不过了。Blackberry 10的WebWorks SDK里就用了Node.JS作为辅助工具。</p>
+<p>关联之后有两类必然目的: I/O 输入/输出。</p>
 
-<p>目前为止Node.JS还是我最喜欢的技术。然而，作为后台服务语言，其实Node.JS能做到的，大多其它语言也可以做得更好，除了Node.JS可以和前端使用同样的js库之外。Go这时重新进入了我的视野，也成为了新的学习任务。</p>
+<p><strong>输入类</strong>: 价值获取，情感影响
+<strong>输出类</strong>: 分享(有价值，有情感触动)，自我表达</p>
 
-<p>“Go is an expressive, concurrent, garbage-collected programming language.”</p>
+<p>输入的目的-输出更有效; 输出的目的-传染并收获新的关联-从而强化I/O循环，形成回路结构体。</p>
 
-<p>官方网站 <a href="http://golang.org">Go official website</a> 不知道什么原因被列入了和谐名单（因为用的是Google的服务器吗？） 大家可以访问 <a href="https://code.google.com/p/go/">https://code.google.com/p/go/</a> 至少偶尔能访问一下。要不就得翻墙了。</p>
-
-<p>在这主要是想分享一下配置Go project时候的碰到的一个问题的解决办法（under windows）：</p>
+<p>基于这个3C思维分析，如何对微信这样一个日益复杂的产品体验进形DIY呢?</p>
 
 <!--more-->
 
 
-<p>GO project Windows env. settings:</p>
+<h2>-   输入</h2>
 
-<h2>set-env.bat content</h2>
+<p>获取输入的唯一途径是关联: 已有关联在这里是不被关注的，除非关联内客或其影响发生了变化。关联不足是输入最亟需解决的问题，而常用的方案就是关联发现。同时，营造关朕不足感也是促进输入成长的关键要素。而下一步则是提高输入品质，解决新关联建立导致的输入膨胀的问题。</p>
 
-<pre><code>set GOPATH=f:\labs\go-learn\mindon
-set GOBIN=%GOPATH%\bin
-set PATH=%PATH%;%GOBIN%
-</code></pre>
+<p>于是，朋友圈更新，最喜欢的订阅，最关注的公众人物成为第一类主体，而当这类内容不足或不够活跃时，提供关联发现; 内容到一定量时，提供过滤筛选功能。</p>
 
-<ol>
-<li><p>configure your project path as GOPATH</p></li>
-<li><p>run set-env.bat in your DOS console</p></li>
-<li><p>go install</p></li>
-</ol>
+<h2>-   输出</h2>
 
+<p>如果缺乏关联，输出只能算是一种笔记积累或自娱自乐。而输出最期待的结果是反馈-特别是正面的回馈。</p>
 
-<p>These settings will eliminate the errors &#8220;can&#8217;t load package&#8221; under Windows.</p>
+<p>分享属于把输入直接传递，自我表达则是强化形像获取认可的更佳途径。</p>
 
-<p>另外一个是编译Go本身时候碰到的问题</p>
+<p>由于分享源于输入，故输出重点是自我表达-向具体关联对象或群体, 或自己表达自我情感，自己的作品。</p>
 
-<p>When building #Go under Windows, got following error:</p>
+<p>输出的关键是具有传染特性，只有这样才可以维持关联的活跃度，提升新关联建立的机率。</p>
 
-<pre><code>cmd/dist/windows.c:119: warning: dereferencing type-punned pointer will break strict-aliasing rules
-</code></pre>
+<p>基于对输入和输出的认识，可以发现：刺激关联不足感和辅助提升输入品质，强化表达的传染特性是最核心的任务──即培养关联的Context创建。</p>
 
-<p>update the windows.c line 119</p>
+<p><img src="/images/blog/wechat-more-than-chatting.png" alt="" /></p>
 
-<pre><code>(Rune*)&amp;r --&gt; (Rune*)r
-</code></pre>
-
-<p>then run all.bat :-) works fine!</p>
-
-<p><i id="link-tags">GO;Node.JS;Blackberry 10</i></p>
+<p><i id="link-tags">WeChat;微信</i></p>
 
 </div>
 
@@ -206,12 +193,12 @@ set PATH=%PATH%;%GOBIN%
   
 
 
-<time datetime="2013-01-19T14:14:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
+<time datetime="2013-02-16T23:01:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mindon/'>Mindon</a>, <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>
   
 </span>
 
@@ -229,10 +216,8 @@ set PATH=%PATH%;%GOBIN%
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/17/start-dos-console-minimized/" title="Previous Post: Start DOS Console Minimized">&laquo; Start DOS Console Minimized</a>
+        <a class="basic-alignment left" href="/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/" title="Previous Post: The PHP-CLD: Chromium Compact Language Detector for PHP">&laquo; The PHP-CLD: Chromium Compact Language Detector for PHP</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/19/design-t-shirts-on-teespring/" title="Next Post: Design T-Shirts on Teespring">Design T-Shirts on Teespring &raquo;</a>
       
     </p>
   </footer>
@@ -452,8 +437,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2013/01/19/learning-go-language/';
-        var disqus_url = 'http://mindon.github.com/blog/2013/01/19/learning-go-language/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2013/02/16/its-more-than-chatting-the-wechat/';
+        var disqus_url = 'http://mindon.github.com/blog/2013/02/16/its-more-than-chatting-the-wechat/';
         var disqus_script = 'embed.js';
       
     (function () {
