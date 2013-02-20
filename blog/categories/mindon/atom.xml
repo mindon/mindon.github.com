@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-18T20:47:47+08:00</updated>
+  <updated>2013-02-20T22:01:56+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lost All Camera Photos in My Nexus 7]]></title>
+    <link href="http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7/"/>
+    <updated>2013-02-20T20:02:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7</id>
+    <content type="html"><![CDATA[<p>My 8G Nexus 7, No rooted, Updated to android Jelly Bean 4.2.2 at 18 Feb.</p>
+
+<p>Now all photos in folder DCIM/Camera, were lost - Now way to restore currently, and vanish in the air.</p>
+
+<p>The first lost was found yesterday, there were only 5 photos left.</p>
+
+<p>The day, I debug an simple PhoneGap app in android with Developer Mode and USB debugging turned on.</p>
+
+<p>When I reach my PC at home, connected the device with USB cable, turned on Developer Mode and USB debugging. And try a few restore software, but all failed to show the "Internal Storage", so I gave up. But then I found the photos lost again - only one photo file left now. What the hell happened?</p>
+
+<p>Today, I tried to find out a solution, but nothing could help.</p>
+
+<p>At last, turn on the photo sync and backup the two large thumbdata in folder DCIM/.thumbnails/, one is 303MB, another one is 1.01GB.</p>
+
+<p>My photos! Vanish in Nexus 7 updated to Jelly Bean 4.2.2 and Google could not provide any help on it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[若有实验室版的微信 - 不仅仅是聊天]]></title>
@@ -156,16 +179,19 @@ of Computer Programs</a>.</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
 
 <h2>Updates:</h2>
 
-<p>v1.3.7 fix bugs, MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>
-v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
+<p>v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>  Fix Get Bounds bug</p>
+
+<p>v1.3.7 MD5: 7448feb6f2cbb7f502e35a86ccb1411a</p>
+
+<p>v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <h2>More Details</h2>
 
@@ -270,100 +296,13 @@ v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</h2>
 
 <p><i id="link-tags">Ingress;Chrome Web Store</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
-    <updated>2013-01-19T14:46:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>
-    <content type="html"><![CDATA[<p>The game Ingress is spreading around the world.</p>
-
-<p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
-
-<p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
-
-<p>The idea to develop such an extension for Ingress comes from another extension "<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>" -- developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
-
-<p>I made some improvement in this totally re-design and develop extension.</p>
-
-<ol>
-<li><p>Simpler UI and faster start-speed;</p></li>
-<li><p>Area select from an embedded Google Map;</p></li>
-<li><p>Easy view for Level, Energy, Links and Mods;</p></li>
-<li><p>Cache same query in 5 minutes;</p></li>
-<li><p>Locate portals with an embedded Google Map;</p></li>
-<li><p>Help to find zero level portals;</p></li>
-<li><p>Show all portals in a single large Google Map;</p></li>
-<li><p>Usage leading page.</p></li>
-</ol>
-
-
-<!--more-->
-
-
-<p>When you click the extension icon:</p>
-
-<pre><code>if (NOT in ingress.com) then
-
-    return showing about and usage message.
-
-end if
-
-if (Cached) then
-
-    return get cache data and show results
-
-end if
-
-Show querying spin.
-
-Submit query.
-
-if (No Auth) then
-
-    return Show no auth message
-
-end if
-
-if (Failed) then
-
-    return Show failed message
-
-end if
-
-
-Cache result
-
-Show result through template
-
-
-:: JS template engine in a sandbox iframe;
-
-:: Google Map shows in a sandbox iframe;
-
-:: Using postMessage communicate between the sandbox iframe and the extension.
-</code></pre>
-
-<p>The extension spread from a Chinese Ingress QQ group, then to a community in Google+.</p>
-
-<p>First 2 days, 186 installation. and yesterday the installation reached 865, 143 G+ and 10 reviews in Chrome Web Store.</p>
-
-<p>It's amazing that someone outside there likes your app and appreciates your work.</p>
-
-<p><img src="/images/blog/chrome/find-ingress-portals.png" alt="" /></p>
-
-<p>The Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a></p>
-
-<p><i id="link-tags">Ingress;Chrome Extesion;QQ;Google Map</i></p>
 ]]></content>
   </entry>
   

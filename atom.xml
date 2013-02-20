@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-18T20:47:47+08:00</updated>
+  <updated>2013-02-20T22:01:56+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lost All Camera Photos in My Nexus 7]]></title>
+    <link href="http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7/"/>
+    <updated>2013-02-20T20:02:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7</id>
+    <content type="html"><![CDATA[<p>My 8G Nexus 7, No rooted, Updated to android Jelly Bean 4.2.2 at 18 Feb.</p>
+
+<p>Now all photos in folder DCIM/Camera, were lost - Now way to restore currently, and vanish in the air.</p>
+
+<p>The first lost was found yesterday, there were only 5 photos left.</p>
+
+<p>The day, I debug an simple PhoneGap app in android with Developer Mode and USB debugging turned on.</p>
+
+<p>When I reach my PC at home, connected the device with USB cable, turned on Developer Mode and USB debugging. And try a few restore software, but all failed to show the &#8220;Internal Storage&#8221;, so I gave up. But then I found the photos lost again - only one photo file left now. What the hell happened?</p>
+
+<p>Today, I tried to find out a solution, but nothing could help.</p>
+
+<p>At last, turn on the photo sync and backup the two large thumbdata in folder DCIM/.thumbnails/, one is 303MB, another one is 1.01GB.</p>
+
+<p>My photos! Vanish in Nexus 7 updated to Jelly Bean 4.2.2 and Google could not provide any help on it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[若有实验室版的微信 - 不仅仅是聊天]]></title>
@@ -156,16 +179,19 @@ of Computer Programs</a>.</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</p>
 
 <h2>Updates:</h2>
 
-<p>v1.3.7 fix bugs, MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>
-v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
+<p>v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>  Fix Get Bounds bug</p>
+
+<p>v1.3.7 MD5: 7448feb6f2cbb7f502e35a86ccb1411a</p>
+
+<p>v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <h2>More Details</h2>
 
@@ -270,9 +296,9 @@ v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <p>Wish the chrome extension &#8221;<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>&#8221; help you in playing the game. Enjoy!</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="http://mindon.github.com/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</h2>
 
@@ -1438,25 +1464,6 @@ eof:
 <p>周末的公园，更是一个值得让你早起去体验的地方，不管你身在何处。</p>
 
 <p>(注：配图是用我的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000">Nokia 5000</a>拍的, @<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=%E6%B7%B1%E5%9C%B3%20%E8%8D%94%E9%A6%99%E5%85%AC%E5%9B%AD">荔香公园</a>)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[梦惊醒：末日降临]]></title>
-    <link href="http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream/"/>
-    <updated>2012-10-11T06:55:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/10/11/the-end-of-the-world-in-a-dream</id>
-    <content type="html"><![CDATA[<p>先是置身一地面结构复杂但并不大的一块斜坡，大家（同事）在玩一种钢球类游戏，斜坡本身是游戏场地。后来聊到双曲线什么的。忘了是如何切换到看天上千变万化的快速变化的云，跟一个不是那么熟的好像是同事的人说起天气的不可预测性问题，天气预报是需要不断调整的。</p>
-
-<p>非常突然地，看到云层后的背景中闪现了一抹颜色，一小段橘色，形如彩虹片段垂直的 - 显得异常不自然。</p>
-
-<p>正在纳闷中，更不可思议的东西出现在快速移动的云层后的背景上了 - 一个纯黑色的圆，带白边（和自己平时用的矢量绘图软件画的黑圆无异）。感觉有点日全食的形象，只不过黑圆稍大。黑圆出现后一瞬间，大地颤抖，大家楞了一下，闪过我脑海的是 - 地球被类似外星巨型激光武器击中了？！然而云层后快速晃动出更多大小不一样的类似黑圆，太诡异了！大地振晃地越发激烈。人群惊慌奔跑着（在一个缓斜坡的绿草地往下坡方向），而我边跑边拿出Nexus 7来想录下天空的异状 - 末日的景象，同时纳闷：摄像头画面没有被可能的强电磁场干扰？而我却忘了按开始录制或拍照的按键。接着就在末日的惊恐中吓醒了。</p>
-
-<p><img src="http://mindon.github.com/images/blog/end.jpg" alt="" /></p>
-
-<p>头一次梦到末日场景，末日降临得异常突然并且简单。</p>
-
-<p>2012年10月11日，应该是凌晨5点半左右惊醒，特此记录。</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-18T20:47:47+08:00</updated>
+  <updated>2013-02-20T22:01:56+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -86,16 +86,19 @@ of Computer Programs</a>.</p>
 
 <p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <p>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</p>
 
 <h2>Updates:</h2>
 
-<p>v1.3.7 fix bugs, MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>
-v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
+<p>v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>  Fix Get Bounds bug</p>
+
+<p>v1.3.7 MD5: 7448feb6f2cbb7f502e35a86ccb1411a</p>
+
+<p>v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <h2>More Details</h2>
 
@@ -200,9 +203,9 @@ v1.3.6 MD5: ed1f5b0b8984f474b8fecebf9e6c7a99</p>
 
 <p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
 
-<h2>The CRX file (v1.3.7)</h2>
+<h2>The CRX file (v1.3.8)</h2>
 
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.7.crx">Download Ingress Portals Finder</a> (MD5: <strong>7448feb6f2cbb7f502e35a86ccb1411a</strong>)</p>
+<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.8.crx">Download Ingress Portals Finder</a> (v1.3.8 MD5: <strong>3f560786fdb6c4399df4ad15d7824c1a</strong>)</p>
 
 <h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</h2>
 
