@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-28T07:17:44+08:00</updated>
+  <updated>2013-03-02T01:04:50+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,103 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Print the Schengen VISA Application Form in A3]]></title>
+    <link href="http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/"/>
+    <updated>2013-03-02T00:39:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3</id>
+    <content type="html"><![CDATA[<p>We are preparing the documents for the Schengen VISA to Italy &amp; France.</p>
+
+<p>It's such a big project for a 15 days journey, and it will be our first time to Europe -- attracted by its cultrue, landscape &amp; fresh air :p</p>
+
+<p>Here the tips to print the Italy VISA application form in a A3 paper. Yes, I mean the printer settings(打印机设置):</p>
+
+<h2>First,</h2>
+
+<ul>
+<li><p>Page Size（页面尺寸）: A4</p></li>
+<li><p>Output Size（输出尺寸）: A3</p></li>
+</ul>
+
+
+<h2>Second,</h2>
+
+<ul>
+<li>Layout（布局）: 2 in 1</li>
+</ul>
+
+
+<h2>Third,</h2>
+
+<ul>
+<li><p>Two Sides（双面打印）</p></li>
+<li><p>Short Edge （短边装订）</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<h2>Last!</h2>
+
+<ul>
+<li>Print pages（打印页面）: <strong>4,1,2,3</strong></li>
+</ul>
+
+
+<p>The point is we could specify the order of pages.</p>
+
+<p>这就是打印A3意大利申根签证申请表的打印机设置了。希望对大家有所帮助。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SSH Connect to BB10 Device]]></title>
+    <link href="http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device/"/>
+    <updated>2013-03-02T00:23:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device</id>
+    <content type="html"><![CDATA[<p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2: </h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<pre><code>ssh-keygen -t rsa -b 4096
+</code></pre>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3: </h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
+</code></pre>
+
+<p>keep this console there.</p>
+
+<!--more-->
+
+
+<h2>Step 4:</h2>
+
+<p><strong>Make the SSH connection</strong></p>
+
+<p>start another console, make the ssh connection</p>
+
+<pre><code>ssh devuser@169.254.0.1 -i rsa-bbx
+</code></pre>
+
+<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
+
+<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lost All Camera Photos in My Nexus 7]]></title>
@@ -103,202 +200,6 @@
 <p>Thanks, <a href="https://github.com/lstrojny">Lars Strojny</a> from github.</p>
 
 <p>Don't hesitate to use php-cld when you need something like this in php.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/"/>
-    <updated>2013-01-31T22:16:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down</id>
-    <content type="html"><![CDATA[<p>Learning GO language a few weeks before. Now the LISP.</p>
-
-<p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
-
-<p>The definition of Scheme tells what attracts me to learn this language. It is what it describes.</p>
-
-<p>I spared a few hours learning from <a href="http://www.htdp.org/2003-09-26/Book/">How to Design Programs</a> with exercises. Another great book from MIT <a href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html">Structure and Interpretation
-of Computer Programs</a>.</p>
-
-<p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
-
-<p>I don't think I have any chances to use it. Go and Node.JS are enough.</p>
-
-<p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
-
-<p>And this morning, I got an E-mail from Google Chrome Web Store -- Removal Notification for "Ingress Portals Finder"</p>
-
-<blockquote><p>Your Google Chrome item, "Ingress Portals Finder," did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
-
-<!--more-->
-
-
-<p>What a pity. It's the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
-
-<p>That's the TAKEN DOWN.</p>
-
-<p>It won't stress much on the Ingress server, instead, it will less stress.</p>
-
-<ol>
-<li><p>high quality developed.</p></li>
-<li><p>welcome and really useful with nice UI.</p></li>
-<li><p>avoid variety tool versions with almost same functions, controllable third-party tool entrance.</p></li>
-</ol>
-
-
-<p>But it's true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
-
-<p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
-
-<p>No matter what, I'm on the way to my next app, useful and helpful with UI satisfy me first.</p>
-
-<p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
-    <updated>2013-01-26T15:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
-    <content type="html"><![CDATA[<p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a> (TAKEN DOWN, the blog provides the link of the CRX file for manual installation).</p>
-
-<p><img src="/images/blog/ingress/ingress-portals-finder-logo.png" alt="" /></p>
-
-<p>The extension has 3 windows:</p>
-
-<p><strong>Main window</strong></p>
-
-<p><img src="/images/blog/ingress/main.jpg" alt="" /></p>
-
-<p><strong>About window</strong></p>
-
-<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
-
-<p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
-
-<p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
-
-<h2>The CRX file (v1.3.10)</h2>
-
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.10.crx">Download Ingress Portals Finder</a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
-
-<h2>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</h2>
-
-<h2>Updates:</h2>
-
-<p>v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>  Fix https request bug</p>
-
-<h2>More Details</h2>
-
-<p>Following describe is focusing on the features you need to know about this amazing helpful extension.</p>
-
-<!--more-->
-
-
-<h2><strong>A)</strong> Why an About window?</h2>
-
-<p>The <strong>Ingress Portals Finder</strong> works only in the <a href="http://www.ingress.com/intel">Ingress Map Offical Site</a>.</p>
-
-<p>That's why this extension needs an <strong>About</strong> window: when you click the extension icon in other tabs, the about window leads you to the proper website.</p>
-
-<p><img src="/images/blog/ingress/1-start.jpg" alt="" /></p>
-
-<h2><strong>B)</strong> A small donate may help.</h2>
-
-<p><img src="/images/blog/ingress/2-donate.jpg" alt="" /></p>
-
-<h2><strong>C)</strong> Main stage of Ingress Portals Finder</h2>
-
-<p>Click the extension icon on the tab where ingress.com/intel opened, you will see the main window of <strong>Ingress Portals Finder</strong>.</p>
-
-<p>First, you will need to set the bounds of the area you concern on.</p>
-
-<p><img src="/images/blog/ingress/3-bounds.jpg" alt="" /></p>
-
-<p>In 2 situations you may fail to call up the google map window, which would help a lot to select bounds. 1) Fail to access <a href="http://maps.google.com">http://maps.google.com</a>; 2) Default google map api daily quato running out. (Thanks, Google! The quato increased to 25k today - update 28 Feb quato goes to 500k)</p>
-
-<p>Even when map failed to show, you still could input the bounds to query.</p>
-
-<p>And another solution will be input your own google map api key to solve the quato problem.</p>
-
-<h2><strong>D)</strong>  Submit a query</h2>
-
-<p>When your bounds set, click "Query" to make the request.</p>
-
-<p>Here, to avoid stress on the official ingress server, the extension will cache 5 minutes for the same bounds.</p>
-
-<p><img src="/images/blog/ingress/4-query.jpg" alt="" /></p>
-
-<p>Be patient, the query may takes time, it depends on your network speed or the bounds area scale. But I don't think it will take more than 3 minutes.</p>
-
-<h2><strong>E)</strong> Filtering on the query result</h2>
-
-<p>The filter works on the query result. It won't stress on the server.</p>
-
-<p>1) Key words off the address;  2) Teams;  3) Levels</p>
-
-<p>There're tips on the level filtering:</p>
-
-<p><img src="/images/blog/ingress/5-level.jpg" alt="" /></p>
-
-<p>Click the <strong>[a]</strong> to select all levels. and you could press "Ctrl" + click to click levels you want to list.</p>
-
-<h2><strong>F)</strong> Which team is in charge?</h2>
-
-<p>The vertical bar beside the level number, you could see the status of portals -- more green or more blue.</p>
-
-<p><img src="/images/blog/ingress/6-vs.jpg" alt="" /></p>
-
-<h2><strong>G)</strong> Query result</h2>
-
-<p>The result includes name, photo, address, resonations, (level,energy,link,mods).</p>
-
-<p>You could get the location of the portal by click the google map icon.</p>
-
-<p><img src="/images/blog/ingress/7-locate.jpg" alt="" /></p>
-
-<p>The icon will call up an embed map window with marker of the portal. It will open a blank map window if the embed map api fails.</p>
-
-<h2><strong>H)</strong> Level, Enery, Links and Mods</h2>
-
-<p><img src="/images/blog/ingress/8-status.jpg" alt="" /></p>
-
-<h2><strong>I)</strong> List result portals in a full scale map</h2>
-
-<p>Left corner of the portal embed map window, you could find a transparent button "All".</p>
-
-<p><img src="/images/blog/ingress/9-all.jpg" alt="" /></p>
-
-<p>It opens a full map of the portals in the query result.</p>
-
-<p>And you could show the specific level on the map:</p>
-
-<p><img src="/images/blog/ingress/0-select.jpg" alt="" /></p>
-
-<h2><strong>J)</strong> Set Bounds more easily - Search place by name</h2>
-
-<p><img src="/images/blog/ingress/b-search.jpg" alt="" /></p>
-
-<h2><strong>K)</strong> Sort by Energy/Links/Mods</h2>
-
-<p><img src="/images/blog/ingress/a-sort.jpg" alt="" /></p>
-
-<h2><strong>L)</strong> Export selected level or all levels to KML </h2>
-
-<p><img src="/images/blog/ingress/c-export.jpg" alt="" /></p>
-
-<p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
-
-<p>Wish the chrome extension "<a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a>" help you in playing the game. Enjoy!</p>
-
-<h2>The CRX file (v1.3.10)</h2>
-
-<p>It's taken down from Chrome Web Store today. Here's the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.10.crx">Download Ingress Portals Finder</a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
-
-<h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window...</h2>
-
-<p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
   </entry>
   

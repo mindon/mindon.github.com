@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="The Code: A mysterious code underpins the world. But what does it mean and what can we learn from it? Marcus du Sautoy takes us on an odyssey to &hellip;">
+  <meta name="description" content="We are preparing the documents for the Schengen VISA to Italy &amp; France. It&#8217;s such a big project for a 15 days journey, and it will be our &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,137 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/">Print the Schengen VISA Application Form in A3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-02T00:39:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We are preparing the documents for the Schengen VISA to Italy &amp; France.</p>
+
+<p>It&#8217;s such a big project for a 15 days journey, and it will be our first time to Europe &#8211; attracted by its cultrue, landscape &amp; fresh air :p</p>
+
+<p>Here the tips to print the Italy VISA application form in a A3 paper. Yes, I mean the printer settings(打印机设置):</p>
+
+<h2>First,</h2>
+
+<ul>
+<li><p>Page Size（页面尺寸）: A4</p></li>
+<li><p>Output Size（输出尺寸）: A3</p></li>
+</ul>
+
+
+<h2>Second,</h2>
+
+<ul>
+<li>Layout（布局）: 2 in 1</li>
+</ul>
+
+
+<h2>Third,</h2>
+
+<ul>
+<li><p>Two Sides（双面打印）</p></li>
+<li><p>Short Edge （短边装订）</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/02/ssh-connect-to-bb10-device/">SSH Connect to BB10 Device</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-02T00:23:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2: </h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<pre><code>ssh-keygen -t rsa -b 4096
+</code></pre>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3: </h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
+</code></pre>
+
+<p>keep this console there.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/03/02/ssh-connect-to-bb10-device/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -344,138 +475,6 @@ of Computer Programs</a>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/">Ingress Portals Finder - a Chrome Extension for the Game</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-26T15:00:00+08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="https://chrome.google.com/webstore/detail/ingress-portals-finder/pglalnoakjpjaaobdjabdkedimkdnegk?hl=en-US">Ingress Portals Finder</a> (TAKEN DOWN, the blog provides the link of the CRX file for manual installation).</p>
-
-<p><img src="/images/blog/ingress/ingress-portals-finder-logo.png" alt="" /></p>
-
-<p>The extension has 3 windows:</p>
-
-<p><strong>Main window</strong></p>
-
-<p><img src="/images/blog/ingress/main.jpg" alt="" /></p>
-
-<p><strong>About window</strong></p>
-
-<p><img src="/images/blog/ingress/about.jpg" alt="" /></p>
-
-<p>The last one is the map window for all portals inside the bounds.(skip screenshot)</p>
-
-<p><strong>Easy Usage</strong>: 1) Set Bounds; 2) Click Query; 3) Filter by Tag, Team or Level.</p>
-
-<h2>The CRX file (v1.3.10)</h2>
-
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="/soft/ingress-portals-finder-1.3.10.crx">Download Ingress Portals Finder</a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
-
-<h2>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</h2>
-
-<h2>Updates:</h2>
-
-<p>v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>  Fix https request bug</p>
-
-<h2>More Details</h2>
-
-<p>Following describe is focusing on the features you need to know about this amazing helpful extension.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Ingress! Ingress! Design and Develop a Chrome Extension - Ingress Portals</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-19T14:46:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The game Ingress is spreading around the world.</p>
-
-<p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
-
-<p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
-
-<p>The idea to develop such an extension for Ingress comes from another extension &#8221;<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>&#8221; &#8211; developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
-
-<p>I made some improvement in this totally re-design and develop extension.</p>
-
-<ol>
-<li><p>Simpler UI and faster start-speed;</p></li>
-<li><p>Area select from an embedded Google Map;</p></li>
-<li><p>Easy view for Level, Energy, Links and Mods;</p></li>
-<li><p>Cache same query in 5 minutes;</p></li>
-<li><p>Locate portals with an embedded Google Map;</p></li>
-<li><p>Help to find zero level portals;</p></li>
-<li><p>Show all portals in a single large Google Map;</p></li>
-<li><p>Usage leading page.</p></li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -506,7 +505,7 @@ of Computer Programs</a>.</p>
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 52 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 54 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -518,13 +517,21 @@ of Computer Programs</a>.</p>
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 4 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 5 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/">Print the Schengen VISA Application Form in A3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/02/ssh-connect-to-bb10-device/">SSH Connect to BB10 Device</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/24/the-code-bbc/">The Code - BBC</a>
@@ -556,14 +563,6 @@ of Computer Programs</a>.</p>
     
       <li class="post">
         <a href="/blog/2013/01/19/design-t-shirts-on-teespring/">Design T-Shirts on Teespring</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/19/learning-go-language/">Learning GO language</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a>
       </li>
     
   </ul>

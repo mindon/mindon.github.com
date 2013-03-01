@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Preparea Developemtn Environment To build node-expat module under windows, you need the nodejs addon development env ready. Get and install VC++ 2010 &hellip;">
+  <meta name="description" content="昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。 目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,105 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T22:40:00+08:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T23:00:00+08:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When we want our product &#8211; a webpage for example &#8211; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&#8217;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &#8230;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/12/serve-in-multi-languages/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -413,191 +512,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/letup-take-a-break/">Letup: Take a Break</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/letup-take-a-break/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/children-learn-what-they-live/">Children Learn What They Live</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:31:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>孩子在生活中学习</strong></p>
-
-<p>by <strong>Dorothy Law Nolte</strong>, Ph.D.</p>
-
-<p>美國的著名社會學家及精神治療師，1924年1月12日－2005年11月6日</p>
-
-<p>If children live with criticism, they learn to condemn.</p>
-
-<p>批评中长大的孩子，责难他人。</p>
-
-<p>If children live with hostility, they learn to fight.</p>
-
-<p>敌意中长大的孩子，喜欢争斗。</p>
-
-<p>If children live with fear, they learn to be apprehensive.</p>
-
-<p>恐惧中长大的孩子，常常担忧。</p>
-
-<p>If children live with pity, they learn to feel sorry for themselves.</p>
-
-<p>怜悯中成长的孩子，自怨自艾。</p>
-
-<p>If children live with ridicule, they learn to feel shy.</p>
-
-<p>嘲笑中长大的孩子，容易退缩。</p>
-
-<p>If children live with jealousy, they learn to feel envy.</p>
-
-<p>猜忌中长大的孩子，滋生怨恨。</p>
-
-<p>If children live with shame, they learn to feel guilty.</p>
-
-<p>羞耻中长大的孩子，内疚自责。</p>
-
-<p>If children live with encouragement, they learn confidence.</p>
-
-<p>鼓励中长大的孩子，深具自信。</p>
-
-<p>If children live with tolerance, they learn patience.</p>
-
-<p>宽容中长大的孩子，能够忍耐。</p>
-
-<p>If children live with praise, they learn appreciation.</p>
-
-<p>称赞中长大的孩子，懂得感恩。</p>
-
-<p>If children live with acceptance, they learn to love.</p>
-
-<p>承诺中长大的孩子，学会珍爱。</p>
-
-<p>If children live with approval, they learn to like themselves.</p>
-
-<p>认可中长大的孩子，收获自信。</p>
-
-<p>If children live with recognition, they learn it is good to have a goal.</p>
-
-<p>赏识中长大的孩子，树立目标。</p>
-
-<p>If children live with sharing, they learn generosity.</p>
-
-<p>分享中长大的孩子，慷慨大方。</p>
-
-<p>If children live with honesty, they learn truthfulness.</p>
-
-<p>诚信中长大的孩子，理解真理。</p>
-
-<p>If children live with fairness, they learn justice.</p>
-
-<p>公正中长大的孩子，极富正义。</p>
-
-<p>If children live with kindness and consideration, they learn respect.</p>
-
-<p>尊重中长大的孩子，懂得尊敬。</p>
-
-<p>If children live with security, they learn to have faith in themselves and in those about them.</p>
-
-<p>安定中长大的孩子，信任自己和他人。</p>
-
-<p>If children live with friendliness, they learn the world is a nice place in which to live.</p>
-
-<p>友善中长大的孩子，眼里是美好世界。</p>
-
-<p>Copyright © 1972 by Dorothy Law Nolte</p>
-
-<hr />
-
-<p>Different versions of this poem:</p>
-
-<p><a href="http://www.noogenesis.com/pineapple/Kristone.html">http://www.noogenesis.com/pineapple/Kristone.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -630,7 +544,7 @@
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 52 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 54 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -642,13 +556,21 @@
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 4 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 5 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/">Print the Schengen VISA Application Form in A3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/02/ssh-connect-to-bb10-device/">SSH Connect to BB10 Device</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/24/the-code-bbc/">The Code - BBC</a>
@@ -680,14 +602,6 @@
     
       <li class="post">
         <a href="/blog/2013/01/19/design-t-shirts-on-teespring/">Design T-Shirts on Teespring</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/19/learning-go-language/">Learning GO language</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a>
       </li>
     
   </ul>

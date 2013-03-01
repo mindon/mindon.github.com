@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-28T07:17:44+08:00</updated>
+  <updated>2013-03-02T01:04:50+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,103 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Print the Schengen VISA Application Form in A3]]></title>
+    <link href="http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/"/>
+    <updated>2013-03-02T00:39:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3</id>
+    <content type="html"><![CDATA[<p>We are preparing the documents for the Schengen VISA to Italy &amp; France.</p>
+
+<p>It&#8217;s such a big project for a 15 days journey, and it will be our first time to Europe &#8211; attracted by its cultrue, landscape &amp; fresh air :p</p>
+
+<p>Here the tips to print the Italy VISA application form in a A3 paper. Yes, I mean the printer settings(打印机设置):</p>
+
+<h2>First,</h2>
+
+<ul>
+<li><p>Page Size（页面尺寸）: A4</p></li>
+<li><p>Output Size（输出尺寸）: A3</p></li>
+</ul>
+
+
+<h2>Second,</h2>
+
+<ul>
+<li>Layout（布局）: 2 in 1</li>
+</ul>
+
+
+<h2>Third,</h2>
+
+<ul>
+<li><p>Two Sides（双面打印）</p></li>
+<li><p>Short Edge （短边装订）</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<h2>Last!</h2>
+
+<ul>
+<li>Print pages（打印页面）: <strong>4,1,2,3</strong></li>
+</ul>
+
+
+<p>The point is we could specify the order of pages.</p>
+
+<p>这就是打印A3意大利申根签证申请表的打印机设置了。希望对大家有所帮助。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SSH Connect to BB10 Device]]></title>
+    <link href="http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device/"/>
+    <updated>2013-03-02T00:23:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device</id>
+    <content type="html"><![CDATA[<p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2: </h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<pre><code>ssh-keygen -t rsa -b 4096
+</code></pre>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3: </h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
+</code></pre>
+
+<p>keep this console there.</p>
+
+<!--more-->
+
+
+<h2>Step 4:</h2>
+
+<p><strong>Make the SSH connection</strong></p>
+
+<p>start another console, make the ssh connection</p>
+
+<pre><code>ssh devuser@169.254.0.1 -i rsa-bbx
+</code></pre>
+
+<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
+
+<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Code - BBC]]></title>
@@ -1292,170 +1389,6 @@ eof:
 <p><img src="http://mindon.github.com/images/blog/leaf/DSC_4940.JPG" alt="" /></p>
 
 <p><img src="http://mindon.github.com/images/blog/leaf/DSC_4946.JPG" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[走路上班的逆向足迹]]></title>
-    <link href="http://mindon.github.com/blog/2012/10/20/walking-to-work/"/>
-    <updated>2012-10-20T17:15:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/10/20/walking-to-work</id>
-    <content type="html"><![CDATA[<h2>Walking to work</h2>
-
-<p>走路上班是蛮不错的事情，健康并且每天走过公园，能感受新鲜空气，感受活力，聆听到各种自然的声音和广场舞的音乐 :-D Good for health.</p>
-
-<p>p1. 从公司出来</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4807.JPG" alt="" /></p>
-
-<p>p2. 立交桥上的花</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4814.JPG" alt="" /></p>
-
-<p><small id="more-tips">(大量照片，3G or 4G手机上网的小心钱包 :-p)</small></p>
-
-<!--more-->
-
-
-<p>p3. 蔓藤墙</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4817.JPG" alt="" /></p>
-
-<p>p4. 人行天桥</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4827.JPG" alt="" /></p>
-
-<p>p5. 人行天桥</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4831.JPG" alt="" /></p>
-
-<p>p6. 天桥左侧</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4835.JPG" alt="" /></p>
-
-<p>p7. 天桥右侧</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4832.JPG" alt="" /></p>
-
-<p>p8. 一路伴随的勒杜鹃（三角梅）</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4838.JPG" alt="" /></p>
-
-<p>p9. 天空的图案</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4840.JPG" alt="" /></p>
-
-<p>p10. 走了一段距离了</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4845.JPG" alt="" /></p>
-
-<p>p11. 进入荔香公园</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4847.JPG" alt="" /></p>
-
-<p>p12. 前方不远处，早晨时会有一舞蹈老师教舞</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4848.JPG" alt="" /></p>
-
-<p>p13. 走过一小片小树林区</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4854.JPG" alt="" /></p>
-
-<p>p14. 左手边是椰树</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4859.JPG" alt="" /></p>
-
-<p>p15. 前方不远处，早晨时有人在那笛子演奏</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4865.JPG" alt="" /></p>
-
-<p>p16. 阳光下A型工具房也显得很特别</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4872.JPG" alt="" /></p>
-
-<p>p17. 草坪上，大树下，总是周末集体活动的好地方</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4875.JPG" alt="" /></p>
-
-<p>p18. 大人小孩在这片绿草地上都能找到自己的欢乐</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4878.JPG" alt="" /></p>
-
-<p>p19. 这片绿草地，早晨时会有很多人集体练健身操or瑜伽操</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4897.JPG" alt="" /></p>
-
-<p>p20. 早晚的篮球场都满是年轻人的活力</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4907.JPG" alt="" /></p>
-
-<p>p21. 穿过荔香公园就是区政府了</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4926.JPG" alt="" /></p>
-
-<p>p22. 绿灯过马路</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4929.JPG" alt="" /></p>
-
-<p>p23. 一小片食肆区，黑鼻子烧烤就在前方</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4935.JPG" alt="" /></p>
-
-<p>p24. :-)快到家了</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4941.JPG" alt="" /></p>
-
-<p>p25. 路边的红色鸡蛋花</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4942.JPG" alt="" /></p>
-
-<p>p26. 小区里玩耍的小孩</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4947.JPG" alt="" /></p>
-
-<p>p27. 温暖的家就在上面了</p>
-
-<p><img src="http://mindon.github.com/images/blog/walk/DSC_4948.JPG" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[我的移动电子产品]]></title>
-    <link href="http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices/"/>
-    <updated>2012-10-14T10:27:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/10/14/mindon-mobile-devices</id>
-    <content type="html"><![CDATA[<p>首先，我没有<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iphone%205">iPhone 5</a>，也没有iPhone 4S，没有iPhone 4，连iPhone 3都没。因为我只购买自己需要的移动电子产品。iPhone目前都没在考虑之列。</p>
-
-<p>iOS设备的优越体验是不容置疑的，这是为什么全世界有那么多人为之疯狂的缘由。我在自己的iPod Touch 3(8G, 2ng的硬件)上也能感受得到，最直接的感受来自输入法——即使是Google的Nexus 7里的输入法，和iOS里的输入法也是有些差距的。</p>
-
-<p>对于iPhone，我一直异想天开地提倡基本通讯（电话/短信）和其他功能的用电分离——当然，至少目前都没有迹象说Apple会这么设计。于是，我和Aby目前的方案都是Nokia普通手机 + iTouch（iPod Touch的简称）。这样组合的好处是：你不需要担心没电导致电话和短信这样的基本通讯缺失；另外一方面可以无忧无虑地享受iTouch带来的娱乐和wifi网络功能——其实3G或者4G功能使用场合并不多，我们台湾自由行时候就是wifi + 网络电话解决的通讯问题，也没有感觉不方便什么的。</p>
-
-<p>这是我目前装备的移动电子产品：Nokia 5000，iPod Touch 2.5（3 with 2ng hardware），Kindle Touch 和 Nexus 7。</p>
-
-<p><img src="http://mindon.github.com/images/blog/mindon-devices.jpg" alt="" /></p>
-
-<!--more-->
-
-
-<h2>Nokia 5000</h2>
-
-<p><a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nokia%205000">Nokia 5000</a> 当初花大概 ~900RMB 左右买的，现在这种手机价格已经很低了。很满意它的电池、电话和短信功能，拍照用到微博上也是足够的；不足的地方是容量真的很小——即使对于短信和简单拍照来说都不足够。（我的这个手机拍照也有点问题了，效果见“<a href="http://mindon.github.com/blog/2012/10/14/a-super-hotspot-of-a-morden-city/">早8点，城市活跃点</a>”）</p>
-
-<h2>iPod Touch</h2>
-
-<p>苹果公司(Apple Inc.)的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iPod%20Touch">iPod Touch</a> 当年花了 ~1,800RMB 购买。已经使用数年，记事/记账/阅读/上网/娱乐（视频/音乐/照片/游戏）是最常用的功能。还有开发测试用途 :-p iTouch小巧，4代更薄。使用体验确实好。不过比较烦App Store的速度和体验，Web App对比原生App差距还是不小的。</p>
-
-<h2>Kindle Touch</h2>
-
-<p>Amazon的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Kindle">Kindle</a>是使用电子墨水的设备，跟其它电子产品不一样，显示效果就是打印在纸上的效果——刚接触这个设备的时候，你会以为屏幕上贴的广告纸没撕下来 :-D 现在的新版<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Kindle%20PaperWhite">Kindle PaperWhite</a>改进了很多，增加了前置光源，非常棒的阅读器。<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=%E7%94%B5%E5%AD%90%E5%A2%A8%E6%B0%B4">电子墨水</a>设备是需要外来光源照明的，跟读纸质书是一样的，只不过它的墨水是可以变化的，印在纸上的墨水是固定的。电池很耐用，充一次就可以用很久。非常喜欢这个设备，花了800RMB买的，超值。</p>
-
-<h2>Nexus 7</h2>
-
-<p>Google的<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=Nexus%207">Nexus 7</a>由于配备了GPS全球定位，NFC近场感应（目前应用主要是读公交卡余额：深圳通，八达通&#8230;），具备重力感应器，速度及磁场感应得各种功能。虽然硬件上有点缺陷（参见“<a href="http://mindon.github.com/blog/2012/09/05/nexus-7-from-google-play/">Nexus 7 Issues</a>”），但对于一台花 1,700RMB就能买到的设备来说，是超值了的。Nexus 7的屏幕大小、单手握感，用于阅读、上网、图片和文档操作都是感觉不错的选择。</p>
-
-<p>这一堆设备加起来的价钱也就大概一台iPhone 5的价钱，对比起 iPhone 5 来，我还是喜欢这几台和需求吻合得更好的电子产品。还是那句话，萝卜白菜各有所爱。我也喜欢最新的设备，不过更喜欢用够“值”的产品。</p>
-
-<p>（微软Microsoft的Surface平板，Apple的iPad mini - 10月23日发布会也是不错的选择，不过价钱铁定没Nexus 7实惠啦）</p>
 ]]></content>
   </entry>
   

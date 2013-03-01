@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-02-28T07:17:44+08:00</updated>
+  <updated>2013-03-02T01:04:50+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SSH Connect to BB10 Device]]></title>
+    <link href="http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device/"/>
+    <updated>2013-03-02T00:23:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device</id>
+    <content type="html"><![CDATA[<p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2: </h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<pre><code>ssh-keygen -t rsa -b 4096
+</code></pre>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3: </h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
+</code></pre>
+
+<p>keep this console there.</p>
+
+<!--more-->
+
+
+<h2>Step 4:</h2>
+
+<p><strong>Make the SSH connection</strong></p>
+
+<p>start another console, make the ssh connection</p>
+
+<pre><code>ssh devuser@169.254.0.1 -i rsa-bbx
+</code></pre>
+
+<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
+
+<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Era of Hardware Browsers]]></title>
