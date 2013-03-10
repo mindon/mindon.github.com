@@ -239,8 +239,23 @@
     <section>
     <h1>About Me</h1>
     <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
-    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a><br />Web Developer, @10c</p>
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
 </section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
 
 <section class="googleplus">
   <h1>
