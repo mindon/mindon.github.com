@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-03-23T21:59:08+08:00</updated>
+  <updated>2013-04-12T23:56:09+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The NRC: Netbook Resolution Customizer]]></title>
+    <link href="http://mindon.github.com/blog/2013/04/12/the-nrc-netbook-resolution-customizer/"/>
+    <updated>2013-04-12T22:35:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/04/12/the-nrc-netbook-resolution-customizer</id>
+    <content type="html"><![CDATA[<p>I have a netbook HP mini 2140 with screen resolution 1024x576. It not enough for many daily work now. My Nexus 7 is 1280×800 pixels!</p>
+
+<p>How could I change the netbook resolution to make it easier for my development?</p>
+
+<p>First, I found the software -- NRC: <strong>Netbook Resolution Customizer</strong> 1.0.8. It's amazing, and works fine for me. Though sometimes it is not as stable as I expected.</p>
+
+<p>There's another solution by editing the register of windows, Run command regedit and search keyword "Display1_DownScalingEnabled" or "Display1_DownScalingSupported", and change them from 0 to 1. but i found that some of the value is in hex: 00 00 00 00, some binary.</p>
+
+<!--more-->
+
+
+<p>Though i have no idea which register item works, but maybe following items matters.</p>
+
+<pre><code>"Display1_EnableNoPruneSizeFlag"=dword:00000001
+"Display1_EnableDynamicScaling"=dword:00000001
+"EnableInterlacedModeRemoval"=dword:00000001
+"Display1_DownScalingEnabled"=dword:00000001
+"Display1_DownScalingSupported"=dword:00000001
+"Display1_FakeScaleX"=hex:00,04,00,00
+"Display1_FakeScaleY"=hex:00,03,00,00
+</code></pre>
+
+<p>These appears in the register path "[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ialm\Device0]" of my HP mini 2140 (WinXP).</p>
+
+<p>Some items also found in [HKEY_LOCAL_MACHINE\SYSTEM*<em>ControlSet003**\Services\ialm\Device1] and [HKEY_LOCAL_MACHINE\SYSTEM*</em>ControlSet004**\Services\ialm\Device1]</p>
+
+<p>It may be different.</p>
+
+<p>No matter what, after I update the register and running the NRC, I could change the screen resolution now. Sometimes with scrollable large area, sometimes scaled without scrollable screen area.</p>
+
+<p>It's good enough! But I could not restore it to 1024 x 576 :-p</p>
+
+<p>There's another solution for Intel Graphics: <a href="http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/">http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/</a></p>
+
+<p><i id="link-tags">NRC;Netbook Resolution Customizer;HP mini 2140;Nexus 7</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cascades Native App Development Tips]]></title>
@@ -391,31 +434,6 @@
 <p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
 
 <p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lost All Camera Photos in My Nexus 7]]></title>
-    <link href="http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7/"/>
-    <updated>2013-02-20T20:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7</id>
-    <content type="html"><![CDATA[<p>My 8G Nexus 7, No rooted, Updated to android Jelly Bean 4.2.2 at 18 Feb.</p>
-
-<p>Now all photos in folder DCIM/Camera, were lost - Now way to restore currently, and vanish in the air.</p>
-
-<p>The first lost was found yesterday, there were only 5 photos left.</p>
-
-<p>The day, I debug an simple PhoneGap app in android with Developer Mode and USB debugging turned on.</p>
-
-<p>When I reach my PC at home, connected the device with USB cable, turned on Developer Mode and USB debugging. And try a few restore software, but all failed to show the "Internal Storage", so I gave up. But then I found the photos lost again - only one photo file left now. What the hell happened?</p>
-
-<p>Today, I tried to find out a solution, but nothing could help.</p>
-
-<p>At last, turn on the photo sync and backup the two large thumbdata in folder DCIM/.thumbnails/, one is 303MB, another one is 1.01GB.</p>
-
-<p>My photos! Vanish in Nexus 7 updated to Jelly Bean 4.2.2 and Google could not provide any help on it.</p>
-
-<p><i id="link-tags">Nexus 7</i></p>
 ]]></content>
   </entry>
   
