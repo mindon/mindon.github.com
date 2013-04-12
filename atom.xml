@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-04-12T23:56:09+08:00</updated>
+  <updated>2013-04-13T00:05:58+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -51,6 +51,8 @@
 <p>It&#8217;s good enough! But I could not restore it to 1024 x 576 :-p</p>
 
 <p>There&#8217;s another solution for Intel Graphics: <a href="http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/">http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/</a></p>
+
+<p>The <a href="http://www.entechtaiwan.com/util/ps.shtm">PowerStrip 3.9</a> is another tool.</p>
 
 <p><i id="link-tags">NRC;Netbook Resolution Customizer;HP mini 2140;Nexus 7</i></p>
 ]]></content>
