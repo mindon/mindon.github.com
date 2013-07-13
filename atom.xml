@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-04-13T00:05:58+08:00</updated>
+  <updated>2013-07-13T22:43:51+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DaSign: Light up your life]]></title>
+    <link href="http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life/"/>
+    <updated>2013-07-09T22:54:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life</id>
+    <content type="html"><![CDATA[<p>It&#8217;s Mindon first Android app.</p>
+
+<p>Do not hesitate to show it when your L8 ingress team taking photos.</p>
+
+<p><img src="http://mindon.github.com/images/blog/dasign/prompt.png" alt="" /></p>
+
+<!--more-->
+
+
+<p>If you are an ingress player, you should own it.</p>
+
+<p>If you reach Level 8 in the game ingress, taking a team photo, you need it.</p>
+
+<p>If you are a Mayday fans, It makes your group special.</p>
+
+<p>If you like others to be Mayday fans, equip them with it.</p>
+
+<p>All kinds of signs in a small app. ~ 0.5MB</p>
+
+<p>It fits all kind of screens with high resolution. Yes, it&#8217;s vector.(SVG format)</p>
+
+<p>Here&#8217;s the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
+
+<p><img src="http://mindon.github.com/images/blog/dasign/dasign-qr.png" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The NRC: Netbook Resolution Customizer]]></title>
@@ -1144,195 +1176,6 @@ exit
 <p>仅剩的绿色长廊、健身设施和小小的儿童玩乐场就是小区里最好的设施了。虽然空地都变成了停车场，不过比起半开放状态来说，停车问题貌似还是目前令大家非常头痛的问题。</p>
 
 <p>任何东西的价值除了其具备的连接，其所处的环境和自身定位也是相当关键的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Trying Cascades+QML App for Blackberry 10]]></title>
-    <link href="http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app/"/>
-    <updated>2012-11-21T21:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/11/21/first-qml-blackberry-10-app</id>
-    <content type="html"><![CDATA[<p>&#8220;Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30.&#8221;</p>
-
-<p>&#8220;QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements.&#8221;</p>
-
-<p>Here&#8217;s something I met during my first development using QML under Blackberry Native SDK IDE.</p>
-
-<ul>
-<li> Link error or &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221; issue</li>
-</ul>
-
-
-<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
-
-<p>Manage source folders and files, header folders to avoid &#8220;undefined reference to `vtable for someSymbol&#8217;&#8221;</p>
-
-<!--more-->
-
-
-<ul>
-<li><p> Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
-<li><p> Seperated javascript file could be imported in QML by <code>import "my.js" as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
-<li><p> If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
-</ul>
-
-
-<p>e.g. demo.qml</p>
-
-<pre><code>import "demo.js" as Demo
-
-
-NavigationPane {
-    id: nav
-    function notify( message ) {
-    Demo.notify( message )
-    }
-}
-</code></pre>
-
-<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
-
-<pre><code>Page {
-    Container {
-        layout: StackLayout {
-        }
-        Button {
-                text: qsTr("Test")
-        onClicked: {
-          nav.notify("something")
-        }
-        }
-    }
-}
-</code></pre>
-
-<ul>
-<li> Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
-</ul>
-
-
-<p>something like</p>
-
-<pre><code>import "share"
-//...
-ListView {
-            listItemComponents: [
-                ListItemComponent {
-                    type: "item"
-                    DemoItem {
-                    }
-                }
-        dataModel: GroupDataModel {
-                    id: recentlyDataModel
-        }
-        onCreationCompleted: {
-                recentlyDataModel.clear()
-            recentlyDataModel.insert({
-            "message": "Hello world",
-            "image": "asset:///images/demo.png"
-        })
-        }
-            ]
-}
-</code></pre>
-
-<ul>
-<li>Chat message display</li>
-</ul>
-
-
-<p>component to display chat message</p>
-
-<pre><code>TextArea {
-        editable: false
-    text: "Hello :-)"
-    inputMode: TextAreaInputMode.Chat
-}
-</code></pre>
-
-<ul>
-<li>Using system dialogs inside QML</li>
-</ul>
-
-
-<p>call these to import system dialog methods into QML</p>
-
-<pre><code>qmlRegisterType&lt;bb::system::SystemDialog&gt;("bb.system", 1, 0, "SystemDialog");
-qmlRegisterType&lt;bb::system::SystemPrompt&gt;("bb.system", 1, 0, "SystemPrompt");
-qmlRegisterType&lt;bb::system::SystemToast&gt;("bb.system", 1, 0, "SystemToast");
-</code></pre>
-
-<ul>
-<li>Use subscribe/publish methods to comunicate between QML and C++</li>
-</ul>
-
-
-<p>set context</p>
-
-<pre><code>#include &lt;bb/cascades/Application&gt;
-#include &lt;bb/cascades/QmlDocument&gt;
-#include &lt;bb/cascades/NavigationPane&gt;
-
-#include &lt;bb/system/SystemDialog&gt;
-#include &lt;bb/system/SystemPrompt&gt;
-#include &lt;bb/system/SystemToast&gt;
-
-DemoTest::DemoTest(bb::cascades::Application *app)
-: QObject(app)
-{
-
-    QmlDocument *qml = QmlDocument::create("asset:///demo.qml").parent(this);
-
-    // create root object for the UI
-    NavigationPane *navPane = qml-&gt;createRootObject&lt;NavigationPane&gt;();
-
-    // set created root object as a scene
-    if (navPane) {
-    Demo *demo = new Demo();
-
-    qml-&gt;setContextProperty("*demo", demo);
-
-    // Set the main scene for the application to the NavigationPane.
-    Application::instance()-&gt;setScene(navPane);
-    }
-
-}
-</code></pre>
-
-<p>definition in Demo class</p>
-
-<pre><code>signals:
-    void publish(QString, QVariant);
-</code></pre>
-
-<p>called</p>
-
-<pre><code>QVariantMap info;
-info.insert( "from", "mindon" );
-info.insert( "to", "airoff" );
-info.insert( "message", "mindon.github.com" );
-
-emit publish( "MSG", info );
-</code></pre>
-
-<p>qml connect in demo.qml</p>
-
-<pre><code>function publish( type, data ) {
-
-}
-function subscribe( type, cb ) {
-
-}
-onCreationCompleted: {
-    demo.publish.connect( nav.publish )
-}
-</code></pre>
-
-<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
-
-<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
-
-<p><i id="link-tags">Blackberry;QML;Qt;Cascades</i></p>
 ]]></content>
   </entry>
   
