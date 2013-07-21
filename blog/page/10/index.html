@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Aby 不在身边，吃饭的事情也不能马虎了。给我特意准备了菜单，提醒我注意饮食： 早餐选择： 1、花卷+豆浆 2、牛奶+吐司（夹蛋） 吐司可从岁宝可颂坊买，或者买白吐司。 3、粥 可配菜： 香菜炒蛋、酱炒蛋（冰箱里有） ">
+  <meta name="description" content="To remove duplicate elements in a array, there are a few algorithms to implement. Algorithm 1 function unique1(d) { var o = {}, i, l = d.length, r &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,92 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Find Out Unique Elements in a Javascript Array</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-17T22:53:00+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
+
+<h2>Algorithm 1</h2>
+
+<pre><code>function unique1(d) {
+  var o = {}, i, l = d.length, r = [];
+  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
+  for(i in o) r.push(o[i]);
+  return r;
+};
+</code></pre>
+
+<p>This method has 2 loops, that&#8217;s a big time-cost problem.</p>
+
+<h2>Algorithm 2</h2>
+
+<p>reduce one loop from the algorithm 1, improve a litter bit</p>
+
+<pre><code>function unique2(d) {
+  var r = [], i = {}, j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(!i[d[k]]) {
+      i[d[k]] = 1;
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<h2>Algorithm 3</h2>
+
+<p>In ECMA-262 standard, there&#8217;s a indexOf method for Array object, we use it to improve a lot.</p>
+
+<pre><code>function unique3(d) {
+  var r = [], j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(r.indexOf(d[k]) &lt; 0) {
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<p>and it could be better&#8230;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -426,73 +512,6 @@ Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-tu
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-26T21:43:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Improve eyes dry or eyesight blur problem</p>
-
-<h2>1.枸杞鲫鱼汤（中医验方）</h2>
-
-<p><strong>主治</strong>：近视眼，视物模糊。</p>
-
-<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
-
-<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
-
-<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
-
-<h2>2.牛奶鸡蛋饮（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
-
-<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
-
-<h2>3.猪肝蛋汤（民间方）</h2>
-
-<p><strong>主治</strong>：近视眼。</p>
-
-<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
-
-<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -552,13 +571,17 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 8 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/20/android-data-and-folders/">Android App Data & Folders</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/07/09/dasign-light-up-your-life/">DaSign: Light up your life</a>
@@ -594,10 +617,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/02/16/its-more-than-chatting-the-wechat/">若有实验室版的微信 - 不仅仅是聊天</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/">The PHP-CLD: Chromium Compact Language Detector for PHP</a>
       </li>
     
   </ul>

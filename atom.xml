@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-07-13T22:43:51+08:00</updated>
+  <updated>2013-07-21T18:25:55+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,30 +14,121 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Android App Data & Folders]]></title>
+    <link href="http://mindon.github.com/blog/2013/07/20/android-data-and-folders/"/>
+    <updated>2013-07-20T11:16:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/07/20/android-data-and-folders</id>
+    <content type="html"><![CDATA[<p>Context context = getApplicationContext();</p>
+
+<h2>SQLite Databases</h2>
+
+<pre><code>context.getDatabasePath("myDbName")
+</code></pre>
+
+<h2>Cache</h2>
+
+<p>System will clean it auto if low memory</p>
+
+<pre><code>context.getCacheDir()
+</code></pre>
+
+<h2>Lib</h2>
+
+<p>context.getFilesDir()</p>
+
+<h2>Apk &amp; resources path</h2>
+
+<p>context.getPackageCodePath()
+context.getPackageResourcePath</p>
+
+<h2>Shared Preferences</h2>
+
+<p>getSharedPreferences()
+getPreferences()</p>
+
+<h2>Internal Storage</h2>
+
+<p>removed when uninstall the app
+MODE_PRIVATE | MODE_APPEND | MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE</p>
+
+<pre><code>FileOutputStream fos = openFileOutput(flName, Context.MODE_PRIVATE);    
+fos.write(content.getBytes());    
+fos.close();  
+</code></pre>
+
+<h2>Internal Files Operations</h2>
+
+<p>Internal files path</p>
+
+<p>.getDir()
+.getFilesDir()
+.deleteFile()
+.fileList</p>
+
+<h2>External Storage</h2>
+
+<p><strong>Checking media availability</strong></p>
+
+<p>.getExternalStorageState()</p>
+
+<p>Environment.MEDIA_MOUNTED | MEDIA_MOUNTED_READ_ONLY</p>
+
+<pre><code>Environment.getExternalStorageDirectory()
+
+
+Environment.getExternalStoragePublicDirectory(
+        Environment.DIRECTORY_PICTURES
+    )
+
+
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
+</code></pre>
+
+<p>.getExternalStoragePublicDirectory()</p>
+
+<p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
+
+<p>.getExternalCacheDir()</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[DaSign: Light up your life]]></title>
     <link href="http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life/"/>
     <updated>2013-07-09T22:54:00+08:00</updated>
     <id>http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life</id>
-    <content type="html"><![CDATA[<p>It&#8217;s Mindon first Android app.</p>
+    <content type="html"><![CDATA[<h2>DaSign</h2>
+
+<p>The  signs to light up your life.</p>
+
+<p>It&#8217;s Mindon first Android app :D</p>
+
+<p>It&#8217;s more than a SVG(Scalable Vector Graphics) viewer, but a powerful tool to declare yourself.</p>
+
+<p>Small install package size - 0.3MB only! 90+ super HD signs included!</p>
+
+<p>Show it with your nexus 7, it will be super cool!</p>
 
 <p>Do not hesitate to show it when your L8 ingress team taking photos.</p>
 
 <p><img src="http://mindon.github.com/images/blog/dasign/prompt.png" alt="" /></p>
+
+<p>It&#8217;s <strong>FREE</strong>, without any advertisements.</p>
 
 <!--more-->
 
 
 <p>If you are an ingress player, you should own it.</p>
 
-<p>If you reach Level 8 in the game ingress, taking a team photo, you need it.</p>
+<p>If you reach L8 in the game ingress, taking a team photo, you need it.</p>
 
 <p>If you are a Mayday fans, It makes your group special.</p>
 
 <p>If you like others to be Mayday fans, equip them with it.</p>
 
-<p>All kinds of signs in a small app. ~ 0.5MB</p>
+<p>It fits all kinds of screens with high resolution. Yes, it&#8217;s vector.(SVG format)</p>
 
-<p>It fits all kind of screens with high resolution. Yes, it&#8217;s vector.(SVG format)</p>
+<p>[Operations]  1) Long tap or slide to show list; 2) Double tap to show information of the sign; 3) Tap to hide list.</p>
 
 <p>Here&#8217;s the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
 
@@ -1155,27 +1246,6 @@ exit
 <p>这个是把之前整理的一个HTML5小游戏封装成了 Firefox package app for Firfox OS。 看起来Firefox Marketplace 跟 Chrome Webstore有几分相似：也分Host App/Package App。 搭的GAE Go App正好为提交 Host App 当了试验服务器。</p>
 
 <p><i id="link-tags">Blackberry 10;Webworks;Cascades;QML,Chrome App,Native Client;HydridAuth;CodeIgniter;MOAI SDK;Corona SDK;Lua;Firefox OS;Chrome Webstore</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[生活区域]]></title>
-    <link href="http://mindon.github.com/blog/2012/12/30/living-area/"/>
-    <updated>2012-12-30T13:59:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/12/30/living-area</id>
-    <content type="html"><![CDATA[<p>在这里已经生活了一年多时间了。整理一下这里的连接 :-)</p>
-
-<p><img src="http://mindon.github.com/images/blog/living-area.jpg" alt="" /></p>
-
-<p>虽然小区很旧了，不过生活得还算自在和舒适——要求不太高的话 :-p</p>
-
-<p>小区的连接是相当强大的，只可惜小区及外围的空地都定位成了停车场，让小区的价值和吸引力有所下调，否则将会是个相当具有竞争力的地方。这就比如一张宣纸，用来盛放食物和作为书法或艺术品载体一样，所具有的价值差别还是相当大的。</p>
-
-<p>小区的物业似乎仅在维持现有设施的正常运作之外，并没有什么其他表现。虽说是让人感觉自在，不过小区越来越美好的可能性降到了很低的水平。——类似一个很Nice但安于现状没啥追求的人。</p>
-
-<p>仅剩的绿色长廊、健身设施和小小的儿童玩乐场就是小区里最好的设施了。虽然空地都变成了停车场，不过比起半开放状态来说，停车问题貌似还是目前令大家非常头痛的问题。</p>
-
-<p>任何东西的价值除了其具备的连接，其所处的环境和自身定位也是相当关键的。</p>
 ]]></content>
   </entry>
   
