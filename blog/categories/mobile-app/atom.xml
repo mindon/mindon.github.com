@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-07-21T18:25:55+08:00</updated>
+  <updated>2013-09-15T11:49:07+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,226 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Building mobile apps from the command line]]></title>
+    <link href="http://mindon.github.com/blog/2013/09/15/build-mobile-apps-from-command-line/"/>
+    <updated>2013-09-15T09:04:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/09/15/build-mobile-apps-from-command-line</id>
+    <content type="html"><![CDATA[<p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
+
+<h1>Android</h1>
+
+<p>Managing Projects from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
+
+<h2>Creating an Android Project</h2>
+
+<pre><code>android create project \
+--target &lt;target_ID&gt; \
+--name &lt;your_project_name&gt; \
+--path path/to/your/project \
+--activity &lt;your_activity_name&gt; \
+--package &lt;your_package_namespace&gt;
+</code></pre>
+
+<h2>Updating a Project</h2>
+
+<pre><code>android update project --name &lt;project_name&gt; --target &lt;target_ID&gt;
+--path &lt;path_to_your_project&gt;
+</code></pre>
+
+<h2>Setting up a Library Project</h2>
+
+<pre><code>android create lib-project --name &lt;your_project_name&gt; \
+--target &lt;target_ID&gt; \
+--path path/to/your/project \
+--package &lt;your_library_package_namespace&gt;
+</code></pre>
+
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
+
+<!--more-->
+
+
+<h2>Updating a library project</h2>
+
+<pre><code>android update lib-project \
+--target &lt;target_ID&gt; \
+--path path/to/your/project
+</code></pre>
+
+<h2>Referencing a Library Project</h2>
+
+<pre><code>android update project \
+--target &lt;target_ID&gt; \
+--path path/to/your/project
+--library path/to/library_projectA
+</code></pre>
+
+<p>This command updates the application project's build properties to include a reference to the library project. Specifically, it adds an android.library.reference.n property to the project's project.properties file.</p>
+
+<h2>Declaring library components in the manifest file</h2>
+
+<p>In the manifest file of the application project, you must add declarations of all components that the application will use that are imported from a library project. For example, you must declare any <activity>, <service>, <receiver>, <provider>, and so on, as well as <permission>, <uses-library>, and similar elements.</p>
+
+<p>Building and Running from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/building/building-cmdline.html">http://developer.android.com/tools/building/building-cmdline.html</a></p>
+
+<h2>Building in Debug/Release Mode</h2>
+
+<pre><code>ant debug
+ant release
+</code></pre>
+
+<p><a href="http://developer.android.com/tools/publishing/app-signing.html">Signing Your Applications</a></p>
+
+<h2>Running on a Device</h2>
+
+<pre><code>adb -d install path/to/your/app.apk
+</code></pre>
+
+<p>update installation</p>
+
+<pre><code>adb -d -r install path/to/your/app.apk
+</code></pre>
+
+<h1>iOS</h1>
+
+<p>To be able to find the command line, the trick was to watch the system console log while running a “build and archive” through Xcode.</p>
+
+<pre><code>xcodebuild -project myproject1 -target target1
+
+
+/usr/bin/xcrun -sdk iphoneos PackageApplication -v "${RELEASE_BUILDDIR}/${APPLICATION_NAME}.app" -o "${BUILD_HISTORY_DIR}/${APPLICATION_NAME}.ipa" --sign "${DEVELOPPER_NAME}" --embed "${PROVISONNING_PROFILE}"
+</code></pre>
+
+<p>RELEASE_BUILDDIR needs to be an absolute path.</p>
+
+<p>you don't need the --sign or --embed options if you wish to keep the same signing/profile used when the .app was built.</p>
+
+<p>Note that the ipa file path in -o "${ipa_path}" must be an absolute path. Otherwise you will probably get error: Unable to create '.../...ipa' or it will be silently ignored creating.</p>
+
+<pre><code>xcodebuild -scheme &lt;SchemeName&gt; archive
+</code></pre>
+
+<p>Make sure you have selected the correct Xcode release by using xcode-select <path to Xcode.app></p>
+
+<p>to resign a build</p>
+
+<pre><code>codesign -f -vv -s "$DistributionIdentity" "$APPDIR"
+</code></pre>
+
+<h2>Other References</h2>
+
+<p><a href="http://nachbaur.com/blog/building-ios-apps-for-over-the-air-adhoc-distribution">Building iOS apps for Over-The-Air AdHoc distribution</a></p>
+
+<p><a href="https://github.com/ghughes/fruitstrap">Fruitstrap</a> is a command line tool that uses the private MobileDevice API to install an iOS application on a physical device over USB. It’s pretty easy to get set up.</p>
+
+<pre><code>xcodebuild -scheme fruitstrap-demo -sdk iphoneos build
+
+fruitstrap build/Debug-iphoneos/fruitstrap-demo.app
+</code></pre>
+
+<p>One command to build and install the app on the device.</p>
+
+<pre><code>FRUITSTRAP_CLI=1 xcodebuild -scheme fruitstrap-demo -sdk iphoneos build
+</code></pre>
+
+<p><a href="https://github.com/facebook/xctool">xctool</a> is a replacement for Apple's xcodebuild that makes it easier to build and test iOS and Mac products. It's especially helpful for continuous integration.</p>
+
+<h1>BlackBerry 10</h1>
+
+<p>make -f [configuration]/makefile [target]</p>
+
+<p><a href="http://developer.blackberry.com/native/documentation/core/com.qnx.doc.ide.userguide/topic/devel_build_from_command_line.html">Build from the command line</a></p>
+
+<pre><code>mkbuild -ws &lt;workspace&gt; [options] 
+mkbuild [-project] &lt;full_project_path&gt; [options] 
+mkbuild -ws &lt;workspace&gt; -projects &lt;project1,project2&gt; [options]
+</code></pre>
+
+<p><a href="http://devblog.blackberry.com/2013/05/building-apps-without-an-ide/">Command Line Rocks! Building BlackBerry 10 Apps Without An IDE</a></p>
+
+<pre><code>qcc -Vgcc_ntoarmv7le main.c -o main
+</code></pre>
+
+<p>for simulator</p>
+
+<pre><code>qcc -Vgcc_ntox86 main.c -o main
+</code></pre>
+
+<p>bar-descriptor.xml file <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/r_blackberry_tablet_dtd_intro.html#r_blackberry_tablet_dtd_intro">full list of BAR application descriptor parameters</a></p>
+
+<pre><code>&lt;qnx&gt;
+  &lt;id&gt;com.example.GoodbyeIDE&lt;/id&gt;
+  &lt;versionNumber&gt;1&lt;/versionNumber&gt;
+  &lt;name&gt;Goodbye IDE&lt;/name&gt;
+  &lt;asset path="main" entry="true"&gt;main&lt;/asset&gt;
+&lt;/qnx&gt;
+</code></pre>
+
+<p>To create a BAR file: (<a href="https://www.blackberry.com/SignedKeys/codesigning.html">register with RIM to sign applications</a>, <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/t_setup_manual_create_debug_token_cmdline.html">create a debug token</a>)</p>
+
+<pre><code>blackberry-nativepackager -package GoodbyeIDE.bar bar-descriptor.xml -devMode -debugToken ~/Library/Research\ In\ Motion/debugtoken1.bar
+</code></pre>
+
+<p>Deploy</p>
+
+<pre><code>blackberry-deploy -installApp 169.254.0.1 -password pass GoodbyeIDE.bar
+</code></pre>
+
+<h2>View logs over SSH</h2>
+
+<pre><code>blackberry-connect 169.254.0.1 -password pass
+</code></pre>
+
+<p>open another console and run</p>
+
+<pre><code>ssh devuser@169.254.0.1
+</code></pre>
+
+<p>run command</p>
+
+<pre><code>slog2info -w
+</code></pre>
+
+<p><a href="http://devblog.blackberry.com/2013/05/command-line-rocks-part-2/">Command Line Rocks! Part 2 – Adding Multiple Source Files and Libraries</a></p>
+
+<p><a href="http://devblog.blackberry.com/2013/08/command-line-rocks-part-3-make-and-makefiles/">Command Line Rocks! Part 3 – Make and Makefiles</a></p>
+
+<h1>Windows Phone 8</h1>
+
+<p>The output of the build process includes a file with the .XAP extension. The XAP file is a zipped package that contains all the files required by your app. It’s the XAP file that you deploy to the emulator or to a phone, and that you publish to Windows Phone Store.</p>
+
+<pre><code>devenv NameOfSolution /Rebuild "Release|Mixed Platforms"
+
+MSBuild MyProject.csproj /p:OutDir=d:\builds\mindon-projs\
+</code></pre>
+
+<p>You can override the project-specific folder behavior by specifying.</p>
+
+<p>/p:GenerateProjectSpecificOutputFolder=false</p>
+
+<pre><code>MSBuild.exe MyProject/project.jsproj /p:Configuration=Release /t:Build /m
+</code></pre>
+
+<h2>MSBuild Command-Line Reference</h2>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/ms164311.aspx">http://msdn.microsoft.com/en-us/library/ms164311.aspx</a></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681686(v=vs.105">How to sign a company app by using XapSignTool</a>.aspx)</p>
+
+<pre><code>set path=%path%;"%ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\XapSignTool"
+
+XapSignTool.exe sign /f PFXFile /p Password XAP
+</code></pre>
+
+<p><a href="https://github.com/AndreasOM/wp8-directx-commandline">Simple Windows Phone 8 (C++/native only) DirectX project with Command Line Build</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android App Data & Folders]]></title>
@@ -257,25 +477,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
 
 <p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Era of Hardware Browsers]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/06/era-of-hardware-browsers/"/>
-    <updated>2013-01-06T23:27:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/06/era-of-hardware-browsers</id>
-    <content type="html"><![CDATA[<p>Years ago, I took all desktop apps as some specific browsers - only visiting specified data resources provided by IP or file path with fixed UIs. and the browsers load different function DLLs or SO(Share Object) by URL, which contains both data and runnable source code.</p>
-
-<p>Now days, The "Browsers" become hardware -- the mobiles and tablets. The apps are modules of the super "Hardware Browser", they are combining the local resources, remote resources provided by IPs or URLs. Traditional browser become a soft-module of the super "Hardware Browser".</p>
-
-<p>The mobile "Hardware Browser" never be parasitic on an PC any more, it takes less time to start, and cost less energy to perform the same or even more powerful functions.</p>
-
-<p>And the "Hardware Browser" is facing the same compatible problems as the "Software Browser" on PC. They own different screen resolutions, powered by different OS.</p>
-
-<p>That means the mobile app developers are in the same situation as the web front-end developers are. They are working for the mobile "Hardware Browser".</p>
-
-<p><i id="link-tags">Hardware Browser</i></p>
 ]]></content>
   </entry>
   

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Chinese-Balance-Heal - Mindon.IDEA</title>
+  <title>Building mobile apps from the command line - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Category: Chinese-Balance-Heal">
+  <meta name="description" content="<!-- google_ad_client = "ca-pub-6997921015773263"; /* git-post */ google_ad_slot = "5984167509"; google_ad_width = 300; google_ad_height = 250 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.comblog/categories/chinese-balance-heal/">
+  <link rel="canonical" href="http://mindon.github.com/blog/2013/09/15/build-mobile-apps-from-command-line/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.6.2.js"></script>
@@ -87,124 +87,321 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Chinese-Balance-Heal</h1>
+    
+      <h1 class="entry-title">Building Mobile Apps From the Command Line</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-15T09:04:00+08:00" pubdate data-updated="true">Sep 15<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  
-<div id="blog-archives" class="category">
 
 
 
-  
-  <h2>2013</h2>
+<div class="entry-content">
 
-<article>
-  
-<h1><a href="/blog/2013/03/23/how-to-heal-sprained-ankle/">How to Heal Sprained Ankle</a></h1>
-<time datetime="2013-03-23T17:34:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>23</span> <span class='year'>2013</span></time>
+	<div class="adpost">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a>, <a class='category' href='/blog/categories/mindon/'>Mindon</a></span>
-</footer>
+<p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
 
+<h1>Android</h1>
 
-</article>
+<p>Managing Projects from the Command Line</p>
 
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
 
+<h2>Creating an Android Project</h2>
 
-  
-  <h2>2012</h2>
+<pre><code>android create project \
+--target &lt;target_ID&gt; \
+--name &lt;your_project_name&gt; \
+--path path/to/your/project \
+--activity &lt;your_activity_name&gt; \
+--package &lt;your_package_namespace&gt;
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2012/08/15/ted-danny-hillis/">TED: Danny Hillis</a></h1>
-<time datetime="2012-08-15T23:10:00+08:00" pubdate><span class='month'>Aug</span> <span class='day'>15</span> <span class='year'>2012</span></time>
+<h2>Updating a Project</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a>, <a class='category' href='/blog/categories/light-air-water-m-sci/'>Light-Air-Water-M-Sci</a></span>
-</footer>
+<pre><code>android update project --name &lt;project_name&gt; --target &lt;target_ID&gt;
+--path &lt;path_to_your_project&gt;
+</code></pre>
 
+<h2>Setting up a Library Project</h2>
 
-</article>
+<pre><code>android create lib-project --name &lt;your_project_name&gt; \
+--target &lt;target_ID&gt; \
+--path path/to/your/project \
+--package &lt;your_library_package_namespace&gt;
+</code></pre>
 
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
 
-
-<article>
-  
-<h1><a href="/blog/2012/05/11/spleen-power-and-health/">健脾與養生</a></h1>
-<time datetime="2012-05-11T07:32:00+08:00" pubdate><span class='month'>May</span> <span class='day'>11</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
-<time datetime="2012-03-26T21:43:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>26</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a></span>
-</footer>
+<!--more-->
 
 
-</article>
+<h2>Updating a library project</h2>
+
+<pre><code>android update lib-project \
+--target &lt;target_ID&gt; \
+--path path/to/your/project
+</code></pre>
+
+<h2>Referencing a Library Project</h2>
+
+<pre><code>android update project \
+--target &lt;target_ID&gt; \
+--path path/to/your/project
+--library path/to/library_projectA
+</code></pre>
+
+<p>This command updates the application project&#8217;s build properties to include a reference to the library project. Specifically, it adds an android.library.reference.n property to the project&#8217;s project.properties file.</p>
+
+<h2>Declaring library components in the manifest file</h2>
+
+<p>In the manifest file of the application project, you must add declarations of all components that the application will use that are imported from a library project. For example, you must declare any <activity>, <service>, <receiver>, <provider>, and so on, as well as <permission>, <uses-library>, and similar elements.</p>
+
+<p>Building and Running from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/building/building-cmdline.html">http://developer.android.com/tools/building/building-cmdline.html</a></p>
+
+<h2>Building in Debug/Release Mode</h2>
+
+<pre><code>ant debug
+ant release
+</code></pre>
+
+<p><a href="http://developer.android.com/tools/publishing/app-signing.html">Signing Your Applications</a></p>
+
+<h2>Running on a Device</h2>
+
+<pre><code>adb -d install path/to/your/app.apk
+</code></pre>
+
+<p>update installation</p>
+
+<pre><code>adb -d -r install path/to/your/app.apk
+</code></pre>
+
+<h1>iOS</h1>
+
+<p>To be able to find the command line, the trick was to watch the system console log while running a “build and archive” through Xcode.</p>
+
+<pre><code>xcodebuild -project myproject1 -target target1
 
 
+/usr/bin/xcrun -sdk iphoneos PackageApplication -v "${RELEASE_BUILDDIR}/${APPLICATION_NAME}.app" -o "${BUILD_HISTORY_DIR}/${APPLICATION_NAME}.ipa" --sign "${DEVELOPPER_NAME}" --embed "${PROVISONNING_PROFILE}"
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM -- Recommended Books</a></h1>
-<time datetime="2012-03-10T15:13:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>10</span> <span class='year'>2012</span></time>
+<p>RELEASE_BUILDDIR needs to be an absolute path.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a></span>
-</footer>
+<p>you don&#8217;t need the &#8211;sign or &#8211;embed options if you wish to keep the same signing/profile used when the .app was built.</p>
 
+<p>Note that the ipa file path in -o &#8220;${ipa_path}&#8221; must be an absolute path. Otherwise you will probably get error: Unable to create &#8216;&#8230;/&#8230;ipa&#8217; or it will be silently ignored creating.</p>
 
-</article>
+<pre><code>xcodebuild -scheme &lt;SchemeName&gt; archive
+</code></pre>
 
+<p>Make sure you have selected the correct Xcode release by using xcode-select <path to Xcode.app></p>
 
+<p>to resign a build</p>
 
-<article>
-  
-<h1><a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a></h1>
-<time datetime="2012-03-06T20:21:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>06</span> <span class='year'>2012</span></time>
+<pre><code>codesign -f -vv -s "$DistributionIdentity" "$APPDIR"
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a>, <a class='category' href='/blog/categories/mindon/'>Mindon</a></span>
-</footer>
+<h2>Other References</h2>
 
+<p><a href="http://nachbaur.com/blog/building-ios-apps-for-over-the-air-adhoc-distribution">Building iOS apps for Over-The-Air AdHoc distribution</a></p>
 
-</article>
+<p><a href="https://github.com/ghughes/fruitstrap">Fruitstrap</a> is a command line tool that uses the private MobileDevice API to install an iOS application on a physical device over USB. It’s pretty easy to get set up.</p>
 
+<pre><code>xcodebuild -scheme fruitstrap-demo -sdk iphoneos build
 
+fruitstrap build/Debug-iphoneos/fruitstrap-demo.app
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2012/03/02/acupressure-hands-tech/">穴位按摩方法(Acupressure)</a></h1>
-<time datetime="2012-03-02T22:07:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2012</span></time>
+<p>One command to build and install the app on the device.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/chinese-balance-heal/'>Chinese-Balance-Heal</a></span>
-</footer>
+<pre><code>FRUITSTRAP_CLI=1 xcodebuild -scheme fruitstrap-demo -sdk iphoneos build
+</code></pre>
 
+<p><a href="https://github.com/facebook/xctool">xctool</a> is a replacement for Apple&#8217;s xcodebuild that makes it easier to build and test iOS and Mac products. It&#8217;s especially helpful for continuous integration.</p>
 
-</article>
+<h1>BlackBerry 10</h1>
+
+<p>make -f [configuration]/makefile [target]</p>
+
+<p><a href="http://developer.blackberry.com/native/documentation/core/com.qnx.doc.ide.userguide/topic/devel_build_from_command_line.html">Build from the command line</a></p>
+
+<pre><code>mkbuild -ws &lt;workspace&gt; [options] 
+mkbuild [-project] &lt;full_project_path&gt; [options] 
+mkbuild -ws &lt;workspace&gt; -projects &lt;project1,project2&gt; [options]
+</code></pre>
+
+<p><a href="http://devblog.blackberry.com/2013/05/building-apps-without-an-ide/">Command Line Rocks! Building BlackBerry 10 Apps Without An IDE</a></p>
+
+<pre><code>qcc -Vgcc_ntoarmv7le main.c -o main
+</code></pre>
+
+<p>for simulator</p>
+
+<pre><code>qcc -Vgcc_ntox86 main.c -o main
+</code></pre>
+
+<p>bar-descriptor.xml file <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/r_blackberry_tablet_dtd_intro.html#r_blackberry_tablet_dtd_intro">full list of BAR application descriptor parameters</a></p>
+
+<pre><code>&lt;qnx&gt;
+  &lt;id&gt;com.example.GoodbyeIDE&lt;/id&gt;
+  &lt;versionNumber&gt;1&lt;/versionNumber&gt;
+  &lt;name&gt;Goodbye IDE&lt;/name&gt;
+  &lt;asset path="main" entry="true"&gt;main&lt;/asset&gt;
+&lt;/qnx&gt;
+</code></pre>
+
+<p>To create a BAR file: (<a href="https://www.blackberry.com/SignedKeys/codesigning.html">register with RIM to sign applications</a>, <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/t_setup_manual_create_debug_token_cmdline.html">create a debug token</a>)</p>
+
+<pre><code>blackberry-nativepackager -package GoodbyeIDE.bar bar-descriptor.xml -devMode -debugToken ~/Library/Research\ In\ Motion/debugtoken1.bar
+</code></pre>
+
+<p>Deploy</p>
+
+<pre><code>blackberry-deploy -installApp 169.254.0.1 -password pass GoodbyeIDE.bar
+</code></pre>
+
+<h2>View logs over SSH</h2>
+
+<pre><code>blackberry-connect 169.254.0.1 -password pass
+</code></pre>
+
+<p>open another console and run</p>
+
+<pre><code>ssh devuser@169.254.0.1
+</code></pre>
+
+<p>run command</p>
+
+<pre><code>slog2info -w
+</code></pre>
+
+<p><a href="http://devblog.blackberry.com/2013/05/command-line-rocks-part-2/">Command Line Rocks! Part 2 – Adding Multiple Source Files and Libraries</a></p>
+
+<p><a href="http://devblog.blackberry.com/2013/08/command-line-rocks-part-3-make-and-makefiles/">Command Line Rocks! Part 3 – Make and Makefiles</a></p>
+
+<h1>Windows Phone 8</h1>
+
+<p>The output of the build process includes a file with the .XAP extension. The XAP file is a zipped package that contains all the files required by your app. It’s the XAP file that you deploy to the emulator or to a phone, and that you publish to Windows Phone Store.</p>
+
+<pre><code>devenv NameOfSolution /Rebuild "Release|Mixed Platforms"
+
+MSBuild MyProject.csproj /p:OutDir=d:\builds\mindon-projs\
+</code></pre>
+
+<p>You can override the project-specific folder behavior by specifying.</p>
+
+<p>/p:GenerateProjectSpecificOutputFolder=false</p>
+
+<pre><code>MSBuild.exe MyProject/project.jsproj /p:Configuration=Release /t:Build /m
+</code></pre>
+
+<h2>MSBuild Command-Line Reference</h2>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/ms164311.aspx">http://msdn.microsoft.com/en-us/library/ms164311.aspx</a></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681686(v=vs.105">How to sign a company app by using XapSignTool</a>.aspx)</p>
+
+<pre><code>set path=%path%;"%ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\XapSignTool"
+
+XapSignTool.exe sign /f PFXFile /p Password XAP
+</code></pre>
+
+<p><a href="https://github.com/AndreasOM/wp8-directx-commandline">Simple Windows Phone 8 (C++/native only) DirectX project with Command Line Build</a></p>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-15T09:04:00+08:00" pubdate data-updated="true">Sep 15<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mobile-app/'>Mobile-App</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/20/android-data-and-folders/" title="Previous Post: Android App Data & Folders">&laquo; Android App Data & Folders</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 
 </div>
 
@@ -432,7 +629,10 @@ function googleTranslateElementInit() {
       var disqus_shortname = 'mindon';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.com/blog/2013/09/15/build-mobile-apps-from-command-line/';
+        var disqus_url = 'http://mindon.github.com/blog/2013/09/15/build-mobile-apps-from-command-line/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
