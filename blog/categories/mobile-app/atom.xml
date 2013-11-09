@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2013-09-15T11:49:07+08:00</updated>
+  <updated>2013-11-09T21:34:03+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fix adb error under win8]]></title>
+    <link href="http://mindon.github.com/blog/2013/09/15/fix-adb-error-under-win8/"/>
+    <updated>2013-09-15T16:27:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2013/09/15/fix-adb-error-under-win8</id>
+    <content type="html"><![CDATA[<h2>error: device not found</h2>
+
+<p>1)  Find "Device Manager" in "PC Info";</p>
+
+<p>2)  Get your device in the "Other devices";</p>
+
+<p>3)  Update driver and choose your adt folder to install the driver.</p>
+
+<h2>Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]</h2>
+
+<p>Uninstall your old version app on your device before install the new apk.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Building mobile apps from the command line]]></title>
@@ -222,7 +241,7 @@ MSBuild MyProject.csproj /p:OutDir=d:\builds\mindon-projs\
 
 <p><a href="http://msdn.microsoft.com/en-us/library/ms164311.aspx">http://msdn.microsoft.com/en-us/library/ms164311.aspx</a></p>
 
-<p><a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681686(v=vs.105">How to sign a company app by using XapSignTool</a>.aspx)</p>
+<p><a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681686.aspx">How to sign a company app by using XapSignTool</a></p>
 
 <pre><code>set path=%path%;"%ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\XapSignTool"
 
@@ -430,53 +449,6 @@ Environment.getExternalStoragePublicDirectory(
 
 
 <p><i id="link-tags">Blackberry Z10;Blackberry</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SSH Connect to BB10 Device]]></title>
-    <link href="http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device/"/>
-    <updated>2013-03-02T00:23:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device</id>
-    <content type="html"><![CDATA[<p>How to connect to your BB10 device or simulator?</p>
-
-<h2>Step 1:</h2>
-
-<p><strong>Turn on Development Mode</strong></p>
-
-<h2>Step 2: </h2>
-
-<p><strong>Creating an RSA2 key</strong></p>
-
-<pre><code>ssh-keygen -t rsa -b 4096
-</code></pre>
-
-<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
-
-<h2>Step 3: </h2>
-
-<p><strong>Start Connect Service</strong></p>
-
-<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
-</code></pre>
-
-<p>keep this console there.</p>
-
-<!--more-->
-
-
-<h2>Step 4:</h2>
-
-<p><strong>Make the SSH connection</strong></p>
-
-<p>start another console, make the ssh connection</p>
-
-<pre><code>ssh devuser@169.254.0.1 -i rsa-bbx
-</code></pre>
-
-<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
-
-<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
 ]]></content>
   </entry>
   
