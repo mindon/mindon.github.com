@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>MongoDB: The internal file structure - Mindon.IDEA</title>
+  <title>Finally My Nexus 7 updated to 4.4 KitKat - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/2012/03/17/mongodb-the-internal-file-structure/">
+  <link rel="canonical" href="http://mindon.github.com/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.6.2.js"></script>
@@ -91,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">MongoDB: The Internal File Structure</h1>
+      <h1 class="entry-title">Finally My Nexus 7 Updated to 4.4 KitKat</h1>
     
     
       <p class="meta">
@@ -107,7 +107,7 @@
   
 
 
-<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2013-11-26T20:31:00+08:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
         
       </p>
     
@@ -131,91 +131,17 @@
 		</script>
 	</div>
 
-<p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+<p>This morning, the OTA Android <a href="http://www.android.com/kitkat/">KitKat 4.4</a> finally reached my Nexus 7 (2012) and Aby&#8217;s Nexus 7 (2013). It&#8217;s a long time waiting.</p>
 
-<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+<p>Nov. 13, 2013 Google announced that its Nexus 7 and Nexus 10 tablets are getting Android 4.4 KitKat. After clicking check update 13 days later, it&#8217;s such a long time :-p</p>
 
-<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+<p><img src="/images/blog/n7-kitkat.jpg" alt="" /></p>
 
-<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+<p>There&#8217;s no ART in KitKat for Nexus 7 (2012). ( <a href="https://code.google.com/p/android/issues/detail?id=62375">ART runtime is missing in Android 4.4 on Nexus 7 (2012)</a> )</p>
 
-<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+<p>Some apps are not working well under ART mode. some crashed. <a href="http://www.androidruntime.com/list">List of broken apps in Android RunTime</a></p>
 
-<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
-
-<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
-
-<h2>MongoDB数据文件内部结构</h2>
-
-<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
-
-<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
-
-<!--more-->
-
-
-<p>每一个数据库都有自己独立的文件。如果你开启了directoryperdb选项，那你每个库的文件会单独放在一个文件夹里。</p>
-
-<p>数据库文件在内部会被切分成单个的块，每个块只保存一个名字空间的数据。在MongoDB中，名字空间用于区分不同的存储类别。比如每个collection有一个独立的名字空间，每个索引也有自己的名字空间。</p>
-
-<p>在一个块中，会保存多条记录，每条记录是BSON格式的，记录与记录之间通过双向链表进行连接。</p>
-
-<p>索引数据也存在数据文件中，不过索引是被组织成B-Tree结构，而不是双向链表。</p>
-
-<p>对每个数据库，有一个命名空间文件，用于保存每个名字空间对应的元数据。我们通过查询这些元数据来找到对应的名字空间的存储块位置。</p>
-
-<p>如果你开启了jorunaling日志，那么还会有一些文件存储着你所有的操作记录。</p>
-
-<p>下面图片摘自10gen工程师Mathias Stearn在MongoSV2011大会上的发言稿，手绘的数据文件结构。</p>
-
-<ol>
-<li><p><strong>每个数据库有相应的数据文件和命名空间文件</strong>
-<img src="/images/blog/mongodb-internal/1.jpg" alt="" /></p></li>
-<li><p><strong>数据文件从16MB开始，新的数据文件比上一个文件大一倍，最大为2GB</strong>
-<img src="/images/blog/mongodb-internal/2.jpg" alt="" /></p></li>
-<li><p><strong>文件使用MMAP进行内存映射，会将所有数据文件映射到内存中，但是只是虚拟内存，只有访问到这块数据时才会交换到物理内存。</strong>
-<img src="/images/blog/mongodb-internal/3.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/3-0.jpg" alt="" /></p></li>
-<li><p><strong>MongoDB的数据文件映射到内存表中的位置</strong>
-<img src="/images/blog/mongodb-internal/4.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/4-0.jpg" alt="" /></p></li>
-<li><p><strong>使用32位机器的话，内存地址最大可以标识4GB内存</strong>
-<img src="/images/blog/mongodb-internal/5.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/5-0.jpg" alt="" /></p></li>
-<li><p><strong>但是在32位机器上，4GB内存会有1GB被内核战用，大约0.5GB会用于mongod进程的stack空间，只剩下大约2.5GB可用于映射数据文件。</strong>
-<img src="/images/blog/mongodb-internal/6.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/6-0.jpg" alt="" /></p></li>
-<li><p><strong>在64位机器上则最多可以表示128TB的空间</strong>
-<img src="/images/blog/mongodb-internal/7.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/7-0.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/7-1.jpg" alt="" /></p></li>
-<li><p><strong>每个数据文件会被分成一个一个的数据块，块与块之间用双向链表连接</strong>
-<img src="/images/blog/mongodb-internal/8.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/8.jpg" alt="" /></p></li>
-<li><p><strong>在名字空间文件中，保存的是一个hash table，保存了每个名字空间的存储信息元数据，包括其大小，块数，第一块位置，最后一块位置，被删除的块的链表以及索引信息</strong>
-<img src="/images/blog/mongodb-internal/9.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/9-0.jpg" alt="" /></p></li>
-<li><p><strong>这些位置通过DiskLoc数据结构进行存储，存储了数据文件编号和块在文件中的位置</strong>
-<img src="/images/blog/mongodb-internal/a.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/a-0.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/a-1.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/a-2.jpg" alt="" /></p></li>
-<li><p><strong>对每一个块来说，其头部包含了一些块的元数据，比如自己的位置，上一个和下一个块的位置以及块中第一条和最后一条记录的位置指针。剩下的部分用于存储具体的数据，具体数据之间也是通过双向链接来进行连接。</strong>
-<img src="/images/blog/mongodb-internal/b.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/b-0.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/b-1.jpg" alt="" /></p></li>
-<li><p><strong>下面是B-Tree的存储结构和工作原理</strong>
-<img src="/images/blog/mongodb-internal/c.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-0.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-1.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-2.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-3.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-4.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-5.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-6.jpg" alt="" />
-<img src="/images/blog/mongodb-internal/c-7.jpg" alt="" /></p></li>
-</ol>
-
+<p>KitKat’s WebView is powered by Chromium, enabling Android app developers to use new HTML5 and CSS features.  <a href="http://developer.android.com/guide/webapps/migrating.html">Migrating to WebView in Android 4.4</a></p>
 
 </div>
 
@@ -239,12 +165,12 @@
   
 
 
-<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+<time datetime="2013-11-26T20:31:00+08:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/web-tech/'>Web-Tech</a>
+    <a class='category' href='/blog/categories/mindon/'>Mindon</a>
   
 </span>
 
@@ -262,10 +188,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/17/notes-on-mongodb/" title="Previous Post: Notes on MongoDB">&laquo; Notes on MongoDB</a>
+        <a class="basic-alignment left" href="/blog/2013/11/09/living-creatures-ignored/" title="Previous Post: 被忽视的生物 Living Creatures Ignored">&laquo; 被忽视的生物 Living Creatures Ignored</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/17/redis-remote-dictionary-server/" title="Next Post: Redis: REmote DIctionary Server">Redis: REmote DIctionary Server &raquo;</a>
       
     </p>
   </footer>
@@ -505,8 +429,8 @@ function googleTranslateElementInit() {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mindon.github.com/blog/2012/03/17/mongodb-the-internal-file-structure/';
-        var disqus_url = 'http://mindon.github.com/blog/2012/03/17/mongodb-the-internal-file-structure/';
+        var disqus_identifier = 'http://mindon.github.com/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat/';
+        var disqus_url = 'http://mindon.github.com/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat/';
         var disqus_script = 'embed.js';
       
     (function () {
