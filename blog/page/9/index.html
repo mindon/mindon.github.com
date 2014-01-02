@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p 可按棋谱生成矢量图。 下载：CD插件：中国象棋棋谱生成器 使用说明： 1，把gms文件放到draw/GMS/文件夹 2，运行CorelDraw ">
+  <meta name="description" content="知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。 因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,110 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Zettabyte FileSystem: ZFS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-08T10:50:00+08:00" pubdate data-updated="true">Jun 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。</p>
+
+<p>因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— Joyent已经把这个基于Illumos的操作系统开源了。（2010 年 8 月 3 日，illumos 正式可用。「Illumos」这个词来自 Illuminare，也即拉丁语的 Illuminate，「照明、照亮」的意思。illumos 项目的最终目标有两个：一是使用开源代码取代所有仍在 OpenSolaris 使用的专有代码，二是围绕之前的OpenSolaris 代码库建立一个独立的社区。）</p>
+
+<p>SmartOS由Illumos内核（包括ZFS，DTrace，Zones，OS级虚拟化以及下一代KVM）、BSD包管理器和GNU工具链组成。【<a href="https://github.com/joyent/smartos-live">源码</a>】,【<a href="https://download.joyent.com/pub/iso/">Live ISO</a>】</p>
+
+<h2>Why SmartOS?</h2>
+
+<ul>
+<li>Scale as fast and big as you need</li>
+</ul>
+
+
+<p>SmartOS is a hypervisor lean enough to run entirely in memory, powerful enough to run as much as you want to throw at it. Provisioning is blindingly fast, thanks to zones and ZFS file system creation.</p>
+
+<ul>
+<li>Trust it to keep your data safe</li>
+</ul>
+
+
+<p>The ZFS file system guarantees data integrity, with particular emphasis on preventing silent data corruption.</p>
+
+<ul>
+<li>Keep your system secure with &#8220;double hulled&#8221; virtualization</li>
+</ul>
+
+
+<p>OS virtualization with highly secure sparse zones (most system software is read-only), and KVM for legacy apps, provide the most secure virtualization on the market.</p>
+
+<ul>
+<li>Rely on It</li>
+</ul>
+
+
+<p>Based on the <a href="http://illumos.org/">illumos</a> kernel, a descendant of Solaris - the most trusted enterprise operating system in computing history. Additionally, SmartOS runs from a live image: there&#8217;s no such thing as a failed upgrade when you can simply roll back to an earlier image.</p>
+
+<ul>
+<li>Use and extend freely: it’s open source</li>
+</ul>
+
+
+<p>SmartOS is and will remain <a href="http://smartos.org/cddl/">open source</a>. Joyent contributes <a href="https://github.com/joyent/smartos-live">our core kernel</a> work to the <a href="http://illumos.org/">illumos</a> project.</p>
+
+<ul>
+<li>Manage resources better</li>
+</ul>
+
+
+<p>The Service Management Facility (SMF) helps you recover more quickly from system failures and manage through service slowdowns. Fair share scheduling, CPU caps, and disk I/O throttling ensure good neighbor behavior in massively multi-tenant environments.</p>
+
+<ul>
+<li>See what’s going on throughout the software stack, in real time</li>
+</ul>
+
+
+<p>When something doesn’t behave as it should, you need to be able to find out quickly what is wrong and why. <a href="http://wiki.smartos.org/display/DOC/DTrace+Resources">Dynamic tracing</a> lets you see everything that&#8217;s happening throughout the software stack - safely, in real time, in production.</p>
+
+<h2>ZFS特性介绍(转载)</h2>
+
+<p><img src="/images/blog/zfstour.png" alt="" /></p>
+
+<p>from <a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/source">http://hub.opensolaris.org/bin/view/Community+Group+zfs/source</a></p>
+
+<p>ZFS是第一个128位的文件系统，同时ZFS又被Sun Microsystems称作史上最后一个文件系统。因为这个文件系统含有多项创新技术，不仅成功地解决现有文件系统的问题和陋习，而且前瞻性地考量了未来对存储空间的需求，单个文件系统可以达到256 quadrillion（264） Zettabytes（221）。ZFS不仅符合POSIX文件系统的标准，而且提供了许多高级功能比如：Quota(配额)，Reservation(预留), Compression(压缩)， Snapshot(快照)，Clone（克隆）等。如果你还在坚持使用现有32位或者64位的文件系统，如果你还在“痛并不快乐着”地用着各式各样的Volume Manager，那就很值得看看这里列出的使用ZFS的十条理由。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -484,57 +588,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Good and Bad Reasons for Believing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:04:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>(這篇文章找到英文的還真不容易，中文的都沒有註明英文文出處。曾在七年前在敏思博客上轉載過。——麥盾)</p>
-
-<p>by <strong>Richard Dawkins</strong></p>
-
-<p>&#8220;Tell a devout Christian that his wife is cheating on him, or that frozen yogurt can make a man invisible, and he is likely to require as much evidence as anyone else, and to be persuaded only to the extent that you give it. Tell him that the book he keeps by his bed was written by an invisible deity who will punish him with fire for eternity if he fails to accept its every incredible claim about the universe, and he seems to require no evidence whatsoever.&#8221; —SAM HARRIS</p>
-
-<p>NOTE: The following letter was written by Richard Dawkins, one of the world&#8217;s most respected scientists. It is addressed to his daughter Juliet, who was ten years old at the time. The letter originally appeared as the last chapter of his 2003 book, A Devil&#8217;s Chaplain. It is reprinted as an appendix in my book, Thank God for Evolution, by permission of the author. I included it for three reasons. First, it powerfully distinguishes the relative value today of, what I like to call, private and public revelation. Second, it provides an invaluable critique of traditional, flat-earth faith, while offering sound guidance for an evidence-based, naturalized faith. Third, it shows why scientific, historical, and cross-cultural evidence provide a far more accurate and useful map of reality than do tradition and authority.</p>
-
-<p>&#8220;Good and Bad Reasons for Believing&#8221; — by Richard Dawkins</p>
-
-<p>（注：附中文译文）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -582,7 +635,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 60 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 61 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -601,6 +654,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/">WeChat, BlackBerry, Apps and Web - My 2013</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat/">Finally My Nexus 7 updated to 4.4 KitKat</a>
@@ -636,10 +693,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips/">Cascades Native App Development Tips</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/how-to-heal-sprained-ankle/">How to Heal Sprained Ankle</a>
       </li>
     
   </ul>
@@ -732,7 +785,7 @@ document.write('<script src="http://a.alimama.cn/inf.js"><\/script>');
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Mindon Feng -
+  Copyright &copy; 2014 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script>
