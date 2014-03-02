@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。 因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— &hellip;">
+  <meta name="description" content="最可怕的是什么？ 其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。 现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。 有一个词能非常清楚地对最可怕的东西做一个总结，那就是 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,266 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/the-most-terrible-thing/">The Most Terrible Thing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-21T09:32:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>最可怕的是什么？</h2>
+
+<p>其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。</p>
+
+<p>现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。</p>
+
+<p>有一个词能非常清楚地对最可怕的东西做一个总结，那就是——<strong>幻象</strong>。</p>
+
+<p>当你在高山峻岭间驾车时，看到了一条其实并不存在的路，……</p>
+
+<p>当你站在楼顶边缘，却看到眼前是一片广阔草原，……</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/21/the-most-terrible-thing/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/20/solve-nodejs-0.8-build-problem/">Solve NodeJS 0.8+ Build Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T22:04:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
+
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming&#8230;</p>
+
+<p>Here&#8217;s a few pre-conditions for a successful make of NodeJS v0.8+:</p>
+
+<ol>
+<li><p>GNU make 3.8.1+</p></li>
+<li><p>Python 2.6 or 2.7</p></li>
+<li><p>export LINK=g++ or setenv LINK g++</p></li>
+</ol>
+
+
+<p>Do remember check these issues when you try to build new version (v0.8+) of NodeJS.</p>
+
+<p><i id="link-tags">make;python;nodejs</i></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T22:40:00+08:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T23:00:00+08:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When we want our product &#8211; a webpage for example &#8211; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&#8217;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &#8230;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/12/serve-in-multi-languages/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/11/build-node-expat-under-windows/">Build Node-Expat Under Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T09:22:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Preparea Developemtn Environment</h2>
+
+<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
+
+<ul>
+<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent&#8217;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Get and install Python 2.7</p></li>
+<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
+</ul>
+
+
+<h2>Tools for building a NodeJS Module</h2>
+
+<ul>
+<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
+<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/11/build-node-expat-under-windows/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -246,348 +506,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Lunar Generator Plug-in for CorelDraw</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T15:40:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>麦盾月历生成器</h2>
-
-<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
-
-<p>原创产品，别的地方找不到的！</p>
-
-<p><img src="/images/blog/soft/lunar.png" alt="" /></p>
-
-<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">XZoom: A Simple Screen Zoomer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>麥盾屏幕放大鏡</strong> （<a href="/soft/xzoom.zip">下载</a>）</p>
-
-<p>这个小工具历史比“<a href="/blog/2012/05/19/letup-take-a-break/">Letup休息提醒器</a>”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。</p>
-
-<p>其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了，采用了隐藏-重现的方式获取屏幕最新状态。</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。绿色，无需安装，点击运行。（win 2k/xp, win7 支持）</p>
-
-<p>系統圖標點擊左鍵打開設置界面</p>
-
-<p><img src="/images/blog/soft/xzoom-settings.png" alt="" /></p>
-
-<p><strong>支持操作</strong></p>
-
-<ul>
-<li><p>设置放大区域尺寸；</p></li>
-<li><p>Alt + Space Bar 顯示或隱藏放大鏡；</p></li>
-</ul>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/letup-take-a-break/">Letup: Take a Break</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/letup-take-a-break/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/children-learn-what-they-live/">Children Learn What They Live</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:31:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>孩子在生活中学习</strong></p>
-
-<p>by <strong>Dorothy Law Nolte</strong>, Ph.D.</p>
-
-<p>美國的著名社會學家及精神治療師，1924年1月12日－2005年11月6日</p>
-
-<p>If children live with criticism, they learn to condemn.</p>
-
-<p>批评中长大的孩子，责难他人。</p>
-
-<p>If children live with hostility, they learn to fight.</p>
-
-<p>敌意中长大的孩子，喜欢争斗。</p>
-
-<p>If children live with fear, they learn to be apprehensive.</p>
-
-<p>恐惧中长大的孩子，常常担忧。</p>
-
-<p>If children live with pity, they learn to feel sorry for themselves.</p>
-
-<p>怜悯中成长的孩子，自怨自艾。</p>
-
-<p>If children live with ridicule, they learn to feel shy.</p>
-
-<p>嘲笑中长大的孩子，容易退缩。</p>
-
-<p>If children live with jealousy, they learn to feel envy.</p>
-
-<p>猜忌中长大的孩子，滋生怨恨。</p>
-
-<p>If children live with shame, they learn to feel guilty.</p>
-
-<p>羞耻中长大的孩子，内疚自责。</p>
-
-<p>If children live with encouragement, they learn confidence.</p>
-
-<p>鼓励中长大的孩子，深具自信。</p>
-
-<p>If children live with tolerance, they learn patience.</p>
-
-<p>宽容中长大的孩子，能够忍耐。</p>
-
-<p>If children live with praise, they learn appreciation.</p>
-
-<p>称赞中长大的孩子，懂得感恩。</p>
-
-<p>If children live with acceptance, they learn to love.</p>
-
-<p>承诺中长大的孩子，学会珍爱。</p>
-
-<p>If children live with approval, they learn to like themselves.</p>
-
-<p>认可中长大的孩子，收获自信。</p>
-
-<p>If children live with recognition, they learn it is good to have a goal.</p>
-
-<p>赏识中长大的孩子，树立目标。</p>
-
-<p>If children live with sharing, they learn generosity.</p>
-
-<p>分享中长大的孩子，慷慨大方。</p>
-
-<p>If children live with honesty, they learn truthfulness.</p>
-
-<p>诚信中长大的孩子，理解真理。</p>
-
-<p>If children live with fairness, they learn justice.</p>
-
-<p>公正中长大的孩子，极富正义。</p>
-
-<p>If children live with kindness and consideration, they learn respect.</p>
-
-<p>尊重中长大的孩子，懂得尊敬。</p>
-
-<p>If children live with security, they learn to have faith in themselves and in those about them.</p>
-
-<p>安定中长大的孩子，信任自己和他人。</p>
-
-<p>If children live with friendliness, they learn the world is a nice place in which to live.</p>
-
-<p>友善中长大的孩子，眼里是美好世界。</p>
-
-<p>Copyright © 1972 by Dorothy Law Nolte</p>
-
-<hr />
-
-<p>Different versions of this poem:</p>
-
-<p><a href="http://www.noogenesis.com/pineapple/Kristone.html">http://www.noogenesis.com/pineapple/Kristone.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/final-solution/">Final Solution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T12:21:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>若一切皆可實現，我們會如何解決眼前的問題？</strong>  &#8211; 麥盾</p>
-
-<p>对于这个问题的思考，大概是从讨论行人闯红绿灯过马路的事情开始的。</p>
-
-<p>前段时间看个视频，讨论关于道德的问题，看后同事Carl说道：这类选择本就与道德无关，均是基于自我保护（损害最小）的选择——真是一语道中了问题核心。</p>
-
-<p>至少，若是方圆几里都没车的话，等人行绿灯就是个死板的傻行为，没什么值得称赞的。因为红绿灯系统并不是个很完善的产品。（对于闯红灯的认可，那些不要命想要跟汽车赛跑闯红灯的案例除外）</p>
-
-<p>现在，让我们假设能做到一切，那么红绿灯系统改是怎么样的？</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/final-solution/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -635,13 +553,13 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 61 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 65 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 8 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
 
@@ -654,6 +572,26 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/time-and-advanced/">时间和先进</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/tech-helps-needed-for-a-good-health/">技术如果帮助建立健康环境？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/the-young-woman-died-at-the-exit-of-metro/">在地铁出口离世的年青女子</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/big-changes-is-on-the-way/">大的变革已经在路上</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/e-diy-tech-info/">DIY知识点滴</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/">WeChat, BlackBerry, Apps and Web - My 2013</a>
@@ -673,26 +611,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/09/15/fix-adb-error-under-win8/">fix adb error under win8</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Building mobile apps from the command line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/20/android-data-and-folders/">Android App Data & Folders</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/09/dasign-light-up-your-life/">DaSign: Light up your life</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/12/the-nrc-netbook-resolution-customizer/">The NRC: Netbook Resolution Customizer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips/">Cascades Native App Development Tips</a>
       </li>
     
   </ul>

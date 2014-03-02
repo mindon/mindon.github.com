@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="MongoDB资料汇总专题
-http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http://www.oschina.net/question/12_38878 1. 始终启用备份 备份能保证你应用的高可用性。 &hellip;">
+  <meta name="description" content="编写原则： 全局规则之一，不要写&lt;style&gt;标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。
+全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,290 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/24/how-to-write-a-mail-in-html/">How to Write a Mail in HTML</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-24T12:07:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>编写原则：</h2>
+
+<ol>
+<li><p>全局规则之一，不要写<code>&lt;style&gt;</code>标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。</p></li>
+<li><p>全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p></li>
+<li><p>不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
+<li><p>style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
+<code>&lt;td background=”http://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;</code></p></li>
+<li>div模式的邮箱不支持flash，iframe模式的有待验证。</li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/24/how-to-write-a-mail-in-html/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-21T10:52:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<p>The modifications are mostly about filters for field values.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
+
+<blockquote><p>I&#8217;ve had a little utility that I&#8217;ve been kicking around for some time now that I&#8217;ve found to be quite useful in my JavaScript application-building endeavors. It&#8217;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/21/javascript-micro-templating/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Redis tutorial</h2>
+
+<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
+
+<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+
+<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
+
+<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
+<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
+
+<p><strong>Salvatore Sanfilippo：</strong>
+Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/redis-remote-dictionary-server/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+
+<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+
+<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+
+<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+
+<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+
+<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+
+<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
+
+<h2>MongoDB数据文件内部结构</h2>
+
+<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
+
+<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -193,293 +477,6 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/15/words-that-sound-different/">Absurd</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-15T20:30:00+08:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The video from youtube <a href="http://www.youtube.com/watch?v=R281PhQufHo"><strong>GDC 2012</strong> - Porting your game to NaCl</a>.</p>
-
-<p>When I finished watching this video at noon, I visit the speaker&#8217;s Google+. There I see this sentence as his motto</p>
-
-<p><strong>Colt McAnlis</strong> &#8211; &#8220;If at first, the idea is not absurd, then there is no hope for it&#8221;</p>
-
-<p>This is the first time I met the word: <strong>absurd</strong>!</p>
-
-<p>Another article “Man, give it five minutes.”</p>
-
-<p><a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">http://37signals.com/svn/posts/3124-give-it-five-minutes</a></p>
-
-<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p>
-
-<p>Dismissing an idea is so easy because it doesn’t involve any work. You can scoff at it. You can ignore it. You can puff some smoke at it. That’s easy. The hard thing to do is protect it, think about it, let it marinate, explore it, riff on it, and try it. The right idea could start out life as the wrong idea.</p>
-
-<p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
-
-<p>“Your first design may be the best, but you won&#8217;t know until you can&#8217;t find a better one.”</p>
-
-<p><a href="http://blog.intercom.io/criticism-and-two-way-streets/">http://blog.intercom.io/criticism-and-two-way-streets/</a></p>
-
-<h2>Working on TikTalk</h2>
-
-<p>This time, when we start a new product. I need a name for it: I choose tiktalk hoping the product could be someting like a drop of water in the ocean of internet: providing a kind of driving force of a website&#8217;s life.</p>
-
-<p>A name for product is importance to express our idea, activate our creative power to push it forward. (I learn this from the global mail project last year.)</p>
-
-<p>It&#8217;s a hard work during these 3 weeks:</p>
-
-<ol>
-<li><p>Design the front-end &amp; back-end frameworks</p></li>
-<li><p>Setup service of back-end</p></li>
-<li><p>Rewrite front-end codes</p></li>
-</ol>
-
-
-<p>Today, finish front-end demo: a few features in detail, fixing bugs&#8230;</p>
-
-<p>TikTalk is working fine! :-)</p>
-
-<p>Next week, making back-end service more stable &amp; flexible is big challenge for me.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM &#8211; Recommended Books</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T15:13:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>《醫鑰》推薦閱讀</h2>
-
-<ul>
-<li><p>《黃帝內經》</p></li>
-<li><p>《神農本草經》</p></li>
-<li><p>《傷寒論》</p></li>
-<li><p>《金匱》</p></li>
-<li><p>《針灸大成》</p></li>
-<li><p>《傷寒雜病論》</p></li>
-<li><p>《千金藥方翼方》（古籍部分）</p></li>
-</ul>
-
-
-<p><strong>近代書籍</strong></p>
-
-<ul>
-<li><p>《中西匯通醫書五種》（四川 唐容川 字宗海 著）</p></li>
-<li><p>《傷寒發微，金匱發微》（江蘇淮陰 曹穎甫 著）</p></li>
-<li><p>《傷寒論新義，金匱要略新義》（餘無言著）</p></li>
-<li><p>《單穴治病選萃》（人民衛生出版社）</p></li>
-<li><p>《疾病預測學》（楊力 著，北京科學出版社）</p></li>
-<li><p>《經方實驗錄》（姜佐景 著）</p></li>
-<li><p>《針灸大成》（明朝 楊繼州 編寫）</p></li>
-</ul>
-
-
-<h2>麥盾推薦閱讀</h2>
-
-<ul>
-<li><p>《<a href="http://big5.ifeng.com/gate/big5/book.ifeng.com/lianzai/detail_2010_02/07/339087_0.shtml">問中醫幾度秋涼(艾寧)</a>》</p></li>
-<li><p>《<a href="http://www.verycd.com/topics/2824440/">醫鑰——揭開中醫的奧秘(彭奕竣)</a>》</p></li>
-<li><p> <a href="http://jicheng.sabi.tw/jcw/">笈成資料庫</a>: 笈成是一個收集、整理中醫藥典籍的開放計畫，未來也會考慮納入醫家、中藥、方劑、方歌資料的整理。</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/programmers-are-born-not-made/">激情 - Passion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T14:04:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Passion</h2>
-
-<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
-
-<p>That’s passion!</p>
-
-<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
-
-<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
-
-<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/10/programmers-are-born-not-made/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/08/for-my-dear-aby/">For My Darling: Aby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-08T13:15:00+08:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Aby, 在一起的日子里，你带来了丰富多彩的生活，让我每天都能体会到幸福的滋味。谢谢你，宝贝。</p>
-
-<p>最想对你说的还是那三个字 :-) <a href="http://mindon.appspot.com/i-love-u">I love you</a>。其实，用多少种语言也难以表达这种从心底溢出的感情。</p>
-
-<p><img src="/images/blog/roses/red-rose.jpg" alt="Rose" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/08/for-my-dear-aby/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T20:21:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近，路边有一种阔叶树开始掉叶子了——这种树在三月里的几天内叶子大片大片往下掉，直至全部叶子都掉光。我第一次看到满地叶子、树干光秃秃的时候，还以为世界末日临近了呢——满树的绿叶几天内变黄落了满地。</p>
-
-<p>可是意外的是，再过一个星期，这树又满树的绿叶嫩芽了，长新叶子的速度跟落叶的速度一样——快得令人诧异。</p>
-
-<p>这种现象，要是放到医学里头会是很有趣的事情：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/falling-leafs-life-system/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/14/">&larr; Older</a>
@@ -527,13 +524,13 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 61 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 65 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 8 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
 
@@ -546,6 +543,26 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/time-and-advanced/">时间和先进</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/tech-helps-needed-for-a-good-health/">技术如果帮助建立健康环境？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/the-young-woman-died-at-the-exit-of-metro/">在地铁出口离世的年青女子</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/big-changes-is-on-the-way/">大的变革已经在路上</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/e-diy-tech-info/">DIY知识点滴</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/">WeChat, BlackBerry, Apps and Web - My 2013</a>
@@ -565,26 +582,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/09/15/fix-adb-error-under-win8/">fix adb error under win8</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Building mobile apps from the command line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/20/android-data-and-folders/">Android App Data & Folders</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/09/dasign-light-up-your-life/">DaSign: Light up your life</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/12/the-nrc-netbook-resolution-customizer/">The NRC: Netbook Resolution Customizer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips/">Cascades Native App Development Tips</a>
       </li>
     
   </ul>

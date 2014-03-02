@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="I&#8217;ve tried more than 3 times before: to upgrade my HP Mini winxp to sp3 Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade &hellip;">
+  <meta name="description" content="对于正在寻求或建立长期关系的朋友，怪诞行为学（Predictably Irrational）里提到 “独木舟与夫妻关系”片段，绝对是要学习和参考的： 遇到问题时，是会相互抱怨还是一起寻找原因，同心协力解决问题？ ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,304 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/15/matching-method-predictably-irrational/">Matching Method: Predictably Irrational</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-15T16:38:00+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>对于正在寻求或建立长期关系的朋友，怪诞行为学（Predictably Irrational）里提到 “独木舟与夫妻关系”片段，绝对是要学习和参考的：</p>
+
+<p><strong>遇到问题时，是会相互抱怨还是一起寻找原因，同心协力解决问题？</strong></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/15/matching-method-predictably-irrational/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/15/there-are-other-choices/">There Are Other Choices</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-15T10:29:00+08:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天送Aby到机场，从地铁出来往机场的中途有个扶手电梯正在维修中。因为拖着很沉的大箱子的缘故，第一想法就是糟了——要怎么拖下那个楼梯？虽然有斜坡，但那也是不容易的事情。</p>
+
+<p>幸运的是，旁边一个路人提醒了——左手边上有电梯！太好了！问题解决了——然而，为什么看到扶手电梯不可用的时候，只想到了旁边的楼梯，而没考虑过这样的地方一定会有直升电梯的呢？就如地铁里总有直升电梯，给不方便的人群提供选择。</p>
+
+<p>如果独我一人这样也就算了，当我回来的时候，发现陆续走过的人也在面临同样的问题时——我提醒他们了，旁边有电梯可用——觉得这个问题其实是很普遍的。</p>
+
+<p>这个事情的关键是：在问题的最接近的地方提供了一种选择（解决方案），并且最好的选择被放置在一个不容易发现的地方，且没有指示。</p>
+
+<p>手动扶梯有问题了，最近且最容易被发现的解决方案是走楼梯，在没有任何提醒的情况下大多数人都没有考虑可能有别的选择——另一种就在不远处，且更好的解决方案。</p>
+
+<p>当然，要解决这个问题其实是很简单的，就是在问题发生处，箭头指示替代方案所在。</p>
+
+<p>在做产品过程中，这个案例是有所启发的。特此警醒自己。</p>
+
+<hr />
+
+<p>由这个现象，我想起了以前碰到的另外一件事情：</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/15/there-are-other-choices/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Match Encrypt &amp; Decrypt in PHP and NodeJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-31T00:20:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+
+<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T22:13:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><strong>Cell Cycle</strong>
+Creating 3d-printable cellular models.</li>
+</ul>
+
+
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p><img src="/images/blog/chrome/nervous.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<ul>
+<li><strong>Fluid Simulation with Turing Patterns</strong>
+Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&#8217;s fluid simulation.</p>
+
+<p><img src="/images/blog/chrome/fluid.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T21:43:00+08:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Improve eyes dry or eyesight blur problem</p>
+
+<h2>1.枸杞鲫鱼汤（中医验方）</h2>
+
+<p><strong>主治</strong>：近视眼，视物模糊。</p>
+
+<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
+
+<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
+
+<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
+
+<h2>2.牛奶鸡蛋饮（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
+
+<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
+
+<h2>3.猪肝蛋汤（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
+
+<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -232,290 +530,6 @@ Free tools to create applications on Windows using Visual C++.
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/24/how-to-write-a-mail-in-html/">How to Write a Mail in HTML</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-24T12:07:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>编写原则：</h2>
-
-<ol>
-<li><p>全局规则之一，不要写<code>&lt;style&gt;</code>标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。</p></li>
-<li><p>全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p></li>
-<li><p>不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
-<li><p>style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
-<code>&lt;td background=”http://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;</code></p></li>
-<li>div模式的邮箱不支持flash，iframe模式的有待验证。</li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/24/how-to-write-a-mail-in-html/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
-
-<pre><code>/*/
-  //... Section A (commented)
-/*/
-  //... Section B (working)
-//*/
-</code></pre>
-
-<p>By adding one single / at the beginning, it turns into:</p>
-
-<pre><code>//*/
-  //... Section A (working)
-/*/
-  //... Section B (commented)
-//*/
-</code></pre>
-
-<p>Another simple section comment:</p>
-
-<pre><code>//*/
-  //... working
-//*/
-</code></pre>
-
-<p>remove a single / at the beginning, it turns into:</p>
-
-<pre><code>/*/
-  //... commented
-//*/
-</code></pre>
-
-<ul>
-<li><p>Curiosity</p></li>
-<li><p>Passion</p></li>
-<li><p>Focus</p></li>
-<li><p>Fun</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-21T10:52:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
-
-<p>The modifications are mostly about filters for field values.</p>
-
-<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
-
-<blockquote><p>I&#8217;ve had a little utility that I&#8217;ve been kicking around for some time now that I&#8217;ve found to be quite useful in my JavaScript application-building endeavors. It&#8217;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/21/javascript-micro-templating/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Redis tutorial</h2>
-
-<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
-
-<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
-
-<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
-
-<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
-<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
-
-<p><strong>Salvatore Sanfilippo：</strong>
-Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/redis-remote-dictionary-server/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
-
-<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
-
-<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
-
-<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
-
-<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
-
-<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
-
-<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
-
-<h2>MongoDB数据文件内部结构</h2>
-
-<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
-
-<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/13/">&larr; Older</a>
@@ -563,13 +577,13 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 61 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 65 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 8 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
 
@@ -582,6 +596,26 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/time-and-advanced/">时间和先进</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/tech-helps-needed-for-a-good-health/">技术如果帮助建立健康环境？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/the-young-woman-died-at-the-exit-of-metro/">在地铁出口离世的年青女子</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/big-changes-is-on-the-way/">大的变革已经在路上</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/01/e-diy-tech-info/">DIY知识点滴</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/">WeChat, BlackBerry, Apps and Web - My 2013</a>
@@ -601,26 +635,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/09/15/fix-adb-error-under-win8/">fix adb error under win8</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Building mobile apps from the command line</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/20/android-data-and-folders/">Android App Data & Folders</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/09/dasign-light-up-your-life/">DaSign: Light up your life</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/12/the-nrc-netbook-resolution-customizer/">The NRC: Netbook Resolution Customizer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips/">Cascades Native App Development Tips</a>
       </li>
     
   </ul>

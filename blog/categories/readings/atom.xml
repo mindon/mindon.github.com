@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Readings | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/readings/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-01-02T22:54:38+08:00</updated>
+  <updated>2014-03-02T13:59:02+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DIY知识点滴]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/01/e-diy-tech-info/"/>
+    <updated>2014-03-01T14:18:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/01/e-diy-tech-info</id>
+    <content type="html"><![CDATA[<p>突然想对电动机多了解一些，于是上淘宝搜了一下各种航模电动机。还是真是各种各样的，补习一下相关知识：</p>
+
+<h2>步进电动机</h2>
+
+<p>步进电机单靠交流供电或直流电源无法运动，必须与驱动电路同时使用时才能发挥其功能，驱动器（驱动电路）由决定换向顺序的控制电路（或称为逻辑电路）与控制电机输出功率的换相电路（或称为功率电路（power stage））组成。步进电机驱动是的步骤： 1，要提供适合于步进电机所需要的电源； 2，需要输入脉冲和方向信号，一般是按TTL标准电平，输入一个步进脉冲，电机就步进一个步距角； 3，驱动器的输出：A+,A-,B+,B-，由驱动器去完成。 (不需输入包含A+,A-,B+,B- 4个端口高低电平的信息)</p>
+
+<p><a href="http://zhidao.taobao.com/detail/-3F713DB2BDBDF8B5E7BBFAD1A1D0CDCEE5B4F3B2BD.html">步进电机选型五大步</a></p>
+
+<p>步进电机可以作为一种控制用的特种电机，利用其没有积累误差(精度为100%)的特点，广泛应用于各种开环控制。</p>
+
+<p>步进电动机的主要缺点是效率较低，并且需要专用电源供给电脉冲信号，带负载惯量的能力不强，在运行中会出现共振和振荡问题。</p>
+
+<h2>无刷马达</h2>
+
+<p>直流电机具有响应快速、较大的起动转矩、从零转速至额定转速具备可提供额定转矩的性能。</p>
+
+<!--more-->
+
+
+<p>有刷马达的碳刷及整流子在电机转动时会产生火花。</p>
+
+<p><strong>内转子</strong>，就是将线圈绕于马达外侧，将转子制成棒状，固定于马达内。在不需要特别大的扭力，转速高情况下采用。</p>
+
+<p><strong>外转子</strong>，则是将线圈绕组置于内部，将磁铁制成特殊形状，在外侧围绕内置的线圈转动。在需要大扭力的场合下使用。</p>
+
+<p><strong>KV值</strong>是无刷马达的转速指标，是指每增加1V电压，马达转速增加的数值。</p>
+
+<p>线圈绕组的数值是T数，或者R（NOVAK的都用R表示，其他很多用T表示）。一般来说，无刷T（或者R）的数值和此数值2倍的有刷马达相当.</p>
+
+<p>“无刷电调必须知道转子当前的位置，才能输出适当的电流来驱动马达。有感是通过装在马达上的感应器，感知转子当前的位置（相位）。 无感就是没有感应器，电调靠动力线上的电流变化判断转子相位。” --JOVI</p>
+
+<p>无感无刷的起步线性比较差。</p>
+
+<h2>霍尔元件</h2>
+
+<p>是一种基于霍尔效应的磁传感器。用它们可以检测磁场及其变化，可在各种与磁场有关的场合中使用。</p>
+
+<p>霍尔效应，是指磁场作用于载流金属导体、半导体中的载流子时，产生横向电位差的物理现象。</p>
+
+<p>金属的霍尔效应是1879年被 美国物理学家霍尔发现的。当电流通过金属箔片时，若在垂直于电流的方向施加磁场，则金属箔片两侧面会出现横向电位差。半导体中的霍尔效应比金属箔片中更为明显，而铁磁金属在居里温度以下将呈现极强的霍尔效应。</p>
+
+<p>Mark一个淘宝店：
+<a href="http://szjs88998899.taobao.com/shop/view_shop.htm?user_number_id=920426663"> 深圳杰盛电机</a></p>
+
+<h2>吸尘器</h2>
+
+<p>传统的吸尘器原理很简单：通过压缩机制造真空，将杂物、尘土和空气一起吸入，再用一个网眼密集的过滤装置（现在多为纸质的尘袋），将杂物、细小的尘埃挡在里面，把过滤过的空气排出吸尘器。</p>
+
+<p>戴森的吸尘器采用的Radial Root Cyclone（多圆锥气旋）技术，通过真空泵和气旋发生装置，在吸尘器机体内制造一个旋转上升的涡旋，就像一场小规模的龙卷风，灰尘和各种杂质在涡旋中旋转起来，被自身的离心力甩出气旋中心，落到气旋周围的尘杯中。</p>
+
+<p><a href="http://www.dyson.cn/vacuums.aspx">Dyson.CN</a></p>
+
+<p><a href="http://detail.tmall.hk/hk/item.htm?spm=a1z10.5.w4011-5310708660.59.sIYcRM&amp;id=36959234140&amp;rn=ca866e3781d42a98c7b984bf9b5d46ca">DC62</a></p>
+
+<p><i id="link-tags">Dyson;多圆锥气旋;霍尔效应;步进电机;无刷马达;吸尘器;航模</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Code - BBC]]></title>
@@ -316,32 +379,6 @@
 <p>李開復 -- “<a href="http://blog.sina.com.cn/s/blog_475b3d560100fc47.html?tj=1">给女儿的一封信</a>”</p>
 
 <p>乐嘉 -- “<a href="http://blog.sina.com.cn/s/blog_4a752e990102e21x.html">写给15岁的女儿 (2012-05-16)</a>”</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Artist Suspends Objects In Parks Around The World]]></title>
-    <link href="http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/"/>
-    <updated>2012-04-28T08:18:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world</id>
-    <content type="html"><![CDATA[<p>German artist <a href="http://www.cokonrads.de/">Cornelia Konrads</a> goes around the world installing gravity-defying artworks in natural settings like public parks and private gardens.</p>
-
-<p>Her large-scale installations consist of objects like logs and fences suspended mid-air, giving off the illusion of weightlessness created by an “invisible” force.</p>
-
-<p>Check out her “magical” works displayed in countries like Germany, France and Japan below.</p>
-
-<p><img src="/images/blog/iv-force/8.jpg" alt="" /></p>
-
-<!--more-->
-
-
-<p><img src="/images/blog/iv-force/1.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/3.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/4.jpg" alt="" /></p>
-
-<p><img src="/images/blog/iv-force/5.jpg" alt="" /></p>
 ]]></content>
   </entry>
   
