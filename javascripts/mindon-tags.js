@@ -7,7 +7,7 @@ function tagLink( key ) {
 function linkTags( tags ) {
   if( !tags )
     return;
-  var t = [], i, v;
+  var t = [], i, v, bb = /^[\u0000-\u00ff]/, be = /[\u0000-\u00ff]$/;
   for(var k=0, kmax=tags.length; k<kmax; k++) {
     v = tags[k];
     i = v.indexOf('=');
@@ -19,11 +19,11 @@ function linkTags( tags ) {
       key = v;
     }
     if( key ) {
-      t.push( key );
+      t.push( (bb.test(key)?'\\b':'') +key +(be.test(key)?'\\b':'') );
     }
   }
 
-  var trxp = new RegExp('\\b(' + t.join('|') +')\\b', 'gi')
+  var trxp = new RegExp(t.join('|'), 'gi')
     , tl = '<';
   t = null;
 
