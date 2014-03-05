@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-02T17:38:48+08:00</updated>
+  <updated>2014-03-06T07:47:32+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
+    <updated>2014-03-06T06:19:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
+    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
+
+<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
+
+<!--more-->
+
+
+<p>It is said that it has potential to improve vision! That&#8217;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&#8217;s 40RMB on iTune - a little bit high price for an app you don&#8217;t know much.</p>
+
+<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
+
+<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
+
+<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
+
+<p>It&#8217;s more like a brain game than an eyes training.</p>
+
+<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
+
+<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&#8217;s such an important thing to keep our eyes sharp and clear.</p>
+
+<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a></p>
+
+<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[时间和先进]]></title>
@@ -1284,31 +1316,6 @@ Environment.getExternalStoragePublicDirectory(
 <h2>Prediction</h2>
 
 <p>3/3 Marcus du Sautoy discovers what the code can say about our future.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lost All Camera Photos in My Nexus 7]]></title>
-    <link href="http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7/"/>
-    <updated>2013-02-20T20:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/02/20/lost-all-camera-photos-in-my-nexus-7</id>
-    <content type="html"><![CDATA[<p>My 8G Nexus 7, No rooted, Updated to android Jelly Bean 4.2.2 at 18 Feb.</p>
-
-<p>Now all photos in folder DCIM/Camera, were lost - Now way to restore currently, and vanish in the air.</p>
-
-<p>The first lost was found yesterday, there were only 5 photos left.</p>
-
-<p>The day, I debug an simple PhoneGap app in android with Developer Mode and USB debugging turned on.</p>
-
-<p>When I reach my PC at home, connected the device with USB cable, turned on Developer Mode and USB debugging. And try a few restore software, but all failed to show the &#8220;Internal Storage&#8221;, so I gave up. But then I found the photos lost again - only one photo file left now. What the hell happened?</p>
-
-<p>Today, I tried to find out a solution, but nothing could help.</p>
-
-<p>At last, turn on the photo sync and backup the two large thumbdata in folder DCIM/.thumbnails/, one is 303MB, another one is 1.01GB.</p>
-
-<p>My photos! Vanish in Nexus 7 updated to Jelly Bean 4.2.2 and Google could not provide any help on it.</p>
-
-<p><i id="link-tags">Nexus 7</i></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-02T17:38:48+08:00</updated>
+  <updated>2014-03-06T07:47:32+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
+    <updated>2014-03-06T06:19:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
+    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
+
+<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
+
+<!--more-->
+
+
+<p>It is said that it has potential to improve vision! That's an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that's 40RMB on iTune - a little bit high price for an app you don't know much.</p>
+
+<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
+
+<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
+
+<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
+
+<p>It's more like a brain game than an eyes training.</p>
+
+<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
+
+<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It's such an important thing to keep our eyes sharp and clear.</p>
+
+<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain's learning potential</a></p>
+
+<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fix adb error under win8]]></title>
@@ -372,83 +404,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>Here's the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
 
 <p><img src="/images/blog/dasign/dasign-qr.png" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cascades Native App Development Tips]]></title>
-    <link href="http://mindon.github.com/blog/2013/03/23/blackberry-cascades-native-app-development-tips/"/>
-    <updated>2013-03-23T21:42:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/03/23/blackberry-cascades-native-app-development-tips</id>
-    <content type="html"><![CDATA[<p>Google+ Community - <a href="https://plus.google.com/communities/102767584651216621172">Blackberry 10 X-Dev : Cascades &amp; WebWorks for BB10</a></p>
-
-<p>News: <strong>BlackBerry Z10 Officially Available on AT&amp;T</strong></p>
-
-<blockquote><p>The BlackBerry Z10 smartphone is now officially available on AT&amp;T.</p>
-
-<p>The struggling manufacturer — which is hopeful its new flagship device will ignite a company resurgence — announced on Friday the Z10 can finally be activated on AT&amp;T. It costs $199 with a two-year contract.</p>
-
-<p>BlackBerry, formerly known as Research In Motion (RIM), also sent a tweet at midnight ET announcing Best Buy will start selling the device on Friday for $199 with a two-year contract.</p></blockquote>
-
-<p><a href="http://us.blackberry.com/smartphones/blackberry-z10.html">BlackBerry Z10: Built to Keep You Moving</a></p>
-
-<h2>Using proxy with the command line tools</h2>
-
-<p>Remember to use --proxyhost &amp; -proxyport as the FIRST two parameters when using command line tools from blackberry.tools.SDK.</p>
-
-<!--more-->
-
-
-<p>example:</p>
-
-<pre><code>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 ....
-</code></pre>
-
-<p>Download the Command-line Tools from <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
-
-<p>Unzip and set the path blackberry.tools.SDK/bin to env. variable PATH then you could use the apk2bar, blackberry-signer or other command line tools.</p>
-
-<h2>How to signed the .bar through a proxy?</h2>
-
-<p>Use <strong>batchbar-signer</strong> won't work. you could use blackberry-signer directly.</p>
-
-<p>Example:</p>
-
-<pre><code>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 -storepass your_store_pwd demo.bar
-</code></pre>
-
-<p>the command tools could be found <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
-
-<h2><strong>config.pri</strong> NOT including sources &amp; headers, make failed error</h2>
-
-<p>When building project in QNX Momentics IDE, If nothing to compile. It may be lack of sources &amp; headers in your auto-generated config.pri</p>
-
-<p>This is caused by incorrect source folder settings, here's the steps to solve the problem:</p>
-
-<ol>
-<li><p>Right click on the project in "Project Explorer", choose "Properties" at the bottom</p></li>
-<li><p>On the left top input field with tips "type filter text", input "paths"</p></li>
-<li><p>Click on the item "Paths and Symbols" under "C/C++ General"</p></li>
-<li><p>Activate the 3rd tab named "Source Location"</p></li>
-<li><p>add the proper source folder by Click "Add Folder" and choose "src"</p></li>
-<li><p>"Delete the" incorrect source folder</p></li>
-</ol>
-
-
-<h2><strong>config.pri</strong> not auto generated or updated?</h2>
-
-<p>Update your SDK to 10.0.10+</p>
-
-<h2>Steps to test an app before submit to (Blackberry) App World</h2>
-
-<ol>
-<li><p>Upload app and place in DRAFT mode.</p></li>
-<li><p>Add user to the sandbox (BBID).</p></li>
-<li><p>Enter (Blackberry) <strong>App World</strong> on device, swipe down to see the app menu, choose <strong>settings</strong>, click <strong>Development Mode</strong>, enter content id.</p></li>
-</ol>
-
-
-<p><i id="link-tags">Blackberry Z10;Blackberry</i></p>
 ]]></content>
   </entry>
   

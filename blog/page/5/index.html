@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Years ago, I took all desktop apps as some specific browsers - only visiting specified data resources provided by IP or file path with fixed UIs. and &hellip;">
+  <meta name="description" content="How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code @echo off if "%1"=="start-min" goto :begin
+start /min &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +89,60 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-17T07:59:00+08:00" pubdate data-updated="true">Jan 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code</p>
+
+<pre><code>@echo off
+
+if "%1"=="start-min" goto :begin
+start /min "" %0 start-min
+exit
+
+:begin
+title Hello Mini World
+
+echo Call something here
+
+pause
+exit
+@echo on
+</code></pre>
+
+<p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -440,42 +495,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/20/street-lights-in-the-daylight/">白天的路灯</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-20T18:42:00+08:00" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/blog/street-lights.jpg" alt="" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -527,21 +546,25 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 12 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 8 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 9 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 10 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 11 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/06/ultimeyes-to-improve-your-vision/">UltimEyes: to Improve Your Vision?</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/02/time-and-advanced/">时间和先进</a>
@@ -577,10 +600,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/11/09/justice-and-responsibility/">Justice and Responsibility</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/15/fix-adb-error-under-win8/">fix adb error under win8</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-Air-Water-M-Sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-02T17:38:48+08:00</updated>
+  <updated>2014-03-06T07:47:32+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
+    <updated>2014-03-06T06:19:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
+    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
+
+<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
+
+<!--more-->
+
+
+<p>It is said that it has potential to improve vision! That's an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that's 40RMB on iTune - a little bit high price for an app you don't know much.</p>
+
+<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
+
+<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
+
+<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
+
+<p>It's more like a brain game than an eyes training.</p>
+
+<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
+
+<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It's such an important thing to keep our eyes sharp and clear.</p>
+
+<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain's learning potential</a></p>
+
+<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[EyeWriter]]></title>
@@ -123,38 +155,6 @@ The software for both parts has been developed using openframeworks, a cross pla
 <p>这是个很好玩的实验室。Google建的一个位于伦敦的科学馆。科学馆里配置了一些设备：如乐器和沙绘机器人（Sketchbots）。您可以通过他们的网站来编曲演奏乐器，跟世界上其他地方的人合奏。也可以通过摄像头拍照，让科学馆的机器人绘制您的头像——所有这一切，您都可以通过现场摄像头看到真实科学馆的设备看到设备的现场实时操作。很不可思议吧？您在体验一家位于伦敦的科学馆。</p>
 
 <p>体验一下？<a href="http://www.chromeweblab.com/">Web Lab</a> :-) You need a <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser</a>(<a href="https://www.google.com/intl/zh-CN/chrome/browser/">中文版</a>), I think.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[B-Z Reaction]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/04/b-z-reaction/"/>
-    <updated>2012-08-04T10:40:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/04/b-z-reaction</id>
-    <content type="html"><![CDATA[<p>　　1921年，伯克利加州大学的布雷(Bray，William)在用碘作催化剂使过氧化氢分解为水和氧气时，第一次发现了振荡式的化学反应。但依据经典热力学第二定律，认为任何化学反应只能走向退化的平衡态，因而当时的化学家否定了这个发现。</p>
-
-<p>　　1952年，英国数学家图灵通过数学计算的方法，在理论上预见了化学振荡这类现象的可能性。1958年，俄国化学家别洛索夫(Belousov) 和扎鲍廷斯基(Zhabotinskii)首次报道了以金属铈作催化剂，柠檬酸在酸性条件下被溴酸钾氧化时可呈现化学振荡现象：溶液在无色和淡黄色两种状态间进行着规则的周期振荡。该反应即被称为Belousov- Zhabotinskii反应，简称B-Z反应。</p>
-
-<p><img src="/images/blog/250px-The_Belousov-Zhabotinsky_Reaction.gif" alt="" /></p>
-
-<p>Computer simulation of the Belousov–Zhabotinsky reaction occurring in a Petri dish.</p>
-
-<!--more-->
-
-
-<p>　　在1959年，B.P.Belousov首先观察到并随后为A.M.Zhabotinsky深入研究，丙二酸在溶液有硫酸铈的酸性溶液中被溴酸钾氧化的反应，随后人们发现了一大批可呈现化学振荡反应现象的含溴酸盐的反应系统。人们称之为B-Z反应。</p>
-
-<p>　　1969年，现代动力学奠基人普里戈金提出耗散结构理论，人们才清楚的认识到振荡反应产生的原因：当体系远离平衡态时，即在非平衡非线性区，无序的均匀态并不总是稳定的。在特定的动力学条件下，无序的均匀定态可以失去稳定性，产生时空有序的状态，这种状态称之为耗散结构。例如浓度随时间有序的变化(化学振荡)，浓度随时间和空间有序的变化(化学波)等。耗散结构理论的建立为振荡反应提供了理论基础，从此，振荡反应赢得了重视，它的研究得到了迅速发展。</p>
-
-<p>　　化学振荡是一类机理非常复杂的化学过程，Field、Koros、Noyes三位科学家经过四年的努力，于1972年提出俄勒冈（FKN）模型，用来解释并描述B-Z振荡反应的很多性质。该模型包括20个基元反应步骤，其中三个有关的变量通过三个非线性微分方程组成的方程组联系起来，该模型如此复杂以至20世纪的数学尚不能一般地解出这类问题，只能引入各种近似方法。</p>
-
-<p>The discovery of the phenomenon is credited to Boris Belousov. He noted, some time in the 1950s (various sources date ranges from 1951 to 1958), that in a mix of potassium bromate, cerium(IV) sulfate, propanedioic acid and citric acid in dilute sulfuric acid, the ratio of concentration of the cerium(IV) and cerium(III) ions oscillated, causing the colour of the solution to oscillate between a yellow solution and a colorless solution. This is due to the cerium(IV) ions being reduced by propanedioic acid to cerium(III) ions, which are then oxidized back to cerium(IV) ions by bromate(V) ions.</p>
-
-<p>Belousov made two attempts to publish his finding, but was rejected on the grounds that he could not explain his results to the satisfaction of the editors of the journals to which he submitted his results. His work was finally published in a less respectable, non-reviewed journal.</p>
-
-<p>Later, in 1961, a graduate student named Anatol Zhabotinsky rediscovered this reaction sequence; however, the results of these men's work were still not widely disseminated, and were not known in the West until a conference in Prague in 1968.</p>
-
-<p>http://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction</p>
 ]]></content>
   </entry>
   
