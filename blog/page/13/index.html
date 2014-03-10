@@ -9,9 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Code &amp; tools preparation NodeJS source code
-https://github.com/joyent/node VISUAL C++ 2010 EXPRESS
-Free tools to create applications on Windows &hellip;">
+  <meta name="description" content="I&#8217;ve tried more than 3 times before: to upgrade my HP Mini winxp to sp3 Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +88,88 @@ Free tools to create applications on Windows &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/24/upgrade-winxp-from-sp2-to-sp3/">Upgrade Winxp From Sp2 to Sp3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-24T17:59:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve tried more than 3 times before:</p>
+
+<p>to upgrade my HP Mini winxp to sp3</p>
+
+<p>Lots of time spended on this stupid issue &#8211; winxp sp3 upgrade problem.</p>
+
+<p>The problem i faced last time is &#8220;A Problem is preventing windows from accurately checking the license&#8221;. 0x80070002</p>
+
+<p>Who knows what the hell was happening, my winxp is lisenced!</p>
+
+<p>Tons of softwares need sp3 &#8211; something like &#8220;Visual C++ 2010 Express&#8221;.</p>
+
+<p>That&#8217;s why I need sp3 package installed.</p>
+
+<p>Here are the steps I followed, to upgrade sp3:</p>
+
+<ol>
+<li><p>download sp3 package from microsoft
+<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=24</a></p></li>
+<li><p>backup following files from windows/system32</p>
+
+<p>   dpcdll.dll <br/>
+   pidgen.dll <br/>
+   uxtheme.dll<br/>
+   wpa.dbl</p></li>
+<li><p>Restart my winxp &amp; press F8 to start from safe mode</p></li>
+<li><p>Install sp3</p></li>
+<li><p>Restart &amp; press F8 to start from safe mode</p></li>
+<li><p>Backup new files from sp3 version</p>
+
+<p>   dpcdll.dll <br/>
+   pidgen.dll <br/>
+   uxtheme.dll<br/>
+   wpa.dbl</p></li>
+<li><p>Replace these files with the old files backuped in step 2</p></li>
+<li><p>Restart</p></li>
+<li><p>Done!</p></li>
+</ol>
+
+
+<p>I don&#8217;t know if my steps make it or the sp3 package is different or something else &#8230;</p>
+
+<p>But i do upgrade my HP Mini windows xp from sp2 to sp3 successfully this time :-)</p>
+
+<p>God bless you!</p>
+
+<p>Thanks for <a href="http://hi.baidu.com/xiaohuibai/blog/item/69fa16f4b7e1e8f77609d7d9.html">this blog</a> (in Chinese) &#8211; I didn&#8217;t use any files it provides.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -436,63 +516,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/notes-on-mongodb/">Notes on MongoDB</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-17T11:12:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>MongoDB资料汇总专题</strong>
-<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
-
-<h2>MongoDB 最佳实践</h2>
-
-<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
-
-<p><strong>1. 始终启用备份</strong></p>
-
-<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
-二节点可以迅速启用，你的应用不会中断。</p>
-
-<p><strong>2. 使用最新版本</strong></p>
-
-<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
-和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
-，你应该尽快升级。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/notes-on-mongodb/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/14/">&larr; Older</a>
@@ -540,7 +563,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 65 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 66 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -559,6 +582,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/10/the-lost-of-mh370/">The Lost of MH370</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/06/ultimeyes-to-improve-your-vision/">UltimEyes: to Improve Your Vision?</a>
@@ -594,10 +621,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/11/09/living-creatures-ignored/">被忽视的生物 Living Creatures Ignored</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/09/justice-and-responsibility/">Justice and Responsibility</a>
       </li>
     
   </ul>

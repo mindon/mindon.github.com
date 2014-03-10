@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Henri Cartier-Bresson (August 22, 1908 – August 3, 2004) was a French photographer considered to be the father of modern photojournalism. He was an &hellip;">
+  <meta name="description" content="Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Socket.IO Behind Proxy or Firewall</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T06:32:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected network outage can close your connection. Why is it a problem? It’s problematic when a disconnection happens as you may loose server side events if you don’t architect your application correctly.</p>
+
+<ul>
+<li><strong>long-polling</strong>: between reconnection, servers side events may happens and if they aren’t persisted, those events will never reach your client.</li>
+<li><strong>websocket</strong>: Websocket are new and most if not all firewall will close them after some X idle times. Again, all server sides events will be lost</li>
+<li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
+<li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -384,56 +433,6 @@ Rare sight: As the monster tornado began to dominate the skies over Colorado, US
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/03/why-china-will-have-an-economic-crisis/">Why China Will Have an Economic Crisis</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-03T13:23:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><hr />
-
-<p>投资过剩，房产泡沫，政府负债，银行坏账。 昌盛的国家各有各的繁华，而危机笼罩下的国家，却都是相似的。 都是些老生常谈，争来争去逃不出了钱字。 作者虽非经济学专业人士，但也详尽阐述了一个西方人对于中国经济的看法。
-【译言网】全文: <a href="http://select.yeeyan.org/view/205314/255491">时代周刊：为什么中国将发生经济危机</a></p>
-
-<p>The view in most of the world is that China is indestructible. Shrugging off the crises multiplying elsewhere, China seems to surge from strength to strength, its spectacular growth marching on no matter what headwinds may come. It appears inevitable that China will overtake a U.S. mired in debt and division to become the world’s indispensable economy. Those businessmen and policymakers looking to the future believe China’s “state capitalism” may be a superior form of economic organization in dealing with the challenges of the modern global economy.</p>
-
-<p>My answer to all of this is: think again.</p>
-
-<p>I don’t doubt for a second that China will be a major economic superpower with an increasingly influential role in the global economy. In many respects, it already is a superpower. But that doesn’t mean the economy is free from problems, a good number of them created by the very statist system lauded by pundits in the U.S. and Europe. And in my opinion, if China doesn’t change course, and in a big way, the country will experience an economic crisis.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/03/why-china-will-have-an-economic-crisis/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/16/">&larr; Older</a>
@@ -481,7 +480,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 65 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 66 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -500,6 +499,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/10/the-lost-of-mh370/">The Lost of MH370</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/06/ultimeyes-to-improve-your-vision/">UltimEyes: to Improve Your Vision?</a>
@@ -535,10 +538,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2013/11/09/living-creatures-ignored/">被忽视的生物 Living Creatures Ignored</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/09/justice-and-responsibility/">Justice and Responsibility</a>
       </li>
     
   </ul>
