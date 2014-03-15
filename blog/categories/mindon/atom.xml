@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-10T08:09:24+08:00</updated>
+  <updated>2014-03-15T20:14:36+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
+    <updated>2014-03-15T18:51:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
+    <content type="html"><![CDATA[<p>I'm one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
+
+<p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
+
+<p>Here's features should be in BB10 QML, which I implemented in the WeChat mobile app for BB10.</p>
+
+<ul>
+<li><p>QML actived event</p></li>
+<li><p>QML closed event</p></li>
+<li><p>QML Data Share Methods: a) Method to tranfer data from QML A to B ( open B from A ); b) Methods to set/get/clear app shared data in QML.</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<ul>
+<li><p>QML reuse or not ( A - B - C - D: if open QML B from D, close D and C, reuse B )</p></li>
+<li><p>QML asyn publish/subscribe methods</p></li>
+<li><p>Flag to turn off auto-translation in system language ( Dialog, Back and Invocations )</p></li>
+<li><p>Support mutil-image previewer (zoomable) with invocation.</p></li>
+<li><p>Letters scrollbar</p></li>
+<li><p>A method to call js methods in QML from ListItem</p></li>
+</ul>
+
+
+<p>If BlackBerry 10 want more better apps, Its QML should provide features above. Or in a js library for QML.</p>
+
+<p><span id="link-tags">BB10;BlackBerry;WeChat;QML</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Lost of MH370]]></title>
@@ -61,7 +98,7 @@
 
 <p>不瞎扯了，我们来看看MH370的可能位置：海面搜索工作目前还没有任何足信证据证明飞机已经坠落海上。可能一：飞机完整地沉入海底，这个难度很高。不过我们来想象一个难度更高的——飞机因为重力异常，掉入了太空。</p>
 
-<p>据说，有乘客家属拨通手机了，或是QQ依旧在线。也就是说，手机依旧在卫星通讯范围之内。至于海底，手机防水应该没有那么好，海水不浅吧？信号肯定不好，且海水早就把手机毁掉了。所以，要不飞机就飞哪的陆地上坠毁了；要不就象《海底一万里》里的，被海底某个神秘的东西装了；要不，就是掉入了太空。</p>
+<p>据说，有乘客家属拨通手机了，或是QQ依旧在线。也就是说，手机依旧在卫星通讯范围之内。至于海底，手机防水应该没有那么好，海水不浅吧？信号肯定不好，且海水早就把手机毁掉了。所以，要不飞机就飞哪的陆地上坠毁了；要不就象《海底两万里》里的，被海底某个神秘的东西装了；要不，就是掉入了太空。</p>
 
 <p>要让飞机的高度突然降为零，1）真掉下来可以做到；2）信号异常可以做到；3）设备毁坏可以做到。</p>
 
@@ -260,38 +297,6 @@
 <p><a href="http://www.guokr.com/article/81088/">自我CPR自救</a></p>
 
 <p><i id="link-tags">IBM;心肺复苏术;水湾站;CPR</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[大的变革已经在路上]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/01/big-changes-is-on-the-way/"/>
-    <updated>2014-03-01T19:47:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/01/big-changes-is-on-the-way</id>
-    <content type="html"><![CDATA[<p>阿里的余额宝，微信的理财宝带来的金融领域的变革已经势不可挡。</p>
-
-<p>电子科技飞速发展的今天，还有多少行业和领域依旧停留在数十年前的传统模式？有多少行业还依旧被个别机构垄断？</p>
-
-<p>金融业的变革迹象在引领着一场更大的变化，这个变化开始渗入日常的支付，虽然目前大家只看到了红包，网购、打车、充值和就餐的变化。在笔者看来，移动支付即将也必然会渗透到任何一个需要排队支付的地方，比如医院、景区、购票等等。任何一个需要消耗大家时间的支付场合，都应该实现移动的快速支付。</p>
-
-<!--more-->
-
-
-<p>阿里和腾讯的理财产品已经促进银行本身的改变。</p>
-
-<p>微信和滴滴打车，支付宝和快的打车则引领着支付方式的变革。</p>
-
-<p>中国的高速物流也同样在引领着世界物流的发展。</p>
-
-<p>近年来比特币的火热，也预示着金融互联网化的一种趋势，虽然比特币广受政府机构抵制，这些月来还爆Mt.Gox巨额亏损破产的消息；但是，金融行业的互联网化，特别是移动互联网化的行动已经迈开脚步，是任何势力都无法阻止的。</p>
-
-<p>金融的变革必然带来很多问题和变化，大大提高人们的支付效率以及货币的流通速度。</p>
-
-<p>电子商务的变革也带给传统商店不小的冲击。</p>
-
-<p>所有的这些正在起跑的变革，会把我们的未来引向何处？又会带来什么样难以预想的变化呢？我们拭目以待。</p>
-
-<p><i id="link-tags">电子商务;比特币;余额宝;理财宝;腾讯;阿里;滴滴打车;支付宝;快的打车</i></p>
 ]]></content>
   </entry>
   

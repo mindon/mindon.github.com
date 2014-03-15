@@ -516,7 +516,17 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/2014/03/10/the-lost-of-mh370/</loc>
-        <lastmod>2014-03-10T08:08:23+08:00</lastmod>
+        <lastmod>2014-03-15T19:05:18+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent/</loc>
+        <lastmod>2014-03-15T19:01:36+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/
+        </loc>
+        <lastmod>2014-03-15T20:12:32+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/about/</loc>
@@ -524,7 +534,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2014-03-10T08:08:23+08:00</lastmod>
+        <lastmod>2014-03-15T20:12:32+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -532,7 +542,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2014-03-10T08:08:23+08:00</lastmod>
+        <lastmod>2014-03-15T20:12:32+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>

@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-10T08:09:24+08:00</updated>
+  <updated>2014-03-15T20:14:36+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
+    <updated>2014-03-15T18:51:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
+    <content type="html"><![CDATA[<p>I&#8217;m one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
+
+<p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
+
+<p>Here&#8217;s features should be in BB10 QML, which I implemented in the WeChat mobile app for BB10.</p>
+
+<ul>
+<li><p>QML actived event</p></li>
+<li><p>QML closed event</p></li>
+<li><p>QML Data Share Methods: a) Method to tranfer data from QML A to B ( open B from A ); b) Methods to set/get/clear app shared data in QML.</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<ul>
+<li><p>QML reuse or not ( A - B - C - D: if open QML B from D, close D and C, reuse B )</p></li>
+<li><p>QML asyn publish/subscribe methods</p></li>
+<li><p>Flag to turn off auto-translation in system language ( Dialog, Back and Invocations )</p></li>
+<li><p>Support mutil-image previewer (zoomable) with invocation.</p></li>
+<li><p>Letters scrollbar</p></li>
+<li><p>A method to call js methods in QML from ListItem</p></li>
+</ul>
+
+
+<p>If BlackBerry 10 want more better apps, Its QML should provide features above. Or in a js library for QML.</p>
+
+<p><span id="link-tags">BB10;BlackBerry;WeChat;QML</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Abilities of Intelligent]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent/"/>
+    <updated>2014-03-15T18:21:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent</id>
+    <content type="html"><![CDATA[<p>智能的基本能力：</p>
+
+<ul>
+<li><p>对于情景有很灵活的反应；</p></li>
+<li><p>充分利用机遇；</p></li>
+<li><p>弄懂含糊不清或彼此矛盾的信息；</p></li>
+<li><p>认识到一个情境中什么是重要的因素，什么是次要的；</p></li>
+<li><p>在存在差异的情景之间能发现它们的相似处；</p></li>
+<li><p>从那些由相似之处联系在一起的事物中找出差别；</p></li>
+<li><p>用旧的概念综合出新的概念，把它们用新的方法组合起来；</p></li>
+<li><p>提出全新的观念。</p></li>
+</ul>
+
+
+<p> 从《GEB集异璧》里对智能的描述项，对比一下自己，能力上还是有很多不足的地方，比如：充分利用机遇；以及认识一个情境中的重要和次要因素方面就存在不足。其它的应该还算不错了。</p>
+
+<p> 注：《GEB集异璧》中文版2013年第7版了，很厚的神书一本，近千余页。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Lost of MH370]]></title>
@@ -61,7 +123,7 @@
 
 <p>不瞎扯了，我们来看看MH370的可能位置：海面搜索工作目前还没有任何足信证据证明飞机已经坠落海上。可能一：飞机完整地沉入海底，这个难度很高。不过我们来想象一个难度更高的——飞机因为重力异常，掉入了太空。</p>
 
-<p>据说，有乘客家属拨通手机了，或是QQ依旧在线。也就是说，手机依旧在卫星通讯范围之内。至于海底，手机防水应该没有那么好，海水不浅吧？信号肯定不好，且海水早就把手机毁掉了。所以，要不飞机就飞哪的陆地上坠毁了；要不就象《海底一万里》里的，被海底某个神秘的东西装了；要不，就是掉入了太空。</p>
+<p>据说，有乘客家属拨通手机了，或是QQ依旧在线。也就是说，手机依旧在卫星通讯范围之内。至于海底，手机防水应该没有那么好，海水不浅吧？信号肯定不好，且海水早就把手机毁掉了。所以，要不飞机就飞哪的陆地上坠毁了；要不就象《海底两万里》里的，被海底某个神秘的东西装了；要不，就是掉入了太空。</p>
 
 <p>要让飞机的高度突然降为零，1）真掉下来可以做到；2）信号异常可以做到；3）设备毁坏可以做到。</p>
 
@@ -1253,103 +1315,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>扭伤按照西医处理方式，在网上尚未搜索到有完全恢复的案例（不排除好了就不提了）。中医处理方式也只有少数放血疗法有短期恢复的案例，也有其他处理方式，但痊愈者不多。多数为减缓症状类。</p>
 
 <p><i id="link-tags">脚踝扭伤</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Print the Schengen VISA Application Form in A3]]></title>
-    <link href="http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3/"/>
-    <updated>2013-03-02T00:39:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3</id>
-    <content type="html"><![CDATA[<p>We are preparing the documents for the Schengen VISA to Italy &amp; France.</p>
-
-<p>It&#8217;s such a big project for a 15 days journey, and it will be our first time to Europe &#8211; attracted by its cultrue, landscape &amp; fresh air :p</p>
-
-<p>Here the tips to print the Italy VISA application form in a A3 paper. Yes, I mean the printer settings(打印机设置):</p>
-
-<h2>First,</h2>
-
-<ul>
-<li><p>Page Size（页面尺寸）: A4</p></li>
-<li><p>Output Size（输出尺寸）: A3</p></li>
-</ul>
-
-
-<h2>Second,</h2>
-
-<ul>
-<li>Layout（布局）: 2 in 1</li>
-</ul>
-
-
-<h2>Third,</h2>
-
-<ul>
-<li><p>Double Side（双面打印）</p></li>
-<li><p>Short Edge （短边装订）</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<h2>Last!</h2>
-
-<ul>
-<li>Print pages（打印页面）: <strong>4,1,2,3</strong></li>
-</ul>
-
-
-<p>The point is we could specify the order of pages.</p>
-
-<p>这就是打印A3意大利申根签证申请表的打印机设置了。希望对大家有所帮助。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SSH Connect to BB10 Device]]></title>
-    <link href="http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device/"/>
-    <updated>2013-03-02T00:23:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/03/02/ssh-connect-to-bb10-device</id>
-    <content type="html"><![CDATA[<p>How to connect to your BB10 device or simulator?</p>
-
-<h2>Step 1:</h2>
-
-<p><strong>Turn on Development Mode</strong></p>
-
-<h2>Step 2: </h2>
-
-<p><strong>Creating an RSA2 key</strong></p>
-
-<pre><code>ssh-keygen -t rsa -b 4096
-</code></pre>
-
-<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
-
-<h2>Step 3: </h2>
-
-<p><strong>Start Connect Service</strong></p>
-
-<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
-</code></pre>
-
-<p>keep this console there.</p>
-
-<!--more-->
-
-
-<h2>Step 4:</h2>
-
-<p><strong>Make the SSH connection</strong></p>
-
-<p>start another console, make the ssh connection</p>
-
-<pre><code>ssh devuser@169.254.0.1 -i rsa-bbx
-</code></pre>
-
-<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
-
-<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
 ]]></content>
   </entry>
   

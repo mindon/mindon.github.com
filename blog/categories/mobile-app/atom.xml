@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-10T08:09:24+08:00</updated>
+  <updated>2014-03-15T20:14:36+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
+    <updated>2014-03-15T18:51:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
+    <content type="html"><![CDATA[<p>I'm one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
+
+<p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
+
+<p>Here's features should be in BB10 QML, which I implemented in the WeChat mobile app for BB10.</p>
+
+<ul>
+<li><p>QML actived event</p></li>
+<li><p>QML closed event</p></li>
+<li><p>QML Data Share Methods: a) Method to tranfer data from QML A to B ( open B from A ); b) Methods to set/get/clear app shared data in QML.</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<ul>
+<li><p>QML reuse or not ( A - B - C - D: if open QML B from D, close D and C, reuse B )</p></li>
+<li><p>QML asyn publish/subscribe methods</p></li>
+<li><p>Flag to turn off auto-translation in system language ( Dialog, Back and Invocations )</p></li>
+<li><p>Support mutil-image previewer (zoomable) with invocation.</p></li>
+<li><p>Letters scrollbar</p></li>
+<li><p>A method to call js methods in QML from ListItem</p></li>
+</ul>
+
+
+<p>If BlackBerry 10 want more better apps, Its QML should provide features above. Or in a js library for QML.</p>
+
+<p><span id="link-tags">BB10;BlackBerry;WeChat;QML</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
@@ -360,50 +397,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
 
 <p>.getExternalCacheDir()</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DaSign: Light up your life]]></title>
-    <link href="http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life/"/>
-    <updated>2013-07-09T22:54:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life</id>
-    <content type="html"><![CDATA[<h2>DaSign</h2>
-
-<p>The  signs to light up your life.</p>
-
-<p>It's Mindon first Android app :D</p>
-
-<p>It's more than a SVG(Scalable Vector Graphics) viewer, but a powerful tool to declare yourself.</p>
-
-<p>Small install package size - 0.3MB only! 90+ super HD signs included!</p>
-
-<p>Show it with your nexus 7, it will be super cool!</p>
-
-<p>Do not hesitate to show it when your L8 ingress team taking photos.</p>
-
-<p><img src="/images/blog/dasign/prompt.png" alt="" /></p>
-
-<p>It's <strong>FREE</strong>, without any advertisements.</p>
-
-<!--more-->
-
-
-<p>If you are an ingress player, you should own it.</p>
-
-<p>If you reach L8 in the game ingress, taking a team photo, you need it.</p>
-
-<p>If you are a Mayday fans, It makes your group special.</p>
-
-<p>If you like others to be Mayday fans, equip them with it.</p>
-
-<p>It fits all kinds of screens with high resolution. Yes, it's vector.(SVG format)</p>
-
-<p>[Operations]  1) Long tap or slide to show list; 2) Double tap to show information of the sign; 3) Tap to hide list.</p>
-
-<p>Here's the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
-
-<p><img src="/images/blog/dasign/dasign-qr.png" alt="" /></p>
 ]]></content>
   </entry>
   
