@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-15T20:14:36+08:00</updated>
+  <updated>2014-03-16T10:01:15+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A UI Unit]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/16/a-ui-unit/"/>
+    <updated>2014-03-16T09:33:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/16/a-ui-unit</id>
+    <content type="html"><![CDATA[<p>What kind of basic abilities should be with an UI unit?</p>
+
+<p>As a web developer, an UI includes: Data, DOM, CSS, JavaScript.</p>
+
+<p>That's Data, Data Container, Display Style, Interactions.</p>
+
+<p>First, an UI needs datum: 1) Static data;  2) Dynamic data [Optional]</p>
+
+<!--more-->
+
+
+<p>For dynamic data, it needs these abilities:</p>
+
+<ol>
+<li><p>Receive initialization data, it may be tranfered from another UI unit.</p></li>
+<li><p>Transfer data to another UI unit;</p></li>
+<li><p>Subscribe data changes;</p></li>
+<li><p>Publish data changes.</p></li>
+</ol>
+
+
+<p>Interactions may change datum, data containers or styles.</p>
+
+<ol>
+<li><p>UI enter/exit events</p></li>
+<li><p>UI active/disactive events</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
@@ -318,85 +354,6 @@ XapSignTool.exe sign /f PFXFile /p Password XAP
 </code></pre>
 
 <p><a href="https://github.com/AndreasOM/wp8-directx-commandline">Simple Windows Phone 8 (C++/native only) DirectX project with Command Line Build</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android App Data & Folders]]></title>
-    <link href="http://mindon.github.com/blog/2013/07/20/android-data-and-folders/"/>
-    <updated>2013-07-20T11:16:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/07/20/android-data-and-folders</id>
-    <content type="html"><![CDATA[<p>Context context = getApplicationContext();</p>
-
-<h2>SQLite Databases</h2>
-
-<pre><code>context.getDatabasePath("myDbName")
-</code></pre>
-
-<h2>Cache</h2>
-
-<p>System will clean it auto if low memory</p>
-
-<pre><code>context.getCacheDir()
-</code></pre>
-
-<h2>Lib</h2>
-
-<p>context.getFilesDir()</p>
-
-<h2>Apk &amp; resources path</h2>
-
-<p>context.getPackageCodePath()
-context.getPackageResourcePath</p>
-
-<h2>Shared Preferences</h2>
-
-<p>getSharedPreferences()
-getPreferences()</p>
-
-<h2>Internal Storage</h2>
-
-<p>removed when uninstall the app
-MODE_PRIVATE | MODE_APPEND | MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE</p>
-
-<pre><code>FileOutputStream fos = openFileOutput(flName, Context.MODE_PRIVATE);    
-fos.write(content.getBytes());    
-fos.close();  
-</code></pre>
-
-<h2>Internal Files Operations</h2>
-
-<p>Internal files path</p>
-
-<p>.getDir()
-.getFilesDir()
-.deleteFile()
-.fileList</p>
-
-<h2>External Storage</h2>
-
-<p><strong>Checking media availability</strong></p>
-
-<p>.getExternalStorageState()</p>
-
-<p>Environment.MEDIA_MOUNTED | MEDIA_MOUNTED_READ_ONLY</p>
-
-<pre><code>Environment.getExternalStorageDirectory()
-
-
-Environment.getExternalStoragePublicDirectory(
-        Environment.DIRECTORY_PICTURES
-    )
-
-
-&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
-</code></pre>
-
-<p>.getExternalStoragePublicDirectory()</p>
-
-<p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
-
-<p>.getExternalCacheDir()</p>
 ]]></content>
   </entry>
   

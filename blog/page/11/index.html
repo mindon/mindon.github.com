@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="孩子在生活中学习 by Dorothy Law Nolte, Ph.D. 美國的著名社會學家及精神治療師，1924年1月12日－2005年11月6日 If children live with criticism, they learn to condemn. 批评中长大的孩子，责难他人。 If &hellip;">
+  <meta name="description" content="Letup休息提醒器 （下载） Talk a break, good for your health :-) 适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。 **正在玩游戲者切勿運行，否則后果自負。 DO NOT RUN IT WHEN YOU ARE PLAYING &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/19/letup-take-a-break/">Letup: Take a Break</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-19T14:49:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
+
+<p>Talk a break, good for your health :-)</p>
+
+<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
+
+<p>**正在玩游戲者切勿運行，否則后果自負。</p>
+
+<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
+
+<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
+
+<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
+
+<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
+
+<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
+
+<p>Alt + “+键” 顯示設置界面</p>
+
+<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/05/19/letup-take-a-break/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -462,114 +523,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/26/profiling-nodejs-application/">Profiling Node.JS Application</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-26T07:22:00+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>NodeJS</h2>
-
-<p>Call something like &#8220;ulimit -n 8192&#8221; in your NodeJS App start shell script, before start your nodejs service.</p>
-
-<p>Running with &#8211;prof to generate the v8.log</p>
-
-<pre><code>node --prof --prof_lazy app.js
-</code></pre>
-
-<p>with tools in /node/deps/v8/, you can get report like following:</p>
-
-<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
-
-<pre><code>[Shared libraries]:
-   ticks  total  nonlib   name
-      3    0.0%    0.0%  .../libc-2.13.so
-
-[JavaScript]:
-   ticks  total  nonlib   name
-      1    0.0%    0.0%  Stub: InstanceofStub
-
-[C++]:
-   ticks  total  nonlib   name
-     1    0.0%    0.0%  __write
-     ...
-
-[GC]:
-   ticks  total  nonlib   name
-     15    0.0%
-
-[Bottom up (heavy) profile]:
-  Note: percentage shows a share of a particular caller in the total
-  amount of its parent calls.
-  Callers occupying less than 2.0% are not shown.
-
-   ticks parent  name
-   ...
-</code></pre>
-
-<p>trace log</p>
-
-<pre><code>strace -o trace.log -cf node app.js:
-</code></pre>
-
-<p>or simple get the time</p>
-
-<pre><code>time node app.js
-</code></pre>
-
-<h2>Other Modules &amp; Tools</h2>
-
-<ul>
-<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
-</ul>
-
-
-<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
-
-<pre><code>dtrace -o stacks.out -n 'profile-97/execname == "node" &amp;&amp; arg1/{
-  @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }'
-</code></pre>
-
-<ul>
-<li><strong>v8-profiler</strong></li>
-</ul>
-
-
-<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/26/profiling-nodejs-application/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/12/">&larr; Older</a>
@@ -617,7 +570,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 67 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 68 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 27 )</li>
 
@@ -629,13 +582,17 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 12 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 13 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/16/a-ui-unit/">A UI Unit</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/">QML Features Should be in BlackBerry 10 OS</a>
@@ -671,10 +628,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/01/e-diy-tech-info/">DIY知识点滴</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/">WeChat, BlackBerry, Apps and Web - My 2013</a>
       </li>
     
   </ul>
