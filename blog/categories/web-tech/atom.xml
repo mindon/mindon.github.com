@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-16T10:01:15+08:00</updated>
+  <updated>2014-03-20T05:46:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A false linkable text sample]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/"/>
+    <updated>2014-03-20T05:08:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample</id>
+    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It's awkful, right? It's on Google+! The Google - who leads the web tech.</p>
+
+<p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
+
+<p>I've double checked it in my WeChat under Android - it's there too. But not in the WeChat for BlackBerry 10.</p>
+
+<!--more-->
+
+
+<p>The false link sample is like this:</p>
+
+<p><strong>(http://mindon.github.io?testing)...something-else</strong></p>
+
+<p>Here's a snapshot from Google+</p>
+
+<p><img src="/images/blog/false-link.jpg" alt="" /></p>
+
+<p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
+
+<p>Our test team and I could not accept this result in WeChat for BlackBerry 10, then here comes my customized linkable text detecting code in JavaScript.</p>
+
+<script src="https://gist.github.com/mindon/9317393.js"></script>
+
+
+<p>It helps to avoid this issue and provides you the customized possibility.</p>
+
+<p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A callstack trace for QML js]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
+    <updated>2014-03-20T05:02:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
+    <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That's where BlackBerry 10 comes from.</p>
+
+<p>The last year (2013), we'd spent lots of time on the WeChat for BlackBerry 10.</p>
+
+<p>QML tech is good for an mobile app UI, using JavaScript. And there's no <code>console.trace()</code> in QML to trace the callstacks, here's mine:</p>
+
+<!--more-->
+
+
+
+
+<script src="https://gist.github.com/mindon/9524222.js"></script>
+
+
+<p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The PHP-CLD: Chromium Compact Language Detector for PHP]]></title>
@@ -118,116 +176,6 @@ exit
 </code></pre>
 
 <p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Lately]]></title>
-    <link href="http://mindon.github.com/blog/2012/12/30/learning-lately/"/>
-    <updated>2012-12-30T14:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/12/30/learning-lately</id>
-    <content type="html"><![CDATA[<p>这段时间接触和试验了不少新的东西：</p>
-
-<ul>
-<li>Blackberry 10 Webworks App Demo (HTML5)</li>
-</ul>
-
-
-<p>尝试了一下BB10的 Webworks App开发，HTML5的性能表现还是不错的，只不过即便如此，HTML5 App的性能表现和Native App的差距还是不小的。而且，BB10的Webworks用的 JNext 最新更新竟然还是2008年的东西…… 另外就是调试和.so的依赖方面会碰到不小的麻烦。</p>
-
-<p>中间还小试验了一下具有左右手差异内容滚动角度的UI表现。</p>
-
-<ul>
-<li>Blackberry 10 Cascades App Demo (QML + C++)</li>
-</ul>
-
-
-<p>在放弃了Webworks后，转向试验 Cascades 开发。使用作为UI描述的QML类似 JSON 形式，采用 Javascript 脚本实现 UI 交互。虽说UI有Chrome插件来预览，不过交互脚本的调试并不方便。不过应用的调试倒是比webworks app方便很多。</p>
-
-<ul>
-<li>Chrome App独立窗口应用</li>
-</ul>
-
-
-<p>Chrome 20版本开始支持独立窗口的应用，可以使用TCP建立监听及其他的一系列支持。独立窗口让Chrome App表现得更像桌面应用了。可惜目前这类应用在浏览器没有启动的时候独立启动的话，所有的Extension都会同时启动，使得启动缓慢——如果可以禁止掉独立应用窗口的插件加载就完美了。</p>
-
-<!--more-->
-
-
-<ul>
-<li>再玩CodeIgniter</li>
-</ul>
-
-
-<p>基于php的应用框架CodeIgniter其简单入手，良好性能，完备文档和活跃社区对于中小应用来说都是相当不错的选择。</p>
-
-<p>HydridAuth用来作为第三方的登录验证方式也是不错的选择。</p>
-
-<ul>
-<li>Go语言及Google AppEngine</li>
-</ul>
-
-
-<p>Google的Go语言确实是一门使用的编程语言，目的是为开发人员解决问题，而不是纠结于语言的设计。</p>
-
-<p>为了练习一下Go语言，就另外建了一个GAE App，用来作为最近的兴趣研究开发。</p>
-
-<ul>
-<li>Chrome App (Native Client)</li>
-</ul>
-
-
-<p>通过Chrome来实现跨平台应用，也是个比较好玩的途径。只进行了简单的开发环境搭建和试验，碰到了些问题——某些需要的接口因为会造成对系统的依赖，所以需要用第三方的实现方式。暂没做深入研究。</p>
-
-<ul>
-<li> 独立游戏和LUA</li>
-</ul>
-
-
-<p>前段时间在部门分享里听了一个来自互娱的同事分享关于独立游戏的状况，激起了对游戏的一点兴趣。而自己之前Javascript玩的几个HTML5小游戏，所以准备了解一下手机游戏的开发框架，如Corona SDK和MOAI SDK，这两个都是用Lua语言来开发跨平台游戏的，不过我对开源且支持Chrome Native Client的MOAI 比较关注。</p>
-
-<p>搭建了开发环境及Hello world，不过Moai App作为Chrome Nacl应用要带的库就有20+M大小，有点重了。</p>
-
-<p>Android下运行没能成功显示，不知何故，后续有时间再进行探讨。</p>
-
-<ul>
-<li>Firefox App</li>
-</ul>
-
-
-<p>这个是把之前整理的一个HTML5小游戏封装成了 Firefox package app for Firfox OS。 看起来Firefox Marketplace 跟 Chrome Webstore有几分相似：也分Host App/Package App。 搭的GAE Go App正好为提交 Host App 当了试验服务器。</p>
-
-<p><i id="link-tags">Blackberry 10;Webworks;Cascades;QML,Chrome App,Native Client;HydridAuth;CodeIgniter;MOAI SDK;Corona SDK;Lua;Firefox OS;Chrome Webstore</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CSS3 Tai-Chi Diagram]]></title>
-    <link href="http://mindon.github.com/blog/2012/08/28/css3-tai-chi/"/>
-    <updated>2012-08-28T21:25:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/08/28/css3-tai-chi</id>
-    <content type="html"><![CDATA[<p>If you cannot see a Tai-Chi diagram, then your browser is old enough. Maybe you should update it to a morden one: IE9+, Safari, Chrome or Firefox, or Opera.</p>
-
-<p>If you could see a rolling Tai-Chi, then your browser is ready for CSS3, that will be great.</p>
-
-<!--more-->
-
-
-<p>Here's the Chinese Tai-Chi diagram:</p>
-
-<div>
-<link rel="stylesheet" type="text/css" href="http://mindon.github.com/blog/styles/tai-chi.css" >
-<div class="yinyang">
-  <div class="yin"><div class="yinc"><div class="yind"></div></div></div>
-  <div class="yang"><div class="yangc"><div class="yangd"></div></div></div>
-</div>
-<!--[if lt IE 9]>
-It's a pitty, you are using a browser out of the date.
-<![endif]-->
-</div>
-
-
-<p>Wood-Fire-Metal-Water-Earth! The 5 fundamental elements running circle balance in a human body.</p>
 ]]></content>
   </entry>
   

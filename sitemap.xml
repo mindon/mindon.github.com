@@ -533,12 +533,20 @@
         <lastmod>2014-03-16T10:00:04+08:00</lastmod>
     </url>
     <url>
+        <loc>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/</loc>
+        <lastmod>2014-03-20T05:20:28+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/</loc>
+        <lastmod>2014-03-20T05:42:07+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://mindon.github.com/about/</loc>
         <lastmod>2014-03-01T14:26:00+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2014-03-16T10:00:04+08:00</lastmod>
+        <lastmod>2014-03-20T05:42:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -546,7 +554,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2014-03-16T10:00:04+08:00</lastmod>
+        <lastmod>2014-03-20T05:42:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>

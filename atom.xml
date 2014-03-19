@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-16T10:01:15+08:00</updated>
+  <updated>2014-03-20T05:46:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A false linkable text sample]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/"/>
+    <updated>2014-03-20T05:08:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample</id>
+    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It&#8217;s awkful, right? It&#8217;s on Google+! The Google - who leads the web tech.</p>
+
+<p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
+
+<p>I&#8217;ve double checked it in my WeChat under Android - it&#8217;s there too. But not in the WeChat for BlackBerry 10.</p>
+
+<!--more-->
+
+
+<p>The false link sample is like this:</p>
+
+<p><strong>(http://mindon.github.io?testing)&#8230;something-else</strong></p>
+
+<p>Here&#8217;s a snapshot from Google+</p>
+
+<p><img src="http://mindon.github.com/images/blog/false-link.jpg" alt="" /></p>
+
+<p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
+
+<p>Our test team and I could not accept this result in WeChat for BlackBerry 10, then here comes my customized linkable text detecting code in JavaScript.</p>
+
+<script src="https://gist.github.com/mindon/9317393.js"></script>
+
+
+<p>It helps to avoid this issue and provides you the customized possibility.</p>
+
+<p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A callstack trace for QML js]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
+    <updated>2014-03-20T05:02:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
+    <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That&#8217;s where BlackBerry 10 comes from.</p>
+
+<p>The last year (2013), we&#8217;d spent lots of time on the WeChat for BlackBerry 10.</p>
+
+<p>QML tech is good for an mobile app UI, using JavaScript. And there&#8217;s no <code>console.trace()</code> in QML to trace the callstacks, here&#8217;s mine:</p>
+
+<!--more-->
+
+
+
+
+<script src="https://gist.github.com/mindon/9524222.js"></script>
+
+
+<p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A UI Unit]]></title>
@@ -1022,128 +1080,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>Here&#8217;s the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
 
 <p><img src="http://mindon.github.com/images/blog/dasign/dasign-qr.png" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The NRC: Netbook Resolution Customizer]]></title>
-    <link href="http://mindon.github.com/blog/2013/04/12/the-nrc-netbook-resolution-customizer/"/>
-    <updated>2013-04-12T22:35:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/04/12/the-nrc-netbook-resolution-customizer</id>
-    <content type="html"><![CDATA[<p>I have a netbook HP mini 2140 with screen resolution 1024x576. It not enough for many daily work now. My Nexus 7 is 1280×800 pixels!</p>
-
-<p>How could I change the netbook resolution to make it easier for my development?</p>
-
-<p>First, I found the software &#8211; NRC: <strong>Netbook Resolution Customizer</strong> 1.0.8. It&#8217;s amazing, and works fine for me. Though sometimes it is not as stable as I expected.</p>
-
-<p>There&#8217;s another solution by editing the register of windows, Run command regedit and search keyword &#8220;Display1_DownScalingEnabled&#8221; or &#8220;Display1_DownScalingSupported&#8221;, and change them from 0 to 1. but i found that some of the value is in hex: 00 00 00 00, some binary.</p>
-
-<!--more-->
-
-
-<p>Though i have no idea which register item works, but maybe following items matters.</p>
-
-<pre><code>"Display1_EnableNoPruneSizeFlag"=dword:00000001
-"Display1_EnableDynamicScaling"=dword:00000001
-"EnableInterlacedModeRemoval"=dword:00000001
-"Display1_DownScalingEnabled"=dword:00000001
-"Display1_DownScalingSupported"=dword:00000001
-"Display1_FakeScaleX"=hex:00,04,00,00
-"Display1_FakeScaleY"=hex:00,03,00,00
-</code></pre>
-
-<p>These appears in the register path &#8220;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ialm\Device0]&#8221; of my HP mini 2140 (WinXP).</p>
-
-<p>Some items also found in [HKEY_LOCAL_MACHINE\SYSTEM*<em>ControlSet003**\Services\ialm\Device1] and [HKEY_LOCAL_MACHINE\SYSTEM*</em>ControlSet004**\Services\ialm\Device1]</p>
-
-<p>It may be different.</p>
-
-<p>No matter what, after I update the register and running the NRC, I could change the screen resolution now. Sometimes with scrollable large area, sometimes scaled without scrollable screen area.</p>
-
-<p>It&#8217;s good enough! But I could not restore it to 1024 x 576 :-p</p>
-
-<p>There&#8217;s another solution for Intel Graphics: <a href="http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/">http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/</a></p>
-
-<p>The <a href="http://www.entechtaiwan.com/util/ps.shtm">PowerStrip 3.9</a> is another tool.</p>
-
-<p><i id="link-tags">NRC;Netbook Resolution Customizer;HP mini 2140;Nexus 7</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cascades Native App Development Tips]]></title>
-    <link href="http://mindon.github.com/blog/2013/03/23/blackberry-cascades-native-app-development-tips/"/>
-    <updated>2013-03-23T21:42:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/03/23/blackberry-cascades-native-app-development-tips</id>
-    <content type="html"><![CDATA[<p>Google+ Community - <a href="https://plus.google.com/communities/102767584651216621172">Blackberry 10 X-Dev : Cascades &amp; WebWorks for BB10</a></p>
-
-<p>News: <strong>BlackBerry Z10 Officially Available on AT&amp;T</strong></p>
-
-<blockquote><p>The BlackBerry Z10 smartphone is now officially available on AT&amp;T.</p>
-
-<p>The struggling manufacturer — which is hopeful its new flagship device will ignite a company resurgence — announced on Friday the Z10 can finally be activated on AT&amp;T. It costs $199 with a two-year contract.</p>
-
-<p>BlackBerry, formerly known as Research In Motion (RIM), also sent a tweet at midnight ET announcing Best Buy will start selling the device on Friday for $199 with a two-year contract.</p></blockquote>
-
-<p><a href="http://us.blackberry.com/smartphones/blackberry-z10.html">BlackBerry Z10: Built to Keep You Moving</a></p>
-
-<h2>Using proxy with the command line tools</h2>
-
-<p>Remember to use &#8211;proxyhost &amp; -proxyport as the FIRST two parameters when using command line tools from blackberry.tools.SDK.</p>
-
-<!--more-->
-
-
-<p>example:</p>
-
-<pre><code>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 ....
-</code></pre>
-
-<p>Download the Command-line Tools from <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
-
-<p>Unzip and set the path blackberry.tools.SDK/bin to env. variable PATH then you could use the apk2bar, blackberry-signer or other command line tools.</p>
-
-<h2>How to signed the .bar through a proxy?</h2>
-
-<p>Use <strong>batchbar-signer</strong> won&#8217;t work. you could use blackberry-signer directly.</p>
-
-<p>Example:</p>
-
-<pre><code>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 -storepass your_store_pwd demo.bar
-</code></pre>
-
-<p>the command tools could be found <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
-
-<h2><strong>config.pri</strong> NOT including sources &amp; headers, make failed error</h2>
-
-<p>When building project in QNX Momentics IDE, If nothing to compile. It may be lack of sources &amp; headers in your auto-generated config.pri</p>
-
-<p>This is caused by incorrect source folder settings, here&#8217;s the steps to solve the problem:</p>
-
-<ol>
-<li><p>Right click on the project in &#8220;Project Explorer&#8221;, choose &#8220;Properties&#8221; at the bottom</p></li>
-<li><p>On the left top input field with tips &#8220;type filter text&#8221;, input &#8220;paths&#8221;</p></li>
-<li><p>Click on the item &#8220;Paths and Symbols&#8221; under &#8220;C/C++ General&#8221;</p></li>
-<li><p>Activate the 3rd tab named &#8220;Source Location&#8221;</p></li>
-<li><p>add the proper source folder by Click &#8220;Add Folder&#8221; and choose &#8220;src&#8221;</p></li>
-<li><p>&#8220;Delete the&#8221; incorrect source folder</p></li>
-</ol>
-
-
-<h2><strong>config.pri</strong> not auto generated or updated?</h2>
-
-<p>Update your SDK to 10.0.10+</p>
-
-<h2>Steps to test an app before submit to (Blackberry) App World</h2>
-
-<ol>
-<li><p>Upload app and place in DRAFT mode.</p></li>
-<li><p>Add user to the sandbox (BBID).</p></li>
-<li><p>Enter (Blackberry) <strong>App World</strong> on device, swipe down to see the app menu, choose <strong>settings</strong>, click <strong>Development Mode</strong>, enter content id.</p></li>
-</ol>
-
-
-<p><i id="link-tags">Blackberry Z10;Blackberry</i></p>
 ]]></content>
   </entry>
   
