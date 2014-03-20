@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-20T05:46:42+08:00</updated>
+  <updated>2014-03-20T23:20:08+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Wear]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/android-wearable-sdk/"/>
+    <updated>2014-03-20T22:31:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/android-wearable-sdk</id>
+    <content type="html"><![CDATA[<p><a href="http://developer.android.com/wear/">Android Wear</a> SDK makes Android apps connected with wearable devices. The <a href="http://moto360.motorola.com/">Moto 360</a> is coming.</p>
+
+<p>First, <a href="http://developer.android.com/wear/preview/start.html">Sign Up</a> for the Developer Preview.</p>
+
+<p>You could joining the <a href="http://g.co/androidweardev">Android Wear Developers</a> Google+ Community.</p>
+
+<p>Then, you will get an email providing link of example and <a href="https://play.google.com/apps/testing/com.google.android.wearablepreview.app">Android Wear Preview App</a></p>
+
+<!--more-->
+
+
+<p>Third, you need to download <a href="https://developer.android.com/sdk/">Android SDK</a> and start the emulator for Android Wear, one is Round, another is Square both 1.7&#8217;.</p>
+
+<p>Connect the wear emulator with the Android Wear Preview app, then your android device notifications will be shown in the emulator screen.</p>
+
+<blockquote><p> Android Wear extends the Android platform to a new generation of wearable devices.</p>
+
+<p> Small, powerful devices, worn on the body. Useful information when you need it most. Intelligent answers to spoken questions. Tools to help reach fitness goals. Your key to a multiscreen world.</p></blockquote>
+
+<p>There&#8217;s a <a href="www.androidpolice.com/2014/03/19/apk-teardown-download-you-can-try-the-android-wear-launcher-on-your-device-now-heres-whats-inside/">wear launcher</a> about 3.8MB,</p>
+
+<p>and another Wear Preview App apk (named Android_Wear_Beta.apk, 600+KB) for those incompatible andriod devices.</p>
+
+<blockquote><p> The Android Wear Preview app is compatible with Android 4.3 and higher and is not available for the Android emulator.</p></blockquote>
+
+<p><span id="link-tags">Android Wear Preview;Wear Preview App apk</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A false linkable text sample]]></title>
@@ -1036,50 +1070,6 @@ Environment.getExternalStoragePublicDirectory(
 <p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
 
 <p>.getExternalCacheDir()</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DaSign: Light up your life]]></title>
-    <link href="http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life/"/>
-    <updated>2013-07-09T22:54:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/07/09/dasign-light-up-your-life</id>
-    <content type="html"><![CDATA[<h2>DaSign</h2>
-
-<p>The  signs to light up your life.</p>
-
-<p>It&#8217;s Mindon first Android app :D</p>
-
-<p>It&#8217;s more than a SVG(Scalable Vector Graphics) viewer, but a powerful tool to declare yourself.</p>
-
-<p>Small install package size - 0.3MB only! 90+ super HD signs included!</p>
-
-<p>Show it with your nexus 7, it will be super cool!</p>
-
-<p>Do not hesitate to show it when your L8 ingress team taking photos.</p>
-
-<p><img src="http://mindon.github.com/images/blog/dasign/prompt.png" alt="" /></p>
-
-<p>It&#8217;s <strong>FREE</strong>, without any advertisements.</p>
-
-<!--more-->
-
-
-<p>If you are an ingress player, you should own it.</p>
-
-<p>If you reach L8 in the game ingress, taking a team photo, you need it.</p>
-
-<p>If you are a Mayday fans, It makes your group special.</p>
-
-<p>If you like others to be Mayday fans, equip them with it.</p>
-
-<p>It fits all kinds of screens with high resolution. Yes, it&#8217;s vector.(SVG format)</p>
-
-<p>[Operations]  1) Long tap or slide to show list; 2) Double tap to show information of the sign; 3) Tap to hide list.</p>
-
-<p>Here&#8217;s the Google Play link : <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign @ Google Play</a>.</p>
-
-<p><img src="http://mindon.github.com/images/blog/dasign/dasign-qr.png" alt="" /></p>
 ]]></content>
   </entry>
   

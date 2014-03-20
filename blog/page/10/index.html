@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="最可怕的是什么？ 其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。 现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。 有一个词能非常清楚地对最可怕的东西做一个总结，那就是 &hellip;">
+  <meta name="description" content="Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/simple-auto-resize-images-in-web-pages/">Simple Auto-Resize Images in Web Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-21T10:34:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
+
+<p>Use this meta in your HTML header could reisze the web page to the device&#8217;s resolution.</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code></pre>
+
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
+
+<p>Here&#8217;s the simple HTML code:</p>
+
+<pre><code>&lt;style type="text/css"&gt;img {display:block}&lt;/style&gt;
+&lt;table width="100%" style="table-layout:fixed"&gt;
+  &lt;tr&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -453,59 +511,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">中国象棋棋谱生成器(CD插件)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-02T19:06:00+08:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
-
-<p>可按棋谱生成矢量图。</p>
-
-<p><img src="/soft/chinese-chess.png" alt="" /></p>
-
-<p>下载：<a href="/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
-
-<h2>使用说明：</h2>
-
-<p>  1，把gms文件放到draw/GMS/文件夹</p>
-
-<p>  2，运行CorelDraw</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -553,7 +558,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 70 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 71 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 29 )</li>
 
@@ -565,13 +570,17 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 14 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 15 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/20/android-wearable-sdk/">Android Wear</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/20/a-false-linkable-text-sample/">A false linkable text sample</a>
@@ -607,10 +616,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/02/tech-helps-needed-for-a-good-health/">科技+健康生活环境</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/01/the-young-woman-died-at-the-exit-of-metro/">在地铁出口离世的年青女子</a>
       </li>
     
   </ul>

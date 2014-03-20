@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-20T05:46:42+08:00</updated>
+  <updated>2014-03-20T23:20:08+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Wear]]></title>
+    <link href="http://mindon.github.com/blog/2014/03/20/android-wearable-sdk/"/>
+    <updated>2014-03-20T22:31:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/03/20/android-wearable-sdk</id>
+    <content type="html"><![CDATA[<p><a href="http://developer.android.com/wear/">Android Wear</a> SDK makes Android apps connected with wearable devices. The <a href="http://moto360.motorola.com/">Moto 360</a> is coming.</p>
+
+<p>First, <a href="http://developer.android.com/wear/preview/start.html">Sign Up</a> for the Developer Preview.</p>
+
+<p>You could joining the <a href="http://g.co/androidweardev">Android Wear Developers</a> Google+ Community.</p>
+
+<p>Then, you will get an email providing link of example and <a href="https://play.google.com/apps/testing/com.google.android.wearablepreview.app">Android Wear Preview App</a></p>
+
+<!--more-->
+
+
+<p>Third, you need to download <a href="https://developer.android.com/sdk/">Android SDK</a> and start the emulator for Android Wear, one is Round, another is Square both 1.7'.</p>
+
+<p>Connect the wear emulator with the Android Wear Preview app, then your android device notifications will be shown in the emulator screen.</p>
+
+<blockquote><p> Android Wear extends the Android platform to a new generation of wearable devices.</p>
+
+<p> Small, powerful devices, worn on the body. Useful information when you need it most. Intelligent answers to spoken questions. Tools to help reach fitness goals. Your key to a multiscreen world.</p></blockquote>
+
+<p>There's a <a href="www.androidpolice.com/2014/03/19/apk-teardown-download-you-can-try-the-android-wear-launcher-on-your-device-now-heres-whats-inside/">wear launcher</a> about 3.8MB,</p>
+
+<p>and another Wear Preview App apk (named Android_Wear_Beta.apk, 600+KB) for those incompatible andriod devices.</p>
+
+<blockquote><p> The Android Wear Preview app is compatible with Android 4.3 and higher and is not available for the Android emulator.</p></blockquote>
+
+<p><span id="link-tags">Android Wear Preview;Wear Preview App apk</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A callstack trace for QML js]]></title>
@@ -138,25 +172,6 @@
 <p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain's learning potential</a></p>
 
 <p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fix adb error under win8]]></title>
-    <link href="http://mindon.github.com/blog/2013/09/15/fix-adb-error-under-win8/"/>
-    <updated>2013-09-15T16:27:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/09/15/fix-adb-error-under-win8</id>
-    <content type="html"><![CDATA[<h2>error: device not found</h2>
-
-<p>1)  Find "Device Manager" in "PC Info";</p>
-
-<p>2)  Get your device in the "Other devices";</p>
-
-<p>3)  Update driver and choose your adt folder to install the driver.</p>
-
-<h2>Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]</h2>
-
-<p>Uninstall your old version app on your device before install the new apk.</p>
 ]]></content>
   </entry>
   
