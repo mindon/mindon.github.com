@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-03-20T23:20:08+08:00</updated>
+  <updated>2014-04-01T08:23:28+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,110 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Living Unit]]></title>
+    <link href="http://mindon.github.com/blog/2014/04/01/living-unit/"/>
+    <updated>2014-04-01T07:19:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/04/01/living-unit</id>
+    <content type="html"><![CDATA[<p>这里说的Living Unit，原指个人，后发觉其实对于一个公司或者机构、组织也是如此。</p>
+
+<p>活个体的构成从原始的单细胞生物，到人类个体，家庭，公司机构，并没有太大的区别，只是规模，资源和能力种类差异。</p>
+
+<p>以下的胡思乱想均来自对个人能力思考的延伸。</p>
+
+<p>任何一个活个体（Living Unit）构成为3个部分：1）<strong>自有资源</strong>；2）<strong>自有能力</strong>；3）<strong>关联场景</strong>。</p>
+
+<h2>自有资源</h2>
+
+<ul>
+<li><p>物品</p></li>
+<li><p>空间</p></li>
+<li><p>介品 （如货币等）</p></li>
+<li><p>本体</p></li>
+</ul>
+
+
+<!--more-->
+
+
+<h2>自有能力</h2>
+
+<ul>
+<li><p>资源能力：拥有种类、数量，存储，运输，交换，整合。</p></li>
+<li><p>知识（广度，深度，关联）</p></li>
+<li><p>问题处理（发现，分析，解决）</p></li>
+<li><p>沟通（表达，理解）</p></li>
+<li><p>总结，预测</p></li>
+<li><p>本体维持、升级</p></li>
+</ul>
+
+
+<h2>关联场景</h2>
+
+<ul>
+<li><p>创造培养关联的场景</p></li>
+<li><p>维护和强化良性场景</p></li>
+<li><p>关联资源</p></li>
+<li><p>关联能力</p></li>
+</ul>
+
+
+<p><img src="/images/blog/asset-ability-connect.png" alt="" /></p>
+
+<p>根据活个体的构成，其发展分为两方面：1）<strong>本体强化</strong>；2）<strong>关联强化</strong>。</p>
+
+<h2>本体强化</h2>
+
+<p><strong>学习</strong></p>
+
+<ul>
+<li><p>外部能力的复制，再造</p></li>
+<li><p>外部实践中总结</p></li>
+</ul>
+
+
+<p><strong>实践</strong></p>
+
+<ul>
+<li>根据资源和能力输出的反馈对本体进行修正和调整</li>
+</ul>
+
+
+<h2>关联强化</h2>
+
+<p><strong>建立关联</strong></p>
+
+<ul>
+<li><p>通过本体输出创建关联场景</p></li>
+<li><p>接入外部关联场景</p></li>
+</ul>
+
+
+<p><strong>维护关联</strong></p>
+
+<ul>
+<li>保持关联场景的良性状态</li>
+</ul>
+
+
+<p><strong>强化关联</strong></p>
+
+<ul>
+<li>吸引更多连接接入已有关联场景</li>
+</ul>
+
+
+<p><strong>关联输入</strong></p>
+
+<ul>
+<li>从关联及输出中增强自有资源/自有能力的拥有量。</li>
+</ul>
+
+
+<p>不管是对于个人或者机构组织，或者是简单的生物个体，其在环境中生存和发展都必须具备条件。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android Wear]]></title>
@@ -138,43 +242,6 @@
 <li><p>UI active/disactive events</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
-    <updated>2014-03-15T18:51:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
-    <content type="html"><![CDATA[<p>I'm one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
-
-<p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
-
-<p>Here's features should be in BB10 QML, which I implemented in the WeChat mobile app for BB10.</p>
-
-<ul>
-<li><p>QML actived event</p></li>
-<li><p>QML closed event</p></li>
-<li><p>QML Data Share Methods: a) Method to tranfer data from QML A to B ( open B from A ); b) Methods to set/get/clear app shared data in QML.</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<ul>
-<li><p>QML reuse or not ( A - B - C - D: if open QML B from D, close D and C, reuse B )</p></li>
-<li><p>QML asyn publish/subscribe methods</p></li>
-<li><p>Flag to turn off auto-translation in system language ( Dialog, Back and Invocations )</p></li>
-<li><p>Support mutil-image previewer (zoomable) with invocation.</p></li>
-<li><p>Letters scrollbar</p></li>
-<li><p>A method to call js methods in QML from ListItem</p></li>
-</ul>
-
-
-<p>If BlackBerry 10 want more better apps, Its QML should provide features above. Or in a js library for QML.</p>
-
-<p><span id="link-tags">BB10;BlackBerry;WeChat;QML</span></p>
 ]]></content>
   </entry>
   
