@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-04-01T08:23:28+08:00</updated>
+  <updated>2014-04-02T21:27:43+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
+    <link href="http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
+    <updated>2014-04-02T20:54:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
+    <content type="html"><![CDATA[<p>I enjoy google docs, though it's not easy to visit google services from China.</p>
+
+<p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
+
+<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here's the fact:</p>
+
+<ol>
+<li><p>PDF, for reading only, cannot play.</p></li>
+<li><p>PPTX, layout is not compatible fully, and fonts not embedded.</p></li>
+<li><p>Images, view only, not playable.</p></li>
+</ol>
+
+
+<p>That's why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
+
+<p>The Chrome extension download link: <a href="https://chrome.google.com/webstore/detail/gdpr-offline/apghddnkhdhjdlmhkoagjenpcngbkdde">GdPr Offline</a></p>
+
+<p><img src="https://lh4.googleusercontent.com/gpXPndg7VVXPgoWf5p9Jz8Bq35iKudS5QiPb4-8rrJ7afXQ9cK0yFVvR-X1QjVff5lU0uVO0ddg=s1280-h800-e365-rw" alt="" /></p>
+
+<p>Now, enjoy your presentations anywhere, with or without network, with or without a proxy, inside or outside China :-)</p>
+
+<p><i id="link-tags">Google Extension;Google Drive;Google Docs;PPTX</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
@@ -336,42 +366,6 @@ Show result through template
 <p><img src="/images/blog/chrome/tee-share.png" alt="" /></p>
 
 <p><i id="link-tags">Chrome Extension;TeeSpring;Ingress</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[中国象棋棋谱生成器(CD插件)]]></title>
-    <link href="http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/"/>
-    <updated>2012-06-02T19:06:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw</id>
-    <content type="html"><![CDATA[<p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
-
-<p>可按棋谱生成矢量图。</p>
-
-<p><img src="/soft/chinese-chess.png" alt="" /></p>
-
-<p>下载：<a href="/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
-
-<h2>使用说明：</h2>
-
-<p>  1，把gms文件放到draw/GMS/文件夹</p>
-
-<p>  2，运行CorelDraw</p>
-
-<!--more-->
-
-
-<p>  3，选择菜单 "Tools(工具)"--"Visual Basic"--"Play(播放)"</p>
-
-<p>  4，选择 XQPrint(Mindon.XQPrint.gms)</p>
-
-<p>  5，点击QPrint.XiangQi项目</p>
-
-<p>  6，点击Run(运行)按钮</p>
-
-<p>  7，在弹出的软件窗口中，点击“浏览”找到象棋棋谱文件(目前支持XQF和PGN格式)</p>
-
-<p>  8，在右边列出的棋谱中点击相应的步骤即可绘制相应棋谱图</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-04-01T08:23:28+08:00</updated>
+  <updated>2014-04-02T21:27:43+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
+    <link href="http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
+    <updated>2014-04-02T20:54:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
+    <content type="html"><![CDATA[<p>I enjoy google docs, though it's not easy to visit google services from China.</p>
+
+<p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
+
+<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here's the fact:</p>
+
+<ol>
+<li><p>PDF, for reading only, cannot play.</p></li>
+<li><p>PPTX, layout is not compatible fully, and fonts not embedded.</p></li>
+<li><p>Images, view only, not playable.</p></li>
+</ol>
+
+
+<p>That's why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
+
+<p>The Chrome extension download link: <a href="https://chrome.google.com/webstore/detail/gdpr-offline/apghddnkhdhjdlmhkoagjenpcngbkdde">GdPr Offline</a></p>
+
+<p><img src="https://lh4.googleusercontent.com/gpXPndg7VVXPgoWf5p9Jz8Bq35iKudS5QiPb4-8rrJ7afXQ9cK0yFVvR-X1QjVff5lU0uVO0ddg=s1280-h800-e365-rw" alt="" /></p>
+
+<p>Now, enjoy your presentations anywhere, with or without network, with or without a proxy, inside or outside China :-)</p>
+
+<p><i id="link-tags">Google Extension;Google Drive;Google Docs;PPTX</i></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Living Unit]]></title>
@@ -206,42 +236,6 @@
 
 
 <p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A UI Unit]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/16/a-ui-unit/"/>
-    <updated>2014-03-16T09:33:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/16/a-ui-unit</id>
-    <content type="html"><![CDATA[<p>What kind of basic abilities should be with an UI unit?</p>
-
-<p>As a web developer, an UI includes: Data, DOM, CSS, JavaScript.</p>
-
-<p>That's Data, Data Container, Display Style, Interactions.</p>
-
-<p>First, an UI needs datum: 1) Static data;  2) Dynamic data [Optional]</p>
-
-<!--more-->
-
-
-<p>For dynamic data, it needs these abilities:</p>
-
-<ol>
-<li><p>Receive initialization data, it may be tranfered from another UI unit.</p></li>
-<li><p>Transfer data to another UI unit;</p></li>
-<li><p>Subscribe data changes;</p></li>
-<li><p>Publish data changes.</p></li>
-</ol>
-
-
-<p>Interactions may change datum, data containers or styles.</p>
-
-<ol>
-<li><p>UI enter/exit events</p></li>
-<li><p>UI active/disactive events</p></li>
-</ol>
-
 ]]></content>
   </entry>
   

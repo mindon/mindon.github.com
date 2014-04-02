@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="It&#8217;s the begining of 2014. How about my 2013? Mindon Labs I&#8217;ve tried a few chrome apps and extensions. The most welcomed one is &#8220; &hellip;">
+  <meta name="description" content="突然想对电动机多了解一些，于是上淘宝搜了一下各种航模电动机。还是真是各种各样的，补习一下相关知识： 步进电动机 步进电机单靠交流供电或直流电源无法运动，必须与驱动电路同时使用时才能发挥其功能，驱动器（驱动电路）由决定换向顺序的控制电路（或称为逻辑电路）与控制电机输出功率的换相电路（或称为功率电路（ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/01/e-diy-tech-info/">DIY知识点滴</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T14:18:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>突然想对电动机多了解一些，于是上淘宝搜了一下各种航模电动机。还是真是各种各样的，补习一下相关知识：</p>
+
+<h2>步进电动机</h2>
+
+<p>步进电机单靠交流供电或直流电源无法运动，必须与驱动电路同时使用时才能发挥其功能，驱动器（驱动电路）由决定换向顺序的控制电路（或称为逻辑电路）与控制电机输出功率的换相电路（或称为功率电路（power stage））组成。步进电机驱动是的步骤： 1，要提供适合于步进电机所需要的电源； 2，需要输入脉冲和方向信号，一般是按TTL标准电平，输入一个步进脉冲，电机就步进一个步距角； 3，驱动器的输出：A+,A-,B+,B-，由驱动器去完成。 (不需输入包含A+,A-,B+,B- 4个端口高低电平的信息)</p>
+
+<p><a href="http://zhidao.taobao.com/detail/-3F713DB2BDBDF8B5E7BBFAD1A1D0CDCEE5B4F3B2BD.html">步进电机选型五大步</a></p>
+
+<p>步进电机可以作为一种控制用的特种电机，利用其没有积累误差(精度为100%)的特点，广泛应用于各种开环控制。</p>
+
+<p>步进电动机的主要缺点是效率较低，并且需要专用电源供给电脉冲信号，带负载惯量的能力不强，在运行中会出现共振和振荡问题。</p>
+
+<h2>无刷马达</h2>
+
+<p>直流电机具有响应快速、较大的起动转矩、从零转速至额定转速具备可提供额定转矩的性能。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/03/01/e-diy-tech-info/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -401,112 +456,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/20/android-data-and-folders/">Android App Data & Folders</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-20T11:16:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Context context = getApplicationContext();</p>
-
-<h2>SQLite Databases</h2>
-
-<pre><code>context.getDatabasePath("myDbName")
-</code></pre>
-
-<h2>Cache</h2>
-
-<p>System will clean it auto if low memory</p>
-
-<pre><code>context.getCacheDir()
-</code></pre>
-
-<h2>Lib</h2>
-
-<p>context.getFilesDir()</p>
-
-<h2>Apk &amp; resources path</h2>
-
-<p>context.getPackageCodePath()
-context.getPackageResourcePath</p>
-
-<h2>Shared Preferences</h2>
-
-<p>getSharedPreferences()
-getPreferences()</p>
-
-<h2>Internal Storage</h2>
-
-<p>removed when uninstall the app
-MODE_PRIVATE | MODE_APPEND | MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE</p>
-
-<pre><code>FileOutputStream fos = openFileOutput(flName, Context.MODE_PRIVATE);    
-fos.write(content.getBytes());    
-fos.close();  
-</code></pre>
-
-<h2>Internal Files Operations</h2>
-
-<p>Internal files path</p>
-
-<p>.getDir()
-.getFilesDir()
-.deleteFile()
-.fileList</p>
-
-<h2>External Storage</h2>
-
-<p><strong>Checking media availability</strong></p>
-
-<p>.getExternalStorageState()</p>
-
-<p>Environment.MEDIA_MOUNTED | MEDIA_MOUNTED_READ_ONLY</p>
-
-<pre><code>Environment.getExternalStorageDirectory()
-
-
-Environment.getExternalStoragePublicDirectory(
-        Environment.DIRECTORY_PICTURES
-    )
-
-
-&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
-</code></pre>
-
-<p>.getExternalStoragePublicDirectory()</p>
-
-<p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
-
-<p>.getExternalCacheDir()</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -554,7 +503,7 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 72 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 73 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 29 )</li>
 
@@ -564,7 +513,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 11 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 12 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 15 )</li>
 
@@ -573,6 +522,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
@@ -608,10 +561,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/06/ultimeyes-to-improve-your-vision/">UltimEyes: to Improve Your Vision?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/02/time-and-advanced/">时间和先进</a>
       </li>
     
   </ul>

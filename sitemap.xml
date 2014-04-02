@@ -549,12 +549,18 @@
         <lastmod>2014-04-01T08:21:59+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/
+        </loc>
+        <lastmod>2014-04-02T21:19:26+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://mindon.github.com/about/</loc>
         <lastmod>2014-03-01T14:26:00+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/archives/</loc>
-        <lastmod>2014-04-01T08:21:59+08:00</lastmod>
+        <lastmod>2014-04-02T21:19:26+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/blog/categories/</loc>
@@ -562,7 +568,7 @@
     </url>
     <url>
         <loc>http://mindon.github.com/</loc>
-        <lastmod>2014-04-01T08:21:59+08:00</lastmod>
+        <lastmod>2014-04-02T21:19:26+08:00</lastmod>
     </url>
     <url>
         <loc>http://mindon.github.com/note/</loc>
