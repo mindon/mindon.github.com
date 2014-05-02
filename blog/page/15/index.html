@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="This a kind of c-style code comments to switch two blocks of code for debug or testing. /*/ //... Section A (commented)
-/*/ //... Section B (working &hellip;">
+  <meta name="description" content="编写原则： 全局规则之一，不要写&lt;style&gt;标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。
+全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/24/how-to-write-a-mail-in-html/">How to Write a Mail in HTML</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-24T12:07:00+08:00" pubdate data-updated="true">Mar 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>编写原则：</h2>
+
+<ol>
+<li><p>全局规则之一，不要写<code>&lt;style&gt;</code>标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。</p></li>
+<li><p>全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p></li>
+<li><p>不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
+<li><p>style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
+<code>&lt;td background=”http://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;</code></p></li>
+<li>div模式的邮箱不支持flash，iframe模式的有待验证。</li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/24/how-to-write-a-mail-in-html/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -426,83 +477,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/15/words-that-sound-different/">Absurd</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-15T20:30:00+08:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The video from youtube <a href="http://www.youtube.com/watch?v=R281PhQufHo"><strong>GDC 2012</strong> - Porting your game to NaCl</a>.</p>
-
-<p>When I finished watching this video at noon, I visit the speaker&#8217;s Google+. There I see this sentence as his motto</p>
-
-<p><strong>Colt McAnlis</strong> &#8211; &#8220;If at first, the idea is not absurd, then there is no hope for it&#8221;</p>
-
-<p>This is the first time I met the word: <strong>absurd</strong>!</p>
-
-<p>Another article “Man, give it five minutes.”</p>
-
-<p><a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">http://37signals.com/svn/posts/3124-give-it-five-minutes</a></p>
-
-<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p>
-
-<p>Dismissing an idea is so easy because it doesn’t involve any work. You can scoff at it. You can ignore it. You can puff some smoke at it. That’s easy. The hard thing to do is protect it, think about it, let it marinate, explore it, riff on it, and try it. The right idea could start out life as the wrong idea.</p>
-
-<p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
-
-<p>“Your first design may be the best, but you won&#8217;t know until you can&#8217;t find a better one.”</p>
-
-<p><a href="http://blog.intercom.io/criticism-and-two-way-streets/">http://blog.intercom.io/criticism-and-two-way-streets/</a></p>
-
-<h2>Working on TikTalk</h2>
-
-<p>This time, when we start a new product. I need a name for it: I choose tiktalk hoping the product could be someting like a drop of water in the ocean of internet: providing a kind of driving force of a website&#8217;s life.</p>
-
-<p>A name for product is importance to express our idea, activate our creative power to push it forward. (I learn this from the global mail project last year.)</p>
-
-<p>It&#8217;s a hard work during these 3 weeks:</p>
-
-<ol>
-<li><p>Design the front-end &amp; back-end frameworks</p></li>
-<li><p>Setup service of back-end</p></li>
-<li><p>Rewrite front-end codes</p></li>
-</ol>
-
-
-<p>Today, finish front-end demo: a few features in detail, fixing bugs&#8230;</p>
-
-<p>TikTalk is working fine! :-)</p>
-
-<p>Next week, making back-end service more stable &amp; flexible is big challenge for me.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/16/">&larr; Older</a>
@@ -552,7 +526,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 75 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 31 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -569,6 +543,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
@@ -604,10 +582,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/16/a-ui-unit/">A UI Unit</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/">QML Features Should be in BlackBerry 10 OS</a>
       </li>
     
   </ul>

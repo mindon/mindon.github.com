@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-05-02T10:29:03+08:00</updated>
+  <updated>2014-05-02T11:13:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
+    <link href="http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
+    <updated>2014-05-02T11:09:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
+    <content type="html"><![CDATA[<p>The Pop animation engine is responsible for all of the transitions and animations displayed on Paper, including all scrolling, bouncing, and unfolding effects.</p>
+
+<p>source code: <a href="https://github.com/facebook/pop">https://github.com/facebook/pop</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
@@ -125,27 +136,6 @@
 
 
 <p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The PHP-CLD: Chromium Compact Language Detector for PHP]]></title>
-    <link href="http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/"/>
-    <updated>2013-02-06T00:05:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php</id>
-    <content type="html"><![CDATA[<p>Find a fantasy extension for php to detect string language.</p>
-
-<p><a href="https://github.com/lstrojny/php-cld">https://github.com/lstrojny/php-cld</a></p>
-
-<p><a href="http://code.google.com/p/chromium-compact-language-detector/">http://code.google.com/p/chromium-compact-language-detector/</a></p>
-
-<p>It needs some changes to complie as dll in VC++ 2010 Express. But easy to make the so under linux.</p>
-
-<p>I'd spent the whole day to make research on language detect modules for php, it's the best and now works fine in my project.</p>
-
-<p>Thanks, <a href="https://github.com/lstrojny">Lars Strojny</a> from github.</p>
-
-<p>Don't hesitate to use php-cld when you need something like this in php.</p>
 ]]></content>
   </entry>
   

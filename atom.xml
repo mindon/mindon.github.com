@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-05-02T10:29:03+08:00</updated>
+  <updated>2014-05-02T11:13:20+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
+    <link href="http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
+    <updated>2014-05-02T11:09:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
+    <content type="html"><![CDATA[<p>The Pop animation engine is responsible for all of the transitions and animations displayed on Paper, including all scrolling, bouncing, and unfolding effects.</p>
+
+<p>source code: <a href="https://github.com/facebook/pop">https://github.com/facebook/pop</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
@@ -77,7 +88,10 @@
     <id>http://mindon.github.com/blog/2014/04/08/know-the-wangzhi</id>
     <content type="html"><![CDATA[<p>怎么从一句话里看明白网址里包含的意思？</p>
 
-<p><img src="http://mindon.github.com/images/blog/url.jpg" alt="" /></p>
+<!--more-->
+
+
+<p><img src="http://mindon.github.com/images/blog/url.jpeg" alt="" /></p>
 ]]></content>
   </entry>
   
@@ -867,25 +881,6 @@
 <p>Thanks and best wishes for all friends on the Earth :-)</p>
 
 <p><i id="link-tags">BlackBerry 10;Blackberry;Mobile Chrome App;Node.JS;WeChat;QNX;QML;HKU Space;Chrome Package App;Apache Cordova</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Finally My Nexus 7 updated to 4.4 KitKat]]></title>
-    <link href="http://mindon.github.com/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat/"/>
-    <updated>2013-11-26T20:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/11/26/finally-my-nexus-7-updated-to-4-dot-4-kitkat</id>
-    <content type="html"><![CDATA[<p>This morning, the OTA Android <a href="http://www.android.com/kitkat/">KitKat 4.4</a> finally reached my Nexus 7 (2012) and Aby&#8217;s Nexus 7 (2013). It&#8217;s a long time waiting.</p>
-
-<p>Nov. 13, 2013 Google announced that its Nexus 7 and Nexus 10 tablets are getting Android 4.4 KitKat. After clicking check update 13 days later, it&#8217;s such a long time :-p</p>
-
-<p><img src="http://mindon.github.com/images/blog/n7-kitkat.jpg" alt="" /></p>
-
-<p>There&#8217;s no ART in KitKat for Nexus 7 (2012). ( <a href="https://code.google.com/p/android/issues/detail?id=62375">ART runtime is missing in Android 4.4 on Nexus 7 (2012)</a> )</p>
-
-<p>Some apps are not working well under ART mode. some crashed. <a href="http://www.androidruntime.com/list">List of broken apps in Android RunTime</a></p>
-
-<p>KitKat’s WebView is powered by Chromium, enabling Android app developers to use new HTML5 and CSS features.  <a href="http://developer.android.com/guide/webapps/migrating.html">Migrating to WebView in Android 4.4</a></p>
 ]]></content>
   </entry>
   
