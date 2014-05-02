@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Jared Rosoff Each logical db has its own set of files in your dbpath. You can find them as .. If you&#8217;re using directory-per-db option, then &hellip;">
+  <meta name="description" content="This a kind of c-style code comments to switch two blocks of code for debug or testing. /*/ //... Section A (commented)
+/*/ //... Section B (working &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +89,180 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/22/magic-code-switching-comment-syntax/">Magic Code Switching Comment Syntax</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-22T23:58:00+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<pre><code>/*/
+  //... Section A (commented)
+/*/
+  //... Section B (working)
+//*/
+</code></pre>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<pre><code>//*/
+  //... Section A (working)
+/*/
+  //... Section B (commented)
+//*/
+</code></pre>
+
+<p>Another simple section comment:</p>
+
+<pre><code>//*/
+  //... working
+//*/
+</code></pre>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<pre><code>/*/
+  //... commented
+//*/
+</code></pre>
+
+<ul>
+<li><p>Curiosity</p></li>
+<li><p>Passion</p></li>
+<li><p>Focus</p></li>
+<li><p>Fun</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/21/javascript-micro-templating/">Javascript Micro-Templating</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-21T10:52:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a modification version of <strong>John Resig</strong>&#8217;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<p>The modifications are mostly about filters for field values.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&#8217;s really simple, easy-to-use.</p>
+
+<blockquote><p>I&#8217;ve had a little utility that I&#8217;ve been kicking around for some time now that I&#8217;ve found to be quite useful in my JavaScript application-building endeavors. It&#8217;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.</p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/21/javascript-micro-templating/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Redis tutorial</h2>
+
+<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
+
+<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+
+<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
+
+<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
+<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
+
+<p><strong>Salvatore Sanfilippo：</strong>
+Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/redis-remote-dictionary-server/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -328,171 +503,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/key-of-tcm-recommended-books/">Key of TCM &#8211; Recommended Books</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T15:13:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>《醫鑰》推薦閱讀</h2>
-
-<ul>
-<li><p>《黃帝內經》</p></li>
-<li><p>《神農本草經》</p></li>
-<li><p>《傷寒論》</p></li>
-<li><p>《金匱》</p></li>
-<li><p>《針灸大成》</p></li>
-<li><p>《傷寒雜病論》</p></li>
-<li><p>《千金藥方翼方》（古籍部分）</p></li>
-</ul>
-
-
-<p><strong>近代書籍</strong></p>
-
-<ul>
-<li><p>《中西匯通醫書五種》（四川 唐容川 字宗海 著）</p></li>
-<li><p>《傷寒發微，金匱發微》（江蘇淮陰 曹穎甫 著）</p></li>
-<li><p>《傷寒論新義，金匱要略新義》（餘無言著）</p></li>
-<li><p>《單穴治病選萃》（人民衛生出版社）</p></li>
-<li><p>《疾病預測學》（楊力 著，北京科學出版社）</p></li>
-<li><p>《經方實驗錄》（姜佐景 著）</p></li>
-<li><p>《針灸大成》（明朝 楊繼州 編寫）</p></li>
-</ul>
-
-
-<h2>麥盾推薦閱讀</h2>
-
-<ul>
-<li><p>《<a href="http://big5.ifeng.com/gate/big5/book.ifeng.com/lianzai/detail_2010_02/07/339087_0.shtml">問中醫幾度秋涼(艾寧)</a>》</p></li>
-<li><p>《<a href="http://www.verycd.com/topics/2824440/">醫鑰——揭開中醫的奧秘(彭奕竣)</a>》</p></li>
-<li><p> <a href="http://jicheng.sabi.tw/jcw/">笈成資料庫</a>: 笈成是一個收集、整理中醫藥典籍的開放計畫，未來也會考慮納入醫家、中藥、方劑、方歌資料的整理。</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/10/programmers-are-born-not-made/">激情 - Passion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-10T14:04:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Passion</h2>
-
-<blockquote><p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
-
-<p>That’s passion!</p>
-
-<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
-
-<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
-
-<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p></blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/10/programmers-are-born-not-made/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/08/for-my-dear-aby/">For My Darling: Aby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-08T13:15:00+08:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Aby, 在一起的日子里，你带来了丰富多彩的生活，让我每天都能体会到幸福的滋味。谢谢你，宝贝。</p>
-
-<p>最想对你说的还是那三个字 :-) <a href="http://mindon.appspot.com/i-love-u">I love you</a>。其实，用多少种语言也难以表达这种从心底溢出的感情。</p>
-
-<p><img src="/images/blog/roses/red-rose.jpg" alt="Rose" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/08/for-my-dear-aby/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/16/">&larr; Older</a>
@@ -540,9 +550,9 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 73 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 75 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 29 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 31 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -552,13 +562,25 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 12 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 15 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 16 )</li>
 
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
@@ -586,18 +608,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/">QML Features Should be in BlackBerry 10 OS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/15/basic-abilities-of-intelligent/">Basic Abilities of Intelligent</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/10/the-lost-of-mh370/">The Lost of MH370</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/06/ultimeyes-to-improve-your-vision/">UltimEyes: to Improve Your Vision?</a>
       </li>
     
   </ul>

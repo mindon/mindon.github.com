@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-04-02T21:27:43+08:00</updated>
+  <updated>2014-05-02T10:29:03+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
+    <link href="http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
+    <updated>2014-05-02T08:26:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
+    <content type="html"><![CDATA[<p>I'd developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
+
+<p>The tool doesn't care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
+
+<p>It's a simple aid tool only, not much time to improve.</p>
+
+<p>I'm always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
+
+<p>Last month, I found one: the <a href="http://highlightjs.org/">highlightjs</a>!</p>
+
+<p>Yes, it knows lots of programming languages - that's what I'm looking for.</p>
+
+<!--more-->
+
+
+<p>I try to update the core js to testing the idea - it works: Using syntax highlight library to extract strings.</p>
+
+<p>It's great!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[从一句话里读懂网址]]></title>
+    <link href="http://mindon.github.com/blog/2014/04/08/know-the-wangzhi/"/>
+    <updated>2014-04-08T10:14:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/04/08/know-the-wangzhi</id>
+    <content type="html"><![CDATA[<p>怎么从一句话里看明白网址里包含的意思？</p>
+
+<p><img src="/images/blog/url.jpg" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
@@ -178,64 +215,6 @@
 <blockquote><p> The Android Wear Preview app is compatible with Android 4.3 and higher and is not available for the Android emulator.</p></blockquote>
 
 <p><span id="link-tags">Android Wear Preview;Wear Preview App apk</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A false linkable text sample]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/"/>
-    <updated>2014-03-20T05:08:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample</id>
-    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It's awkful, right? It's on Google+! The Google - who leads the web tech.</p>
-
-<p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
-
-<p>I've double checked it in my WeChat under Android - it's there too. But not in the WeChat for BlackBerry 10.</p>
-
-<!--more-->
-
-
-<p>The false link sample is like this:</p>
-
-<p><strong>(http://mindon.github.io?testing)...something-else</strong></p>
-
-<p>Here's a snapshot from Google+</p>
-
-<p><img src="/images/blog/false-link.jpg" alt="" /></p>
-
-<p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
-
-<p>Our test team and I could not accept this result in WeChat for BlackBerry 10, then here comes my customized linkable text detecting code in JavaScript.</p>
-
-<script src="https://gist.github.com/mindon/9317393.js"></script>
-
-
-<p>It helps to avoid this issue and provides you the customized possibility.</p>
-
-<p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A callstack trace for QML js]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
-    <updated>2014-03-20T05:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
-    <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That's where BlackBerry 10 comes from.</p>
-
-<p>The last year (2013), we'd spent lots of time on the WeChat for BlackBerry 10.</p>
-
-<p>QML tech is good for an mobile app UI, using JavaScript. And there's no <code>console.trace()</code> in QML to trace the callstacks, here's mine:</p>
-
-<!--more-->
-
-
-
-
-<script src="https://gist.github.com/mindon/9524222.js"></script>
-
-
-<p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
 ]]></content>
   </entry>
   
