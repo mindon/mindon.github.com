@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-05-02T11:13:20+08:00</updated>
+  <updated>2014-06-17T06:44:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,217 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
+    <link href="http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools/"/>
+    <updated>2014-06-17T06:00:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools</id>
+    <content type="html"><![CDATA[<p>原型设计工具推荐</p>
+
+<p>Here&#8217;s some great free prototype design tools:</p>
+
+<h2>AXure RP</h2>
+
+<p>An Interactive Wireframe Software and Mockup Tool.</p>
+
+<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec&#8230; and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
+
+<p><a href="http://www.axure.com/">Axure RP</a> 是一个专业的快速原型设计工具。Axure（发音：Ack-sure），代表美国Axure公司；RP则是Rapid Prototyping（快速原型）的缩写。</p>
+
+<p>Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。</p>
+
+<h2>Origami</h2>
+
+<p><a href="http://facebook.github.io/origami/">Origami</a> is a free design prototyping with Quartz Composer — created by the Facebook Design team—that makes interactive design prototyping easy and doesn’t require programming.</p>
+
+<!--more-->
+
+
+<p>Quartz Composer is a freely-available Mac OS X application by Apple that&#8217;s been around for nearly a decade.</p>
+
+<p>Origami 是一个来自 Facebook 设计团队的作品，是 Quartz Composer 的免费工具包，可在无需编程的情况下轻松实现与设计原型进行交互。</p>
+
+<h2>Balsamiq Mockups</h2>
+
+<p>Balsamiq <a href="http://webdemo.balsamiq.com/">Web Demo</a></p>
+
+<p>Founded in March 2008, Balsamiq Studios aims to make the world a better place by helping people create software that is easier to use. Balsamiq is a fast-growing but still-very-personable software company. We like to compete on usability and customer service. Our first product is Balsamiq Mockups. Launched in June 2008, Mockups helps software designers and developers build great software by letting them easily sketch out their ideas, then quickly collaborate and iterate over them. Balsamiq Mockups has netted over $2,000,000 in sales in first 18 months of business and is gathering rave reviews.</p>
+
+<p>Balsamiq Mockups是一种软件工程中快速原型的建立软件，可以做为与用户交互的一个界面草图，一旦客户认可可以做为美工开发HTML的原型使用。</p>
+
+<p>Balsamiq Mockups是美国加利福利亚的Balsamiq工作室（2008年3月创建）推出的原型图绘制软件。于2008年6月发行了第一个版本。它的使命是帮助人们更好、更容易的设计软件产品。</p>
+
+<h2>Framer</h2>
+
+<p><a href="http://framerjs.com/">FRAMER.JS</a> is a prototyping toolkit built for designers to turn static mockups into prototypes with animation &amp; interaction. <a href="http://github.com/koenbok/Framer">Github</a></p>
+
+<p>Framer是一款基于JavaScript的开源原型框架，可以帮助开发者及设计师轻而易举地创建出非常逼真的应用原型，还包括滤镜、弹性物理、完整的3D效果等。Framer能够同时应用于桌面和移动设备之上，通过它，开发者或设计师只需简单地创建图像、事件等模块即可构建和测试复杂的交互和动画。</p>
+
+<h2>Pencil</h2>
+
+<p>An open-source GUI prototyping tool that&#8217;s available for ALL platforms.</p>
+
+<p><a href="http://pencil.evolus.vn/">Pencil</a> is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.</p>
+
+<p>Pencil provides various built-in shapes collection for drawing different types of user interface ranging from desktop to mobile platforms.</p>
+
+<p>Pencil 是一款开源的原型图绘制工具，手绘风格的，就像自己在纸上画的那样。Pencil 还可以用来绘制各种架构图和流程图，同时还提供 Firefox 的插件。</p>
+
+<h2>Solidify</h2>
+
+<p>Make Interface Screens Come To Life</p>
+
+<p><a href="http://solidifyapp.com/">Solidify</a> is the quickest way to prototype interface screens for user testing feedback across devices.</p>
+
+<p>Solidify lets you create clickable prototypes from sketches, wireframe, or mockup. Validate user flows on any device by performing user tests in person, remotely or on your testers own time to get the feedback you need.</p>
+
+<p> Solidify 出自ZURB公司，允许用户从模型，线框或者草图创建可以点击的原型。通过它，可以对界面交互可以快速产生原型。而且，这些原型可以很容易的测试是否可以适用于平板，个人电脑或者手机。</p>
+
+<h2>others</h2>
+
+<p>Generator, InVision, PowerMockup, Antetype, UXPin, QuirkTools, Wireframe.CC, Easel, Proto.io, POP</p>
+
+<p><a href="http://designmodo.com/wireframing-prototyping-tools/">10 Wireframing and Prototyping Tools for 2013</a></p>
+
+<p><span id="link-tags">Quartz Composer;Balsamiq Studios;PowerMockup;InVision;Antetype;Wireframe.CC</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
+    <link href="http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/"/>
+    <updated>2014-06-17T05:38:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language</id>
+    <content type="html"><![CDATA[<p><strong> Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
+
+<p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
+
+<p>Work on Swift—Apple&#8217;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
+
+<p><strong>LLVM</strong></p>
+
+<p>Rather than being an entirely new &#8220;beta&#8221; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&#8217;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
+
+<h2>LLVM: A new compiler for Objective-C</h2>
+
+<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&#8217;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
+
+<p><strong>Chris Lattner</strong></p>
+
+<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&#8217;s objc-language mailing list. Apple in turn began contributing to Lattner&#8217;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
+
+<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&#8217;s Xcode.</p>
+
+<!--more-->
+
+
+<p>In addition to the &#8220;pure&#8221; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &#8220;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&#8221; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&#8217;s OS X.</p>
+
+<p>GCC&#8217;s support for Objective-C, the primary development language of Apple&#8217;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&#8217;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&#8217;s Objective-C relevant as a language.</p>
+
+<p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
+
+<p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
+
+<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&#8217;s software, but is also tightly integrated into the development of Apple&#8217;s custom silicon, including the A6 and A7 Application Processors.</p>
+
+<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&#8217;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
+
+<h2>Swift: A new language for LLVM</h2>
+
+<p>By 2010, LLVM&#8217;s solution to GCC&#8217;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &#8220;a few other (amazing) people.&#8221;</p>
+
+<p>By July 2013, Lattner noted that the new Swift project had become &#8220;major focus for the Apple Developer Tools group.&#8221; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &#8220;took over management and leadership of the entire Developer Tools department at Apple&#8221; at the beginning of 2013.</p>
+
+<p>&#8220;In addition to compilers and low-level tools,&#8221; Lattner notes, &#8220;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&#8221;</p>
+
+<p>Lattner noted that the new Swift language &#8220;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&#8221;</p>
+
+<p>Apple&#8217;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &#8220;Swift has been years in the making,&#8221; adding that &#8220;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
+
+<p>&#8220;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&#8221;&#8220;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&#8221;</p>
+
+<p>The company also observes that Swift &#8220;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&#8221;</p>
+
+<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &#8220;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&#8221;</p>
+
+<h2>Swift&#8217;s Interactive Playgrounds &amp; REPL</h2>
+
+<p>Lattner also commented on two new features associated with Swift: Xcode&#8217;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
+
+<p>&#8220;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&#8221; Lattner noted. &#8220;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
+
+<p>&#8220;Playgrounds were heavily influenced by Bret Victor&#8217;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&#8217;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
+
+<p>&#8220;I hope that by making programming more approachable and fun, we&#8217;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&#8221; Lattner stated.</p>
+
+<p>Apple&#8217;s presentation of Swift notes that &#8220;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&#8217;ve perfected your code in the playground, simply move that code into your project.&#8221;</p>
+
+<p>The company states that Xcode&#8217;s Playground lets users &#8220;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&#8221;</p>
+
+<p>Apple notes that the REPL debugging console in Xcode &#8220;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&#8221;</p>
+
+<p>Apple says it plans to rapidly evolve Swift in response to developers needs and feature requests.</p>
+
+<p>Thinkful, an education startup focused on mentor-led programming education, has already announced plans to offer a <a href="https://www.thinkful.com/a/dlp/learn-blue/base/IOS-002">course on developing in Swift</a>, in a program that begins July 16.</p>
+
+<p><span id="link-tags">iOS;XCode;Clang;Chris Lattner;LLVM;Objective-C;Swift;NeXTStep;REPL</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于健康，我们忘掉了什么？]]></title>
+    <link href="http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health/"/>
+    <updated>2014-06-14T20:30:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health</id>
+    <content type="html"><![CDATA[<p>当我们在争论中医还是西医更强大更有效的时候，不自觉中却忘掉了医术是为什么而生的。而身体的状态和需求，才是医术需要关注的主角。</p>
+
+<p>第一次在书城看到王唯工教授的《气的乐章》已经是数年前的事情了，至今依旧印象深刻。这是难得的一部结合现代科学技术来解读传统中医原理的著作：试图解释人体身上看起来不寻常的结构和状态。《气的乐章》以心脏的博动为核心，五脏处于不同共振谐波态，之间通过共振来交互协调。</p>
+
+<p>上周末看了几年前梁冬主持的《国学堂》对话王唯工教授的节目，提到了另外一本《水的漫舞》，讲述的是二氧化碳和酸水的危害。这两本书都是王唯工教授近三十余年来用现代科学实验手段通过试验和实践总结出来的成果，给现代医学的发展带来了令人鼓舞的火花。其中具体的细节和观点可能跟复杂的实际多少可能会有所偏向，也不一定就是真理。但带来的思考和对未来中医发展方向的反思确是异常宝贵的。</p>
+
+<p>抛开医学的阵营，一切繁复丰富的技术和理论，如果回归到人体这个生命体本身，医术需要关注的是什么呢？</p>
+
+<!--more-->
+
+
+<ul>
+<li><p>2009年6月8日，法国人斯蒂凡·弗苏闭气时间达到11分35秒，创造了一项静止闭气世界纪录。</p></li>
+<li><p>人的核心体温为37摄氏度，降到大约24度时心跳就会停止，导致死亡。</p></li>
+<li><p>即使在寒冷的环境中（水流失速度缓慢），没有水，人们也只能坚持7天左右。</p></li>
+<li><p>1963年12月28日，加利福尼亚州圣地亚哥的17岁在校生兰迪·加德纳从起床开始，创下的264小时（11天）记录至今仍是科学验证过的最长的不睡觉时长。</p></li>
+<li><p>最长时不进食记录者是1981年爱尔兰绝食抗议者基兰·多尔蒂，他在绝食73天后死去。在补充维生素和水的情况下，人们可以不吃东西活一年。</p></li>
+</ul>
+
+
+<p>由此可见，人体要保持正常，首要的是氧气，然后是水，再则是食物。另外要保持正常的体温，充足的睡眠。</p>
+
+<p>从维持生命体最基本的条件，我们才能更清楚地了解身体的状态，并进行适当的调整和干预。</p>
+
+<ol>
+<li>氧气； 2. 水份； 3. 食物； 4. 体温； 5. 睡眠</li>
+</ol>
+
+
+<p>可以预见，人体故障除物理损伤以外，大多都是跟人体生存基本条件的供给和传输变化有关的。</p>
+
+<ul>
+<li><p>氧气作为生存的首要条件，对应的获取途径是呼吸系统（鼻腔、呼吸道、肺），传输相关系统（心脏、血管）。</p></li>
+<li><p>水分的重要作用是作为介质，为氧气和养份的传入和吸收提供协助，以及排出代谢产物的功能。</p></li>
+<li><p>食物则作为系统正常运作所需能量和养份的主要提供途径，也是氧气消耗的主战场。</p></li>
+<li><p>体温是人体维持正常运作最直接的环境因素，会直接影响到氧气在体内的化学反应和物理作用。</p></li>
+<li><p>睡眠则是人体进行系统故障修复，代谢产物处理的核心场景。</p></li>
+</ul>
+
+
+<p>紧急程度相对低必要程度相对低的健康条件，必然是为核心健康条件服务的，而且在关键情况下是可以牺牲的，这就是生病的根本原因：系统为了保障核心健康条件的满足，要减少次要因素的供给，甚至放弃局部的功能。</p>
+
+<p>这是从王唯工教授那里得来的启示。从这个指导思想出发，整理、发展和完善现有的医学技术，而不是割裂中医和西医，才能营造一个健康领域的新纪元。</p>
+
+<p>科学从来都是面向未来的，而不是停步在过去和现在。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
@@ -698,189 +909,6 @@
 <p><a href="http://www.guokr.com/article/81088/">自我CPR自救</a></p>
 
 <p><i id="link-tags">IBM;心肺复苏术;水湾站;CPR</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[大的变革已经在路上]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/01/big-changes-is-on-the-way/"/>
-    <updated>2014-03-01T19:47:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/01/big-changes-is-on-the-way</id>
-    <content type="html"><![CDATA[<p>阿里的余额宝，微信的理财宝带来的金融领域的变革已经势不可挡。</p>
-
-<p>电子科技飞速发展的今天，还有多少行业和领域依旧停留在数十年前的传统模式？有多少行业还依旧被个别机构垄断？</p>
-
-<p>金融业的变革迹象在引领着一场更大的变化，这个变化开始渗入日常的支付，虽然目前大家只看到了红包，网购、打车、充值和就餐的变化。在笔者看来，移动支付即将也必然会渗透到任何一个需要排队支付的地方，比如医院、景区、购票等等。任何一个需要消耗大家时间的支付场合，都应该实现移动的快速支付。</p>
-
-<!--more-->
-
-
-<p>阿里和腾讯的理财产品已经促进银行本身的改变。</p>
-
-<p>微信和滴滴打车，支付宝和快的打车则引领着支付方式的变革。</p>
-
-<p>中国的高速物流也同样在引领着世界物流的发展。</p>
-
-<p>近年来比特币的火热，也预示着金融互联网化的一种趋势，虽然比特币广受政府机构抵制，这些月来还爆Mt.Gox巨额亏损破产的消息；但是，金融行业的互联网化，特别是移动互联网化的行动已经迈开脚步，是任何势力都无法阻止的。</p>
-
-<p>金融的变革必然带来很多问题和变化，大大提高人们的支付效率以及货币的流通速度。</p>
-
-<p>电子商务的变革也带给传统商店不小的冲击。</p>
-
-<p>所有的这些正在起跑的变革，会把我们的未来引向何处？又会带来什么样难以预想的变化呢？我们拭目以待。</p>
-
-<p><i id="link-tags">电子商务;比特币;余额宝;理财宝;腾讯;阿里;滴滴打车;支付宝;快的打车</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DIY知识点滴]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/01/e-diy-tech-info/"/>
-    <updated>2014-03-01T14:18:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/01/e-diy-tech-info</id>
-    <content type="html"><![CDATA[<p>突然想对电动机多了解一些，于是上淘宝搜了一下各种航模电动机。还是真是各种各样的，补习一下相关知识：</p>
-
-<h2>步进电动机</h2>
-
-<p>步进电机单靠交流供电或直流电源无法运动，必须与驱动电路同时使用时才能发挥其功能，驱动器（驱动电路）由决定换向顺序的控制电路（或称为逻辑电路）与控制电机输出功率的换相电路（或称为功率电路（power stage））组成。步进电机驱动是的步骤： 1，要提供适合于步进电机所需要的电源； 2，需要输入脉冲和方向信号，一般是按TTL标准电平，输入一个步进脉冲，电机就步进一个步距角； 3，驱动器的输出：A+,A-,B+,B-，由驱动器去完成。 (不需输入包含A+,A-,B+,B- 4个端口高低电平的信息)</p>
-
-<p><a href="http://zhidao.taobao.com/detail/-3F713DB2BDBDF8B5E7BBFAD1A1D0CDCEE5B4F3B2BD.html">步进电机选型五大步</a></p>
-
-<p>步进电机可以作为一种控制用的特种电机，利用其没有积累误差(精度为100%)的特点，广泛应用于各种开环控制。</p>
-
-<p>步进电动机的主要缺点是效率较低，并且需要专用电源供给电脉冲信号，带负载惯量的能力不强，在运行中会出现共振和振荡问题。</p>
-
-<h2>无刷马达</h2>
-
-<p>直流电机具有响应快速、较大的起动转矩、从零转速至额定转速具备可提供额定转矩的性能。</p>
-
-<!--more-->
-
-
-<p>有刷马达的碳刷及整流子在电机转动时会产生火花。</p>
-
-<p><strong>内转子</strong>，就是将线圈绕于马达外侧，将转子制成棒状，固定于马达内。在不需要特别大的扭力，转速高情况下采用。</p>
-
-<p><strong>外转子</strong>，则是将线圈绕组置于内部，将磁铁制成特殊形状，在外侧围绕内置的线圈转动。在需要大扭力的场合下使用。</p>
-
-<p><strong>KV值</strong>是无刷马达的转速指标，是指每增加1V电压，马达转速增加的数值。</p>
-
-<p>线圈绕组的数值是T数，或者R（NOVAK的都用R表示，其他很多用T表示）。一般来说，无刷T（或者R）的数值和此数值2倍的有刷马达相当.</p>
-
-<p>“无刷电调必须知道转子当前的位置，才能输出适当的电流来驱动马达。有感是通过装在马达上的感应器，感知转子当前的位置（相位）。 无感就是没有感应器，电调靠动力线上的电流变化判断转子相位。” &#8211;JOVI</p>
-
-<p>无感无刷的起步线性比较差。</p>
-
-<h2>霍尔元件</h2>
-
-<p>是一种基于霍尔效应的磁传感器。用它们可以检测磁场及其变化，可在各种与磁场有关的场合中使用。</p>
-
-<p>霍尔效应，是指磁场作用于载流金属导体、半导体中的载流子时，产生横向电位差的物理现象。</p>
-
-<p>金属的霍尔效应是1879年被 美国物理学家霍尔发现的。当电流通过金属箔片时，若在垂直于电流的方向施加磁场，则金属箔片两侧面会出现横向电位差。半导体中的霍尔效应比金属箔片中更为明显，而铁磁金属在居里温度以下将呈现极强的霍尔效应。</p>
-
-<p>Mark一个淘宝店：
-<a href="http://szjs88998899.taobao.com/shop/view_shop.htm?user_number_id=920426663"> 深圳杰盛电机</a></p>
-
-<h2>吸尘器</h2>
-
-<p>传统的吸尘器原理很简单：通过压缩机制造真空，将杂物、尘土和空气一起吸入，再用一个网眼密集的过滤装置（现在多为纸质的尘袋），将杂物、细小的尘埃挡在里面，把过滤过的空气排出吸尘器。</p>
-
-<p>戴森的吸尘器采用的Radial Root Cyclone（多圆锥气旋）技术，通过真空泵和气旋发生装置，在吸尘器机体内制造一个旋转上升的涡旋，就像一场小规模的龙卷风，灰尘和各种杂质在涡旋中旋转起来，被自身的离心力甩出气旋中心，落到气旋周围的尘杯中。</p>
-
-<p><a href="http://www.dyson.cn/vacuums.aspx">Dyson.CN</a></p>
-
-<p><a href="http://detail.tmall.hk/hk/item.htm?spm=a1z10.5.w4011-5310708660.59.sIYcRM&amp;id=36959234140&amp;rn=ca866e3781d42a98c7b984bf9b5d46ca">DC62</a></p>
-
-<p><i id="link-tags">Dyson;多圆锥气旋;霍尔效应;步进电机;无刷马达;吸尘器;航模</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[WeChat, BlackBerry, Apps and Web - My 2013]]></title>
-    <link href="http://mindon.github.com/blog/2014/01/02/wechat-blackberry-apps-and-web-2013/"/>
-    <updated>2014-01-02T20:56:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/01/02/wechat-blackberry-apps-and-web-2013</id>
-    <content type="html"><![CDATA[<p>It&#8217;s the begining of 2014.</p>
-
-<p>How about my 2013?</p>
-
-<h2>Mindon Labs</h2>
-
-<p>I&#8217;ve tried a few chrome apps and extensions. The most welcomed one is &#8220;Ingress Portals Finder&#8221;, published on Chrome webstore but taken down due to TOS problem. It&#8217;s tool for the game <strong>Ingress</strong>. Though it didn&#8217;t work any more due to the &lt;ingress.com> website API upgrades,  its donation reached $52. It was a inspired project, thanks to the ingress players who supports the chrome extension.</p>
-
-<p>The other simple Chrome extension with 4K+ installation is &#8220;Tips for WeChat&#8221;. It&#8217;s an experiment relative with my work.</p>
-
-<p>Another Chrome extension is GO2, it&#8217;s a simple helper to reach google search results when blocked by the GFW, it&#8217;s installation is around 2k.</p>
-
-<p>My first try on Chrome Package App is the <a href="https://chrome.google.com/webstore/detail/who/ankcmofggngiopfblnaojmiclfffinle/related">Who</a>, from the extension with the same name.</p>
-
-<p>Now i&#8217;m learning the Mobile-Chrome-App tech with Apache Cordova, to make it works under iOS and Android.</p>
-
-<!--more-->
-
-
-<p>Before this, I was trying to turn the extension &#8220;Ingress Portals Finder&#8221; into an Android App with the same idea just before the &lt;ingress.com> APIs updated.</p>
-
-<p>I love Chrome Package Apps. they works and looks amazing with the advantages of HTML5 and Javascript, CSS3 techs.</p>
-
-<p>Today, I find that the BlackBerry&#8217;s WebWorks SDK has updated to 2.0 beta, which is also using Apache Cordova. I&#8217;ve try a simple sample there and it works fine in my BlackBerry Q10 dev alpha device.</p>
-
-<p>Yes, the main cord of 2013 is mobiles apps.</p>
-
-<p>My first android app was published on Google Play as <a href="https://play.google.com/store/apps/details?id=com.mindon.idea.dasign">DaSign</a>, It&#8217;s a simple app about SVG (Scalable Vector Graphs), a interested topic.</p>
-
-<p>Then another 3 Chinese books android apps experiment on using HTML, CSS and JavaScript in mobile apps.</p>
-
-<p>They inpired me in mobile app developments.</p>
-
-<h2>The work</h2>
-
-<p>The main mobile app costing me months and months, is the BlackBerry 10 version of WeChat - the mobile app giant with 600M+ users. My main job in 2013 was make WeChat working on the BlackBerry 10 OS.</p>
-
-<p>It&#8217;s my first time got to know about QNX, QML and touched latest BlackBerry devices. I enjoyed the challenge.</p>
-
-<p>The year 2013, WeChat oversea reached 160M+ users. The WeChat BlackBerry 10 version released on BlackBerry world. Exciting!</p>
-
-<p>It&#8217;s a year of chanllenge, a year of overtime working. But it worths.</p>
-
-<p>Diving into BB10 for a WeChat app made me into a half-expert of BlackBerry 10 and QML.</p>
-
-<h2>Learning</h2>
-
-<p>Android, BlackBerry 10 Cascades Native App and WebWorks App development.</p>
-
-<p>Go language - I love the powerful language. (Google App Engine supports GO and PHP languages in 2013)</p>
-
-<p>Node.JS, now it&#8217;s everywhere. It&#8217;s my favorite. There&#8217;s free env on &lt;openshift.com>, both Node.JS and Go.</p>
-
-<p>Chrome Apps. I&#8217;ll try more in 2014.</p>
-
-<p>Apache Cordova will be my BlackBerry WebWorks and iOS, Android apps entrance for more app experiments. Mobile Chrome App will be great.</p>
-
-<h2>Life</h2>
-
-<p>It was the 7th year together with my darling Aby. She was so great in 2013. Plan our first travel to France and Italy. She studys IMC in HKU Space, studys English by herself, learned how to drive a car, and most of all making happiness around us. She&#8217;s amazing lady most important in my life. Make our 2013 such a wonderful year. At this moment, she is working on the 5k photos taken in France and Italy, two weeks from Apr to May, 2013 &#8211; pick the best of them and turn them into a photo book.</p>
-
-<p>We sat on the short wall on Concorde in Pair, at 8pm, watching the sunset lights pouring on the Avenue des Champs-Élysées. That&#8217;s most beautiful and happiest moments.</p>
-
-<p>In 2013, I&#8217;ve taken thousands of photos in France and Italy. Hundreds of photos using BlackBerry Z10 and Q10 &#8211; the new blackberry devices have a very good camera for daily life.</p>
-
-<h2>Other</h2>
-
-<p>Bought a Nexus 7 generation 2. A Jawbone is on my wrist as my birthday present from Aby. Wishing for a Moto X - but it&#8217;s too expensive and without a good enough camera; Want to buy a Nexus 5 next week from HK.</p>
-
-<p>Makers were so active in Shenzhen - a southern city in China.</p>
-
-<p>A share topic on BB 10 unfinished, lots of ideas waiting for being experimented.</p>
-
-<p>&#8230; &#8230;</p>
-
-<p>It was a busy, wonderful and growing year - the 2013.</p>
-
-<p>Thanks and best wishes for all friends on the Earth :-)</p>
-
-<p><i id="link-tags">BlackBerry 10;Blackberry;Mobile Chrome App;Node.JS;WeChat;QNX;QML;HKU Space;Chrome Package App;Apache Cordova</i></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="The video from youtube GDC 2012 - Porting your game to NaCl. When I finished watching this video at noon, I visit the speaker&#8217;s Google+. There &hellip;">
+  <meta name="description" content="Jared Rosoff Each logical db has its own set of files in your dbpath. You can find them as .. If you&#8217;re using directory-per-db option, then &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,168 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+
+<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+
+<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+
+<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+
+<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+
+<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+
+<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
+
+<h2>MongoDB数据文件内部结构</h2>
+
+<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
+
+<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/notes-on-mongodb/">Notes on MongoDB</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T11:12:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>MongoDB资料汇总专题</strong>
+<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
+
+<h2>MongoDB 最佳实践</h2>
+
+<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
+
+<p><strong>1. 始终启用备份</strong></p>
+
+<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
+二节点可以迅速启用，你的应用不会中断。</p>
+
+<p><strong>2. 使用最新版本</strong></p>
+
+<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
+和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
+，你应该尽快升级。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/notes-on-mongodb/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/">Lasers Can Be Used to Steer Lightning in Mid-Strike</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-15T22:23:00+08:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Laser light can not only trigger lightning but redirect it, causing it to strike in the same place over and over, according to new research. This means lasers could serve as lightning rods. Because that would be awesome.</p>
+
+<p>Laser lightning rods have been a research subject for several decades, because they could trigger lightning and guide it to a specific place. Firing a laser would create an ionized channel in the atmosphere, which could conduct the lightning to the ground. Laser lightning rods could be an alternative to lightning rockets, according to Aurlien Houard of the Laboratoire d&#8217;Optique Appliquée in Palaiseau, France, a co-author of this study. Lightning rockets can apparently trigger a lightning strike by bringing a conductive material, like some type of salts, toward the static layer of a thunderhead. But a laser would be easier to control than a rocket.</p>
+
+<p>A team of French researchers set out to test how well lasers can harness and control lightning. They sent a laser beam past a spherical electrode toward an oppositely charged flat electrode. The laser stripped away the outer electrons from the atoms in its way, ionizing the pathway between the electrodes and creating a plasma filament — like lab lightning — that channeled an electrical discharge from the flat electrode to the spherical one.</p>
+
+<p>Then the team added a longer, pointed electrode to their set of electrode shapes and watched what happened. Left to its own devices, lightning follows the path of least resistance, striking the first thing it comes across — in a thunderstorm, that’s the tallest thing, and in this experiment, it’s the nearest thing. With no laser lightning rod, the discharge predictably hit the tall pointed electrode first. But when the researchers used the laser filament to guide it, the electrical discharge followed the ionized path and hit the spherical electrode instead.</p>
+
+<p>The team found they could pull this off even after the discharge was already on its way, meaning they could divert the path of lightning. The research appears in the American Institute of Physics journal <a href="http://aipadvances.aip.org/resource/1/aaidbi/v2/i1/p012151_s1?bypassSSO=1">AIP Advances</a>.</p>
+
+<p>Original from POPSCI: <a href="http://www.popsci.com/technology/article/2012-03/lightning-can-strike-twice-if-you-have-some-lasers">Lasers Can Be Used to Steer Lightning In Mid-Strike</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -331,143 +493,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T20:21:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近，路边有一种阔叶树开始掉叶子了——这种树在三月里的几天内叶子大片大片往下掉，直至全部叶子都掉光。我第一次看到满地叶子、树干光秃秃的时候，还以为世界末日临近了呢——满树的绿叶几天内变黄落了满地。</p>
-
-<p>可是意外的是，再过一个星期，这树又满树的绿叶嫩芽了，长新叶子的速度跟落叶的速度一样——快得令人诧异。</p>
-
-<p>这种现象，要是放到医学里头会是很有趣的事情：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/falling-leafs-life-system/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Socket.IO Behind Proxy or Firewall</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T06:32:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected network outage can close your connection. Why is it a problem? It’s problematic when a disconnection happens as you may loose server side events if you don’t architect your application correctly.</p>
-
-<ul>
-<li><strong>long-polling</strong>: between reconnection, servers side events may happens and if they aren’t persisted, those events will never reach your client.</li>
-<li><strong>websocket</strong>: Websocket are new and most if not all firewall will close them after some X idle times. Again, all server sides events will be lost</li>
-<li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
-<li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.</li>
-</ul>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/socket-dot-io-behind-proxy-or-firewall/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are/">Crush Tradition! Photograph Things as They Are!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T05:24:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p><a href="http://en.wikipedia.org/wiki/Henri_Cartier-Bresson"><strong>Henri Cartier-Bresson</strong></a> (August 22, 1908 – August 3, 2004) was a French photographer considered to be the father of modern photojournalism. He was an early adopter of 35 mm format, and the master of candid photography. He helped develop the &#8220;street photography&#8221; or &#8220;real life reportage&#8221; style that has influenced generations of photographers who followed.</p></blockquote>
-
-<p><img src="/images/blog/henri-cartier-bresson.jpg" alt="Henri Cartier-Bresson" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/17/">&larr; Older</a>
@@ -515,15 +540,15 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 75 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 77 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 10 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 7 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 8 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 12 )</li>
 
@@ -534,6 +559,18 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/free-prototype-design-tools/">Free Prototype Design Tools</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/swift-the-new-ios-language/">Swift - The new iOS Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/14/what-we-missed-with-our-health/">关于健康，我们忘掉了什么？</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
@@ -561,18 +598,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/03/20/android-wearable-sdk/">Android Wear</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/20/a-false-linkable-text-sample/">A false linkable text sample</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/20/a-callstack-trace-for-qml-js/">A callstack trace for QML js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/16/a-ui-unit/">A UI Unit</a>
       </li>
     
   </ul>

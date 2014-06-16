@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-05-02T11:13:20+08:00</updated>
+  <updated>2014-06-17T06:44:42+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,135 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
+    <link href="http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools/"/>
+    <updated>2014-06-17T06:00:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools</id>
+    <content type="html"><![CDATA[<p>原型设计工具推荐</p>
+
+<p>Here's some great free prototype design tools:</p>
+
+<h2>AXure RP</h2>
+
+<p>An Interactive Wireframe Software and Mockup Tool.</p>
+
+<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec... and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
+
+<p><a href="http://www.axure.com/">Axure RP</a> 是一个专业的快速原型设计工具。Axure（发音：Ack-sure），代表美国Axure公司；RP则是Rapid Prototyping（快速原型）的缩写。</p>
+
+<p>Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。</p>
+
+<h2>Origami</h2>
+
+<p><a href="http://facebook.github.io/origami/">Origami</a> is a free design prototyping with Quartz Composer — created by the Facebook Design team—that makes interactive design prototyping easy and doesn’t require programming.</p>
+
+<!--more-->
+
+
+<p>Quartz Composer is a freely-available Mac OS X application by Apple that's been around for nearly a decade.</p>
+
+<p>Origami 是一个来自 Facebook 设计团队的作品，是 Quartz Composer 的免费工具包，可在无需编程的情况下轻松实现与设计原型进行交互。</p>
+
+<h2>Balsamiq Mockups</h2>
+
+<p>Balsamiq <a href="http://webdemo.balsamiq.com/">Web Demo</a></p>
+
+<p>Founded in March 2008, Balsamiq Studios aims to make the world a better place by helping people create software that is easier to use. Balsamiq is a fast-growing but still-very-personable software company. We like to compete on usability and customer service. Our first product is Balsamiq Mockups. Launched in June 2008, Mockups helps software designers and developers build great software by letting them easily sketch out their ideas, then quickly collaborate and iterate over them. Balsamiq Mockups has netted over $2,000,000 in sales in first 18 months of business and is gathering rave reviews.</p>
+
+<p>Balsamiq Mockups是一种软件工程中快速原型的建立软件，可以做为与用户交互的一个界面草图，一旦客户认可可以做为美工开发HTML的原型使用。</p>
+
+<p>Balsamiq Mockups是美国加利福利亚的Balsamiq工作室（2008年3月创建）推出的原型图绘制软件。于2008年6月发行了第一个版本。它的使命是帮助人们更好、更容易的设计软件产品。</p>
+
+<h2>Framer</h2>
+
+<p><a href="http://framerjs.com/">FRAMER.JS</a> is a prototyping toolkit built for designers to turn static mockups into prototypes with animation &amp; interaction. <a href="http://github.com/koenbok/Framer">Github</a></p>
+
+<p>Framer是一款基于JavaScript的开源原型框架，可以帮助开发者及设计师轻而易举地创建出非常逼真的应用原型，还包括滤镜、弹性物理、完整的3D效果等。Framer能够同时应用于桌面和移动设备之上，通过它，开发者或设计师只需简单地创建图像、事件等模块即可构建和测试复杂的交互和动画。</p>
+
+<h2>Pencil</h2>
+
+<p>An open-source GUI prototyping tool that's available for ALL platforms.</p>
+
+<p><a href="http://pencil.evolus.vn/">Pencil</a> is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.</p>
+
+<p>Pencil provides various built-in shapes collection for drawing different types of user interface ranging from desktop to mobile platforms.</p>
+
+<p>Pencil 是一款开源的原型图绘制工具，手绘风格的，就像自己在纸上画的那样。Pencil 还可以用来绘制各种架构图和流程图，同时还提供 Firefox 的插件。</p>
+
+<h2>Solidify</h2>
+
+<p>Make Interface Screens Come To Life</p>
+
+<p><a href="http://solidifyapp.com/">Solidify</a> is the quickest way to prototype interface screens for user testing feedback across devices.</p>
+
+<p>Solidify lets you create clickable prototypes from sketches, wireframe, or mockup. Validate user flows on any device by performing user tests in person, remotely or on your testers own time to get the feedback you need.</p>
+
+<p> Solidify 出自ZURB公司，允许用户从模型，线框或者草图创建可以点击的原型。通过它，可以对界面交互可以快速产生原型。而且，这些原型可以很容易的测试是否可以适用于平板，个人电脑或者手机。</p>
+
+<h2>others</h2>
+
+<p>Generator, InVision, PowerMockup, Antetype, UXPin, QuirkTools, Wireframe.CC, Easel, Proto.io, POP</p>
+
+<p><a href="http://designmodo.com/wireframing-prototyping-tools/">10 Wireframing and Prototyping Tools for 2013</a></p>
+
+<p><span id="link-tags">Quartz Composer;Balsamiq Studios;PowerMockup;InVision;Antetype;Wireframe.CC</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于健康，我们忘掉了什么？]]></title>
+    <link href="http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health/"/>
+    <updated>2014-06-14T20:30:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health</id>
+    <content type="html"><![CDATA[<p>当我们在争论中医还是西医更强大更有效的时候，不自觉中却忘掉了医术是为什么而生的。而身体的状态和需求，才是医术需要关注的主角。</p>
+
+<p>第一次在书城看到王唯工教授的《气的乐章》已经是数年前的事情了，至今依旧印象深刻。这是难得的一部结合现代科学技术来解读传统中医原理的著作：试图解释人体身上看起来不寻常的结构和状态。《气的乐章》以心脏的博动为核心，五脏处于不同共振谐波态，之间通过共振来交互协调。</p>
+
+<p>上周末看了几年前梁冬主持的《国学堂》对话王唯工教授的节目，提到了另外一本《水的漫舞》，讲述的是二氧化碳和酸水的危害。这两本书都是王唯工教授近三十余年来用现代科学实验手段通过试验和实践总结出来的成果，给现代医学的发展带来了令人鼓舞的火花。其中具体的细节和观点可能跟复杂的实际多少可能会有所偏向，也不一定就是真理。但带来的思考和对未来中医发展方向的反思确是异常宝贵的。</p>
+
+<p>抛开医学的阵营，一切繁复丰富的技术和理论，如果回归到人体这个生命体本身，医术需要关注的是什么呢？</p>
+
+<!--more-->
+
+
+<ul>
+<li><p>2009年6月8日，法国人斯蒂凡·弗苏闭气时间达到11分35秒，创造了一项静止闭气世界纪录。</p></li>
+<li><p>人的核心体温为37摄氏度，降到大约24度时心跳就会停止，导致死亡。</p></li>
+<li><p>即使在寒冷的环境中（水流失速度缓慢），没有水，人们也只能坚持7天左右。</p></li>
+<li><p>1963年12月28日，加利福尼亚州圣地亚哥的17岁在校生兰迪·加德纳从起床开始，创下的264小时（11天）记录至今仍是科学验证过的最长的不睡觉时长。</p></li>
+<li><p>最长时不进食记录者是1981年爱尔兰绝食抗议者基兰·多尔蒂，他在绝食73天后死去。在补充维生素和水的情况下，人们可以不吃东西活一年。</p></li>
+</ul>
+
+
+<p>由此可见，人体要保持正常，首要的是氧气，然后是水，再则是食物。另外要保持正常的体温，充足的睡眠。</p>
+
+<p>从维持生命体最基本的条件，我们才能更清楚地了解身体的状态，并进行适当的调整和干预。</p>
+
+<ol>
+<li>氧气； 2. 水份； 3. 食物； 4. 体温； 5. 睡眠</li>
+</ol>
+
+
+<p>可以预见，人体故障除物理损伤以外，大多都是跟人体生存基本条件的供给和传输变化有关的。</p>
+
+<ul>
+<li><p>氧气作为生存的首要条件，对应的获取途径是呼吸系统（鼻腔、呼吸道、肺），传输相关系统（心脏、血管）。</p></li>
+<li><p>水分的重要作用是作为介质，为氧气和养份的传入和吸收提供协助，以及排出代谢产物的功能。</p></li>
+<li><p>食物则作为系统正常运作所需能量和养份的主要提供途径，也是氧气消耗的主战场。</p></li>
+<li><p>体温是人体维持正常运作最直接的环境因素，会直接影响到氧气在体内的化学反应和物理作用。</p></li>
+<li><p>睡眠则是人体进行系统故障修复，代谢产物处理的核心场景。</p></li>
+</ul>
+
+
+<p>紧急程度相对低必要程度相对低的健康条件，必然是为核心健康条件服务的，而且在关键情况下是可以牺牲的，这就是生病的根本原因：系统为了保障核心健康条件的满足，要减少次要因素的供给，甚至放弃局部的功能。</p>
+
+<p>这是从王唯工教授那里得来的启示。从这个指导思想出发，整理、发展和完善现有的医学技术，而不是割裂中医和西医，才能营造一个健康领域的新纪元。</p>
+
+<p>科学从来都是面向未来的，而不是停步在过去和现在。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
@@ -80,144 +209,6 @@
 <p>Now, enjoy your presentations anywhere, with or without network, with or without a proxy, inside or outside China :-)</p>
 
 <p><i id="link-tags">Google Extension;Google Drive;Google Docs;PPTX</i></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Living Unit]]></title>
-    <link href="http://mindon.github.com/blog/2014/04/01/living-unit/"/>
-    <updated>2014-04-01T07:19:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/04/01/living-unit</id>
-    <content type="html"><![CDATA[<p>这里说的Living Unit，原指个人，后发觉其实对于一个公司或者机构、组织也是如此。</p>
-
-<p>活个体的构成从原始的单细胞生物，到人类个体，家庭，公司机构，并没有太大的区别，只是规模，资源和能力种类差异。</p>
-
-<p>以下的胡思乱想均来自对个人能力思考的延伸。</p>
-
-<p>任何一个活个体（Living Unit）构成为3个部分：1）<strong>自有资源</strong>；2）<strong>自有能力</strong>；3）<strong>关联场景</strong>。</p>
-
-<h2>自有资源</h2>
-
-<ul>
-<li><p>物品</p></li>
-<li><p>空间</p></li>
-<li><p>介品 （如货币等）</p></li>
-<li><p>本体</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<h2>自有能力</h2>
-
-<ul>
-<li><p>资源能力：拥有种类、数量，存储，运输，交换，整合。</p></li>
-<li><p>知识（广度，深度，关联）</p></li>
-<li><p>问题处理（发现，分析，解决）</p></li>
-<li><p>沟通（表达，理解）</p></li>
-<li><p>总结，预测</p></li>
-<li><p>本体维持、升级</p></li>
-</ul>
-
-
-<h2>关联场景</h2>
-
-<ul>
-<li><p>创造培养关联的场景</p></li>
-<li><p>维护和强化良性场景</p></li>
-<li><p>关联资源</p></li>
-<li><p>关联能力</p></li>
-</ul>
-
-
-<p><img src="/images/blog/asset-ability-connect.png" alt="" /></p>
-
-<p>根据活个体的构成，其发展分为两方面：1）<strong>本体强化</strong>；2）<strong>关联强化</strong>。</p>
-
-<h2>本体强化</h2>
-
-<p><strong>学习</strong></p>
-
-<ul>
-<li><p>外部能力的复制，再造</p></li>
-<li><p>外部实践中总结</p></li>
-</ul>
-
-
-<p><strong>实践</strong></p>
-
-<ul>
-<li>根据资源和能力输出的反馈对本体进行修正和调整</li>
-</ul>
-
-
-<h2>关联强化</h2>
-
-<p><strong>建立关联</strong></p>
-
-<ul>
-<li><p>通过本体输出创建关联场景</p></li>
-<li><p>接入外部关联场景</p></li>
-</ul>
-
-
-<p><strong>维护关联</strong></p>
-
-<ul>
-<li>保持关联场景的良性状态</li>
-</ul>
-
-
-<p><strong>强化关联</strong></p>
-
-<ul>
-<li>吸引更多连接接入已有关联场景</li>
-</ul>
-
-
-<p><strong>关联输入</strong></p>
-
-<ul>
-<li>从关联及输出中增强自有资源/自有能力的拥有量。</li>
-</ul>
-
-
-<p>不管是对于个人或者机构组织，或者是简单的生物个体，其在环境中生存和发展都必须具备条件。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android Wear]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/android-wearable-sdk/"/>
-    <updated>2014-03-20T22:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/android-wearable-sdk</id>
-    <content type="html"><![CDATA[<p><a href="http://developer.android.com/wear/">Android Wear</a> SDK makes Android apps connected with wearable devices. The <a href="http://moto360.motorola.com/">Moto 360</a> is coming.</p>
-
-<p>First, <a href="http://developer.android.com/wear/preview/start.html">Sign Up</a> for the Developer Preview.</p>
-
-<p>You could joining the <a href="http://g.co/androidweardev">Android Wear Developers</a> Google+ Community.</p>
-
-<p>Then, you will get an email providing link of example and <a href="https://play.google.com/apps/testing/com.google.android.wearablepreview.app">Android Wear Preview App</a></p>
-
-<!--more-->
-
-
-<p>Third, you need to download <a href="https://developer.android.com/sdk/">Android SDK</a> and start the emulator for Android Wear, one is Round, another is Square both 1.7'.</p>
-
-<p>Connect the wear emulator with the Android Wear Preview app, then your android device notifications will be shown in the emulator screen.</p>
-
-<blockquote><p> Android Wear extends the Android platform to a new generation of wearable devices.</p>
-
-<p> Small, powerful devices, worn on the body. Useful information when you need it most. Intelligent answers to spoken questions. Tools to help reach fitness goals. Your key to a multiscreen world.</p></blockquote>
-
-<p>There's a <a href="www.androidpolice.com/2014/03/19/apk-teardown-download-you-can-try-the-android-wear-launcher-on-your-device-now-heres-whats-inside/">wear launcher</a> about 3.8MB,</p>
-
-<p>and another Wear Preview App apk (named Android_Wear_Beta.apk, 600+KB) for those incompatible andriod devices.</p>
-
-<blockquote><p> The Android Wear Preview app is compatible with Android 4.3 and higher and is not available for the Android emulator.</p></blockquote>
-
-<p><span id="link-tags">Android Wear Preview;Wear Preview App apk</span></p>
 ]]></content>
   </entry>
   
