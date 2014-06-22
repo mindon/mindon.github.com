@@ -1,0 +1,1327 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>网页技巧[转]-IE5+  - Mindon.IDEA</title>
+  <meta name="author" content="Mindon Feng">
+
+  
+  <meta name="description" content="<!-- google_ad_client = "ca-pub-6997921015773263"; /* git-post */ google_ad_slot = "5984167509"; google_ad_width = 300; google_ad_height = 250 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mindon.github.com/blog/2005/01/07/old-blogms-1000141851/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.6.2.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28048168-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mindon.IDEA</a></h1>
+  
+    <h2>Air off, Mind on ~ / Javascript+NodeJS, Sci, Health... /</h2>
+  
+</hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.google.com" id="cse-search-box">
+  <fieldset role="search">
+    <input class="search" type="text" name="q" results="0"/>
+    <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
+    <input type="hidden" name="ie" value="UTF-8" />
+  </fieldset>
+</form>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
+  <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
+  <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">网页技巧[转]-IE5+</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:08:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+
+<div class="entry-content">
+
+	<div class="adpost">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+
+<p>BlogMS original blog key: 1000141851, blog id: airoff
+History stat: 浏览/评论：226/0  ,  日期：2005年1月7日 09:08</p>
+
+<ol>
+<li>oncontextmenu=&quot;window.event.returnValue=false&quot; 将彻底屏蔽鼠标右键</li>
+</ol>
+
+
+<p>&lt;table border oncontextmenu=return(false)&gt;&lt;td&gt;no&lt;/table&gt; 可用于Table</p>
+
+<ol>
+<li><p>&lt;body onselectstart=&quot;return false&quot;&gt; 取消选取、防止复制</p></li>
+<li><p>onpaste=&quot;return false&quot; 不准粘贴</p></li>
+</ol>
+
+
+<!--more-->
+
+
+<ol>
+<li><p>oncopy=&quot;return false;&quot; oncut=&quot;return false;&quot; 防止复制</p></li>
+<li><p>&lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.ico&quot;&gt; IE地址栏前换成自己的图标</p></li>
+<li><p>&lt;link rel=&quot;Bookmark&quot; href=&quot;favicon.ico&quot;&gt; 可以在收藏夹中显示出你的图标</p></li>
+<li><p>&lt;input style=&quot;ime-mode:-Disabled&quot;&gt; 关闭输入法</p></li>
+<li><p>永远都会带着框架</p></li>
+</ol>
+
+
+<p>&lt;script language=&quot;JavaScript&quot;&gt;&lt;!&#8211;</p>
+
+<p>if (window == top)top.location.href = &quot;frames.htm&quot;; //frames.htm为框架网页</p>
+
+<p>// &#8211;&gt;&lt;/script&gt;</p>
+
+<ol>
+<li>防止被人frame</li>
+</ol>
+
+
+<p>&lt;SCRIPT LANGUAGE=JAVASCRIPT&gt;&lt;!&#8211;</p>
+
+<p>if (top.location != self.location)top.location=self.location;</p>
+
+<p>// &#8211;&gt;&lt;/SCRIPT&gt;</p>
+
+<ol>
+<li>网页将不能被另存为</li>
+</ol>
+
+
+<p>&lt;noscript&gt;&lt;iframe src=*.html&gt;&lt;/iframe&gt;&lt;/noscript&gt;</p>
+
+<ol>
+<li>&lt;input type=button value=查看网页源代码</li>
+</ol>
+
+
+<p>onclick=&quot;window.location = <code>view-source:</code>+  <a href="http://www.51js.com/`&amp;quot">http://www.51js.com/`&amp;quot</a> ;;&gt;</p>
+
+<p>12.删除时确认</p>
+
+<p>&lt;a href=<code>javascript:if(confirm(&amp;quot;确实要删除吗?&amp;quot;))location=&amp;quot;boos.asp?&amp;areyou=删除&amp;page=1&amp;quot;</code>&gt;删</p>
+
+<p>除&lt;/a&gt;</p>
+
+<ol>
+<li>取得控件的绝对位置</li>
+</ol>
+
+
+<p>//Javascript</p>
+
+<p>&lt;script language=&quot;Javascript&quot;&gt;</p>
+
+<p>function getIE(E){</p>
+
+<p>var t=e.offsetTop;</p>
+
+<p>var l=e.offsetLeft;</p>
+
+<p>while(e=e.offsetParent){</p>
+
+<p>t+=e.offsetTop;</p>
+
+<p>l+=e.offsetLeft;</p>
+
+<p>}</p>
+
+<p>alert(&quot;top=&quot;+t+&quot;/nleft=&quot;+l);</p>
+
+<p>}</p>
+
+<p>&lt;/script&gt;</p>
+
+<p>//VBScript</p>
+
+<p>&lt;script language=&quot;VBScript&quot;&gt;&lt;!&#8211;</p>
+
+<p>function getIE()</p>
+
+<p>dim t,l,a,b</p>
+
+<p>set a=document.all.img1</p>
+
+<p>t=document.all.img1.offsetTop</p>
+
+<p>l=document.all.img1.offsetLeft</p>
+
+<p>while a.tagName&lt;&gt;&quot;BODY&quot;</p>
+
+<p>set a = a.offsetParent</p>
+
+<p>t=t+a.offsetTop</p>
+
+<p>l=l+a.offsetLeft</p>
+
+<p>wend</p>
+
+<p>msgbox &quot;top=&quot;&amp;t&amp;chr(13)&amp;&quot;left=&quot;&amp;l,64,&quot;得到控件的位置&quot;</p>
+
+<p>end function</p>
+
+<p>&#8211;&gt;&lt;/script&gt;</p>
+
+<ol>
+<li>光标是停在文本框文字的最后</li>
+</ol>
+
+
+<p>&lt;script language=&quot;javascript&quot;&gt;</p>
+
+<p>function cc()</p>
+
+<p>{</p>
+
+<p>var e = event.srcElement;</p>
+
+<p>var r =e.createTextRange();</p>
+
+<p>r.moveStart(<code>character</code>,e.value.length);</p>
+
+<p>r.collapse(true);</p>
+
+<p>r.select();</p>
+
+<p>}</p>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;input type=text name=text1 value=&quot;123&quot; onfocus=&quot;cc()&quot;&gt;</p>
+
+<ol>
+<li>判断上一页的来源</li>
+</ol>
+
+
+<p>javascript:</p>
+
+<p>document.referrer</p>
+
+<ol>
+<li>最小化、最大化、关闭窗口</li>
+</ol>
+
+
+<p>&lt;object id=hh1 classid=&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&quot;&gt;</p>
+
+<p>&lt;param name=&quot;Command&quot; value=&quot;Minimize&quot;&gt;&lt;/object&gt;</p>
+
+<p>&lt;object id=hh2 classid=&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&quot;&gt;</p>
+
+<p>&lt;param name=&quot;Command&quot; value=&quot;Maximize&quot;&gt;&lt;/object&gt;</p>
+
+<p>&lt;OBJECT id=hh3 classid=&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&quot;&gt;</p>
+
+<p>&lt;PARAM NAME=&quot;Command&quot; VALUE=&quot;Close&quot;&gt;&lt;/OBJECT&gt;</p>
+
+<p>&lt;input type=button value=最小化 onclick=hh1.Click()&gt;</p>
+
+<p>&lt;input type=button value=最大化 onclick=hh2.Click()&gt;</p>
+
+<p>&lt;input type=button value=关闭 onclick=hh3.Click()&gt;</p>
+
+<p>本例适用于IE</p>
+
+<p>17.屏蔽功能键Shift,Alt,Ctrl</p>
+
+<p>&lt;script&gt;</p>
+
+<p>function look(){</p>
+
+<p>if(event.shiftKey)</p>
+
+<p>alert(&quot;禁止按Shift键!&quot;); //可以换成ALT　CTRL</p>
+
+<p>}</p>
+
+<p>document.onkeydown=look;</p>
+
+<p>&lt;/script&gt;</p>
+
+<ol>
+<li>网页不会被缓存</li>
+</ol>
+
+
+<p>&lt;META HTTP-EQUIV=&quot;pragma&quot; CONTENT=&quot;no-cache&quot;&gt;</p>
+
+<p>&lt;META HTTP-EQUIV=&quot;Cache-Control&quot; CONTENT=&quot;no-cache, must-revalidate&quot;&gt;</p>
+
+<p>&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt;</p>
+
+<p>或者&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;0&quot;&gt;</p>
+
+<p>19.怎样让表单没有凹凸感？</p>
+
+<p>&lt;input type=text style=&quot;border:1 solid #000000&quot;&gt;</p>
+
+<p>或</p>
+
+<p>&lt;input type=text style=&quot;border-left:none; border-right:none; border-top:none; border-bottom:</p>
+
+<p>1 solid #000000&quot;&gt;&lt;/textarea&gt;</p>
+
+<p>20.&lt;div&gt;&lt;span&gt;&amp;&lt;layer&gt;的区别？</p>
+
+<p>&lt;div&gt;(division)用来定义大段的页面元素，会产生转行</p>
+
+<p>&lt;span&gt;用来定义同一行内的元素，跟&lt;div&gt;的唯一区别是不产生转行</p>
+
+<p>&lt;layer&gt;是ns的标记，ie不支持，相当于&lt;div&gt;</p>
+
+<p>21.让弹出窗口总是在最上面:</p>
+
+<p>&lt;body onblur=&quot;this.focus();&quot;&gt;</p>
+
+<p>22.不要滚动条?</p>
+
+<p>让竖条没有:</p>
+
+<p>&lt;body style=<code>overflow:-Scroll;overflow-y:hidden</code>&gt;</p>
+
+<p>&lt;/body&gt;</p>
+
+<p>让横条没有:</p>
+
+<p>&lt;body style=<code>overflow:-Scroll;overflow-x:hidden</code>&gt;</p>
+
+<p>&lt;/body&gt;</p>
+
+<p>两个都去掉？更简单了</p>
+
+<p>&lt;body scroll=&quot;no&quot;&gt;</p>
+
+<p>&lt;/body&gt;</p>
+
+<p>23.怎样去掉图片链接点击后，图片周围的虚线？</p>
+
+<p>&lt;a href=&quot;#&quot; onFocus=&quot;this.blur()&quot;&gt;&lt;img src=&quot;logo.jpg&quot; border=0&gt;&lt;/a&gt;</p>
+
+<p>24.电子邮件处理提交表单</p>
+
+<p>&lt;form name=&quot;form1&quot; method=&quot;post&quot; action=&quot;mailto:<strong><em>*@</em></strong>.com&quot; enctype=&quot;text/plain&quot;&gt;</p>
+
+<p>&lt;input type=submit&gt;</p>
+
+<p>&lt;/form&gt;</p>
+
+<p>25.在打开的子窗口刷新父窗口的代码里如何写？</p>
+
+<p>window.opener.location.reload()</p>
+
+<p>26.如何设定打开页面的大小</p>
+
+<p>&lt;body onload=&quot;top.resizeTo(300,200);&quot;&gt;</p>
+
+<p>打开页面的位置&lt;body onload=&quot;top.moveBy(300,200);&quot;&gt;</p>
+
+<p>27.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动</p>
+
+<p>&lt;STYLE&gt;</p>
+
+<p>body</p>
+
+<p>{background-image:url(logo.gif); background-repeat:no-repeat;</p>
+
+<p>background-position:center;background-attachment: fixed}</p>
+
+<p>&lt;/STYLE&gt;</p>
+
+<ol>
+<li>检查一段字符串是否全由数字组成</li>
+</ol>
+
+
+<p>&lt;script language=&quot;Javascript&quot;&gt;&lt;!&#8211;</p>
+
+<p>function checkNum(str){return str.match(//D/)==null}</p>
+
+<p>alert(checkNum(&quot;1232142141&quot;))</p>
+
+<p>alert(checkNum(&quot;123214214a1&quot;))</p>
+
+<p>// &#8211;&gt;&lt;/script&gt;</p>
+
+<ol>
+<li>获得一个窗口的大小</li>
+</ol>
+
+
+<p>document.body.clientWidth; document.body.clientHeight</p>
+
+<ol>
+<li>怎么判断是否是字符</li>
+</ol>
+
+
+<p>if (/[<sup>/x00-/xff]/g.test(s))</sup> alert(&quot;含有汉字&quot;);</p>
+
+<p>else alert(&quot;全是字符&quot;);</p>
+
+<p>31.TEXTAREA自适应文字行数的多少</p>
+
+<p>&lt;textarea rows=1 name=s1 cols=27 onpropertychange=&quot;this.style.posHeight=this.scrollHeight&quot;&gt;</p>
+
+<p>&lt;/textarea&gt;</p>
+
+<ol>
+<li>日期减去天数等于第二个日期</li>
+</ol>
+
+
+<p>&lt;script language=Javascript&gt;</p>
+
+<p>function cc(dd,dadd)</p>
+
+<p>{</p>
+
+<p>//可以加上错误处理</p>
+
+<p>var a = new Date(dd)</p>
+
+<p>a = a.valueOf()</p>
+
+<p>a = a - dadd * 24 * 60 * 60 * 1000</p>
+
+<p>a = new Date(A)</p>
+
+<p>alert(a.getFullYear() + &quot;年&quot; + (a.getMonth() + 1) + &quot;月&quot; + a.getDate() + &quot;日&quot;)</p>
+
+<p>}</p>
+
+<p>cc(&quot;12/23/2002&quot;,2)</p>
+
+<p>&lt;/script&gt;</p>
+
+<ol>
+<li>选择了哪一个Radio</li>
+</ol>
+
+
+<p>&lt;HTML&gt;&lt;script language=&quot;vbscript&quot;&gt;</p>
+
+<p>function checkme()</p>
+
+<p>for each ob in radio1</p>
+
+<p>if ob.checked then window.alert ob.value</p>
+
+<p>next</p>
+
+<p>end function</p>
+
+<p>&lt;/script&gt;&lt;BODY&gt;</p>
+
+<p>&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;style&quot; checked&gt;Style</p>
+
+<p>&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;barcode&quot;&gt;Barcode</p>
+
+<p>&lt;INPUT type=&quot;button&quot; value=&quot;check&quot; onclick=&quot;checkme()&quot;&gt;</p>
+
+<p>&lt;/BODY&gt;&lt;/HTML&gt;</p>
+
+<p>34.脚本永不出错</p>
+
+<p>&lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;</p>
+
+<p>&lt;!&#8211; Hide</p>
+
+<p>function killErrors() {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>window.onerror = killErrors;</p>
+
+<p>// &#8211;&gt;</p>
+
+<p>&lt;/SCRIPT&gt;</p>
+
+<p>35.ENTER键可以让光标移到下一个输入框</p>
+
+<p>&lt;input onkeydown=&quot;if(event.keyCode==13)event.keyCode=9&quot;&gt;</p>
+
+<ol>
+<li>检测某个网站的链接速度：</li>
+</ol>
+
+
+<p>把如下代码加入&lt;body&gt;区域中:</p>
+
+<p>&lt;script language=Javascript&gt;</p>
+
+<p>tim=1</p>
+
+<p>setInterval(&quot;tim++&quot;,100)</p>
+
+<p>b=1</p>
+
+<p>var autourl=new Array()</p>
+
+<p>autourl[1]=&amp;quot  <a href="http://www.njcatv.net/&amp;quot">http://www.njcatv.net/&amp;quot</a> ;;</p>
+
+<p>autourl[2]=&quot;javacool.3322.net&quot;</p>
+
+<p>autourl[3]=&amp;quot  <a href="http://www.sina.com.cn/&amp;quot">http://www.sina.com.cn/&amp;quot</a> ;;</p>
+
+<p>autourl[4]=&amp;quot  <a href="http://www.nuaa.edu.cn/&amp;quot">http://www.nuaa.edu.cn/&amp;quot</a> ;;</p>
+
+<p>autourl[5]=&amp;quot  <a href="http://www.cctv.com/&amp;quot">http://www.cctv.com/&amp;quot</a> ;;</p>
+
+<p>function butt(){</p>
+
+<p>document.write(&quot;&lt;form name=autof&gt;&quot;)</p>
+
+<p>for(var i=1;i&lt;autourl.length;i++)</p>
+
+<p>document.write(&quot;&lt;input type=text name=txt&quot;+i+&quot; size=10 value=测试中……&gt; =》&lt;input type=text</p>
+
+<p>name=url&quot;+i+&quot; size=40&gt; =》&lt;input type=button value=GO</p>
+
+<p>onclick=window.open(this.form.url&quot;+i+&quot;.value)&gt;&lt;br&gt;&quot;)</p>
+
+<p>document.write(&quot;&lt;input type=submit value=刷新&gt;&lt;/form&gt;&quot;)</p>
+
+<p>}</p>
+
+<p>butt()</p>
+
+<p>function auto(url){</p>
+
+<p>document.forms[0][&quot;url&quot;+b].value=url</p>
+
+<p>if(tim&gt;200)</p>
+
+<p>{document.forms[0][&quot;txt&quot;+b].value=&quot;链接超时&quot;}</p>
+
+<p>else</p>
+
+<p>{document.forms[0][&quot;txt&quot;+b].value=&quot;时间&quot;+tim/10+&quot;秒&quot;}</p>
+
+<p>b++</p>
+
+<p>}</p>
+
+<p>function run(){for(var i=1;i&lt;autourl.length;i++)document.write(&quot;&lt;img</p>
+
+<p>src=http://&quot;+autourl+&quot;/&quot;+Math.random()+&quot; width=1 height=1</p>
+
+<p>onerror=auto  <a href="http://&amp;quot">http://&amp;quot</a> ;;+autourl+&quot;`)&gt;&quot;)}</p>
+
+<p>run()&lt;/script&gt;</p>
+
+<ol>
+<li>各种样式的光标</li>
+</ol>
+
+
+<p>auto ：标准光标</p>
+
+<p>default ：标准箭头</p>
+
+<p>hand ：手形光标</p>
+
+<p>wait ：等待光标</p>
+
+<p>text ：I形光标</p>
+
+<p>vertical-text ：水平I形光标</p>
+
+<p>no-drop ：不可拖动光标</p>
+
+<p>not-allowed ：无效光标</p>
+
+<p>help ：?帮助光标</p>
+
+<p>all-scroll ：三角方向标</p>
+
+<p>move ：移动标</p>
+
+<p>crosshair ：十字标</p>
+
+<p>e-resize</p>
+
+<p>n-resize</p>
+
+<p>nw-resize</p>
+
+<p>w-resize</p>
+
+<p>s-resize</p>
+
+<p>se-resize</p>
+
+<p>sw-resize</p>
+
+<p>38.页面进入和退出的特效</p>
+
+<p>进入页面&lt;meta http-equiv=&quot;Page-Enter&quot; content=&quot;revealTrans(duration=x, transition=y)&quot;&gt;</p>
+
+<p>推出页面&lt;meta http-equiv=&quot;Page-Exit&quot; content=&quot;revealTrans(duration=x, transition=y)&quot;&gt;</p>
+
+<p>这个是页面被载入和调出时的一些特效。Duration表示特效的持续时间，以秒为单位。Transition表示使</p>
+
+<p>用哪种特效，取值为1-23:</p>
+
+<p>　　0 矩形缩小</p>
+
+<p>　　1 矩形扩大</p>
+
+<p>　　2 圆形缩小</p>
+
+<p>　　3 圆形扩大</p>
+
+<p>　　4 下到上刷新</p>
+
+<p>　　5 上到下刷新</p>
+
+<p>　　6 左到右刷新</p>
+
+<p>　　7 右到左刷新</p>
+
+<p>　　8 竖百叶窗</p>
+
+<p>　　9 横百叶窗</p>
+
+<p>　　10 错位横百叶窗</p>
+
+<p>　　11 错位竖百叶窗</p>
+
+<p>　　12 点扩散</p>
+
+<p>　　13 左右到中间刷新</p>
+
+<p>　　14 中间到左右刷新</p>
+
+<p>　　15 中间到上下</p>
+
+<p>　　16 上下到中间</p>
+
+<p>　　17 右下到左上</p>
+
+<p>　　18 右上到左下</p>
+
+<p>　　19 左上到右下</p>
+
+<p>　　20 左下到右上</p>
+
+<p>　　21 横条</p>
+
+<p>　　22 竖条</p>
+
+<p>　　23 以上22种随机选择一种</p>
+
+<p>39.在规定时间内跳转</p>
+
+<p>&lt;META http-equiv=V=&quot;REFRESH&quot; content=&quot;5;URL=http://www.51js.com&quot;&gt;</p>
+
+<p>40.网页是否被检索</p>
+
+<p>&lt;meta name=&quot;ROBOTS&quot; content=&quot;属性值&quot;&gt;</p>
+
+<p>　　其中属性值有以下一些:</p>
+
+<p>　　属性值为&quot;all&quot;: 文件将被检索，且页上链接可被查询；</p>
+
+<p>　　属性值为&quot;none&quot;: 文件不被检索，而且不查询页上的链接；</p>
+
+<p>　　属性值为&quot;index&quot;: 文件将被检索；</p>
+
+<p>　　属性值为&quot;follow&quot;: 查询页上的链接；</p>
+
+<p>　　属性值为&quot;noindex&quot;: 文件不检索，但可被查询链接；</p>
+
+<p>　　属性值为&quot;nofollow&quot;: 文件不被检索，但可查询页上的链接。</p>
+
+<p>41.变换网页的鼠标光标</p>
+
+<p>&lt;BODY style=&quot;CURSOR: url  <a href="http://203.73.125.205/~liangmi2/farmfrog01.cur`">http://203.73.125.205/~liangmi2/farmfrog01.cur`</a> )&quot;&gt;</p>
+
+<p>42.怎样实现在任务栏显示小图标的效果？ (要使用绝对地址)</p>
+
+<p>有些站点，访问时会在地址栏地址前显出小图标，添加到收藏夹后也在收藏栏中显示图标，</p>
+
+<p>这样很好的与其它站点有了区别。</p>
+
+<p>要达到这个效果，先需做出这个图标文件，图像为16*16像素，不要超过16色。文件格式为ico，然后上传至你的网站。</p>
+
+<p>然后，在需要的页面中，加上以下html语句到文件的&lt;head&gt;和&lt;/head&gt;之间（假设以上ico文件的地  <a href="http://happyisland.126.com/icon.ico">http://happyisland.126.com/icon.ico</a> ）。</p>
+
+<p>&lt;link REL=&quot;SHORTCUT ICON&quot;href=&amp;quot  <a href="http:///happyisland.126.com/icon.ico&amp;quot">http:///happyisland.126.com/icon.ico&amp;quot</a> ;;&gt;</p>
+
+<p>如果访问者的浏览器是IE5.0，就不需加任何代码，只要将图标文件上传到网站的根目录下即可。</p>
+
+<p>1,META标签里的代码是什么意思？</p>
+
+<p>&lt;META&gt;是放于&lt;HEAD&gt;与&lt;/HEAD&gt;之间的标记.以下是我总结它在网页中最常见的几种。</p>
+
+<p>&lt;meta name=&quot;Keywords&quot; content=&quot;图片, 新闻, 音乐, 软件&quot;&gt;</p>
+
+<p>该网页的关键字，作用于搜索引擎的登录，事实上它在现在的网站中并没什么用。</p>
+
+<p>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;</p>
+
+<p>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;</p>
+
+<p>设定这是 HTML 文件及其编码语系，简体中文网页使用charset=gb2312，繁体中文使用charset=big5，或者不设编码也可，纯英文网页建议使用 iso-8859-1。</p>
+
+<p>&lt;meta name=&quot;GENERATOR&quot; content=&quot;Microsoft FrontPage 5.0&quot;&gt;</p>
+
+<p>这只表示该网页由什么编辑器写的。</p>
+
+<p>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10; url=http://www.hkiwc.com&quot;&gt;</p>
+
+<p>这行较为实用，能于预定秒数内自动转到指定网址。原代码中 10 表示 10秒。</p>
+
+<p>2，怎么改变滚动条的颜色，只有ie5.5版本以上才能支持。</p>
+
+<p>这是使用CSS语言，在次说明一下，它和我的浏览器版本有一定的关系。</p>
+
+<p>scrollbar-arrow-color：上下按钮上三角箭头的颜色。</p>
+
+<p>scrollbar-base-color：滚动条的基本颜色。</p>
+
+<p>scrollbar-dark-shadow-color：立体滚动条强阴影的颜色</p>
+
+<p>scrollbar-face-color：立体滚动条凸出部分的颜色</p>
+
+<p>scrollbar-highlight-color：滚动条空白部分的颜色</p>
+
+<p>scrollbar-shadow-color立体滚动条阴影的颜色。</p>
+
+<p>scrollbar-track-color:#99CC33;</p>
+
+<p>scrollbar-3dlight-color:#A8CBF1;</p>
+
+<p>代码如下：</p>
+
+<p>&lt;style&gt;</p>
+
+<p>&lt;!&#8211;</p>
+
+<p>BODY {</p>
+
+<p>scrollbar-face-color:#99CC33;//(立体滚动条凸出部分的颜色)</p>
+
+<p>scrollbar-highlight-color:#A8CBF1;//(滚动条空白部分的颜色)</p>
+
+<p>scrollbar-shadow-color:#A8CBF1;//(立体滚动条阴影的颜色)</p>
+
+<p>scrollbar-arrow-color:#FF9966;//(上下按钮上三角箭头的颜色)</p>
+
+<p>scrollbar-base-color:#A8CBF1; //(滚动条的基本颜色)</p>
+
+<p>scrollbar-darkshadow-color:#A8CBF1; //(立体滚动条强阴影的颜色)</p>
+
+<p>scrollbar-track-color:#99CC33;</p>
+
+<p>scrollbar-3dlight-color:#A8CBF1;</p>
+
+<p>}</p>
+
+<p>&#8211;&gt;</p>
+
+<p>&lt;/style&gt;</p>
+
+<p>在这我补充几点：</p>
+
+<p>1.让浏览器窗口永远都不出现滚动条。</p>
+
+<p>&lt;body style=&quot;overflow-x:hidden;overflow-y:hidden&quot;&gt;或&lt;body style=&quot;overflow:hidden&quot;&gt; 或&lt;body scroll=no&gt;</p>
+
+<p>2，没有水平滚动条</p>
+
+<p>&lt;body style=&quot;overflow-x:hidden&quot;&gt;</p>
+
+<p>3，没有垂直滚动条</p>
+
+<p>&lt;body style=&quot;overflow-y:hidden&quot;&gt;</p>
+
+<p>3,如何给图片抖动怎做的.</p>
+
+<p>&lt;SCRIPT language=JavaScript1.2&gt;</p>
+
+<p>&lt;!&#8211;</p>
+
+<p>var rector=2</p>
+
+<p>var stopit=0</p>
+
+<p>var a=1</p>
+
+<p>var count=0</p>
+
+<p>function init(which){</p>
+
+<p>stopit=0</p>
+
+<p>shake=which</p>
+
+<p>shake.style.left=0</p>
+
+<p>shake.style.top=0</p>
+
+<p>}</p>
+
+<p>function rattleimage(){</p>
+
+<p>if ((!document.all&amp;&amp;!document.getElementById)||stopit==1||count==100)</p>
+
+<p>return</p>
+
+<p>count++</p>
+
+<p>if (a==1){</p>
+
+<p>shake.style.top=parseInt(shake.style.top)+rector</p>
+
+<p>}</p>
+
+<p>else if (a==2){</p>
+
+<p>shake.style.left=parseInt(shake.style.left)+rector</p>
+
+<p>}</p>
+
+<p>else if (a==3){</p>
+
+<p>shake.style.top=parseInt(shake.style.top)-rector</p>
+
+<p>}</p>
+
+<p>else{</p>
+
+<p>shake.style.left=parseInt(shake.style.left)-rector</p>
+
+<p>}</p>
+
+<p>if (a&lt;4)</p>
+
+<p>a++</p>
+
+<p>else</p>
+
+<p>a=1</p>
+
+<p>setTimeout(&quot;rattleimage()&quot;,50)</p>
+
+<p>}</p>
+
+<p>function stoprattle(which){</p>
+
+<p>stopit=1</p>
+
+<p>count=0</p>
+
+<p>which.style.left=0</p>
+
+<p>which.style.top=0</p>
+
+<p>}</p>
+
+<p>//&#8211;&gt;</p>
+
+<p>&lt;/SCRIPT&gt;</p>
+
+<p>&lt;STYLE&gt;.shakeimage {POSITION: relative}</p>
+
+<p>&lt;/STYLE&gt;</p>
+
+<p>&lt;img src=&quot;图片的路径&quot; onmouseout=stoprattle(this) onmouseover=init(this);rattleimage() class=shakeimage&gt;</p>
+
+<p>4，在DW如何给水平线加颜色。</p>
+
+<p>在DW中没有此项设置，你只能在HTML中加入代码：&lt;hr color=red noshade&gt;按F12的预览在能看到。由于在NC中不支持&lt;hr&gt;的COLOR属性，所以在DW中没有此项设置。</p>
+
+<p>　　　</p>
+
+<p>5，如何在网页中实现flash的全屏播放？</p>
+
+<p>只要在调用swf文件的HTML中将WIDTH和HEIGHT的参数设为100％即可，当然也可以在Flash导出HTML文件的设置中进行设置，方法是：打开File菜单；选Publish Settings弹出导出设置对话框；在HTML标签下的Dimensions选项,下拉后选中Percent（百分比）,并在WIDTH 和HEIGHT框中填100.就行了。</p>
+
+<p>6,为什么我在DW中插入的Flash动画缺看不找！</p>
+
+<p>如果你没有正确地安装Dreamweaver和Flash，那么在你预览的时候，Dreamweaver会提示你缺少播放的插件，请你按装InstallAXFlash.exe 并从新启动计算机。现在IE6已经捆绑这个程序。</p>
+
+<p>7，在Flash中，如果屏蔽鼠标右键?FS命令都是什么意思?</p>
+
+<p>fscommand (&quot;fullscreen&quot;, &quot;true/false&quot;);（全屏设置，TRUE开，FALSE关）</p>
+
+<p>fscommand (&quot;showmenu&quot;, &quot;true/false&quot;);（右键菜单设置，TRUE显示，FALSE不显示）</p>
+
+<p>fscommand (&quot;allowscale&quot;, &quot;true/false&quot;);（缩放设置，TRUE自由缩放，FALSE调整画面不影响影片本身的尺寸）</p>
+
+<p>fscommand (&quot;trapallkeys&quot;, &quot;true/false&quot;);（快捷键设置，TRUE快捷键开，FALSE快捷键关）</p>
+
+<p>fscommand (&quot;exec&quot;);（EXE程序调用）</p>
+
+<p>fscommand (&quot;quit&quot;);（退出关闭窗口）</p>
+
+<p>8，Flash中什么是隐形按钮。</p>
+
+<p>利用button中的hit帧来制作只有感应区域而完全透明的按钮。</p>
+
+<p>9，如何给Flash动画做链接。</p>
+
+<p>Dreamweaver是不能给Flash制作链接的，只能在Flash中用geturl()加链接，然后再插入Dreamweaver中。</p>
+
+<p>10，DW中的层的技巧。</p>
+
+<p>层是可以嵌套的，我个人给大家一个技巧，在层面板中按住CTRL再拖放层到你想去成为其子层的地方就行了，我认为这是最简单直观的方法了。</p>
+
+<p>11，如何改变鼠标的形状？</p>
+
+<p>在Dreamweaver4中CSS样式面板：</p>
+
+<p>按CTR+SHIFT+E&#8211;出现样式表对话框,点击NEW，出现编辑对话框,在左边最后一项extensions-cursor 选择你要改的指针形式就可以了，然后把你要想改变的地方运用样式表，如果整页都有在&lt;body bgcolor=&quot;#003063&quot; text=&quot;#ffffff&quot; id=all&gt;中加入就行了。</p>
+
+<p>&lt;span style=&quot;cursor:X`&gt;样例&lt;/span&gt;</p>
+
+<p>这里选择（文本）作为对象，还可以自己改为其他的，如link等。</p>
+
+<p>x可以等于=hand（手形）、crosshair（十字）、text（文本光标）、wait（顾名思义啦）、default（默认效果）、help（问号）、e-size（向右箭头）、ne-resize（向右上的箭头）、nw-resize（向左上的箭头）、w-resize（向左的箭头）、sw-resize（左下箭头）、s-resize（向下箭头）、se-resize（向右下箭头）、auto（系统自动给出效果）。</p>
+
+<p>12，用CSS做邮票，看看吧！</p>
+
+<p>&lt;input type=button value=我象不象邮票？ Style=&quot;height:80px;border:2px dashed #cccccc&quot;&gt;</p>
+
+<p>13，经常上网的朋友可能会到过这样一些网站，一进入首页立刻会弹出一个窗口，怎么做呢！</p>
+
+<p>这Javascript代码即可实现，摘录蓝色论坛。</p>
+
+<p>【1、最基本的弹出窗口代码】</p>
+
+<p>其实代码非常简单：</p>
+
+<p>&lt;SCRIPT LANGUAGE=&quot;javascript&quot;&gt;</p>
+
+<p>&lt;!&#8211;</p>
+
+<p>window.open (<code>page.html</code>)</p>
+
+<p>&#8211;&gt;</p>
+
+<p>&lt;/SCRIPT&gt;</p>
+
+<p>因为着是一段javascripts代码，所以它们应该放?lt;SCRIPT LANGUAGE=&quot;javascript&quot;&gt;标签和&lt;/script&gt;之间。&lt;!&#8211; 和 &#8211;&gt;是对一些版本低的浏览器起作用，在这些老浏览器中不会将标签中的代码作为文本显示出来。要养成这个好习惯啊。</p>
+
+<p>window.open (<code>page.html</code>) 用于控制弹出新的窗口page.html，如果page.html不与主窗口在同一路径下，前面应写明路径，绝对路径(http://)和相对路径(../)均可。用单引号和双引号都可以，只是不要混用。</p>
+
+<p>这一段代码可以加入HTML的任意位置，&lt;head&gt;和&lt;/head&gt;之间可以，&lt;body bgcolor=&quot;#003063&quot; text=&quot;#ffffff&quot; id=all&gt;间&lt;/body&gt;也梢裕</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:08:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogms/'>BlogMS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/01/07/old-blogms-1000141850/" title="Previous Post: Think in C++读书笔记 ">&laquo; Think in C++读书笔记 </a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/01/07/old-blogms-1000141854/" title="Next Post: SVG Color Names & RGB Values ">SVG Color Names & RGB Values  &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>About Me</h1>
+    <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
+</section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/108546803797935855689?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Categories</h1>
+  <ul>
+
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 8 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 16 )</li>
+
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/free-prototype-design-tools/">Free Prototype Design Tools</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/swift-the-new-ios-language/">Swift - The new iOS Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/14/what-we-missed-with-our-health/">关于健康，我们忘掉了什么？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section>
+    <h1>Google廣告</h1>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-6997921015773263";
+	/* git-aside */
+	google_ad_slot = "4887341949";
+	google_ad_width = 250;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</section><section>
+    <h1>Links</h1>
+	<ul>
+		<li><a href="http://www.ted.com/" target="_blank">TED: Ideas worth spreading</a></li>
+		<li><a href="http://www.sciencemag.org/" target="_blank">Science Magazine</a></li>
+		<li><a href="http://www.spongelab.com/browse/" target="_blank" title="Search science topics, lesson plans, case studies and more">SpongeLab</a></li>
+		<li><a href="http://catlinseaviewsurvey.com/seaview.htm" target="_blank">Sea View Survey</a></li>
+		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
+		<li><b>傳統中醫 TCM</b>
+    <ul>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
+      <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
+      <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>
+    </ul>
+    </li>
+		<li><b>Readings Around</b>
+    <ul>
+      <li><a href="http://yeeyan.org/" target="_blank">译言网</a></li>
+    </ul>
+    </li>
+		<li><b>Development</b>
+    <ul>
+      <li><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html" target="_blank">Chrome Latest Build</a></li>
+      <li><a href="http://raphaeljs.com/" target="_blank">Raphaël.js</a></li>
+      <li><a href="http://www.cocos2d-iphone.org/" target="_blank">COCOS2D</a></li>
+    </ul>
+    </li>
+		<li><b>Friends</b>
+    <ul>
+      <li><a href="http://askcuix.github.io" target="_blank">Chris's Blog</a></li>
+    </ul>
+    </li>
+		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
+		<li><a href="http://mindon.appspot.com/" target="_blank">Mindon.IDEA</a> @GAE  | <a href="http://weibo.com/mindon" target="_blank">微博</a></li>
+		<li>PHOTO @<a href="https://picasaweb.google.com/mindon" target="_blank">Picasa</a> | @<a href="http://www.flickr.com/photos/mindon/" target="_blank">Flickr</a> | @<a href="http://photos.nphoto.net/mindon/" target="_blank">NPhoto</a></li>
+		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
+		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
+	</ul>
+</section>
+<!-- section>
+<div style="margin-left:4px">
+<script type="text/javascript"> 
+alimama_pid="mm_24476855_3181338_10496202"; 
+alimama_width=250; 
+alimama_height=250; 
+document.write('<script src="http://a.alimama.cn/inf.js"><\/script>');
+</script> 
+</div>
+</section -->
+<section>
+    <h1>Learn More</h1>
+	<ul>
+		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
+		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
+	</ul>
+</section>
+
+<!--
+      <li><a href="http://www.lifeomics.com/" target="_blank">生命奥秘</a></li>
+      <li><a href="http://www.zysj.com.cn/" target="_blank">中医世家</a></li>
+      <li><a href="http://www.acucn.com/" target="_blank">針灸中國</a></li>
+      <li><a href="http://bbs.etiandi.com/" target="_blank">医天地－橘井论坛</a></li>
+-->
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Mindon Feng -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script>
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+})();
+</script>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mindon';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.com/blog/2005/01/07/old-blogms-1000141851/';
+        var disqus_url = 'http://mindon.github.com/blog/2005/01/07/old-blogms-1000141851/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

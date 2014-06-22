@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Context context = getApplicationContext(); SQLite Databases context.getDatabasePath("myDbName") Cache System will clean it auto if low memory context &hellip;">
+  <meta name="description" content="Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8. Android Managing Projects from the Command Line http:// &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,79 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Building Mobile Apps From the Command Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-15T09:04:00+08:00" pubdate data-updated="true">Sep 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
+
+<h1>Android</h1>
+
+<p>Managing Projects from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
+
+<h2>Creating an Android Project</h2>
+
+<pre><code>android create project \
+--target &lt;target_ID&gt; \
+--name &lt;your_project_name&gt; \
+--path path/to/your/project \
+--activity &lt;your_activity_name&gt; \
+--package &lt;your_package_namespace&gt;
+</code></pre>
+
+<h2>Updating a Project</h2>
+
+<pre><code>android update project --name &lt;project_name&gt; --target &lt;target_ID&gt;
+--path &lt;path_to_your_project&gt;
+</code></pre>
+
+<h2>Setting up a Library Project</h2>
+
+<pre><code>android create lib-project --name &lt;your_project_name&gt; \
+--target &lt;target_ID&gt; \
+--path path/to/your/project \
+--package &lt;your_library_package_namespace&gt;
+</code></pre>
+
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -502,69 +575,6 @@ Environment.getExternalStoragePublicDirectory(
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/02/ssh-connect-to-bb10-device/">SSH Connect to BB10 Device</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-02T00:23:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How to connect to your BB10 device or simulator?</p>
-
-<h2>Step 1:</h2>
-
-<p><strong>Turn on Development Mode</strong></p>
-
-<h2>Step 2: </h2>
-
-<p><strong>Creating an RSA2 key</strong></p>
-
-<pre><code>ssh-keygen -t rsa -b 4096
-</code></pre>
-
-<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
-
-<h2>Step 3: </h2>
-
-<p><strong>Start Connect Service</strong></p>
-
-<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
-</code></pre>
-
-<p>keep this console there.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/03/02/ssh-connect-to-bb10-device/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -612,7 +622,9 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Categories</h1>
   <ul>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 77 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
 
@@ -631,6 +643,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/17/free-prototype-design-tools/">Free Prototype Design Tools</a>
@@ -666,10 +682,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/20/android-wearable-sdk/">Android Wear</a>
       </li>
     
   </ul>
