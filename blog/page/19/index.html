@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Magnetism is familiar to every fifth grader, but describing it can confound even the most brilliant physicist.
-Take the case of Richard Feynman. &hellip;">
+  <meta name="description" content="Before drawing anything in a browser, ask yourself three questions: Do you need to support older browsers? If the answer is yes, then your only &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +88,63 @@ Take the case of Richard Feynman. &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/">Web-Drawing Throwdown: Paper.js vs. Processing.js vs. Raphael</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-25T23:18:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Before drawing anything in a browser, ask yourself three questions:</p>
+
+<h2>Do you need to support older browsers?</h2>
+
+<p>If the answer is yes, then your only choice is Raphaël. It handles browsers all the way back to IE 7 and Firefox 3. Raphaël even has some support for IE 6, although some of its underlying technology cannot be implemented there.</p>
+
+<h2>Do you need to support Android?</h2>
+
+<p>Android doesn’t support SVG, so you’ll have to use Paper.js or Processing.js. Some rumors say that Android 4 will handle SVG, but the majority of Android devices won’t support it for years.</p>
+
+<h2>Is your drawing interactive?</h2>
+
+<p>Raphaël and Paper.js focus on interaction with drawn elements through clicking, dragging and touch. Processing.js doesn’t support any object-level events, so responding to user gestures is very difficult. Processing.js can draw a cool animation on your home page, but the other tools are better for interactive applications.</p>
+
+<p>Paper.js, Processing.js and Raphaël are the leading libraries for drawing on the Web right now. A couple of others are up and coming, and you can always use Flash, but these three work well with HTML5 and have the widest support among browser vendors.</p>
+
+<p>Choosing the right framework will determine the success of your project. This article covers the advantages and disadvantages of each, and the information you need to make the best choice.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -385,50 +441,6 @@ Octopress</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/07/31/old-blogms-1004648722/">香港西贡盐田檡的天主堂</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-07-31T15:00:00+08:00" pubdate data-updated="true">Jul 31<span>st</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1004648722, blog id: mindon
-History stat: 浏览/评论：4/0  ,  日期：2010年7月31日 15:00</p>
-
-<p><img src="/images/blogms/1004648722-1.jpeg" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2010/07/31/old-blogms-1004648722/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/20/">&larr; Older</a>
@@ -478,9 +490,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 79 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -497,6 +509,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
@@ -532,10 +548,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
       </li>
     
   </ul>

@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000119147, blog id: airoff
-History stat: 浏览/评论：166/3 , 日期：2004年12月17日 09:00 很久以前就有这种想法了，是听说一个大学好友不用洗发水和香皂（应该不是事实，哈哈）而有感的。 &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000122012, blog id: airoff
+History stat: 浏览/评论：115/0 , 日期：2004年12月20日 08:40 在辩论赛当中，只要你充当了其中一方的角色，你就会尽量维护所在方的立场， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,52 @@ History stat: 浏览/评论：166/3 , 日期：2004年12月17日 09:00 很久以
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/12/20/old-blogms-1000122012/">博弈，战争和辩论等</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-12-20T08:40:00+08:00" pubdate data-updated="true">Dec 20<span>th</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000122012, blog id: airoff
+History stat: 浏览/评论：115/0  ,  日期：2004年12月20日 08:40</p>
+
+<p>在辩论赛当中，只要你充当了其中一方的角色，你就会尽量维护所在方的立场，有时候即使你自己都在质疑所极力去坚持的观点。你参与进来的时候就已经身不由己的成为那样的一个角色。</p>
+
+<p>在战争里，任何一方的普通士兵也是处于类似的一种境地。 极力地维护在自己所处的即使不是正确的立场。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2004/12/20/old-blogms-1000122012/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -365,237 +411,6 @@ History stat: 浏览/评论：139/1  ,  日期：2004年12月13日 15:51</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/13/old-blogms-1000115620/">Javascript之数字格式化</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-12-13T15:49:00+08:00" pubdate data-updated="true">Dec 13<span>th</span>, 2004</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000115620, blog id: airoff
-History stat: 浏览/评论：749/2  ,  日期：2004年12月13日 15:49</p>
-
-<p><FONT face=Arial><FONT color=#00008c>&lt;!&#8211;  [ 数字格式化 ] 麦盾脚本开始  &#8211;&gt;</p>
-
-<p>&lt;!&#8211;  请勿删除注释信息以方便别人参考使用，谢谢 :-)  &#8211;&gt;</p>
-
-<p>&lt;!&#8211; mindon scripts 2004, china</p>
-
-<p>/* &#8211;&gt; &lt;script language=&#8221;JavaScript&#8221;&gt;</p>
-
-<p>&lt;!&#8211;</p>
-
-<p>// please keep the following TEST SAMPLES message when using the script, thanks</p>
-
-<p>var fRJTest = true; // 此处 true 改为 false 即可隐藏测试用例信息</p>
-
-<p>fRJTest &amp;&amp; document.write(&#8220;&lt;span style=&#34;color:#0f0f0f;font-size:9pt;font-family:Arial&#34;&gt;&#8221;,</p>
-
-<p>&#8220;&lt;a href=&#8217;http:&#8221;+&#8221;//airoff.blogms.com/&#8217;&gt; 麦盾博客 &lt;/a&gt; MINDON SCRIPTS by fRJ, China 〖 iseasky@hotmail.com 】麦盾脚本 &lt;/span&gt;&#8221;,</p>
-
-<p>&#8220;&lt;hr style=&#8217;height:1pt;width:356pt&#8217; align=&#8217;left&#8217;&gt;&lt;blockquote&gt;&lt;pre&gt;&#8221;,</p>
-
-<p>&#8221; 使用方法例子 :\n &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-&#8220;,</p>
-
-<p>&#8220;\ndmask(12345, 16) = &#8221; +dmask(12345, 16),</p>
-
-<p>&#8220;\nfmask(123.4567, 10, 5) = &#8220;+fmask(123.4567, 10, 5),</p>
-
-<p>&#8220;\nfmask(-123.4567, 10, 3) = &#8220;+fmask(-123.4567, 10, 3),</p>
-
-<p>&#8220;\n\n 数制转换技巧提示:(使用toString(进制参数)) \n &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-&#8220;,</p>
-
-<p>&#8220;\n var d = (0127).toString(10) = &#8220;+(0127).toString(10) +&#8221;; // 8 进制数 0127 转为 10 进制 &#8220;,</p>
-
-<p>&#8220;\n var d = (0xf0).toString(10) = &#8221; +(0xf0).toString(10) +&#8221;; // 16 进制数 0xf0 转为 10 进制 &#8220;,</p>
-
-<p>&#8220;\n var hex = (315).toString(16) = &#8221; +(315).toString(16) +&#8221;; // 10 进制数 315 转为 16 进制 &#8220;,</p>
-
-<p>&#8220;&lt;/pre&gt;&lt;/blockquote&gt;&lt;hr style=&#8217;height:1pt;width:356pt&#8217; align=&#8217;left&#8217;&gt;&#8221;,</p>
-
-<p>&#8221; 设置 fRJTest = false 即可隐藏以上用例信息，请勿删除以方便参考使用，谢谢 :-)&#8221;);</p>
-
-<p>//*/</p>
-
-<p>var zerostr = &#8220;00000000&#8221;;</p>
-
-<p>function dmask(value, n)</p>
-
-<p>/<em> 生成 n 位补零字符串 </em>/</p>
-
-<p>{</p>
-
-<p>var value, n;</p>
-
-<p>if(!value &amp;&amp; value != 0) value = &#8220;&#8221;;</p>
-
-<p>if(!n || n &lt;0) n = 0;</p>
-
-<p>var ds = String(value);</p>
-
-<p>var pref = ds.substr(0,1);</p>
-
-<p>if(!isNaN(value) &amp;&amp; pref == &#8220;-&#8220;) { // 数字符号提取</p>
-
-<p>if(n&gt;0) n&#8211;; ds = ds.substr(1);</p>
-
-<p>} else {</p>
-
-<p>pref = &#8220;&#8221;;</p>
-
-<p>}</p>
-
-<p>if(!zerostr) zerostr = &#8220;00000000&#8221;;</p>
-
-<p>while(zerostr.length&lt;n) zerostr += zerostr;</p>
-
-<p>ds = (n&gt;ds.length?zerostr.substr(0, n -ds.length):&#8221;&#8220;) +ds;</p>
-
-<p>return pref +ds;</p>
-
-<p>}</p>
-
-<p>function fmask(value, n, dec)</p>
-
-<p>/<em> 生成数字 dec位小数(四舍五入) n 位长度(包括负号和小数点) 补零字符串 </em>/</p>
-
-<p>{</p>
-
-<p>var value, n, dec;</p>
-
-<p>if((!value &amp;&amp; value != 0) || isNaN(value)) value = 0;</p>
-
-<p>if(!n || n &lt;0) n = 0;</p>
-
-<p>if(!dec || dec &lt; 0) dec = 0;</p>
-
-<p>var fs = String(parseFloat(value));</p>
-
-<p>var pref = fs.substr(0,1);</p>
-
-<p>if(pref == &#8220;-&#8220;) { // 符号提取</p>
-
-<p>if(n&gt;0) n&#8211;; fs = fs.substr(1);</p>
-
-<p>} else {</p>
-
-<p>pref = &#8220;&#8221;;</p>
-
-<p>}</p>
-
-<p>if(dec &gt; 0 &amp;&amp; n&gt;0) n&#8211;; // 小数点长度</p>
-
-<p>if(!zerostr) zerostr = &#8220;00000000&#8221;;</p>
-
-<p>while(zerostr.length&lt;n) zerostr += zerostr;</p>
-
-<p>var dot = fs.indexOf(&#8220;.&#8221;);</p>
-
-<p>if(dot &lt; 0) { // 无小数点</p>
-
-<p>fs = (n -dec&gt;fs.length?zerostr.substr(0, n-dec-fs.length):&#8221;&#8220;) +fs; // 整数部分</p>
-
-<p>fs += (dec&gt;0?&#8221;.&#8221; +zerostr.substr(0, dec):&#8221;&#8220;); // 小数部分</p>
-
-<p>} else { // 带小数点</p>
-
-<p>var ids = fs.substr(0, dot);</p>
-
-<p>var jds = fs.substr(dot +1);</p>
-
-<p>ids = (n-dec&gt;ids.length?zerostr.substr(0, n-dec-ids.length):&#8221;&#8220;) +ids; // 整数部分</p>
-
-<p>if(dec &gt; 0) { // 小数部分</p>
-
-<p>if(dec &gt;= jds.length) { // 补零</p>
-
-<p>jds = jds +zerostr.substr(0, dec - jds.length);</p>
-
-<p>} else { // 四舍五入</p>
-
-<p>var de = parseInt(jds.substr(dec-1,1)) +(parseInt(jds.substr(dec,1))&gt;=5?1:0);</p>
-
-<p>jds = jds.substr(0, dec -1) +String(de);</p>
-
-<p>}</p>
-
-<p>}</p>
-
-<p>fs = ids +(dec&gt;0?&#8221;.&#8221; +jds: &#8220;&#8221;);</p>
-
-<p>}</p>
-
-<p>return pref +fs;</p>
-
-<p>}</p>
-
-<p>function days(from, to) { var ds =1000 * 60 * 60 *24;</p>
-
-<p>alert(Math.round(Math.abs(Date.parse(to)/ds-Date.parse(from)/ds))</p>
-
-<p>+&#8221; days between &#8220;+from+&#8221; and &#8220;+to);</p>
-
-<p>} //计算两个日期(格式:月/日/年) 之间的天数</p>
-
-<p>//&#8211;&gt;&lt;/script&gt;</p>
-
-<p>&lt;!&#8211;  此完整脚本可放在 Javascript 脚本文件中，也可以直接放入 HTML  文档(需设置 fRJTest 隐藏用例信息)使用  &#8211;&gt;</p>
-
-<p>&lt;!&#8211;  [ 数字格式化 ] 麦盾脚本结束  &#8211;&gt;</FONT></FONT></p>
-
-<p><FONT color=#00008c face=Arial></FONT></p>
-
-<p><FONT color=#ff0000 face=Arial>补充参考，考虑性能：</p>
-
-<p></FONT>function pad0(num, n) {</p>
-
-<p>var i = n - (num+&#8221;).length;</p>
-
-<p>if(i&lt;1) return num;</p>
-
-<p>var z = pad0.z||&#8221;;</p>
-
-<p>var j = z.length;</p>
-
-<p>if(n&gt;j) {</p>
-
-<p>while(n&gt;j){z +=&#8217;00000000&#8217;; j+=8;}</p>
-
-<p>pad0.z = z;</p>
-
-<p>}</p>
-
-<p>return z.substr(0, i)+num;</p>
-
-<p>}</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/46/">&larr; Older</a>
@@ -645,9 +460,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 79 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -664,6 +479,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
@@ -699,10 +518,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
       </li>
     
   </ul>

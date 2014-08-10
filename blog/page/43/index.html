@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000141854, blog id: airoff
-History stat: 浏览/评论：224/0 , 日期：2005年1月7日 09:16 aliceblue rgb(240, 248, 255) antiquewhite rgb( &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000141876, blog id: airoff
+History stat: 浏览/评论：166/0 , 日期：2005年1月7日 09:43 file lake0.m: x - y distribution &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,223 @@ History stat: 浏览/评论：224/0 , 日期：2005年1月7日 09:16 aliceblue r
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141876/">Lake Pollution Distribution (MATLAB)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:43:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141876, blog id: airoff
+History stat: 浏览/评论：166/0  ,  日期：2005年1月7日 09:43</p>
+
+<p><font size=2 style="line-height:14pt"><b>file lake0.m: x - y distribution</b></p>
+
+<p>================================================</p>
+
+<p><font color=#00008B>%lake0(m,num)</p>
+
+<p>%m decides how smooth the curve you want to be.</p>
+
+<p>%num decides how many countors you want to show.</p>
+
+<p>%example:lake0(160,20)</p>
+
+<p>function lake0(m,num)</p>
+
+<p>%all known parameters setup</p>
+
+<p>n=6;</p>
+
+<p>%u0=3.854167;</p>
+
+<p>%c0=0.599653;</p>
+
+<p>u0=0;</p>
+
+<p>c0=7.195833;</p>
+
+<p>c=[-0.121111    -0.000089 -0.233839 -0.114921 0.015436 -0.368833];</p>
+
+<p>d=[0.033955     -0.034494 -0.017328 -0.086451 0.073220 0.000013];</p>
+
+<p>r=0:1/m:1.0;</p>
+
+<p>thita=0:2<em>pi/m:2</em>pi;</p>
+
+<p>%Initalize the matrixs for higher speed</p>
+
+<p>rp=(r(ones(size(thita)),:))&#8217;;</p>
+
+<p>thita=thita(ones(size(r)),:);</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear r;</p>
+
+<p>x=31<em>rp.</em>cos(thita);</p>
+
+<p>y=31<em>rp.</em>sin(thita);</p>
+
+<p>u=rp.<em>(c(1)</em>cos(thita)+d(1)*sin(thita));</p>
+
+<p>for k=2:n</p>
+
+<p>u=u+(rp.<sup>k).<em>(c(k)</em>cos(k<em>thita)+d(k)</em>sin(k*thita));</sup></p>
+
+<p>end</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear c d k n m;</p>
+
+<p>clear rp thita;</p>
+
+<p>u=u0+c0/2+u;%Final result</p>
+
+<p>%define the color map</p>
+
+<p>colormap(zeros(64,3));</p>
+
+<p>grid off</p>
+
+<p>axis equal,hold;</p>
+
+<p>axis([-35 35 -35 35]);</p>
+
+<p>set(gcf,&#8217;Color&#8217;,[1 1 1]);</p>
+
+<p>set(gca,&#8217;Box&#8217;,&#8217;on&#8217;,&#8217;LineWidth&#8217;,1.5);</p>
+
+<p>rAngle=pi;</p>
+
+<p>xr=x<em>cos(rAngle)+y</em>sin(rAngle);</p>
+
+<p>yr=-x<em>sin(rAngle)+y</em>cos(rAngle);</p>
+
+<p>%[C,h]=contour(x,y,u,num);</p>
+
+<p>[C,h]=contour(xr,yr,u,num);</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear x y u;</p>
+
+<p>title(&#8216;湖水内部环境污染综合指标分布&#8217;);</p>
+
+<p>xlabel(&#8216;x (m)&#8217;);</p>
+
+<p>ylabel(&#8216;y (m)&#8217;);</p>
+
+<p>%clabel(C);</p>
+
+<p>%clabel(C,h);</p>
+
+<p>clabel(C,&#8217;manual&#8217;);</p>
+
+<p>hold off</font></p>
+
+<p>================================================</p>
+
+<p><b>file lake1.m: radiu - angle distribution</b></p>
+
+<p>================================================</p>
+
+<p><font color=#483D8B>%lake1(m,num)</p>
+
+<p>%m decides how smooth the curve you want to be.</p>
+
+<p>%num decides how many countors you want to show.</p>
+
+<p>%example:lake1(160,20)</p>
+
+<p>function lake(m,num)</p>
+
+<p>n=6;</p>
+
+<p>%u0=3.854167;</p>
+
+<p>%c0=0.599653;</p>
+
+<p>u0=0;</p>
+
+<p>c0=7.195833;</p>
+
+<p>c=[-0.121111    -0.000089 -0.233839 -0.114921 0.015436 -0.368833];</p>
+
+<p>d=[0.033955     -0.034494 -0.017328 -0.086451 0.073220 0.000013];</p>
+
+<p>r=0:31/m:31.0;</p>
+
+<p>thita=0:360/m:360;</p>
+
+<p>rp=(r(ones(size(thita)),:))&#8217;;</p>
+
+<p>thita=thita(ones(size(r)),:);</p>
+
+<p>u=(rp/31).<em>(c(1)</em>cos(thita<em>pi/180)+d(1)</em>sin(thita*pi/180));</p>
+
+<p>for k=2:n</p>
+
+<p>u=u+((rp/31).<sup>k).<em>(c(k)</em>cos(k<em>(thita</em>pi/180))+d(k)<em>sin(k</em>(thita*pi/180)));</sup></p>
+
+<p>end</p>
+
+<p>u=u0+c0/2+u;</p>
+
+<p>colormap(zeros(64,3));</p>
+
+<p>[C,h]=contour(thita,rp,u,num);</p>
+
+<p>set(gcf,&#8217;Color&#8217;,[1 1 1]);</p>
+
+<p>set(gca,&#8217;Box&#8217;,&#8217;on&#8217;,&#8217;LineWidth&#8217;,1.5);</p>
+
+<p>set(h,&#8217;LineWidth&#8217;,1.2);</p>
+
+<p>title(&#8216;湖水内部环境污染综合指标分布&#8217;);</p>
+
+<p>ylabel(&#8216;半径 r (m)&#8217;);</p>
+
+<p>xlabel(&#8216;角度   (度)&#8217;);</p>
+
+<p>%clabel(C,h);</p>
+
+<p>clabel(C,&#8217;manual&#8217;);</p>
+
+<p>hold off</font></p>
+
+<p>================================================</p>
+
+<p></font></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -678,52 +895,6 @@ History stat: 浏览/评论：94/2  ,  日期：2004年12月30日 14:12</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/29/old-blogms-1000131201/">深圳地铁体验版（修正）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-12-29T09:20:00+08:00" pubdate data-updated="true">Dec 29<span>th</span>, 2004</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000131201, blog id: airoff
-History stat: 浏览/评论：169/5  ,  日期：2004年12月29日 09:20</p>
-
-<p>从科学馆站下去的，确实看到很多人排队买票，而我的兴趣则拍些照片玩。因为我到地铁站里的时候已经是地铁开通后一个多小时了，所以不算太拥挤。本不想排队，但后来还是去自动售票机那排队了，看到了两台出了故障无法使用的售票机，只有两台正常工作。投进了四个硬币，出来了一个绿色的“硬币”——深圳地铁的单程票，真怕掉到那光滑的地面的时候追都追不回来。</p>
-
-<p>我没有上看到的第一趟地铁，而在里面胡拍了些照片——其实是在那挑毛病。两列车之间的空间比较窄，让人觉得有些拥挤、压抑。标志比较多，可能算是很全面了。但等车的时候发现并没有香港地铁的下列车到达的时间间隔——这会让人觉得有些茫然（其实是有的，我第一次乘坐的时候没看到而已）。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2004/12/29/old-blogms-1000131201/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/44/">&larr; Older</a>
@@ -773,9 +944,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 79 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -792,6 +963,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
@@ -827,10 +1002,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
       </li>
     
   </ul>

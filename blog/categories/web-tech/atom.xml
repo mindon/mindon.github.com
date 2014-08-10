@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-06-22T12:10:20+08:00</updated>
+  <updated>2014-08-10T13:35:46+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
+    <link href="http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift/"/>
+    <updated>2014-08-10T11:47:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift</id>
+    <content type="html"><![CDATA[<p>"WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."  <a href="http://wordpress.org/">wordpress.org</a></p>
+
+<p>It's welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
+
+<p>Customize one of its theme to our style, separated it into two versions - one is readonly without admin features as the live product for public, the other is the full version accessible only for internal network.</p>
+
+<p>Cache, Share to facebook and sitemap.xml for SEO is also important features you cannot miss.</p>
+
+<p>Make the blog online in 2 weeks, fixing bugs, improve SEO and share time to time in another 3 weeks.</p>
+
+<p>Now, simple plugins, update themes, shortcode features, wordpress editor - tinymce plugin, facebook share metas ... that's what i got from the one month project with WordPress. It's great to get such a project to get into WordPress, from its apache/nginx settings, .htaccess controls to some coding details all by myself.</p>
+
+<!--more-->
+
+
+<p>At the same time, I got another opportunity to practise <a href="http://golang.org">Go Language</a>. It's a simple internal management website with uploads, mysql database operation, oa authorization, handling JSON and sessions.</p>
+
+<p>My first practice on golang is <strong>tof</strong> -- a simple library to implement OA APIs of our company. In fact, it's a golang version from my former nodejs version.</p>
+
+<p>The "Notify Me" in golang works like a charm. I enjoy coding in go.</p>
+
+<p>I cannot stop learning those wonderful programming techs. I'm reading on the Swift book on iBook. There's lots of coding styles of Swift and Golang are alike. As a Front-End JavaScript developer, It's a enjoyment.</p>
+
+<p>Any opportunity to practise the Swift? I'm so sure there will be one :-)</p>
+
+<p>I like Golang, maybe Swift too!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
@@ -113,29 +147,6 @@
 <p>It helps to avoid this issue and provides you the customized possibility.</p>
 
 <p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A callstack trace for QML js]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
-    <updated>2014-03-20T05:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
-    <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That's where BlackBerry 10 comes from.</p>
-
-<p>The last year (2013), we'd spent lots of time on the WeChat for BlackBerry 10.</p>
-
-<p>QML tech is good for an mobile app UI, using JavaScript. And there's no <code>console.trace()</code> in QML to trace the callstacks, here's mine:</p>
-
-<!--more-->
-
-
-
-
-<script src="https://gist.github.com/mindon/9524222.js"></script>
-
-
-<p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
 ]]></content>
   </entry>
   

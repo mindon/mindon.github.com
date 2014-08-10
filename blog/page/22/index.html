@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1002337637, blog id: airoff
-History stat: 浏览/评论：135/1 , 日期：2009年3月29日 18:42 作者：汪冰 原文 2009-03-05 14:41 畅销书《跟艺术家学减法》 &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1002382967, blog id: airoff
+History stat: 浏览/评论：140/1 , 日期：2009年5月7日 17:10 一般都会想到用 replace 来实现，这里分享一个看起来更可靠的方法： String. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,50 @@ History stat: 浏览/评论：135/1 , 日期：2009年3月29日 18:42 作者：�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/07/old-blogms-1002382967/">实现Javscript String的replaceAll方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-07T17:10:00+08:00" pubdate data-updated="true">May 7<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1002382967, blog id: airoff
+History stat: 浏览/评论：140/1  ,  日期：2009年5月7日 17:10</p>
+
+<p>一般都会想到用 replace 来实现，这里分享一个看起来更可靠的方法：</p>
+
+<pre><code>String.prototype.replaceAll = function(s, t) {return this.split(s).join(t)};
+</code></pre>
+
+<p>为什么要这样呢？试试把 &#8220;:)a:)b:)c&#8221; 里的所有 :) 替换成 # 吧，如果 :) 是一个不确定的字符串的时候，上面的方法就能解决你的问题。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -366,52 +410,6 @@ History stat: 浏览/评论：245/0  ,  日期：2008年10月12日 12:57</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/09/06/old-blogms-1002180791/">Recently</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-09-06T14:38:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1002180791, blog id: airoff
-History stat: 浏览/评论：268/1  ,  日期：2008年9月6日 14:38</p>
-
-<p>由于加入了mail本地化项目组，需要到广州研发中心学习一下关于mail的系统以及相关的开发。</p>
-
-<p>8月25日～9月5日，周末回深圳。9月4日中午跟在广州的老蔡、钟雁聚了一下，虽然深圳离广州不远，可是之前都很久没有见面了。时间过得真快，一年一年转眼就过去了。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2008/09/06/old-blogms-1002180791/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/23/">&larr; Older</a>
@@ -461,9 +459,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 78 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 79 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 32 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
 
@@ -480,6 +478,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
@@ -515,10 +517,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/01/living-unit/">Living Unit</a>
       </li>
     
   </ul>
