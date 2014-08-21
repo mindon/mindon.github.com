@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-08-10T12:48:30+08:00</updated>
+  <updated>2014-08-22T07:07:01+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,11 +14,28 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Programming Language: Swift]]></title>
+    <link href="http://mindon.github.com/blog/2014/08/22/the-programming-language-swift/"/>
+    <updated>2014-08-22T06:37:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/08/22/the-programming-language-swift</id>
+    <content type="html"><![CDATA[<p>Swift是苹果公司今年推出的新编程语言。花了差不多两个星期看完iBooks里官方的《The Swift Programming Language》之后，感觉Swift简单易用的脚本式语法，灵活性，扩展性，清晰严格的规范确实是集成了很多语言的优点。</p>
+
+<p>Swift + LLVM，如果再有跨平台的开发环境的话，纯从编程语言的角度来看，是具有替代C++，PYTHON，Java的强大实力。</p>
+
+<p>不过现实是目前如此庞大的软件开发人群，要投入到一种新的即使是设计精良的编程语言，必然是一个长期的过程，而且需要需求的必要性来驱动。</p>
+
+<p>如果Swift做不到别的语言不可替代的事情，不管语言设计本身好到什么程度，应用和推广始终会是硬伤。</p>
+
+<p>愿Swift能顺利成长壮大，发挥威力！ :-p</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
     <link href="http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
     <id>http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift</id>
-    <content type="html"><![CDATA[<p>&#8220;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&#8221;  <a href="http://wordpress.org/">wordpress.org</a></p>
+    <content type="html"><![CDATA[<p>&#8220;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&#8221;  &#8211; <a href="http://wordpress.org/">wordpress.org</a></p>
 
 <p>It&#8217;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
 
@@ -779,52 +796,6 @@
 <p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a></p>
 
 <p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[时间和先进]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/02/time-and-advanced/"/>
-    <updated>2014-03-02T12:26:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/02/time-and-advanced</id>
-    <content type="html"><![CDATA[<p>某些无知的人否定一些东西的时候，总喜欢拿已知的知识和时间是否更靠近现在来作为判断标准。</p>
-
-<p>其实，我们应该意识到3点：</p>
-
-<ol>
-<li><p>科学技术一直都是往未知的方向发展的；</p></li>
-<li><p>即使是时间也没有否定未知的能力；</p></li>
-<li><p>人类的知识还是非常有限的。</p></li>
-</ol>
-
-
-<p>不多说，对比一下 21世纪 Touch Bionics 用尽最先进的科学技术生产的智能仿生手 i-LIMB Hand 和大自然数百万年前生产的人类手</p>
-
-<p><img src="http://mindon.github.com/images/blog/ilimb-pulse.jpg" alt="" /></p>
-
-<!--more-->
-
-
-<p><a href="http://www.sdmuseum.com/lx_show.aspx?id=5737&amp;cid=60">“手”的进化</a></p>
-
-<p>在绝大多方面，现代医学的技术和人体自身的修复能力还是不能同日而语的，要认识几百万年进化的成果还需不少时日的。</p>
-
-<p>人类的科技还在持续不断发展，而且已经取得了难以置信的成果，然后，相对于大自然和浩瀚宇宙来说，还只是沧海一粟，和大自然数十亿年的积累和进化对比，距离不是一点点。不要再自以为是地否定未知，特别是拿时间来衡量是否先进了。</p>
-
-<p>展望一下医疗的终极未来：身体修复方案和知识共享，并能够自行修复任何损伤和破坏。</p>
-
-<ol>
-<li><p>身体能够自动积累和改善修复方案；</p></li>
-<li><p>身体能够自行根据修复方案修复问题；</p></li>
-<li><p>身体能够自动分享和获取修复方案，并根据自身状况有效调整修复方案；</p></li>
-<li><p>身体根据修复方案引领自身寻找修复资源或获取协助；</p></li>
-<li><p>身体对环境的威胁给出预警和建议。</p></li>
-</ol>
-
-
-<p>从这5点看来，目前的医疗科技还是相当落后的，挖据身体的潜能，读懂身体的状态指示，协助身体自身的修复才是医疗的未来。</p>
-
-<p><i id="link-tags">Touch Bionics;i-LIMB Hand;手的进化</i></p>
 ]]></content>
   </entry>
   

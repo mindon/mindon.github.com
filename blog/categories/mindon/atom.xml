@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.com/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.com/"/>
-  <updated>2014-08-10T13:35:46+08:00</updated>
+  <updated>2014-08-22T07:07:01+08:00</updated>
   <id>http://mindon.github.com/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,11 +14,28 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Programming Language: Swift]]></title>
+    <link href="http://mindon.github.com/blog/2014/08/22/the-programming-language-swift/"/>
+    <updated>2014-08-22T06:37:00+08:00</updated>
+    <id>http://mindon.github.com/blog/2014/08/22/the-programming-language-swift</id>
+    <content type="html"><![CDATA[<p>Swift是苹果公司今年推出的新编程语言。花了差不多两个星期看完iBooks里官方的《The Swift Programming Language》之后，感觉Swift简单易用的脚本式语法，灵活性，扩展性，清晰严格的规范确实是集成了很多语言的优点。</p>
+
+<p>Swift + LLVM，如果再有跨平台的开发环境的话，纯从编程语言的角度来看，是具有替代C++，PYTHON，Java的强大实力。</p>
+
+<p>不过现实是目前如此庞大的软件开发人群，要投入到一种新的即使是设计精良的编程语言，必然是一个长期的过程，而且需要需求的必要性来驱动。</p>
+
+<p>如果Swift做不到别的语言不可替代的事情，不管语言设计本身好到什么程度，应用和推广始终会是硬伤。</p>
+
+<p>愿Swift能顺利成长壮大，发挥威力！ :-p</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
     <link href="http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
     <id>http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift</id>
-    <content type="html"><![CDATA[<p>"WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."  <a href="http://wordpress.org/">wordpress.org</a></p>
+    <content type="html"><![CDATA[<p>"WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."  -- <a href="http://wordpress.org/">wordpress.org</a></p>
 
 <p>It's welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
 
@@ -197,32 +214,6 @@
 <p>这是从王唯工教授那里得来的启示。从这个指导思想出发，整理、发展和完善现有的医学技术，而不是割裂中医和西医，才能营造一个健康领域的新纪元。</p>
 
 <p>科学从来都是面向未来的，而不是停步在过去和现在。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
-    <updated>2014-05-02T08:26:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
-    <content type="html"><![CDATA[<p>I'd developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
-
-<p>The tool doesn't care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
-
-<p>It's a simple aid tool only, not much time to improve.</p>
-
-<p>I'm always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
-
-<p>Last month, I found one: the <a href="http://highlightjs.org/">highlightjs</a>!</p>
-
-<p>Yes, it knows lots of programming languages - that's what I'm looking for.</p>
-
-<!--more-->
-
-
-<p>I try to update the core js to testing the idea - it works: Using syntax highlight library to extract strings.</p>
-
-<p>It's great!</p>
 ]]></content>
   </entry>
   

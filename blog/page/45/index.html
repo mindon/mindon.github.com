@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000122012, blog id: airoff
-History stat: 浏览/评论：115/0 , 日期：2004年12月20日 08:40 在辩论赛当中，只要你充当了其中一方的角色，你就会尽量维护所在方的立场， &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000124479, blog id: airoff
+History stat: 浏览/评论：200/0 , 日期：2004年12月22日 17:12 // cancel pop menu function cancelkey(e) { if( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +89,87 @@ History stat: 浏览/评论：115/0 , 日期：2004年12月20日 08:40 在辩论
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/12/22/old-blogms-1000124479/">Javascript之取消</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-12-22T17:12:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000124479, blog id: airoff
+History stat: 浏览/评论：200/0  ,  日期：2004年12月22日 17:12</p>
+
+<p><font color=#00008C><font face=Arial>// cancel pop menu</p>
+
+<p>function cancelkey(e) {</p>
+
+<p>if(document.all) event.returnValue = false; return false;</p>
+
+<p>}</p>
+
+<p>document.oncontextmenu = cancelkey;</p>
+
+<p>// cancel shift-click/enter open new</p>
+
+<p>function cancelNew(e) {</p>
+
+<p>if(document.all) {</p>
+
+<p>if(event.shiftKey)</p>
+
+<p>if(event.keyCode == &quot;13&quot; || event.type==&quot;click&quot;) return false;</p>
+
+<p>} else {</p>
+
+<p>if(e.shiftKey)</p>
+
+<p>if(e.keyCode == &quot;13&quot; || e.type==&quot;click&quot;) return false;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>document.onkeypress = cancelNew;</p>
+
+<p>//cancel select</p>
+
+<p>document.onselectstart = function(){ if(event.srcElement.tagName != &quot;INPUT&quot; &amp;&amp; event.srcElement.tagName != &quot;TEXTAREA&quot;) return false; return true;}</p>
+
+<p>//cancel drag</p>
+
+<p>document.ondragstart = function(){ if(event.srcElement.tagName != &quot;INPUT&quot; &amp;&amp; event.srcElement.tagName != &quot;TEXTAREA&quot;) return false; return true;}</p>
+
+<p></font></font></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -365,52 +446,6 @@ History stat: 浏览/评论：118/2  ,  日期：2004年12月13日 15:54</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/13/old-blogms-1000115622/">蝴蝶效应</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-12-13T15:51:00+08:00" pubdate data-updated="true">Dec 13<span>th</span>, 2004</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000115622, blog id: airoff
-History stat: 浏览/评论：139/1  ,  日期：2004年12月13日 15:51</p>
-
-<p>It has been said that something as small as the flutter of a butterfly&#8217;s wing can ultimately cause a typhoon halfway around the world. &#8212;- Chaos Theory</p>
-
-<p>“蝴蝶效应” - The Butterfly Effect，很久没有看过这样的片子了，很特别。让我想起了 Parallel  Universe Theory 也就是平行宇宙的理论，想起了 M Theory。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2004/12/13/old-blogms-1000115622/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/46/">&larr; Older</a>
@@ -460,7 +495,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 79 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
@@ -479,6 +514,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
@@ -514,10 +553,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/">Save Presentations Offline from Google Drive</a>
       </li>
     
   </ul>
@@ -569,6 +604,7 @@ document.getElementById('mydonate').onclick = function(){
 		<li><b>Friends</b>
     <ul>
       <li><a href="http://askcuix.github.io" target="_blank">Chris&#8217;s Blog</a></li>
+      <li><a href="http://justinyan.me" target="_blank">枫言枫语</a></li>
     </ul>
     </li>
 		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
