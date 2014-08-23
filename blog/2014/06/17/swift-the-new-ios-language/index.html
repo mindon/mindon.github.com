@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Swift - The new iOS Language - Mindon.IDEA</title>
+  <meta name="author" content="Mindon Feng">
+
+  
+  <meta name="description" content="Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace Feature By Daniel Eran Dilger Work on &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mindon.IDEA</a></h1>
+  
+    <h2>Air off, Mind on ~ / Javascript+Golang, Sci, Health... /</h2>
+  
+</hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.google.com" id="cse-search-box">
+  <fieldset role="search">
+    <input class="search" type="text" name="q" results="0"/>
+    <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
+    <input type="hidden" name="ie" value="UTF-8" />
+  </fieldset>
+</form>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
+  <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
+  <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Swift - the New iOS Language</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T05:38:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+
+<div class="entry-content">
+
+	<div class="adpost">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+<A NAME="A,BODY"></A>
+<p><strong> Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
+
+<p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
+
+<p>Work on Swift—Apple&#8217;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
+
+<p><strong>LLVM</strong></p>
+
+<p>Rather than being an entirely new &#8220;beta&#8221; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&#8217;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
+
+<h2>LLVM: A new compiler for Objective-C</h2>
+
+<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&#8217;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
+
+<p><strong>Chris Lattner</strong></p>
+
+<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&#8217;s objc-language mailing list. Apple in turn began contributing to Lattner&#8217;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
+
+<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&#8217;s Xcode.</p>
+
+<!--more-->
+
+
+<p>In addition to the &#8220;pure&#8221; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &#8220;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&#8221; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&#8217;s OS X.</p>
+
+<p>GCC&#8217;s support for Objective-C, the primary development language of Apple&#8217;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&#8217;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&#8217;s Objective-C relevant as a language.</p>
+
+<p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
+
+<p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
+
+<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&#8217;s software, but is also tightly integrated into the development of Apple&#8217;s custom silicon, including the A6 and A7 Application Processors.</p>
+
+<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&#8217;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
+
+<h2>Swift: A new language for LLVM</h2>
+
+<p>By 2010, LLVM&#8217;s solution to GCC&#8217;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &#8220;a few other (amazing) people.&#8221;</p>
+
+<p>By July 2013, Lattner noted that the new Swift project had become &#8220;major focus for the Apple Developer Tools group.&#8221; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &#8220;took over management and leadership of the entire Developer Tools department at Apple&#8221; at the beginning of 2013.</p>
+
+<p>&#8220;In addition to compilers and low-level tools,&#8221; Lattner notes, &#8220;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&#8221;</p>
+
+<p>Lattner noted that the new Swift language &#8220;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&#8221;</p>
+
+<p>Apple&#8217;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &#8220;Swift has been years in the making,&#8221; adding that &#8220;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
+
+<p>&#8220;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&#8221;&#8220;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&#8221;</p>
+
+<p>The company also observes that Swift &#8220;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&#8221;</p>
+
+<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &#8220;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&#8221;</p>
+
+<h2>Swift&#8217;s Interactive Playgrounds &amp; REPL</h2>
+
+<p>Lattner also commented on two new features associated with Swift: Xcode&#8217;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
+
+<p>&#8220;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&#8221; Lattner noted. &#8220;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
+
+<p>&#8220;Playgrounds were heavily influenced by Bret Victor&#8217;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&#8217;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
+
+<p>&#8220;I hope that by making programming more approachable and fun, we&#8217;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&#8221; Lattner stated.</p>
+
+<p>Apple&#8217;s presentation of Swift notes that &#8220;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&#8217;ve perfected your code in the playground, simply move that code into your project.&#8221;</p>
+
+<p>The company states that Xcode&#8217;s Playground lets users &#8220;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&#8221;</p>
+
+<p>Apple notes that the REPL debugging console in Xcode &#8220;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&#8221;</p>
+
+<p>Apple says it plans to rapidly evolve Swift in response to developers needs and feature requests.</p>
+
+<p>Thinkful, an education startup focused on mentor-led programming education, has already announced plans to offer a <a href="https://www.thinkful.com/a/dlp/learn-blue/base/IOS-002">course on developing in Swift</a>, in a program that begins July 16.</p>
+
+<p><span id="link-tags">iOS;XCode;Clang;Chris Lattner;LLVM;Objective-C;Swift;NeXTStep;REPL</span></p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T05:38:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/readings/'>Readings</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/14/what-we-missed-with-our-health/" title="Previous Post: 关于健康，我们忘掉了什么？">&laquo; 关于健康，我们忘掉了什么？</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/17/free-prototype-design-tools/" title="Next Post: Free Prototype Design Tools">Free Prototype Design Tools &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>About Me</h1>
+    <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
+</section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/108546803797935855689?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Categories</h1>
+  <ul>
+
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">Chinese-Balance-Heal</a> ( 8 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">Chrome-App</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">Mobile-App</a> ( 16 )</li>
+
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/22/restore-my-old-blogms-blogs/">激活备份的敏思日志</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/free-prototype-design-tools/">Free Prototype Design Tools</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/swift-the-new-ios-language/">Swift - The new iOS Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/14/what-we-missed-with-our-health/">关于健康，我们忘掉了什么？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section>
+    <h1>Google廣告</h1>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-6997921015773263";
+	/* git-aside */
+	google_ad_slot = "4887341949";
+	google_ad_width = 250;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</section><section>
+    <h1>Links</h1>
+	<ul>
+		<li><a href="http://www.ted.com/" target="_blank">TED: Ideas worth spreading</a></li>
+		<li><a href="http://www.sciencemag.org/" target="_blank">Science Magazine</a></li>
+		<li><a href="http://www.spongelab.com/browse/" target="_blank" title="Search science topics, lesson plans, case studies and more">SpongeLab</a></li>
+		<li><a href="http://catlinseaviewsurvey.com/seaview.htm" target="_blank">Sea View Survey</a></li>
+		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
+		<li><b>傳統中醫 TCM</b>
+    <ul>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
+      <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
+      <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>
+    </ul>
+    </li>
+		<li><b>Readings Around</b>
+    <ul>
+      <li><a href="http://yeeyan.org/" target="_blank">译言网</a></li>
+    </ul>
+    </li>
+		<li><b>Development</b>
+    <ul>
+      <li><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html" target="_blank">Chrome Latest Build</a></li>
+      <li><a href="http://snapsvg.io/" target="_blank">SnapSVG</a></li>
+      <li><a href="http://www.cocos2d-iphone.org/" target="_blank">COCOS2D</a></li>
+    </ul>
+    </li>
+		<li><b>Friends</b>
+    <ul>
+      <li><a href="http://askcuix.github.io" target="_blank">Chris's Blog</a></li>
+      <li><a href="http://justinyan.me" target="_blank">枫言枫语</a></li>
+    </ul>
+    </li>
+		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
+		<li><a href="http://mindon.appspot.com/" target="_blank">Mindon.IDEA</a> @GAE  | <a href="http://weibo.com/mindon" target="_blank">微博</a></li>
+		<li>PHOTO @<a href="https://picasaweb.google.com/mindon" target="_blank">Picasa</a> | @<a href="http://www.flickr.com/photos/mindon/" target="_blank">Flickr</a> | @<a href="http://photos.nphoto.net/mindon/" target="_blank">NPhoto</a></li>
+		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
+		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
+	</ul>
+</section>
+<section>
+    <h1>Learn More</h1>
+	<ul>
+		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
+		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
+	</ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Mindon Feng -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script src="/javascripts/modernizr-2.6.2.js"></script>
+<script src="/javascripts/ender.js"></script>
+<script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28048168-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script>
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+})();
+</script>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mindon';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/';
+        var disqus_url = 'http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
