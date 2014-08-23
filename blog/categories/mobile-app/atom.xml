@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mobile-App | Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/blog/categories/mobile-app/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/blog/categories/mobile-app/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[All Kinds of 2048!]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048/"/>
     <updated>2014-05-02T08:17:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048</id>
+    <id>http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048</id>
     <content type="html"><![CDATA[<p>在 Flappy Bird 的疯狂Clone之后，又有了 2048 复制 three 的疯狂。</p>
 
 <p>Exploring the open source 2048 game javascript examples</p>
@@ -46,9 +46,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android Wear]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/android-wearable-sdk/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/android-wearable-sdk/"/>
     <updated>2014-03-20T22:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/android-wearable-sdk</id>
+    <id>http://mindon.github.io/blog/2014/03/20/android-wearable-sdk</id>
     <content type="html"><![CDATA[<p><a href="http://developer.android.com/wear/">Android Wear</a> SDK makes Android apps connected with wearable devices. The <a href="http://moto360.motorola.com/">Moto 360</a> is coming.</p>
 
 <p>First, <a href="http://developer.android.com/wear/preview/start.html">Sign Up</a> for the Developer Preview.</p>
@@ -80,9 +80,9 @@
   
   <entry>
     <title type="html"><![CDATA[A callstack trace for QML js]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
     <updated>2014-03-20T05:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
+    <id>http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
     <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That's where BlackBerry 10 comes from.</p>
 
 <p>The last year (2013), we'd spent lots of time on the WeChat for BlackBerry 10.</p>
@@ -103,9 +103,9 @@
   
   <entry>
     <title type="html"><![CDATA[A UI Unit]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/16/a-ui-unit/"/>
+    <link href="http://mindon.github.io/blog/2014/03/16/a-ui-unit/"/>
     <updated>2014-03-16T09:33:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/16/a-ui-unit</id>
+    <id>http://mindon.github.io/blog/2014/03/16/a-ui-unit</id>
     <content type="html"><![CDATA[<p>What kind of basic abilities should be with an UI unit?</p>
 
 <p>As a web developer, an UI includes: Data, DOM, CSS, JavaScript.</p>
@@ -139,9 +139,9 @@
   
   <entry>
     <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
+    <link href="http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
     <updated>2014-03-15T18:51:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
+    <id>http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
     <content type="html"><![CDATA[<p>I'm one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
 
 <p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>

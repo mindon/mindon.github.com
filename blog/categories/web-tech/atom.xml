@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Web-Tech | Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/blog/categories/web-tech/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
-    <link href="http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift/"/>
+    <link href="http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift</id>
+    <id>http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift</id>
     <content type="html"><![CDATA[<p>"WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time."  -- <a href="http://wordpress.org/">wordpress.org</a></p>
 
 <p>It's welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
     <updated>2014-05-02T11:09:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
+    <id>http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
     <content type="html"><![CDATA[<p>The Pop animation engine is responsible for all of the transitions and animations displayed on Paper, including all scrolling, bouncing, and unfolding effects.</p>
 
 <p>source code: <a href="https://github.com/facebook/pop">https://github.com/facebook/pop</a></p>
@@ -60,9 +60,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
+    <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
     <content type="html"><![CDATA[<p>I'd developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
 
 <p>The tool doesn't care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[All Kinds of 2048!]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048/"/>
     <updated>2014-05-02T08:17:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048</id>
+    <id>http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048</id>
     <content type="html"><![CDATA[<p>在 Flappy Bird 的疯狂Clone之后，又有了 2048 复制 three 的疯狂。</p>
 
 <p>Exploring the open source 2048 game javascript examples</p>
@@ -117,9 +117,9 @@
   
   <entry>
     <title type="html"><![CDATA[A false linkable text sample]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample/"/>
     <updated>2014-03-20T05:08:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample</id>
+    <id>http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample</id>
     <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It's awkful, right? It's on Google+! The Google - who leads the web tech.</p>
 
 <p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>

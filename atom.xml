@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -14,10 +14,103 @@
 
   
   <entry>
+    <title type="html"><![CDATA[西少爷.肉夹馍，开分店啦]]></title>
+    <link href="http://mindon.github.io/blog/2014/08/23/about-xishaoye-roujiamo/"/>
+    <updated>2014-08-23T17:41:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/08/23/about-xishaoye-roujiamo</id>
+    <content type="html"><![CDATA[<p>这个周日（Aug 23, 2014），<a href="http://baike.baidu.com/view/12500068.htm">西少爷肉夹馍</a>望京分店要开业了。这个肉夹馍品牌今年可算是IT圈里的热门话题。主题团队均来自BAT等大公司的离职员工——他们传递出一种信息：选择的自由，奋斗的激情，学习的能力和感染的力量。</p>
+
+<p>孟兵，是个我没有认识和见面之前就能感受到他行动能力的小伙子。他在T工作期间，学习和工作都异于常人地努力和拼命，而且方向很明确和坚定。</p>
+
+<p>昨天微信上看到他的分店开张的消息，可以感觉到他在一步步朝着自己的目标前行，很棒！</p>
+
+<p>其实写这篇日志，不是因为他的新店开张，而是因为看到“肉夹馍”几个字，有点造字的一个想法，作品是……</p>
+
+<!-- more -->
+
+
+<p><img src="http://mindon.github.io/images/blog/r.png" alt="" /></p>
+
+<p>要表达什么？嗯… 不解释。不同的人理解产生不同的诠释，才是最有意思的地方。</p>
+
+<p>当然，顺便宣传一下也是要的 :-p</p>
+
+<p>第一个店开在五道口，Aby在北京很熟悉和喜欢的地方，被称为“宇宙的中心”的位置。</p>
+
+<p>第二个店：8-24（本周日）上午10：30，西少爷望京凯德Mall店准时开业！（地下一层扶梯正对第3家店）这个新店会有三种新品，据说“牛馍王”就是其中之一。免费送馍是他们店的传统了，附近的大公司工卡也能免费领。</p>
+
+<p>祝他们生意兴隆 :-) 西少爷们，加油！</p>
+
+<p>IT码农的才能不仅仅是Coding，我们强大的学习能力，适应能力和其他行业能力也是不容忽视的。Fighting!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Seeing is Not Always Believable]]></title>
+    <link href="http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable/"/>
+    <updated>2014-08-23T16:18:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable</id>
+    <content type="html"><![CDATA[<p>&#8220;This is an illusion that&#8217;s so good it&#8217;s hard to believe it&#8217;s an illusion. When the black and white lines disappear, it&#8217;s easy to see the rectangles are moving at constant speed.  But before that they seem to be taking turns, and pausing when they reach each new line.&#8221;</p>
+
+<p>The original illusion image is a gif. I cannot believe it&#8217;s a true illusion - it may be a gif animation trick. So I decided to check on the gif animation inside - frame by frame: It&#8217;s a true illusion! Amazing!</p>
+
+<p>To clean your doubt. I make a interactive image for this illusion:</p>
+
+<!-- more -->
+
+
+<p><svg id="illus" width="600" height="250"></svg></p>
+
+<ol>
+    <li> click vertical bars to switch between bars and pure background color;</li>
+    <li> click the color block to restart animation</li>
+</ol>
+
+
+
+
+<script src="http://mindon.github.io/lib/snap.svg-min.js"></script>
+
+
+<script>
+var s = Snap('#illus');
+var p = s.path("M10 0 v250 h10 v-250z").attr({
+  fill: "#000000"
+}).pattern(0, 0, 20, 250);
+
+s.rect(0,0,600,250).attr({
+  fill: p
+}).click(function(){
+  this.attr({fill: !/url/.test(this.attr('fill')) ? p : '#666666'});
+});
+
+var r1 = s.rect(0,60,40,20).attr({
+  fill: '#ffff00'
+}).click(resetBlocks);
+
+var r2 = s.rect(0,160,40,20).attr({
+  fill: '#0000ff'
+}).click(resetBlocks);
+
+var blocks = Snap.set(r1, r2);
+function resetBlocks() {
+  blocks.attr({x:0}).animate({x: 560}, 18000, mina.linear, function(){
+    resetBlocks();
+  });
+}
+resetBlocks();
+</script>
+
+
+<p>Still hard to believe? The Illusion &#8211; Seeing is not always believable! Be careful of what you see!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[The Programming Language: Swift]]></title>
-    <link href="http://mindon.github.com/blog/2014/08/22/the-programming-language-swift/"/>
+    <link href="http://mindon.github.io/blog/2014/08/22/the-programming-language-swift/"/>
     <updated>2014-08-22T06:37:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/08/22/the-programming-language-swift</id>
+    <id>http://mindon.github.io/blog/2014/08/22/the-programming-language-swift</id>
     <content type="html"><![CDATA[<p>Swift是苹果公司今年推出的新编程语言。花了差不多两个星期看完iBooks里官方的《The Swift Programming Language》之后，感觉Swift简单易用的脚本式语法，灵活性，扩展性，清晰严格的规范确实是集成了很多语言的优点。</p>
 
 <p>Swift + LLVM，如果再有跨平台的开发环境的话，纯从编程语言的角度来看，是具有替代C++，PYTHON，Java的强大实力。</p>
@@ -32,9 +125,9 @@
   
   <entry>
     <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
-    <link href="http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift/"/>
+    <link href="http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/08/10/wordpress-golang-and-swift</id>
+    <id>http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift</id>
     <content type="html"><![CDATA[<p>&#8220;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&#8221;  &#8211; <a href="http://wordpress.org/">wordpress.org</a></p>
 
 <p>It&#8217;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
@@ -66,9 +159,9 @@
   
   <entry>
     <title type="html"><![CDATA[激活备份的敏思日志]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/22/restore-my-old-blogms-blogs/"/>
+    <link href="http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs/"/>
     <updated>2014-06-22T10:35:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/22/restore-my-old-blogms-blogs</id>
+    <id>http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs</id>
     <content type="html"><![CDATA[<p>10年前，开始在敏思博客写日志，并在那里认识了我们家的Aby。不过后来敏思博客网站关闭，我就用一个自己写的工具把日志备份了下来。</p>
 
 <p>昨天用go语言(golang)写了一个读取mht格式的程序，才发现当初备份的日志里，几乎有一半的日志对应的照片和图片没能保存成功，看来mht保存并不是那么靠谱的。还好文字都保存基本没问题。</p>
@@ -90,9 +183,9 @@
   
   <entry>
     <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools/"/>
+    <link href="http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools/"/>
     <updated>2014-06-17T06:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools</id>
+    <id>http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools</id>
     <content type="html"><![CDATA[<p>原型设计工具推荐</p>
 
 <p>Here&#8217;s some great free prototype design tools:</p>
@@ -166,9 +259,9 @@
   
   <entry>
     <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/"/>
+    <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
     <updated>2014-06-17T05:38:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language</id>
+    <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
     <content type="html"><![CDATA[<p><strong> Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
 
 <p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
@@ -248,9 +341,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于健康，我们忘掉了什么？]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health/"/>
+    <link href="http://mindon.github.io/blog/2014/06/14/what-we-missed-with-our-health/"/>
     <updated>2014-06-14T20:30:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/14/what-we-missed-with-our-health</id>
+    <id>http://mindon.github.io/blog/2014/06/14/what-we-missed-with-our-health</id>
     <content type="html"><![CDATA[<p>当我们在争论中医还是西医更强大更有效的时候，不自觉中却忘掉了医术是为什么而生的。而身体的状态和需求，才是医术需要关注的主角。</p>
 
 <p>第一次在书城看到王唯工教授的《气的乐章》已经是数年前的事情了，至今依旧印象深刻。这是难得的一部结合现代科学技术来解读传统中医原理的著作：试图解释人体身上看起来不寻常的结构和状态。《气的乐章》以心脏的博动为核心，五脏处于不同共振谐波态，之间通过共振来交互协调。</p>
@@ -301,9 +394,9 @@
   
   <entry>
     <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
     <updated>2014-05-02T11:09:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
+    <id>http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
     <content type="html"><![CDATA[<p>The Pop animation engine is responsible for all of the transitions and animations displayed on Paper, including all scrolling, bouncing, and unfolding effects.</p>
 
 <p>source code: <a href="https://github.com/facebook/pop">https://github.com/facebook/pop</a></p>
@@ -312,9 +405,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
+    <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
     <content type="html"><![CDATA[<p>I&#8217;d developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
 
 <p>The tool doesn&#8217;t care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
@@ -338,9 +431,9 @@
   
   <entry>
     <title type="html"><![CDATA[All Kinds of 2048!]]></title>
-    <link href="http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048/"/>
+    <link href="http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048/"/>
     <updated>2014-05-02T08:17:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/05/02/all-kinds-of-2048</id>
+    <id>http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048</id>
     <content type="html"><![CDATA[<p>在 Flappy Bird 的疯狂Clone之后，又有了 2048 复制 three 的疯狂。</p>
 
 <p>Exploring the open source 2048 game javascript examples</p>
@@ -369,23 +462,23 @@
   
   <entry>
     <title type="html"><![CDATA[从一句话里读懂网址]]></title>
-    <link href="http://mindon.github.com/blog/2014/04/08/know-the-wangzhi/"/>
+    <link href="http://mindon.github.io/blog/2014/04/08/know-the-wangzhi/"/>
     <updated>2014-04-08T10:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/04/08/know-the-wangzhi</id>
+    <id>http://mindon.github.io/blog/2014/04/08/know-the-wangzhi</id>
     <content type="html"><![CDATA[<p>怎么从一句话里看明白网址里包含的意思？</p>
 
 <!--more-->
 
 
-<p><img src="http://mindon.github.com/images/blog/url.jpeg" alt="" /></p>
+<p><img src="http://mindon.github.io/images/blog/url.jpeg" alt="" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
-    <link href="http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
+    <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
+    <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
     <content type="html"><![CDATA[<p>I enjoy google docs, though it&#8217;s not easy to visit google services from China.</p>
 
 <p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
@@ -413,9 +506,9 @@
   
   <entry>
     <title type="html"><![CDATA[Living Unit]]></title>
-    <link href="http://mindon.github.com/blog/2014/04/01/living-unit/"/>
+    <link href="http://mindon.github.io/blog/2014/04/01/living-unit/"/>
     <updated>2014-04-01T07:19:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/04/01/living-unit</id>
+    <id>http://mindon.github.io/blog/2014/04/01/living-unit</id>
     <content type="html"><![CDATA[<p>这里说的Living Unit，原指个人，后发觉其实对于一个公司或者机构、组织也是如此。</p>
 
 <p>活个体的构成从原始的单细胞生物，到人类个体，家庭，公司机构，并没有太大的区别，只是规模，资源和能力种类差异。</p>
@@ -459,7 +552,7 @@
 </ul>
 
 
-<p><img src="http://mindon.github.com/images/blog/asset-ability-connect.png" alt="" /></p>
+<p><img src="http://mindon.github.io/images/blog/asset-ability-connect.png" alt="" /></p>
 
 <p>根据活个体的构成，其发展分为两方面：1）<strong>本体强化</strong>；2）<strong>关联强化</strong>。</p>
 
@@ -517,9 +610,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android Wear]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/android-wearable-sdk/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/android-wearable-sdk/"/>
     <updated>2014-03-20T22:31:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/android-wearable-sdk</id>
+    <id>http://mindon.github.io/blog/2014/03/20/android-wearable-sdk</id>
     <content type="html"><![CDATA[<p><a href="http://developer.android.com/wear/">Android Wear</a> SDK makes Android apps connected with wearable devices. The <a href="http://moto360.motorola.com/">Moto 360</a> is coming.</p>
 
 <p>First, <a href="http://developer.android.com/wear/preview/start.html">Sign Up</a> for the Developer Preview.</p>
@@ -551,9 +644,9 @@
   
   <entry>
     <title type="html"><![CDATA[A false linkable text sample]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample/"/>
     <updated>2014-03-20T05:08:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-false-linkable-text-sample</id>
+    <id>http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample</id>
     <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It&#8217;s awkful, right? It&#8217;s on Google+! The Google - who leads the web tech.</p>
 
 <p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
@@ -569,7 +662,7 @@
 
 <p>Here&#8217;s a snapshot from Google+</p>
 
-<p><img src="http://mindon.github.com/images/blog/false-link.jpg" alt="" /></p>
+<p><img src="http://mindon.github.io/images/blog/false-link.jpg" alt="" /></p>
 
 <p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
 
@@ -586,9 +679,9 @@
   
   <entry>
     <title type="html"><![CDATA[A callstack trace for QML js]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
+    <link href="http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
     <updated>2014-03-20T05:02:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
+    <id>http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
     <content type="html"><![CDATA[<p>QNX RTOS is a awesome OS. That&#8217;s where BlackBerry 10 comes from.</p>
 
 <p>The last year (2013), we&#8217;d spent lots of time on the WeChat for BlackBerry 10.</p>
@@ -609,9 +702,9 @@
   
   <entry>
     <title type="html"><![CDATA[A UI Unit]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/16/a-ui-unit/"/>
+    <link href="http://mindon.github.io/blog/2014/03/16/a-ui-unit/"/>
     <updated>2014-03-16T09:33:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/16/a-ui-unit</id>
+    <id>http://mindon.github.io/blog/2014/03/16/a-ui-unit</id>
     <content type="html"><![CDATA[<p>What kind of basic abilities should be with an UI unit?</p>
 
 <p>As a web developer, an UI includes: Data, DOM, CSS, JavaScript.</p>
@@ -645,9 +738,9 @@
   
   <entry>
     <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
+    <link href="http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
     <updated>2014-03-15T18:51:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
+    <id>http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
     <content type="html"><![CDATA[<p>I&#8217;m one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
 
 <p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
@@ -682,9 +775,9 @@
   
   <entry>
     <title type="html"><![CDATA[Basic Abilities of Intelligent]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent/"/>
+    <link href="http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent/"/>
     <updated>2014-03-15T18:21:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent</id>
+    <id>http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent</id>
     <content type="html"><![CDATA[<p>智能的基本能力：</p>
 
 <ul>
@@ -702,100 +795,6 @@
 <p> 从《GEB集异璧》里对智能的描述项，对比一下自己，能力上还是有很多不足的地方，比如：充分利用机遇；以及认识一个情境中的重要和次要因素方面就存在不足。其它的应该还算不错了。</p>
 
 <p> 注：《GEB集异璧》中文版2013年第7版了，很厚的神书一本，近千余页。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Lost of MH370]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/10/the-lost-of-mh370/"/>
-    <updated>2014-03-10T07:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/10/the-lost-of-mh370</id>
-    <content type="html"><![CDATA[<p>&#8220;Sunday, March 09, 02:43 PM MYT +0800 Malaysia Airlines MH370 Flight Incident&#8221;</p>
-
-<p>马来西亚航空公司证实MH370航班于三月九号凌晨2点40分与苏邦空中交通管制台失去联系。MH370航班由波音777-200机型执飞，该航班于三月九号凌晨0点41分由吉隆坡起飞前往北京，原计划于北京时间早晨6点30份抵达北京首都国际机场。该航班总共运载239人 - 其中包括227名旅客（2名婴儿）及12名机组人员。航班的乘客来自于14个国家。</p>
-
-<p>有老人、小孩；他们之中有艺术家，工程师和佛法信徒，经验丰富的飞行员，机组人员。</p>
-
-<p>二百多条生命，在过去的几十个小时里牵动这全球人们的心。11国政府联合，出动了数十架飞机，数十艘船只进行搜索，至今无果。</p>
-
-<!--more-->
-
-
-<blockquote><p> 马航MH370航班在失去联系前，当时位于北纬4.7073度，东经102.5278度，航向东北方向25°，飞行速度468节（867公里/小时），飞行高度10668米。</p>
-
-<p> 飞机当时刚刚结束起飞后的爬升，正转入万米高空的稳定平飞状态，距离起飞的吉隆坡国际机场204公里，保持25度的北偏东角度向北京飞行。即将从新加坡飞航情报区，转入胡志明飞航情报区管制范围。</p></blockquote>
-
-<p>We are keep praying for the lives on MH370. 我们一直在为MH370上的生命在祈福，期待奇迹的出现。</p>
-
-<p>估计已经有无数人对这起离奇的空中事故提出了各种分析和议论，在强大的揪心+好奇心的驱动下，我也尝试一下以自己的没有边缘的想象力来分析一下。</p>
-
-<p>说起飞机离奇失踪，很多人印象里自然会和百慕大三角关联起来。我是小学时候看过《飞碟之谜》的，不管大家如何看待，这些事情的确激发了无数人的好奇心和想象。对的，就是某些人眼里的“路边摊文学”里的东西。</p>
-
-<p>近年来做产品开发，一直有一个看法：要释放所有束缚，秉着一切皆有可能的态度来分析产品。现在，释放一下想象力吧。</p>
-
-<p>首先，飞机是突然消失的。我们目前的结论是，飞机没有来得及发出求救信号。没错，这是可能性之一。另外一种可能是，飞机已经发出了求救信号，但由于莫名干扰，导致信号无法到达接收端。</p>
-
-<p>其次，飞机消失前曾有折返行为。这种行为的可能之一：飞机是肯定已经发出了求救或者报告，无奈没有接收到回复，自行折返。另外一种可能是不明力量漩涡导致飞机呈螺旋式运动。</p>
-
-<p>再者，曾有飞机与MH370联系，信号遭到莫名干扰，频道不正常。</p>
-
-<p>综合各种可能，可以发现：1）通讯信号，雷达信号收到即时的干扰和屏蔽；2）飞机有异常的空间运动行为；3）飞机是一定有发送求救信号的。</p>
-
-<p>那么，MH370到哪去了呢？澄清一点，我并不是炙热韩剧《来自星星的你》的观众。对于时空的了解也不仅限于“路边摊文学”。</p>
-
-<p>时空发生扭曲，或是虫洞或这黑洞，都是有可能的。没有否定的证据之前，不要根据常识来否定事情。毕竟，这是一次离奇的空中事故。</p>
-
-<p>按基督的理念，是天使召集了这群优秀的人们去了天堂。阿门。</p>
-
-<p>佛法的解释，是天宫缺员，招募了一群天将。</p>
-
-<p>拿假护照的两个外星人启动了乾坤大挪移的空间转移技术，劫持了这架MH370&#8230;</p>
-
-<p>不瞎扯了，我们来看看MH370的可能位置：海面搜索工作目前还没有任何足信证据证明飞机已经坠落海上。可能一：飞机完整地沉入海底，这个难度很高。不过我们来想象一个难度更高的——飞机因为重力异常，掉入了太空。</p>
-
-<p>据说，有乘客家属拨通手机了，或是QQ依旧在线。也就是说，手机依旧在卫星通讯范围之内。至于海底，手机防水应该没有那么好，海水不浅吧？信号肯定不好，且海水早就把手机毁掉了。所以，要不飞机就飞哪的陆地上坠毁了；要不就象《海底两万里》里的，被海底某个神秘的东西装了；要不，就是掉入了太空。</p>
-
-<p>要让飞机的高度突然降为零，1）真掉下来可以做到；2）信号异常可以做到；3）设备毁坏可以做到。</p>
-
-<p>对于我以上的胡扯八道，只是让我们来抛开一切思维和常识的束缚，来分析MH370可能的命运和出事的原因。毕竟，现有的知识暂时还不能给出一个答案。</p>
-
-<p>最后，祈祷，为MH370，期待奇迹的出现。</p>
-
-<p>机上所有人员的亲属们，节哀。大家继续为MH370祈福。</p>
-
-<p><span id="link-tags">MH370;百慕大三角</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
-    <updated>2014-03-06T06:19:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
-    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
-
-<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
-
-<!--more-->
-
-
-<p>It is said that it has potential to improve vision! That&#8217;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&#8217;s 40RMB on iTune - a little bit high price for an app you don&#8217;t know much.</p>
-
-<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
-
-<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
-
-<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
-
-<p>It&#8217;s more like a brain game than an eyes training.</p>
-
-<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
-
-<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&#8217;s such an important thing to keep our eyes sharp and clear.</p>
-
-<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a></p>
-
-<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
 ]]></content>
   </entry>
   

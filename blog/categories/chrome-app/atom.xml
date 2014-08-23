@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Chrome-App | Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/blog/categories/chrome-app/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/blog/categories/chrome-app/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
-    <link href="http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
+    <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
+    <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
     <content type="html"><![CDATA[<p>I enjoy google docs, though it's not easy to visit google services from China.</p>
 
 <p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[LISP, PhoneGap and TAKEN DOWN]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down/"/>
+    <link href="http://mindon.github.io/blog/2013/01/31/lisp-phonegap-taken-down/"/>
     <updated>2013-01-31T22:16:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/31/lisp-phonegap-taken-down</id>
+    <id>http://mindon.github.io/blog/2013/01/31/lisp-phonegap-taken-down</id>
     <content type="html"><![CDATA[<p>Learning GO language a few weeks before. Now the LISP.</p>
 
 <p>Scheme is a dialect of Lisp that stresses conceptual elegance and simplicity.</p>
@@ -95,9 +95,9 @@ of Computer Programs</a>.</p>
   
   <entry>
     <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
+    <link href="http://mindon.github.io/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
     <updated>2013-01-26T15:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
+    <id>http://mindon.github.io/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
     <content type="html"><![CDATA[<p>To find ingress portals inside a specific area, you would need the Chrome Extension: <a href="#removed">Ingress Portals Finder <b style="color:red">&lt;REMOVED&gt;</b></a> (TAKEN DOWN, the blog provides the link of the CRX file for manual installation).</p>
 
 <p><img src="/images/blog/ingress/ingress-portals-finder-logo.png" alt="" /></p>
@@ -246,9 +246,9 @@ of Computer Programs</a>.</p>
   
   <entry>
     <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
+    <link href="http://mindon.github.io/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
     <updated>2013-01-19T14:46:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>
+    <id>http://mindon.github.io/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>
     <content type="html"><![CDATA[<p>The game Ingress is spreading around the world.</p>
 
 <p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
@@ -333,9 +333,9 @@ Show result through template
   
   <entry>
     <title type="html"><![CDATA[Design T-Shirts on Teespring]]></title>
-    <link href="http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring/"/>
+    <link href="http://mindon.github.io/blog/2013/01/19/design-t-shirts-on-teespring/"/>
     <updated>2013-01-19T14:44:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2013/01/19/design-t-shirts-on-teespring</id>
+    <id>http://mindon.github.io/blog/2013/01/19/design-t-shirts-on-teespring</id>
     <content type="html"><![CDATA[<p>Teespring是个特别的众筹网站。它个一般众筹网站不同的地方是它是一个T-Shirt设计的众筹，这也就意味着用户只需要提供设计稿和定价，剩下的事情都是网站运营方的了——如果购买的人数达到指定数目，运营方来印刷和发货。</p>
 
 <p>这种模式有点类似常规众筹网站和团购网的结合体。有众筹的特点，也有团购的便利。</p>

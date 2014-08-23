@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Mindon GitHub Blog Start Feb 20th, 2012 Frameworks &amp; tools for web developer. Javascript, NodeJS, Chrome App, CorelDraw plug-in &#8230; Learning &hellip;">
+  <meta name="description" content="Web Images Optimization Feb 22nd, 2012 Use PNG! with ImageMagick GIF Animation Tool: GitSlice
+Command: gifsicle -o test-optimized.gif test.gif PNG &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/page/20/">
+  <link rel="canonical" href="http://mindon.github.io/blog/page/20/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
@@ -71,6 +72,124 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/22/web-images-optimization/">Web Images Optimization</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-22T15:16:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Use PNG! with ImageMagick</p>
+
+<h2>GIF Animation</h2>
+
+<p>Tool: <a href="http://www.lcdf.org/gifsicle/">GitSlice</a>
+Command:</p>
+
+<p>  gifsicle -o  test-optimized.gif test.gif</p>
+
+<h2>PNG</h2>
+
+<p>Tool: <a href="http://pmt.sourceforge.net/pngcrush/">PNGCrush</a>
+Command:</p>
+
+<p>  pngcrush -rem alla -brute -reduce test.jpg test-optimized.jpg</p>
+
+<h2>JPEG</h2>
+
+<p>Tool: <a href="http://jpegclub.org/jpegtran/">JPEGTran</a>
+Command:</p>
+
+<p>  jpegtran -optimize -progressive -copy none -outfile test-optimized.jpg test.jpg</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/22/web-images-optimization/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/21/nosql-databases/">Picking the Right NoSQL Database</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T13:22:00+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>NoSQL = Not Only SQL</p>
+
+<p><a href="http://article.yeeyan.org/view/271351/239915">8种Nosql数据库系统对比</a></p>
+
+<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">Cassandra vs MongoDB vs CouchDB vs Redis vs Riak vs HBase vs Membase vs Neo4j comparison</a></p>
+
+<p><a href="http://blog.monitis.com/index.php/2011/05/22/picking-the-right-nosql-database-tool/">Picking the right NoSQL database tool</a></p>
+
+<h2>Key-values Stores</h2>
+
+<p>Tokyo Cabinet/Tyrant, Redis, Voldemort, Oracle BDB</p>
+
+<p>Content caching (Focus on scaling to huge amounts of data, designed to handle massive load), logging, etc.</p>
+
+<p>Strengths: Fast lookups
+Weaknesses: Stored data has no schema</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/21/nosql-databases/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -301,100 +420,6 @@ History stat: 浏览/评论：153/0  ,  日期：2010年3月18日 13:14</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/02/old-blogms-1002751443/">建立Web应用的即时数据通道：WebSocket & Comet</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-02T17:10:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1002751443, blog id: airoff
-History stat: 浏览/评论：248/0  ,  日期：2010年3月2日 17:10</p>
-
-<p>在web应用高速发展，SNS火爆的今天，基于web的即时数据通道的需求也越来越强烈了。于是COMET重新出来亮相了，HTML5更是加入了 WebSocket 和 EventSource 这样的技术标准。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2010/03/02/old-blogms-1002751443/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/20/old-blogms-1002727130/">精确识别IE6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-20T13:25:00+08:00" pubdate data-updated="true">Jan 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1002727130, blog id: airoff
-History stat: 浏览/评论：60/0  ,  日期：2010年1月20日 13:25</p>
-
-<p>麦盾方案</p>
-
-<pre><code>var ieo = document.createElement('div');
-
-ieo.innerHTML = "&amp;lt;!--[if lte IE 6]&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;![endif]--&amp;gt;";
-
-var iec = ieo.childNodes[0];
-
-var ie6 = (iec &amp;amp;&amp;amp; iec.nodeType==1);
-</code></pre>
-
-<p>其它的方案都基本上都会发生失误。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/21/">&larr; Older</a>
@@ -444,11 +469,11 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 82 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 14 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
 
@@ -463,6 +488,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
@@ -494,14 +527,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
       </li>
     
   </ul>

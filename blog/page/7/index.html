@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="LISP, PhoneGap and TAKEN DOWN Jan 31st, 2013 Learning GO language a few weeks before. Now the LISP. Scheme is a dialect of Lisp that stresses &hellip;">
+  <meta name="description" content="若有实验室版的微信 - 不仅仅是聊天 Feb 16th, 2013 假设微信不是一个聊天工具，重新将其功能DIY一下会得到怎样的一个应用呢？ 于是，尝试使用Context - Connected - Contagious的3C思维来整理一下对微信体验。 首先， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/page/7/">
+  <link rel="canonical" href="http://mindon.github.io/blog/page/7/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
@@ -71,6 +71,108 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/16/its-more-than-chatting-the-wechat/">若有实验室版的微信 - 不仅仅是聊天</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-16T23:01:00+08:00" pubdate data-updated="true">Feb 16<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>假设微信不是一个聊天工具，重新将其功能DIY一下会得到怎样的一个应用呢？</p>
+
+<p>于是，尝试使用Context - Connected - Contagious的3C思维来整理一下对微信体验。</p>
+
+<p>首先，微信已经成功创造并形成了一个相当好的Context(毫无疑问，这个Context形成于QQ和QQ邮箱这样良好的Contexts下)，在这个Context下让QQ用户之间，用户与服务提供者，公众人物建立起了新的关联 - Connected! 其传染途径-朋友圈，分享，共振(摇一摇-动作，附近-区域，漂流瓶-心理)，二维码。</p>
+
+<p>关联之后有两类必然目的: I/O 输入/输出。</p>
+
+<p><strong>输入类</strong>: 价值获取，情感影响
+<strong>输出类</strong>: 分享(有价值，有情感触动)，自我表达</p>
+
+<p>输入的目的-输出更有效; 输出的目的-传染并收获新的关联-从而强化I/O循环，形成回路结构体。</p>
+
+<p>基于这个3C思维分析，如何对微信这样一个日益复杂的产品体验进形DIY呢?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/02/16/its-more-than-chatting-the-wechat/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/06/the-php-cld-chromium-compact-language-detector-for-php/">The PHP-CLD: Chromium Compact Language Detector for PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-06T00:05:00+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Find a fantasy extension for php to detect string language.</p>
+
+<p><a href="https://github.com/lstrojny/php-cld">https://github.com/lstrojny/php-cld</a></p>
+
+<p><a href="http://code.google.com/p/chromium-compact-language-detector/">http://code.google.com/p/chromium-compact-language-detector/</a></p>
+
+<p>It needs some changes to complie as dll in VC++ 2010 Express. But easy to make the so under linux.</p>
+
+<p>I&#8217;d spent the whole day to make research on language detect modules for php, it&#8217;s the best and now works fine in my project.</p>
+
+<p>Thanks, <a href="https://github.com/lstrojny">Lars Strojny</a> from github.</p>
+
+<p>Don&#8217;t hesitate to use php-cld when you need something like this in php.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -369,106 +471,6 @@ of Computer Programs</a>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-17T07:59:00+08:00" pubdate data-updated="true">Jan 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code</p>
-
-<pre><code>@echo off
-
-if "%1"=="start-min" goto :begin
-start /min "" %0 start-min
-exit
-
-:begin
-title Hello Mini World
-
-echo Call something here
-
-pause
-exit
-@echo on
-</code></pre>
-
-<p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/06/era-of-hardware-browsers/">Era of Hardware Browsers</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-06T23:27:00+08:00" pubdate data-updated="true">Jan 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Years ago, I took all desktop apps as some specific browsers - only visiting specified data resources provided by IP or file path with fixed UIs. and the browsers load different function DLLs or SO(Share Object) by URL, which contains both data and runnable source code.</p>
-
-<p>Now days, The &#8220;Browsers&#8221; become hardware &#8211; the mobiles and tablets. The apps are modules of the super &#8220;Hardware Browser&#8221;, they are combining the local resources, remote resources provided by IPs or URLs. Traditional browser become a soft-module of the super &#8220;Hardware Browser&#8221;.</p>
-
-<p>The mobile &#8220;Hardware Browser&#8221; never be parasitic on an PC any more, it takes less time to start, and cost less energy to perform the same or even more powerful functions.</p>
-
-<p>And the &#8220;Hardware Browser&#8221; is facing the same compatible problems as the &#8220;Software Browser&#8221; on PC. They own different screen resolutions, powered by different OS.</p>
-
-<p>That means the mobile app developers are in the same situation as the web front-end developers are. They are working for the mobile &#8220;Hardware Browser&#8221;.</p>
-
-<p><i id="link-tags">Hardware Browser</i></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -518,11 +520,11 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 82 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 14 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
 
@@ -537,6 +539,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
@@ -568,14 +578,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
       </li>
     
   </ul>

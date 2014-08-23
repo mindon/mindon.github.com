@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Javascript之取消 Dec 22nd, 2004 BlogMS original blog key: 1000124479, blog id: airoff
-History stat: 浏览/评论：200/0 , 日期：2004年12月22日 17:12 // cancel pop &hellip;">
+  <meta name="description" content="纳米技术遭遇反科学思潮挑战 Dec 22nd, 2004 BlogMS original blog key: 1000124591, blog id: airoff
+History stat: 浏览/评论：114/0 , 日期：2004年12月22日 18:28 绿色/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ History stat: 浏览/评论：200/0 , 日期：2004年12月22日 17:12 // cancel
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/page/45/">
+  <link rel="canonical" href="http://mindon.github.io/blog/page/45/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
@@ -72,6 +72,966 @@ History stat: 浏览/评论：200/0 , 日期：2004年12月22日 17:12 // cancel
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/12/22/old-blogms-1000124591/">纳米技术遭遇反科学思潮挑战</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-12-22T18:28:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000124591, blog id: airoff
+History stat: 浏览/评论：114/0  ,  日期：2004年12月22日 18:28</p>
+
+<p><i>绿色/灰色粘质等荒诞概念正妖魔化纳米技术 </i></p>
+
+<center>September 29, 2003 　　 OurSci News Staff 　　◇柯南 </center>
+
+
+<p>〖北京〗仍然处于婴儿时期的纳米技术遭到了挑战。科学家面临着一个问题：如何确保纳米技术不会如同转基因技术那样被反科学思潮妖魔化。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2004/12/22/old-blogms-1000124591/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/12/22/old-blogms-1000124485/">Javascript之校验脚本</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-12-22T17:19:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000124485, blog id: airoff
+History stat: 浏览/评论：234/2  ,  日期：2004年12月22日 17:19</p>
+
+<p><code>
+/* value validity relative javascript</p>
+
+<ul>
+<li><p>@date  03/20, 2003</p></li>
+<li><p>@author  Rongjun Feng (derek.f)</p></li>
+<li><p>@e-mail  iseasky@hotmail.com</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>var g_valid_func = new ValidFUNC();</p>
+
+<p>var valid_error_message = &quot;&quot;;</p>
+
+<p>var INVALID_USER_NAME = /\|\/|[|]|\:|\||&amp;lt;|&amp;gt;|+|\=|\;|\,|\?|*|&amp;|\%|`|\<sup>|.|&amp;quot;|</sup> /;</p>
+
+<p>var INVALID_FILE_NAME = /\|\/|\:|*|&amp;quot;|&amp;lt;|&amp;gt;|\|/;</p>
+
+<p>var REXP_DIGITAL = /<sup>\d+＄/;</sup></p>
+
+<p>var REXP_BLANK = /<sup>\s*＄/;</sup></p>
+
+<p>var TIME_FORMAT = &quot;hh:mm:ss&quot;;</p>
+
+<p>var TIME_RANGE = &quot;hh:00~23, mm:00~59, ss:00~59&quot;;</p>
+
+<p>var DATE_FORMAT = &quot;YYYY-MM-DD&quot;;</p>
+
+<p>var DATE_RANGE = &quot;YYYY:0000~9999, MM:01~12, DD:01~28/29/30/31&quot;;</p>
+
+<p>var R_GE = &quot;大于等于 &quot;;</p>
+
+<p>var R_LE = &quot;小于等于 &quot;;</p>
+
+<p>var R_EQ = &quot;等于 &quot;;</p>
+
+<p>var R_GT = &quot;大于 &quot;;</p>
+
+<p>var R_LT = &quot;小于 &quot;;</p>
+
+<p>var R_AND = &quot;并且&quot;;</p>
+
+<p>var EMPTY_ERRM = &quot;不能为空&quot;;</p>
+
+<p>var NONE_SELECTED_ERRM = &quot;请选择&quot;;</p>
+
+<p>var INVALID_USER_NAME_ERRM = &quot;不能包含以下字符:\n| [ ] : &lt; &gt; + = ; , ? * / \ &amp; % ` ^ . &amp;quot; 空格&quot;;</p>
+
+<p>var INVALUD_FILE_NAME_ERRM = &quot;不能包含以下字符:\n| \ / : * &amp;quot; &lt; &gt;&quot;;</p>
+
+<p>var EXCLUDED_ERRM = &quot;不能取以下值:\n&quot;;</p>
+
+<p>var NOT_INCLUDED_ERRM = &quot;只能取以下值:\n&quot;;</p>
+
+<p>var NOT_LENGTH_ERRM = &quot;不符合串长度限制: &quot;;</p>
+
+<p>var NOT_MAIL_ERRM = &quot;不符合电子邮箱格式: 需含@,且@前后至少各一字母&quot;;</p>
+
+<p>var NOT_RANGE_ERRM = &quot;不符合串值范围限制: &quot;;</p>
+
+<p>var DNOT_RANGE_ERRM = &quot;不符合数字值范围限制: &quot;;</p>
+
+<p>var DNOT_HEX_ERRM = &quot;不符合十六进制数规格(0~9, A~F 或 a~f构成)&quot;;</p>
+
+<p>var DNOT_LENGTH_ERRM = &quot;不符合数字串长度限制: &quot;;</p>
+
+<p>var DNOT_TIME_ERRM = &quot;不符合有效时间格式: &quot;;</p>
+
+<p>var DNOT_DATE_ERRM = &quot;不符合有效日期格式: &quot;;</p>
+
+<p>function validERR(field, label)</p>
+
+<p>// alert valid error message and return false</p>
+
+<p>// @param :field, field handle id</p>
+
+<p>// @param :label, field label</p>
+
+<p>// @return  :false</p>
+
+<p>{</p>
+
+<p>var field, label;</p>
+
+<p>var params = g_valid_func.params;</p>
+
+<p>var message = &quot;&amp;quot;&quot; +label +&quot;&amp;quot; &quot;;</p>
+
+<p>switch(g_valid_func.id) {</p>
+
+<p>case 50000: //gEmpty</p>
+
+<p>message += EMPTY_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50010: //gNotUserName</p>
+
+<p>message += INVALID_USER_NAME_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50020: //gNotFileName</p>
+
+<p>message += INVALID_FILE_NAME_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50030: //gExcluded</p>
+
+<p>message += EXCLUDED_ERRM + params[1].join(&quot;, &quot;);</p>
+
+<p>break;</p>
+
+<p>case 50040: //gNotFilter</p>
+
+<p>message += NOT_INCLUDED_ERRM + params[1].join(&quot;, &quot;);</p>
+
+<p>break;</p>
+
+<p>case 50050: //gNotLen</p>
+
+<p>message += NOT_LENGTH_ERRM;</p>
+
+<p>if(params[1] == &quot;0&quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &quot;0&quot; || params[2]) message += &quot;, &quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 50060: //gNotMail</p>
+
+<p>message += NOT_MAIL_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50070: //gNotFit</p>
+
+<p>message += NOT_RANGE_ERRM;</p>
+
+<p>if(params[1] == &quot;0&quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &quot;0&quot; || params[2]) message += &quot;, &quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60010: //dNotFit</p>
+
+<p>message += DNOT_RANGE_ERRM;</p>
+
+<p>if(params[1] == &quot;0&quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &quot;0&quot; || params[2]) message += &quot;, &quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60020: //dNotHex</p>
+
+<p>message += DNOT_HEX_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 60030: //dNotLen</p>
+
+<p>message += DNOT_LENGTH_ERRM;</p>
+
+<p>if(params[1] == &quot;0&quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &quot;0&quot; || params[2]) message += &quot;, &quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60040: //dNotTime</p>
+
+<p>message += DNOT_TIME_ERRM +TIME_FORMAT +&quot;\n(&quot; +TIME_RANGE + &quot;)&quot;;</p>
+
+<p>break;</p>
+
+<p>case 60050: //dNotDate</p>
+
+<p>message += DNOT_DATE_ERRM;</p>
+
+<p>message += DATE_FORMAT.substr(params[1]?2:0) +&quot;\n(&quot; +DATE_RANGE.substr(params[1]?2:0) + &quot;)&quot;;</p>
+
+<p>break;</p>
+
+<p>case 60060: //dNotDateTime</p>
+
+<p>message += DNOT_TIME_ERRM;</p>
+
+<p>message += DATE_FORMAT.substr(params[2]?2:0) +(params[1]?params[1]:&quot;&quot;) +TIME_FORMAT;</p>
+
+<p>message += &quot;\n(&quot; +DATE_RANGE.substr(params[2]?2:0) +&quot;)\n(&quot; +TIME_RANGE +&quot;)&quot;;</p>
+
+<p>break;</p>
+
+<p>case 90000: //gNone</p>
+
+<p>message = NONE_SELECTED_ERRM +message;</p>
+
+<p>break;</p>
+
+<p>}</p>
+
+<p>alert(message);</p>
+
+<p>try{ field.focus() } catch(e) {};</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function ValidFUNC()</p>
+
+<p>// valid special character parameters</p>
+
+<p>{</p>
+
+<p>this.id = &quot;&quot;;</p>
+
+<p>this.name = &quot;&quot;;</p>
+
+<p>this.description = &quot;&quot;;</p>
+
+<p>this.params = [];</p>
+
+<p>this.set = set;</p>
+
+<p>function set(id, params, name, description)</p>
+
+<p>{</p>
+
+<p>var id, params, name, description;</p>
+
+<p>if(id) this.id = id;</p>
+
+<p>if(params) this.params = params;</p>
+
+<p>if(name) this.name = name;</p>
+
+<p>if(description) this.description = description;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>function s2d(v) { var n = new Number(v); return parseInt(isNaN(n)?0:n); }</p>
+
+<p>function contains(varr, value)</p>
+
+<p>// judge if a value is contained in a array</p>
+
+<p>// @param :varr, value array</p>
+
+<p>// @param :value, value string</p>
+
+<p>// @return  :if value is in array, return true, else return false</p>
+
+<p>{</p>
+
+<p>var arrstr = varr.join(&quot;,&quot;);</p>
+
+<p>if(arrstr.indexOf(&quot;,&quot;) &lt; 0) return (arrstr == value);</p>
+
+<p>var index = arrstr.indexOf(value.toString());</p>
+
+<p>var offset = value.toString().length;</p>
+
+<p>var hok = (index == 0 || arrstr.substr(index -1, 1) == &quot;,&quot;);</p>
+
+<p>var tok = (index == (arrstr.length - offset) || arrstr.substr(index +offset, 1) == &quot;,&quot;);</p>
+
+<p>return (index&gt;=0 &amp;&amp; hok &amp;&amp; tok);</p>
+
+<p>}</p>
+
+<p>function gEmpty(value)</p>
+
+<p>// check if the value only contains blank character</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if only contains BLANK-charaters return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50000, arguments, &quot;gEmpty&quot;, &quot;function gEmpty(value)&quot;);</p>
+
+<p>if(!value &amp;&amp; value != &quot;0&quot;) return true;</p>
+
+<p>return REXP_BLANK.test(value);</p>
+
+<p>}</p>
+
+<p>function gNotUserName(value)</p>
+
+<p>// check if the name string is invalid</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if name string invalid return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50010, arguments, &quot;gNotUserName&quot;, &quot;function gNotUserName(value)&quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>return INVALID_USER_NAME.test(value);</p>
+
+<p>}</p>
+
+<p>function gNotFileName(value)</p>
+
+<p>// check if the filename string is invalid</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if filename string invalid return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50020, arguments, &quot;gNotFileName&quot;, &quot;function gNotFileName(value)&quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>return INVALID_FILE_NAME.test(value);</p>
+
+<p>}</p>
+
+<p>function gExcluded(value, filter)</p>
+
+<p>// check if the value is in the EXCLUDED-filter-array</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :filter, excluded-filter-array</p>
+
+<p>// @return  :if EXCLUDED return true, else false</p>
+
+<p>{</p>
+
+<p>var value, filter;</p>
+
+<p>g_valid_func.set(50030, arguments, &quot;gExcluded&quot;, &quot;function gExcluded(value, filter)&quot;);</p>
+
+<p>if(!filter || !filter.length) return false;</p>
+
+<p>return(contains(filter, value));</p>
+
+<p>}</p>
+
+<p>function gNotFilter(value, filter)</p>
+
+<p>// check if the value is NOT in the included-filter-array</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :filter, included-filter-array</p>
+
+<p>// @return  :if NOT included return true, else false</p>
+
+<p>{</p>
+
+<p>var value, filter;</p>
+
+<p>g_valid_func.set(50040, arguments, &quot;gNotFilter&quot;, &quot;function gNotFilter(value, filter)&quot;);</p>
+
+<p>if(!filter || !filter.length) return false;</p>
+
+<p>return(!contains(filter, value));</p>
+
+<p>}</p>
+
+<p>function gNotLen(value, sLmin, sLmax)</p>
+
+<p>// check if the string value length is NOT between sLmin and sLmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :sLmin, the min limitation of string length</p>
+
+<p>// @param :sLmax, the max limitation of string length</p>
+
+<p>// @return  :if NOT fits the length limitation return true, else false</p>
+
+<p>{</p>
+
+<p>var value, sLmin, sLmax;</p>
+
+<p>g_valid_func.set(50050, arguments, &quot;gNotLen&quot;, &quot;function gNotLen(value, sLmin, sLmax)&quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &quot;0&quot; &amp;&amp; value != &quot;&quot;) return !flag;</p>
+
+<p>if(sLmin || sLmin == &quot;0&quot;) {</p>
+
+<p>flag = (value.length &gt;= sLmin);</p>
+
+<p>if(sLmax || sLmax == &quot;0&quot;) {</p>
+
+<p>flag = (flag &amp;&amp; value.length &lt;= sLmax);</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>flag = true;</p>
+
+<p>}</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function gNotMail(value)</p>
+
+<p>// check if the value is NOT a valid email address</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT a valid email return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50060, arguments, &quot;gNotMail&quot;, &quot;function gNotMail(value)&quot;);</p>
+
+<p>var rexp = /<sup>[<sup>@]+@[<sup>@]+＄/g;</sup></sup></sup></p>
+
+<p>var flag = false;</p>
+
+<p>var idx = value.indexOf(&quot;@&quot;);</p>
+
+<p>if(idx &gt; 0) {</p>
+
+<p>flag = (!gNotUserName(value.substring(0, idx)) &amp;&amp; rexp.test(value));</p>
+
+<p>}</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function gNotFit(value, smin, smax)</p>
+
+<p>// check if the string value is NOT between smin and smax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :smin, the min string value limitation</p>
+
+<p>// @param :smax, the max string  value limitation</p>
+
+<p>// @return  :if NOT fits the string value limitation return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, smin, smax;</p>
+
+<p>g_valid_func.set(50070, arguments, &quot;gNotFit&quot;, &quot;function gNotFit(value, smin, smax)&quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &quot;0&quot; &amp;&amp; value !=&quot;&quot;)</p>
+
+<p>return !flag;</p>
+
+<p>if(smin || smin == &quot;0&quot; || smin ==&quot;&quot;)</p>
+
+<p>flag = (value &gt;= smin);</p>
+
+<p>if(smax || smax == &quot;0&quot; || smax ==&quot;&quot;)</p>
+
+<p>flag = (flag &amp;&amp; value &lt;= dmax);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotInt(value, type)</p>
+
+<p>// check if the digital value is NOT proper type of integer</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT proper int type return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, type;</p>
+
+<p>if(!type) type = &quot;int&quot;;</p>
+
+<p>switch(type.toLowerCase()) {</p>
+
+<p>case &quot;int&quot;:</p>
+
+<p>case &quot;short&quot;:</p>
+
+<p>return dNotFit(value, -32768, 32767);</p>
+
+<p>break;</p>
+
+<p>case &quot;long&quot;:</p>
+
+<p>return dNotFit(value, -2147483648, 2147483647);</p>
+
+<p>break;</p>
+
+<p>case &quot;ushort&quot;:</p>
+
+<p>return dNotFit(value, 0, 65535);</p>
+
+<p>break;</p>
+
+<p>case &quot;ulong&quot;:</p>
+
+<p>return dNotFit(value, 0, 4294967295);</p>
+
+<p>break;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>function dNotFit(value, dmin, dmax)</p>
+
+<p>// check if the digital value is NOT between dmin and dmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :dmin, the min value limitation</p>
+
+<p>// @param :dmax, the max value limitation</p>
+
+<p>// @return  :if NOT fits the value limitation return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, dmin, dmax;</p>
+
+<p>g_valid_func.set(60010, arguments, &quot;dNotFit&quot;, &quot;function dNotFit(value, dmin, dmax)&quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &quot;0&quot;) return !flag;</p>
+
+<p>flag = !isNaN(value);</p>
+
+<p>if(!dmin &amp;&amp; dmin != &quot;0&quot;) return !flag;</p>
+
+<p>flag = (flag &amp;&amp; value &gt;= dmin);</p>
+
+<p>if(!dmax &amp;&amp; dmax != &quot;0&quot;) return !flag;</p>
+
+<p>flag = (flag &amp;&amp; value &lt;= dmax);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotHex(value)</p>
+
+<p>// check if the digital value is NOT hex value</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT hex value return true, else false;</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(60020, arguments, &quot;dNotHex&quot;, &quot;function dNotHex(value)&quot;);</p>
+
+<p>var rexp = /<sup>[0-9a-fA-F]+＄/;</sup></p>
+
+<p>return !rexp.test(value);</p>
+
+<p>}</p>
+
+<p>function dNotLen(value, dLmin, dLmax)</p>
+
+<p>// check if the digital string value length is NOT between dLmin and dLmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :dLmin, the min limitation of string length</p>
+
+<p>// @param :dLmax, the max limitation of string length</p>
+
+<p>// @return  :if NOT fits the length limitation or contains NOT-digital-characters return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, dLmin, dLmax;</p>
+
+<p>g_valid_func.set(60030, arguments, &quot;dNotLen&quot;, &quot;function dNotLen(value, dLmin, dLmax)&quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &quot;0&quot;) return !flag;</p>
+
+<p>var rexpstr = &quot;<sup>\d&quot;;</sup></p>
+
+<p>if((!dLmin &amp;&amp; dLmin != &quot;0&quot;) || isNaN(dLmin)) {</p>
+
+<p>rexpstr += &quot;+＄&quot;</p>
+
+<p>} else {</p>
+
+<p>rexpstr += &quot;{&quot; +dLmin +&quot;,&quot;;</p>
+
+<p>if((!dLmax &amp;&amp; dLmax != &quot;0&quot;) || isNaN(dLmax)) {</p>
+
+<p>rexpstr += &quot;}＄&quot;</p>
+
+<p>} else {</p>
+
+<p>rexpstr += dLmax +&quot;}＄&quot;;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>var rexp = new RegExp(rexpstr);</p>
+
+<p>flag = rexp.test(value);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotTime(value)</p>
+
+<p>// check if the value is NOT a time string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT time string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(60040, arguments, &quot;dNotTime&quot;, &quot;function dNotTime(value)&quot;);</p>
+
+<p>var rexp = /[<sup>\d]+/;</sup> // detect delimiter string</p>
+
+<p>if(!value) return true;</p>
+
+<p>var delimiter = value.match(rexp);</p>
+
+<p>if(delimiter) {</p>
+
+<p>delimiter = delimiter.toString();</p>
+
+<p>var dlen = delimiter.length;</p>
+
+<p>if(value.indexOf(delimiter) != 2) return true;</p>
+
+<p>value = value.substr(0,2) + value.substr(2 +dlen, 2) + value.substr(4 +2*dlen, 2);</p>
+
+<p>}</p>
+
+<p>var tarr = [];</p>
+
+<p>for(var k=0; k&lt;3; k++) {</p>
+
+<p>tarr[k] = value.substr(2*k, 2);</p>
+
+<p>if(isNaN(tarr[k])) return true;</p>
+
+<p>tarr[k] = s2d(tarr[k]);</p>
+
+<p>}</p>
+
+<p>if(tarr[0] &lt; 0 || tarr[0] &gt;= 24</p>
+
+<p>|| tarr[1] &lt; 0 || tarr[1] &gt;= 60</p>
+
+<p>|| tarr[2] &lt; 0 || tarr[2] &gt;= 60) {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function dNotDate(value, y2d)</p>
+
+<p>// check if the value is NOT a date string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :y2d, two digital year flag</p>
+
+<p>// @return  :if NOT date string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value, y2d;</p>
+
+<p>g_valid_func.set(60050, arguments, &quot;dNotDate&quot;, &quot;function dNotDate(value, y2d)&quot;);</p>
+
+<p>var rexp = /[<sup>\d]+/;</sup> // detect delimiter string</p>
+
+<p>if(!value) return true;</p>
+
+<p>var delimiter = value.match(rexp);</p>
+
+<p>var YRW = 4;</p>
+
+<p>if(y2d) YRW = 2;</p>
+
+<p>if(delimiter) {</p>
+
+<p>delimiter = delimiter.toString();</p>
+
+<p>var dlen = delimiter.length;</p>
+
+<p>if(value.indexOf(delimiter) != YRW) return true;</p>
+
+<p>value = value.substr(0,YRW) + value.substr(YRW +dlen, 2) + value.substr(YRW +2 +2*dlen, 2);</p>
+
+<p>}</p>
+
+<p>var tarr = [];</p>
+
+<p>try {</p>
+
+<p>for(var k=0; k&lt;3; k++) {</p>
+
+<p>tarr[k] = value.substr((k==0?0:(YRW +2*(k-1))), (k==0?YRW:2));</p>
+
+<p>tarr[k] = new Number(tarr[k]);</p>
+
+<p>//tarr[k] = s2d(tarr[k]);</p>
+
+<p>if(y2d &amp;&amp; k==0) tarr[k] = 1900 +tarr[k]; //year 2 digital process</p>
+
+<p>}</p>
+
+<p>} catch(e) { return true; }</p>
+
+<p>var cd = new Date(tarr[0], tarr[1] -1, tarr[2]);</p>
+
+<p>var dfit = (cd.getFullYear() == tarr[0]);</p>
+
+<p>dfit = (dfit &amp;&amp; cd.getMonth() == tarr[1] -1);</p>
+
+<p>dfit = (dfit &amp;&amp; cd.getDate() == tarr[2]);</p>
+
+<p>if(!dfit) return true;</p>
+
+<p>/*//</p>
+
+<p>var febdays = ((tarr[0]%4 == 0) &amp;&amp; (tarr[0]%100 != 0) || (tarr[0]%400 == 0))?29:28;</p>
+
+<p>var mdarr = new Array(31,febdays,31,30,31,30,31,31,30,31,30,31);</p>
+
+<p>if(tarr[0] &lt; 0</p>
+
+<p>|| tarr[1] &lt; 1 || tarr[1] &gt; 12</p>
+
+<p>|| tarr[2] &lt; 1 || tarr[2] &gt; mdarr[tarr[1] -1]) {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>//*/</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function dNotDateTime(value, delimiter, y2d)</p>
+
+<p>// check if the value is NOT a datetime string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :delimiter, delimiter between date string and time string</p>
+
+<p>// @param :y2d, two digital year flag</p>
+
+<p>// @return  :if NOT datetime string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value, delimiter, y2d;</p>
+
+<p>g_valid_func.set(60060, arguments, &quot;dNotDateTime&quot;, &quot;function dNotDateTime(value, delimiter, y2d)&quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>if(!delimiter) delimiter = &quot;&quot;;</p>
+
+<p>var datestr, timestr;</p>
+
+<p>var DTW = 8;</p>
+
+<p>if(y2d) DTW = 6;</p>
+
+<p>if(!delimiter) {</p>
+
+<p>datestr = value.substr(0, DTW);</p>
+
+<p>timestr = value.substr(DTW, 6);</p>
+
+<p>} else {</p>
+
+<p>var dpos = value.indexOf(delimiter);</p>
+
+<p>datestr = value.substring(0, dpos);</p>
+
+<p>timestr = value.substring(dpos +delimiter.length, value.length);</p>
+
+<p>}</p>
+
+<p>return (dNotDate(datestr, y2d) || dNotTime(timestr));</p>
+
+<p>}</p>
+
+<p>function gNone(field)</p>
+
+<p>// check if value has been set by selection</p>
+
+<p>// @param :field, field to be check</p>
+
+<p>{</p>
+
+<p>var field;</p>
+
+<p>g_valid_func.set(90000, arguments, &quot;gNone&quot;, &quot;function gNone(field)&quot;);</p>
+
+<p>if(field.type &amp;&amp; field.type == &quot;select-one&quot; &amp;&amp; field.value==&quot;&quot;) return true;</p>
+
+<p>if(field.type &amp;&amp; field.type == &quot;checkbox&quot;) return (field.checked?false:true);</p>
+
+<p>if(!field.type &amp;&amp; field.length) {</p>
+
+<p>for(var k=0; k&lt;field.length; k++) {</p>
+
+<p>if(field[k].checked) return false;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p></code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -337,98 +1297,6 @@ History stat: 浏览/评论：105/4  ,  日期：2004年12月15日 08:35</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/14/old-blogms-1000116383/">暖冬</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-12-14T13:23:00+08:00" pubdate data-updated="true">Dec 14<span>th</span>, 2004</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000116383, blog id: airoff
-History stat: 浏览/评论：128/1  ,  日期：2004年12月14日 13:23</p>
-
-<p>只要感觉到手开始冰凉冰凉的，我就知道冬天来了。</p>
-
-<p>今年的冬天似乎是不久前来到的，但是如今又暖和起来了。今年的深圳似乎比往年干燥——有异常干燥的感觉。我是那种胡思乱想惯了的，由这干燥想起了以前看到一个探讨玛雅文明消失原因的节目，其中一个很有说服力的说法是——干旱。我开始的时候，对这样的结论甚为惊讶，但看到干旱中生灵逐渐枯萎的画面时，不得不接受这样的事实——生灵对于持久的干旱还是无能为力的。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2004/12/14/old-blogms-1000116383/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/13/old-blogms-1000115624/">六哥的处境</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-12-13T15:54:00+08:00" pubdate data-updated="true">Dec 13<span>th</span>, 2004</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000115624, blog id: airoff
-History stat: 浏览/评论：118/2  ,  日期：2004年12月13日 15:54</p>
-
-<p>在六哥初来深圳找工作的时候，看着他被晒黑的消瘦的脸，可以察觉出那种无奈和不安。有时候感觉自己的状况和他的非常类似，不同的只是我不用担心生计，但同样是不知道自己该走往何方——那种迷茫和不安是何等的相似。</p>
-
-<p>六哥是我儿时崇拜的对象，他中学时候就能写一笔不错的字，写文章也不错，好像还发表过一些。对于字写得不好并且文科偏差的我来说真是很为羡慕的。有一段时间他还自己拍照片来冲洗，在那个时候做这些事情对还很小的我来说是很了不起的了。他还拿过校运会短跑的奖牌。其实我总觉得他比我还聪明，很小就上学了，而且成绩很好，不象我8岁了都不愿意上学去，只可惜他没有走对发展的方向。对于他的现状，从我的偏见来看很大部分是由他中学交的朋友都比较不爱学习而引起的，再而就是他自己没什么踏实的目标，可能不能忽略的原因就是一直以来家人对他也没多大的信心。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2004/12/13/old-blogms-1000115624/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/46/">&larr; Older</a>
@@ -478,11 +1346,11 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 82 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 14 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
 
@@ -497,6 +1365,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
@@ -528,14 +1404,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
       </li>
     
   </ul>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Readings | Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/blog/categories/readings/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/blog/categories/readings/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools/"/>
+    <link href="http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools/"/>
     <updated>2014-06-17T06:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/17/free-prototype-design-tools</id>
+    <id>http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools</id>
     <content type="html"><![CDATA[<p>原型设计工具推荐</p>
 
 <p>Here's some great free prototype design tools:</p>
@@ -91,9 +91,9 @@
   
   <entry>
     <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
-    <link href="http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language/"/>
+    <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
     <updated>2014-06-17T05:38:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/06/17/swift-the-new-ios-language</id>
+    <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
     <content type="html"><![CDATA[<p><strong> Apple's top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
 
 <p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
@@ -173,9 +173,9 @@
   
   <entry>
     <title type="html"><![CDATA[Basic Abilities of Intelligent]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent/"/>
+    <link href="http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent/"/>
     <updated>2014-03-15T18:21:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/15/basic-abilities-of-intelligent</id>
+    <id>http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent</id>
     <content type="html"><![CDATA[<p>智能的基本能力：</p>
 
 <ul>
@@ -198,9 +198,9 @@
   
   <entry>
     <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
+    <link href="http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
     <updated>2014-03-06T06:19:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
+    <id>http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
     <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
 
 <blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
@@ -230,9 +230,9 @@
   
   <entry>
     <title type="html"><![CDATA[DIY知识点滴]]></title>
-    <link href="http://mindon.github.com/blog/2014/03/01/e-diy-tech-info/"/>
+    <link href="http://mindon.github.io/blog/2014/03/01/e-diy-tech-info/"/>
     <updated>2014-03-01T14:18:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2014/03/01/e-diy-tech-info</id>
+    <id>http://mindon.github.io/blog/2014/03/01/e-diy-tech-info</id>
     <content type="html"><![CDATA[<p>突然想对电动机多了解一些，于是上淘宝搜了一下各种航模电动机。还是真是各种各样的，补习一下相关知识：</p>
 
 <h2>步进电动机</h2>

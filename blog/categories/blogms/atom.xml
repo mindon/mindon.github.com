@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: BlogMS | Mindon.IDEA]]></title>
-  <link href="http://mindon.github.com/blog/categories/blogms/atom.xml" rel="self"/>
-  <link href="http://mindon.github.com/"/>
-  <updated>2014-08-23T08:25:43+08:00</updated>
-  <id>http://mindon.github.com/</id>
+  <link href="http://mindon.github.io/blog/categories/blogms/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-08-23T18:09:49+08:00</updated>
+  <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[香港西贡盐田檡的天主堂]]></title>
-    <link href="http://mindon.github.com/blog/2010/07/31/old-blogms-1004648722/"/>
+    <link href="http://mindon.github.io/blog/2010/07/31/old-blogms-1004648722/"/>
     <updated>2010-07-31T15:00:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2010/07/31/old-blogms-1004648722</id>
+    <id>http://mindon.github.io/blog/2010/07/31/old-blogms-1004648722</id>
     <content type="html"><![CDATA[<p>BlogMS original blog key: 1004648722, blog id: mindon
 History stat: 浏览/评论：4/0  ,  日期：2010年7月31日 15:00</p>
 
@@ -38,9 +38,9 @@ History stat: 浏览/评论：4/0  ,  日期：2010年7月31日 15:00</p>
   
   <entry>
     <title type="html"><![CDATA[AND首次海外自由行—普吉岛(照片)]]></title>
-    <link href="http://mindon.github.com/blog/2010/05/17/old-blogms-1004474417/"/>
+    <link href="http://mindon.github.io/blog/2010/05/17/old-blogms-1004474417/"/>
     <updated>2010-05-17T21:22:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2010/05/17/old-blogms-1004474417</id>
+    <id>http://mindon.github.io/blog/2010/05/17/old-blogms-1004474417</id>
     <content type="html"><![CDATA[<p>BlogMS original blog key: 1004474417, blog id: airoff
 History stat: 浏览/评论：48/0  ,  日期：2010年5月17日 21:22</p>
 
@@ -101,9 +101,9 @@ History stat: 浏览/评论：48/0  ,  日期：2010年5月17日 21:22</p>
   
   <entry>
     <title type="html"><![CDATA[AND首次海外自由行--沙巴(照片) ]]></title>
-    <link href="http://mindon.github.com/blog/2010/05/17/old-blogms-1004474367/"/>
+    <link href="http://mindon.github.io/blog/2010/05/17/old-blogms-1004474367/"/>
     <updated>2010-05-17T20:41:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2010/05/17/old-blogms-1004474367</id>
+    <id>http://mindon.github.io/blog/2010/05/17/old-blogms-1004474367</id>
     <content type="html"><![CDATA[<p>BlogMS original blog key: 1004474367, blog id: airoff
 History stat: 浏览/评论：34/0  ,  日期：2010年5月17日 20:41</p>
 
@@ -144,9 +144,9 @@ History stat: 浏览/评论：34/0  ,  日期：2010年5月17日 20:41</p>
   
   <entry>
     <title type="html"><![CDATA[健康关注：塑胶瓶底的三角形内的数字！ ]]></title>
-    <link href="http://mindon.github.com/blog/2010/03/18/old-blogms-1002768279/"/>
+    <link href="http://mindon.github.io/blog/2010/03/18/old-blogms-1002768279/"/>
     <updated>2010-03-18T13:14:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2010/03/18/old-blogms-1002768279</id>
+    <id>http://mindon.github.io/blog/2010/03/18/old-blogms-1002768279</id>
     <content type="html"><![CDATA[<p>BlogMS original blog key: 1002768279, blog id: airoff
 History stat: 浏览/评论：153/0  ,  日期：2010年3月18日 13:14</p>
 
@@ -187,9 +187,9 @@ History stat: 浏览/评论：153/0  ,  日期：2010年3月18日 13:14</p>
   
   <entry>
     <title type="html"><![CDATA[建立Web应用的即时数据通道：WebSocket & Comet ]]></title>
-    <link href="http://mindon.github.com/blog/2010/03/02/old-blogms-1002751443/"/>
+    <link href="http://mindon.github.io/blog/2010/03/02/old-blogms-1002751443/"/>
     <updated>2010-03-02T17:10:00+08:00</updated>
-    <id>http://mindon.github.com/blog/2010/03/02/old-blogms-1002751443</id>
+    <id>http://mindon.github.io/blog/2010/03/02/old-blogms-1002751443</id>
     <content type="html"><![CDATA[<p>BlogMS original blog key: 1002751443, blog id: airoff
 History stat: 浏览/评论：248/0  ,  日期：2010年3月2日 17:10</p>
 

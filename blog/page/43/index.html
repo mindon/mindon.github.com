@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Effective C++读书笔记 Jan 7th, 2005 BlogMS original blog key: 1000141891, blog id: airoff
-History stat: 浏览/评论：370/0 , 日期：2005年1月7日 09:56 filename.h /* &hellip;">
+  <meta name="description" content="Struts ActionForm字段校验(JAVA) Jan 7th, 2005 BlogMS original blog key: 1000141910, blog id: airoff
+History stat: 浏览/评论：392/0 , 日期：2005年1月7日 10:05 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ History stat: 浏览/评论：370/0 , 日期：2005年1月7日 09:56 filename.h 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mindon.github.com/blog/page/43/">
+  <link rel="canonical" href="http://mindon.github.io/blog/page/43/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
@@ -72,6 +72,1002 @@ History stat: 浏览/评论：370/0 , 日期：2005年1月7日 09:56 filename.h 
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141910/">Struts ActionForm字段校验(JAVA)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T10:05:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141910, blog id: airoff
+History stat: 浏览/评论：392/0  ,  日期：2005年1月7日 10:05</p>
+
+<p><code></p>
+
+<p>package com.mindon.util;</p>
+
+<p>/**============================================================</p>
+
+<ul>
+<li><p>文件： com.mindon.util.FieldCheck</p></li>
+<li><p>功能： 校验函数库</p></li>
+<li><p>所含类:FieldCheck</p></li>
+<li><p>修改记录：</p></li>
+<li><p>日期                作者           内容</p></li>
+<li><p>=============================================================</p></li>
+<li><p>2003-11-17         fengrj          校验函数</p></li>
+<li><p>============================================================*/</p></li>
+</ul>
+
+
+<p>import org.apache.struts.action.*;</p>
+
+<p>import javax.servlet.http.*;</p>
+
+<p>import java.lang.StringBuffer;</p>
+
+<p>import java.util.Date;</p>
+
+<p>import org.jdom.*;</p>
+
+<p>import org.jdom.input.*;</p>
+
+<p>import org.jdom.output.*;</p>
+
+<p>import java.io.File;</p>
+
+<p>import java.io.IOException;</p>
+
+<p>import java.util.HashMap;</p>
+
+<p>public class FieldCheck {</p>
+
+<p>private ActionErrors errors = null;</p>
+
+<p>private HttpServletRequest request = null;</p>
+
+<p>private String moduleName;</p>
+
+<p>private static String errorURL = &quot;org.apache.struts.action.ERROR&quot;;</p>
+
+<p>private static String confName = &quot;./definition.xml&quot;;</p>
+
+<p>private static HashMap xMRootMap = new HashMap();</p>
+
+<p>public static String L_CONFIRM = &quot;.confirm&quot;;</p>
+
+<p>public static String L_SELECT_NONE = &quot;.selectNone&quot;;</p>
+
+<p>public static String L_DUPLICATE = &quot;.duplicate&quot;;</p>
+
+<p>public static String L_EXISTENT = &quot;.existent&quot;;</p>
+
+<p>public static String L_INEXISTENT = &quot;.inexistent&quot;;</p>
+
+<p>public static String L_LOGIN = &quot;.login&quot;;</p>
+
+<p>public static String L_LOOP = &quot;.loop&quot;;</p>
+
+<p>public static String L_FAIL = &quot;.fail&quot;;</p>
+
+<p>public static String L_REQUIRED = &quot;.required&quot;;</p>
+
+<p>public static String L_NEEDONE = &quot;.needone&quot;;</p>
+
+<p>public static String L_FALSE_LENGTH = &quot;.falseLength&quot;;</p>
+
+<p>public static String L_CHOOSE_NONE = &quot;.needed&quot;;</p>
+
+<p>public static String L_OVERFLOW = &quot;.overflow&quot;;</p>
+
+<p>public static String L_DIFFERENT = &quot;.different&quot;;</p>
+
+<p>public static String L_FALSE_NUMBER = &quot;.fasleNumber&quot;;</p>
+
+<p>public static String L_INT_NEEDED = &quot;.intNeeded&quot;;</p>
+
+<p>public static String L_DOUBLE_NEEDED = &quot;.doubleNeeded&quot;;</p>
+
+<p>public static String L_FALSE_DATE = &quot;.falseDate&quot;;</p>
+
+<p>public static String L_BEFORE_DATE = &quot;.beforeDate&quot;;</p>
+
+<p>public static String L_AFTER_DATE = &quot;.afterDate&quot;;</p>
+
+<p>public static String L_FALSE_RATE = &quot;.falseRate&quot;;</p>
+
+<p>public static String L_FALSE_RANGE = &quot;.falseRange&quot;;</p>
+
+<p>public static String L_FALSE_IDCARD = &quot;.falseIdCard&quot;;</p>
+
+<p>private static java.text.SimpleDateFormat datefmt = new java.text.SimpleDateFormat(&quot;yyyy年M月dd日&quot;);</p>
+
+<p>public FieldCheck(ActionErrors errors,</p>
+
+<p>HttpServletRequest request,</p>
+
+<p>String moduleName)</p>
+
+<p>{</p>
+
+<p>this.errors = errors;</p>
+
+<p>this.request = request;</p>
+
+<p>this.moduleName = moduleName;</p>
+
+<p>}</p>
+
+<p>public static boolean error(ActionErrors errors,</p>
+
+<p>HttpServletRequest request,</p>
+
+<p>String label,</p>
+
+<p>StringBuffer message)</p>
+
+<p>{</p>
+
+<p>StringBuffer url = (new StringBuffer(&quot;error&quot;)).append(label);</p>
+
+<p>errors.add(label.substring(1), new ActionError(url.toString(), message.toString()));</p>
+
+<p>request.setAttribute(errorURL, errors);</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>public static boolean error(ActionErrors errors,</p>
+
+<p>HttpServletRequest request,</p>
+
+<p>String label,</p>
+
+<p>String module)</p>
+
+<p>{</p>
+
+<p>return error(errors, request, label, module, null, null);</p>
+
+<p>}</p>
+
+<p>public static boolean error(ActionErrors errors,</p>
+
+<p>HttpServletRequest request,</p>
+
+<p>String label,</p>
+
+<p>String module,</p>
+
+<p>String name)</p>
+
+<p>{</p>
+
+<p>return error(errors, request, label, module, name, null);</p>
+
+<p>}</p>
+
+<p>public static boolean error(ActionErrors errors,</p>
+
+<p>HttpServletRequest request,</p>
+
+<p>String label,</p>
+
+<p>String module,</p>
+
+<p>String name,</p>
+
+<p>String extdesc)</p>
+
+<p>{</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;Error:&quot; +module +(null!=name?&quot;-&quot;+name:&quot;&quot;));</p>
+
+<p>StringBuffer url = (new StringBuffer(&quot;error&quot;)).append(label);</p>
+
+<p>errors.add(null!=name?name:module, new ActionError(url.toString(), description(module, name), extdesc));</p>
+
+<p>request.setAttribute(errorURL, errors);</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>public boolean isEmpty(String name)</p>
+
+<p>{</p>
+
+<p>if(null==request.getParameter(name)</p>
+
+<p>|| &quot;&quot;.equals(request.getParameter(name))) {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>// 带参校验函数 ---&gt;&gt;&gt; 开始</p>
+
+<p>public boolean isEmpty(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(null == value || value.toString().length() &lt; 1) {</p>
+
+<p>return error(L_REQUIRED, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean falseLength(String field, Object value, int maxLength)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; value.toString().length() &gt; maxLength) {</p>
+
+<p>return error(L_FALSE_LENGTH, field, description(field), &quot;(&quot; +maxLength +&quot;)&quot;);</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean falseNumber(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null == value) {</p>
+
+<p>return error(L_FALSE_NUMBER, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean intNeeded(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null == value) {</p>
+
+<p>return error(L_INT_NEEDED, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean doubleNeeded(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null == value) {</p>
+
+<p>return error(L_DOUBLE_NEEDED, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean overflow(String field, Double value, double limit, int precision)</p>
+
+<p>{</p>
+
+<p>if(isEmpty(field)) return false;</p>
+
+<p>int dot = -1;</p>
+
+<p>String param = request.getParameter(field);</p>
+
+<p>if(null != value) dot = param.indexOf(&quot;.&quot;);</p>
+
+<p>if(null != value &amp;&amp; (value.doubleValue() &gt; limit</p>
+
+<p>|| (dot&gt;=0 &amp;&amp; precision &lt; param.length() -dot -1))) {</p>
+
+<p>String limitstr = Double.toString(limit);</p>
+
+<p>String extdesc = &quot;(&quot; +(Integer.parseInt(limitstr.substring(limitstr.indexOf(&quot;E&quot;) +1)) +precision) +&quot;,&quot; +precision +&quot;)&quot;;</p>
+
+<p>return error(L_OVERFLOW, field, description(field), extdesc);</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean chooseNone(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(null == value || value.toString().length() &lt; 1) {</p>
+
+<p>return error(L_CHOOSE_NONE, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean different(String field, Object value, Object origin)</p>
+
+<p>{</p>
+
+<p>if(isEmpty(field, origin)) return true;</p>
+
+<p>if(!origin.equals(value)) {</p>
+
+<p>return error(L_DIFFERENT, field, description(field), origin.toString());</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean different(String field, Object value, String olabel, Object origin)</p>
+
+<p>{</p>
+
+<p>if(isEmpty(field, origin)) return true;</p>
+
+<p>if(!origin.equals(value)) {</p>
+
+<p>return error(L_DIFFERENT, field, description(field), description(olabel));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean falseDate(String field, Object value)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null == value) {</p>
+
+<p>return error(L_FALSE_DATE, field, description(field));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean beforeDate(String field, Date base, Date date)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null != base &amp;&amp; null != date) {</p>
+
+<p>base.setHours(0); base.setMinutes(0); base.setSeconds(0);</p>
+
+<p>date.setHours(0); date.setMinutes(0); date.setSeconds(0);</p>
+
+<p>if(base.compareTo(date)&gt;0) return error(L_BEFORE_DATE, field, description(field), datefmt.format(base));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean afterDate(String field, Date base, Date date)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field) &amp;&amp; null != base &amp;&amp; null != date) {</p>
+
+<p>base.setHours(0); base.setMinutes(0); base.setSeconds(0);</p>
+
+<p>date.setHours(0); date.setMinutes(0); date.setSeconds(0);</p>
+
+<p>if(base.compareTo(date)&lt;0) return error(L_AFTER_DATE, field, description(field), datefmt.format(base));</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean beforeToday(String field, Date date)</p>
+
+<p>{</p>
+
+<p>return beforeDate(field, new Date(), date);</p>
+
+<p>}</p>
+
+<p>public boolean afterToday(String field, Date date)</p>
+
+<p>{</p>
+
+<p>return afterDate(field, new Date(), date);</p>
+
+<p>}</p>
+
+<p>//decimal(7,4)</p>
+
+<p>public boolean falseRate(String field, Double value)</p>
+
+<p>{</p>
+
+<p>if(doubleNeeded(field, value)) return true;</p>
+
+<p>if(overflow(field, value, 1000d, 4)) return true;</p>
+
+<p>if(!isEmpty(field)) {</p>
+
+<p>if(Double.compare(value.doubleValue(), 100d) &gt; 0</p>
+
+<p>|| Double.compare(value.doubleValue(), 0d) &lt; 0) {</p>
+
+<p>return error(L_FALSE_RATE, field, description(field), &quot;[0, 100]&quot;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public boolean falseRange(String field, Integer[] range, Integer value)</p>
+
+<p>{</p>
+
+<p>if(intNeeded(field, value)) return true;</p>
+
+<p>if(!isEmpty(field)) {</p>
+
+<p>boolean isIn = false;</p>
+
+<p>String extdesc = &quot;&quot;;</p>
+
+<p>if(range.length &lt;= 0) {</p>
+
+<p>isIn = true; //没指定范围</p>
+
+<p>} else if(range.length == 1) {</p>
+
+<p>if(null == range[0]) {</p>
+
+<p>isIn = true;</p>
+
+<p>} else {</p>
+
+<p>isIn = (range[0].compareTo(value) &lt;= 0);</p>
+
+<p>extdesc = &quot;大于&quot; +range[0];</p>
+
+<p>}</p>
+
+<p>} else if(range.length == 2) {</p>
+
+<p>isIn = ((null==range[0] || range[0].compareTo(value) &lt;= 0)</p>
+
+<p>&amp;&amp; (null==range[1] || range[1].compareTo(value) &gt;= 0));</p>
+
+<p>if(null != range[0]) extdesc = &quot;大于&quot; +range[0];</p>
+
+<p>if(null != range[1]) extdesc = (&quot;&quot;.equals(extdesc)?&quot;&quot;:&quot;, &quot;) +&quot;小于&quot; +range[1];</p>
+
+<p>}</p>
+
+<p>if(!isIn) return error(L_FALSE_RANGE, field, description(field), extdesc);</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>//身份证号码校验</p>
+
+<p>public boolean falseIdCard(String field, String value)</p>
+
+<p>{</p>
+
+<p>if(!isEmpty(field)) {</p>
+
+<p>int idclen = value.length();</p>
+
+<p>String fieldesc = &quot;身份证号码&quot;; // description(field);</p>
+
+<p>String extdesc = &quot;&quot;;</p>
+
+<p>boolean idCardTrue = true;</p>
+
+<p>int pos = value.indexOf(&quot; &quot;);</p>
+
+<p>if(pos&gt;=0) {</p>
+
+<p>extdesc = &quot;第&quot; +(pos +1) +&quot;个字符不能为空格&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else if(idclen != 15 &amp;&amp; idclen != 18) { //检查身份证号码长度</p>
+
+<p>extdesc = &quot;长度必须为15或者18&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else {</p>
+
+<p>boolean isOldCard = (idclen==15);</p>
+
+<p>if(!dateValid(value.substring(6, (isOldCard?12:14)))) { //检查出生日期</p>
+
+<p>extdesc = &quot;出生日期无效&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else {</p>
+
+<p>long verify = 0, modBase = 11;</p>
+
+<p>StringBuffer errExt = new StringBuffer();</p>
+
+<p>try {</p>
+
+<p>int kmax = idclen -(isOldCard?0:1);</p>
+
+<p>for(int k=kmax; k&gt;0; k--) {</p>
+
+<p>errExt = new StringBuffer();</p>
+
+<p>errExt.append(&quot;，第&quot;).append(k).append(&quot;位“&quot;).append(value.substring(k-1, k)).append(&quot;”有误&quot;);</p>
+
+<p>verify += Long.parseLong(value.substring(k-1, k))*((long)(2&lt;&lt;(kmax-k))%modBase);</p>
+
+<p>}</p>
+
+<p>if(!isOldCard) {</p>
+
+<p>verify = (verify%modBase);</p>
+
+<p>String vcode = value.substring(idclen -1);</p>
+
+<p>String rightc = &quot;&quot;;</p>
+
+<p>if(verify == 0 &amp;&amp; !(&quot;1&quot;.equals(vcode))) {</p>
+
+<p>rightc = &quot;1&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else if(verify == 1 &amp;&amp; !(&quot;0&quot;.equals(vcode))) {</p>
+
+<p>rightc = &quot;0&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else if(verify == 2 &amp;&amp; !(&quot;X&quot;.equals(vcode))) {</p>
+
+<p>rightc = &quot;X&quot;;</p>
+
+<p>idCardTrue = false;</p>
+
+<p>} else if(verify &gt; 2 &amp;&amp; !((String.valueOf(modBase -verify +1)).equals(vcode))) {</p>
+
+<p>rightc = (String.valueOf(modBase -verify +1));</p>
+
+<p>idCardTrue = false;</p>
+
+<p>}</p>
+
+<p>if(!idCardTrue) extdesc = &quot;校验位有误(应为&quot; +rightc+&quot;)&quot;;</p>
+
+<p>}</p>
+
+<p>} catch(NumberFormatException e) {</p>
+
+<p>extdesc = (isOldCard?&quot;旧号码必须全由数字0~9组成&quot;:&quot;新号码前17位必须由数字0~9组成&quot;) +errExt.toString();</p>
+
+<p>idCardTrue = false;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>if(!idCardTrue) return error(L_FALSE_IDCARD, field, fieldesc, extdesc);</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>public static void duplicate(ActionErrors errors, HttpServletRequest request, String module)</p>
+
+<p>{</p>
+
+<p>error(errors, request, L_DUPLICATE, module, null, null);</p>
+
+<p>}</p>
+
+<p>private boolean error(String label, String field, String paramA)</p>
+
+<p>{</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;Name:&quot; +field +&quot;&lt;,Value:&quot; +request.getParameter(field) +&quot;&lt;&quot;);</p>
+
+<p>StringBuffer url = (new StringBuffer(&quot;error&quot;)).append(label);</p>
+
+<p>errors.add(field, new ActionError(url.toString(), paramA));</p>
+
+<p>request.setAttribute(errorURL, errors);</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>private boolean error(String label, String field, String paramA, String paramB)</p>
+
+<p>{</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;Name:&quot; +field +&quot;&lt;,Value:&quot; +request.getParameter(field) +&quot;&lt;&quot;);</p>
+
+<p>StringBuffer url = (new StringBuffer(&quot;error&quot;)).append(label);</p>
+
+<p>errors.add(field, new ActionError(url.toString(), paramA, paramB));</p>
+
+<p>request.setAttribute(errorURL, errors);</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>private boolean error(String label, String field, String paramA, String paramB, String paramC)</p>
+
+<p>{</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;Name:&quot; +field +&quot;&lt;,Value:&quot; +request.getParameter(field) +&quot;&lt;&quot;);</p>
+
+<p>StringBuffer url = (new StringBuffer(&quot;error&quot;)).append(label);</p>
+
+<p>errors.add(field, new ActionError(url.toString(), paramA, paramB, paramC));</p>
+
+<p>request.setAttribute(errorURL, errors);</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>private boolean dateValid(String datestr)</p>
+
+<p>{</p>
+
+<p>String date = datestr;</p>
+
+<p>if(date.indexOf(&quot;-&quot;) &gt; 0) date = date.replaceAll(&quot;-&quot;, &quot;&quot;);</p>
+
+<p>if(date.indexOf(&quot;/&quot;) &gt; 0) date = date.replaceAll(&quot;/&quot;, &quot;&quot;);</p>
+
+<p>if(null == date) return false;</p>
+
+<p>int len = date.length();</p>
+
+<p>if(len != 6 &amp;&amp; len != 8) return false;</p>
+
+<p>try {</p>
+
+<p>int year = Integer.parseInt(date.substring(0, len-4));</p>
+
+<p>int month = Integer.parseInt(date.substring(len-4, len-2));</p>
+
+<p>int day = Integer.parseInt(date.substring(len-2));</p>
+
+<p>Date dchk = new Date(year -(len==8?1900:0), month-1, day);</p>
+
+<p>if((year == dchk.getYear() +(len==8?1900:0))</p>
+
+<p>&amp;&amp; (month == dchk.getMonth()+1)</p>
+
+<p>&amp;&amp; (day == dchk.getDate()))</p>
+
+<p>return true;</p>
+
+<p>} catch(NumberFormatException e) {</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>获取指定xml文件的根结点，并保存</p></li>
+<li><p>@param  module 模块名称</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>private static void xbuild(String module)</p>
+
+<p>{</p>
+
+<p>Document doc = null;</p>
+
+<p>try {</p>
+
+<p>SAXBuilder sax = new SAXBuilder();</p>
+
+<p>System.out.println(&quot;[--&gt;&gt;Reading XML configuration file &amp;quot;&quot; + confName +&quot;&amp;quot;...&quot;);</p>
+
+<p>doc = sax.build(new File(confName));</p>
+
+<p>} catch(IOException e) {</p>
+
+<p>//e.printStackTrace();</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt; &quot; +e.getMessage());</p>
+
+<p>} catch(JDOMException e) {</p>
+
+<p>//e.printStackTrace();</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt; &quot; +e.getMessage());</p>
+
+<p>} finally {</p>
+
+<p>if(null != doc &amp;&amp; null != doc.getRootElement()) {</p>
+
+<p>Element root = doc.getRootElement();</p>
+
+<p>if(null != root) root = root.getChild(module, root.getNamespace(&quot;&quot;));</p>
+
+<p>if(null != root) {</p>
+
+<p>xMRootMap.put(module, root);</p>
+
+<p>} else {</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt; &quot; +module +&quot; NOT-FOUND in &quot; +confName);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>获取XML文件中指定节点参数描述</p></li>
+<li><p>@param  name 参数名称</p></li>
+<li><p>@return 若参数存在,返回其描述,否则返回空串</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>private String description(String name)</p>
+
+<p>{</p>
+
+<p>return description(moduleName, name);</p>
+
+<p>}</p>
+
+<p>public static String description(String module, String name)</p>
+
+<p>{</p>
+
+<p>if(!xMRootMap.containsKey(module)) xbuild(module);</p>
+
+<p>String pmstr = &quot;&quot;;</p>
+
+<p>try {</p>
+
+<p>Element root = (Element)xMRootMap.get(module);</p>
+
+<p>if(null == name) return root.getAttributeValue(&quot;description&quot;);</p>
+
+<p>if(null != root) {</p>
+
+<p>Element elm = root.getChild(name, root.getNamespace(&quot;&quot;));</p>
+
+<p>if(null != elm) pmstr = elm.getText();</p>
+
+<p>else xbuild(module);</p>
+
+<p>}</p>
+
+<p>} catch(NullPointerException e) {</p>
+
+<p>//e.printStackTrace();</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt; &quot; +module +&quot; NOT-FOUND in &quot; +confName);</p>
+
+<p>}</p>
+
+<p>return pmstr;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p></code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141899/">ConfProperties.java</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T10:00:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141899, blog id: airoff
+History stat: 浏览/评论：195/0  ,  日期：2005年1月7日 10:00</p>
+
+<p><font color=#00008B><font size=2 style="line-height:14pt"></p>
+
+<p>/*============================================================</p>
+
+<ul>
+<li><p>版权：</p></li>
+<li><p>文件：  com.mindon.util.ConfProperties</p></li>
+<li><p>功能：  读取属性文件配置</p></li>
+<li><p>所含类:</p></li>
+<li><p>修改记录    /日期       /作者       /内容</p></li>
+<li><hr /></li>
+<li><p>1       /2004-05-10 /fengrj     /创建文件，并实现基本功能</p></li>
+<li><p>===========================================================</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>package com.mindon.util;</p>
+
+<p>import java.util.PropertyResourceBundle;</p>
+
+<p>import java.util.ResourceBundle;</p>
+
+<p>public class ConfProperties</p>
+
+<p>{</p>
+
+<p>private static final String confName = &quot;config&quot;;</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>根据key返回一个字符串的值</p></li>
+<li><p>@param key</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>public static String get(String key) {</p>
+
+<p>return get(confName, key);</p>
+
+<p>}</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>根据key返回一个字符串的值</p></li>
+<li><p>@param conf</p></li>
+<li><p>@param key</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>public static String get(String conf, String key) {</p>
+
+<p>ResourceBundle resBundle = PropertyResourceBundle.getBundle(conf);</p>
+
+<p>try {</p>
+
+<p>if(null != resBundle) {</p>
+
+<p>return resBundle.getString(key);</p>
+
+<p>} else {</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;&quot;+conf+&quot;.properties not found&quot;);</p>
+
+<p>return &quot;&quot;;</p>
+
+<p>}</p>
+
+<p>} catch(java.util.MissingResourceException e) {</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;&quot; +key +&quot; property not found&quot;);</p>
+
+<p>return &quot;&quot;;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p></font></font></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1521,98 +2517,6 @@ History stat: 浏览/评论：550/0  ,  日期：2005年1月7日 09:03</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139280/">WMA</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-01-04T13:12:00+08:00" pubdate data-updated="true">Jan 4<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000139280, blog id: airoff
-History stat: 浏览/评论：126/2  ,  日期：2005年1月4日 13:12</p>
-
-<p>WMA，记得似乎是windows媒体播放器播放的一种媒体格式。（查了google，解释为“WMA的全称是Windows Media Audio，它是微软公司推出的与MP3格式齐名的一种新的音频格式。”）</p>
-
-<p>不过我想说的并不是这个解释，而是我2号出门瞎逛时想到的另一个意思——Weak Moment Actions（脆弱时刻行为）。本来打消了写这个的念头了的，因为没有那天的情绪实在很难写出点什么，可看到june的《2005年第一个工作日》让我又想起这个来。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139280/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139151/">2005的开始</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-01-04T08:51:00+08:00" pubdate data-updated="true">Jan 4<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000139151, blog id: airoff
-History stat: 浏览/评论：97/1  ,  日期：2005年1月4日 08:51</p>
-
-<p>1月2日，在待屋里编了一整天程序后，决定出门做点什么。想起了在何香凝美术馆的毕加索版画展。因为美术馆离住的地方不外两站路，于是就走了过去，顺便给自己点活动量。票价35块，进去的时候还经过了如机场安检一般的程序，保安看到我带了相机还特意提醒不允许拍照——有点失望。美术馆里同时有另外一个画家（刘贵宾）的油画展，就是圣诞节在美术馆外拍照片时看到在招贴底下留影的那位。</p>
-
-<p>看版画展的人不少，还有很多小朋友随他们的老师来学习的。我也不懂什么版画，只是凭自己的感觉和知道的一丁点有限的了解来理解自己眼前的线条和画面。我想，看展览不外是两种目的：企图理解艺术家所要表达的内容和找寻自己期待的内容。我的知识和理解能力大概对艺术家原本的表达意图揣测是十分有限的，大多时候我只是在找寻自己所期待的线条和意境，至于符不符合作者最初想表达的东西，我并不是太在意。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139151/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/44/">&larr; Older</a>
@@ -1662,11 +2566,11 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 80 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 82 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 13 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">Light-Air-Water-M-Sci</a> ( 14 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/readings/">Readings</a> ( 12 )</li>
 
@@ -1681,6 +2585,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
@@ -1712,14 +2624,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/all-kinds-of-2048/">All Kinds of 2048!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/08/know-the-wangzhi/">从一句话里读懂网址</a>
       </li>
     
   </ul>
