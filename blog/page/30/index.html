@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="为了一套房子你要奋斗多少年？（转） Apr 17th, 2006 BlogMS original blog key: 1001179068, blog id: airoff
-History stat: 浏览/评论：230/0 , 日期：2006年4月17日 11:29 为了一套房子你要奋斗多少年 &hellip;">
+  <meta name="description" content="论效应（转） Apr 17th, 2006 BlogMS original blog key: 1001179135, blog id: airoff
+History stat: 浏览/评论：189/0 , 日期：2006年4月17日 11:52 政治学家威尔逊和犯罪学家凯琳提出了一个“破窗理论 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +72,54 @@ History stat: 浏览/评论：230/0 , 日期：2006年4月17日 11:29 为了一�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/04/17/old-blogms-1001179135/">论效应（转）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-04-17T11:52:00+08:00" pubdate data-updated="true">Apr 17<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1001179135, blog id: airoff
+History stat: 浏览/评论：189/0  ,  日期：2006年4月17日 11:52</p>
+
+<p>政治学家威尔逊和犯罪学家凯琳提出了一个“破窗理论”。这个理论认为：如果有人打坏了一个建筑物的窗户玻璃，而这扇窗户又得不到及时的维修，别人就可能受到某些暗示性的纵容去打烂更多的窗户玻璃。久而久之，这些破窗户就给人造成一种无序的感觉。结果在这种公众麻木不仁的氛围中，犯罪就会滋生、繁荣。“破窗理论”不仅仅在社会管理中有所应用，而且也被用在了现代企业管理中。</p>
+
+<p><b>蝴蝶效应</b></p>
+
+<p>什么是蝴蝶效应？1979年12月，洛伦兹在华盛顿的美国科学促进会的一次讲演中提出：一只蝴蝶在巴西扇动翅膀，有可能会在美国的德克萨斯引起一场龙卷风。他的演讲和结论给人们留下了极其深刻的印象。从此以后，所谓“蝴蝶效应”之说就不胫而走，名声远扬了。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2006/04/17/old-blogms-1001179135/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -344,389 +392,6 @@ History stat: 浏览/评论：222/1  ,  日期：2006年4月7日 12:47</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/03/29/old-blogms-1001125911/">数据库汉字搜索</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-03-29T16:06:00+08:00" pubdate data-updated="true">Mar 29<span>th</span>, 2006</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1001125911, blog id: airoff
-History stat: 浏览/评论：535/1  ,  日期：2006年3月29日 16:06</p>
-
-<p><b><font color=#DC143C>MySQL5 之汉字首拼音字母查询存储过程</p>
-
-<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</font></b></p>
-
-<p>DROP TABLE IF EXISTS <code>hz2py</code>;</p>
-
-<p>CREATE TABLE <code>hz2py</code> (</p>
-
-<p><code>PY</code> char(1) character set utf8 NOT NULL,</p>
-
-<p><code>HZ</code> char(1) NOT NULL default &#8221;,</p>
-
-<p>PRIMARY KEY  (<code>PY</code>)</p>
-
-<p>) ENGINE=InnoDB DEFAULT CHARSET=gbk;</p>
-
-<p>INSERT INTO <code>hz2py</code> (<code>PY</code>,<code>HZ</code>) VALUES</p>
-
-<p>(&#8216;A&#8217;,&#8217;驁&#8217;),</p>
-
-<p>(&#8216;B&#8217;,&#8217;簿&#8217;),</p>
-
-<p>(&#8216;C&#8217;,&#8217;錯&#8217;),</p>
-
-<p>(&#8216;D&#8217;,&#8217;鵽&#8217;),</p>
-
-<p>(&#8216;E&#8217;,&#8217;樲&#8217;),</p>
-
-<p>(&#8216;F&#8217;,&#8217;鰒&#8217;),</p>
-
-<p>(&#8216;G&#8217;,&#8217;腂&#8217;),</p>
-
-<p>(&#8216;H&#8217;,&#8217;夻&#8217;),</p>
-
-<p>(&#8216;J&#8217;,&#8217;攈&#8217;),</p>
-
-<p>(&#8216;K&#8217;,&#8217;穒&#8217;),</p>
-
-<p>(&#8216;L&#8217;,&#8217;鱳&#8217;),</p>
-
-<p>(&#8216;M&#8217;,&#8217;旀&#8217;),</p>
-
-<p>(&#8216;N&#8217;,&#8217;桛&#8217;),</p>
-
-<p>(&#8216;O&#8217;,&#8217;漚&#8217;),</p>
-
-<p>(&#8216;P&#8217;,&#8217;曝&#8217;),</p>
-
-<p>(&#8216;Q&#8217;,&#8217;囕&#8217;),</p>
-
-<p>(&#8216;R&#8217;,&#8217;鶸&#8217;),</p>
-
-<p>(&#8216;S&#8217;,&#8217;蜶&#8217;),</p>
-
-<p>(&#8216;T&#8217;,&#8217;籜&#8217;),</p>
-
-<p>(&#8216;W&#8217;,&#8217;鶩&#8217;),</p>
-
-<p>(&#8216;X&#8217;,&#8217;鑂&#8217;),</p>
-
-<p>(&#8216;Y&#8217;,&#8217;韻&#8217;),</p>
-
-<p>(&#8216;Z&#8217;,&#8217;咗&#8217;);</p>
-
-<p>CREATE FUNCTION <code>more</code>.<code>firstPY</code>(words varchar(255)) RETURNS mediumtext</p>
-
-<p>BEGIN</p>
-
-<p>declare fpy char(1);</p>
-
-<p>declare pc char(1);</p>
-
-<p>declare cc char(4);</p>
-
-<p>set @fpy = UPPER(left(words,1));</p>
-
-<p>set @pc = (CONVERT(@fpy USING gbk));</p>
-
-<p>set @cc = hex(@pc);</p>
-
-<p>if @cc &gt;= &quot;8140&quot; and @cc &lt;=&quot;FEA0&quot; then</p>
-
-<p>begin</p>
-
-<p>select PY into @fpy from HZ2PY where hz&gt;=@pc limit 1;</p>
-
-<p>end;</p>
-
-<p>elseif Instr(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;,@fpy) = 0 then</p>
-
-<p>set @fpy = &quot;&quot;;</p>
-
-<p>end if;</p>
-
-<p>Return @fpy;</p>
-
-<p>END</p>
-
-<p><b><font color=#DC143C>MS-SQL-SERVER 之汉字笔画，首拼音字母查询存储过程</p>
-
-<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</font></b></p>
-
-<p>if exists (select * from dbo.sysobjects where id = object_id(N&#8217;[dbo].[chineseBH]&#8217;) and xtype in (N&#8217;FN&#8217;, N&#8217;IF&#8217;, N&#8217;TF&#8217;))</p>
-
-<p>drop function [dbo].[chineseBH]</p>
-
-<p>GO</p>
-
-<p>if exists (select * from dbo.sysobjects where id = object_id(N&#8217;[dbo].[firstAllPY]&#8217;) and xtype in (N&#8217;FN&#8217;, N&#8217;IF&#8217;, N&#8217;TF&#8217;))</p>
-
-<p>drop function [dbo].[firstAllPY]</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS OFF</p>
-
-<p>GO</p>
-
-<p>create function chineseBH(@str nvarchar(4000))</p>
-
-<p>returns int</p>
-
-<p>as</p>
-
-<p>begin</p>
-
-<p>declare @word nchar(1),@n int</p>
-
-<p>set @n=0</p>
-
-<p>while len(@str)&gt;0</p>
-
-<p>begin</p>
-
-<p>set @word=left(@str,1)</p>
-
-<p>&#8211;如果非汉字，笔划当0计</p>
-
-<p>set @n=@n+(case when unicode(@word) between 19968 and 19968+20901</p>
-
-<p>then (select top 1 id from (</p>
-
-<p>select 1 as id,N&#8217;亅&#8217; as word</p>
-
-<p>union all select 2,N&#8217;阝&#8217;</p>
-
-<p>union all select 3,N&#8217;马&#8217;</p>
-
-<p>union all select 4,N&#8217;风&#8217;</p>
-
-<p>union all select 5,N&#8217;龙&#8217;</p>
-
-<p>union all select 6,N&#8217;齐&#8217;</p>
-
-<p>union all select 7,N&#8217;龟&#8217;</p>
-
-<p>union all select 8,N&#8217;齿&#8217;</p>
-
-<p>union all select 9,N&#8217;鸩&#8217;</p>
-
-<p>union all select 10,N&#8217;龀&#8217;</p>
-
-<p>union all select 11,N&#8217;龛&#8217;</p>
-
-<p>union all select 12,N&#8217;龂&#8217;</p>
-
-<p>union all select 13,N&#8217;龆&#8217;</p>
-
-<p>union all select 14,N&#8217;龈&#8217;</p>
-
-<p>union all select 15,N&#8217;龊&#8217;</p>
-
-<p>union all select 16,N&#8217;龍&#8217;</p>
-
-<p>union all select 17,N&#8217;龠&#8217;</p>
-
-<p>union all select 18,N&#8217;龎&#8217;</p>
-
-<p>union all select 19,N&#8217;龐&#8217;</p>
-
-<p>union all select 20,N&#8217;龑&#8217;</p>
-
-<p>union all select 21,N&#8217;龡&#8217;</p>
-
-<p>union all select 22,N&#8217;龢&#8217;</p>
-
-<p>union all select 23,N&#8217;龝&#8217;</p>
-
-<p>union all select 24,N&#8217;齹&#8217;</p>
-
-<p>union all select 25,N&#8217;龣&#8217;</p>
-
-<p>union all select 26,N&#8217;龥&#8217;</p>
-
-<p>union all select 27,N&#8217;齈&#8217;</p>
-
-<p>union all select 28,N&#8217;龞&#8217;</p>
-
-<p>union all select 29,N&#8217;麷&#8217;</p>
-
-<p>union all select 30,N&#8217;鸞&#8217;</p>
-
-<p>union all select 31,N&#8217;麣&#8217;</p>
-
-<p>union all select 32,N&#8217;龖&#8217;</p>
-
-<p>union all select 33,N&#8217;龗&#8217;</p>
-
-<p>union all select 35,N&#8217;齾&#8217;</p>
-
-<p>union all select 36,N&#8217;齉&#8217;</p>
-
-<p>union all select 39,N&#8217;靐&#8217;</p>
-
-<p>union all select 64,N&#8217;龘&#8217;</p>
-
-<p>) T</p>
-
-<p>where word&gt;=@word collate Chinese_PRC_Stroke_CS_AS_KS_WS</p>
-
-<p>order by id ASC) else 0 end)</p>
-
-<p>set @str=right(@str,len(@str)-1)</p>
-
-<p>end</p>
-
-<p>return @n</p>
-
-<p>end</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS ON</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS OFF</p>
-
-<p>GO</p>
-
-<p>create function firstAllPY(@str nvarchar(4000))</p>
-
-<p>returns nvarchar(4000)</p>
-
-<p>as</p>
-
-<p>begin</p>
-
-<p>declare @word nchar(1),@PY nvarchar(4000)</p>
-
-<p>set @PY=&#8221;</p>
-
-<p>while len(@str)&gt;0</p>
-
-<p>begin</p>
-
-<p>set @word=left(@str,1)</p>
-
-<p>&#8211;如果非汉字字符，返回原字符</p>
-
-<p>set @PY=@PY+(case when unicode(@word) between 19968 and 19968+20901</p>
-
-<p>then (select top 1 PY from (</p>
-
-<p>select &#8216;A&#8217; as PY,N&#8217;驁&#8217; as word</p>
-
-<p>union all select &#8216;B&#8217;,N&#8217;簿&#8217;</p>
-
-<p>union all select &#8216;C&#8217;,N&#8217;錯&#8217;</p>
-
-<p>union all select &#8216;D&#8217;,N&#8217;鵽&#8217;</p>
-
-<p>union all select &#8216;E&#8217;,N&#8217;樲&#8217;</p>
-
-<p>union all select &#8216;F&#8217;,N&#8217;鰒&#8217;</p>
-
-<p>union all select &#8216;G&#8217;,N&#8217;腂&#8217;</p>
-
-<p>union all select &#8216;H&#8217;,N&#8217;夻&#8217;</p>
-
-<p>union all select &#8216;J&#8217;,N&#8217;攈&#8217;</p>
-
-<p>union all select &#8216;K&#8217;,N&#8217;穒&#8217;</p>
-
-<p>union all select &#8216;L&#8217;,N&#8217;鱳&#8217;</p>
-
-<p>union all select &#8216;M&#8217;,N&#8217;旀&#8217;</p>
-
-<p>union all select &#8216;N&#8217;,N&#8217;桛&#8217;</p>
-
-<p>union all select &#8216;O&#8217;,N&#8217;漚&#8217;</p>
-
-<p>union all select &#8216;P&#8217;,N&#8217;曝&#8217;</p>
-
-<p>union all select &#8216;Q&#8217;,N&#8217;囕&#8217;</p>
-
-<p>union all select &#8216;R&#8217;,N&#8217;鶸&#8217;</p>
-
-<p>union all select &#8216;S&#8217;,N&#8217;蜶&#8217;</p>
-
-<p>union all select &#8216;T&#8217;,N&#8217;籜&#8217;</p>
-
-<p>union all select &#8216;W&#8217;,N&#8217;鶩&#8217;</p>
-
-<p>union all select &#8216;X&#8217;,N&#8217;鑂&#8217;</p>
-
-<p>union all select &#8216;Y&#8217;,N&#8217;韻&#8217;</p>
-
-<p>union all select &#8216;Z&#8217;,N&#8217;咗&#8217;</p>
-
-<p>) T</p>
-
-<p>where word&gt;=@word collate Chinese_PRC_CS_AS_KS_WS</p>
-
-<p>order by PY ASC) else @word end)</p>
-
-<p>set @str=right(@str,len(@str)-1)</p>
-
-<p>end</p>
-
-<p>return @PY</p>
-
-<p>end</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS ON</p>
-
-<p>GO</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/31/">&larr; Older</a>
@@ -776,7 +441,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 82 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 83 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
@@ -795,6 +460,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
@@ -830,10 +499,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/how-to-extract-strings-from-source-codes/">How to Extract Strings from Source Codes?</a>
       </li>
     
   </ul>

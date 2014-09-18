@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-08-23T18:09:49+08:00</updated>
+  <updated>2014-09-18T22:42:24+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[那些恼人的尘灰]]></title>
+    <link href="http://mindon.github.io/blog/2014/09/18/dust-in-a-old-building/"/>
+    <updated>2014-09-18T22:32:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/09/18/dust-in-a-old-building</id>
+    <content type="html"><![CDATA[<p>前两天台风“海鸥”的飞过，让周末刚大扫除干净的房子又满是尘灰。我们家在一栋有些老的高楼里，一到刮大风的时候就不知道哪刮出的尘灰，弄得到处都是，每次我都会想：要是有个一大的吸尘器，把整栋楼吸吸尘就好了 :p</p>
+
+<p><img src="/images/blog/dust.jpg" alt="" /></p>
+
+<p>有一定年限的房子，积尘和设计上缺陷带来的漏水问题一直是让人头大的问题，有什么技术和办法能改善一下呢？</p>
+
+<p>有待探讨。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[西少爷.肉夹馍，开分店啦]]></title>
@@ -154,30 +169,6 @@ resetBlocks();
 <p>Any opportunity to practise the Swift? I'm so sure there will be one :-)</p>
 
 <p>I like Golang, maybe Swift too!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[激活备份的敏思日志]]></title>
-    <link href="http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs/"/>
-    <updated>2014-06-22T10:35:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs</id>
-    <content type="html"><![CDATA[<p>10年前，开始在敏思博客写日志，并在那里认识了我们家的Aby。不过后来敏思博客网站关闭，我就用一个自己写的工具把日志备份了下来。</p>
-
-<p>昨天用go语言(golang)写了一个读取mht格式的程序，才发现当初备份的日志里，几乎有一半的日志对应的照片和图片没能保存成功，看来mht保存并不是那么靠谱的。还好文字都保存基本没问题。</p>
-
-<!--more-->
-
-
-<p>这个程序，把MHT文件格式里的文字和图片提取出来，并转成 OCTOPRESS （ 基于Jekyll ）用的markdown日志模板格式和独立图片文件。</p>
-
-<p>总共六百多篇日志，因为很多照片日志图片丢失，清理了一下，最后剩下三百余篇统一放到了BlogMS分类中。</p>
-
-<p>感谢敏思社区，特此文纪念。</p>
-
-<p>（注：原敏思的朋友，如果是用麦盾当初的备份工具备份日志的，需要整理成简单html格式的可联系我，一定会抽空免费为大家处理，不过大部分日志图片/照片保存失败的事情，很抱歉，因为才发现这个问题，所以麦盾也无能为力了。）</p>
-
-<p><span id="link-tags">敏思博客;敏思社区;OCTOPRESS;Jekyll;markdown</span></p>
 ]]></content>
   </entry>
   
