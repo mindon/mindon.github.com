@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Notes on MongoDB Mar 17th, 2012 MongoDB资料汇总专题
-http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http://www.oschina.net/question/ &hellip;">
+  <meta name="description" content="Redis: REmote DIctionary Server Mar 17th, 2012 Redis tutorial These slides and notes were originally written to accompany a three hour Redis &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +71,118 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/redis-remote-dictionary-server/">Redis: REmote DIctionary Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T22:54:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Redis tutorial</h2>
+
+<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
+
+<p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+
+<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
+
+<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
+<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
+
+<p><strong>Salvatore Sanfilippo：</strong>
+Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/redis-remote-dictionary-server/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/17/mongodb-the-internal-file-structure/">MongoDB: The Internal File Structure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-17T11:43:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+
+<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&#8217;re using directory-per-db option, then they may be in separate directories.</p>
+
+<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+
+<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+
+<p>Index data is also stored in these files, but they are stored as B-Tree&#8217;s rather than doubly linked lists.</p>
+
+<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+
+<p>If you&#8217;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
+
+<h2>MongoDB数据文件内部结构</h2>
+
+<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
+
+<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/17/mongodb-the-internal-file-structure/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -373,96 +484,6 @@ http://blog.nosqlfan.com/html/3548.html MongoDB 最佳实践 Original from http:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/08/for-my-dear-aby/">For My Darling: Aby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-08T13:15:00+08:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Aby, 在一起的日子里，你带来了丰富多彩的生活，让我每天都能体会到幸福的滋味。谢谢你，宝贝。</p>
-
-<p>最想对你说的还是那三个字 :-) <a href="http://mindon.appspot.com/i-love-u">I love you</a>。其实，用多少种语言也难以表达这种从心底溢出的感情。</p>
-
-<p><img src="/images/blog/roses/red-rose.jpg" alt="Rose" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/08/for-my-dear-aby/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/falling-leafs-life-system/">落叶——中西医有感</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T20:21:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近，路边有一种阔叶树开始掉叶子了——这种树在三月里的几天内叶子大片大片往下掉，直至全部叶子都掉光。我第一次看到满地叶子、树干光秃秃的时候，还以为世界末日临近了呢——满树的绿叶几天内变黄落了满地。</p>
-
-<p>可是意外的是，再过一个星期，这树又满树的绿叶嫩芽了，长新叶子的速度跟落叶的速度一样——快得令人诧异。</p>
-
-<p>这种现象，要是放到医学里头会是很有趣的事情：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/06/falling-leafs-life-system/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/18/">&larr; Older</a>
@@ -512,7 +533,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 83 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 85 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
@@ -531,6 +552,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
@@ -562,14 +591,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/06/17/swift-the-new-ios-language/">Swift - The new iOS Language</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/14/what-we-missed-with-our-health/">关于健康，我们忘掉了什么？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-09-18T22:42:24+08:00</updated>
+  <updated>2014-09-19T07:11:25+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[开心，怒气和烦恼]]></title>
+    <link href="http://mindon.github.io/blog/2014/09/19/happy-angry-and-worries/"/>
+    <updated>2014-09-19T06:59:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/09/19/happy-angry-and-worries</id>
+    <content type="html"><![CDATA[<p>开心：开放的心，放开的心。</p>
+
+<p>怒气：基本上源于对相关不相关的人要求过多或者过高。</p>
+
+<p>烦恼：大概都来自对自己过多或者过高的要求。</p>
+
+<p>让心充满阳光，你才会体会到世界的美好；</p>
+
+<p>让心充满好奇，你才会感受到世界的奇妙；</p>
+
+<p>让心放空，你才能接收更多的幸福。</p>
+
+<p>世界是丰富多彩的，未来是变幻莫测的。</p>
+
+<p>宽容和感恩之心是走向未来的必备食粮。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Next Mobile Phone and BlackBerry 10.3]]></title>
+    <link href="http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/"/>
+    <updated>2014-09-19T06:21:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3</id>
+    <content type="html"><![CDATA[<p>Yesterday, I updated my BlackBerry Q10 Dev Device to BlackBerry OS 10.3.0.738, It was from the 10.3.0.1154 autoloader.</p>
+
+<p>It&#8217;s flat styled - it looks much better.</p>
+
+<p>But its camera shot method is changed to an android style, it&#8217;s bad - it&#8217;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
+
+<p>Yes, I&#8217;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&#8217;s such a tiny one. Here they are</p>
+
+<p><img src="http://mindon.github.io/images/blog/mobiles.jpg" alt="" /></p>
+
+<p>I&#8217;m always waitting for my next mobile phone.</p>
+
+<p>iPhone? Yes, it&#8217;s a great mobile phone, but I still find no reason for it - at least there&#8217;s not enough reasons right now. Even the iPhone 6 - hmm, It&#8217;s great and with a high price and not sell in China mainland yet :)</p>
+
+<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&#8230;</p>
+
+<p>Google services is blocked in mainland China.</p>
+
+<p>You may say a VPN may works - but I don&#8217;t like it.</p>
+
+<p>You may say a hosts with a rooted device works - But I don&#8217;t like it either.</p>
+
+<p>Before a mobile device hit my heart, I will still prefer my dev version BlackBerry Q10.</p>
+
+<p>I have a Nexus 7(2013) and a Kindle, they are awesome devices.</p>
+
+<p>But choosing a mobile phone, I could wait.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[那些恼人的尘灰]]></title>
@@ -712,79 +770,6 @@ resetBlocks();
 
 
 <p><span id="link-tags">RTOS;BlackBerry 10;QML</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A UI Unit]]></title>
-    <link href="http://mindon.github.io/blog/2014/03/16/a-ui-unit/"/>
-    <updated>2014-03-16T09:33:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/03/16/a-ui-unit</id>
-    <content type="html"><![CDATA[<p>What kind of basic abilities should be with an UI unit?</p>
-
-<p>As a web developer, an UI includes: Data, DOM, CSS, JavaScript.</p>
-
-<p>That&#8217;s Data, Data Container, Display Style, Interactions.</p>
-
-<p>First, an UI needs datum: 1) Static data;  2) Dynamic data [Optional]</p>
-
-<!--more-->
-
-
-<p>For dynamic data, it needs these abilities:</p>
-
-<ol>
-<li><p>Receive initialization data, it may be tranfered from another UI unit.</p></li>
-<li><p>Transfer data to another UI unit;</p></li>
-<li><p>Subscribe data changes;</p></li>
-<li><p>Publish data changes.</p></li>
-</ol>
-
-
-<p>Interactions may change datum, data containers or styles.</p>
-
-<ol>
-<li><p>UI enter/exit events</p></li>
-<li><p>UI active/disactive events</p></li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
-    <link href="http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
-    <updated>2014-03-15T18:51:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>
-    <content type="html"><![CDATA[<p>I&#8217;m one of developers of WeChat BB10 version. Mainly charge on QML UI and interactivities with app APIs.</p>
-
-<p>BB10 WeChat may be one of the most complex bb10 apps in BlackBerry World.</p>
-
-<p>Here&#8217;s features should be in BB10 QML, which I implemented in the WeChat mobile app for BB10.</p>
-
-<ul>
-<li><p>QML actived event</p></li>
-<li><p>QML closed event</p></li>
-<li><p>QML Data Share Methods: a) Method to tranfer data from QML A to B ( open B from A ); b) Methods to set/get/clear app shared data in QML.</p></li>
-</ul>
-
-
-<!--more-->
-
-
-<ul>
-<li><p>QML reuse or not ( A - B - C - D: if open QML B from D, close D and C, reuse B )</p></li>
-<li><p>QML asyn publish/subscribe methods</p></li>
-<li><p>Flag to turn off auto-translation in system language ( Dialog, Back and Invocations )</p></li>
-<li><p>Support mutil-image previewer (zoomable) with invocation.</p></li>
-<li><p>Letters scrollbar</p></li>
-<li><p>A method to call js methods in QML from ListItem</p></li>
-</ul>
-
-
-<p>If BlackBerry 10 want more better apps, Its QML should provide features above. Or in a js library for QML.</p>
-
-<p><span id="link-tags">BB10;BlackBerry;WeChat;QML</span></p>
 ]]></content>
   </entry>
   

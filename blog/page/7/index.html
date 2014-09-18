@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Lost All Camera Photos in My Nexus 7 Feb 20th, 2013 My 8G Nexus 7, No rooted, Updated to android Jelly Bean 4.2.2 at 18 Feb. Now all photos in &hellip;">
+  <meta name="description" content="SSH Connect to BB10 Device Mar 2nd, 2013 How to connect to your BB10 device or simulator? Step 1: Turn on Development Mode Step 2: Creating an RSA2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,114 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/02/ssh-connect-to-bb10-device/">SSH Connect to BB10 Device</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-02T00:23:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2: </h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<pre><code>ssh-keygen -t rsa -b 4096
+</code></pre>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3: </h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<pre><code>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub
+</code></pre>
+
+<p>keep this console there.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/03/02/ssh-connect-to-bb10-device/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/24/the-code-bbc/">The Code - BBC</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-24T22:59:00+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>The Code</strong>: A mysterious code underpins the world. But what does it mean and what can we learn from it? Marcus du Sautoy takes us on an odyssey to uncover the code and reveal its meaning.</p>
+
+<p><img src="/images/blog/the-code.jpg" alt="" /></p>
+
+<p><a href="http://www.bbc.co.uk/programmes/b00zs6sl/episodes/guide">Episode guide</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/02/24/the-code-bbc/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -358,116 +466,6 @@ of Computer Programs</a>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Ingress! Ingress! Design and Develop a Chrome Extension - Ingress Portals</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-19T14:46:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The game Ingress is spreading around the world.</p>
-
-<p><a href="https://chrome.google.com/webstore/detail/ingress-portals/pglalnoakjpjaaobdjabdkedimkdnegk">Ingress Portals</a> helps us to find local portals around us.</p>
-
-<p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
-
-<p>The idea to develop such an extension for Ingress comes from another extension &#8221;<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>&#8221; &#8211; developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
-
-<p>I made some improvement in this totally re-design and develop extension.</p>
-
-<ol>
-<li><p>Simpler UI and faster start-speed;</p></li>
-<li><p>Area select from an embedded Google Map;</p></li>
-<li><p>Easy view for Level, Energy, Links and Mods;</p></li>
-<li><p>Cache same query in 5 minutes;</p></li>
-<li><p>Locate portals with an embedded Google Map;</p></li>
-<li><p>Help to find zero level portals;</p></li>
-<li><p>Show all portals in a single large Google Map;</p></li>
-<li><p>Usage leading page.</p></li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/19/design-t-shirts-on-teespring/">Design T-Shirts on Teespring</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-19T14:44:00+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Teespring是个特别的众筹网站。它个一般众筹网站不同的地方是它是一个T-Shirt设计的众筹，这也就意味着用户只需要提供设计稿和定价，剩下的事情都是网站运营方的了——如果购买的人数达到指定数目，运营方来印刷和发货。</p>
-
-<p>这种模式有点类似常规众筹网站和团购网的结合体。有众筹的特点，也有团购的便利。</p>
-
-<p>这对想玩一下T恤设计的我来说，是个挺有意思的事情——不管能否真的众筹成功，至少能让我过一下T恤设计的瘾。</p>
-
-<p><a href="http://teespring.com/mindon">http://teespring.com/mindon</a></p>
-
-<p><img src="/images/blog/t-mindon.png" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/19/design-t-shirts-on-teespring/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -517,7 +515,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">BlogMS</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 83 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">Mindon</a> ( 85 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">Web-Tech</a> ( 33 )</li>
 
@@ -536,6 +534,14 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
@@ -567,14 +573,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/06/17/swift-the-new-ios-language/">Swift - The new iOS Language</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/14/what-we-missed-with-our-health/">关于健康，我们忘掉了什么？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/">Facebook open sourcing Paper animation engine Pop</a>
       </li>
     
   </ul>
