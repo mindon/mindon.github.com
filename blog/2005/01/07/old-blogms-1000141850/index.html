@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Think in C++读书笔记  - Mindon.IDEA</title>
+  <meta name="author" content="Mindon Feng">
+
+  
+  <meta name="description" content="BlogMS original blog key: 1000141850, blog id: airoff
+History stat: 浏览/评论：550/0 , 日期：2005年1月7日 09:03 2003年05月 Thinking in C++ [&gt;&gt; 问题描述空间:解描述空间 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mindon.github.io/blog/2005/01/07/old-blogms-1000141850/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
+  
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mindon.IDEA</a></h1>
+  
+    <h2>Air off, Mind on ~ / Javascript+Golang, Sci, Health&#8230; /</h2>
+  
+</hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.google.com" id="cse-search-box">
+  <fieldset role="search">
+    <input class="search" type="text" name="q" results="0"/>
+    <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
+    <input type="hidden" name="ie" value="UTF-8" />
+  </fieldset>
+</form>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
+  <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
+  <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Think in C++读书笔记</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:03:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+
+<div class="entry-content">
+
+	<div class="adpost">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+<A NAME="A,BODY"></A>
+<p>BlogMS original blog key: 1000141850, blog id: airoff
+History stat: 浏览/评论：550/0  ,  日期：2005年1月7日 09:03</p>
+
+<p><strong>2003年05月 Thinking in C++</strong></p>
+
+<p>[&gt;&gt; 问题描述空间:解描述空间 &lt;&lt;]</p>
+
+<p>[&gt;&gt; 对象发现，对象装配，系统构造，系统扩充，对象重用 &lt;&lt;]</p>
+
+<p>-剧本：</p>
+
+<p>故事的结构通过特征表示，特征对应于对象，<font color=#DC143C>情节结构</font>对应于系统设计。</p>
+
+<p><font color=#00008B>头文件表达了类设计，而我们必须能够由设计文档重新产生头文件。</font></p>
+
+<!--more-->
+
+
+<p>[&gt;&gt; <b>Booch方法</b> &lt;&lt;]</p>
+
+<p>焦点是在OOP的类、方法和继承的单独性能上。</p>
+
+<p>1、在抽象的特定层上确定类和对象（用自然语言声明问题和解，并且确定关键特性）</p>
+
+<p>2、确定它们的语义（在相应抽象层上定义类）</p>
+
+<p>3、确定它们之间的关系（CRC卡片：Class 类，Responsibility 责任，Collaboration 协作）</p>
+
+<p>4、实现类</p>
+
+<p>5、反复设计</p>
+
+<p>[&gt;&gt; <b>责任驱动设计RDD</b> &lt;&lt;]</p>
+
+<p>重点在责任的授权</p>
+
+<p>1、数据或状态</p>
+
+<p>2、池和源</p>
+
+<p>3、观察者或观点</p>
+
+<p>4、辅助工具或帮助器</p>
+
+<p>[&gt;&gt; <b>对象建模技术OMT</b> &lt;&lt;]</p>
+
+<p>用详细地绘制图表的方法，不仅描述类，而且还描述系统的各种状态</p>
+
+<p>1、对象模型：WHAT  - 对象图表</p>
+
+<p>2、动态模型：WHEN - 状态图表</p>
+
+<p>3、功能模型：HOW   - 数据流程表</p>
+
+<p>[&gt;&gt; <b>数据抽象</b> &lt;&lt;]</p>
+
+<p>声明（非定义必须extern，函数声明extern可选）</p>
+
+<p>定义（初始化：分配存储空间，可以同时是声明）</p>
+
+<p>范围分解运算符::</p>
+
+<p>类型在C++是严格的。</p>
+
+<p>允许从问题空间把概念抽象到解空间的数据类型。</p>
+
+<p>在结构内部放入函数生成的新类型被称为抽象数据类型，</p>
+
+<p>用这种结构创建的变量被称为这个类型的对象或者实例，</p>
+
+<p>调用对象的成员函数被称为“<font color=#DC143C>向对象发消息</font>”。</p>
+
+<p>头文件是存放接口规范的唯一地方，是库开发者与其用户之间的合同，该合同描述数据结构，并说明函数调用的参数和返回值。</p>
+
+<p>其本规则是“只声明”，不要在头文件中做在连接时会引起混淆的任何事情。</p>
+
+<p>用预处理器隔离声明避免重复。</p>
+
+<p>private, protected, public</p>
+
+<p>friend 声明友元，如果一个函数被声明为friend，就意味着它不是这个类的成员函数，但却可以修改类的私有成员，而且它必须被列在类的定义中（特权函数）。</p>
+
+<p>存取控制通常是指实现细节的隐藏。存取控制的真正价值体现在开发阶段，防止越界。</p>
+
+<p>所有存取保护检查都是由编译器来完成的，在运行期间不再检查。（连接器无保护控制信息）</p>
+
+<p>句柄类(handle classes)即&quot;Cheshire Cat&quot;技术隐藏实现，避免重复编译。</p>
+
+<p>封装和实现的隐藏大大地改善了库的使用；安全性包括初始化和清除两方面。</p>
+
+<p>构造函数确保初始化（无返回值，可带参数），</p>
+
+<p>析构函数确保清除（无返回值，不带参数）。</p>
+
+<p>编译器自动调用，但析构函数调用的唯一根据是包含该对象的右括号。</p>
+
+<p>一般说来，应该在尽可能靠近变量的使用点定义变量，并在定义时就初始化。</p>
+
+<p>集合初始化</p>
+
+<p>int b[6]={0]; //6个元素均为0</p>
+
+<p>int c[]={1,2,3,4}; //元素数=sizeof(c)/sizeof(*c)</p>
+
+<p><font color=#DC143C>函数重载</font>的本质就是允许函数同名</p>
+
+<p>编译器会通过分解名字、范围和参数来产生内部名以供连接器使用。</p>
+
+<p>缺省参数之后的参数都必须是缺省的。</p>
+
+<p>可以让声明的参数没有标识符，目的在于可以修改函数定义而不需要修改所有的函数调用。</p>
+
+<p>不能把缺省参数作为一个标志去决定执行函数的某一块，这是基本原则。</p>
+
+<p>缺省参数的引用是为了使函数调用更容易，其一个重要应用是在开始定义函数时用了一组参数，一段时间后要增加参数，只要把新增参数作为缺省参数就不会影响原有调用。</p>
+
+<p><font color=#DC143C>输入输出流</font>更容易、安全、有效。</p>
+
+<p>istream,ostream</p>
+
+<p>文件 ifstreams, ofstreams</p>
+
+<p>char*内存(内核格式化)istrstreams, ostrstreams</p>
+
+<p>串istringstreams, ostringstreams</p>
+
+<p>&lt;&lt; 插入符</p>
+
+<p>&gt;&gt; 提取符</p>
+
+<p>操作算子</p>
+
+<p>endl（插入新行并清空流）</p>
+
+<p>flush（只清空流）</p>
+
+<p>oct, dec, hex （转换）</p>
+
+<p>ws （跳过空格）</p>
+
+<p>格式化输入以空格为分隔符</p>
+
+<p>good(), eof(), fail(), bad()</p>
+
+<p>streambuf, streampos</p>
+
+<p><font color=#DC143C>const</font> 的最初动机是取代预处理器#define进行值替代。</p>
+
+<p>C++编译器通常并不为const分配存储空间，相反它把这个定义保存在它的符号表里。</p>
+
+<p>const在C++中默认为内部连接（C默认是外部连接）。</p>
+
+<p><font color=#00008B>const意味着“不能改变的一块存储”，</font>但其值在编译时不能被使用。</p>
+
+<p>const int* x; // 指针所指值不变</p>
+
+<p>int const* x; // 指针不变</p>
+
+<p>编译器不允许使用存储在const指针里的地址来建立一个非const指针。</p>
+
+<p>函数不能返回指向局部栈变量的指针。</p>
+
+<p>在C++中，传递一个参数时，先选择通过引用传递，而企鹅是通过常量(const)的引用。</p>
+
+<p>类内的const常量需要在构造函数初始化表达式表中初始化，而不能在声明的时候初始化。</p>
+
+<p>任何不修改成员数据的函数应该声明为const函数。</p>
+
+<p>使用关键字mutable指定一个特定的数据成员可以在一个const对象里被改变。</p>
+
+<p>编译器和连接器都要检查const。</p>
+
+<p><font color=#DC143C>volatie</font>语法与const一样，意思是“在编译器认识的范围外，这个数据可以被改变”。</p>
+
+<p>c-v限定词，const volatile不能给程序改变，但可通过外面的工具改变。</p>
+
+<p>任何在类中定义的函数自动地成为<font color=#DC143C>内联函数</font>（函数类型和函数体均放在符号表中）。</p>
+
+<p>类外内联函数inline函数体和声明必须结合在一起，否则当作普通函数。</p>
+
+<p>在头文件中，内联函数默认为内部连接-即它是static，并且只能在它被包含的编译单元看到。</p>
+
+<p>内联的目的是减少函数调用的开销。</p>
+
+<p>存取器(accessors)和修改器(mutators)</p>
+
+<p>两种不能内联的情况：</p>
+
+<p>1、假如函数太复杂（如任何种类的循环），编译器将不能执行内联。</p>
+
+<p>2、假如要显式或隐含地区函数地址，编译器也不能执行内联。</p>
+
+<p>// C++<font color=#DC143C>宏定义</font>主要应用</p>
+
+<h1>define DEBUG(X) cout &lt;&lt; #X &quot; = &quot; &lt;&lt; X &lt;&lt; endl;</h1>
+
+<h1>define TRACE(S) cout &lt;&lt; #S &lt;&lt; endl, S</h1>
+
+<h1>define FIELD(A) char* A##<em>string; int A##</em>size</h1>
+
+<p><font color=#DC143C>static</font> <font color=#00008B>基本的含义是指“位置不变的某个东西”，保存在静态数据区。</font></p>
+
+<p>在固定地址上分配，对一个特定的编译单位来说是本地。</p>
+
+<p>全局静态对象的构造函数是在main()之前调用的，而其析构函数则在退出main()之后执行。</p>
+
+<p>一般情况下，在文件范围内的所有名字（既不嵌套在类或函数中的名字）对程序中的所有编译单元来说都是可见。这就是所谓的<font color=#DC143C>外部连接</font>。</p>
+
+<p>在文件范围内，一个被明确声明为static的对象或函数的名字对编译单元来说是局部变量；这些名字有<font color=#DC143C>内部连接</font>。</p>
+
+<p>连接只引用那些在连接/装载期间有地址的成员。</p>
+
+<p>所有的全局对象都是隐含为静态存储类，但通过extern和static可改变其可见性。</p>
+
+<p>（auto局部变量，register局部变量/寄存器）</p>
+
+<p>1、namespace只能在全局范畴定义，但它们之间可以嵌套。</p>
+
+<p>2、在namespace定义的结尾，右大括号的后面不必要跟一个分号。</p>
+
+<p>3、一个namespace可以在多个头文件中用一个标识符来定义，这跟类重复定义一样。</p>
+
+<p>4、一个namespace的名字可以用另一个名字来做别名。</p>
+
+<p>5、不能像类那样川建一个名字空间的实例。</p>
+
+<p>namespace_name::成员</p>
+
+<p>using namespace namespace_name</p>
+
+<p>成员</p>
+
+<p>静态数据成员定义必须出现在类的外部（不允许内联），而且只能定义一次。</p>
+
+<p>初始化静态数组不能用自动计数。</p>
+
+<p>局部类中不能有静态数据成员。</p>
+
+<p>静态成员函数只能访问静态成员，且没有this。</p>
+
+<p>用static关键字指定了一个类的所有对象占有相同的一块存储空间。</p>
+
+<p>连接转化指定</p>
+
+<p>extern &quot;C&quot; {</p>
+
+<pre><code>// c code
+</code></pre>
+
+<p>}</p>
+
+<p>extern &quot;C++&quot; {</p>
+
+<pre><code>// cpp code
+</code></pre>
+
+<p>}</p>
+
+<p><font color=#DC143C>拷贝构造函数（copy-constructor）X(X&amp;)</font>需要用引用（&amp;）来实现从现有的相同类型对象产生新的对象。</p>
+
+<p><font color=#DC143C>引用(&amp;)</font>象一个自动能被编译器逆向引用的<font color=#00008B>常量性指针</font>，通常用于函数的参数表和函数返回值。</p>
+
+<p><font color=#483D8B>任何引用必须和存储单元联系</font>。</p>
+
+<p>当引用被用作函数参数时，函数内任何对引用的更改将对汉书外的参数改变。</p>
+
+<p>在C和C++中，参数是从右向左进栈，然后调用函数，调用代码负责清除栈中的参数。</p>
+
+<p>通过传值方式传递参数时，编译器简单地将参数拷贝压栈；引用则仅需要将地址压栈。</p>
+
+<p>函数调用过程中被函数使用的内存为函数框架（function frame）。</p>
+
+<p>拷贝构造函数实现传值方式的参数传递和返回。缺省行为：位拷贝(bitcopy)。</p>
+
+<p>仅当准备用传值的方式传递类对象时，才需要拷贝构造函数。</p>
+
+<p>防止通过传值方式传递：声明一个私有拷贝构造函数。</p>
+
+<p>成员指针和普通指针一样具有相同的功能：可以在运行时选取特定存储单元（数据或函数）。</p>
+
+<p>成员指针只和类成员一起工作而不和全局数据或者函数一起工作。</p>
+
+<p>运算符重载operator</p>
+
+<p>“返回临时对象”方法可以提高返回效率。</p>
+
+<p>=自赋值（self-assignment）检查</p>
+
+<p>关键字explicit(只能用于构造函数)阻止构造函数转换</p>
+
+<p>静态内存，堆栈，堆</p>
+
+<p>delete只用于删除由new创建的对象。</p>
+
+<p>[&gt;&gt; <b>继承和组合</b> &lt;&lt;]</p>
+
+<p>is-a 继承: （需要向上映射选用）</p>
+
+<p>has-a</p>
+
+<p>成员对象构造函数调用的次序由对象在类中的声明次序决定。</p>
+
+<p>如果在基类中有一个函数名被重载几次，在派生类中重新定义这个函数名会掩盖所有基类版本。</p>
+
+<p>构造函数和析构函数不能被继承。</p>
+
+<p>operator=也不能被继承。</p>
+
+<p>[&gt;&gt; <b>多态和虚函数</b> &lt;&lt;]</p>
+
+<p><font color=#DC143C>虚函数</font>反映了一个类型与另一个类似类型之间的区别，只要这两个类型都是从同一个基类派生的。</p>
+
+<p>虚函数加强类型概念，而类型是面向对象编程设计的核心。</p>
+
+<p>取一个对象的地址（或指针或引用），并看作基类的地址。这被称为<font color=#DC143C>向上映射</font>。</p>
+
+<p>向上映射是自动发生的，不许强制，是绝对安全的。</p>
+
+<p>向下映射则是不安全的。</p>
+
+<p>捆绑（binding）：函数体与函数调用相联系。</p>
+
+<p>早捆绑：捆绑在程序运行之前（由编译器和连接器）完成。</p>
+
+<p>晚捆绑：捆绑在程序运行之时发生（动态捆绑）。</p>
+
+<p>C++中晚捆绑只对virtual起作用。</p>
+
+<p>如果一个函数在基类中被声明为virtual，那么在所有的派生类中都是virtual的。</p>
+
+<p>在派生类中virtual函数的重定义通常称为越位。</p>
+
+<p>编译器对每个包含虚函数的类创建一个表（称为VTABLE）。</p>
+
+<p>在 VTABLE 中，编译器放置特定类的虚函数地址。在每个带有虚函数的类中，编译器秘密地置指针，称为vpointer（缩写为VPTR），指向这个对象的VTABLE。</p>
+
+<p>通过基类指针做虚函数调用时（也就是多态调用），编译器静态地插入取得这个VPTR，并在VTABLE表中查找函数地址的代码，并完成晚捆绑的函数调用。</p>
+
+<p><font color=#DC143C>纯虚函数</font> virtual void x() = 0;</p>
+
+<p>等于告诉编译器在VTABLE中为函数保留一个间隔，但在这个特定间隔中不放地址。只要有一个函数在类中被声明为纯虚函数，则VTABLE就是不完全的。</p>
+
+<p>包含有纯虚函数的类称为<font color=#DC143C>纯抽象类</font>。</p>
+
+<p>纯虚函数防止对纯抽象类的函数以传值方式调用，也是防止对象意外使用值向上映射的一种方法。这样能保证在向上映射期间总是使用指针或引用。</p>
+
+<p>纯虚函数防止产生VTABLE，防止对象切片。</p>
+
+<p>在基类中，对纯虚函数提供定义是可能的。但纯虚函数在派生类中必须定义，以便创建对象。</p>
+
+<p>对派生类中没有重定义的虚函数使用基类函数的地址。</p>
+
+<p>使用多态的目的是让对基类对象操作的代码也能操作派生类对象。</p>
+
+<p>虚函数的构造函数尽量不要使用内联。</p>
+
+<p>在构造/析构函数中，只有函数的本地版本被调用（虚机制被忽略）。</p>
+
+<p>构造函数不是虚的，但析构函数能够且常常必须是虚的。</p>
+
+<p>创建纯虚析构函数，必须提供函数体。</p>
+
+<p>任何时候在类中有虚函数，就应当直接增加虚析构函数。</p>
+
+<p>[&gt;&gt; <b>模板和包容器类</b> &lt;&lt;]</p>
+
+<p>包容器类常用于创建面向对象程序的构造模块（building block），它使得程序内部代码更容易构造。</p>
+
+<p>包容器类的真正的需求是在堆上使用new创建对象和使用delete析构对象的时候体现的。</p>
+
+<p>模板实现了参数化类型的概念。</p>
+
+<p>“<font color=#DC143C>模板（template）</font>”这一关键字会告诉编译器下面的类定义将操作一个或更多的非特定类型。</p>
+
+<p>当对象被定义时，这些类型必须被指定以使编译器能够替代它们。</p>
+
+<p>由template&lt;&#8230;&gt;处理的任何东西都将意味着编译器在当时不为它分配存储空间，它一直处于等待状态直到被一个模板实例告知。</p>
+
+<p>注意在引用魔板名称的地方，必须伴有该模板的参数列表。</p>
+
+<p>模板参数并不局限于有类定义的类型，可以使用编译器内置类型。这些参数值在模板特定实例时变成编译期间敞亮。甚至可以对这些参数使用缺省值。</p>
+
+<p>运行时类型识别 Run-time type identification RTTI</p>
+
+<p>typeid()</p>
+
+<p>name()</p>
+
+<p>尽可能地使用虚函数，必要时才使用RTTI。</p>
+
+<p>典型的RTTI是通过在VTABLE中方一个额外的指针来实现的。这个指针指向一个描述该特定类型的typeinfo结构。</p>
+
+<p>dynamic_cast&lt;目标*&gt;&lt;源指针&gt;</p>
+
+<p>从本质上说，RTTI只要两个函数就行了，一个用来指明类的准确类型的虚函数，一个取得基类的指针并将它乡下应设成排参类。</p>
+
+<p></font></p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:03:00+08:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogms/'>blogms</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/01/04/old-blogms-1000139280/" title="Previous Post: WMA ">&laquo; WMA </a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/01/07/old-blogms-1000141851/" title="Next Post: 网页技巧[转]-IE5+ ">网页技巧[转]-IE5+  &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>About Me</h1>
+    <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
+</section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/108546803797935855689?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Categories</h1>
+  <ul>
+
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 87 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 33 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 13 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">chrome-app</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">mobile-app</a> ( 16 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon,/">mindon,</a> ( 1 )</li>
+
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - The Future of Possible</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two problems found in Jekyll when using Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux console</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section>
+    <h1>Google廣告</h1>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-6997921015773263";
+	/* git-aside */
+	google_ad_slot = "4887341949";
+	google_ad_width = 250;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</section><section>
+    <h1>Links</h1>
+	<ul>
+		<li><a href="http://www.ted.com/" target="_blank">TED: Ideas worth spreading</a></li>
+		<li><a href="http://www.sciencemag.org/" target="_blank">Science Magazine</a></li>
+		<li><a href="http://www.spongelab.com/browse/" target="_blank" title="Search science topics, lesson plans, case studies and more">SpongeLab</a></li>
+		<li><a href="http://catlinseaviewsurvey.com/seaview.htm" target="_blank">Sea View Survey</a></li>
+		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
+		<li><b>傳統中醫 TCM</b>
+    <ul>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
+      <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
+      <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>
+    </ul>
+    </li>
+		<li><b>Readings Around</b>
+    <ul>
+      <li><a href="http://yeeyan.org/" target="_blank">译言网</a></li>
+    </ul>
+    </li>
+		<li><b>Development</b>
+    <ul>
+      <li><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html" target="_blank">Chrome Latest Build</a></li>
+      <li><a href="http://snapsvg.io/" target="_blank">SnapSVG</a></li>
+      <li><a href="http://www.cocos2d-iphone.org/" target="_blank">COCOS2D</a></li>
+    </ul>
+    </li>
+		<li><b>Friends</b>
+    <ul>
+      <li><a href="http://askcuix.github.io" target="_blank">Chris&#8217;s Blog</a></li>
+      <li><a href="http://justinyan.me" target="_blank">枫言枫语</a></li>
+    </ul>
+    </li>
+		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
+		<li><a href="http://mindon.appspot.com/" target="_blank">Mindon.IDEA</a> @GAE  | <a href="http://weibo.com/mindon" target="_blank">微博</a></li>
+		<li>PHOTO @<a href="https://picasaweb.google.com/mindon" target="_blank">Picasa</a> | @<a href="http://www.flickr.com/photos/mindon/" target="_blank">Flickr</a> | @<a href="http://photos.nphoto.net/mindon/" target="_blank">NPhoto</a></li>
+		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
+		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
+	</ul>
+</section>
+<section>
+    <h1>Learn More</h1>
+	<ul>
+		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
+		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
+	</ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Mindon Feng -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script src="/javascripts/modernizr-2.6.2.js"></script>
+<script src="/javascripts/ender.js"></script>
+<script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28048168-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<script>
+;!function(e,t,r){var n='getElementsByTagName',f=e[n](t)[0]||e[n]('script')[0],x=e.styleSheets;for(var s,c;(s=r.shift())&&(c=e.createElement(t));){c.rel='stylesheet';c.href=s.length==2?s[0]:s;c.media='only x';f.parentNode.insertBefore(c,f);m(c,s,0)}function m(c,s){var d,i;for(i=0;i<x.length;i++){if(x[i].href&&x[i].href.indexOf(s[0])>-1){d=1}if(d){c.media=s.length==2?s[1]:'all'}else{setTimeout(function(){m(c,s)},50)}}}}(document,'link',[
+  'http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic'
+ ,'http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic'
+]);
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+})();
+</script>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mindon';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.io/blog/2005/01/07/old-blogms-1000141850/';
+        var disqus_url = 'http://mindon.github.io/blog/2005/01/07/old-blogms-1000141850/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: readings | Mindon.IDEA]]></title>
+  <link href="http://mindon.github.io/blog/categories/readings/atom.xml" rel="self"/>
+  <link href="http://mindon.github.io/"/>
+  <updated>2014-11-09T10:50:58+08:00</updated>
+  <id>http://mindon.github.io/</id>
+  <author>
+    <name><![CDATA[Mindon Feng]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Shortcuts for Linux console]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
+    <updated>2014-11-08T15:14:07+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
+    <content type="html"><![CDATA[<p>I&#8217;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &#8230;</p>
+
+<p>But moving cursor in a console command line is such a painful thing. Ah, yes, shortcuts, there must be some for console.</p>
+
+<p>Here they are - shortcuts for linux console and Mac Terminal:</p>
+
+<p>Ctrl+n:  next command (downward arrow) 下一个命令（往上箭头）</p>
+
+<p>Ctrl+p:  previous command (upward arrow) 前一个命令（往下箭头）</p>
+
+<p>Ctrl+r:  retrieve history commands 搜索历史命令</p>
+
+<p>Ctrl+a:  ahead 跳至行首</p>
+
+<p>Ctrl+e:  end 跳至行尾</p>
+
+<p>Ctrl+b:  backward 左移 （往左箭头）</p>
+
+<p>Ctrl+f:  forward 右移 （往右箭头）</p>
+
+<!--more-->
+
+
+<p>Ctrl+w:  wipe to ahead 删至行首</p>
+
+<p>Ctrl+k:  kick out to tail 删至行尾</p>
+
+<p>Ctrl+u:  undo to clean current command 取消命令</p>
+
+<p>Ctrl+h:  delete history by one single character 往回删除一个字符</p>
+
+<p>Ctrl+d:  delete one single character 删除光标字符</p>
+
+<p>Ctrl+y:  yank, to paste text removed by Ctrl+u，Ctrl+k，Ctrl+w 粘贴上次删掉的文本</p>
+
+<p>Ctrl+t:  taking left character to right 右移光标及其左一字符</p>
+
+<p>Ctrl+i:  infill command auto 自动补充完整</p>
+
+<p>Ctrl+m:  move (Enter) 行动（相当Enter键）</p>
+
+<h2>Other shortcuts:</h2>
+
+<p>Ctrl+s:  silence screen  使终端发呆，静止，可以使快速输出的终端屏幕停下来。</p>
+
+<p>Ctrl+q:  quit silence  退出Ctrl+s引起的发呆。</p>
+
+<p>Ctrl+z:  switch running task to backend (use fg to restore)  使正在运行在终端的任务，运行于后台。 （可用fg恢复）</p>
+
+<p>Ctrl+c:  Abort current task 中断终端中正在执行的任务。</p>
+
+<p>Ctrl+d:  EOT U+0004, exit 在空命令行的情况下可以退出终端。</p>
+
+<p>Ctrl+[:  Escape 相当于Esc键。</p>
+
+<p>Esc:  press 3 times to show all console commands 连续按3次显示所有的支持的终端命令。</p>
+
+<p>Tab:   infill command auto (press 2 times to show list of candidates) 命令、路径补全功能。(连按2次显示候选列表)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
+    <link href="http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools/"/>
+    <updated>2014-06-17T06:00:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools</id>
+    <content type="html"><![CDATA[<p>原型设计工具推荐</p>
+
+<p>Here&#8217;s some great free prototype design tools:</p>
+
+<h2>AXure RP</h2>
+
+<p>An Interactive Wireframe Software and Mockup Tool.</p>
+
+<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec&#8230; and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
+
+<p><a href="http://www.axure.com/">Axure RP</a> 是一个专业的快速原型设计工具。Axure（发音：Ack-sure），代表美国Axure公司；RP则是Rapid Prototyping（快速原型）的缩写。</p>
+
+<p>Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。</p>
+
+<h2>Origami</h2>
+
+<p><a href="http://facebook.github.io/origami/">Origami</a> is a free design prototyping with Quartz Composer — created by the Facebook Design team—that makes interactive design prototyping easy and doesn’t require programming.</p>
+
+<!--more-->
+
+
+<p>Quartz Composer is a freely-available Mac OS X application by Apple that&#8217;s been around for nearly a decade.</p>
+
+<p>Origami 是一个来自 Facebook 设计团队的作品，是 Quartz Composer 的免费工具包，可在无需编程的情况下轻松实现与设计原型进行交互。</p>
+
+<h2>Balsamiq Mockups</h2>
+
+<p>Balsamiq <a href="http://webdemo.balsamiq.com/">Web Demo</a></p>
+
+<p>Founded in March 2008, Balsamiq Studios aims to make the world a better place by helping people create software that is easier to use. Balsamiq is a fast-growing but still-very-personable software company. We like to compete on usability and customer service. Our first product is Balsamiq Mockups. Launched in June 2008, Mockups helps software designers and developers build great software by letting them easily sketch out their ideas, then quickly collaborate and iterate over them. Balsamiq Mockups has netted over $2,000,000 in sales in first 18 months of business and is gathering rave reviews.</p>
+
+<p>Balsamiq Mockups是一种软件工程中快速原型的建立软件，可以做为与用户交互的一个界面草图，一旦客户认可可以做为美工开发HTML的原型使用。</p>
+
+<p>Balsamiq Mockups是美国加利福利亚的Balsamiq工作室（2008年3月创建）推出的原型图绘制软件。于2008年6月发行了第一个版本。它的使命是帮助人们更好、更容易的设计软件产品。</p>
+
+<h2>Framer</h2>
+
+<p><a href="http://framerjs.com/">FRAMER.JS</a> is a prototyping toolkit built for designers to turn static mockups into prototypes with animation &amp; interaction. <a href="http://github.com/koenbok/Framer">Github</a></p>
+
+<p>Framer是一款基于JavaScript的开源原型框架，可以帮助开发者及设计师轻而易举地创建出非常逼真的应用原型，还包括滤镜、弹性物理、完整的3D效果等。Framer能够同时应用于桌面和移动设备之上，通过它，开发者或设计师只需简单地创建图像、事件等模块即可构建和测试复杂的交互和动画。</p>
+
+<h2>Pencil</h2>
+
+<p>An open-source GUI prototyping tool that&#8217;s available for ALL platforms.</p>
+
+<p><a href="http://pencil.evolus.vn/">Pencil</a> is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.</p>
+
+<p>Pencil provides various built-in shapes collection for drawing different types of user interface ranging from desktop to mobile platforms.</p>
+
+<p>Pencil 是一款开源的原型图绘制工具，手绘风格的，就像自己在纸上画的那样。Pencil 还可以用来绘制各种架构图和流程图，同时还提供 Firefox 的插件。</p>
+
+<h2>Solidify</h2>
+
+<p>Make Interface Screens Come To Life</p>
+
+<p><a href="http://solidifyapp.com/">Solidify</a> is the quickest way to prototype interface screens for user testing feedback across devices.</p>
+
+<p>Solidify lets you create clickable prototypes from sketches, wireframe, or mockup. Validate user flows on any device by performing user tests in person, remotely or on your testers own time to get the feedback you need.</p>
+
+<p> Solidify 出自ZURB公司，允许用户从模型，线框或者草图创建可以点击的原型。通过它，可以对界面交互可以快速产生原型。而且，这些原型可以很容易的测试是否可以适用于平板，个人电脑或者手机。</p>
+
+<h2>others</h2>
+
+<p>Generator, InVision, PowerMockup, Antetype, UXPin, QuirkTools, Wireframe.CC, Easel, Proto.io, POP</p>
+
+<p><a href="http://designmodo.com/wireframing-prototyping-tools/">10 Wireframing and Prototyping Tools for 2013</a></p>
+
+<p><span id="link-tags">Quartz Composer;Balsamiq Studios;PowerMockup;InVision;Antetype;Wireframe.CC</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
+    <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
+    <updated>2014-06-17T05:38:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
+    <content type="html"><![CDATA[<p><strong> Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
+
+<p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
+
+<p>Work on Swift—Apple&#8217;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
+
+<p><strong>LLVM</strong></p>
+
+<p>Rather than being an entirely new &#8220;beta&#8221; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&#8217;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
+
+<h2>LLVM: A new compiler for Objective-C</h2>
+
+<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&#8217;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
+
+<p><strong>Chris Lattner</strong></p>
+
+<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&#8217;s objc-language mailing list. Apple in turn began contributing to Lattner&#8217;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
+
+<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&#8217;s Xcode.</p>
+
+<!--more-->
+
+
+<p>In addition to the &#8220;pure&#8221; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &#8220;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&#8221; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&#8217;s OS X.</p>
+
+<p>GCC&#8217;s support for Objective-C, the primary development language of Apple&#8217;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&#8217;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&#8217;s Objective-C relevant as a language.</p>
+
+<p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
+
+<p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
+
+<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&#8217;s software, but is also tightly integrated into the development of Apple&#8217;s custom silicon, including the A6 and A7 Application Processors.</p>
+
+<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&#8217;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
+
+<h2>Swift: A new language for LLVM</h2>
+
+<p>By 2010, LLVM&#8217;s solution to GCC&#8217;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &#8220;a few other (amazing) people.&#8221;</p>
+
+<p>By July 2013, Lattner noted that the new Swift project had become &#8220;major focus for the Apple Developer Tools group.&#8221; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &#8220;took over management and leadership of the entire Developer Tools department at Apple&#8221; at the beginning of 2013.</p>
+
+<p>&#8220;In addition to compilers and low-level tools,&#8221; Lattner notes, &#8220;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&#8221;</p>
+
+<p>Lattner noted that the new Swift language &#8220;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&#8221;</p>
+
+<p>Apple&#8217;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &#8220;Swift has been years in the making,&#8221; adding that &#8220;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
+
+<p>&#8220;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&#8221;&#8220;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&#8221;</p>
+
+<p>The company also observes that Swift &#8220;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&#8221;</p>
+
+<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &#8220;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&#8221;</p>
+
+<h2>Swift&#8217;s Interactive Playgrounds &amp; REPL</h2>
+
+<p>Lattner also commented on two new features associated with Swift: Xcode&#8217;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
+
+<p>&#8220;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&#8221; Lattner noted. &#8220;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
+
+<p>&#8220;Playgrounds were heavily influenced by Bret Victor&#8217;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&#8217;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
+
+<p>&#8220;I hope that by making programming more approachable and fun, we&#8217;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&#8221; Lattner stated.</p>
+
+<p>Apple&#8217;s presentation of Swift notes that &#8220;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&#8217;ve perfected your code in the playground, simply move that code into your project.&#8221;</p>
+
+<p>The company states that Xcode&#8217;s Playground lets users &#8220;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&#8221;</p>
+
+<p>Apple notes that the REPL debugging console in Xcode &#8220;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&#8221;</p>
+
+<p>Apple says it plans to rapidly evolve Swift in response to developers needs and feature requests.</p>
+
+<p>Thinkful, an education startup focused on mentor-led programming education, has already announced plans to offer a <a href="https://www.thinkful.com/a/dlp/learn-blue/base/IOS-002">course on developing in Swift</a>, in a program that begins July 16.</p>
+
+<p><span id="link-tags">iOS;XCode;Clang;Chris Lattner;LLVM;Objective-C;Swift;NeXTStep;REPL</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Abilities of Intelligent]]></title>
+    <link href="http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent/"/>
+    <updated>2014-03-15T18:21:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/03/15/basic-abilities-of-intelligent</id>
+    <content type="html"><![CDATA[<p>智能的基本能力：</p>
+
+<ul>
+<li><p>对于情景有很灵活的反应；</p></li>
+<li><p>充分利用机遇；</p></li>
+<li><p>弄懂含糊不清或彼此矛盾的信息；</p></li>
+<li><p>认识到一个情境中什么是重要的因素，什么是次要的；</p></li>
+<li><p>在存在差异的情景之间能发现它们的相似处；</p></li>
+<li><p>从那些由相似之处联系在一起的事物中找出差别；</p></li>
+<li><p>用旧的概念综合出新的概念，把它们用新的方法组合起来；</p></li>
+<li><p>提出全新的观念。</p></li>
+</ul>
+
+
+<p> 从《GEB集异璧》里对智能的描述项，对比一下自己，能力上还是有很多不足的地方，比如：充分利用机遇；以及认识一个情境中的重要和次要因素方面就存在不足。其它的应该还算不错了。</p>
+
+<p> 注：《GEB集异璧》中文版2013年第7版了，很厚的神书一本，近千余页。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <link href="http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
+    <updated>2014-03-06T06:19:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
+    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
+
+<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
+
+<!--more-->
+
+
+<p>It is said that it has potential to improve vision! That&#8217;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&#8217;s 40RMB on iTune - a little bit high price for an app you don&#8217;t know much.</p>
+
+<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
+
+<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
+
+<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
+
+<p>It&#8217;s more like a brain game than an eyes training.</p>
+
+<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
+
+<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&#8217;s such an important thing to keep our eyes sharp and clear.</p>
+
+<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a></p>
+
+<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
+]]></content>
+  </entry>
+  
+</feed>

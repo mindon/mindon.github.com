@@ -1,0 +1,1964 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mindon.IDEA</title>
+  <meta name="author" content="Mindon Feng">
+
+  
+  <meta name="description" content="BlogMS original blog key: 1000141899, blog id: airoff
+History stat: 浏览/评论：195/0 , 日期：2005年1月7日 10:00 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mindon.github.io/page44/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
+  
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mindon.IDEA</a></h1>
+  
+    <h2>Air off, Mind on ~ / Javascript+Golang, Sci, Health&#8230; /</h2>
+  
+</hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.google.com" id="cse-search-box">
+  <fieldset role="search">
+    <input class="search" type="text" name="q" results="0"/>
+    <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
+    <input type="hidden" name="ie" value="UTF-8" />
+  </fieldset>
+</form>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
+  <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
+  <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141899/">ConfProperties.java</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T10:00:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141899, blog id: airoff
+History stat: 浏览/评论：195/0  ,  日期：2005年1月7日 10:00</p>
+
+<p><font color=#00008B><font size=2 style="line-height:14pt"></p>
+
+<p>/*============================================================</p>
+
+<ul>
+<li><p>版权：</p></li>
+<li><p>文件：  com.mindon.util.ConfProperties</p></li>
+<li><p>功能：  读取属性文件配置</p></li>
+<li><p>所含类:</p></li>
+<li><p>修改记录    /日期       /作者       /内容</p></li>
+<li><hr /></li>
+<li><p>1       /2004-05-10 /fengrj     /创建文件，并实现基本功能</p></li>
+<li><hr /></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>package com.mindon.util;</p>
+
+<p>import java.util.PropertyResourceBundle;</p>
+
+<p>import java.util.ResourceBundle;</p>
+
+<p>public class ConfProperties</p>
+
+<p>{</p>
+
+<p>private static final String confName = &quot;config&quot;;</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>根据key返回一个字符串的值</p></li>
+<li><p>@param key</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>public static String get(String key) {</p>
+
+<p>return get(confName, key);</p>
+
+<p>}</p>
+
+<p>/**</p>
+
+<ul>
+<li><p>根据key返回一个字符串的值</p></li>
+<li><p>@param conf</p></li>
+<li><p>@param key</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>public static String get(String conf, String key) {</p>
+
+<p>ResourceBundle resBundle = PropertyResourceBundle.getBundle(conf);</p>
+
+<p>try {</p>
+
+<p>if(null != resBundle) {</p>
+
+<p>return resBundle.getString(key);</p>
+
+<p>} else {</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;&quot;+conf+&quot;.properties not found&quot;);</p>
+
+<p>return &quot;&quot;;</p>
+
+<p>}</p>
+
+<p>} catch(java.util.MissingResourceException e) {</p>
+
+<p>System.out.println(&quot;[-FAIL-&gt;&gt;&quot; +key +&quot; property not found&quot;);</p>
+
+<p>return &quot;&quot;;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p></font></font></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141891/">Effective C++读书笔记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:56:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141891, blog id: airoff
+History stat: 浏览/评论：370/0  ,  日期：2005年1月7日 09:56</p>
+
+<p>filename.h</p>
+
+<p><code></p>
+
+<p>/*</p>
+
+<ul>
+<li><p>Copyright (c) 2004, company &amp; department</p></li>
+<li><p>All rights reserved.</p></li>
+</ul>
+
+
+<p>*</p>
+
+<ul>
+<li><p>文件名称： filename.h</p></li>
+<li><p>文件标识：</p></li>
+<li><p>摘要： 简要描述本文件的内容</p></li>
+</ul>
+
+
+<p>*</p>
+
+<ul>
+<li><p>当前版本： 1.1</p></li>
+<li><p>作者： 输入作者（或修改者）名字</p></li>
+<li><p>完成日期： 2001年7月20日</p></li>
+</ul>
+
+
+<p>*</p>
+
+<ul>
+<li><p>取代版本：1.0</p></li>
+<li><p>原作者： 输入原作者（或修改者）名字</p></li>
+<li><p>完成日期： 2001年5月10日</p></li>
+</ul>
+
+
+<p>*/</p>
+
+<h1>ifndef MY_H /<em> 防止重复引用 </em>/</h1>
+
+<h1>define MY_H</h1>
+
+<p>/<em> 预处理块 </em>/</p>
+
+<h1>include &lt;stdio.h&gt;    /<em> 引用标准库的头文件，编译器将从标准库目录开始搜索 </em>/</h1>
+
+<h1>include &quot;my.h&quot;       /<em> 引用非标准库的头文件，编译器将从用户目录开始搜索 </em>/</h1>
+
+<p>/<em> 函数和类结构声明等 </em>/</p>
+
+<p>/<em> 不提倡使用全局变量，尽量不要在头文件中出现象extern int value 这类声明 </em>/</p>
+
+<h1>endif</h1>
+
+<p>/*  头文件的作用</p>
+
+<pre><code>（1）通过头文件来调用库功能。在很多场合，源代码不便（或不准）向用户公布，只
+
+要向用户提供头文件和二进制的库即可。用户只需要按照头文件中的接口声明来调用库
+
+功能，而不必关心接口怎么实现的。编译器会从库中提取相应的代码。
+
+（2）头文件能加强类型安全检查。如果某个接口被实现或被使用时，其方式与头文件
+
+中的声明不一致，编译器就会指出错误，这一简单的规则能大大减轻程序员调试、改错
+
+的负担。
+</code></pre>
+
+<p>*/</p>
+
+<p>/*  目录结构安排 inc,src</p>
+
+<pre><code>私有的头文件可以和定义文件存放于同一个目录
+
+尽可能在定义变量的同时初始化该变量（就近原则）
+
+代码行最大长度宜控制在70 至80 个字符以内
+
+应当将修饰符* 和＆ 紧靠变量名
+
+注释是对代码的“提示”，而不是文档
+
+注释的位置应与被描述的代码相邻，可以放在代码的上方或右方
+
+
+
+Windows 应用程序的标识符通常采用“大小写”混排的方式
+
+Unix 应用程序的标识符通常采用“小写加下划线”的方式
+
+变量的名字应当使用“名词”或者“形容词＋名词”
+
+全局函数的名字应当使用“动词”或者“动词＋名词”（动宾词组）
+
+类的成员函数应当只使用“动词”，被省略掉的名词就是对象本身
+
+
+
+WINDOWS
+
+类名和函数名用大写字母开头的单词组合而成
+
+变量和参数用小写字母开头的单词组合而成
+
+常量全用大写的字母，用下划线分割单词
+
+静态变量加前缀s_（表示static）
+
+如果不得已需要全局变量，则使全局变量加前缀g_（表示global）
+
+类的数据成员加前缀m_（表示member），这样可以避免数据成员与成员函数的参数同名。
+
+
+
+不可将布尔变量直接与TRUE、FALSE 或者1、0 进行比较
+
+不可将浮点变量用“==”或“！=”与任何数字比较
+
+应用 if ((x&amp;gt;=-EPSINON) &amp;&amp; (x&amp;lt;=EPSINON))
+
+应当将指针变量用“==”或“！=”与NULL 比较
+
+
+
+建议for 语句的循环控制变量的取值采用“半开半闭区间”写法
+
+
+
+在C++ 程序中只使用const 常量而不使用宏常量
+
+需要对外公开的常量放在头文件中，不需要对外公开的常量放在定义
+
+文件的头部。为便于管理，可以把不同模块的常量集中存放在一个公共的头文件中。
+
+
+
+const 数据成员只在某个对象生存期内是常量
+
+枚举常量在整个类中都是恒定的常量（不会占用对象的存储空间，在编译时被全部求值。
+
+缺点是：它的隐含数据类型是整数，最大值有限）
+
+
+
+一般地，应将目的参数放在前面，源参数放在后面。
+
+如果参数是指针，且仅作输入用，则应在类型前加const，以防止该  指针在函数体内被意外修改。
+
+如果输入参数以值传递的方式传递对象，则宜改用“const &amp;”方式来传递，
+
+这样可以省去临时对象的构造和析构过程，从而提高效率。
+
+避免函数有太多的参数，参数个数尽量控制在5 个以内。
+
+
+
+不要将正常值和错误标志混在一起返回。正常值用输出参数获得，而错误标志用return 语句返回。
+
+有时候函数原本不需要返回值，但为了增加灵活性如支持链式表达，可以附加返回值。
+
+return 语句不可返回指向“栈内存”的“指针”或者“引用”，因为该内存在函数体结束时被自动销毁。
+
+
+
+函数的功能要单一，不要设计多用途的函数。
+
+数体的规模要小，尽量控制在50 行代码之内。
+
+尽量避免函数带有“记忆”功能。
+
+
+
+断言assert 是仅在Debug 版本起作用的宏，它用于检查“不应该”发生的情况。
+
+使用断言捕捉不应该发生的非法情况。
+
+在函数的入口处，使用断言检查参数的有效性（合法性）
+
+使用断言对假定进行检查。
+
+
+
+引用的主要功能是传递函数的参数和返回值。
+
+（1）引用被创建的同时必须被初始化（指针则可以在任何时候被初始化）。
+
+（2）不能有NULL 引用，引用必须与合法的存储单元关联（指针则可以是NULL）。
+
+（3）一旦引用被初始化，就不能改变引用的关系（指针则可以随时改变所指的对象）。
+
+
+
+内存分配方式有三种：
+
+（1） 从静态存储区域分配。内存在程序编译的时候就已经分配好，这块内存在程序的
+
+整个运行期间都存在。例如全局变量，static 变量。
+
+（2） 在栈上创建。在执行函数时，函数内局部变量的存储单元都可以在栈上创建，函
+
+数执行结束时这些存储单元自动被释放。栈内存分配运算内置于处理器的指令集
+
+中，效率很高，但是分配的内存容量有限。
+
+（3） 从堆上分配，亦称动态内存分配。程序在运行的时候用malloc 或new 申请任意
+
+多少的内存，程序员自己负责在何时用free 或delete 释放内存。动态内存的生存
+
+期由我们决定，使用非常灵活，但问题也最多。
+
+
+
+常见的内存错误及其对策如下：
+
+- 内存分配未成功，却使用了它
+
+- 内存分配虽然成功，但是尚未初始化就引用它
+
+- 内存分配成功并且已经初始化，但操作越过了内存的边界。
+
+- 忘记了释放内存，造成内存泄露。
+
+- 释放了内存却继续使用它。
+
+
+
+&amp;gt; 用malloc 或new 申请内存之后，应该立即检查指针值是否为NULL。
+
+&amp;gt; 不要忘记为数组和动态内存赋初值。防止将未被初始化的内存作为右值使用。
+
+&amp;gt; 避免数组或指针的下标越界。
+
+&amp;gt; 动态内存的申请与释放必须配对，防止内存泄漏。
+
+&amp;gt; 用free 或delete 释放了内存之后，立即将指针设置为NULL，防止产生“野指针”
+
+
+
+
+
+数组要么在静态存储区被创建（如全局数组），要么在栈上被创建。数组名对应着
+
+（而不是指向）一块内存，其地址与容量在生命期内保持不变，只有数组的内容可以改变。
+
+
+
+指针可以随时指向任意类型的内存块，它的特征是“可变”，所以我们常用指针来
+
+操作动态内存。指针远比数组灵活，但也更危险。
+
+用运算符sizeof 可以计算出数组的容量（字节数）。
+
+
+
+如果函数的参数是一个指针，不要指望用该指针去申请动态内存。
+
+如果非得要用指针参数去申请内存，那么应该改用“指向指针的指针”。
+
+可以用函数返回值来传递动态内存
+
+
+
+（1）指针消亡了，并不表示它所指的内存会被自动释放。
+
+（2）内存被释放了，并不表示指针会消亡或者成了NULL 指针。
+
+“野指针”的成因主要有：
+
+    指针变量没有被初始化；
+
+    指针p 被free 或者delete 之后，没有置为NULL；
+
+    指针操作超越了变量的作用范围。
+
+
+
+malloc 与free 是C++/C 语言的标准库函数，new/delete 是C++的运算符。
+
+它们都可用于申请动态内存和释放内存。
+
+
+
+（1）判断指针是否为NULL，如果是则马上用return 语句终止本函数。
+
+（2）判断指针是否为NULL，如果是则马上用exit(1)终止整个程序的运行。
+
+
+
+如果p 是NULL 指针，那么free 对p 无论操作多少次都不会出问题。
+
+如果p 不是NULL 指针，那么free 对p 连续操作两次就会导致程序运行错误。
+
+
+
+在用delete 释放对象数组时，留意不要丢了符号‘[]’
+
+
+
+C++增加了重载（overloaded）、内联（inline）、const 和virtual四种新机制。
+
+其中重载和内联机制既可用于全局函数也可用于类的成员函数，
+
+const 与 virtual 机制仅用于类的成员函数。
+
+extern“C” {}
+
+全局函数被调用时应加‘::’标志。
+
+
+
+成员函数被重载的特征：
+
+（1）相同的范围（在同一个类中）；
+
+（2）函数名字相同；
+
+（3）参数不同；
+
+（4）virtual 关键字可有可无。
+
+
+
+覆盖是指派生类函数覆盖基类函数，特征是：
+
+（1）不同的范围（分别位于派生类与基类）；
+
+（2）函数名字相同；
+
+（3）参数相同；
+
+（4）基类函数必须有virtual 关键字。
+
+
+
+“隐藏”是指派生类的函数屏蔽了与其同名的基类函数
+
+（1）如果派生类的函数与基类的函数同名，但是参数不同。此时，不论有无virtual
+
+关键字，基类的函数将被隐藏（注意别与重载混淆）。
+
+（2）如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual
+
+关键字。此时，基类的函数被隐藏（注意别与覆盖混淆）
+
+
+
+参数缺省值只能出现在函数的声明中，而不能出现在定义体中。
+
+
+
+如果运算符被重载为全局函数，那么只有一个参数的运算符叫做一元运算符，有两
+
+个参数的运算符叫做二元运算符。
+
+如果运算符被重载为类的成员函数，那么一元运算符没有参数，二元运算符只有一
+
+个右侧参数，因为对象自己成了左侧参数。
+
+
+
+关键字inline 必须与函数定义体放在一起才能使函数成为内联
+
+inline 是一种“用于实现的关键字”，而不是一种“用于声明的关键字”。
+
+以下情况不宜使用内联：
+
+（1）如果函数体内的代码比较长，使用内联将导致内存消耗代价较高。
+
+（2）如果函数体内出现循环，那么执行函数体内代码的时间要比函数调用的开销大。
+
+
+
+class String
+
+{
+
+    public:
+
+        String(const char *str = NULL); // 普通构造函数
+
+        String(const String &amp;other); // 拷贝构造函数
+
+        ~String(void); // 析构函数
+
+        String &amp; operate =(const String &amp;other); // 赋值函数
+
+    private:
+
+        char *m_data; // 用于保存字符串
+
+}
+
+
+
+// String 的普通构造函数
+
+String::String(const char *str)
+
+{
+
+    if(str==NULL) {
+
+        m_data = new char[1];
+
+        *m_data = ‘\0’;
+
+    } else {
+
+        int length = strlen(str);
+
+        strcpy(m_data, str);
+
+    }
+
+}
+
+
+
+// String 的析构函数
+
+String::~String(void)
+
+{
+
+    delete [] m_data;
+
+    // 由于m_data 是内部数据类型，也可以写成delete m_data;
+
+}
+
+
+
+// 拷贝构造函数
+
+String::String(const String &amp;other)
+
+{
+
+    // 允许操作other 的私有成员m_data
+
+    int length = strlen(other.m_data);
+
+    m_data = new char[length+1];
+
+    strcpy(m_data, other.m_data);
+
+}
+
+// 赋值函数
+
+String &amp; String::operate =(const String &amp;other)
+
+{
+
+    // (1) 检查自赋值
+
+    if(this == &amp;other)
+
+        return *this;
+
+    // (2) 释放原有的内存资源
+
+    delete [] m_data;
+
+    // （3）分配新的内存资源，并复制内容
+
+    int length = strlen(other.m_data);
+
+    m_data = new char[length+1];
+
+    strcpy(m_data, other.m_data);
+
+    // （4）返回本对象的引用
+
+    return *this;
+
+}
+
+
+
+
+
+构造函数初始化表的使用规则：
+
+    如果类存在继承关系，派生类必须在其初始化表里调用基类的构造函数。
+
+    类的const 常量只能在初始化表里被初始化
+
+    的数据成员的初始化可以采用初始化表或函数体内赋值两种方式，这两种方式的效率不完全相同。
+
+    非内部数据类型的成员对象应当采用第一种方式初始化，以获取更高的效率。
+
+
+
+成员对象初始化的次序完全不受它们在初始化表中次序的影响，只由成员对象在类中声明的次序决定。
+
+
+
+如果不主动编写拷贝构造函数和赋值函数，编译器将以“位拷贝”
+
+的方式自动生成缺省的函数。倘若类中含有指针变量，那么这两个缺省的函数就隐含了错误。
+
+
+
+拷贝构造函数是在对象被创建时调用的，而赋值函数只能被已经存在了的对象调用。
+
+
+
+
+
+如果输入参数采用“指针传递”，那么加const 修饰可以防止意外地改动该指针，起到保护作用。
+
+如果输入参数采用“值传递”，由于函数将自动产生临时变量用于复制该参数，该
+
+输入参数本来就无需保护，所以不要加const 修饰。
+
+对于非内部数据类型的输入参数，应该将“值传递”的方式改为“const 引用传递”，目的是提高效率。
+
+对于内部数据类型的输入参数，不要将“值传递”的方式改为“const 引用传递”。
+
+否则既达不到提高效率的目的，又降低了函数的可理解性。
+
+
+
+如果给以“指针传递”方式的函数返回值加const 修饰，那么函数返回值（即指针）
+
+的内容不能被修改，该返回值只能被赋给加const 修饰的同类型指针。
+
+如果函数返回值采用“值传递方式”，由于函数会把返回值复制到外部临时的存储
+
+单元中，加const 修饰没有任何价值。
+
+函数返回值采用“引用传递”的场合并不多，这种方式一般只出现在类的赋值函数
+
+中，目的是为了实现链式表达。
+
+const 成员函数的声明中 const 关键字只能放在函数声明的尾部
+
+
+
+不要一味地追求程序的效率，应当在满足正确性、可靠性、健壮性、可读性等质量因素的前提下，设法提高程序的效率。
+</code></pre>
+
+<p>已知strcpy 函数的原型是</p>
+
+<p>char <em>strcpy(char </em>strDest, const char *strSrc);</p>
+
+<p>其中strDest 是目的字符串，strSrc 是源字符串。</p>
+
+<p>（1）不调用C++/C 的字符串库函数，请编写函数strcpy</p>
+
+<p>char <em>strcpy(char </em>strDest, const char *strSrc)</p>
+
+<p>{</p>
+
+<pre><code>assert((strDest!=NULL) &amp;&amp; (strSrc !=NULL)); // 2分
+
+char *address = strDest; // 2分
+
+while( (*strDest++ = * strSrc++) != ‘\0’ ) // 2分
+
+    NULL ;
+
+return address ; // 2分
+</code></pre>
+
+<p>}</p>
+
+<p>*/
+</code></p>
+
+<p><b>effective.cpp</b></p>
+
+<p><code>/*/</p>
+
+<p>1, 尽量用const和inline而不用#define</p>
+
+<p>2, 尽量用&lt;iostream&gt;而不用&lt;stdio.h&gt;</p>
+
+<pre><code>如果使用了#include &amp;lt;iostream&amp;gt;, 得到的是置于名字空间std(见条款28)下的iostream 库的元素；
+
+如果使用#include &amp;lt;iostream.h&amp;gt;，得到的是置于全局空间的同样的元素。在全局空间获取元素会导致名字冲突，
+
+而设计名字空间的初衷正是用来避免这种名字冲突的发生。
+</code></pre>
+
+<p>3, 尽量用new 和delete 而不用malloc 和free</p>
+
+<pre><code>必须对strdup 返回的指针进行free 操作
+</code></pre>
+
+<p>4, 尽量使用C++风格的注释</p>
+
+<p>5, 对应的new 和delete 要采用相同的形式</p>
+
+<pre><code>如果你调用new时用了[]，调用delete时也要用[]。如果调用new 时没有用[]，那调用delete 时也不要用[]。
+
+为了避免混乱，最好杜绝对数组类型用typedefs
+</code></pre>
+
+<p>6, 析构函数里对指针成员调用delete</p>
+
+<pre><code>删除空指针是安全的
+
+除非类成员最初用了new,否则是不用在析构函数里用delete 的
+</code></pre>
+
+<p>7, 预先准备好内存不够的情况</p>
+
+<pre><code>当内存分配请求不能满足时，调用你预先指定的一个出错处理函数。
+
+set_new_handler 的输入参数是operator new 分配内存失败时要调用的出 错处理函数的指针，
+
+返回值是set_new_handler 没调用之前就已经在起作用的旧的出错处理函数的指针。
+
+&amp;gt;&amp;gt;一个设计得好的new-handler 函数必须实现下面功能中的一种:
+
+  产生更多的可用内存; 安装另一个不同的new-handler 函数; 卸除new-handler;
+
+  抛出std::bad_alloc 或从std::bad_alloc 继承的其他类型的异常;
+
+  没有返回。典型做法是调用abort 或exit。
+</code></pre>
+
+<p>8, 写operator new 和operator delete 时要遵循常规</p>
+
+<pre><code>C++标准要求，即使在请求分配0 字节内存时，operator new 也要返回一个合法指针。
+</code></pre>
+
+<p>9, 避免隐藏标准形式的new</p>
+
+<p>10, 如果写了operator new 就要同时写operator delete</p>
+
+<p>11, 为需要动态分配内存的类声明一个拷贝构造函数和一个赋值操作符</p>
+
+<p>12, 尽量使用初始化而不要在构造函数里赋值</p>
+
+<p>13, 初始化列表中成员列出的顺序和它们在类中声明的顺序相同</p>
+
+<p>14, 确定基类有虚析构函数</p>
+
+<p>15, 让operator=返回*this 的引用</p>
+
+<p>16, 在operator=中对所有数据成员赋值</p>
+
+<p>17, 在operator=中检查给自己赋值的情况</p>
+
+<pre><code>&amp;gt;&amp;gt; 对象将如何被创建和摧毁？
+
+&amp;gt;&amp;gt; 对象初始化和对象赋值有什么不同？
+
+&amp;gt;&amp;gt; 通过值来传递新类型的对象意味着什么？
+
+&amp;gt;&amp;gt; 新类型的合法值有什么限制？
+
+&amp;gt;&amp;gt; 新类型符合继承关系吗？
+
+&amp;gt;&amp;gt; 允许哪种类型转换？
+
+&amp;gt;&amp;gt; 什么运算符和函数对新类型有意义？
+
+&amp;gt;&amp;gt; 哪些运算符和函数要被明确地禁止？
+
+&amp;gt;&amp;gt; 谁有权访问新类型的成员？
+
+&amp;gt;&amp;gt; 新类型的通用性如何？
+</code></pre>
+
+<p>18, 争取使类的接口完整并且最小</p>
+
+<p>19, 分清成员函数，非成员函数和友元函数</p>
+
+<p>20, 避免public 接口出现数据成员</p>
+
+<p>21， 尽可能使用const</p>
+
+<p>22， 尽量用“传引用”而不用“传值”</p>
+
+<p>23， 必须返回一个对象时不要试图返回一个引用</p>
+
+<p>24， 在函数重载和设定参数缺省值间慎重选择</p>
+
+<p>25， 避免对指针和数字类型重载</p>
+
+<p>26， 当心潜在的二义性</p>
+
+<p>27， 如果不想使用隐式生成的函数就要显式地禁止它</p>
+
+<p>28， 划分全局名字空间</p>
+
+<p>29, 避免返回内部数据的句柄</p>
+
+<p>30, 避免这样的成员函数：其返回值是指向成员的非const 指针或引用，但成员的访问级比这个函数要低</p>
+
+<p>31, 千万不要返回局部对象的引用，也不要返回函数内部用new 初始化的指针的引用</p>
+
+<p>32, 尽可能地推迟变量的定义</p>
+
+<p>33, 明智地使用内联</p>
+
+<p>34, 将文件间的编译依赖性降至最低</p>
+
+<p>35, 使公有继承体现&quot;是一个&quot; 的含义</p>
+
+<p>36, 区分接口继承和实现继承</p>
+
+<p>37, 决不要重新定义继承而来的非虚函数</p>
+
+<p>38, 决不要重新定义继承而来的缺省参数值</p>
+
+<p>39, 避免&quot;向下转换&quot; 继承层次</p>
+
+<p>40, 通过分层来体现&quot;有一个&quot; 或&quot;用&#8230;来实现&quot;</p>
+
+<p>41, 区分继承和模板</p>
+
+<pre><code>当对象的类型不影响类中函数的行为时，就要使用模板来生成这样一组类。
+
+当对象的类型影响类中函数的行为时，就要使用继承来得到这样一组类。
+</code></pre>
+
+<p>42, 明智地使用私有继承</p>
+
+<pre><code>私有继承意味着&amp;quot;用...来实现&amp;quot;。
+</code></pre>
+
+<p>43, 明智地使用多继承</p>
+
+<p>44, 说你想说的；理解你所说的</p>
+
+<p>45, 弄清C++在幕后为你所写、所调用的函数</p>
+
+<pre><code>一个拷贝构造函数，一个赋值运算符，一个析构函数，一对取址运算符{，缺省构造函数}。
+</code></pre>
+
+<p>46, 宁可编译和链接时出错，也不要运行时出错</p>
+
+<p>47, 确保非局部静态对象在使用前被初始化</p>
+
+<p>48, 重视编译器警告</p>
+
+<p>49, 熟悉标准库</p>
+
+<p>50, 提高对C++的认识</p>
+
+<p>//*/
+</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141876/">Lake Pollution Distribution (MATLAB)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:43:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141876, blog id: airoff
+History stat: 浏览/评论：166/0  ,  日期：2005年1月7日 09:43</p>
+
+<p><font size=2 style="line-height:14pt"><b>file lake0.m: x - y distribution</b></p>
+
+<hr />
+
+<p><font color=#00008B>%lake0(m,num)</p>
+
+<p>%m decides how smooth the curve you want to be.</p>
+
+<p>%num decides how many countors you want to show.</p>
+
+<p>%example:lake0(160,20)</p>
+
+<p>function lake0(m,num)</p>
+
+<p>%all known parameters setup</p>
+
+<p>n=6;</p>
+
+<p>%u0=3.854167;</p>
+
+<p>%c0=0.599653;</p>
+
+<p>u0=0;</p>
+
+<p>c0=7.195833;</p>
+
+<p>c=[-0.121111    -0.000089 -0.233839 -0.114921 0.015436 -0.368833];</p>
+
+<p>d=[0.033955     -0.034494 -0.017328 -0.086451 0.073220 0.000013];</p>
+
+<p>r=0:1/m:1.0;</p>
+
+<p>thita=0:2<em>pi/m:2</em>pi;</p>
+
+<p>%Initalize the matrixs for higher speed</p>
+
+<p>rp=(r(ones(size(thita)),:))&#8217;;</p>
+
+<p>thita=thita(ones(size(r)),:);</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear r;</p>
+
+<p>x=31<em>rp.</em>cos(thita);</p>
+
+<p>y=31<em>rp.</em>sin(thita);</p>
+
+<p>u=rp.<em>(c(1)</em>cos(thita)+d(1)*sin(thita));</p>
+
+<p>for k=2:n</p>
+
+<p>u=u+(rp.^k).<em>(c(k)</em>cos(k<em>thita)+d(k)</em>sin(k*thita));</p>
+
+<p>end</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear c d k n m;</p>
+
+<p>clear rp thita;</p>
+
+<p>u=u0+c0/2+u;%Final result</p>
+
+<p>%define the color map</p>
+
+<p>colormap(zeros(64,3));</p>
+
+<p>grid off</p>
+
+<p>axis equal,hold;</p>
+
+<p>axis([-35 35 -35 35]);</p>
+
+<p>set(gcf,&#8217;Color&#8217;,[1 1 1]);</p>
+
+<p>set(gca,&#8217;Box&#8217;,&#8217;on&#8217;,&#8217;LineWidth&#8217;,1.5);</p>
+
+<p>rAngle=pi;</p>
+
+<p>xr=x<em>cos(rAngle)+y</em>sin(rAngle);</p>
+
+<p>yr=-x<em>sin(rAngle)+y</em>cos(rAngle);</p>
+
+<p>%[C,h]=contour(x,y,u,num);</p>
+
+<p>[C,h]=contour(xr,yr,u,num);</p>
+
+<p>%clear useless vetor</p>
+
+<p>clear x y u;</p>
+
+<p>title(&#8216;湖水内部环境污染综合指标分布&#8217;);</p>
+
+<p>xlabel(&#8216;x (m)&#8217;);</p>
+
+<p>ylabel(&#8216;y (m)&#8217;);</p>
+
+<p>%clabel(C);</p>
+
+<p>%clabel(C,h);</p>
+
+<p>clabel(C,&#8217;manual&#8217;);</p>
+
+<p>hold off</font></p>
+
+<hr />
+
+<p><b>file lake1.m: radiu - angle distribution</b></p>
+
+<hr />
+
+<p><font color=#483D8B>%lake1(m,num)</p>
+
+<p>%m decides how smooth the curve you want to be.</p>
+
+<p>%num decides how many countors you want to show.</p>
+
+<p>%example:lake1(160,20)</p>
+
+<p>function lake(m,num)</p>
+
+<p>n=6;</p>
+
+<p>%u0=3.854167;</p>
+
+<p>%c0=0.599653;</p>
+
+<p>u0=0;</p>
+
+<p>c0=7.195833;</p>
+
+<p>c=[-0.121111    -0.000089 -0.233839 -0.114921 0.015436 -0.368833];</p>
+
+<p>d=[0.033955     -0.034494 -0.017328 -0.086451 0.073220 0.000013];</p>
+
+<p>r=0:31/m:31.0;</p>
+
+<p>thita=0:360/m:360;</p>
+
+<p>rp=(r(ones(size(thita)),:))&#8217;;</p>
+
+<p>thita=thita(ones(size(r)),:);</p>
+
+<p>u=(rp/31).<em>(c(1)</em>cos(thita<em>pi/180)+d(1)</em>sin(thita*pi/180));</p>
+
+<p>for k=2:n</p>
+
+<p>u=u+((rp/31).^k).<em>(c(k)</em>cos(k<em>(thita</em>pi/180))+d(k)<em>sin(k</em>(thita*pi/180)));</p>
+
+<p>end</p>
+
+<p>u=u0+c0/2+u;</p>
+
+<p>colormap(zeros(64,3));</p>
+
+<p>[C,h]=contour(thita,rp,u,num);</p>
+
+<p>set(gcf,&#8217;Color&#8217;,[1 1 1]);</p>
+
+<p>set(gca,&#8217;Box&#8217;,&#8217;on&#8217;,&#8217;LineWidth&#8217;,1.5);</p>
+
+<p>set(h,&#8217;LineWidth&#8217;,1.2);</p>
+
+<p>title(&#8216;湖水内部环境污染综合指标分布&#8217;);</p>
+
+<p>ylabel(&#8216;半径 r (m)&#8217;);</p>
+
+<p>xlabel(&#8216;角度   (度)&#8217;);</p>
+
+<p>%clabel(C,h);</p>
+
+<p>clabel(C,&#8217;manual&#8217;);</p>
+
+<p>hold off</font></p>
+
+<hr />
+
+<p></font></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141854/">SVG Color Names & RGB Values</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:16:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141854, blog id: airoff
+History stat: 浏览/评论：224/0  ,  日期：2005年1月7日 09:16</p>
+
+<p><font size=2 style="line-height:14pt">aliceblue rgb(240, 248, 255)</p>
+
+<p>antiquewhite rgb(250, 235, 215)</p>
+
+<p>aqua rgb( 0, 255, 255)</p>
+
+<p>aquamarine rgb(127, 255, 212)</p>
+
+<p>azure rgb(240, 255, 255)</p>
+
+<p>beige rgb(245, 245, 220)</p>
+
+<p>bisque rgb(255, 228, 196)</p>
+
+<p>black rgb( 0, 0, 0)</p>
+
+<p>blanchedalmond rgb(255, 235, 205)</p>
+
+<p>blue rgb( 0, 0, 255)</p>
+
+<p>blueviolet rgb(138, 43, 226)</p>
+
+<p>brown rgb(165, 42, 42)</p>
+
+<p>burlywood rgb(222, 184, 135)</p>
+
+<p>cadetblue rgb( 95, 158, 160)</p>
+
+<p>chartreuse rgb(127, 255, 0)</p>
+
+<p>chocolate rgb(210, 105, 30)</p>
+
+<p>coral rgb(255, 127, 80)</p>
+
+<p>lightpink rgb(255, 182, 193)</p>
+
+<p>lightsalmon rgb(255, 160, 122)</p>
+
+<p>lightseagreen rgb( 32, 178, 170)</p>
+
+<p>lightskyblue rgb(135, 206, 250)</p>
+
+<p>lightslategray rgb(119, 136, 153)</p>
+
+<p>lightslategrey rgb(119, 136, 153)</p>
+
+<p>lightsteelblue rgb(176, 196, 222)</p>
+
+<p>lightyellow rgb(255, 255, 224)</p>
+
+<p>lime rgb( 0, 255, 0)</p>
+
+<p>limegreen rgb( 50, 205, 50)</p>
+
+<p>linen rgb(250, 240, 230)</p>
+
+<p>magenta rgb(255, 0, 255)</p>
+
+<p>maroon rgb(128, 0, 0)</p>
+
+<p>mediumaquamarine rgb(102, 205, 170)</p>
+
+<p>mediumblue rgb( 0, 0, 205)</p>
+
+<p>mediumorchid rgb(186, 85, 211)</p>
+
+<p>cornflowerblue rgb(100, 149, 237)</p>
+
+<p>cornsilk rgb(255, 248, 220)</p>
+
+<p>crimson rgb(220, 20, 60)</p>
+
+<p>cyan rgb( 0, 255, 255)</p>
+
+<p>darkblue rgb( 0, 0, 139)</p>
+
+<p>darkcyan rgb( 0, 139, 139)</p>
+
+<p>darkgoldenrod rgb(184, 134, 11)</p>
+
+<p>darkgray rgb(169, 169, 169)</p>
+
+<p>darkgreen rgb( 0, 100, 0)</p>
+
+<p>darkgrey rgb(169, 169, 169)</p>
+
+<p>darkkhaki rgb(189, 183, 107)</p>
+
+<p>darkmagenta rgb(139, 0, 139)</p>
+
+<p>darkolivegreen rgb( 85, 107, 47)</p>
+
+<p>darkorange rgb(255, 140, 0)</p>
+
+<p>darkorchid rgb(153, 50, 204)</p>
+
+<p>darkred rgb(139, 0, 0)</p>
+
+<p>darksalmon rgb(233, 150, 122)</p>
+
+<p>darkseagreen rgb(143, 188, 143)</p>
+
+<p>darkslateblue rgb( 72, 61, 139)</p>
+
+<p>darkslategray rgb( 47, 79, 79)</p>
+
+<p>darkslategrey rgb( 47, 79, 79)</p>
+
+<p>darkturquoise rgb( 0, 206, 209)</p>
+
+<p>darkviolet rgb(148, 0, 211)</p>
+
+<p>deeppink rgb(255, 20, 147)</p>
+
+<p>deepskyblue rgb( 0, 191, 255)</p>
+
+<p>dimgray rgb(105, 105, 105)</p>
+
+<p>dimgrey rgb(105, 105, 105)</p>
+
+<p>dodgerblue rgb( 30, 144, 255)</p>
+
+<p>firebrick rgb(178, 34, 34)</p>
+
+<p>floralwhite rgb(255, 250, 240)</p>
+
+<p>forestgreen rgb( 34, 139, 34)</p>
+
+<p>fuchsia rgb(255, 0, 255)</p>
+
+<p>gainsboro rgb(220, 220, 220)</p>
+
+<p>ghostwhite rgb(248, 248, 255)</p>
+
+<p>gold rgb(255, 215, 0)</p>
+
+<p>goldenrod rgb(218, 165, 32)</p>
+
+<p>gray rgb(128, 128, 128)</p>
+
+<p>grey rgb(128, 128, 128)</p>
+
+<p>green rgb( 0, 128, 0)</p>
+
+<p>greenyellow rgb(173, 255, 47)</p>
+
+<p>honeydew rgb(240, 255, 240)</p>
+
+<p>hotpink rgb(255, 105, 180)</p>
+
+<p>indianred rgb(205, 92, 92)</p>
+
+<p>indigo rgb( 75, 0, 130)</p>
+
+<p>ivory rgb(255, 255, 240)</p>
+
+<p>khaki rgb(240, 230, 140)</p>
+
+<p>lavender rgb(230, 230, 250)</p>
+
+<p>lavenderblush rgb(255, 240, 245)</p>
+
+<p>mediumpurple rgb(147, 112, 219)</p>
+
+<p>mediumseagreen rgb( 60, 179, 113)</p>
+
+<p>mediumslateblue rgb(123, 104, 238)</p>
+
+<p>mediumspringgreen rgb( 0, 250, 154)</p>
+
+<p>mediumturquoise rgb( 72, 209, 204)</p>
+
+<p>mediumvioletred rgb(199, 21, 133)</p>
+
+<p>midnightblue rgb( 25, 25, 112)</p>
+
+<p>mintcream rgb(245, 255, 250)</p>
+
+<p>mistyrose rgb(255, 228, 225)</p>
+
+<p>moccasin rgb(255, 228, 181)</p>
+
+<p>navajowhite rgb(255, 222, 173)</p>
+
+<p>navy rgb( 0, 0, 128)</p>
+
+<p>oldlace rgb(253, 245, 230)</p>
+
+<p>olive rgb(128, 128, 0)</p>
+
+<p>olivedrab rgb(107, 142, 35)</p>
+
+<p>orange rgb(255, 165, 0)</p>
+
+<p>orangered rgb(255, 69, 0)</p>
+
+<p>orchid rgb(218, 112, 214)</p>
+
+<p>palegoldenrod rgb(238, 232, 170)</p>
+
+<p>palegreen rgb(152, 251, 152)</p>
+
+<p>paleturquoise rgb(175, 238, 238)</p>
+
+<p>palevioletred rgb(219, 112, 147)</p>
+
+<p>papayawhip rgb(255, 239, 213)</p>
+
+<p>peachpuff rgb(255, 218, 185)</p>
+
+<p>peru rgb(205, 133, 63)</p>
+
+<p>pink rgb(255, 192, 203)</p>
+
+<p>plum rgb(221, 160, 221)</p>
+
+<p>powderblue rgb(176, 224, 230)</p>
+
+<p>purple rgb(128, 0, 128)</p>
+
+<p>red rgb(255, 0, 0)</p>
+
+<p>rosybrown rgb(188, 143, 143)</p>
+
+<p>royalblue rgb( 65, 105, 225)</p>
+
+<p>saddlebrown rgb(139, 69, 19)</p>
+
+<p>salmon rgb(250, 128, 114)</p>
+
+<p>sandybrown rgb(244, 164, 96)</p>
+
+<p>seagreen rgb( 46, 139, 87)</p>
+
+<p>seashell rgb(255, 245, 238)</p>
+
+<p>sienna rgb(160, 82, 45)</p>
+
+<p>silver rgb(192, 192, 192)</p>
+
+<p>skyblue rgb(135, 206, 235)</p>
+
+<p>slateblue rgb(106, 90, 205)</p>
+
+<p>slategray rgb(112, 128, 144)</p>
+
+<p>slategrey rgb(112, 128, 144)</p>
+
+<p>snow rgb(255, 250, 250)</p>
+
+<p>springgreen rgb( 0, 255, 127)</p>
+
+<p>steelblue rgb( 70, 130, 180)</p>
+
+<p>tan rgb(210, 180, 140)</p>
+
+<p>teal rgb( 0, 128, 128)</p>
+
+<p>lawngreen rgb(124, 252, 0)</p>
+
+<p>lemonchiffon rgb(255, 250, 205)</p>
+
+<p>lightblue rgb(173, 216, 230)</p>
+
+<p>lightcoral rgb(240, 128, 128)</p>
+
+<p>lightcyan rgb(224, 255, 255)</p>
+
+<p>lightgoldenrodyellow rgb(250, 250, 210)</p>
+
+<p>lightgray rgb(211, 211, 211)</p>
+
+<p>lightgreen rgb(144, 238, 144)</p>
+
+<p>lightgrey rgb(211, 211, 211)</p>
+
+<p>thistle rgb(216, 191, 216)</p>
+
+<p>tomato rgb(255, 99, 71)</p>
+
+<p>turquoise rgb( 64, 224, 208)</p>
+
+<p>violet rgb(238, 130, 238)</p>
+
+<p>wheat rgb(245, 222, 179)</p>
+
+<p>white rgb(255, 255, 255)</p>
+
+<p>whitesmoke rgb(245, 245, 245)</p>
+
+<p>yellow rgb(255, 255, 0)</p>
+
+<p>yellowgreen rgb(154, 205, 50)</p>
+
+<p></font></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141851/">网页技巧[转]-IE5+</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:08:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141851, blog id: airoff
+History stat: 浏览/评论：226/0  ,  日期：2005年1月7日 09:08</p>
+
+<ol>
+<li>oncontextmenu=&quot;window.event.returnValue=false&quot; 将彻底屏蔽鼠标右键</li>
+</ol>
+
+
+<p>&lt;table border oncontextmenu=return(false)&gt;&lt;td&gt;no&lt;/table&gt; 可用于Table</p>
+
+<ol>
+<li><p>&lt;body onselectstart=&quot;return false&quot;&gt; 取消选取、防止复制</p></li>
+<li><p>onpaste=&quot;return false&quot; 不准粘贴</p></li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/07/old-blogms-1000141851/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141850/">Think in C++读书笔记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-07T09:03:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141850, blog id: airoff
+History stat: 浏览/评论：550/0  ,  日期：2005年1月7日 09:03</p>
+
+<p><strong>2003年05月 Thinking in C++</strong></p>
+
+<p>[&gt;&gt; 问题描述空间:解描述空间 &lt;&lt;]</p>
+
+<p>[&gt;&gt; 对象发现，对象装配，系统构造，系统扩充，对象重用 &lt;&lt;]</p>
+
+<p>-剧本：</p>
+
+<p>故事的结构通过特征表示，特征对应于对象，<font color=#DC143C>情节结构</font>对应于系统设计。</p>
+
+<p><font color=#00008B>头文件表达了类设计，而我们必须能够由设计文档重新产生头文件。</font></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/07/old-blogms-1000141850/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139280/">WMA</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-04T13:12:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000139280, blog id: airoff
+History stat: 浏览/评论：126/2  ,  日期：2005年1月4日 13:12</p>
+
+<p>WMA，记得似乎是windows媒体播放器播放的一种媒体格式。（查了google，解释为“WMA的全称是Windows Media Audio，它是微软公司推出的与MP3格式齐名的一种新的音频格式。”）</p>
+
+<p>不过我想说的并不是这个解释，而是我2号出门瞎逛时想到的另一个意思——Weak Moment Actions（脆弱时刻行为）。本来打消了写这个的念头了的，因为没有那天的情绪实在很难写出点什么，可看到june的《2005年第一个工作日》让我又想起这个来。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139280/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="45">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="43">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+    <h1>About Me</h1>
+    <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
+</section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/108546803797935855689?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Categories</h1>
+  <ul>
+
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 87 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 33 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 13 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">chrome-app</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">mobile-app</a> ( 16 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon,/">mindon,</a> ( 1 )</li>
+
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - The Future of Possible</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two problems found in Jekyll when using Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux console</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section>
+    <h1>Google廣告</h1>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-6997921015773263";
+	/* git-aside */
+	google_ad_slot = "4887341949";
+	google_ad_width = 250;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</section><section>
+    <h1>Links</h1>
+	<ul>
+		<li><a href="http://www.ted.com/" target="_blank">TED: Ideas worth spreading</a></li>
+		<li><a href="http://www.sciencemag.org/" target="_blank">Science Magazine</a></li>
+		<li><a href="http://www.spongelab.com/browse/" target="_blank" title="Search science topics, lesson plans, case studies and more">SpongeLab</a></li>
+		<li><a href="http://catlinseaviewsurvey.com/seaview.htm" target="_blank">Sea View Survey</a></li>
+		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
+		<li><b>傳統中醫 TCM</b>
+    <ul>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
+      <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
+      <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>
+    </ul>
+    </li>
+		<li><b>Readings Around</b>
+    <ul>
+      <li><a href="http://yeeyan.org/" target="_blank">译言网</a></li>
+    </ul>
+    </li>
+		<li><b>Development</b>
+    <ul>
+      <li><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html" target="_blank">Chrome Latest Build</a></li>
+      <li><a href="http://snapsvg.io/" target="_blank">SnapSVG</a></li>
+      <li><a href="http://www.cocos2d-iphone.org/" target="_blank">COCOS2D</a></li>
+    </ul>
+    </li>
+		<li><b>Friends</b>
+    <ul>
+      <li><a href="http://askcuix.github.io" target="_blank">Chris&#8217;s Blog</a></li>
+      <li><a href="http://justinyan.me" target="_blank">枫言枫语</a></li>
+    </ul>
+    </li>
+		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
+		<li><a href="http://mindon.appspot.com/" target="_blank">Mindon.IDEA</a> @GAE  | <a href="http://weibo.com/mindon" target="_blank">微博</a></li>
+		<li>PHOTO @<a href="https://picasaweb.google.com/mindon" target="_blank">Picasa</a> | @<a href="http://www.flickr.com/photos/mindon/" target="_blank">Flickr</a> | @<a href="http://photos.nphoto.net/mindon/" target="_blank">NPhoto</a></li>
+		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
+		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
+	</ul>
+</section>
+<section>
+    <h1>Learn More</h1>
+	<ul>
+		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
+		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
+	</ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Mindon Feng -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script src="/javascripts/modernizr-2.6.2.js"></script>
+<script src="/javascripts/ender.js"></script>
+<script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28048168-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<script>
+;!function(e,t,r){var n='getElementsByTagName',f=e[n](t)[0]||e[n]('script')[0],x=e.styleSheets;for(var s,c;(s=r.shift())&&(c=e.createElement(t));){c.rel='stylesheet';c.href=s.length==2?s[0]:s;c.media='only x';f.parentNode.insertBefore(c,f);m(c,s,0)}function m(c,s){var d,i;for(i=0;i<x.length;i++){if(x[i].href&&x[i].href.indexOf(s[0])>-1){d=1}if(d){c.media=s.length==2?s[1]:'all'}else{setTimeout(function(){m(c,s)},50)}}}}(document,'link',[
+  'http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic'
+ ,'http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic'
+]);
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+})();
+</script>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mindon';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

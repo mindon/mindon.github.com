@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Two problems found in Jekyll when using Octopress - Mindon.IDEA</title>
+  <meta name="author" content="Mindon Feng">
+
+  
+  <meta name="description" content="我对Ruby并不太熟，也只是偶尔稍微学习过一点而已。用得比较频繁的就是这个博客的生成工具Octopress了。这个基于Sekyll框架的全静态博客生成工具就是ruby实现的。每次安装一系列的工具和依赖包带来的郁闷不亚于装其它一堆以来的linux工具。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mindon.IDEA" type="application/atom+xml">
+  
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mindon.IDEA</a></h1>
+  
+    <h2>Air off, Mind on ~ / Javascript+Golang, Sci, Health&#8230; /</h2>
+  
+</hgroup>
+<div id="google_translate_element" style="position:absolute;top:96px;right:16px;z-index:999999;opacity:0.3;+filter:Alpha(Opacity=30)"></div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://www.google.com" id="cse-search-box">
+  <fieldset role="search">
+    <input class="search" type="text" name="q" results="0"/>
+    <input type="hidden" name="cx" value="partner-pub-6997921015773263:7607104621" />
+    <input type="hidden" name="ie" value="UTF-8" />
+  </fieldset>
+</form>
+<script type="text/javascript">
+(function() {
+  var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = 'http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en';
+  var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); s=null;
+})();
+</script>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a><sup><a href="/blog/archives">* Archives</a></sup></li>
+  <li><a href="/blog/categories/chrome-app" title="Chrome Apps & Toolkits">Devel</a></li>
+  <li><a href="/note">Note</a><sup><a href="/trouble">* Trouble/S</a></sup></li>
+  <li><a href="/blog/categories/chinese-balance-heal"><img src="/images/coc.png" width="27" height="27" alt="C3" title="Chinese Balance Health Theory" border="0" align="absmiddle" /></a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Two Problems Found in Jekyll When Using Octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-09T01:55:48+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+
+<div class="entry-content">
+
+	<div class="adpost">
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6997921015773263";
+		/* git-post */
+		google_ad_slot = "5984167509";
+		google_ad_width = 300;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+<A NAME="A,BODY"></A>
+<p>我对Ruby并不太熟，也只是偶尔稍微学习过一点而已。用得比较频繁的就是这个博客的生成工具Octopress了。这个基于Sekyll框架的全静态博客生成工具就是ruby实现的。每次安装一系列的工具和依赖包带来的郁闷不亚于装其它一堆以来的linux工具。因为这个我一直在计划用go重写一个静态博客生成工具，当然github上已经能找到些了，比如gor。——话题跑远了。</p>
+
+<p>这两个Sekyll的bug估计是被我折腾出来的。最近换笔记本，想把我的github博客工程迁到新笔记本上。这需要安装 Octopress 以来的Ruby运行环境，这个过程中搞了两个升级，一个是把Mac OS Yosemite自带的Ruby 2.0.0升级到了2.1.4，另一个是把 Octopress 也顺手升级到了github里的最新版。</p>
+
+<p>升级安装Octopress环境过程中，首先遭遇了openssl问题，导致rake命令abort。一通折腾之后重启电脑莫名就好了。可以rake new_post了，不过rake generate报错…</p>
+
+<!--more-->
+
+
+<p>遭遇的第一个报错时因为我把原来博客项目里的 source 和 plugins, <em>deploy, public, </em>config.yaml 都拷贝过来了，剩下一个sass目录没搬到新的Octopress目录导致。</p>
+
+<p>一系列的工具都可以正常运行之后，却遭遇了代码相关的rake generate报错：文件找不到！呃的神，报错没有任何指示是哪个rb文件——对于一个没有真正做过ruby项目和编码的人来说还是期待网上能找到解决方案的。不过，一些列的尝试失败之后，还是决定跟踪代码调试（差点没装 ruby-debug 和 rdebug 来搞）。</p>
+
+<p>第1个bug是：运行 rake generate 的时候，老提示 sitemap.xml 读取失败文件不存在。估计是版本或安装混乱引发。</p>
+
+<p>“Error reading file /<em>a**/gems/jekyll-sitemap-0.6.1/lib/sitemap.xml: No such file or directory @ rb_sysopen - /Users/</em>u<strong>/*a</strong>/gems/jekyll-sitemap-0.6.1/lib/sitemap.xml”</p>
+
+<p>线索很明显，正确的路径前加多了一个项目source的路径。还好，找到 jekyll-sitemap-0.6.1/lib/ 目录里只有一个.rb文件，代码量不多，通过print的办法定位到了 Page.new，找到 sekyll 的 page.rb 再定位到 read_yaml() 从而发现了 convertible.rb 里的 site.in_source_dir(base, name) —— 就是这里的问题，当 base 是一个非项目内路径时，就发生了前面多加了项目source路径的情况。找到问题之后解决就容易了，判断一下就好了</p>
+
+<pre><code>    if base.include? name
+      fpath = site.in_source_dir(base, name)
+    else
+      fpath = File.join(base, name)
+    end
+</code></pre>
+
+<p>这个修复本身也还不严谨，不过是够解决我的问题能写写博客就ok了。用这里的 fpath 替代原有的 File.read 里直接用的 site.in_source_dir(base, name) 就可以了。</p>
+
+<p>第2个bug是一堆warning，估计是因为升级Octopress之后有的。</p>
+
+<p>“Build Warning: Layout &#8216;nil&#8217; requested in blog/categories/***/atom.xml does not exist.”</p>
+
+<p>这个相对简单了，就是模版里的 layout 部分出的问题，新Octopress只认null不认nil了。于是找到了 source/atom.xml 改nil为null。但是categories这个不是atom.xml让我一通找，最后在 _includes/custom/category_feed.xml 找到，同样修改解决。</p>
+
+<p>折腾这个加写这篇博文就花了我几乎半天……</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mindon Feng</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-09T01:55:48+08:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mindon/'>mindon</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/11/08/shortcuts-for-linux-console/" title="Previous Post: Shortcuts for Linux console">&laquo; Shortcuts for Linux console</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/11/09/dji-phantom-the-future-of-possible/" title="Next Post: DJI - The Future of Possible">DJI - The Future of Possible &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>About Me</h1>
+    <img src="/images/mindon.png" width="128" height="128" alt="Mindon" />
+    <p>麥盾, <a title="mindon/!at/gmail/!dot/com" href="/about/">Mindon</a> | <a id="mydonate" name="donate" href="#donate" title="Inspire Me! Thanks"><b>Donate!</b></a>
+    <br />Web Developer, @10c</p>
+</section>
+<form id="fmdonate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HCJSW6U8PUNEJ">
+</form>
+<script>
+function idonate(key) {
+  var fm = document.getElementById('fmdonate');
+  fm['hosted_button_id'].value = key;
+  fm.submit();
+}
+document.getElementById('mydonate').onclick = function(){
+  idonate('YSVEJMBLM3AFG');
+};
+</script>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/108546803797935855689?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Categories</h1>
+  <ul>
+
+    <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 87 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 33 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 13 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/chrome-app/">chrome-app</a> ( 12 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mobile-app/">mobile-app</a> ( 16 )</li>
+
+    <li>&raquo; <a class='category' href="/blog/categories/mindon,/">mindon,</a> ( 1 )</li>
+
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - The Future of Possible</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two problems found in Jekyll when using Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux console</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing is Not Always Believable</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section>
+    <h1>Google廣告</h1>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-6997921015773263";
+	/* git-aside */
+	google_ad_slot = "4887341949";
+	google_ad_width = 250;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</section><section>
+    <h1>Links</h1>
+	<ul>
+		<li><a href="http://www.ted.com/" target="_blank">TED: Ideas worth spreading</a></li>
+		<li><a href="http://www.sciencemag.org/" target="_blank">Science Magazine</a></li>
+		<li><a href="http://www.spongelab.com/browse/" target="_blank" title="Search science topics, lesson plans, case studies and more">SpongeLab</a></li>
+		<li><a href="http://catlinseaviewsurvey.com/seaview.htm" target="_blank">Sea View Survey</a></li>
+		<li><a href="http://www.me.gatech.edu/hu/" target="_blank">Hoogle</a></li>
+		<li><b>傳統中醫 TCM</b>
+    <ul>
+      <li><a href="http://jicheng.tw/jcw/" target="_blank">笈成資料庫</a></li>
+      <li><a href="http://www.cmchk.org.hk/pcm/chi/" target="_blank">香港中醫藥管理委員會</a></li>
+      <li><a href="http://tcm.cmu.edu.tw/zh-tw/" target="_blank">中醫藥資料庫@Taiwan</a></li>
+      <li><a href="http://www.relativehumanity.com.tw/web/chinesemedicine.htm" target="_blank">中醫世界</a> | <a href="http://www.relativehumanity.com.tw/web/main01.htm" target="_blank">身與心的平衡</a></li>
+    </ul>
+    </li>
+		<li><b>Readings Around</b>
+    <ul>
+      <li><a href="http://yeeyan.org/" target="_blank">译言网</a></li>
+    </ul>
+    </li>
+		<li><b>Development</b>
+    <ul>
+      <li><a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html" target="_blank">Chrome Latest Build</a></li>
+      <li><a href="http://snapsvg.io/" target="_blank">SnapSVG</a></li>
+      <li><a href="http://www.cocos2d-iphone.org/" target="_blank">COCOS2D</a></li>
+    </ul>
+    </li>
+		<li><b>Friends</b>
+    <ul>
+      <li><a href="http://askcuix.github.io" target="_blank">Chris&#8217;s Blog</a></li>
+      <li><a href="http://justinyan.me" target="_blank">枫言枫语</a></li>
+    </ul>
+    </li>
+		<li><a href="http://blog.sina.com.cn/aby" target="_blank">Aby.生活</a> | <a href="http://weibo.com/imaby" target="_blank">微博</a></li>
+		<li><a href="http://mindon.appspot.com/" target="_blank">Mindon.IDEA</a> @GAE  | <a href="http://weibo.com/mindon" target="_blank">微博</a></li>
+		<li>PHOTO @<a href="https://picasaweb.google.com/mindon" target="_blank">Picasa</a> | @<a href="http://www.flickr.com/photos/mindon/" target="_blank">Flickr</a> | @<a href="http://photos.nphoto.net/mindon/" target="_blank">NPhoto</a></li>
+		<li>@<a href="http://pinterest.com/mindon/" target="_blank">Pinterest</a> | <a href="http://db.tt/eYIbyv7" target="_blank">DropxBox</a></li>
+		<li><a href="http://www.hk-rfid.com/" target="_blank" title="Hong Kong RFID Limited is the leading RFID hardware manufacturer, distributor and consultancy firm in Hong Kong and the South China Region."><img src="/images/HKRFID-logo.png" border="0" alt="Hong Kong RFID" /></a></li>
+	</ul>
+</section>
+<section>
+    <h1>Learn More</h1>
+	<ul>
+		<li><a href="http://www.20thingsilearned.com/zh-CN" target="_blank" title="About Browsers & The Web: 关于浏览器和网络的 20 个知识点">Things I Learned</a></li>
+		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
+		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
+	</ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Mindon Feng -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script src="/javascripts/modernizr-2.6.2.js"></script>
+<script src="/javascripts/ender.js"></script>
+<script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28048168-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<script>
+;!function(e,t,r){var n='getElementsByTagName',f=e[n](t)[0]||e[n]('script')[0],x=e.styleSheets;for(var s,c;(s=r.shift())&&(c=e.createElement(t));){c.rel='stylesheet';c.href=s.length==2?s[0]:s;c.media='only x';f.parentNode.insertBefore(c,f);m(c,s,0)}function m(c,s){var d,i;for(i=0;i<x.length;i++){if(x[i].href&&x[i].href.indexOf(s[0])>-1){d=1}if(d){c.media=s.length==2?s[1]:'all'}else{setTimeout(function(){m(c,s)},50)}}}}(document,'link',[
+  'http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic'
+ ,'http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic'
+]);
+function js(src){
+var job = document.createElement('script'); job.type = 'text/javascript'; job.async = true;
+  job.src = src; var ss = document.getElementsByTagName('script'), s=ss[ss.length-1]; s.parentNode.insertBefore(job, s); ss=s=null;
+}
+$(document).ready(function(){if($('#more-tips').length) $('#more-tips').remove(); if($('#link-tags').length) js('/javascripts/mindon-tags.js')})</script>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA-28048168-2',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+// skip IE translate
+!document.attachEvent && (function() {
+  js('http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+})();
+</script>
+
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mindon';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/';
+        var disqus_url = 'http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
