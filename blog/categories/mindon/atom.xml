@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: mindon, | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-09T12:27:39+08:00</updated>
+  <updated>2014-11-10T09:55:20+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DJI - The Future of Possible]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible/"/>
+    <updated>2014-11-09T03:01:05+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible</id>
+    <content type="html"><![CDATA[<p>DJI - provides flying and camera stabilization systems all around the world.</p>
+
+<p>对于遥控飞行器来说，常见的小直升机和遥控飞机在玩具市场还是不少的。而知道DJI之前比较有名气的是 Parrot AR.Drone 了。刚开始的时候Drone还是挺贵的。今年看到他们出了两款便宜些的产品，记得好像一个是可配轮贴墙走，一个是会跳的摄像头。</p>
+
+<p>知道大疆DJI应该是近一两年的事情了，年终发奔驰事情之后很长时间才知道那就是DJI——应该是送飞行器礼物给沃兹的时候才关注到的。而今知道有前同事已经加盟DJI确实有些激动，之前也就简单的关注其生产的飞行器和精彩航拍视频。</p>
+
+<p>对于飞行器，在TED里看过协作飞行，自主飞行的演示——极其精彩，建议找来看看（ <a href="http://ted.com">ted.com</a> ）。还有上个月TED网看到的 <a href="http://fotokite.org">Fotokite</a>也是挺有意思的。</p>
+
+<p>DJI经历了8年之后，成为“全球无人机控制与航拍影像系统先驱”，是智能硬件发展的大环境下必然会出现的角色。能在全球做出自己的品牌并用心研发，很了不起，赞！</p>
+
+<!--more-->
+
+
+<p>虽然对飞行器一直有兴趣，但总还没觉得到买来玩的时候，一方面可能是因为自己还没有进入这个圈子。（自己与硬件相关的活动也就是去听过一次早期的柴火创客初期的讲座活动，关注柴火的论坛和微信。）</p>
+
+<p>对于航拍飞行器，若作为使用者，我会主要关注： 1）飞行器耐用、好用；2）拍照稳定、清楚。上周有了一次近距接触DJI的大众型飞行器的体验，结合最近一直在看的《Design of Everyday Things》，记录几个点：</p>
+
+<p>1）  携带问题——如果是旅游携带，电池是个大问题。（机场提供电子租赁业务？）</p>
+
+<p>2）  飞行操作——人机方向一致还好操作，不一致的时候就有些难度了。（能否有类似地图指南针的指示，操作的方向在眼前能直观体现。）</p>
+
+<p>3）  告警偏弱——不够明显。比较奇怪，为何过速危险还允许过速？高空坠落方案能否避免？（比如若当前高度 > 起飞高度 + 1.5m 就不允许停机。）如果高空停机或失速，若配置弹射降落伞进行保护是否可行？</p>
+
+<p>4）  控制和拍摄视觉是否可以分离以获得更佳的视界分离？</p>
+
+<p>5）  是否需要增加黑匣子记录？记录干扰和异常数据，作为事故调查和产品改进。</p>
+
+<p>6）  未来是否可以增加风热传感器，让飞行器可以感知周边环境状况。</p>
+
+<p>7）  摄影设备是否需要增加流体罩，避免摄影设备外形制造湍流影响飞行和拍照的稳定性。</p>
+
+<p>8）  有没有草丛里飞行的微拍mini飞行器？</p>
+
+<p>9）  飞行器噪声和抗风能力也会是优化方向。</p>
+
+<p>10）  建立专业问题和事故分析数据库…</p>
+
+<p>未来，是具有无限可能的一个领域。DJI 飞吧！ <a href="http://dji.com">http://dji.com</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Two problems found in Jekyll when using Octopress]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/"/>
+    <updated>2014-11-09T01:55:48+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll</id>
+    <content type="html"><![CDATA[<p>我对Ruby并不太熟，也只是偶尔稍微学习过一点而已。用得比较频繁的就是这个博客的生成工具Octopress了。这个基于Sekyll框架的全静态博客生成工具就是ruby实现的。每次安装一系列的工具和依赖包带来的郁闷不亚于装其它一堆以来的linux工具。因为这个我一直在计划用go重写一个静态博客生成工具，当然github上已经能找到些了，比如gor。——话题跑远了。</p>
+
+<p>这两个Sekyll的bug估计是被我折腾出来的。最近换笔记本，想把我的github博客工程迁到新笔记本上。这需要安装 Octopress 以来的Ruby运行环境，这个过程中搞了两个升级，一个是把Mac OS Yosemite自带的Ruby 2.0.0升级到了2.1.4，另一个是把 Octopress 也顺手升级到了github里的最新版。</p>
+
+<p>升级安装Octopress环境过程中，首先遭遇了openssl问题，导致rake命令abort。一通折腾之后重启电脑莫名就好了。可以rake new_post了，不过rake generate报错…</p>
+
+<!--more-->
+
+
+<p>遭遇的第一个报错时因为我把原来博客项目里的 source 和 plugins, <em>deploy, public, </em>config.yaml 都拷贝过来了，剩下一个sass目录没搬到新的Octopress目录导致。</p>
+
+<p>一系列的工具都可以正常运行之后，却遭遇了代码相关的rake generate报错：文件找不到！呃的神，报错没有任何指示是哪个rb文件——对于一个没有真正做过ruby项目和编码的人来说还是期待网上能找到解决方案的。不过，一些列的尝试失败之后，还是决定跟踪代码调试（差点没装 ruby-debug 和 rdebug 来搞）。</p>
+
+<p>第1个bug是：运行 rake generate 的时候，老提示 sitemap.xml 读取失败文件不存在。估计是版本或安装混乱引发。</p>
+
+<p>“Error reading file /<em>a**/gems/jekyll-sitemap-0.6.1/lib/sitemap.xml: No such file or directory @ rb_sysopen - /Users/</em>u<strong>/*a</strong>/gems/jekyll-sitemap-0.6.1/lib/sitemap.xml”</p>
+
+<p>线索很明显，正确的路径前加多了一个项目source的路径。还好，找到 jekyll-sitemap-0.6.1/lib/ 目录里只有一个.rb文件，代码量不多，通过print的办法定位到了 Page.new，找到 sekyll 的 page.rb 再定位到 read_yaml() 从而发现了 convertible.rb 里的 site.in_source_dir(base, name) —— 就是这里的问题，当 base 是一个非项目内路径时，就发生了前面多加了项目source路径的情况。找到问题之后解决就容易了，判断一下就好了</p>
+
+<pre><code>    if base.include? name
+      fpath = site.in_source_dir(base, name)
+    else
+      fpath = File.join(base, name)
+    end
+</code></pre>
+
+<p>这个修复本身也还不严谨，不过是够解决我的问题能写写博客就ok了。用这里的 fpath 替代原有的 File.read 里直接用的 site.in_source_dir(base, name) 就可以了。</p>
+
+<p>第2个bug是一堆warning，估计是因为升级Octopress之后有的。</p>
+
+<p>“Build Warning: Layout &#8216;nil&#8217; requested in blog/categories/***/atom.xml does not exist.”</p>
+
+<p>这个相对简单了，就是模版里的 layout 部分出的问题，新Octopress只认null不认nil了。于是找到了 source/atom.xml 改nil为null。但是categories这个不是atom.xml让我一通找，最后在 _includes/custom/category_feed.xml 找到，同样修改解决。</p>
+
+<p>折腾这个加写这篇博文就花了我几乎半天……</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shortcuts for Linux console]]></title>
@@ -76,6 +165,64 @@
 <p>Esc:  press 3 times to show all console commands 连续按3次显示所有的支持的终端命令。</p>
 
 <p>Tab:   infill command auto (press 2 times to show list of candidates) 命令、路径补全功能。(连按2次显示候选列表)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[开心，怒气和烦恼]]></title>
+    <link href="http://mindon.github.io/blog/2014/09/19/happy-angry-and-worries/"/>
+    <updated>2014-09-19T06:59:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/09/19/happy-angry-and-worries</id>
+    <content type="html"><![CDATA[<p>开心：开放的心，放开的心。</p>
+
+<p>怒气：基本上源于对相关不相关的人要求过多或者过高。</p>
+
+<p>烦恼：大概都来自对自己过多或者过高的要求。</p>
+
+<p>让心充满阳光，你才会体会到世界的美好；</p>
+
+<p>让心充满好奇，你才会感受到世界的奇妙；</p>
+
+<p>让心放空，你才能接收更多的幸福。</p>
+
+<p>世界是丰富多彩的，未来是变幻莫测的。</p>
+
+<p>宽容和感恩之心是走向未来的必备食粮。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Next Mobile Phone and BlackBerry 10.3]]></title>
+    <link href="http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/"/>
+    <updated>2014-09-19T06:21:00+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3</id>
+    <content type="html"><![CDATA[<p>Yesterday, I updated my BlackBerry Q10 Dev Device to BlackBerry OS 10.3.0.738, It was from the 10.3.0.1154 autoloader.</p>
+
+<p>It&#8217;s flat styled - it looks much better.</p>
+
+<p>But its camera shot method is changed to an android style, it&#8217;s bad - it&#8217;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
+
+<p>Yes, I&#8217;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&#8217;s such a tiny one. Here they are</p>
+
+<p><img src="/images/blog/mobiles.jpg" alt="" /></p>
+
+<p>I&#8217;m always waitting for my next mobile phone.</p>
+
+<p>iPhone? Yes, it&#8217;s a great mobile phone, but I still find no reason for it - at least there&#8217;s not enough reasons right now. Even the iPhone 6 - hmm, It&#8217;s great and with a high price and not sell in China mainland yet :)</p>
+
+<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&#8230;</p>
+
+<p>Google services is blocked in mainland China.</p>
+
+<p>You may say a VPN may works - but I don&#8217;t like it.</p>
+
+<p>You may say a hosts with a rooted device works - But I don&#8217;t like it either.</p>
+
+<p>Before a mobile device hit my heart, I will still prefer my dev version BlackBerry Q10.</p>
+
+<p>I have a Nexus 7(2013) and a Kindle, they are awesome devices.</p>
+
+<p>But choosing a mobile phone, I could wait.</p>
 ]]></content>
   </entry>
   
