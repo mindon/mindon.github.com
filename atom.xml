@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:19:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -94,7 +94,7 @@
 
 <p>第2个bug是一堆warning，估计是因为升级Octopress之后有的。</p>
 
-<p>“Build Warning: Layout &#8216;nil&#8217; requested in blog/categories/***/atom.xml does not exist.”</p>
+<p>“Build Warning: Layout &lsquo;nil&rsquo; requested in blog/categories/***/atom.xml does not exist.”</p>
 
 <p>这个相对简单了，就是模版里的 layout 部分出的问题，新Octopress只认null不认nil了。于是找到了 source/atom.xml 改nil为null。但是categories这个不是atom.xml让我一通找，最后在 _includes/custom/category_feed.xml 找到，同样修改解决。</p>
 
@@ -107,7 +107,7 @@
     <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
     <updated>2014-11-08T15:14:07+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
-    <content type="html"><![CDATA[<p>I&#8217;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &#8230;</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &hellip;</p>
 
 <p>But moving cursor in a console command line is such a painful thing. Ah, yes, shortcuts, there must be some for console.</p>
 
@@ -198,25 +198,25 @@
     <id>http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3</id>
     <content type="html"><![CDATA[<p>Yesterday, I updated my BlackBerry Q10 Dev Device to BlackBerry OS 10.3.0.738, It was from the 10.3.0.1154 autoloader.</p>
 
-<p>It&#8217;s flat styled - it looks much better.</p>
+<p>It&rsquo;s flat styled - it looks much better.</p>
 
-<p>But its camera shot method is changed to an android style, it&#8217;s bad - it&#8217;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
+<p>But its camera shot method is changed to an android style, it&rsquo;s bad - it&rsquo;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
 
-<p>Yes, I&#8217;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&#8217;s such a tiny one. Here they are</p>
+<p>Yes, I&rsquo;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&rsquo;s such a tiny one. Here they are</p>
 
 <p><img src="http://mindon.github.io/images/blog/mobiles.jpg" alt="" /></p>
 
-<p>I&#8217;m always waitting for my next mobile phone.</p>
+<p>I&rsquo;m always waitting for my next mobile phone.</p>
 
-<p>iPhone? Yes, it&#8217;s a great mobile phone, but I still find no reason for it - at least there&#8217;s not enough reasons right now. Even the iPhone 6 - hmm, It&#8217;s great and with a high price and not sell in China mainland yet :)</p>
+<p>iPhone? Yes, it&rsquo;s a great mobile phone, but I still find no reason for it - at least there&rsquo;s not enough reasons right now. Even the iPhone 6 - hmm, It&rsquo;s great and with a high price and not sell in China mainland yet :)</p>
 
-<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&#8230;</p>
+<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&hellip;</p>
 
 <p>Google services is blocked in mainland China.</p>
 
-<p>You may say a VPN may works - but I don&#8217;t like it.</p>
+<p>You may say a VPN may works - but I don&rsquo;t like it.</p>
 
-<p>You may say a hosts with a rooted device works - But I don&#8217;t like it either.</p>
+<p>You may say a hosts with a rooted device works - But I don&rsquo;t like it either.</p>
 
 <p>Before a mobile device hit my heart, I will still prefer my dev version BlackBerry Q10.</p>
 
@@ -278,9 +278,9 @@
     <link href="http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable/"/>
     <updated>2014-08-23T16:18:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable</id>
-    <content type="html"><![CDATA[<p>&#8220;This is an illusion that&#8217;s so good it&#8217;s hard to believe it&#8217;s an illusion. When the black and white lines disappear, it&#8217;s easy to see the rectangles are moving at constant speed.  But before that they seem to be taking turns, and pausing when they reach each new line.&#8221;</p>
+    <content type="html"><![CDATA[<p>&ldquo;This is an illusion that&rsquo;s so good it&rsquo;s hard to believe it&rsquo;s an illusion. When the black and white lines disappear, it&rsquo;s easy to see the rectangles are moving at constant speed.  But before that they seem to be taking turns, and pausing when they reach each new line.&rdquo;</p>
 
-<p>The original illusion image is a gif. I cannot believe it&#8217;s a true illusion - it may be a gif animation trick. So I decided to check on the gif animation inside - frame by frame: It&#8217;s a true illusion! Amazing!</p>
+<p>The original illusion image is a gif. I cannot believe it&rsquo;s a true illusion - it may be a gif animation trick. So I decided to check on the gif animation inside - frame by frame: It&rsquo;s a true illusion! Amazing!</p>
 
 <p>To clean your doubt. I make a interactive image for this illusion:</p>
 
@@ -330,7 +330,7 @@ resetBlocks();
 </script>
 
 
-<p>Still hard to believe? The Illusion &#8211; Seeing is not always believable! Be careful of what you see!</p>
+<p>Still hard to believe? The Illusion &ndash; Seeing is not always believable! Be careful of what you see!</p>
 ]]></content>
   </entry>
   
@@ -356,9 +356,9 @@ resetBlocks();
     <link href="http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift</id>
-    <content type="html"><![CDATA[<p>&#8220;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&#8221;  &#8211; <a href="http://wordpress.org/">wordpress.org</a></p>
+    <content type="html"><![CDATA[<p>&ldquo;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&rdquo;  &ndash; <a href="http://wordpress.org/">wordpress.org</a></p>
 
-<p>It&#8217;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
+<p>It&rsquo;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
 
 <p>Customize one of its theme to our style, separated it into two versions - one is readonly without admin features as the live product for public, the other is the full version accessible only for internal network.</p>
 
@@ -366,20 +366,20 @@ resetBlocks();
 
 <p>Make the blog online in 2 weeks, fixing bugs, improve SEO and share time to time in another 3 weeks.</p>
 
-<p>Now, simple plugins, update themes, shortcode features, wordpress editor - tinymce plugin, facebook share metas &#8230; that&#8217;s what i got from the one month project with WordPress. It&#8217;s great to get such a project to get into WordPress, from its apache/nginx settings, .htaccess controls to some coding details all by myself.</p>
+<p>Now, simple plugins, update themes, shortcode features, wordpress editor - tinymce plugin, facebook share metas &hellip; that&rsquo;s what i got from the one month project with WordPress. It&rsquo;s great to get such a project to get into WordPress, from its apache/nginx settings, .htaccess controls to some coding details all by myself.</p>
 
 <!--more-->
 
 
-<p>At the same time, I got another opportunity to practise <a href="http://golang.org">Go Language</a>. It&#8217;s a simple internal management website with uploads, mysql database operation, oa authorization, handling JSON and sessions.</p>
+<p>At the same time, I got another opportunity to practise <a href="http://golang.org">Go Language</a>. It&rsquo;s a simple internal management website with uploads, mysql database operation, oa authorization, handling JSON and sessions.</p>
 
-<p>My first practice on golang is <strong>tof</strong> &#8211; a simple library to implement OA APIs of our company. In fact, it&#8217;s a golang version from my former nodejs version.</p>
+<p>My first practice on golang is <strong>tof</strong> &ndash; a simple library to implement OA APIs of our company. In fact, it&rsquo;s a golang version from my former nodejs version.</p>
 
-<p>The &#8220;Notify Me&#8221; in golang works like a charm. I enjoy coding in go.</p>
+<p>The &ldquo;Notify Me&rdquo; in golang works like a charm. I enjoy coding in go.</p>
 
-<p>I cannot stop learning those wonderful programming techs. I&#8217;m reading on the Swift book on iBook. There&#8217;s lots of coding styles of Swift and Golang are alike. As a Front-End JavaScript developer, It&#8217;s a enjoyment.</p>
+<p>I cannot stop learning those wonderful programming techs. I&rsquo;m reading on the Swift book on iBook. There&rsquo;s lots of coding styles of Swift and Golang are alike. As a Front-End JavaScript developer, It&rsquo;s a enjoyment.</p>
 
-<p>Any opportunity to practise the Swift? I&#8217;m so sure there will be one :-)</p>
+<p>Any opportunity to practise the Swift? I&rsquo;m so sure there will be one :-)</p>
 
 <p>I like Golang, maybe Swift too!</p>
 ]]></content>
@@ -416,13 +416,13 @@ resetBlocks();
     <id>http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools</id>
     <content type="html"><![CDATA[<p>原型设计工具推荐</p>
 
-<p>Here&#8217;s some great free prototype design tools:</p>
+<p>Here&rsquo;s some great free prototype design tools:</p>
 
 <h2>AXure RP</h2>
 
 <p>An Interactive Wireframe Software and Mockup Tool.</p>
 
-<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec&#8230; and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
+<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec&hellip; and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
 
 <p><a href="http://www.axure.com/">Axure RP</a> 是一个专业的快速原型设计工具。Axure（发音：Ack-sure），代表美国Axure公司；RP则是Rapid Prototyping（快速原型）的缩写。</p>
 
@@ -435,7 +435,7 @@ resetBlocks();
 <!--more-->
 
 
-<p>Quartz Composer is a freely-available Mac OS X application by Apple that&#8217;s been around for nearly a decade.</p>
+<p>Quartz Composer is a freely-available Mac OS X application by Apple that&rsquo;s been around for nearly a decade.</p>
 
 <p>Origami 是一个来自 Facebook 设计团队的作品，是 Quartz Composer 的免费工具包，可在无需编程的情况下轻松实现与设计原型进行交互。</p>
 
@@ -457,7 +457,7 @@ resetBlocks();
 
 <h2>Pencil</h2>
 
-<p>An open-source GUI prototyping tool that&#8217;s available for ALL platforms.</p>
+<p>An open-source GUI prototyping tool that&rsquo;s available for ALL platforms.</p>
 
 <p><a href="http://pencil.evolus.vn/">Pencil</a> is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.</p>
 
@@ -490,74 +490,74 @@ resetBlocks();
     <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
     <updated>2014-06-17T05:38:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
-    <content type="html"><![CDATA[<p><strong> Apple&#8217;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
+    <content type="html"><![CDATA[<p><strong> Apple&rsquo;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
 
 <p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
 
-<p>Work on Swift—Apple&#8217;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
+<p>Work on Swift—Apple&rsquo;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
 
 <p><strong>LLVM</strong></p>
 
-<p>Rather than being an entirely new &#8220;beta&#8221; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&#8217;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
+<p>Rather than being an entirely new &ldquo;beta&rdquo; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&rsquo;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
 
 <h2>LLVM: A new compiler for Objective-C</h2>
 
-<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&#8217;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
+<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&rsquo;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
 
 <p><strong>Chris Lattner</strong></p>
 
-<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&#8217;s objc-language mailing list. Apple in turn began contributing to Lattner&#8217;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
+<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&rsquo;s objc-language mailing list. Apple in turn began contributing to Lattner&rsquo;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
 
-<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&#8217;s Xcode.</p>
+<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&rsquo;s Xcode.</p>
 
 <!--more-->
 
 
-<p>In addition to the &#8220;pure&#8221; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &#8220;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&#8221; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&#8217;s OS X.</p>
+<p>In addition to the &ldquo;pure&rdquo; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &ldquo;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&rdquo; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&rsquo;s OS X.</p>
 
-<p>GCC&#8217;s support for Objective-C, the primary development language of Apple&#8217;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&#8217;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&#8217;s Objective-C relevant as a language.</p>
+<p>GCC&rsquo;s support for Objective-C, the primary development language of Apple&rsquo;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&rsquo;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&rsquo;s Objective-C relevant as a language.</p>
 
 <p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
 
 <p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
 
-<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&#8217;s software, but is also tightly integrated into the development of Apple&#8217;s custom silicon, including the A6 and A7 Application Processors.</p>
+<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&rsquo;s software, but is also tightly integrated into the development of Apple&rsquo;s custom silicon, including the A6 and A7 Application Processors.</p>
 
-<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&#8217;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
+<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&rsquo;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
 
 <h2>Swift: A new language for LLVM</h2>
 
-<p>By 2010, LLVM&#8217;s solution to GCC&#8217;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &#8220;a few other (amazing) people.&#8221;</p>
+<p>By 2010, LLVM&rsquo;s solution to GCC&rsquo;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &ldquo;a few other (amazing) people.&rdquo;</p>
 
-<p>By July 2013, Lattner noted that the new Swift project had become &#8220;major focus for the Apple Developer Tools group.&#8221; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &#8220;took over management and leadership of the entire Developer Tools department at Apple&#8221; at the beginning of 2013.</p>
+<p>By July 2013, Lattner noted that the new Swift project had become &ldquo;major focus for the Apple Developer Tools group.&rdquo; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &ldquo;took over management and leadership of the entire Developer Tools department at Apple&rdquo; at the beginning of 2013.</p>
 
-<p>&#8220;In addition to compilers and low-level tools,&#8221; Lattner notes, &#8220;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&#8221;</p>
+<p>&ldquo;In addition to compilers and low-level tools,&rdquo; Lattner notes, &ldquo;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&rdquo;</p>
 
-<p>Lattner noted that the new Swift language &#8220;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&#8221;</p>
+<p>Lattner noted that the new Swift language &ldquo;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&rdquo;</p>
 
-<p>Apple&#8217;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &#8220;Swift has been years in the making,&#8221; adding that &#8220;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
+<p>Apple&rsquo;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &ldquo;Swift has been years in the making,&rdquo; adding that &ldquo;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
 
-<p>&#8220;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&#8221;&#8220;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&#8221;</p>
+<p>&ldquo;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&rdquo;&ldquo;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&rdquo;</p>
 
-<p>The company also observes that Swift &#8220;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&#8221;</p>
+<p>The company also observes that Swift &ldquo;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&rdquo;</p>
 
-<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &#8220;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&#8221;</p>
+<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &ldquo;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&rdquo;</p>
 
-<h2>Swift&#8217;s Interactive Playgrounds &amp; REPL</h2>
+<h2>Swift&rsquo;s Interactive Playgrounds &amp; REPL</h2>
 
-<p>Lattner also commented on two new features associated with Swift: Xcode&#8217;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
+<p>Lattner also commented on two new features associated with Swift: Xcode&rsquo;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
 
-<p>&#8220;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&#8221; Lattner noted. &#8220;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
+<p>&ldquo;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&rdquo; Lattner noted. &ldquo;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
 
-<p>&#8220;Playgrounds were heavily influenced by Bret Victor&#8217;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&#8217;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
+<p>&ldquo;Playgrounds were heavily influenced by Bret Victor&rsquo;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&rsquo;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
 
-<p>&#8220;I hope that by making programming more approachable and fun, we&#8217;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&#8221; Lattner stated.</p>
+<p>&ldquo;I hope that by making programming more approachable and fun, we&rsquo;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&rdquo; Lattner stated.</p>
 
-<p>Apple&#8217;s presentation of Swift notes that &#8220;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&#8217;ve perfected your code in the playground, simply move that code into your project.&#8221;</p>
+<p>Apple&rsquo;s presentation of Swift notes that &ldquo;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&rsquo;ve perfected your code in the playground, simply move that code into your project.&rdquo;</p>
 
-<p>The company states that Xcode&#8217;s Playground lets users &#8220;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&#8221;</p>
+<p>The company states that Xcode&rsquo;s Playground lets users &ldquo;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&rdquo;</p>
 
-<p>Apple notes that the REPL debugging console in Xcode &#8220;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&#8221;</p>
+<p>Apple notes that the REPL debugging console in Xcode &ldquo;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&rdquo;</p>
 
 <p>Apple says it plans to rapidly evolve Swift in response to developers needs and feature requests.</p>
 
@@ -636,24 +636,24 @@ resetBlocks();
     <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
-    <content type="html"><![CDATA[<p>I&#8217;d developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;d developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
 
-<p>The tool doesn&#8217;t care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
+<p>The tool doesn&rsquo;t care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
 
-<p>It&#8217;s a simple aid tool only, not much time to improve.</p>
+<p>It&rsquo;s a simple aid tool only, not much time to improve.</p>
 
-<p>I&#8217;m always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
+<p>I&rsquo;m always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
 
 <p>Last month, I found one: the <a href="http://highlightjs.org/">highlightjs</a>!</p>
 
-<p>Yes, it knows lots of programming languages - that&#8217;s what I&#8217;m looking for.</p>
+<p>Yes, it knows lots of programming languages - that&rsquo;s what I&rsquo;m looking for.</p>
 
 <!--more-->
 
 
 <p>I try to update the core js to testing the idea - it works: Using syntax highlight library to extract strings.</p>
 
-<p>It&#8217;s great!</p>
+<p>It&rsquo;s great!</p>
 ]]></content>
   </entry>
   
@@ -682,9 +682,9 @@ resetBlocks();
 
 <p>从2 到 2048 需要</p>
 
-<p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &#8230;</p>
+<p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &hellip;</p>
 
-<p>即 2<sup>1</sup>  &#8230;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
+<p>即 2<sup>1</sup>  &hellip;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
 ]]></content>
   </entry>
   
@@ -707,11 +707,11 @@ resetBlocks();
     <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
-    <content type="html"><![CDATA[<p>I enjoy google docs, though it&#8217;s not easy to visit google services from China.</p>
+    <content type="html"><![CDATA[<p>I enjoy google docs, though it&rsquo;s not easy to visit google services from China.</p>
 
 <p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
 
-<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here&#8217;s the fact:</p>
+<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here&rsquo;s the fact:</p>
 
 <ol>
 <li><p>PDF, for reading only, cannot play.</p></li>
@@ -720,7 +720,7 @@ resetBlocks();
 </ol>
 
 
-<p>That&#8217;s why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
+<p>That&rsquo;s why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
 
 <p>The Chrome extension download link: <a href="https://chrome.google.com/webstore/detail/gdpr-offline/apghddnkhdhjdlmhkoagjenpcngbkdde">GdPr Offline</a></p>
 

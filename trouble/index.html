@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Troubles — in Development / Life Feb 24th, 2012 9:49 am NodeJS -- build 0.8 failed /S/ 1. GNU Make 3.8.1+; 2. Python 2.6/2.7; 3. setenv FLOCK or &hellip;">
+  <meta name="description" content="Troubles — in Development / Life Feb 24th, 2012 9:49 am NodeJS &ndash; build 0.8 failed /S/ 1. GNU Make 3.8.1+; 2. Python 2.6/2.7; 3. setenv FLOCK &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,60 +80,60 @@
   </header>
   
   <ul>
-<li><strong>NodeJS</strong> &#8211; build 0.8 failed</li>
+<li><strong>NodeJS</strong> &ndash; build 0.8 failed</li>
 </ul>
 
 
 <p><strong>/S/</strong> 1. GNU Make 3.8.1+; 2. Python 2.6/2.7; 3. <code>setenv FLOCK</code> or <code>export FLOCK</code>; 4. <code>setenv LINK=g++</code> or <code>export LINK=g++</code></p>
 
 <ul>
-<li><strong>CSS</strong> &#8211; Text input component and button vertical align problem</li>
+<li><strong>CSS</strong> &ndash; Text input component and button vertical align problem</li>
 </ul>
 
 
 <p><strong>/S/</strong> It comes from the text vertical align, use table or change the padding-top to solve.</p>
 
 <ul>
-<li><strong>NodeJS</strong> &#8211; http client request POST, data lost in php or other CGI recipients</li>
+<li><strong>NodeJS</strong> &ndash; http client request POST, data lost in php or other CGI recipients</li>
 </ul>
 
 
-<p><strong>/S/</strong> do NOT forget the headers with correct &#8220;Content-Length&#8221;, it matters.</p>
+<p><strong>/S/</strong> do NOT forget the headers with correct &ldquo;Content-Length&rdquo;, it matters.</p>
 
 <ul>
-<li><strong>Socket.IO</strong> &#8211; node: Memory Leak</li>
+<li><strong>Socket.IO</strong> &ndash; node: Memory Leak</li>
 </ul>
 
 
 <p><strong>/S/</strong> skip websocket/flashsocket transports</p>
 
 <ul>
-<li><strong>NodeJS</strong> &#8211; node: error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory</li>
+<li><strong>NodeJS</strong> &ndash; node: error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory</li>
 </ul>
 
 
 <p><strong>/S/</strong> >export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:[include-libssl.so.1.0.0-path]</p>
 
 <ul>
-<li><strong>NodeJS</strong> &#8211; build 0.6.15 failed (make failure: undefined reference to `SSL_select_next_proto&#8217;)</li>
+<li><strong>NodeJS</strong> &ndash; build 0.6.15 failed (make failure: undefined reference to `SSL_select_next_proto&#8217;)</li>
 </ul>
 
 
 <p><strong>/S/</strong> update openssl to version 1.0.0+</p>
 
 <ul>
-<li><strong>NodeLoad</strong> &#8211; npm install nodeload, or manual download running problem under Windows</li>
+<li><strong>NodeLoad</strong> &ndash; npm install nodeload, or manual download running problem under Windows</li>
 </ul>
 
 
-<p><strong>/S/</strong> Problem comes from the log file name, it uses the time as part of file name. There&#8217;s character &#8220;:&#8221;, which is invalid as file name under Windows. replace this with a valid one.</p>
+<p><strong>/S/</strong> Problem comes from the log file name, it uses the time as part of file name. There&rsquo;s character &ldquo;:&rdquo;, which is invalid as file name under Windows. replace this with a valid one.</p>
 
 <ul>
-<li><strong>NodeJS</strong> &#8211; configure fail, cannot find openssl in the path</li>
+<li><strong>NodeJS</strong> &ndash; configure fail, cannot find openssl in the path</li>
 </ul>
 
 
-<p><strong>/S/</strong> config with &#8221;<strong>shared</strong>&#8221; option when building openssl. and configure with &#8211;openssl-* option to build node.</p>
+<p><strong>/S/</strong> config with &ldquo;<strong>shared</strong>&rdquo; option when building openssl. and configure with &ndash;openssl-* option to build node.</p>
 
 <pre><code>./config shared
 make
@@ -172,7 +172,7 @@ ln -s /usr/lib/libcrypt.so.1.0.0 /usr/local/ssl/lib/libcrypt.so.1.0.0
 
 <hr />
 
-<p>Don&#8217;t hesitate providing your suggestions.</p>
+<p>Don&rsquo;t hesitate providing your suggestions.</p>
 
 <p>请分享您的解决之道 :-)</p>
 
@@ -271,44 +271,24 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing Is Not Always Believable</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
-      <li class="post">
       </li>
     
   </ul>
@@ -390,9 +370,8 @@ document.getElementById('mydonate').onclick = function(){
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="/javascripts/octopress.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];

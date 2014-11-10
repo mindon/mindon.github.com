@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome-app | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:20:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -18,11 +18,11 @@
     <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
-    <content type="html"><![CDATA[<p>I enjoy google docs, though it&#8217;s not easy to visit google services from China.</p>
+    <content type="html"><![CDATA[<p>I enjoy google docs, though it&rsquo;s not easy to visit google services from China.</p>
 
 <p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
 
-<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here&#8217;s the fact:</p>
+<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here&rsquo;s the fact:</p>
 
 <ol>
 <li><p>PDF, for reading only, cannot play.</p></li>
@@ -31,7 +31,7 @@
 </ol>
 
 
-<p>That&#8217;s why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
+<p>That&rsquo;s why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
 
 <p>The Chrome extension download link: <a href="https://chrome.google.com/webstore/detail/gdpr-offline/apghddnkhdhjdlmhkoagjenpcngbkdde">GdPr Offline</a></p>
 
@@ -59,22 +59,22 @@ of Computer Programs</a>.</p>
 
 <p>DrRacket: <a href="http://racket-lang.org/">http://racket-lang.org/</a></p>
 
-<p>I don&#8217;t think I have any chances to use it. Go and Node.JS are enough.</p>
+<p>I don&rsquo;t think I have any chances to use it. Go and Node.JS are enough.</p>
 
 <p>On the other way, I learn to setup PhoneGap env. in my computer at home. And my first android app demo runs in my Nexus 7. I will put it here soon instead of Google Play.</p>
 
-<p>And this morning, I got an E-mail from Google Chrome Web Store &#8211; Removal Notification for &#8220;Ingress Portals Finder&#8221;</p>
+<p>And this morning, I got an E-mail from Google Chrome Web Store &ndash; Removal Notification for &ldquo;Ingress Portals Finder&rdquo;</p>
 
-<blockquote><p>Your Google Chrome item, &#8220;Ingress Portals Finder,&#8221; did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
+<blockquote><p>Your Google Chrome item, &ldquo;Ingress Portals Finder,&rdquo; did not comply with our policies on Prohibited Products and was removed from the Google Chrome Web Store.</p></blockquote>
 
 <!--more-->
 
 
-<p>What a pity. It&#8217;s the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
+<p>What a pity. It&rsquo;s the most welcome extension of my works. It just reached 4k+ installation before its removal.</p>
 
-<p>That&#8217;s the TAKEN DOWN.</p>
+<p>That&rsquo;s the TAKEN DOWN.</p>
 
-<p>It won&#8217;t stress much on the Ingress server, instead, it will less stress.</p>
+<p>It won&rsquo;t stress much on the Ingress server, instead, it will less stress.</p>
 
 <ol>
 <li><p>high quality developed.</p></li>
@@ -83,11 +83,11 @@ of Computer Programs</a>.</p>
 </ol>
 
 
-<p>But it&#8217;s true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
+<p>But it&rsquo;s true, NO PERMISSION from ingress.com to allow me to call its one API.</p>
 
 <p>But, what if my extension is a customized browser?  Display websites better that it is, should I need permissions from all the websites being improved? (I really could make such a customized browser :p)</p>
 
-<p>No matter what, I&#8217;m on the way to my next app, useful and helpful with UI satisfy me first.</p>
+<p>No matter what, I&rsquo;m on the way to my next app, useful and helpful with UI satisfy me first.</p>
 
 <p><i id="link-tags">LISP;Scheme;PhoneGap;Node.JS;GO;Ingress;Chrome Web Store;Prohibited Products</i></p>
 ]]></content>
@@ -121,9 +121,9 @@ of Computer Programs</a>.</p>
 
 <h2>The CRX file (v1.3.10)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="#removed">Download Ingress Portals Finder <b style="color:red">&lt;REMOVED&gt;</b></a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
+<p>It&rsquo;s taken down from Chrome Web Store today. Here&rsquo;s the temporary link for the CRX file of the extension: <a href="#removed">Download Ingress Portals Finder <b style="color:red">&lt;REMOVED&gt;</b></a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
 
-<h2>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</h2>
+<h2>INSTALL STEPS: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&hellip;</h2>
 
 <h2>Updates:</h2>
 
@@ -140,7 +140,7 @@ of Computer Programs</a>.</p>
 
 <p>The <strong>Ingress Portals Finder</strong> works only in the <a href="http://www.ingress.com/intel">Ingress Map Offical Site</a>.</p>
 
-<p>That&#8217;s why this extension needs an <strong>About</strong> window: when you click the extension icon in other tabs, the about window leads you to the proper website.</p>
+<p>That&rsquo;s why this extension needs an <strong>About</strong> window: when you click the extension icon in other tabs, the about window leads you to the proper website.</p>
 
 <p><img src="/images/blog/ingress/1-start.jpg" alt="" /></p>
 
@@ -166,29 +166,29 @@ of Computer Programs</a>.</p>
 
 <h2><strong>D)</strong>  Submit a query</h2>
 
-<p>When your bounds set, click &#8220;Query&#8221; to make the request.</p>
+<p>When your bounds set, click &ldquo;Query&rdquo; to make the request.</p>
 
 <p>Here, to avoid stress on the official ingress server, the extension will cache 5 minutes for the same bounds.</p>
 
 <p><img src="/images/blog/ingress/4-query.jpg" alt="" /></p>
 
-<p>Be patient, the query may takes time, it depends on your network speed or the bounds area scale. But I don&#8217;t think it will take more than 3 minutes.</p>
+<p>Be patient, the query may takes time, it depends on your network speed or the bounds area scale. But I don&rsquo;t think it will take more than 3 minutes.</p>
 
 <h2><strong>E)</strong> Filtering on the query result</h2>
 
-<p>The filter works on the query result. It won&#8217;t stress on the server.</p>
+<p>The filter works on the query result. It won&rsquo;t stress on the server.</p>
 
 <p>1) Key words off the address;  2) Teams;  3) Levels</p>
 
-<p>There&#8217;re tips on the level filtering:</p>
+<p>There&rsquo;re tips on the level filtering:</p>
 
 <p><img src="/images/blog/ingress/5-level.jpg" alt="" /></p>
 
-<p>Click the <strong>[a]</strong> to select all levels. and you could press &#8220;Ctrl&#8221; + click to click levels you want to list.</p>
+<p>Click the <strong>[a]</strong> to select all levels. and you could press &ldquo;Ctrl&rdquo; + click to click levels you want to list.</p>
 
 <h2><strong>F)</strong> Which team is in charge?</h2>
 
-<p>The vertical bar beside the level number, you could see the status of portals &#8211; more green or more blue.</p>
+<p>The vertical bar beside the level number, you could see the status of portals &ndash; more green or more blue.</p>
 
 <p><img src="/images/blog/ingress/6-vs.jpg" alt="" /></p>
 
@@ -208,7 +208,7 @@ of Computer Programs</a>.</p>
 
 <h2><strong>I)</strong> List result portals in a full scale map</h2>
 
-<p>Left corner of the portal embed map window, you could find a transparent button &#8220;All&#8221;.</p>
+<p>Left corner of the portal embed map window, you could find a transparent button &ldquo;All&rdquo;.</p>
 
 <p><img src="/images/blog/ingress/9-all.jpg" alt="" /></p>
 
@@ -232,13 +232,13 @@ of Computer Programs</a>.</p>
 
 <p>If problems or suggestions when using the extension, please leave the details or send me an email. Thanks.</p>
 
-<p>Wish the chrome extension &#8221;<a href="#removed">Ingress Portals Finder  <b style="color:red">&lt;REMOVED&gt;</b></a>&#8221; help you in playing the game. Enjoy!</p>
+<p>Wish the chrome extension &ldquo;<a href="#removed">Ingress Portals Finder  <b style="color:red">&lt;REMOVED&gt;</b></a>&rdquo; help you in playing the game. Enjoy!</p>
 
 <h2>The CRX file (v1.3.10)</h2>
 
-<p>It&#8217;s taken down from Chrome Web Store today. Here&#8217;s the temporary link for the CRX file of the extension: <a href="#removed">Download Ingress Portals Finder <b style="color:red">&lt;REMOVED&gt;</b></a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
+<p>It&rsquo;s taken down from Chrome Web Store today. Here&rsquo;s the temporary link for the CRX file of the extension: <a href="#removed">Download Ingress Portals Finder <b style="color:red">&lt;REMOVED&gt;</b></a> (v1.3.10 MD5: <strong>e4f679c938e8318506e12573c26a76b3</strong>)</p>
 
-<h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&#8230;</h2>
+<h2>Install Steps: 1) Download and save the CRX file  2) open chrome://extensions/  3) Drag and drop the CRX file in the window&hellip;</h2>
 
 <p><i id="link-tags">Ingress;Chrome Web Store</i></p>
 ]]></content>
@@ -255,7 +255,7 @@ of Computer Programs</a>.</p>
 
 <p>It helps a lot especially for newbies of Ingress to find an zero level portal.</p>
 
-<p>The idea to develop such an extension for Ingress comes from another extension &#8221;<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>&#8221; &#8211; developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
+<p>The idea to develop such an extension for Ingress comes from another extension &ldquo;<a href="https://chrome.google.com/webstore/detail/ingress-hk-portal-list/pmeaadpkjfcepcokljbbbolckdejopcf">Ingress: HK Portal List</a>&rdquo; &ndash; developed by <a href="http://http//blog.shawtim.com/">Shawtim</a>. Someone in a QQ group wanted to change it to apply to Shenzhen area.</p>
 
 <p>I made some improvement in this totally re-design and develop extension.</p>
 
@@ -321,7 +321,7 @@ Show result through template
 
 <p>First 2 days, 186 installation. and yesterday the installation reached 865, 143 G+ and 10 reviews in Chrome Web Store.</p>
 
-<p>It&#8217;s amazing that someone outside there likes your app and appreciates your work.</p>
+<p>It&rsquo;s amazing that someone outside there likes your app and appreciates your work.</p>
 
 <p><img src="/images/blog/chrome/find-ingress-portals.png" alt="" /></p>
 
@@ -353,15 +353,15 @@ Show result through template
 
 <p><a href="http://teespring.com/ingress">General</a>, <a href="http://teespring.com/ingress-enlightened">Enlightened</a>, <a href="http://teespring.com/ingress-resistance">Resistance</a></p>
 
-<p>Here&#8217;s another one &#8220;2013&#8221;</p>
+<p>Here&rsquo;s another one &ldquo;2013&rdquo;</p>
 
 <p><a href="http://teespring.com/cc-2013">http://teespring.com/cc-2013</a></p>
 
 <p><img src="/images/blog/t-cc-2013.png" alt="" /></p>
 
-<p>To share T-shirts on <strong>Teespring.com</strong>, I develop a Chrome Extension - &#8220;Tee Share&#8221; to get both sides of the T-shirt together, and combin it with its name and URL :-)</p>
+<p>To share T-shirts on <strong>Teespring.com</strong>, I develop a Chrome Extension - &ldquo;Tee Share&rdquo; to get both sides of the T-shirt together, and combin it with its name and URL :-)</p>
 
-<p><a href="https://chrome.google.com/webstore/detail/tee-share/flljbdpjfdnbehijbekgkcodgmmcgofa?hl=en-US">Get &#8220;Tee Share&#8221;</a></p>
+<p><a href="https://chrome.google.com/webstore/detail/tee-share/flljbdpjfdnbehijbekgkcodgmmcgofa?hl=en-US">Get &ldquo;Tee Share&rdquo;</a></p>
 
 <p><img src="/images/blog/chrome/tee-share.png" alt="" /></p>
 

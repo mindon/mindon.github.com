@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Match encrypt &amp; decrypt in PHP and NodeJS - Mindon.IDEA</title>
+  <title>Match Encrypt &amp; Decrypt in PHP and NodeJS - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="String encoded in PHP needs to decode in NodeJS? Or encoded in NodeJS needs to decode in PHP? Here's a match result with aes-128-cbc &amp; their &hellip;">
+  <meta name="description" content="String encoded in PHP needs to decode in NodeJS? Or encoded in NodeJS needs to decode in PHP? Here&rsquo;s a match result with aes-128-cbc &amp; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,7 +108,7 @@
 
 <p>Or encoded in NodeJS needs to decode in PHP?</p>
 
-<p>Here&#8217;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+<p>Here&rsquo;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
 
 <p>NodeJS</p>
 
@@ -167,17 +167,17 @@ echo iDecrypt($encrypted, $key, $iv);
 
 <p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
 
-<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data &#8220;bit by bit&#8221; (or &#8220;byte by byte&#8221;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
+<blockquote><p>Some encryption algorithms are stream ciphers which encrypt data &ldquo;bit by bit&rdquo; (or &ldquo;byte by byte&rdquo;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
 
-<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the &#8220;256&#8221; is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
+<p>Other encryption algorithms are block ciphers. A block cipher, nominally, encrypts a single block of data of a fixed length. AES is a block cipher with 128-bit blocks (16 bytes). Note that AES-256 also uses 128-bit blocks; the &ldquo;256&rdquo; is about the key length, not the block length. The chaining mode is about how the data is to be split into several such blocks (this is not easy to do it securely, but CBC mode is fine). Depending on the chaining mode, the data may require some padding, i.e. a few extra bytes added at the end so that the length is appropriate for the chaining mode. The padding must be such that it can be unambiguously removed when decrypting.</p>
 
 <p>With CBC mode, the input data must have a length multiple of the block length, so it is customary to add PKCS#5 padding: if the block length is n, then at least 1 byte is added, at most n, such that the total size is a multiple of n, and the last added bytes (possibly all of them) have numerical value k where k is the number of added bytes. Upon decryption, it suffices to look at the last decrypted byte to recover k and thus know how many padding bytes must be ultimately removed.</p>
 
 <p>Hence, with CBC mode and AES, assuming PKCS#5 padding, if the input data has length d then the encrypted length is (d + 16) &amp; ~15. I am using C-like notation here; in plain words, the length is between d+1 and d+16, and multiple of 16.</p>
 
-<p>There is a mode called CTR (as &#8220;counter&#8221;) in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
+<p>There is a mode called CTR (as &ldquo;counter&rdquo;) in which the block cipher encrypts successive values of a counter, yielding a stream of pseudo-random bytes. This effectively turns the block cipher into a stream cipher, and thus a message of length d is encrypted into d bytes.</p>
 
-<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&#8217;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
+<p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&rsquo;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p></blockquote>
 
 <p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
 
@@ -296,44 +296,24 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing Is Not Always Believable</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
-      <li class="post">
       </li>
     
   </ul>
@@ -415,9 +395,8 @@ document.getElementById('mydonate').onclick = function(){
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="/javascripts/octopress.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];

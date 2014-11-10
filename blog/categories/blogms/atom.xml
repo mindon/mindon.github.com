@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blogms | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/blogms/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:20:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -254,7 +254,7 @@ ws.onclose = function(evt){};&lt;/PRE&gt;
 <DIV>至于<B>EventSource</B>，Opera 9 就开始试验性的支持&lt;event-source id=&#8221;myes&#8221; src=&#8221;http://mindon.demo/service?type=event-stream&#8221; /&gt; 这样的标签。</DIV>
 
 
-<p><A href="http://labs.opera.com/news/2006/09/01/"><U><FONT color=#0000ff>http://labs.opera.com/news/2006/09/01/</FONT></U></A></p>
+<p><A href="http://labs.opera.com/news/2006/09/01/"><U><FONT color=#0000ff><a href="http://labs.opera.com/news/2006/09/01/">http://labs.opera.com/news/2006/09/01/</a></FONT></U></A></p>
 
 <DIV>服务器输出: (Content-Type: application/x-dom-event-stream) </DIV>
 

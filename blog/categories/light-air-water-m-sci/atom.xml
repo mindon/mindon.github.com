@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Light-air-water-m-sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:20:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -18,9 +18,9 @@
     <link href="http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable/"/>
     <updated>2014-08-23T16:18:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable</id>
-    <content type="html"><![CDATA[<p>&#8220;This is an illusion that&#8217;s so good it&#8217;s hard to believe it&#8217;s an illusion. When the black and white lines disappear, it&#8217;s easy to see the rectangles are moving at constant speed.  But before that they seem to be taking turns, and pausing when they reach each new line.&#8221;</p>
+    <content type="html"><![CDATA[<p>&ldquo;This is an illusion that&rsquo;s so good it&rsquo;s hard to believe it&rsquo;s an illusion. When the black and white lines disappear, it&rsquo;s easy to see the rectangles are moving at constant speed.  But before that they seem to be taking turns, and pausing when they reach each new line.&rdquo;</p>
 
-<p>The original illusion image is a gif. I cannot believe it&#8217;s a true illusion - it may be a gif animation trick. So I decided to check on the gif animation inside - frame by frame: It&#8217;s a true illusion! Amazing!</p>
+<p>The original illusion image is a gif. I cannot believe it&rsquo;s a true illusion - it may be a gif animation trick. So I decided to check on the gif animation inside - frame by frame: It&rsquo;s a true illusion! Amazing!</p>
 
 <p>To clean your doubt. I make a interactive image for this illusion:</p>
 
@@ -70,7 +70,7 @@ resetBlocks();
 </script>
 
 
-<p>Still hard to believe? The Illusion &#8211; Seeing is not always believable! Be careful of what you see!</p>
+<p>Still hard to believe? The Illusion &ndash; Seeing is not always believable! Be careful of what you see!</p>
 ]]></content>
   </entry>
   
@@ -86,7 +86,7 @@ resetBlocks();
 <!--more-->
 
 
-<p>It is said that it has potential to improve vision! That&#8217;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&#8217;s 40RMB on iTune - a little bit high price for an app you don&#8217;t know much.</p>
+<p>It is said that it has potential to improve vision! That&rsquo;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&rsquo;s 40RMB on iTune - a little bit high price for an app you don&rsquo;t know much.</p>
 
 <p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
 
@@ -94,13 +94,13 @@ resetBlocks();
 
 <p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
 
-<p>It&#8217;s more like a brain game than an eyes training.</p>
+<p>It&rsquo;s more like a brain game than an eyes training.</p>
 
 <p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
 
-<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&#8217;s such an important thing to keep our eyes sharp and clear.</p>
+<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&rsquo;s such an important thing to keep our eyes sharp and clear.</p>
 
-<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&#8217;s learning potential</a></p>
+<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&rsquo;s learning potential</a></p>
 
 <p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
 ]]></content>
@@ -111,7 +111,7 @@ resetBlocks();
     <link href="http://mindon.github.io/blog/2012/09/16/eyewriter/"/>
     <updated>2012-09-16T20:19:00+08:00</updated>
     <id>http://mindon.github.io/blog/2012/09/16/eyewriter</id>
-    <content type="html"><![CDATA[<p>这两年对Open Source Hardware有点兴趣，不过也只是限于了解一丁点而已。知道 EyeWriter 是今天看到了TED分享&#8211;<strong>Mick Ebeling</strong>: <a href="http://www.ted.com/talks/lang/zh-cn/mick_ebeling_the_invention_that_unlocked_a_locked_in_artist.html">The invention that unlocked a locked-in artist</a>。这是个开源装置——是为了解决神经疾病ALS（肌肉萎缩性脊髓侧索硬化症）病人的表达问题而诞生的。</p>
+    <content type="html"><![CDATA[<p>这两年对Open Source Hardware有点兴趣，不过也只是限于了解一丁点而已。知道 EyeWriter 是今天看到了TED分享&ndash;<strong>Mick Ebeling</strong>: <a href="http://www.ted.com/talks/lang/zh-cn/mick_ebeling_the_invention_that_unlocked_a_locked_in_artist.html">The invention that unlocked a locked-in artist</a>。这是个开源装置——是为了解决神经疾病ALS（肌肉萎缩性脊髓侧索硬化症）病人的表达问题而诞生的。</p>
 
 <p>EyeWriter 的项目网址是：<a href="">http://www.eyewriter.org/diy/</a></p>
 
@@ -120,7 +120,7 @@ resetBlocks();
 
 <p><img src="/images/blog/ew.jpg" alt="" /></p>
 
-<p>制作步骤可以参见：<a href="http://www.instructables.com/id/The-EyeWriter-20/">Instructables 网站的指引&#8211;英文</a></p>
+<p>制作步骤可以参见：<a href="http://www.instructables.com/id/The-EyeWriter-20/">Instructables 网站的指引&ndash;英文</a></p>
 
 <blockquote><p> The EyeWriter software is two parts — an eye-tracking software designed for use with our low-cost glasses, and a drawing software designed for drawing with eye movements. The source code for the project is currently being hosted at: <a href="">https://github.com/eyewriter</a>.
 The software for both parts has been developed using openframeworks, a cross platform c++ library for creative development. In order to compile and develop the EyeWriter source code, you will need to download openframeworks (pre release v0.06). Documentation, setup guides and more information can be found at <a href="">http://openframeworks.cc</a>.</p></blockquote>
@@ -156,7 +156,7 @@ The software for both parts has been developed using openframeworks, a cross pla
 
 <p>后来，了解到Hillis是Richard Feynman（费曼，1918年5月11日－1988年2月15日）的朋友，费曼是个科学界的传奇人物，1965年诺贝尔物理奖得主。读《<a href="http://book.douban.com/subject/1037602/">别闹了，费曼先生</a>》能了解到这个神奇的科学奇才，Feynman 1988年因癌症去世。</p>
 
-<p>而Danny Hillis的公司之一 Applied Proteomics, Inc 也是非常有意思的科技与医疗研究前沿的公司 http://www.appliedproteomics.com/news/。</p>
+<p>而Danny Hillis的公司之一 Applied Proteomics, Inc 也是非常有意思的科技与医疗研究前沿的公司 <a href="http://www.appliedproteomics.com/news/%E3%80%82">http://www.appliedproteomics.com/news/%E3%80%82</a></p>
 
 <p>Danny Hillis的技术及见解和中医的理论和经络理论之间的类似和关联也是挺有意思的一个课题，非常值得持续关注。</p>
 ]]></content>

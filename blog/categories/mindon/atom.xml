@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:20:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -94,7 +94,7 @@
 
 <p>第2个bug是一堆warning，估计是因为升级Octopress之后有的。</p>
 
-<p>“Build Warning: Layout &#8216;nil&#8217; requested in blog/categories/***/atom.xml does not exist.”</p>
+<p>“Build Warning: Layout &lsquo;nil&rsquo; requested in blog/categories/***/atom.xml does not exist.”</p>
 
 <p>这个相对简单了，就是模版里的 layout 部分出的问题，新Octopress只认null不认nil了。于是找到了 source/atom.xml 改nil为null。但是categories这个不是atom.xml让我一通找，最后在 _includes/custom/category_feed.xml 找到，同样修改解决。</p>
 
@@ -107,7 +107,7 @@
     <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
     <updated>2014-11-08T15:14:07+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
-    <content type="html"><![CDATA[<p>I&#8217;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &#8230;</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &hellip;</p>
 
 <p>But moving cursor in a console command line is such a painful thing. Ah, yes, shortcuts, there must be some for console.</p>
 
@@ -198,25 +198,25 @@
     <id>http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3</id>
     <content type="html"><![CDATA[<p>Yesterday, I updated my BlackBerry Q10 Dev Device to BlackBerry OS 10.3.0.738, It was from the 10.3.0.1154 autoloader.</p>
 
-<p>It&#8217;s flat styled - it looks much better.</p>
+<p>It&rsquo;s flat styled - it looks much better.</p>
 
-<p>But its camera shot method is changed to an android style, it&#8217;s bad - it&#8217;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
+<p>But its camera shot method is changed to an android style, it&rsquo;s bad - it&rsquo;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
 
-<p>Yes, I&#8217;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&#8217;s such a tiny one. Here they are</p>
+<p>Yes, I&rsquo;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&rsquo;s such a tiny one. Here they are</p>
 
 <p><img src="/images/blog/mobiles.jpg" alt="" /></p>
 
-<p>I&#8217;m always waitting for my next mobile phone.</p>
+<p>I&rsquo;m always waitting for my next mobile phone.</p>
 
-<p>iPhone? Yes, it&#8217;s a great mobile phone, but I still find no reason for it - at least there&#8217;s not enough reasons right now. Even the iPhone 6 - hmm, It&#8217;s great and with a high price and not sell in China mainland yet :)</p>
+<p>iPhone? Yes, it&rsquo;s a great mobile phone, but I still find no reason for it - at least there&rsquo;s not enough reasons right now. Even the iPhone 6 - hmm, It&rsquo;s great and with a high price and not sell in China mainland yet :)</p>
 
-<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&#8230;</p>
+<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&hellip;</p>
 
 <p>Google services is blocked in mainland China.</p>
 
-<p>You may say a VPN may works - but I don&#8217;t like it.</p>
+<p>You may say a VPN may works - but I don&rsquo;t like it.</p>
 
-<p>You may say a hosts with a rooted device works - But I don&#8217;t like it either.</p>
+<p>You may say a hosts with a rooted device works - But I don&rsquo;t like it either.</p>
 
 <p>Before a mobile device hit my heart, I will still prefer my dev version BlackBerry Q10.</p>
 

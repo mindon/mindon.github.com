@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T11:20:13+08:00</updated>
+  <updated>2014-11-11T00:50:35+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -18,9 +18,9 @@
     <link href="http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift/"/>
     <updated>2014-08-10T11:47:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/10/wordpress-golang-and-swift</id>
-    <content type="html"><![CDATA[<p>&#8220;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&#8221;  &#8211; <a href="http://wordpress.org/">wordpress.org</a></p>
+    <content type="html"><![CDATA[<p>&ldquo;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&rdquo;  &ndash; <a href="http://wordpress.org/">wordpress.org</a></p>
 
-<p>It&#8217;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
+<p>It&rsquo;s welcomed worldwide with lots of themes and plugins to enpower its features and functions. WordPress has more than ten years history. But I setup and got into its details only at the end of June this year.</p>
 
 <p>Customize one of its theme to our style, separated it into two versions - one is readonly without admin features as the live product for public, the other is the full version accessible only for internal network.</p>
 
@@ -28,20 +28,20 @@
 
 <p>Make the blog online in 2 weeks, fixing bugs, improve SEO and share time to time in another 3 weeks.</p>
 
-<p>Now, simple plugins, update themes, shortcode features, wordpress editor - tinymce plugin, facebook share metas &#8230; that&#8217;s what i got from the one month project with WordPress. It&#8217;s great to get such a project to get into WordPress, from its apache/nginx settings, .htaccess controls to some coding details all by myself.</p>
+<p>Now, simple plugins, update themes, shortcode features, wordpress editor - tinymce plugin, facebook share metas &hellip; that&rsquo;s what i got from the one month project with WordPress. It&rsquo;s great to get such a project to get into WordPress, from its apache/nginx settings, .htaccess controls to some coding details all by myself.</p>
 
 <!--more-->
 
 
-<p>At the same time, I got another opportunity to practise <a href="http://golang.org">Go Language</a>. It&#8217;s a simple internal management website with uploads, mysql database operation, oa authorization, handling JSON and sessions.</p>
+<p>At the same time, I got another opportunity to practise <a href="http://golang.org">Go Language</a>. It&rsquo;s a simple internal management website with uploads, mysql database operation, oa authorization, handling JSON and sessions.</p>
 
-<p>My first practice on golang is <strong>tof</strong> &#8211; a simple library to implement OA APIs of our company. In fact, it&#8217;s a golang version from my former nodejs version.</p>
+<p>My first practice on golang is <strong>tof</strong> &ndash; a simple library to implement OA APIs of our company. In fact, it&rsquo;s a golang version from my former nodejs version.</p>
 
-<p>The &#8220;Notify Me&#8221; in golang works like a charm. I enjoy coding in go.</p>
+<p>The &ldquo;Notify Me&rdquo; in golang works like a charm. I enjoy coding in go.</p>
 
-<p>I cannot stop learning those wonderful programming techs. I&#8217;m reading on the Swift book on iBook. There&#8217;s lots of coding styles of Swift and Golang are alike. As a Front-End JavaScript developer, It&#8217;s a enjoyment.</p>
+<p>I cannot stop learning those wonderful programming techs. I&rsquo;m reading on the Swift book on iBook. There&rsquo;s lots of coding styles of Swift and Golang are alike. As a Front-End JavaScript developer, It&rsquo;s a enjoyment.</p>
 
-<p>Any opportunity to practise the Swift? I&#8217;m so sure there will be one :-)</p>
+<p>Any opportunity to practise the Swift? I&rsquo;m so sure there will be one :-)</p>
 
 <p>I like Golang, maybe Swift too!</p>
 ]]></content>
@@ -63,24 +63,24 @@
     <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
-    <content type="html"><![CDATA[<p>I&#8217;d developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;d developed a simple online tool (Using <a href="http://nodejs.org">Node.JS</a>) to extract Chinese strings and merge translations automatically before, in a global mail project.</p>
 
-<p>The tool doesn&#8217;t care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
+<p>The tool doesn&rsquo;t care about the source languages. it extracts non-ascii line-based strings, skipping something else - such as HTML codes.</p>
 
-<p>It&#8217;s a simple aid tool only, not much time to improve.</p>
+<p>It&rsquo;s a simple aid tool only, not much time to improve.</p>
 
-<p>I&#8217;m always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
+<p>I&rsquo;m always searching open source tools to extract strings from all kinds of source codes, but it seems no such a stuff.</p>
 
 <p>Last month, I found one: the <a href="http://highlightjs.org/">highlightjs</a>!</p>
 
-<p>Yes, it knows lots of programming languages - that&#8217;s what I&#8217;m looking for.</p>
+<p>Yes, it knows lots of programming languages - that&rsquo;s what I&rsquo;m looking for.</p>
 
 <!--more-->
 
 
 <p>I try to update the core js to testing the idea - it works: Using syntax highlight library to extract strings.</p>
 
-<p>It&#8217;s great!</p>
+<p>It&rsquo;s great!</p>
 ]]></content>
   </entry>
   
@@ -109,9 +109,9 @@
 
 <p>从2 到 2048 需要</p>
 
-<p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &#8230;</p>
+<p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &hellip;</p>
 
-<p>即 2<sup>1</sup>  &#8230;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
+<p>即 2<sup>1</sup>  &hellip;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
 ]]></content>
   </entry>
   
@@ -120,20 +120,20 @@
     <link href="http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample/"/>
     <updated>2014-03-20T05:08:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample</id>
-    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It&#8217;s awkful, right? It&#8217;s on Google+! The Google - who leads the web tech.</p>
+    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It&rsquo;s awkful, right? It&rsquo;s on Google+! The Google - who leads the web tech.</p>
 
 <p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
 
-<p>I&#8217;ve double checked it in my WeChat under Android - it&#8217;s there too. But not in the WeChat for BlackBerry 10.</p>
+<p>I&rsquo;ve double checked it in my WeChat under Android - it&rsquo;s there too. But not in the WeChat for BlackBerry 10.</p>
 
 <!--more-->
 
 
 <p>The false link sample is like this:</p>
 
-<p><strong>(http://mindon.github.io?testing)&#8230;something-else</strong></p>
+<p><strong>(<a href="http://mindon.github.io?testing">http://mindon.github.io?testing</a>)&hellip;something-else</strong></p>
 
-<p>Here&#8217;s a snapshot from Google+</p>
+<p>Here&rsquo;s a snapshot from Google+</p>
 
 <p><img src="/images/blog/false-link.jpg" alt="" /></p>
 

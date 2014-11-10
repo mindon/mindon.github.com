@@ -110,7 +110,7 @@
 
 <ul>
 <li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
-<li><p>Download and unzip the NodeJS source code from Joyent&#8217;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent&rsquo;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
 <li><p>Get and install Python 2.7</p></li>
 <li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
 </ul>
@@ -127,7 +127,7 @@
 <!--more-->
 
 
-<p>if they are not exists, try get it from the latest tag from github of joyent-node ( Left of Files tab, find branch &#8211;> Tags ).</p>
+<p>if they are not exists, try get it from the latest tag from github of joyent-node ( Left of Files tab, find branch &ndash;> Tags ).</p>
 
 <p>( You could use tools/<strong>gyp_node</strong> directly )</p>
 
@@ -185,13 +185,13 @@ msbuild build\build.sln
 
 <h2>Testing</h2>
 
-<p>if run node and require(&#8220;./build/Release/node-expat&#8221;) fail, it may be caused by following reasons:</p>
+<p>if run node and require(&ldquo;./build/Release/node-expat&rdquo;) fail, it may be caused by following reasons:</p>
 
-<p><strong>a)</strong>  check the node-expat.cc, and make sure there&#8217;s a <strong>NODE_MODULE_EXPORT</strong> or <strong>NODE_EXTERN</strong> before the <em>void init</em></p>
+<p><strong>a)</strong>  check the node-expat.cc, and make sure there&rsquo;s a <strong>NODE_MODULE_EXPORT</strong> or <strong>NODE_EXTERN</strong> before the <em>void init</em></p>
 
-<p>something like this: <code>extern "C" NODE_EXTERN void init(Handle&lt;Object&gt; target)</code></p>
+<p>something like this: <code>extern &ldquo;C&rdquo; NODE_EXTERN void init(Handle&lt;Object&gt; target)</code></p>
 
-<p><strong>b)</strong> if &#8220;unable to load shared library&#8221; error, try copy <strong>libexpat.dll</strong> to the folder of <strong>node.exe</strong> located.</p>
+<p><strong>b)</strong> if &ldquo;unable to load shared library&rdquo; error, try copy <strong>libexpat.dll</strong> to the folder of <strong>node.exe</strong> located.</p>
 
 <ul>
 <li> <strong>node test.js</strong></li>
@@ -225,7 +225,7 @@ msbuild build\build.sln
 <pre><code>return XML_Parse(parser, toCString(&amp;str, ""), len, isFinal) != XML_STATUS_ERROR;
 </code></pre>
 
-<p>This patch could help to remove the error &#8221;<strong>not well-formed (invalid token)</strong>&#8221;.</p>
+<p>This patch could help to remove the error &ldquo;<strong>not well-formed (invalid token)</strong>&rdquo;.</p>
 
 <p>Now, your node-epxat under windows is ready for node-soap, you would need this for something like WSDL!</p>
 
@@ -344,44 +344,24 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing Is Not Always Believable</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
-      <li class="post">
       </li>
     
   </ul>
@@ -463,9 +443,8 @@ document.getElementById('mydonate').onclick = function(){
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="/javascripts/octopress.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];

@@ -108,7 +108,7 @@
 
 <p><a href="https://developer.blackberry.com/">BlackBerry Developer</a>, we could see the bb10 provides a variety of options to develop an app:  C/C++ Native SDK, HTML5 WebWorks, Action Script with Adobe AIR, Java in Android Runtime, or with Blackberry Java.</p>
 
-<p>What a platform! ( How&#8217;s its performance? )</p>
+<p>What a platform! ( How&rsquo;s its performance? )</p>
 
 <p>Here I will focus on the <a href="https://developer.blackberry.com/html5/">HTML5 WebWorks</a> app, what kind of problems you need to face. ( All base on windows env. )</p>
 
@@ -121,7 +121,7 @@
 </ul>
 
 
-<p>It&#8217;s a Chrome Extension to help you previewing the webworks app UI.</p>
+<p>It&rsquo;s a Chrome Extension to help you previewing the webworks app UI.</p>
 
 <ul>
 <li><strong>WebWorks SDK</strong></li>
@@ -159,9 +159,9 @@
 <h2>Ripple Emulator</h2>
 
 <ul>
-<li><p> Remember to &#8220;Start Ripple Services&#8221; first</p></li>
+<li><p> Remember to &ldquo;Start Ripple Services&rdquo; first</p></li>
 <li><p> You need to serve your html5 webworks app folder as website - simplest as localhost. ( you make choose Nginx or some simple green web servers )</p></li>
-<li><p> Visit http://localhost/, and &#8220;Enable&#8221; the Ripple Mission. ( It will crashes your Chome sometimes ).</p></li>
+<li><p> Visit <a href="http://localhost/,">http://localhost/,</a> and &ldquo;Enable&rdquo; the Ripple Mission. ( It will crashes your Chome sometimes ).</p></li>
 </ul>
 
 
@@ -169,7 +169,7 @@
 
 <ul>
 <li><p>It contains a node.exe for the SDK: <em>*%WebWorksSDK_HOME%\dependencies\node*</em>, you could get the latest node.exe from <a href="http://nodejs.org/">http://nodejs.org/</a> :-)</p></li>
-<li><p>The package tool bbwp is <strong>%WebWorksSDK_HOME%\bbwp.bat</strong>, which content is: &#8220;%~dp0dependencies\node\node.exe&#8221; &#8220;%~dp0lib\bbwp.js&#8221; %*</p>
+<li><p>The package tool bbwp is <strong>%WebWorksSDK_HOME%\bbwp.bat</strong>, which content is: &ldquo;%~dp0dependencies\node\node.exe&rdquo; &ldquo;%~dp0lib\bbwp.js&rdquo; %*</p>
 
 <p>full command will be like: <strong>%WebWorksSDK_HOME%\dependencies\node\node.exe %WebWorksSDK_HOME%\lib\bbwp.js mydemo-app.zip</strong></p></li>
 <li><p>WebWorks App use JNEXT to run the HTML5 as an app ( JNEXT: <a href="http://jnext.org">http://jnext.org</a> )</p></li>
@@ -180,19 +180,19 @@
 
 <ul>
 <li><p>At first, you will be drived crazy by its full size screen in VMWare Player.</p></li>
-<li><p>A &#8220;Controller&#8221; tool installed with the simulator could help you manage the screen size in the vmware player:</p></li>
+<li><p>A &ldquo;Controller&rdquo; tool installed with the simulator could help you manage the screen size in the vmware player:</p></li>
 </ul>
 
 
-<p>   1) Find the menu &#8220;Connection / connect&#8221;, you need the IP left bottom of the bb10 simulator, some like &#8220;192.168.111.128&#8221;, NOT the 169.254.0.1 which is for device not the simulator.</p>
+<p>   1) Find the menu &ldquo;Connection / connect&rdquo;, you need the IP left bottom of the bb10 simulator, some like &ldquo;192.168.111.128&rdquo;, NOT the 169.254.0.1 which is for device not the simulator.</p>
 
-<p>   2) After success connect, find the menu &#8220;Device / Change Zoom Level&#8221; &#8211; It could help you to resize the simulator screen to fit your host screen size.</p>
+<p>   2) After success connect, find the menu &ldquo;Device / Change Zoom Level&rdquo; &ndash; It could help you to resize the simulator screen to fit your host screen size.</p>
 
 <ul>
-<li><p>Other interest controll options could be found in the &#8220;Controller&#8221; tool. ( find it in your windows&#8217; shortcut from <strong> Start / All Programs / BlackBerry 10 Simulator </strong> , or in the VM folder directly )</p></li>
-<li><p>Want to install your app into the simulator? You need to turn on &#8220;Development Mode&#8221; in BB10 &#8220;Settings / Security and Privacy / Development Mode&#8221;</p></li>
-<li><p>The IP setting in the &#8220;Development Mode&#8221; is for device only</p></li>
-<li><p>Each time the device restart, you need to turn on the &#8220;Development Mode&#8221; again ( You won&#8217;t face this problem in a simulator )</p></li>
+<li><p>Other interest controll options could be found in the &ldquo;Controller&rdquo; tool. ( find it in your windows&#8217; shortcut from <strong> Start / All Programs / BlackBerry 10 Simulator </strong> , or in the VM folder directly )</p></li>
+<li><p>Want to install your app into the simulator? You need to turn on &ldquo;Development Mode&rdquo; in BB10 &ldquo;Settings / Security and Privacy / Development Mode&rdquo;</p></li>
+<li><p>The IP setting in the &ldquo;Development Mode&rdquo; is for device only</p></li>
+<li><p>Each time the device restart, you need to turn on the &ldquo;Development Mode&rdquo; again ( You won&rsquo;t face this problem in a simulator )</p></li>
 </ul>
 
 
@@ -209,7 +209,7 @@
 
 <h1>Start the WebWorks App Development</h1>
 
-<p>You could find more sample and details from <a href="http://blackberry.github.com/webworks/index.html">blackberry&#8217;s github project</a></p>
+<p>You could find more sample and details from <a href="http://blackberry.github.com/webworks/index.html">blackberry&rsquo;s github project</a></p>
 
 <h2><strong> config.xml </strong></h2>
 
@@ -305,7 +305,7 @@
 
 <p>3) change the -device 192.168.111.128 to your simulator IP</p>
 
-<p>4) Update the device password, if you don&#8217;t have one, remove the <strong>-password your-device-password</strong></p>
+<p>4) Update the device password, if you don&rsquo;t have one, remove the <strong>-password your-device-password</strong></p>
 
 <p>Then save following code as <strong>bb-pack-install.cmd</strong>, then drag-drop your app folder on on it.</p>
 
@@ -368,7 +368,7 @@ eof:
 <pre><code>blackberry-signer -proxyhost 123.45.67.89 -proxyport 8080 -register -csjpin csj-apply-password -cskpass my-store-password client-RDK-#######.csj client-PBDT-#######.csj
 </code></pre>
 
-<p>If you don&#8217;t need proxy, remove the relative parameters. DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong> for <strong>blackberry-signer</strong>, if you put the somewhere else, it won&#8217;t work.</p>
+<p>If you don&rsquo;t need proxy, remove the relative parameters. DO REMEMBER the proxy arguments <strong>MUST BE THE FIRST PARAMETER</strong> for <strong>blackberry-signer</strong>, if you put the somewhere else, it won&rsquo;t work.</p>
 
 <p>The <strong>-cskpass</strong> you choose here will be the <strong>-storepass</strong> value for generate the <strong>debug token</strong>.</p>
 
@@ -416,11 +416,11 @@ eof:
 <pre><code>batchbar-signer myandroid-app.bar author.p12 my-store-password -t product\
 </code></pre>
 
-<p>The myandroid-app.bar is generated by command tool: <strong>apk2bar</strong> (It&#8217;s not included in webworks sdk, and could fetch from <a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a> )</p>
+<p>The myandroid-app.bar is generated by command tool: <strong>apk2bar</strong> (It&rsquo;s not included in webworks sdk, and could fetch from <a href="http://developer.blackberry.com/android/tools/">http://developer.blackberry.com/android/tools/</a> )</p>
 
 <h2>Another Issue when working an WebWorks Native Extension</h2>
 
-<p>If you got an error &#8220;Require Error Can&#8217;t find /usr/lib/webplatform/plugins/jnext/***.so Libary cannot be found&#8221;.</p>
+<p>If you got an error &ldquo;Require Error Can&rsquo;t find /usr/lib/webplatform/plugins/jnext/***.so Libary cannot be found&rdquo;.</p>
 
 <p>Try telnet 192.168.111.128 with devuser/devuser as account and password, you could never find your .so file there in the path even it works.</p>
 
@@ -549,44 +549,24 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing Is Not Always Believable</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
-      <li class="post">
       </li>
     
   </ul>
@@ -668,9 +648,8 @@ document.getElementById('mydonate').onclick = function(){
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="/javascripts/octopress.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to write a mail in HTML - Mindon.IDEA</title>
+  <title>How to Write a Mail in HTML - Mindon.IDEA</title>
   <meta name="author" content="Mindon Feng">
 
   
@@ -111,7 +111,7 @@
 <li><p> 全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p></li>
 <li><p> 不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
 <li><p> style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
- <code>&lt;td background=”http://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;</code></p></li>
+ <code>&lt;td background=”<a href="http://image1.koubei.com/images/common/logo_koubei.gif%E2%80%9D&amp;gt;&amp;lt;/td&amp;gt;">http://image1.koubei.com/images/common/logo_koubei.gif%E2%80%9D&amp;gt;&amp;lt;/td&amp;gt;</a></code></p></li>
 <li> div模式的邮箱不支持flash，iframe模式的有待验证。</li>
 </ol>
 
@@ -170,7 +170,7 @@ font-* 族的CSS属性不允许使用缩写，请分别定义 font-size, font-we
 <li><p> 继承性
 注意表格不会继承外部的font等属性，请务必，在每个<code>&lt;td&gt;</code>元素上都定义字体属性和颜色。</p></li>
 <li><p> 背景的处理
-不允许使用style=”background:url(http://…)”，请使用<code>&lt;td&gt;</code>的属性(attribute) background=“http://…”。（由于CSS背景图片是一种会影响页面渲染速度的定义，因此大多数Web邮件系统会过滤它。）</p></li>
+不允许使用style=”background:url(<a href="http://%E2%80%A6">http://%E2%80%A6</a>)”，请使用<code>&lt;td&gt;</code>的属性(attribute) background=“<a href="http://%E2%80%A6%E2%80%9D%E3%80%82%EF%BC%88%E7%94%B1%E4%BA%8ECSS%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BC%9A%E5%BD%B1%E5%93%8D%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%A4%A7%E5%A4%9A%E6%95%B0Web%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%BC%9A%E8%BF%87%E6%BB%A4%E5%AE%83%E3%80%82%EF%BC%89">http://%E2%80%A6%E2%80%9D%E3%80%82%EF%BC%88%E7%94%B1%E4%BA%8ECSS%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BC%9A%E5%BD%B1%E5%93%8D%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%A4%A7%E5%A4%9A%E6%95%B0Web%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%BC%9A%E8%BF%87%E6%BB%A4%E5%AE%83%E3%80%82%EF%BC%89</a></p></li>
 </ul>
 
 
@@ -333,44 +333,24 @@ document.getElementById('mydonate').onclick = function(){
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
-      <li class="post">
       </li>
     
+      <li class="post">
         <a href="/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/">My Next Mobile Phone and BlackBerry 10.3</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/09/18/dust-in-a-old-building/">那些恼人的尘灰</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/about-xishaoye-roujiamo/">西少爷.肉夹馍，开分店啦</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/23/seeing-is-not-always-believable/">Seeing Is Not Always Believable</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/22/the-programming-language-swift/">The Programming Language: Swift</a>
-      <li class="post">
-      </li>
-    
-        <a href="/blog/2014/08/10/wordpress-golang-and-swift/">WordPress, Golang & Swift</a>
-      <li class="post">
       </li>
     
   </ul>
@@ -452,9 +432,8 @@ document.getElementById('mydonate').onclick = function(){
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="/javascripts/octopress.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
