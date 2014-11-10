@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: chrome-app | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Chrome-app | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/chrome-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
+    <title type="html"><![CDATA[Save Presentations Offline From Google Drive]]></title>
     <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
@@ -94,7 +94,7 @@ of Computer Programs</a>.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Ingress Portals Finder - A Chrome Extension for the Game]]></title>
+    <title type="html"><![CDATA[Ingress Portals Finder - a Chrome Extension for the Game]]></title>
     <link href="http://mindon.github.io/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game/"/>
     <updated>2013-01-26T15:00:00+08:00</updated>
     <id>http://mindon.github.io/blog/2013/01/26/incredible-ingress-portals-finder-a-chrome-extension-for-the-game</id>
@@ -245,7 +245,7 @@ of Computer Programs</a>.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Ingress! Ingress! Design and Develop A Chrome Extension - Ingress Portals]]></title>
+    <title type="html"><![CDATA[Ingress! Ingress! Design and Develop a Chrome Extension - Ingress Portals]]></title>
     <link href="http://mindon.github.io/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals/"/>
     <updated>2013-01-19T14:46:00+08:00</updated>
     <id>http://mindon.github.io/blog/2013/01/19/ingress-ingress-design-and-develop-a-chrome-extension-ingress-portals</id>

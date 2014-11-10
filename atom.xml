@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:53:36+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[DJI - The Future of Possible]]></title>
+    <title type="html"><![CDATA[DJI - the Future of Possible]]></title>
     <link href="http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible/"/>
     <updated>2014-11-09T03:01:05+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible</id>
@@ -60,7 +60,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Two problems found in Jekyll when using Octopress]]></title>
+    <title type="html"><![CDATA[Two Problems Found in Jekyll When Using Octopress]]></title>
     <link href="http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/"/>
     <updated>2014-11-09T01:55:48+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll</id>
@@ -103,7 +103,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Shortcuts for Linux console]]></title>
+    <title type="html"><![CDATA[Shortcuts for Linux Console]]></title>
     <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
     <updated>2014-11-08T15:14:07+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
@@ -274,7 +274,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Seeing is Not Always Believable]]></title>
+    <title type="html"><![CDATA[Seeing Is Not Always Believable]]></title>
     <link href="http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable/"/>
     <updated>2014-08-23T16:18:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable</id>
@@ -486,7 +486,7 @@ resetBlocks();
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
+    <title type="html"><![CDATA[Swift - the New iOS Language]]></title>
     <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
     <updated>2014-06-17T05:38:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
@@ -621,7 +621,7 @@ resetBlocks();
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
+    <title type="html"><![CDATA[Facebook Open Sourcing Paper Animation Engine Pop]]></title>
     <link href="http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
     <updated>2014-05-02T11:09:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
@@ -632,7 +632,7 @@ resetBlocks();
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
+    <title type="html"><![CDATA[How to Extract Strings From Source Codes?]]></title>
     <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
@@ -703,7 +703,7 @@ resetBlocks();
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Save Presentations Offline from Google Drive]]></title>
+    <title type="html"><![CDATA[Save Presentations Offline From Google Drive]]></title>
     <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
     <updated>2014-04-02T20:54:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>

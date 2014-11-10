@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: mindon | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[DJI - The Future of Possible]]></title>
+    <title type="html"><![CDATA[DJI - the Future of Possible]]></title>
     <link href="http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible/"/>
     <updated>2014-11-09T03:01:05+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/09/dji-phantom-the-future-of-possible</id>
@@ -60,7 +60,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Two problems found in Jekyll when using Octopress]]></title>
+    <title type="html"><![CDATA[Two Problems Found in Jekyll When Using Octopress]]></title>
     <link href="http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll/"/>
     <updated>2014-11-09T01:55:48+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/09/two-bugs-found-in-jekyll</id>
@@ -103,7 +103,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Shortcuts for Linux console]]></title>
+    <title type="html"><![CDATA[Shortcuts for Linux Console]]></title>
     <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
     <updated>2014-11-08T15:14:07+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>

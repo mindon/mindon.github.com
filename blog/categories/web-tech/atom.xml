@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: web-tech | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Web-tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -48,7 +48,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Facebook open sourcing Paper animation engine Pop]]></title>
+    <title type="html"><![CDATA[Facebook Open Sourcing Paper Animation Engine Pop]]></title>
     <link href="http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
     <updated>2014-05-02T11:09:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
@@ -59,7 +59,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Extract Strings from Source Codes?]]></title>
+    <title type="html"><![CDATA[How to Extract Strings From Source Codes?]]></title>
     <link href="http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes/"/>
     <updated>2014-05-02T08:26:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/05/02/how-to-extract-strings-from-source-codes</id>
@@ -116,7 +116,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[A false linkable text sample]]></title>
+    <title type="html"><![CDATA[A False Linkable Text Sample]]></title>
     <link href="http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample/"/>
     <updated>2014-03-20T05:08:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample</id>

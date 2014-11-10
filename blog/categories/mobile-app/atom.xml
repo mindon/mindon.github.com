@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: mobile-app | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Mobile-app | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mobile-app/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -79,7 +79,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[A callstack trace for QML js]]></title>
+    <title type="html"><![CDATA[A Callstack Trace for QML Js]]></title>
     <link href="http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js/"/>
     <updated>2014-03-20T05:02:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/20/a-callstack-trace-for-qml-js</id>
@@ -138,7 +138,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[QML Features Should be in BlackBerry 10 OS]]></title>
+    <title type="html"><![CDATA[QML Features Should Be in BlackBerry 10 OS]]></title>
     <link href="http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os/"/>
     <updated>2014-03-15T18:51:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/15/qml-features-expected-in-blackberry-10-os</id>

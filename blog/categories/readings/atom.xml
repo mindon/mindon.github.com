@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: readings | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Readings | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/readings/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Shortcuts for Linux console]]></title>
+    <title type="html"><![CDATA[Shortcuts for Linux Console]]></title>
     <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
     <updated>2014-11-08T15:14:07+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
@@ -156,7 +156,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Swift - The new iOS Language]]></title>
+    <title type="html"><![CDATA[Swift - the New iOS Language]]></title>
     <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
     <updated>2014-06-17T05:38:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
@@ -263,7 +263,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <title type="html"><![CDATA[UltimEyes: To Improve Your Vision?]]></title>
     <link href="http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
     <updated>2014-03-06T06:19:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>

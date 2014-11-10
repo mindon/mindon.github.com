@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: light-air-water-m-sci | Mindon.IDEA]]></title>
+  <title><![CDATA[Category: Light-air-water-m-sci | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/light-air-water-m-sci/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-10T09:55:20+08:00</updated>
+  <updated>2014-11-10T11:05:14+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Seeing is Not Always Believable]]></title>
+    <title type="html"><![CDATA[Seeing Is Not Always Believable]]></title>
     <link href="http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable/"/>
     <updated>2014-08-23T16:18:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/08/23/seeing-is-not-always-believable</id>
@@ -75,7 +75,7 @@ resetBlocks();
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[UltimEyes: to Improve Your Vision?]]></title>
+    <title type="html"><![CDATA[UltimEyes: To Improve Your Vision?]]></title>
     <link href="http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
     <updated>2014-03-06T06:19:00+08:00</updated>
     <id>http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
