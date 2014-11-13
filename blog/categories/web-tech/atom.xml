@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-11T01:13:04+08:00</updated>
+  <updated>2014-11-13T14:25:09+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Discuz安装错误]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz/"/>
+    <updated>2014-11-13T14:08:05+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz</id>
+    <content type="html"><![CDATA[<p>昨天在MBP上安装简体／繁体版本的时候遭遇这么一个错误：</p>
+
+<p>“数据库连接错误”</p>
+
+<p>“No such file or directory”</p>
+
+<p>请返回修复。</p>
+
+<p>除此之外没有任何的线索。这样的提示信息并对下一步解决问题并不能提供任何帮助。</p>
+
+<p>搜索和尝试跟踪错误都无果。最后解决的办法是把缺省的 localhost 改成了 127.0.0.1 ，之后顺利安装！</p>
+
+<p>Discuz，并没有支持响应式。</p>
+
+<p>正如Aby跟我说的，移动互联网时代，论坛是Out掉的东西了，除了在某些团体和领域中局部留存之外。</p>
+
+<p>前几个月用WordPress搭建的WeChat Blog根据访问数据来看，访问量里已经有超过70%的用户是通过移动设备访问的了。这即便对于我这样冲在互联网技术前沿的开发者来说，也是个变化异常迅速的现象。Web从PC转到移动端，也就是短短的两年内发生的翻转。</p>
+
+<p>移动端Web，目标响应时间1秒。</p>
+
+<p>Docker容器式配置，极速扩容响应。</p>
+
+<p>应用化部署，无感响应体验。</p>
+
+<p>大数据挖掘，移动和社交营销，即时的用户反馈和沟通。</p>
+
+<p>移动互联的时代，无不在追求响应的极速。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[WordPress, Golang & Swift]]></title>
@@ -112,41 +147,6 @@
 <p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &hellip;</p>
 
 <p>即 2<sup>1</sup>  &hellip;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A False Linkable Text Sample]]></title>
-    <link href="http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample/"/>
-    <updated>2014-03-20T05:08:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/03/20/a-false-linkable-text-sample</id>
-    <content type="html"><![CDATA[<p>I found a link in a Google+ post failed to be opened someday. It&rsquo;s awkful, right? It&rsquo;s on Google+! The Google - who leads the web tech.</p>
-
-<p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
-
-<p>I&rsquo;ve double checked it in my WeChat under Android - it&rsquo;s there too. But not in the WeChat for BlackBerry 10.</p>
-
-<!--more-->
-
-
-<p>The false link sample is like this:</p>
-
-<p><strong>(<a href="http://mindon.github.io?testing">http://mindon.github.io?testing</a>)&hellip;something-else</strong></p>
-
-<p>Here&rsquo;s a snapshot from Google+</p>
-
-<p><img src="/images/blog/false-link.jpg" alt="" /></p>
-
-<p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
-
-<p>Our test team and I could not accept this result in WeChat for BlackBerry 10, then here comes my customized linkable text detecting code in JavaScript.</p>
-
-<script src="https://gist.github.com/mindon/9317393.js"></script>
-
-
-<p>It helps to avoid this issue and provides you the customized possibility.</p>
-
-<p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
 ]]></content>
   </entry>
   

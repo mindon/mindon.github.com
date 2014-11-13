@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-11T01:13:04+08:00</updated>
+  <updated>2014-11-13T14:25:09+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Discuz安装错误]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz/"/>
+    <updated>2014-11-13T14:08:05+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz</id>
+    <content type="html"><![CDATA[<p>昨天在MBP上安装简体／繁体版本的时候遭遇这么一个错误：</p>
+
+<p>“数据库连接错误”</p>
+
+<p>“No such file or directory”</p>
+
+<p>请返回修复。</p>
+
+<p>除此之外没有任何的线索。这样的提示信息并对下一步解决问题并不能提供任何帮助。</p>
+
+<p>搜索和尝试跟踪错误都无果。最后解决的办法是把缺省的 localhost 改成了 127.0.0.1 ，之后顺利安装！</p>
+
+<p>Discuz，并没有支持响应式。</p>
+
+<p>正如Aby跟我说的，移动互联网时代，论坛是Out掉的东西了，除了在某些团体和领域中局部留存之外。</p>
+
+<p>前几个月用WordPress搭建的WeChat Blog根据访问数据来看，访问量里已经有超过70%的用户是通过移动设备访问的了。这即便对于我这样冲在互联网技术前沿的开发者来说，也是个变化异常迅速的现象。Web从PC转到移动端，也就是短短的两年内发生的翻转。</p>
+
+<p>移动端Web，目标响应时间1秒。</p>
+
+<p>Docker容器式配置，极速扩容响应。</p>
+
+<p>应用化部署，无感响应体验。</p>
+
+<p>大数据挖掘，移动和社交营销，即时的用户反馈和沟通。</p>
+
+<p>移动互联的时代，无不在追求响应的极速。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DJI - the Future of Possible]]></title>
@@ -188,41 +223,6 @@
 <p>世界是丰富多彩的，未来是变幻莫测的。</p>
 
 <p>宽容和感恩之心是走向未来的必备食粮。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My Next Mobile Phone and BlackBerry 10.3]]></title>
-    <link href="http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3/"/>
-    <updated>2014-09-19T06:21:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/09/19/my-next-mobile-phone-and-blackberry-10-dot-3</id>
-    <content type="html"><![CDATA[<p>Yesterday, I updated my BlackBerry Q10 Dev Device to BlackBerry OS 10.3.0.738, It was from the 10.3.0.1154 autoloader.</p>
-
-<p>It&rsquo;s flat styled - it looks much better.</p>
-
-<p>But its camera shot method is changed to an android style, it&rsquo;s bad - it&rsquo;s a great part of the camera in BlackBerry 10 devices. Taking photo and its NFC are the features I enjoy everyday.</p>
-
-<p>Yes, I&rsquo;m using a BlackBerry mobile phone, a dev device not for sell. Last mobile phone I bought for myself is a Nokia, now it&rsquo;s such a tiny one. Here they are</p>
-
-<p><img src="/images/blog/mobiles.jpg" alt="" /></p>
-
-<p>I&rsquo;m always waitting for my next mobile phone.</p>
-
-<p>iPhone? Yes, it&rsquo;s a great mobile phone, but I still find no reason for it - at least there&rsquo;s not enough reasons right now. Even the iPhone 6 - hmm, It&rsquo;s great and with a high price and not sell in China mainland yet :)</p>
-
-<p>I was planning to buy a Nexus 4, then a Moto X, then a Next 5&hellip;</p>
-
-<p>Google services is blocked in mainland China.</p>
-
-<p>You may say a VPN may works - but I don&rsquo;t like it.</p>
-
-<p>You may say a hosts with a rooted device works - But I don&rsquo;t like it either.</p>
-
-<p>Before a mobile device hit my heart, I will still prefer my dev version BlackBerry Q10.</p>
-
-<p>I have a Nexus 7(2013) and a Kindle, they are awesome devices.</p>
-
-<p>But choosing a mobile phone, I could wait.</p>
 ]]></content>
   </entry>
   
