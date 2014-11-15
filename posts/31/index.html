@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000141972, blog id: airoff
-History stat: 浏览/评论：424/0 , 日期：2005年1月7日 10:57 REM 90 Deg. Swirl with 10 step blend Font used: &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000141979, blog id: airoff
+History stat: 浏览/评论：260/0 , 日期：2005年1月7日 11:01 /* mindon actionscript for flash 7.0 or upper @ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,197 @@ History stat: 浏览/评论：424/0 , 日期：2005年1月7日 10:57 REM 90 Deg.
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141979/">Use XML & XPath in Flash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-01-07T11:01:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>11:01 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141979, blog id: airoff
+History stat: 浏览/评论：260/0  ,  日期：2005年1月7日 11:01</p>
+
+<p><font color=#00008B><font size=2 style="line-height:14pt"></p>
+
+<p>/* mindon actionscript for flash 7.0 or upper</p>
+
+<ul>
+<li><p>@date    07/29, 2004</p></li>
+<li><p>@author      Feng Rongjun from Shenzhen China</p></li>
+<li><p>@e-mail      <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x69;&#115;&#101;&#x61;&#115;&#107;&#x79;&#x40;&#104;&#x6f;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x69;&#115;&#x65;&#x61;&#115;&#x6b;&#x79;&#x40;&#x68;&#111;&#116;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;</a></p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>import com.xfactorstudio.xml.xpath.*;</p>
+
+<p>/<em> load xml into a textarea component with stylesheet </em>/</p>
+
+<p>function styleXML(areatxt, xmlfile, cssfile)</p>
+
+<p>{</p>
+
+<p>var areatxt, xmlfile, cssfile;</p>
+
+<p>try {</p>
+
+<p>//init TextArea component</p>
+
+<p>areatxt.html = true;</p>
+
+<p>areatxt.wordWrap = true;</p>
+
+<p>areatxt.multiline = true;</p>
+
+<p>areatxt.label.condenseWhite=true;</p>
+
+<p>//load css</p>
+
+<p>if(cssfile) {</p>
+
+<p>var csstyle = new TextField.StyleSheet();</p>
+
+<p>csstyle.load(cssfile);</p>
+
+<p>areatxt.styleSheet = csstyle;</p>
+
+<p>}</p>
+
+<p>//load XML CONTENT</p>
+
+<p>if(xmlfile) {</p>
+
+<p>var xmlc = new XML();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>areatxt.text = xmlc;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/<em> load xml file </em>/</p>
+
+<p>_global.xmldocs = {};</p>
+
+<p>function loadXML(xmlfile, xmlfunc)</p>
+
+<p>{</p>
+
+<p>var xmlfile, xmlfunc;</p>
+
+<p>try {</p>
+
+<p>if(xmlfile &amp;&amp; xmlfunc &amp;&amp; typeof xmlfunc == &quot;function&quot;) {</p>
+
+<p>var xmlc = new XPathDocument();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>xmldocs[xmlfile] = this;</p>
+
+<p>xmlfunc(this);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/ loader example</p>
+
+<p>function xmlLoader(xdoc)</p>
+
+<p>{</p>
+
+<p>var xdoc;</p>
+
+<p>if(xdoc) {</p>
+
+<p>var nod = xdoc.selectSingleNode(&quot;/mindon/name&quot;);</p>
+
+<p>if(nod) {</p>
+
+<p>if(String(nod.stringValue())==&quot;derek.f&quot;) {</p>
+
+<p>trace(&quot;true&quot;);</p>
+
+<p>} else {</p>
+
+<p>trace(nod.stringValue());</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&quot;cannot find node mindon/name&quot;);</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&quot;xml read fail&quot;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/</p>
+
+<p></font></font></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2570,45 +2761,6 @@ History stat: 浏览/评论：126/2  ,  日期：2005年1月4日 13:12</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139151/">2005的开始</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2005-01-04T08:51:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>8:51 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000139151, blog id: airoff
-History stat: 浏览/评论：97/1  ,  日期：2005年1月4日 08:51</p>
-
-<p>1月2日，在待屋里编了一整天程序后，决定出门做点什么。想起了在何香凝美术馆的毕加索版画展。因为美术馆离住的地方不外两站路，于是就走了过去，顺便给自己点活动量。票价35块，进去的时候还经过了如机场安检一般的程序，保安看到我带了相机还特意提醒不允许拍照——有点失望。美术馆里同时有另外一个画家（刘贵宾）的油画展，就是圣诞节在美术馆外拍照片时看到在招贴底下留影的那位。</p>
-
-<p>看版画展的人不少，还有很多小朋友随他们的老师来学习的。我也不懂什么版画，只是凭自己的感觉和知道的一丁点有限的了解来理解自己眼前的线条和画面。我想，看展览不外是两种目的：企图理解艺术家所要表达的内容和找寻自己期待的内容。我的知识和理解能力大概对艺术家原本的表达意图揣测是十分有限的，大多时候我只是在找寻自己所期待的线条和意境，至于符不符合作者最初想表达的东西，我并不是太在意。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139151/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/32">&larr; Older</a>
@@ -2658,7 +2810,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 89 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 90 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -2679,6 +2831,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/15/i-like-this-ted-talk/">我喜欢这个TED演讲</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/13/an-error-when-installing-discuz/">Discuz安装错误</a>
       </li>
     
@@ -2692,10 +2848,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
       </li>
     
   </ul>

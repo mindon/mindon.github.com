@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-15T14:34:21+08:00</updated>
+  <updated>2014-11-15T15:55:38+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[我喜欢这个TED演讲]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk/"/>
+    <updated>2014-11-15T15:40:37+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk</id>
+    <content type="html"><![CDATA[<p>This TED talk is from Philippe Starck: “Design and destiny”。</p>
+
+<p>Philippe的英语口音听起来特别有意思——嗯……很有喜感。</p>
+
+<p>他说话的和风格和生动的配音都引入入胜。当然，还有他演讲的内容也很能激发思考的。</p>
+
+<p>目光的高度注定文明的程度，不过不要把目光放到头顶，因为那便到了胡扯的神的位置。</p>
+
+<p>45亿年以来，人类不过是地球文明故事过程中间的一个环节，回望那个地球生命初期“愚蠢的”细菌，40多亿年之后的东西会怎么看人类呢？</p>
+
+<p>这个TED很欢乐且会让你有所收获，推荐大家看看：</p>
+
+<p>设计师 Philippe Starck—没有秀什么漂亮幻灯片—以 18 分钟追根究底探索「为什么要设计？」 这个问题。</p>
+
+<!--more-->
+
+
+
+
+<iframe src="https://embed-ssl.ted.com/talks/lang/zh-cn/philippe_starck_thinks_deep_on_design.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>喜欢优酷的可以到这里看： <a href="http://v.youku.com/v_show/id_XNDYwMDExMzY4.html">Philippe Starck:对设计的深入思考</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Discuz安装错误]]></title>
@@ -30,15 +61,15 @@
 
 <p>搜索和尝试跟踪错误都无果。最后解决的办法是把缺省的 localhost 改成了 127.0.0.1 ，之后顺利安装！</p>
 
-<p>Discuz，并没有支持响应式。</p>
+<p>Discuz，貌似并没有支持响应式，虽然有手机版。</p>
 
-<p>正如Aby跟我说的，移动互联网时代，论坛是Out掉的东西了，除了在某些团体和领域中局部留存之外。</p>
+<p>正如Aby跟我说的，移动互联网时代，论坛可能是Out掉的东西了，除了在某些团体和领域局部留存之外。</p>
 
-<p>前几个月用WordPress搭建的WeChat Blog根据访问数据来看，访问量里已经有超过70%的用户是通过移动设备访问的了。这即便对于我这样冲在互联网技术前沿的开发者来说，也是个变化异常迅速的现象。Web从PC转到移动端，也就是短短的两年内发生的翻转。</p>
+<p>前几个月用WordPress搭建的WeChat Blog根据访问数据来看，访问量里已经有超过70%的用户是通过移动设备访问的了。这即便对于我这样冲在互联网技术前沿的开发者来说，也是个难以想象的变化异常迅速的现象。Web从PC转到移动端，也就是短短的两年内发生的翻转。</p>
 
 <p>移动端Web，目标响应时间1秒。</p>
 
-<p>Docker容器式配置，极速扩容响应。</p>
+<p>Docker容器式配置，极速扩展部署响应。</p>
 
 <p>应用化部署，无感响应体验。</p>
 
@@ -734,36 +765,6 @@ resetBlocks();
 
 
 <p><img src="http://mindon.github.io/images/blog/url.jpeg" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Save Presentations Offline From Google Drive]]></title>
-    <link href="http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive/"/>
-    <updated>2014-04-02T20:54:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/04/02/save-g-docs-presentations-offline-from-google-drive</id>
-    <content type="html"><![CDATA[<p>I enjoy google docs, though it&rsquo;s not easy to visit google services from China.</p>
-
-<p>Last week, i created a presentation on Google Drive through proxy. But how can i play the presentation without proxy?</p>
-
-<p>Yes, Google Docs provides methods to download as PDF, PPTX or other image formates, but here&rsquo;s the fact:</p>
-
-<ol>
-<li><p>PDF, for reading only, cannot play.</p></li>
-<li><p>PPTX, layout is not compatible fully, and fonts not embedded.</p></li>
-<li><p>Images, view only, not playable.</p></li>
-</ol>
-
-
-<p>That&rsquo;s why I made the Chrome Extension <strong>GdPr Offline</strong>, which save the presentation as it is, totally playable offline.</p>
-
-<p>The Chrome extension download link: <a href="https://chrome.google.com/webstore/detail/gdpr-offline/apghddnkhdhjdlmhkoagjenpcngbkdde">GdPr Offline</a></p>
-
-<p><img src="https://lh4.googleusercontent.com/gpXPndg7VVXPgoWf5p9Jz8Bq35iKudS5QiPb4-8rrJ7afXQ9cK0yFVvR-X1QjVff5lU0uVO0ddg=s1280-h800-e365-rw" alt="" /></p>
-
-<p>Now, enjoy your presentations anywhere, with or without network, with or without a proxy, inside or outside China :-)</p>
-
-<p><i id="link-tags">Google Extension;Google Drive;Google Docs;PPTX</i></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Context context = getApplicationContext(); SQLite Databases context.getDatabasePath("myDbName") Cache System will clean it auto if low memory context &hellip;">
+  <meta name="description" content="Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8. Android Managing Projects from the Command Line http:// &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Building Mobile Apps From the Command Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-09-15T09:04:00+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>9:04 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
+
+<h1>Android</h1>
+
+<p>Managing Projects from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
+
+<h2>Creating an Android Project</h2>
+
+<pre><code>android create project \
+--target &lt;target_ID&gt; \
+--name &lt;your_project_name&gt; \
+--path path/to/your/project \
+--activity &lt;your_activity_name&gt; \
+--package &lt;your_package_namespace&gt;
+</code></pre>
+
+<h2>Updating a Project</h2>
+
+<pre><code>android update project --name &lt;project_name&gt; --target &lt;target_ID&gt;
+--path &lt;path_to_your_project&gt;
+</code></pre>
+
+<h2>Setting up a Library Project</h2>
+
+<pre><code>android create lib-project --name &lt;your_project_name&gt; \
+--target &lt;target_ID&gt; \
+--path path/to/your/project \
+--package &lt;your_library_package_namespace&gt;
+</code></pre>
+
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/09/15/build-mobile-apps-from-command-line/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -579,53 +645,6 @@ Environment.getExternalStoragePublicDirectory(
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/16/its-more-than-chatting-the-wechat/">若有实验室版的微信 - 不仅仅是聊天</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2013-02-16T23:01:00+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:01 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>假设微信不是一个聊天工具，重新将其功能DIY一下会得到怎样的一个应用呢？</p>
-
-<p>于是，尝试使用Context - Connected - Contagious的3C思维来整理一下对微信体验。</p>
-
-<p>首先，微信已经成功创造并形成了一个相当好的Context(毫无疑问，这个Context形成于QQ和QQ邮箱这样良好的Contexts下)，在这个Context下让QQ用户之间，用户与服务提供者，公众人物建立起了新的关联 - Connected! 其传染途径-朋友圈，分享，共振(摇一摇-动作，附近-区域，漂流瓶-心理)，二维码。</p>
-
-<p>关联之后有两类必然目的: I/O 输入/输出。</p>
-
-<p><strong>输入类</strong>: 价值获取，情感影响
-<strong>输出类</strong>: 分享(有价值，有情感触动)，自我表达</p>
-
-<p>输入的目的-输出更有效; 输出的目的-传染并收获新的关联-从而强化I/O循环，形成回路结构体。</p>
-
-<p>基于这个3C思维分析，如何对微信这样一个日益复杂的产品体验进形DIY呢?</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/02/16/its-more-than-chatting-the-wechat/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/6">&larr; Older</a>
@@ -675,7 +694,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 89 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 90 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -696,6 +715,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/15/i-like-this-ted-talk/">我喜欢这个TED演讲</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/13/an-error-when-installing-discuz/">Discuz安装错误</a>
       </li>
     
@@ -709,10 +732,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/19/happy-angry-and-worries/">开心，怒气和烦恼</a>
       </li>
     
   </ul>
