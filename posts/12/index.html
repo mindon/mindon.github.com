@@ -9,8 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Cell Cycle
-Creating 3d-printable cellular models. You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure. &hellip;">
+  <meta name="description" content="String encoded in PHP needs to decode in NodeJS? Or encoded in NodeJS needs to decode in PHP? Here&rsquo;s a match result with aes-128-cbc &amp; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +68,69 @@ Creating 3d-printable cellular models. You can shape, twist, and subdivide, tran
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Match Encrypt &amp; Decrypt in PHP and NodeJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-31T00:20:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>12:20 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&rsquo;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+
+<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -564,56 +626,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/notes-on-mongodb/">Notes on MongoDB</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-03-17T11:12:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:12 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>MongoDB资料汇总专题</strong>
-<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
-
-<h2>MongoDB 最佳实践</h2>
-
-<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
-
-<p><strong>1. 始终启用备份</strong></p>
-
-<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
-二节点可以迅速启用，你的应用不会中断。</p>
-
-<p><strong>2. 使用最新版本</strong></p>
-
-<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
-和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
-，你应该尽快升级。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/notes-on-mongodb/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/13">&larr; Older</a>
@@ -663,13 +675,13 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 90 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 91 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 13 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 14 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -684,7 +696,11 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/11/15/i-like-this-ted-talk/">我喜欢这个TED演讲</a>
+        <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/15/i-like-this-ted-talk/">喜欢这个TED演讲</a>
       </li>
     
       <li class="post">
@@ -697,10 +713,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/08/shortcuts-for-linux-console/">Shortcuts for Linux Console</a>
       </li>
     
   </ul>

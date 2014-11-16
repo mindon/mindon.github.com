@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-15T19:00:07+08:00</updated>
+  <updated>2014-11-16T13:06:41+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -14,7 +14,69 @@
 
   
   <entry>
-    <title type="html"><![CDATA[我喜欢这个TED演讲]]></title>
+    <title type="html"><![CDATA[DJI Inspire 1 - Fly With Camera]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera/"/>
+    <updated>2014-11-16T10:46:12+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera</id>
+    <content type="html"><![CDATA[<p>对于Drone，一直也还是处于关注的角度，纯粹的关注者，还没有入门。</p>
+
+<p>从对“Context”概念的关注，在TED看到的“Robots that fly … and cooperate” － 飞行的机器人且能协作</p>
+
+<p><a href="http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate">http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate</a></p>
+
+<p>到最近看的“A flying camera … on a leash” (by Fotokite.com) <a href="http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash">http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash</a></p>
+
+<p>以及最近DJI发布的 Inspire 1，这款介于专业和非专业之间的令人振奋的产品。</p>
+
+<p>嗯，我目前也还只是个看客。借别人的眼睛去飞越荒野，瞭望巨鲸翻腾……</p>
+
+<p>对于飞行，我甚至还没有信心接过遥控器感受飞行的乐趣。</p>
+
+<p>对于摄影，我也还只是用自动挡的自动党成员。</p>
+
+<p>不过，我那颗的心，却时刻为科技的前行而兴奋不已，为眼睛触碰到的独特视野而雀跃。</p>
+
+<p>分享一下目前找到的一些关于 DJI Inspire 1，“银思派.蚊”（自己给起的中文名，非官方；以后是不是有银思派.兔，银思派.梭利，银思派.拂鸥，银思派.珐埃…… 咱就不得而知了）</p>
+
+<p>首先是官方的</p>
+
+<p>“DJI Inspire 1 产品介绍”</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc2OTQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>“DJI Inspire 1- 展翅蓝天”</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc1MjIw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>DJI 的飞行器竟然有SDK，这也是极其令人兴奋的事情，特别对于我们这种做软件开发的爱好者来说（虽说我目前还算不上是个合格的爱好者）。 <a href="https://dev.dji.com">https://dev.dji.com</a></p>
+
+<h2>收集各路评测：</h2>
+
+<p>Fro Knows Photo 对DJI Inspire 1的Review</p>
+
+<!--more-->
+
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI2Mzk2MDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>【触动力】全新DJI专业一体化航拍飞行器 Inspire 1  （同官方视频，配中文说明而已）</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI2Njk2MzQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>The Verge Review</p>
+
+<p><embed src="http://player.56.com/v_MTMwMjI1OTMz.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
+
+<p>Dronefly 评测</p>
+
+<p><embed src="http://player.56.com/v_MTMwMTk4MDg4.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
+
+<p>暂时没找到更多的视频了，真正Inspire 1出来之后估计会更好 :-) 期待吧！</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[喜欢这个TED演讲]]></title>
     <link href="http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk/"/>
     <updated>2014-11-15T15:40:37+08:00</updated>
     <id>http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk</id>
@@ -165,72 +227,6 @@
 <p>这个相对简单了，就是模版里的 layout 部分出的问题，新Octopress只认null不认nil了。于是找到了 source/atom.xml 改nil为null。但是categories这个不是atom.xml让我一通找，最后在 _includes/custom/category_feed.xml 找到，同样修改解决。</p>
 
 <p>折腾这个加写这篇博文就花了我几乎半天……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Shortcuts for Linux Console]]></title>
-    <link href="http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console/"/>
-    <updated>2014-11-08T15:14:07+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/11/08/shortcuts-for-linux-console</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m using text editor coding HTML &amp; JavaScript. Enjoying compiling android apps, blackberry 10 apps, adobe air apps &hellip;</p>
-
-<p>But moving cursor in a console command line is such a painful thing. Ah, yes, shortcuts, there must be some for console.</p>
-
-<p>Here they are - shortcuts for linux console and Mac Terminal:</p>
-
-<p>Ctrl+n:  next command (downward arrow) 下一个命令（往上箭头）</p>
-
-<p>Ctrl+p:  previous command (upward arrow) 前一个命令（往下箭头）</p>
-
-<p>Ctrl+r:  retrieve history commands 搜索历史命令</p>
-
-<p>Ctrl+a:  ahead 跳至行首</p>
-
-<p>Ctrl+e:  end 跳至行尾</p>
-
-<p>Ctrl+b:  backward 左移 （往左箭头）</p>
-
-<p>Ctrl+f:  forward 右移 （往右箭头）</p>
-
-<!--more-->
-
-
-<p>Ctrl+w:  wipe to ahead 删至行首</p>
-
-<p>Ctrl+k:  kick out to tail 删至行尾</p>
-
-<p>Ctrl+u:  undo to clean current command 取消命令</p>
-
-<p>Ctrl+h:  delete history by one single character 往回删除一个字符</p>
-
-<p>Ctrl+d:  delete one single character 删除光标字符</p>
-
-<p>Ctrl+y:  yank, to paste text removed by Ctrl+u，Ctrl+k，Ctrl+w 粘贴上次删掉的文本</p>
-
-<p>Ctrl+t:  taking left character to right 右移光标及其左一字符</p>
-
-<p>Ctrl+i:  infill command auto 自动补充完整</p>
-
-<p>Ctrl+m:  move (Enter) 行动（相当Enter键）</p>
-
-<h2>Other shortcuts:</h2>
-
-<p>Ctrl+s:  silence screen  使终端发呆，静止，可以使快速输出的终端屏幕停下来。</p>
-
-<p>Ctrl+q:  quit silence  退出Ctrl+s引起的发呆。</p>
-
-<p>Ctrl+z:  switch running task to backend (use fg to restore)  使正在运行在终端的任务，运行于后台。 （可用fg恢复）</p>
-
-<p>Ctrl+c:  Abort current task 中断终端中正在执行的任务。</p>
-
-<p>Ctrl+d:  EOT U+0004, exit 在空命令行的情况下可以退出终端。</p>
-
-<p>Ctrl+[:  Escape 相当于Esc键。</p>
-
-<p>Esc:  press 3 times to show all console commands 连续按3次显示所有的支持的终端命令。</p>
-
-<p>Tab:   infill command auto (press 2 times to show list of candidates) 命令、路径补全功能。(连按2次显示候选列表)</p>
 ]]></content>
   </entry>
   

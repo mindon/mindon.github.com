@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Readings | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/readings/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-15T19:00:07+08:00</updated>
+  <updated>2014-11-16T13:06:41+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DJI Inspire 1 - Fly With Camera]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera/"/>
+    <updated>2014-11-16T10:46:12+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera</id>
+    <content type="html"><![CDATA[<p>对于Drone，一直也还是处于关注的角度，纯粹的关注者，还没有入门。</p>
+
+<p>从对“Context”概念的关注，在TED看到的“Robots that fly … and cooperate” － 飞行的机器人且能协作</p>
+
+<p><a href="http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate">http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate</a></p>
+
+<p>到最近看的“A flying camera … on a leash” (by Fotokite.com) <a href="http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash">http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash</a></p>
+
+<p>以及最近DJI发布的 Inspire 1，这款介于专业和非专业之间的令人振奋的产品。</p>
+
+<p>嗯，我目前也还只是个看客。借别人的眼睛去飞越荒野，瞭望巨鲸翻腾……</p>
+
+<p>对于飞行，我甚至还没有信心接过遥控器感受飞行的乐趣。</p>
+
+<p>对于摄影，我也还只是用自动挡的自动党成员。</p>
+
+<p>不过，我那颗的心，却时刻为科技的前行而兴奋不已，为眼睛触碰到的独特视野而雀跃。</p>
+
+<p>分享一下目前找到的一些关于 DJI Inspire 1，“银思派.蚊”（自己给起的中文名，非官方；以后是不是有银思派.兔，银思派.梭利，银思派.拂鸥，银思派.珐埃…… 咱就不得而知了）</p>
+
+<p>首先是官方的</p>
+
+<p>“DJI Inspire 1 产品介绍”</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc2OTQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>“DJI Inspire 1- 展翅蓝天”</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc1MjIw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>DJI 的飞行器竟然有SDK，这也是极其令人兴奋的事情，特别对于我们这种做软件开发的爱好者来说（虽说我目前还算不上是个合格的爱好者）。 <a href="https://dev.dji.com">https://dev.dji.com</a></p>
+
+<h2>收集各路评测：</h2>
+
+<p>Fro Knows Photo 对DJI Inspire 1的Review</p>
+
+<!--more-->
+
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI2Mzk2MDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>【触动力】全新DJI专业一体化航拍飞行器 Inspire 1  （同官方视频，配中文说明而已）</p>
+
+<p><embed src="http://player.youku.com/player.php/sid/XODI2Njk2MzQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
+
+<p>The Verge Review</p>
+
+<p><embed src="http://player.56.com/v_MTMwMjI1OTMz.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
+
+<p>Dronefly 评测</p>
+
+<p><embed src="http://player.56.com/v_MTMwMTk4MDg4.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
+
+<p>暂时没找到更多的视频了，真正Inspire 1出来之后估计会更好 :-) 期待吧！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shortcuts for Linux Console]]></title>
@@ -259,38 +321,6 @@
 <p> 从《GEB集异璧》里对智能的描述项，对比一下自己，能力上还是有很多不足的地方，比如：充分利用机遇；以及认识一个情境中的重要和次要因素方面就存在不足。其它的应该还算不错了。</p>
 
 <p> 注：《GEB集异璧》中文版2013年第7版了，很厚的神书一本，近千余页。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[UltimEyes: To Improve Your Vision?]]></title>
-    <link href="http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision/"/>
-    <updated>2014-03-06T06:19:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/03/06/ultimeyes-to-improve-your-vision</id>
-    <content type="html"><![CDATA[<p>The UltimEyes, is a mobile app for <strong>iPad</strong> series with <strong>retina</strong> only.</p>
-
-<blockquote><p> “ULTIMEYES® is a non-invasive interactive program designed specifically to improve vision by optimizing visual processing in just four simple 25-minute sessions per week for a total duration of eight weeks.”</p></blockquote>
-
-<!--more-->
-
-
-<p>It is said that it has potential to improve vision! That&rsquo;s an app i expected to see long time ago. Now it comes one, but the UltimeEyes Pro requests a serial number and UltimeEyes is saling  almost 6 US$, that&rsquo;s 40RMB on iTune - a little bit high price for an app you don&rsquo;t know much.</p>
-
-<p>University of California, Riverside neuroscientist Aaron Seitz, who created the software, shared recent results with Current Biology, with eye-popping results:</p>
-
-<blockquote><p> “Seitz worked with 19 players on the University of California, Riverside, baseball team, and showed that his app UltimEyes lengthened the distance at which the players could see clearly by an average of 31 percent. After using the app for 30 25-minute intervals, players saw an improvement that pushed many of them beyond normal 20/20 vision, including seven who attained freakishly good 20/7.5 vision—meaning that at a distance of 20 feet, they were clearly seeing what someone with normal vision could see at no farther than 7.5 feet away.”</p></blockquote>
-
-<p>The game is showing you some fuzzy patterns that you try to identify as quickly as possible from a similarly colored background. Faster speeds and repetition “teach” the brain to better process visual stimulation quicker, which may result in improved vision at farther distances.</p>
-
-<p>It&rsquo;s more like a brain game than an eyes training.</p>
-
-<p>To train the eyes themself, it should be a device with at least two parts: one near, one far - to switch status of the eyeballs and its control muscles around.</p>
-
-<p>Is the app will work for most people around the world? We are staring all kinds of screens all day long. It&rsquo;s such an important thing to keep our eyes sharp and clear.</p>
-
-<p><a href="http://mindon.github.io/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The eye limits the brain&rsquo;s learning potential</a></p>
-
-<p><span id="link-tags">UltimEyes;iPad;Retina;iTune</span></p>
 ]]></content>
   </entry>
   
