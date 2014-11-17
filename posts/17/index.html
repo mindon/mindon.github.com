@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1002337637, blog id: airoff
-History stat: 浏览/评论：135/1 , 日期：2009年3月29日 18:42 作者：汪冰 原文 2009-03-05 14:41 畅销书《跟艺术家学减法》 &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1002382967, blog id: airoff
+History stat: 浏览/评论：140/1 , 日期：2009年5月7日 17:10 一般都会想到用 replace 来实现，这里分享一个看起来更可靠的方法： String. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,43 @@ History stat: 浏览/评论：135/1 , 日期：2009年3月29日 18:42 作者：�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/07/old-blogms-1002382967/">实现Javscript String的replaceAll方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2009-05-07T17:10:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>5:10 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1002382967, blog id: airoff
+History stat: 浏览/评论：140/1  ,  日期：2009年5月7日 17:10</p>
+
+<p>一般都会想到用 replace 来实现，这里分享一个看起来更可靠的方法：</p>
+
+<pre><code>String.prototype.replaceAll = function(s, t) {return this.split(s).join(t)};
+</code></pre>
+
+<p>为什么要这样呢？试试把 &ldquo;:)a:)b:)c&rdquo; 里的所有 :) 替换成 # 吧，如果 :) 是一个不确定的字符串的时候，上面的方法就能解决你的问题。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -423,45 +460,6 @@ History stat: 浏览/评论：263/0  ,  日期：2008年8月21日 01:26</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/08/17/old-blogms-1002167767/">iseasky.com被奥运撞了一下腰</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2008-08-17T23:19:00+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2008</span></span> <span class='time'>11:19 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1002167767, blog id: airoff
-History stat: 浏览/评论：298/1  ,  日期：2008年8月17日 23:19</p>
-
-<p>因为奥运期间封网，iseasky.com (已经关闭) 所在服务器的所在机房不幸在这个队列之中。</p>
-
-<p>故奥运期间暂时无法访问“麦盾社区”和“麦盾元素”</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2008/08/17/old-blogms-1002167767/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/18">&larr; Older</a>
@@ -511,7 +509,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 91 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 92 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -532,6 +530,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
       </li>
     
@@ -545,10 +547,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
       </li>
     
   </ul>

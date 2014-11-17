@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000139280, blog id: airoff
-History stat: 浏览/评论：126/2 , 日期：2005年1月4日 13:12 WMA，记得似乎是windows媒体播放器播放的一种媒体格式。（查了google，解释为“ &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000141850, blog id: airoff
+History stat: 浏览/评论：550/0 , 日期：2005年1月7日 09:03 2003年05月 Thinking in C++ [&gt;&gt; 问题描述空间:解描述空间 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,53 @@ History stat: 浏览/评论：126/2 , 日期：2005年1月4日 13:12 WMA，记�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141850/">Think in C++读书笔记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-01-07T09:03:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>9:03 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141850, blog id: airoff
+History stat: 浏览/评论：550/0  ,  日期：2005年1月7日 09:03</p>
+
+<p><strong>2003年05月 Thinking in C++</strong></p>
+
+<p>[&gt;&gt; 问题描述空间:解描述空间 &lt;&lt;]</p>
+
+<p>[&gt;&gt; 对象发现，对象装配，系统构造，系统扩充，对象重用 &lt;&lt;]</p>
+
+<p>-剧本：</p>
+
+<p>故事的结构通过特征表示，特征对应于对象，<font color=#DC143C>情节结构</font>对应于系统设计。</p>
+
+<p><font color=#00008B>头文件表达了类设计，而我们必须能够由设计文档重新产生头文件。</font></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/07/old-blogms-1000141850/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -421,7 +468,7 @@ History stat: 浏览/评论：234/2  ,  日期：2004年12月22日 17:19</p>
 <ul>
 <li><p>@date  03/20, 2003</p></li>
 <li><p>@author  Rongjun Feng (derek.f)</p></li>
-<li><p>@e-mail  <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x69;&#x73;&#101;&#x61;&#115;&#107;&#x79;&#64;&#x68;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#105;&#x73;&#101;&#97;&#x73;&#x6b;&#x79;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a></p></li>
+<li><p>@e-mail  <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x69;&#115;&#x65;&#x61;&#115;&#x6b;&#x79;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#x69;&#115;&#x65;&#97;&#115;&#x6b;&#x79;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p></li>
 </ul>
 
 
@@ -1295,80 +1342,6 @@ History stat: 浏览/评论：234/2  ,  日期：2004年12月22日 17:19</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/22/old-blogms-1000124479/">Javascript之取消</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2004-12-22T17:12:00+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2004</span></span> <span class='time'>5:12 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000124479, blog id: airoff
-History stat: 浏览/评论：200/0  ,  日期：2004年12月22日 17:12</p>
-
-<p><font color=#00008C><font face=Arial>// cancel pop menu</p>
-
-<p>function cancelkey(e) {</p>
-
-<p>if(document.all) event.returnValue = false; return false;</p>
-
-<p>}</p>
-
-<p>document.oncontextmenu = cancelkey;</p>
-
-<p>// cancel shift-click/enter open new</p>
-
-<p>function cancelNew(e) {</p>
-
-<p>if(document.all) {</p>
-
-<p>if(event.shiftKey)</p>
-
-<p>if(event.keyCode == &quot;13&quot; || event.type==&quot;click&quot;) return false;</p>
-
-<p>} else {</p>
-
-<p>if(e.shiftKey)</p>
-
-<p>if(e.keyCode == &quot;13&quot; || e.type==&quot;click&quot;) return false;</p>
-
-<p>}</p>
-
-<p>return true;</p>
-
-<p>}</p>
-
-<p>document.onkeypress = cancelNew;</p>
-
-<p>//cancel select</p>
-
-<p>document.onselectstart = function(){ if(event.srcElement.tagName != &quot;INPUT&quot; &amp;&amp; event.srcElement.tagName != &quot;TEXTAREA&quot;) return false; return true;}</p>
-
-<p>//cancel drag</p>
-
-<p>document.ondragstart = function(){ if(event.srcElement.tagName != &quot;INPUT&quot; &amp;&amp; event.srcElement.tagName != &quot;TEXTAREA&quot;) return false; return true;}</p>
-
-<p></font></font></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/33">&larr; Older</a>
@@ -1418,7 +1391,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 91 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 92 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -1439,6 +1412,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
       </li>
     
@@ -1452,10 +1429,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/09/two-bugs-found-in-jekyll/">Two Problems Found in Jekyll When Using Octopress</a>
       </li>
     
   </ul>
