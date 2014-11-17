@@ -9,7 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Years ago, I took all desktop apps as some specific browsers - only visiting specified data resources provided by IP or file path with fixed UIs. and &hellip;">
+  <meta name="description" content="How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code @echo off if "%1"=="start-min" goto :begin
+start /min &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +69,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/17/start-dos-console-minimized/">Start DOS Console Minimized</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-01-17T07:59:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>7:59 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>How to start an DOS console window minimized? (for an .bat or .cmd file) Here comes the code</p>
+
+<pre><code>@echo off
+
+if "%1"=="start-min" goto :begin
+start /min "" %0 start-min
+exit
+
+:begin
+title Hello Mini World
+
+echo Call something here
+
+pause
+exit
+@echo on
+</code></pre>
+
+<p>这大概就是最直接，简单无需额外工具启动windows console并将其最小化的批处理脚本吧 :-p 非原创，网上捡来的。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -493,48 +541,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/14/mindon-mobile-devices/">我的移动电子产品</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-10-14T10:27:00+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:27 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>首先，我没有<a href="http://www.google.com/cse?cx=partner-pub-6997921015773263:4467526896&amp;ie=UTF-8&amp;q=iphone%205">iPhone 5</a>，也没有iPhone 4S，没有iPhone 4，连iPhone 3都没。因为我只购买自己需要的移动电子产品。iPhone目前都没在考虑之列。</p>
-
-<p>iOS设备的优越体验是不容置疑的，这是为什么全世界有那么多人为之疯狂的缘由。我在自己的iPod Touch 3(8G, 2ng的硬件)上也能感受得到，最直接的感受来自输入法——即使是Google的Nexus 7里的输入法，和iOS里的输入法也是有些差距的。</p>
-
-<p>对于iPhone，我一直异想天开地提倡基本通讯（电话/短信）和其他功能的用电分离——当然，至少目前都没有迹象说Apple会这么设计。于是，我和Aby目前的方案都是Nokia普通手机 + iTouch（iPod Touch的简称）。这样组合的好处是：你不需要担心没电导致电话和短信这样的基本通讯缺失；另外一方面可以无忧无虑地享受iTouch带来的娱乐和wifi网络功能——其实3G或者4G功能使用场合并不多，我们台湾自由行时候就是wifi + 网络电话解决的通讯问题，也没有感觉不方便什么的。</p>
-
-<p>这是我目前装备的移动电子产品：Nokia 5000，iPod Touch 2.5（3 with 2ng hardware），Kindle Touch 和 Nexus 7。</p>
-
-<p><img src="/images/blog/mindon-devices.jpg" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/10/14/mindon-mobile-devices/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/8">&larr; Older</a>
@@ -590,7 +596,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 14 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 15 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -603,6 +609,10 @@ document.getElementById('mydonate').onclick = function(){
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/18/what-is-singularity-university/">What Is Singularity University</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
@@ -618,10 +628,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/13/an-error-when-installing-discuz/">Discuz安装错误</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/09/dji-phantom-the-future-of-possible/">DJI - the Future of Possible</a>
       </li>
     
   </ul>
