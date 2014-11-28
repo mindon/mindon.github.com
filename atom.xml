@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-18T00:35:30+08:00</updated>
+  <updated>2014-11-29T01:36:28+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,103 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Science of Awesome]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/29/the-science-of-awesome/"/>
+    <updated>2014-11-29T01:23:12+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/29/the-science-of-awesome</id>
+    <content type="html"><![CDATA[<p>最近关注<a href="http://bbs.dji.com">DJI论坛</a>，看到上面的拍摄教程，突然想了解一下拍得好的视频画面流动速度分布情况。不过搜索了一通，并没有找到相关的工具——或许因为对这个领域还是非常不熟悉，所以最终并没有找到什么好玩的工具，不过也是有收获的：</p>
+
+<p>因为对这个领域还没有入门，找点理论熏陶一下也好。</p>
+
+<!--more-->
+
+
+<p>Grid Theory Part I</p>
+
+<p><video width="500" height="327" src="http://netdna.hollywoodcamerawork.com/videos/hm/gridtheorya480.mp4" controls>
+<a href="http://netdna.hollywoodcamerawork.com/videos/hm/gridtheorya480.mp4">http://netdna.hollywoodcamerawork.com/videos/hm/gridtheorya480.mp4</a>
+</video></p>
+
+<p>Grid Theory Part II</p>
+
+<p><video width="500" height="327" src="http://netdna.hollywoodcamerawork.com/videos/hm/gridtheoryb480.mp4" controls>
+<a href="http://netdna.hollywoodcamerawork.com/videos/hm/gridtheoryb480.mp4">http://netdna.hollywoodcamerawork.com/videos/hm/gridtheoryb480.mp4</a>
+</video></p>
+
+<p>Trailer</p>
+
+<p><video width="500" height="327" src="http://netdna.hollywoodcamerawork.com/videos/hm/hmtrailer480.mp4" controls>
+<a href="http://netdna.hollywoodcamerawork.com/videos/hm/hmtrailer480.mp4">http://netdna.hollywoodcamerawork.com/videos/hm/hmtrailer480.mp4</a>
+</video></p>
+
+<p>网站是 <a href="http://hollywoodcamerawork.com">Hollywood Camera Work</a></p>
+
+<p>视频来源 <a href="http://hollywoodcamerawork.com/hm_sampleclips.html">http://hollywoodcamerawork.com/hm_sampleclips.html</a></p>
+
+<p>这个其实是《Hollywood Camera Work: The Science of Awesome》（超棒的科学摄影教程）的2部分，完整目录：</p>
+
+<ol>
+<li><p>Introduction</p></li>
+<li><p>Master Course Recap</p></li>
+<li><p>Bigger And Better Part I: Parallax</p></li>
+<li><p>Bigger And Better Part II: Pivots</p></li>
+<li><p>Bigger And Better Part III: Keyframes Etc.</p></li>
+<li><p><strong>Grid Theory Part I</strong></p></li>
+<li><p><strong>Grid Theory Part II</strong></p></li>
+<li><p>Stacked Moves Part I</p></li>
+<li><p>Stacked Moves Part II</p></li>
+<li><p>Angle On A Path Part I</p></li>
+<li><p>Angle On A Path Part II</p></li>
+<li><p>Roll Part I</p></li>
+<li><p>Roll Part II</p></li>
+<li><p>Fear Of Heights Part I</p></li>
+<li><p>Fear Of Heights Part II</p></li>
+<li><p>Fly-Throughs And Air-Chases</p></li>
+<li><p>Wrap</p></li>
+</ol>
+
+
+<p>(原文发在DJI论坛上“影像”区)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[感恩节和周年纪念]]></title>
+    <link href="http://mindon.github.io/blog/2014/11/29/thanks-giving-and-wedding-anniversary/"/>
+    <updated>2014-11-29T00:55:05+08:00</updated>
+    <id>http://mindon.github.io/blog/2014/11/29/thanks-giving-and-wedding-anniversary</id>
+    <content type="html"><![CDATA[<p>前天是感恩节，Thanksgiving Day。</p>
+
+<p>“感谢父母赐予我生命和养育，姐姐哥哥们对我成长的呵护；感谢老师们的教导和同学朋友们的陪同；感谢不满我的朋友给予的促进，欣赏我的朋友的鼓励。感谢公司，感谢领导和一起战斗过同事。感谢我爱和爱我的人给我带来的幸福和快乐！感激宇宙让我成为生灵，能拥有想象力的大脑和爱的心… :-p” － 微信朋友圈。</p>
+
+<p><img src="http://mindon.github.io/images/blog/spice.jpg" alt="" /></p>
+
+<p>感恩节早上收到购买的Cardboard，装了起来体验了一下Google Cardboard带来的VR效果，还是相当不错的，特别是Google提供的Cardboard App里Demo效果。</p>
+
+<!--more-->
+
+
+<p>这个纸皮＋透镜＋磁铁的组合，竟然带来3D VR的虚拟现实体验，狂赞啊。我是15块RMB钱包邮买来的，后来发现淘宝上竟然有9.8RMB包邮的——白菜价！不对，是比白菜都便宜的价格。</p>
+
+<p>10块钱配合一个手机就能体验3D VR，刺激吧？</p>
+
+<p><img src="http://mindon.github.io/images/blog/love.jpg" alt="" /></p>
+
+<p>昨天，是AND周年纪念。时光飞逝，幸福依旧 :-)</p>
+
+<p>感谢父母养育和教导，无私的爱。让我拥有好奇心，想象力，动手制作能力，善良的心。感谢Aby父母把他们的宝贝女儿交付于我，让Aby与我一同感受这个精彩的世界，一起享受幸福，一起面对和经历困难和险阻，一起创造属于自己的未来。</p>
+
+<p>昨天早起做了早餐，第一次做牛肉粥：大米，草菇切片，些许胡椒粉先煮；将熟之际加入切好的姜丝和少许鲜辣椒段；丁点花椒温油拌好的牛肉丝，加少许酱油和料酒调味后，放入将熟粥中，加盐调味，入葱花，熄火起锅。香味飘溢…</p>
+
+<p>昨天中午，前天订购的玫瑰花送到Aby手上。很久没有给她送这么多玫瑰花了。</p>
+
+<p>昨晚到我们当年举办婚礼的地方附近的“香蜜轩”吃了晚饭。当年举办婚礼的酒吧早已停止营业，场地依旧老样子，只是没有桌椅和音乐，灯光。没关系，记忆依旧那样的美丽。虽然有诸多不足和遗憾——谢谢当年大家对我们的祝福。</p>
+
+<p>好困了，要洗洗睡啦。Good Night。今天还要加班，好多事情要做 :-)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What Is Singularity University]]></title>
@@ -757,70 +854,6 @@ resetBlocks();
 <p>Thinkful, an education startup focused on mentor-led programming education, has already announced plans to offer a <a href="https://www.thinkful.com/a/dlp/learn-blue/base/IOS-002">course on developing in Swift</a>, in a program that begins July 16.</p>
 
 <p><span id="link-tags">iOS;XCode;Clang;Chris Lattner;LLVM;Objective-C;Swift;NeXTStep;REPL</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[关于健康，我们忘掉了什么？]]></title>
-    <link href="http://mindon.github.io/blog/2014/06/14/what-we-missed-with-our-health/"/>
-    <updated>2014-06-14T20:30:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/06/14/what-we-missed-with-our-health</id>
-    <content type="html"><![CDATA[<p>当我们在争论中医还是西医更强大更有效的时候，不自觉中却忘掉了医术是为什么而生的。而身体的状态和需求，才是医术需要关注的主角。</p>
-
-<p>第一次在书城看到王唯工教授的《气的乐章》已经是数年前的事情了，至今依旧印象深刻。这是难得的一部结合现代科学技术来解读传统中医原理的著作：试图解释人体身上看起来不寻常的结构和状态。《气的乐章》以心脏的博动为核心，五脏处于不同共振谐波态，之间通过共振来交互协调。</p>
-
-<p>上周末看了几年前梁冬主持的《国学堂》对话王唯工教授的节目，提到了另外一本《水的漫舞》，讲述的是二氧化碳和酸水的危害。这两本书都是王唯工教授近三十余年来用现代科学实验手段通过试验和实践总结出来的成果，给现代医学的发展带来了令人鼓舞的火花。其中具体的细节和观点可能跟复杂的实际多少可能会有所偏向，也不一定就是真理。但带来的思考和对未来中医发展方向的反思确是异常宝贵的。</p>
-
-<p>抛开医学的阵营，一切繁复丰富的技术和理论，如果回归到人体这个生命体本身，医术需要关注的是什么呢？</p>
-
-<!--more-->
-
-
-<ul>
-<li><p>2009年6月8日，法国人斯蒂凡·弗苏闭气时间达到11分35秒，创造了一项静止闭气世界纪录。</p></li>
-<li><p>人的核心体温为37摄氏度，降到大约24度时心跳就会停止，导致死亡。</p></li>
-<li><p>即使在寒冷的环境中（水流失速度缓慢），没有水，人们也只能坚持7天左右。</p></li>
-<li><p>1963年12月28日，加利福尼亚州圣地亚哥的17岁在校生兰迪·加德纳从起床开始，创下的264小时（11天）记录至今仍是科学验证过的最长的不睡觉时长。</p></li>
-<li><p>最长时不进食记录者是1981年爱尔兰绝食抗议者基兰·多尔蒂，他在绝食73天后死去。在补充维生素和水的情况下，人们可以不吃东西活一年。</p></li>
-</ul>
-
-
-<p>由此可见，人体要保持正常，首要的是氧气，然后是水，再则是食物。另外要保持正常的体温，充足的睡眠。</p>
-
-<p>从维持生命体最基本的条件，我们才能更清楚地了解身体的状态，并进行适当的调整和干预。</p>
-
-<ol>
-<li>氧气； 2. 水份； 3. 食物； 4. 体温； 5. 睡眠</li>
-</ol>
-
-
-<p>可以预见，人体故障除物理损伤以外，大多都是跟人体生存基本条件的供给和传输变化有关的。</p>
-
-<ul>
-<li><p>氧气作为生存的首要条件，对应的获取途径是呼吸系统（鼻腔、呼吸道、肺），传输相关系统（心脏、血管）。</p></li>
-<li><p>水分的重要作用是作为介质，为氧气和养份的传入和吸收提供协助，以及排出代谢产物的功能。</p></li>
-<li><p>食物则作为系统正常运作所需能量和养份的主要提供途径，也是氧气消耗的主战场。</p></li>
-<li><p>体温是人体维持正常运作最直接的环境因素，会直接影响到氧气在体内的化学反应和物理作用。</p></li>
-<li><p>睡眠则是人体进行系统故障修复，代谢产物处理的核心场景。</p></li>
-</ul>
-
-
-<p>紧急程度相对低必要程度相对低的健康条件，必然是为核心健康条件服务的，而且在关键情况下是可以牺牲的，这就是生病的根本原因：系统为了保障核心健康条件的满足，要减少次要因素的供给，甚至放弃局部的功能。</p>
-
-<p>这是从王唯工教授那里得来的启示。从这个指导思想出发，整理、发展和完善现有的医学技术，而不是割裂中医和西医，才能营造一个健康领域的新纪元。</p>
-
-<p>科学从来都是面向未来的，而不是停步在过去和现在。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Facebook Open Sourcing Paper Animation Engine Pop]]></title>
-    <link href="http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop/"/>
-    <updated>2014-05-02T11:09:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/05/02/facebook-open-sourcing-paper-animation-engine-pop</id>
-    <content type="html"><![CDATA[<p>The Pop animation engine is responsible for all of the transitions and animations displayed on Paper, including all scrolling, bouncing, and unfolding effects.</p>
-
-<p>source code: <a href="https://github.com/facebook/pop">https://github.com/facebook/pop</a></p>
 ]]></content>
   </entry>
   

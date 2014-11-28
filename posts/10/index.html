@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL. But when I tried to update my NodeJS to version 0.8+, problems keep &hellip;">
+  <meta name="description" content="Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,101 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/simple-auto-resize-images-in-web-pages/">Simple Auto-Resize Images in Web Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-07-21T10:34:00+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>10:34 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
+
+<p>Use this meta in your HTML header could reisze the web page to the device&rsquo;s resolution.</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code></pre>
+
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
+
+<p>Here&rsquo;s the simple HTML code:</p>
+
+<pre><code>&lt;style type="text/css"&gt;img {display:block}&lt;/style&gt;
+&lt;table width="100%" style="table-layout:fixed"&gt;
+  &lt;tr&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width="50%"&gt;&lt;a style="width:100%" href="#"&gt;&lt;img width="100%" border="0"
+   src="http://mindon.github.com/images/mindon.png" /&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/21/the-most-terrible-thing/">The Most Terrible Thing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-07-21T09:32:00+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>9:32 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>最可怕的是什么？</h2>
+
+<p>其实，知道是可怕的东西并不是最可怕的东西。让你以为是最安全，其实杀伤力最大的东西才是最可怕的。</p>
+
+<p>现实里，比如一个人总看起来很凶，那么这个人并不可怕，因为你都能看到真实的情况。最可怕的人是表面上非常友善，内心里却是黑暗和扭曲的。</p>
+
+<p>有一个词能非常清楚地对最可怕的东西做一个总结，那就是——<strong>幻象</strong>。</p>
+
+<p>当你在高山峻岭间驾车时，看到了一条其实并不存在的路，……</p>
+
+<p>当你站在楼顶边缘，却看到眼前是一片广阔草原，……</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/21/the-most-terrible-thing/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -487,177 +582,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/letup-take-a-break/">Letup: Take a Break</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-19T14:49:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>2:49 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2><strong>Letup休息提醒器</strong> （<a href="/soft/letup_110715.7z">下载</a>）</h2>
-
-<p>Talk a break, good for your health :-)</p>
-
-<p>适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。</p>
-
-<p>**正在玩游戲者切勿運行，否則后果自負。</p>
-
-<p>DO NOT RUN IT WHEN YOU ARE PLAYING GAMES.**</p>
-
-<p><strong>麥盾軟件</strong>，需要VB Runtime支持。（win 2k/xp, win7 support）</p>
-
-<p>此工具是刚来公司的时候（N年前），看到同事Harry他们的屏幕过一段时间就会出现锁屏现象，后来了解是强迫休息的一个工具。</p>
-
-<p>那个实在太简陋了，于是把自己的一些想法加进去，就做出了这个版本（中间做了多次改版和策略调整，之前版本叫 Eaself，自我放松之意）。</p>
-
-<p>Letup休息提醒器，適用于長時間在電腦前工作的朋友，強制提醒休息，為快樂健康工作護航。本軟件有可能會和某些軟件產生沖突，若對使用造成不便，可以通過結束任務或者進入設置，雙擊按鈕下的灰色文字強制退出。</p>
-
-<p>Alt + “+键” 顯示設置界面</p>
-
-<p><img src="/images/blog/soft/letup-settings.png" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/letup-take-a-break/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/children-learn-what-they-live/">Children Learn What They Live</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-19T12:31:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:31 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>孩子在生活中学习</strong></p>
-
-<p>by <strong>Dorothy Law Nolte</strong>, Ph.D.</p>
-
-<p>美國的著名社會學家及精神治療師，1924年1月12日－2005年11月6日</p>
-
-<p>If children live with criticism, they learn to condemn.</p>
-
-<p>批评中长大的孩子，责难他人。</p>
-
-<p>If children live with hostility, they learn to fight.</p>
-
-<p>敌意中长大的孩子，喜欢争斗。</p>
-
-<p>If children live with fear, they learn to be apprehensive.</p>
-
-<p>恐惧中长大的孩子，常常担忧。</p>
-
-<p>If children live with pity, they learn to feel sorry for themselves.</p>
-
-<p>怜悯中成长的孩子，自怨自艾。</p>
-
-<p>If children live with ridicule, they learn to feel shy.</p>
-
-<p>嘲笑中长大的孩子，容易退缩。</p>
-
-<p>If children live with jealousy, they learn to feel envy.</p>
-
-<p>猜忌中长大的孩子，滋生怨恨。</p>
-
-<p>If children live with shame, they learn to feel guilty.</p>
-
-<p>羞耻中长大的孩子，内疚自责。</p>
-
-<p>If children live with encouragement, they learn confidence.</p>
-
-<p>鼓励中长大的孩子，深具自信。</p>
-
-<p>If children live with tolerance, they learn patience.</p>
-
-<p>宽容中长大的孩子，能够忍耐。</p>
-
-<p>If children live with praise, they learn appreciation.</p>
-
-<p>称赞中长大的孩子，懂得感恩。</p>
-
-<p>If children live with acceptance, they learn to love.</p>
-
-<p>承诺中长大的孩子，学会珍爱。</p>
-
-<p>If children live with approval, they learn to like themselves.</p>
-
-<p>认可中长大的孩子，收获自信。</p>
-
-<p>If children live with recognition, they learn it is good to have a goal.</p>
-
-<p>赏识中长大的孩子，树立目标。</p>
-
-<p>If children live with sharing, they learn generosity.</p>
-
-<p>分享中长大的孩子，慷慨大方。</p>
-
-<p>If children live with honesty, they learn truthfulness.</p>
-
-<p>诚信中长大的孩子，理解真理。</p>
-
-<p>If children live with fairness, they learn justice.</p>
-
-<p>公正中长大的孩子，极富正义。</p>
-
-<p>If children live with kindness and consideration, they learn respect.</p>
-
-<p>尊重中长大的孩子，懂得尊敬。</p>
-
-<p>If children live with security, they learn to have faith in themselves and in those about them.</p>
-
-<p>安定中长大的孩子，信任自己和他人。</p>
-
-<p>If children live with friendliness, they learn the world is a nice place in which to live.</p>
-
-<p>友善中长大的孩子，眼里是美好世界。</p>
-
-<p>Copyright © 1972 by Dorothy Law Nolte</p>
-
-<hr />
-
-<p>Different versions of this poem:</p>
-
-<p><a href="http://www.noogenesis.com/pineapple/Kristone.html">http://www.noogenesis.com/pineapple/Kristone.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/11">&larr; Older</a>
@@ -707,13 +631,13 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 92 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 93 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 15 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 16 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -728,6 +652,14 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/29/thanks-giving-and-wedding-anniversary/">感恩节和周年纪念</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/18/what-is-singularity-university/">What Is Singularity University</a>
       </li>
     
@@ -737,14 +669,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/15/i-like-this-ted-talk/">喜欢这个TED演讲</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/13/an-error-when-installing-discuz/">Discuz安装错误</a>
       </li>
     
   </ul>
