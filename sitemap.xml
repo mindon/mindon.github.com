@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area/</loc>
+    <lastmod>2015-02-07T22:33:22+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://mindon.github.io/blog/2014/11/29/the-science-of-awesome/</loc>
     <lastmod>2014-11-29T01:23:12+08:00</lastmod>
     <priority>0.8</priority>
@@ -2287,37 +2292,37 @@
   </url>
   <url>
     <loc>http://mindon.github.io/blog/archives/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/blog/categories/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/about/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/note/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/trouble/</loc>
-    <lastmod>2014-11-29T01:36:28+08:00</lastmod>
+    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

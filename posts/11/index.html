@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Letup休息提醒器 （下载） Talk a break, good for your health :-) 适用于所有长期坐在电脑前，锁屏不会导致损失，爱惜自己健康的朋友使用。 **正在玩游戲者切勿運行，否則后果自負。 DO NOT RUN IT WHEN YOU ARE PLAYING &hellip;">
+  <meta name="description" content="麥盾屏幕放大鏡 （下载） 这个小工具历史比“Letup休息提醒器”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。 其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">XZoom: A Simple Screen Zoomer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-05-19T14:49:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>2:49 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>麥盾屏幕放大鏡</strong> （<a href="/soft/xzoom.zip">下载</a>）</p>
+
+<p>这个小工具历史比“<a href="/blog/2012/05/19/letup-take-a-break/">Letup休息提醒器</a>”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。</p>
+
+<p>其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了，采用了隐藏-重现的方式获取屏幕最新状态。</p>
+
+<p><strong>麥盾軟件</strong>，需要VB Runtime支持。绿色，无需安装，点击运行。（win 2k/xp, win7 支持）</p>
+
+<p>系統圖標點擊左鍵打開設置界面</p>
+
+<p><img src="/images/blog/soft/xzoom-settings.png" alt="" /></p>
+
+<p><strong>支持操作</strong></p>
+
+<ul>
+<li><p>设置放大区域尺寸；</p></li>
+<li><p>Alt + Space Bar 顯示或隱藏放大鏡；</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/05/19/xzoom-a-simple-screen-zoomer/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -601,85 +653,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Find Out Unique Elements in a Javascript Array</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-04-17T22:53:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:53 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
-
-<h2>Algorithm 1</h2>
-
-<pre><code>function unique1(d) {
-  var o = {}, i, l = d.length, r = [];
-  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
-  for(i in o) r.push(o[i]);
-  return r;
-};
-</code></pre>
-
-<p>This method has 2 loops, that&rsquo;s a big time-cost problem.</p>
-
-<h2>Algorithm 2</h2>
-
-<p>reduce one loop from the algorithm 1, improve a litter bit</p>
-
-<pre><code>function unique2(d) {
-  var r = [], i = {}, j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(!i[d[k]]) {
-      i[d[k]] = 1;
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<h2>Algorithm 3</h2>
-
-<p>In ECMA-262 standard, there&rsquo;s a indexOf method for Array object, we use it to improve a lot.</p>
-
-<pre><code>function unique3(d) {
-  var r = [], j = 0;
-  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
-    if(r.indexOf(d[k]) &lt; 0) {
-      r[j++]=d[k];
-    }
-  }
-  return r;
-}
-</code></pre>
-
-<p>and it could be better&hellip;</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -729,7 +702,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 93 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 94 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -750,6 +723,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
       </li>
     
@@ -763,10 +740,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
       </li>
     
   </ul>
@@ -843,7 +816,7 @@ document.getElementById('mydonate').onclick = function(){
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Mindon Feng -
+  Copyright &copy; 2015 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>

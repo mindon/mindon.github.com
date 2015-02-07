@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="Aby 不在身边，吃饭的事情也不能马虎了。给我特意准备了菜单，提醒我注意饮食： 早餐选择： 1、花卷+豆浆 2、牛奶+吐司（夹蛋） 吐司可从岁宝可颂坊买，或者买白吐司。 3、粥 可配菜： 香菜炒蛋、酱炒蛋（冰箱里有） ">
+  <meta name="description" content="To remove duplicate elements in a array, there are a few algorithms to implement. Algorithm 1 function unique1(d) { var o = {}, i, l = d.length, r &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,85 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Find Out Unique Elements in a Javascript Array</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-04-17T22:53:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
+
+<h2>Algorithm 1</h2>
+
+<pre><code>function unique1(d) {
+  var o = {}, i, l = d.length, r = [];
+  for(i=0; i&lt;l;i+=1) o[d[i]] = d[i];
+  for(i in o) r.push(o[i]);
+  return r;
+};
+</code></pre>
+
+<p>This method has 2 loops, that&rsquo;s a big time-cost problem.</p>
+
+<h2>Algorithm 2</h2>
+
+<p>reduce one loop from the algorithm 1, improve a litter bit</p>
+
+<pre><code>function unique2(d) {
+  var r = [], i = {}, j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(!i[d[k]]) {
+      i[d[k]] = 1;
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<h2>Algorithm 3</h2>
+
+<p>In ECMA-262 standard, there&rsquo;s a indexOf method for Array object, we use it to improve a lot.</p>
+
+<pre><code>function unique3(d) {
+  var r = [], j = 0;
+  for(var k=0, kmax=d.length; k&lt;kmax; k++) {
+    if(r.indexOf(d[k]) &lt; 0) {
+      r[j++]=d[k];
+    }
+  }
+  return r;
+}
+</code></pre>
+
+<p>and it could be better&hellip;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/17/find-out-unique-javascript-array-elements/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -555,50 +634,6 @@ Free tools to create applications on Windows using Visual C++.
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/24/how-to-write-a-mail-in-html/">How to Write a Mail in HTML</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-03-24T12:07:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:07 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>编写原则：</h2>
-
-<ol>
-<li><p> 全局规则之一，不要写<code>&lt;style&gt;</code>标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。</p></li>
-<li><p> 全局规则之二，少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p></li>
-<li><p> 不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
-<li><p> style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
- <code>&lt;td background=”<a href="http://image1.koubei.com/images/common/logo_koubei.gif%E2%80%9D&amp;gt;&amp;lt;/td&amp;gt;">http://image1.koubei.com/images/common/logo_koubei.gif%E2%80%9D&amp;gt;&amp;lt;/td&amp;gt;</a></code></p></li>
-<li> div模式的邮箱不支持flash，iframe模式的有待验证。</li>
-</ol>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/24/how-to-write-a-mail-in-html/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/13">&larr; Older</a>
@@ -648,7 +683,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 93 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 94 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -669,6 +704,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
       </li>
     
@@ -682,10 +721,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
       </li>
     
   </ul>
@@ -762,7 +797,7 @@ document.getElementById('mydonate').onclick = function(){
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Mindon Feng -
+  Copyright &copy; 2015 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>

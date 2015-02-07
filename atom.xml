@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-29T01:36:28+08:00</updated>
+  <updated>2015-02-07T22:51:45+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[深圳科技园南区——产学研与高科技密集的未来]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area/"/>
+    <updated>2015-02-07T22:33:22+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area</id>
+    <content type="html"><![CDATA[<p>腾讯滨海新总部大厦前两天封顶了。目光把大家带到了这个神秘区域。</p>
+
+<p>其实科技园南区早已进驻了不少大小企业，创新小企业更是数不胜数。</p>
+
+<p><img src="http://mindon.github.io/images/blog/binhai-area.jpg" alt="" /></p>
+
+<p>先看看简单的平面图吧，这是新建区域部分。</p>
+
+<p><img src="http://mindon.github.io/images/blog/binhai-map.jpg" alt="" /></p>
+
+<p>未来一两年，这里将聚集大量高科技人才和资源。这里西贴着深圳大学，东边是虚拟大学园区一带，布满中国各大学的产学研基地。</p>
+
+<p>滨海大道另一边则是深圳南山区的最热闹的中心地带——海岸城。</p>
+
+<!--more-->
+
+
+<p><img src="http://mindon.github.io/images/blog/buildings.jpg" alt="" /></p>
+
+<p>Hmm&hellip; 这两天大家觉得有趣的则是这个了：360手机在深圳的办公地点——怡化金融科技大厦就在腾讯滨海大厦距离100余米的地方，怡化金融科技大厦边上是粤海派出所。</p>
+
+<p><img src="http://mindon.github.io/images/blog/t360.jpg" alt="" /></p>
+
+<p>最近Aby公司架构调整，办公地点也从福田转移到了这个片区——航天大厦靠学府路的对面。这里离家近好多了。走路的距离也在25分钟左右。</p>
+
+<p>今天Aby加班，借机去这片未来科技浓度最高的区域逛逛，了解一下环境，估计几年后的活动中心就在这片区了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Science of Awesome]]></title>
@@ -772,88 +806,6 @@ resetBlocks();
 <p><a href="http://designmodo.com/wireframing-prototyping-tools/">10 Wireframing and Prototyping Tools for 2013</a></p>
 
 <p><span id="link-tags">Quartz Composer;Balsamiq Studios;PowerMockup;InVision;Antetype;Wireframe.CC</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Swift - the New iOS Language]]></title>
-    <link href="http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language/"/>
-    <updated>2014-06-17T05:38:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/06/17/swift-the-new-ios-language</id>
-    <content type="html"><![CDATA[<p><strong> Apple&rsquo;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace </strong></p>
-
-<p>Feature By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
-
-<p>Work on Swift—Apple&rsquo;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
-
-<p><strong>LLVM</strong></p>
-
-<p>Rather than being an entirely new &ldquo;beta&rdquo; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&rsquo;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
-
-<h2>LLVM: A new compiler for Objective-C</h2>
-
-<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&rsquo;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
-
-<p><strong>Chris Lattner</strong></p>
-
-<p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&rsquo;s objc-language mailing list. Apple in turn began contributing to Lattner&rsquo;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
-
-<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&rsquo;s Xcode.</p>
-
-<!--more-->
-
-
-<p>In addition to the &ldquo;pure&rdquo; LLVM Clang project, Lattner also proposed integrating the new LLVM, featuring its advanced code optimizer and code generator, into the existing GCC (GNU C Compiler), adding modern methods for &ldquo;aggressive loop, standard scalar, and interprocedural optimizations and interprocedural analyses&rdquo; missing in the standard GCC components that had long been a core element of the development tools in Unix operating systems like Apple&rsquo;s OS X.</p>
-
-<p>GCC&rsquo;s support for Objective-C, the primary development language of Apple&rsquo;s OS X Cocoa (and NeXTStep, its historical predecessor), had grown stagnant, so Apple&rsquo;s motivation for funding the open development of both Clang and LLVM-GCC involved keeping the Mac&rsquo;s Objective-C relevant as a language.</p>
-
-<p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
-
-<p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
-
-<p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&rsquo;s software, but is also tightly integrated into the development of Apple&rsquo;s custom silicon, including the A6 and A7 Application Processors.</p>
-
-<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&rsquo;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
-
-<h2>Swift: A new language for LLVM</h2>
-
-<p>By 2010, LLVM&rsquo;s solution to GCC&rsquo;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &ldquo;a few other (amazing) people.&rdquo;</p>
-
-<p>By July 2013, Lattner noted that the new Swift project had become &ldquo;major focus for the Apple Developer Tools group.&rdquo; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &ldquo;took over management and leadership of the entire Developer Tools department at Apple&rdquo; at the beginning of 2013.</p>
-
-<p>&ldquo;In addition to compilers and low-level tools,&rdquo; Lattner notes, &ldquo;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&rdquo;</p>
-
-<p>Lattner noted that the new Swift language &ldquo;is the product of tireless effort from a team of language experts, documentation gurus, compiler optimization ninjas, and an incredibly important internal dogfooding group who provided feedback to help refine and battle-test ideas. Of course, it also greatly benefited from the experiences hard-won by many other languages in the field, drawing ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list.&rdquo;</p>
-
-<p>Apple&rsquo;s free <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=881256329">iBook on Swift</a> also notes that &ldquo;Swift has been years in the making,&rdquo; adding that &ldquo;Apple laid the foundation for Swift by advancing our existing compiler, debugger, and framework infrastructure.</p>
-
-<p>&ldquo;We simplified memory management with Automatic Reference Counting (ARC). Our framework stack, built on the solid base of Foundation and Cocoa, has been modernized and standardized throughout. Objective-C itself has evolved to support blocks, collection literals, and modules, enabling framework adoption of modern language technologies without disruption. Thanks to this groundwork, we can now introduce a new language for the future of Apple software development.&rdquo;&ldquo;Swift is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language&rdquo;</p>
-
-<p>The company also observes that Swift &ldquo;is friendly to new programmers. It is the first industrial-quality systems programming language that is as expressive and enjoyable as a scripting language.&rdquo;</p>
-
-<p>Apple also draws attention to the integration between Swift and LLVM, noting that the new language &ldquo;combines the best in modern language thinking with wisdom from the wider Apple engineering culture. The compiler is optimized for performance, and the language is optimized for development, without compromising on either.&rdquo;</p>
-
-<h2>Swift&rsquo;s Interactive Playgrounds &amp; REPL</h2>
-
-<p>Lattner also commented on two new features associated with Swift: Xcode&rsquo;s new Playgrounds (below) and REPL (Read-Eval-Print-Loop) debugging console.</p>
-
-<p>&ldquo;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&rdquo; Lattner noted. &ldquo;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
-
-<p>&ldquo;Playgrounds were heavily influenced by Bret Victor&rsquo;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&rsquo;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
-
-<p>&ldquo;I hope that by making programming more approachable and fun, we&rsquo;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&rdquo; Lattner stated.</p>
-
-<p>Apple&rsquo;s presentation of Swift notes that &ldquo;Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. If your code runs over time, for instance through a loop, you can watch its progress in the timeline assistant. The timeline displays variables in a graph, draws each step when composing a view, and can play an animated SpriteKit scene. When you&rsquo;ve perfected your code in the playground, simply move that code into your project.&rdquo;</p>
-
-<p>The company states that Xcode&rsquo;s Playground lets users &ldquo;design a new algorithm, watching its results every step of the way; create new tests, verifying they work before promoting into your test suite; experiment with new APIs to hone your Swift coding skills.&rdquo;</p>
-
-<p>Apple notes that the REPL debugging console in Xcode &ldquo;includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment.&rdquo;</p>
-
-<p>Apple says it plans to rapidly evolve Swift in response to developers needs and feature requests.</p>
-
-<p>Thinkful, an education startup focused on mentor-led programming education, has already announced plans to offer a <a href="https://www.thinkful.com/a/dlp/learn-blue/base/IOS-002">course on developing in Swift</a>, in a program that begins July 16.</p>
-
-<p><span id="link-tags">iOS;XCode;Clang;Chris Lattner;LLVM;Objective-C;Swift;NeXTStep;REPL</span></p>
 ]]></content>
   </entry>
   

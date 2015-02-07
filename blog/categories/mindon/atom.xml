@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2014-11-29T01:36:28+08:00</updated>
+  <updated>2015-02-07T22:51:45+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[深圳科技园南区——产学研与高科技密集的未来]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area/"/>
+    <updated>2015-02-07T22:33:22+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area</id>
+    <content type="html"><![CDATA[<p>腾讯滨海新总部大厦前两天封顶了。目光把大家带到了这个神秘区域。</p>
+
+<p>其实科技园南区早已进驻了不少大小企业，创新小企业更是数不胜数。</p>
+
+<p><img src="/images/blog/binhai-area.jpg" alt="" /></p>
+
+<p>先看看简单的平面图吧，这是新建区域部分。</p>
+
+<p><img src="/images/blog/binhai-map.jpg" alt="" /></p>
+
+<p>未来一两年，这里将聚集大量高科技人才和资源。这里西贴着深圳大学，东边是虚拟大学园区一带，布满中国各大学的产学研基地。</p>
+
+<p>滨海大道另一边则是深圳南山区的最热闹的中心地带——海岸城。</p>
+
+<!--more-->
+
+
+<p><img src="/images/blog/buildings.jpg" alt="" /></p>
+
+<p>Hmm&hellip; 这两天大家觉得有趣的则是这个了：360手机在深圳的办公地点——怡化金融科技大厦就在腾讯滨海大厦距离100余米的地方，怡化金融科技大厦边上是粤海派出所。</p>
+
+<p><img src="/images/blog/t360.jpg" alt="" /></p>
+
+<p>最近Aby公司架构调整，办公地点也从福田转移到了这个片区——航天大厦靠学府路的对面。这里离家近好多了。走路的距离也在25分钟左右。</p>
+
+<p>今天Aby加班，借机去这片未来科技浓度最高的区域逛逛，了解一下环境，估计几年后的活动中心就在这片区了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[感恩节和周年纪念]]></title>
@@ -175,41 +209,6 @@
 
 
 <p>喜欢优酷的可以到这里看： <a href="http://v.youku.com/v_show/id_XNDYwMDExMzY4.html">Philippe Starck:对设计的深入思考</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Discuz安装错误]]></title>
-    <link href="http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz/"/>
-    <updated>2014-11-13T14:08:05+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/11/13/an-error-when-installing-discuz</id>
-    <content type="html"><![CDATA[<p>昨天在MBP上安装简体／繁体版本的时候遭遇这么一个错误：</p>
-
-<p>“数据库连接错误”</p>
-
-<p>“No such file or directory”</p>
-
-<p>请返回修复。</p>
-
-<p>除此之外没有任何的线索。这样的提示信息并对下一步解决问题并不能提供任何帮助。</p>
-
-<p>搜索和尝试跟踪错误都无果。最后解决的办法是把缺省的 localhost 改成了 127.0.0.1 ，之后顺利安装！</p>
-
-<p>Discuz，貌似并没有支持响应式，虽然有手机版。</p>
-
-<p>正如Aby跟我说的，移动互联网时代，论坛可能是Out掉的东西了，除了在某些团体和领域局部留存之外。</p>
-
-<p>前几个月用WordPress搭建的WeChat Blog根据访问数据来看，访问量里已经有超过70%的用户是通过移动设备访问的了。这即便对于我这样冲在互联网技术前沿的开发者来说，也是个难以想象的变化异常迅速的现象。Web从PC转到移动端，也就是短短的两年内发生的翻转。</p>
-
-<p>移动端Web，目标响应时间1秒。</p>
-
-<p>Docker容器式配置，极速扩展部署响应。</p>
-
-<p>应用化部署，无感响应体验。</p>
-
-<p>大数据挖掘，移动和社交营销，即时的用户反馈和沟通。</p>
-
-<p>移动互联的时代，无不在追求响应的极速。</p>
 ]]></content>
   </entry>
   

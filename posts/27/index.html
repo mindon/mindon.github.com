@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000515173, blog id: airoff
-History stat: 浏览/评论：536/0 , 日期：2005年8月10日 11:02 在Batik中,支持SVG使用&lt;script type=&quot; &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000515471, blog id: airoff
+History stat: 浏览/评论：780/0 , 日期：2005年8月10日 13:52 近来一直在研究 SVG，发现软件（如Illustrator）生成的SVG中的数据小数位数太多了 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,51 @@ History stat: 浏览/评论：536/0 , 日期：2005年8月10日 11:02 在Batik�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/08/10/old-blogms-1000515471/">JavaScript之正则表达式 Replace</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-08-10T13:52:00+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>1:52 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000515471, blog id: airoff
+History stat: 浏览/评论：780/0  ,  日期：2005年8月10日 13:52</p>
+
+<p>近来一直在研究 SVG，发现软件（如Illustrator）生成的SVG中的数据小数位数太多了，没必要如此精确，于是心想能否自动处理一下里面的数据，让所有的数都四舍五入精简一下，我头一个想到的就是我所熟悉的正则表达式，可我所接触到的javascript中的正则表达式（因为在html中就能执行，故没考虑在Perl或Java中使用）好像还没有能方便处理这种情况的方法，于是今天 google 了一下，但一开始也没看到自己想要的东西，但看到字符串replace方法的时候，心想javascript是不是存在 replace(rexp, function) 的用法，于是，用“javascript regular expression replace function”搜索了一下，果真发现了在mozilla网站上的 Core JavaScript 1.5 Reference 中提到了 replace(rexp, function) 的用法，看了例子后，稍微研究了一下，发现其中 function的参数是这样的：</p>
+
+<p>arguments[0], 匹配的串源</p>
+
+<p>arguments[1] &hellip; arguments[arguments.length -3]，匹配()内容，相当于常用的 ＄1, ＄2&hellip;</p>
+
+<p>arguments[arguments.length -2]，匹配串的位置偏移 offset</p>
+
+<p>arguments[arguments.length -1]，整个字符串源</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/08/10/old-blogms-1000515471/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -425,49 +470,6 @@ History stat: 浏览/评论：642/7  ,  日期：2005年7月15日 08:49</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/07/08/old-blogms-1000447649/">关于相信：好的理由和坏的理由</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2005-07-08T14:20:00+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>2:20 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000447649, blog id: airoff
-History stat: 浏览/评论：178/0  ,  日期：2005年7月8日 14:20</p>
-
-<p>柯南译自《魔鬼牧师》</p>
-
-<p>理查德&#183;道金斯</p>
-
-<p>亲爱的朱丽叶：</p>
-
-<p>现在你10岁了，我想写给你一些对你很重要的事情。你是否曾经想过，我们是如何知道那些我们知道的东西？例如，恒星看上去好像在天空中刺出的小孔。我们是如何知道恒星其实是像太阳一样的大火球，并且它们离我们非常远？我们是如何知道地球是绕着这些恒星中的一颗——也就是太阳——运转的更小的球体？</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/07/08/old-blogms-1000447649/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/28">&larr; Older</a>
@@ -517,7 +519,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 93 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 94 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -538,6 +540,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
       </li>
     
@@ -551,10 +557,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/16/dji-inspire-1-fly-with-camera/">DJI Inspire 1 - Fly With Camera</a>
       </li>
     
   </ul>
@@ -631,7 +633,7 @@ document.getElementById('mydonate').onclick = function(){
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Mindon Feng -
+  Copyright &copy; 2015 - Mindon Feng -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 <script src="/javascripts/modernizr-2.6.2.js"></script>
