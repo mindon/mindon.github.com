@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Valentine Greetings with Drone</title>
+  <meta name="keywords" content="Valentine, WeChat, Love, Heart, DJI, Mindon">
+  <meta name="description" content="Valentine Greetings with Drone">
+  <meta property="og:image" content="">
+  <meta property="og:title" content="Valentine Greetings with Drone">
+  <meta property="og:description" content="Valentine Greetings with Drone">
+</head>
+<body>
+<style>
+html, body{
+  height: 100%; width: 100%;
+  margin: 0; padding: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: "Microsoft YaHei", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.LANG_en en, .LANG_zh-CN zh-cn, .LANG_zh-TW zh-tw {
+  display: inline;
+}
+.LANG_en zh-cn, .LANG_en zh-tw,
+.LANG_zh-CN en, .LANG_zh-CN zh-tw,
+.LANG_zh-TW en, .LANG_zh-TW zh-cn {
+  display: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {/*#d00110*/
+  background: black none no-repeat center bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+#mydrone {
+  width: 371px;
+  height: 344px;
+  position: absolute;
+  background: transparent url(assets/inspire.png) no-repeat 0 0;
+  background-size: 100% auto;
+  overflow: hidden;
+}
+#mytext {
+  width: 125px;
+  overflow: hidden;
+	text-overflow: ellipsis;
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  left: 90px;
+  max-height: 50px;
+  text-align: center;
+  -webkit-line-clamp: 3;
+  font-size: 14px;
+}
+.gpu {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#stage {
+  position: absolute;
+  left: 0;
+  right: 371px;
+  top: 0;
+  bottom: 344px;
+}
+
+@media screen and (max-width: 720px) {
+  #mydrone {
+    width: 186px;
+    height: 172px;
+  }
+  #mytext {
+    width: 62px;
+    left: 45px;
+    bottom: 20px;
+    max-height: 25px;
+    font-size: 7px;
+  }
+  #stage {
+    right: 186px;
+    bottom: 172px;
+  }
+}
+</style>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28048168-2', 'auto');
+  ga('send', 'pageview');
+</script>
+ </head>
+<body class="LANG_en">
+<script>
+var lang = navigator.language;
+if(/^zh-CN$/i.test(lang)) {lang = "zh-CN";}else if(/^zh/i.test(lang)){lang = "zh-TW";}else{lang = "en";}
+if(lang != "en"){document.body.className = 'LANG_' + lang;}
+var t={'en':'Valentine Greetings with Drone', 'zh-CN':'情人节快乐', 'zh-TW':'情人節快樂'}; document.title = t[lang]||t['en'];
+</script>
+<div id="stage">
+<div id="mydrone" class="gpu"><div id="mytext">情人节快乐～</div></div>
+</div>
+<script src="assets/zepto.min.js"></script>
+<script>
+var tracks = [[50,27], [36, 18], [24, 21], [16, 40], [32, 75], [50, 100], [68, 75], [84, 40], [76, 21], [64, 18], [50, 27]], i = 0;
+function flight() {
+  setTimeout(function(){
+    var d = tracks[i], param = {left: d[0]+'%', top: d[1]+'%', scale: d[1] < 50 ? Math.min(0.3 +d[1]/50, 1.0) : 1.0};
+    $('#mydrone').animate(param, d[2]||'slow', flight);
+    i = (i +1)%tracks.length;
+  });
+}
+var qsearch = window.location.search,
+  qparam = {};
+if (qsearch) {
+  var d = qsearch.substr(1).split('&');
+  $.each(d, function(k, v) {
+    var i = v.indexOf('=');
+    if (i > 0) {
+      qparam[v.substr(0, i)] = decodeURIComponent(v.substr(i + 1)).replace(/</g, '&#60;').replace(/>/g, '&#62;');
+    } else {
+      qparam[v] = true;
+    }
+  });
+}
+$(function(){
+  var u = qparam.u, f = ['snowfield', 'sea', 'flower'];
+  var bgkey = f[Math.floor(Math.random()*f.length)%f.length];
+  if(!u) {
+    u = 'demo/' + bgkey +'.jpg';
+  } else {
+    if(/^[\w\-\.]+$/.test(u)) bgkey = u;
+    u = (/^http:\/\//i.test(u)?u:'demo/'+bgkey+'.jpg');
+  }
+  $(document.body).css('background-image', 'url("'+u+'")')
+
+
+  $('#mytext').html(qparam.t || (lang=='en'?'Love with Lovely Smile :-)': document.title));
+
+  $('#mydrone').click(function(){
+    var t = prompt("祝福语", $('#mytext').text());
+    if(t) {
+      window.location.href = '?u=' + encodeURIComponent(u.indexOf('://')>0?u:bgkey) +'&t=' + encodeURIComponent(t);
+    }
+  });
+ 
+  $('#mydrone').css({left:tracks[0][0] +'%', top:tracks[0][1] +'%'})
+  flight();
+});
+
+var SharePack = {
+    "appid": "",
+    "img_url": 'http://mindon.github.io/greetings/drone/assets/inspire.png',
+    "img_width": "120",
+    "img_height": "120",
+    "link": window.location.href,
+    "desc": $('#mytext').text(),
+    "title": document.title
+};
+
+function shareCb(){}
+
+function wxTask(cmd, info) {
+  WeixinJSBridge.invoke(cmd, info, shareCb);
+  ga && ga('send', 'event', 'button', 'click', 'Greetings-Drone: ' + cmd);
+}
+
+function onWxReady(){
+   WeixinJSBridge.on('menu:share:appmessage', function(argv){ wxTask('sendAppMessage') });
+   WeixinJSBridge.on('menu:share:timeline', function(argv){ wxTask('shareTimeline') });
+   WeixinJSBridge.on('menu:share:weibo', function(argv){ wxTask('shareWeibo', {"content": SharePack.title, "url":SharePack.link}) });
+   WeixinJSBridge.on('menu:share:facebook', function(argv){ wxTask('shareFB') });
+}
+
+if(document.addEventListener){
+   document.addEventListener('WeixinJSBridgeReady', onWxReady, false);
+} else if(document.attachEvent){
+   document.attachEvent('WeixinJSBridgeReady'   , onWxReady);
+   document.attachEvent('onWeixinJSBridgeReady' , onWxReady);
+}
+</script>
+ </body>
+</html>

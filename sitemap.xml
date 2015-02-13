@@ -2292,37 +2292,37 @@
   </url>
   <url>
     <loc>http://mindon.github.io/blog/archives/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/blog/categories/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/about/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/note/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://mindon.github.io/trouble/</loc>
-    <lastmod>2015-02-07T22:51:45+08:00</lastmod>
+    <lastmod>2015-02-13T22:43:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2334,6 +2334,11 @@
   <url>
     <loc>http://mindon.github.io/google5bcd2356418fb252.html</loc>
     <lastmod>2014-08-23T14:16:11+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://mindon.github.io/greetings/drone/index.html</loc>
+    <lastmod>2015-02-13T22:39:51+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
