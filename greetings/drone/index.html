@@ -106,10 +106,17 @@ body {/*#d00110*/
   bottom: 7px;
   right: 7px;
   font-size: 11px;
+  color: #ccc;
+}
+#dji {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+  font-size: 9px;
   color: #fff;
 }
-#mindon a {
-  color: #fff;
+#mindon a, #dji a {
+  color: #ccc;
 }
 </style>
 <script>
@@ -129,7 +136,8 @@ if(/^zh-CN$/i.test(lang)) {lang = "zh-CN";}else if(/^zh/i.test(lang)){lang = "zh
 if(lang != "en"){document.body.className = 'LANG_' + lang;}
 var t={'en':'Valentine Greetings with Drone', 'zh-CN':'情人节快乐', 'zh-TW':'情人節快樂'}; document.title = t[lang]||t['en'];
 </script>
-<div id="mindon">by <a href="http://mindon.github.io">mindon</a></div>
+<div id="dji">drone pic from <a href="http://bbs.dji.com/portal.php?mod=mobile&mobile=2">DJI(大疆)</a></div>
+<div id="mindon">dev by <a href="http://mindon.github.io">mindon</a></div>
 <div id="stage">
 <div id="mydrone" class="gpu"><div id="mytext">情人节快乐～</div></div>
 </div>
