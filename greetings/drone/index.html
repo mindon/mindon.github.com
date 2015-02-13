@@ -190,6 +190,13 @@ $(function(){
     $('#mytext').html(t);
     SharePack.desc = $('#mytext').text();
   }
+  if(/^1?\d{1,2},1?\d{1,2}(,\d+)?(;1?\d{1,2},1?\d{1,2}(,\d+)?)+;?$/.test(qparam.d)) {
+    var d = [];
+    qparam.d.split(';').forEach(function(v){
+      if(v) d.push(v.split(','));
+    });
+    if(d.length>1) tracks = d;
+  }
   $('#mydrone').click(function(){
     var t = prompt("祝福语", $('#mytext').text());
     if(t) {
