@@ -187,7 +187,7 @@ $(function(){
   $(document.body).css('background-image', 'url("'+u+'")')
 
   if(qparam.t) {
-    $('#mytext').html(t);
+    $('#mytext').html(qparam.t);
     SharePack.desc = $('#mytext').text();
   }
   if(/^1?\d{1,2},1?\d{1,2}(,\d+)?(;1?\d{1,2},1?\d{1,2}(,\d+)?)+;?$/.test(qparam.d)) {
