@@ -146,8 +146,8 @@ var t={'en':'Valentine Greetings with Drone', 'zh-CN':'情人节快乐', 'zh-TW'
 var tracks = [[50,27], [36, 18], [24, 21], [16, 40], [32, 75], [50, 100], [68, 75], [84, 40], [76, 21], [64, 18], [50, 27]], i = 0;
 function flight() {
   setTimeout(function(){
-    var d = tracks[i], param = {left: d[0]+'%', top: d[1]+'%', scale: d[1] < 50 ? Math.min(0.3 +d[1]/50, 1.0) : 1.0};
-    $('#mydrone').animate(param, d[2]||'slow', flight);
+    var d = tracks[i], tn = tracks[i>0?i-1:tracks.length-1][2], param = {left: d[0]+'%', top: d[1]+'%', scale: d[1] < 50 ? Math.min(0.3 +d[1]/50, 1.0) : 1.0};
+    $('#mydrone').animate(param, isNaN(tn)?tn||'slow':parseInt(tn), flight);
     i = (i +1)%tracks.length;
   });
 }
