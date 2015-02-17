@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="麥盾屏幕放大鏡 （下载） 这个小工具历史比“Letup休息提醒器”更为悠久。源自一次参加IBM的培训活动，看到他们演示时候需要放大命令或代码的时候，用的无边屏幕放大，很漂亮。因为网上没找到，就自己做了一个。 其实里面尝试用了获取背景变动的API，不过在win2k/xp下没效果，后来就不管了， &hellip;">
+  <meta name="description" content="中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p 可按棋谱生成矢量图。 下载：CD插件：中国象棋棋谱生成器 使用说明： 1，把gms文件放到draw/GMS/文件夹 2，运行CorelDraw ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,94 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">中国象棋棋谱生成器(CD插件)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-06-02T19:06:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2012</span></span> <span class='time'>7:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p</p>
+
+<p>可按棋谱生成矢量图。</p>
+
+<p><img src="/soft/chinese-chess.png" alt="" /></p>
+
+<p>下载：<a href="/soft/xqprint.gms.7z">CD插件：中国象棋棋谱生成器</a></p>
+
+<h2>使用说明：</h2>
+
+<p>  1，把gms文件放到draw/GMS/文件夹</p>
+
+<p>  2，运行CorelDraw</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/02/chinese-chess-print-plug-in-for-coreldraw/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Lunar Generator Plug-in for CorelDraw</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-05-19T15:40:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>3:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>麦盾月历生成器</h2>
+
+<p>麦盾自研自用CorelDraw插件——制作您最个性的、独一无二的台历必备！</p>
+
+<p>原创产品，别的地方找不到的！</p>
+
+<p><img src="/images/blog/soft/lunar.png" alt="" /></p>
+
+<p>麦盾首个及唯一收费工具，谢谢大家支持 :-)</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/05/19/mindon-lunar-generator-plugin-for-coreldraw/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -506,153 +594,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/26/profiling-nodejs-application/">Profiling Node.JS Application</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-04-26T07:22:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:22 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>NodeJS</h2>
-
-<p>Call something like &ldquo;ulimit -n 8192&rdquo; in your NodeJS App start shell script, before start your nodejs service.</p>
-
-<p>Running with &ndash;prof to generate the v8.log</p>
-
-<pre><code>node --prof --prof_lazy app.js
-</code></pre>
-
-<p>with tools in /node/deps/v8/, you can get report like following:</p>
-
-<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
-
-<pre><code>[Shared libraries]:
-   ticks  total  nonlib   name
-      3    0.0%    0.0%  .../libc-2.13.so
-
-[JavaScript]:
-   ticks  total  nonlib   name
-      1    0.0%    0.0%  Stub: InstanceofStub
-
-[C++]:
-   ticks  total  nonlib   name
-     1    0.0%    0.0%  __write
-     ...
-
-[GC]:
-   ticks  total  nonlib   name
-     15    0.0%
-
-[Bottom up (heavy) profile]:
-  Note: percentage shows a share of a particular caller in the total
-  amount of its parent calls.
-  Callers occupying less than 2.0% are not shown.
-
-   ticks parent  name
-   ...
-</code></pre>
-
-<p>trace log</p>
-
-<pre><code>strace -o trace.log -cf node app.js:
-</code></pre>
-
-<p>or simple get the time</p>
-
-<pre><code>time node app.js
-</code></pre>
-
-<h2>Other Modules &amp; Tools</h2>
-
-<ul>
-<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
-</ul>
-
-
-<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
-
-<pre><code>dtrace -o stacks.out -n 'profile-97/execname == "node" &amp;&amp; arg1/{
-  @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }'
-</code></pre>
-
-<ul>
-<li><strong>v8-profiler</strong></li>
-</ul>
-
-
-<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/26/profiling-nodejs-application/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Aby Is on the Road: Lhasa</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-04-25T07:59:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:59 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Aby在路上…</h2>
-
-<p>这一趟，Aby出门时间比较久。</p>
-
-<p>先是飞由天津回家，在家里帮着忙活新装修的家选购家具什么的。</p>
-
-<p>之后再经由天津往北京和可心汇合，考察大导咖啡馆的事宜，并准备一起前往西藏拉萨。</p>
-
-<p>她们先是飞达西宁，在那去感受了一下青海湖——“早上的青海湖变了一个颜色，让人心悸的淡蓝。羊群跑上公路，水鸟飞起，如果是夏季定会更美。”（<a href="http://weibo.com/1416075644/yg3hZBuel">来源</a>）</p>
-
-<p>接着就乘坐火车前往目的地——拉萨。</p>
-
-<p>“坐上开往拉萨的列车，好好睡一觉，等待明天的美景。” （<a href="http://weibo.com/1416075644/yfZu49FvY">来源</a>）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/25/aby-is-on-the-road-lhasa/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -702,7 +643,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 94 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 96 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -723,6 +664,14 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/18/what-makes-everything-connected/">连接一切？是什么让连接建立起来了？</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
       </li>
     
@@ -732,14 +681,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2014/11/29/thanks-giving-and-wedding-anniversary/">感恩节和周年纪念</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/18/what-is-singularity-university/">What Is Singularity University</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/17/technologies-extendings-of-human-senses-and-influences/">Technologies - Extendings of Human Senses and Influences</a>
       </li>
     
   </ul>

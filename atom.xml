@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-02-13T23:10:42+08:00</updated>
+  <updated>2015-02-18T07:57:39+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[尴尬的2014]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/18/embarrassed-2014/"/>
+    <updated>2015-02-18T06:30:28+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/18/embarrassed-2014</id>
+    <content type="html"><![CDATA[<p>羊年就快来到了，才写2014的总结。可见2014是怎样的尴尬的一年。</p>
+
+<p>2014总结的关键字是：灾难，健康，探索和学习，抉择。</p>
+
+<p>2014年是结束了BlackBerry 10版本的WeChat开始的，也是MH370等马航飞机失踪这样的灾难中度过的，还有满世界的枪声和斗争。</p>
+
+<p>Hmmm&hellip; 难道我把BB10 WeChat项目也列为了灾难？Maybe。</p>
+
+<p>BB10 WeChat的预研，到应用框架的开发设计，到开发和结束，都是全程参与的。还是挺可惜的，之间建立起来的感情让我至今还在使用黑莓的开发机作为自己的日用手机。情感在和黑莓品牌之间建立的，而不是黑莓10版本的微信，这也是个奇怪的事情。</p>
+
+<p>黑莓收购的QNX实时操作系统是个很厉害的东西，吸引力在此吧？2014简单总结了QML UI框架开发中的一些收获，应用UI数据交互的设计思路。黑莓10的系统在这一年里也在不断更新和优化，从黑莓10的SDK，开发工具和发展历程中，也感受到了黑莓公司存在的一些问题：封闭和缓慢的节奏大概就是黑莓衰落的关键因素。但黑莓的QNX，企业安全和专注也会成为未来重新崛起的力量和可能。</p>
+
+<p>2014年，Web弱化了，相关的职位和角色感觉瞬间被炙热化的app所掩盖。大家都一窝蜂做起了移动app开发，移动游戏开发。Web涌向了H5。工作需要，开始了H5应用和游戏的研究和探索。其中完成了一个打地鼠的小游戏，还有一个选择照片合成在线贺卡的H5的简单应用。</p>
+
+<p>在这之前则是花了不少时间在照片应用的技术预研和试验上。其实这方面的积累和资源都相当缺乏，在这方面我们部门并没有什么成就的可能。最终因为自己能力所不及，输出了些简单哪的技术研究报告，无所成就告终。</p>
+
+<p>2014是在做JOOX Web版本的加班中结束的。QQ音乐的海外版JOOX，确切地说是香港版。参与了web版本的框架设计和开发工作。并不看好这样的一个产品以及形态。</p>
+
+<p>2014时间是宽裕的，但成就的东西是非常有限的。这种尴尬让我拿年终奖的时候有些不安，虽说别人可能做更少或更差的事情拿得更多 :p。（Aby和我都是很实诚的人，贡献和收获平衡才能心安。）</p>
+
+<p>2014，试图在部门内做些分享，构建一个更活跃和积极的分享氛围。无奈自己的执行力、推动力和影响力有限，在几乎无人响应的状况下最终宣告失败。</p>
+
+<p>终于在2014年末买了Mac Book Pro进入了更有效率，不需要花那么多时间在等待系统启动上了。另外学了Swift，并开始了学习iOS App的开发。H5的实战也是2014年才真正开始的。</p>
+
+<!--more-->
+
+
+<p>年末还有幸参与了JD微信入口的一个内部竞赛，Orion的OLA团队。几个人的团队，一心朝着一个目标前进，虽说经常要加班干活，但这种更有效的小团队快速的战斗状态还是相当吸引人的。收获颇深，谢谢Orion和团队的信任。不过结果如何，谢谢大家的看重。（希望自己没有辜负团队期望或成了拖后腿的）</p>
+
+<p>2014年血糖值此起彼伏，很不稳定。体重继续缓慢减轻。去了N趟医院，喝了大量中药调节。</p>
+
+<p>另外，因为部门的状况，中途有同事出去创业。中途有过动摇，但最终还是明确了自己的方向和重点。没有跟随。也祝愿他们一切顺利，心想事成。</p>
+
+<p>2014年孟同学的西少肉夹馍看起来不错，在北京都开五家分店了。拼命有理想有能力的小伙子还真是能无坚不摧的。</p>
+
+<p>2014年有幸了解了DJI的无人机，一个自己在关注的领域。参观过他们的总部之后，了解到自己能力有限，辜负了期待。同样有幸接触到Misfit深圳的精英们，他们也很赞，同样在做着改变世界的事情。</p>
+
+<p>2014年，经历了种种的尴尬和折磨，也是自省和进步的一年。收获，未必是成功的项目。种种的状况也是自己进步和学习的机遇。</p>
+
+<p>2015，期待和努力依旧是不可或缺的元素。加油！</p>
+
+<p>理想的团队：1）团队共同的前进方向，即便争吵，也是让团队强大的力量；2）每个团队成员都能把自己擅长的力量发挥到极致；3）健康、高效、用心做好产品。</p>
+
+<p>Aby在2014年辛苦学车，周末完成港大IMC的学习和毕业方案，进入了顺丰SF做起数据分析… 各种辛苦。加油！</p>
+
+<p>我们还去了趟越南旅游，到了胡志明和芽庄.</p>
+
+<p>&hellip; 流水 2014。期待2015羊年，大家都喜洋洋，梦想的一切美好都成真。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[连接一切？是什么让连接建立起来了？]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/18/what-makes-everything-connected/"/>
+    <updated>2015-02-18T04:46:18+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/18/what-makes-everything-connected</id>
+    <content type="html"><![CDATA[<p>What makes everything connected?</p>
+
+<p>连接一切？</p>
+
+<p>我们腾讯的创始人马化腾先生在2014年提出了公司未来的发展目标和方向——就是连接一切。</p>
+
+<p>关联，在我2012年上半年读完《失控》之后整理的一个想法&#8221;<a href="http://mindon.github.io/blog/2012/10/08/relationship-abilities/">社交关系的潜能</a>&ldquo;中的总结：关联，是一种非常特殊的能力，是关于资源和其他能力的输入和输出的核心角色。而去年上半年做的另外一个整理则更为清晰一些“<a href="http://mindon.github.io/blog/2014/04/01/living-unit/">Living Unit</a>”——资源、能力和关联，是生命体的核心特征。唯有资源、能力才是连接建立的基础。</p>
+
+<p>要连接一切，就要拥有资源、能力，并且清晰了解自有的这一切，管理好所拥有的资源和能力并形成输出。</p>
+
+<p>从个人有限的接触和了解，目前在国内拥有连接一切能力的公司并不多，腾讯——暂时还没有足够良好的资源来连接一切。当然，腾讯连接人与人之间的能力已经相当强大，但对于连接一切来说，还缺少很多。反而像顺丰这样的物流快递，倒是正在建立和拥有连接一切的能力。顺丰提供的虽说看起来只是物质流动服务，其实也拥有着大量流动的信息——各行各业的重要信息。可惜，这些巨量的信息目前还没有谁具有足够的能力应用起来——嗯，传说中未来的那个奇点可能就是AI把世界上流动的巨量信息应用起来的时候。</p>
+
+<p>小米，以它独特的资源整合模式和影响能力，也是一家在未来可能成为连接一切的公司。</p>
+
+<p>所拥有的资源特性和影响能力，场景创造能力，决定了一家公司是否拥有创造更多关联的能力。而关联，这个输入和输出的纽带，是竞争力的核心。</p>
+
+<p>对于组织来说，想要做到连接一切，首要的就是要了解自己拥有什么样的资源和能力。这个事情即便对于最简单的人来个体来说，也并不容易。</p>
+
+<p>资源和能力是跟随场景动态变化的，有效的管理工具和办法是了解个体和组织的必要途径。</p>
+
+<p>2014年，一直在构思这样的一个工具，一个用来管理资源、能力、关联和关联场景的工具。但一直没有太深入构思，其中的动态是个关键点，要如何组织和表现得简洁清晰还没想清楚。</p>
+
+<!--more-->
+
+
+<p>在职业发展的规划道路上，目前我在腾讯走的是技术路线，美其名曰目标是技术专家——其实从进入腾讯跟HR表明这个方向时，自己就已经有所动摇：编程并不是自己理想的职业，仅是一种兴趣，实现某些想法的技术之一。而管理，则更不是自己的擅长和方向。这样的自己，在非技术即管理的中国职场中，是相当尴尬的。而在腾讯，不是管理者又不是专家的话，也是很悲催的事情。部门领导知道自己这样一个技术角色，已经是万幸。</p>
+
+<p>在羊年即将来到的今天，我突然想给自己这样的一个定位，一个中学时期就知道的词“跨学科”，而今天则成为了自己职业的定位：“连接者”。自己广泛的兴趣和对各行各业强烈好奇心，从不停歇的学习能力和覆盖各领域的知识面才是自己的特点。</p>
+
+<p>自创的职业定位是个挺奇怪的事情，“连接者”？太瞎闹了吧？哪个公司有这样的职位？哪个公司需要这样特点的人？有什么用？</p>
+
+<p>这个社会貌似不需要这样的角色，其实是这个世界需要这样的角色才可能突破，正如科学界需要跨学科的合作一样的。没有突破，正是因为我们没有重视具有这个角色能力的资源。</p>
+
+<p>要连接一切，就需要产生“连接者”这个职业，产生规划和管理连接的人才和工具。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[深圳科技园南区——产学研与高科技密集的未来]]></title>
@@ -706,106 +804,6 @@ resetBlocks();
 <p>Any opportunity to practise the Swift? I&rsquo;m so sure there will be one :-)</p>
 
 <p>I like Golang, maybe Swift too!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[激活备份的敏思日志]]></title>
-    <link href="http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs/"/>
-    <updated>2014-06-22T10:35:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/06/22/restore-my-old-blogms-blogs</id>
-    <content type="html"><![CDATA[<p>10年前，开始在敏思博客写日志，并在那里认识了我们家的Aby。不过后来敏思博客网站关闭，我就用一个自己写的工具把日志备份了下来。</p>
-
-<p>昨天用go语言(golang)写了一个读取mht格式的程序，才发现当初备份的日志里，几乎有一半的日志对应的照片和图片没能保存成功，看来mht保存并不是那么靠谱的。还好文字都保存基本没问题。</p>
-
-<!--more-->
-
-
-<p>这个程序，把MHT文件格式里的文字和图片提取出来，并转成 OCTOPRESS （ 基于Jekyll ）用的markdown日志模板格式和独立图片文件。</p>
-
-<p>总共六百多篇日志，因为很多照片日志图片丢失，清理了一下，最后剩下三百余篇统一放到了BlogMS分类中。</p>
-
-<p>感谢敏思社区，特此文纪念。</p>
-
-<p>（注：原敏思的朋友，如果是用麦盾当初的备份工具备份日志的，需要整理成简单html格式的可联系我，一定会抽空免费为大家处理，不过大部分日志图片/照片保存失败的事情，很抱歉，因为才发现这个问题，所以麦盾也无能为力了。）</p>
-
-<p><span id="link-tags">敏思博客;敏思社区;OCTOPRESS;Jekyll;markdown</span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Free Prototype Design Tools]]></title>
-    <link href="http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools/"/>
-    <updated>2014-06-17T06:00:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/06/17/free-prototype-design-tools</id>
-    <content type="html"><![CDATA[<p>原型设计工具推荐</p>
-
-<p>Here&rsquo;s some great free prototype design tools:</p>
-
-<h2>AXure RP</h2>
-
-<p>An Interactive Wireframe Software and Mockup Tool.</p>
-
-<p>Axure RP gives you the wireframing, prototyping and specification tools needed to make informed design choices, persuade any skeptics, get your design built to spec&hellip; and maybe win a few fans along the way. Choose the Standard edition for prototyping or go Pro to add documentation and collaboration features.</p>
-
-<p><a href="http://www.axure.com/">Axure RP</a> 是一个专业的快速原型设计工具。Axure（发音：Ack-sure），代表美国Axure公司；RP则是Rapid Prototyping（快速原型）的缩写。</p>
-
-<p>Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。</p>
-
-<h2>Origami</h2>
-
-<p><a href="http://facebook.github.io/origami/">Origami</a> is a free design prototyping with Quartz Composer — created by the Facebook Design team—that makes interactive design prototyping easy and doesn’t require programming.</p>
-
-<!--more-->
-
-
-<p>Quartz Composer is a freely-available Mac OS X application by Apple that&rsquo;s been around for nearly a decade.</p>
-
-<p>Origami 是一个来自 Facebook 设计团队的作品，是 Quartz Composer 的免费工具包，可在无需编程的情况下轻松实现与设计原型进行交互。</p>
-
-<h2>Balsamiq Mockups</h2>
-
-<p>Balsamiq <a href="http://webdemo.balsamiq.com/">Web Demo</a></p>
-
-<p>Founded in March 2008, Balsamiq Studios aims to make the world a better place by helping people create software that is easier to use. Balsamiq is a fast-growing but still-very-personable software company. We like to compete on usability and customer service. Our first product is Balsamiq Mockups. Launched in June 2008, Mockups helps software designers and developers build great software by letting them easily sketch out their ideas, then quickly collaborate and iterate over them. Balsamiq Mockups has netted over $2,000,000 in sales in first 18 months of business and is gathering rave reviews.</p>
-
-<p>Balsamiq Mockups是一种软件工程中快速原型的建立软件，可以做为与用户交互的一个界面草图，一旦客户认可可以做为美工开发HTML的原型使用。</p>
-
-<p>Balsamiq Mockups是美国加利福利亚的Balsamiq工作室（2008年3月创建）推出的原型图绘制软件。于2008年6月发行了第一个版本。它的使命是帮助人们更好、更容易的设计软件产品。</p>
-
-<h2>Framer</h2>
-
-<p><a href="http://framerjs.com/">FRAMER.JS</a> is a prototyping toolkit built for designers to turn static mockups into prototypes with animation &amp; interaction. <a href="http://github.com/koenbok/Framer">Github</a></p>
-
-<p>Framer是一款基于JavaScript的开源原型框架，可以帮助开发者及设计师轻而易举地创建出非常逼真的应用原型，还包括滤镜、弹性物理、完整的3D效果等。Framer能够同时应用于桌面和移动设备之上，通过它，开发者或设计师只需简单地创建图像、事件等模块即可构建和测试复杂的交互和动画。</p>
-
-<h2>Pencil</h2>
-
-<p>An open-source GUI prototyping tool that&rsquo;s available for ALL platforms.</p>
-
-<p><a href="http://pencil.evolus.vn/">Pencil</a> is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.</p>
-
-<p>Pencil provides various built-in shapes collection for drawing different types of user interface ranging from desktop to mobile platforms.</p>
-
-<p>Pencil 是一款开源的原型图绘制工具，手绘风格的，就像自己在纸上画的那样。Pencil 还可以用来绘制各种架构图和流程图，同时还提供 Firefox 的插件。</p>
-
-<h2>Solidify</h2>
-
-<p>Make Interface Screens Come To Life</p>
-
-<p><a href="http://solidifyapp.com/">Solidify</a> is the quickest way to prototype interface screens for user testing feedback across devices.</p>
-
-<p>Solidify lets you create clickable prototypes from sketches, wireframe, or mockup. Validate user flows on any device by performing user tests in person, remotely or on your testers own time to get the feedback you need.</p>
-
-<p> Solidify 出自ZURB公司，允许用户从模型，线框或者草图创建可以点击的原型。通过它，可以对界面交互可以快速产生原型。而且，这些原型可以很容易的测试是否可以适用于平板，个人电脑或者手机。</p>
-
-<h2>others</h2>
-
-<p>Generator, InVision, PowerMockup, Antetype, UXPin, QuirkTools, Wireframe.CC, Easel, Proto.io, POP</p>
-
-<p><a href="http://designmodo.com/wireframing-prototyping-tools/">10 Wireframing and Prototyping Tools for 2013</a></p>
-
-<p><span id="link-tags">Quartz Composer;Balsamiq Studios;PowerMockup;InVision;Antetype;Wireframe.CC</span></p>
 ]]></content>
   </entry>
   

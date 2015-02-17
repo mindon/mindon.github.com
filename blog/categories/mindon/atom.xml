@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-02-13T23:10:42+08:00</updated>
+  <updated>2015-02-18T07:57:39+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[尴尬的2014]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/18/embarrassed-2014/"/>
+    <updated>2015-02-18T06:30:28+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/18/embarrassed-2014</id>
+    <content type="html"><![CDATA[<p>羊年就快来到了，才写2014的总结。可见2014是怎样的尴尬的一年。</p>
+
+<p>2014总结的关键字是：灾难，健康，探索和学习，抉择。</p>
+
+<p>2014年是结束了BlackBerry 10版本的WeChat开始的，也是MH370等马航飞机失踪这样的灾难中度过的，还有满世界的枪声和斗争。</p>
+
+<p>Hmmm&hellip; 难道我把BB10 WeChat项目也列为了灾难？Maybe。</p>
+
+<p>BB10 WeChat的预研，到应用框架的开发设计，到开发和结束，都是全程参与的。还是挺可惜的，之间建立起来的感情让我至今还在使用黑莓的开发机作为自己的日用手机。情感在和黑莓品牌之间建立的，而不是黑莓10版本的微信，这也是个奇怪的事情。</p>
+
+<p>黑莓收购的QNX实时操作系统是个很厉害的东西，吸引力在此吧？2014简单总结了QML UI框架开发中的一些收获，应用UI数据交互的设计思路。黑莓10的系统在这一年里也在不断更新和优化，从黑莓10的SDK，开发工具和发展历程中，也感受到了黑莓公司存在的一些问题：封闭和缓慢的节奏大概就是黑莓衰落的关键因素。但黑莓的QNX，企业安全和专注也会成为未来重新崛起的力量和可能。</p>
+
+<p>2014年，Web弱化了，相关的职位和角色感觉瞬间被炙热化的app所掩盖。大家都一窝蜂做起了移动app开发，移动游戏开发。Web涌向了H5。工作需要，开始了H5应用和游戏的研究和探索。其中完成了一个打地鼠的小游戏，还有一个选择照片合成在线贺卡的H5的简单应用。</p>
+
+<p>在这之前则是花了不少时间在照片应用的技术预研和试验上。其实这方面的积累和资源都相当缺乏，在这方面我们部门并没有什么成就的可能。最终因为自己能力所不及，输出了些简单哪的技术研究报告，无所成就告终。</p>
+
+<p>2014是在做JOOX Web版本的加班中结束的。QQ音乐的海外版JOOX，确切地说是香港版。参与了web版本的框架设计和开发工作。并不看好这样的一个产品以及形态。</p>
+
+<p>2014时间是宽裕的，但成就的东西是非常有限的。这种尴尬让我拿年终奖的时候有些不安，虽说别人可能做更少或更差的事情拿得更多 :p。（Aby和我都是很实诚的人，贡献和收获平衡才能心安。）</p>
+
+<p>2014，试图在部门内做些分享，构建一个更活跃和积极的分享氛围。无奈自己的执行力、推动力和影响力有限，在几乎无人响应的状况下最终宣告失败。</p>
+
+<p>终于在2014年末买了Mac Book Pro进入了更有效率，不需要花那么多时间在等待系统启动上了。另外学了Swift，并开始了学习iOS App的开发。H5的实战也是2014年才真正开始的。</p>
+
+<!--more-->
+
+
+<p>年末还有幸参与了JD微信入口的一个内部竞赛，Orion的OLA团队。几个人的团队，一心朝着一个目标前进，虽说经常要加班干活，但这种更有效的小团队快速的战斗状态还是相当吸引人的。收获颇深，谢谢Orion和团队的信任。不过结果如何，谢谢大家的看重。（希望自己没有辜负团队期望或成了拖后腿的）</p>
+
+<p>2014年血糖值此起彼伏，很不稳定。体重继续缓慢减轻。去了N趟医院，喝了大量中药调节。</p>
+
+<p>另外，因为部门的状况，中途有同事出去创业。中途有过动摇，但最终还是明确了自己的方向和重点。没有跟随。也祝愿他们一切顺利，心想事成。</p>
+
+<p>2014年孟同学的西少肉夹馍看起来不错，在北京都开五家分店了。拼命有理想有能力的小伙子还真是能无坚不摧的。</p>
+
+<p>2014年有幸了解了DJI的无人机，一个自己在关注的领域。参观过他们的总部之后，了解到自己能力有限，辜负了期待。同样有幸接触到Misfit深圳的精英们，他们也很赞，同样在做着改变世界的事情。</p>
+
+<p>2014年，经历了种种的尴尬和折磨，也是自省和进步的一年。收获，未必是成功的项目。种种的状况也是自己进步和学习的机遇。</p>
+
+<p>2015，期待和努力依旧是不可或缺的元素。加油！</p>
+
+<p>理想的团队：1）团队共同的前进方向，即便争吵，也是让团队强大的力量；2）每个团队成员都能把自己擅长的力量发挥到极致；3）健康、高效、用心做好产品。</p>
+
+<p>Aby在2014年辛苦学车，周末完成港大IMC的学习和毕业方案，进入了顺丰SF做起数据分析… 各种辛苦。加油！</p>
+
+<p>我们还去了趟越南旅游，到了胡志明和芽庄.</p>
+
+<p>&hellip; 流水 2014。期待2015羊年，大家都喜洋洋，梦想的一切美好都成真。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[连接一切？是什么让连接建立起来了？]]></title>
+    <link href="http://mindon.github.io/blog/2015/02/18/what-makes-everything-connected/"/>
+    <updated>2015-02-18T04:46:18+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/02/18/what-makes-everything-connected</id>
+    <content type="html"><![CDATA[<p>What makes everything connected?</p>
+
+<p>连接一切？</p>
+
+<p>我们腾讯的创始人马化腾先生在2014年提出了公司未来的发展目标和方向——就是连接一切。</p>
+
+<p>关联，在我2012年上半年读完《失控》之后整理的一个想法&#8221;<a href="http://mindon.github.io/blog/2012/10/08/relationship-abilities/">社交关系的潜能</a>&ldquo;中的总结：关联，是一种非常特殊的能力，是关于资源和其他能力的输入和输出的核心角色。而去年上半年做的另外一个整理则更为清晰一些“<a href="http://mindon.github.io/blog/2014/04/01/living-unit/">Living Unit</a>”——资源、能力和关联，是生命体的核心特征。唯有资源、能力才是连接建立的基础。</p>
+
+<p>要连接一切，就要拥有资源、能力，并且清晰了解自有的这一切，管理好所拥有的资源和能力并形成输出。</p>
+
+<p>从个人有限的接触和了解，目前在国内拥有连接一切能力的公司并不多，腾讯——暂时还没有足够良好的资源来连接一切。当然，腾讯连接人与人之间的能力已经相当强大，但对于连接一切来说，还缺少很多。反而像顺丰这样的物流快递，倒是正在建立和拥有连接一切的能力。顺丰提供的虽说看起来只是物质流动服务，其实也拥有着大量流动的信息——各行各业的重要信息。可惜，这些巨量的信息目前还没有谁具有足够的能力应用起来——嗯，传说中未来的那个奇点可能就是AI把世界上流动的巨量信息应用起来的时候。</p>
+
+<p>小米，以它独特的资源整合模式和影响能力，也是一家在未来可能成为连接一切的公司。</p>
+
+<p>所拥有的资源特性和影响能力，场景创造能力，决定了一家公司是否拥有创造更多关联的能力。而关联，这个输入和输出的纽带，是竞争力的核心。</p>
+
+<p>对于组织来说，想要做到连接一切，首要的就是要了解自己拥有什么样的资源和能力。这个事情即便对于最简单的人来个体来说，也并不容易。</p>
+
+<p>资源和能力是跟随场景动态变化的，有效的管理工具和办法是了解个体和组织的必要途径。</p>
+
+<p>2014年，一直在构思这样的一个工具，一个用来管理资源、能力、关联和关联场景的工具。但一直没有太深入构思，其中的动态是个关键点，要如何组织和表现得简洁清晰还没想清楚。</p>
+
+<!--more-->
+
+
+<p>在职业发展的规划道路上，目前我在腾讯走的是技术路线，美其名曰目标是技术专家——其实从进入腾讯跟HR表明这个方向时，自己就已经有所动摇：编程并不是自己理想的职业，仅是一种兴趣，实现某些想法的技术之一。而管理，则更不是自己的擅长和方向。这样的自己，在非技术即管理的中国职场中，是相当尴尬的。而在腾讯，不是管理者又不是专家的话，也是很悲催的事情。部门领导知道自己这样一个技术角色，已经是万幸。</p>
+
+<p>在羊年即将来到的今天，我突然想给自己这样的一个定位，一个中学时期就知道的词“跨学科”，而今天则成为了自己职业的定位：“连接者”。自己广泛的兴趣和对各行各业强烈好奇心，从不停歇的学习能力和覆盖各领域的知识面才是自己的特点。</p>
+
+<p>自创的职业定位是个挺奇怪的事情，“连接者”？太瞎闹了吧？哪个公司有这样的职位？哪个公司需要这样特点的人？有什么用？</p>
+
+<p>这个社会貌似不需要这样的角色，其实是这个世界需要这样的角色才可能突破，正如科学界需要跨学科的合作一样的。没有突破，正是因为我们没有重视具有这个角色能力的资源。</p>
+
+<p>要连接一切，就需要产生“连接者”这个职业，产生规划和管理连接的人才和工具。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[深圳科技园南区——产学研与高科技密集的未来]]></title>
@@ -116,99 +214,6 @@
 <p>感官的存在无非是为了了解和理解周遭环境，识别和判断环境中有利的因素，规避环境中的危险和威胁。</p>
 
 <p>了解和理解环境时不足够的，能力足够强大之后自然会想去主动改造环境，控制环境向有利的方向发展，操控时空自然就是终极的梦想。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[DJI Inspire 1 - Fly With Camera]]></title>
-    <link href="http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera/"/>
-    <updated>2014-11-16T10:46:12+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/11/16/dji-inspire-1-fly-with-camera</id>
-    <content type="html"><![CDATA[<p>对于Drone，一直也还是处于关注的角度，纯粹的关注者，还没有入门。</p>
-
-<p>从对“Context”概念的关注，在TED看到的“Robots that fly … and cooperate” － 飞行的机器人且能协作</p>
-
-<p><a href="http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate">http://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate</a></p>
-
-<p>到最近看的“A flying camera … on a leash” (by Fotokite.com) <a href="http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash">http://www.ted.com/talks/sergei_lupashin_a_flying_camera_on_a_leash</a></p>
-
-<p>以及最近DJI发布的 Inspire 1，这款介于专业和非专业之间的令人振奋的产品。</p>
-
-<p>嗯，我目前也还只是个看客。借别人的眼睛去飞越荒野，瞭望巨鲸翻腾……</p>
-
-<p>对于飞行，我甚至还没有信心接过遥控器感受飞行的乐趣。</p>
-
-<p>对于摄影，我也还只是用自动挡的自动党成员。</p>
-
-<p>不过，我那颗的心，却时刻为科技的前行而兴奋不已，为眼睛触碰到的独特视野而雀跃。</p>
-
-<p>分享一下目前找到的一些关于 DJI Inspire 1，“银思派.蚊”（自己给起的中文名，非官方；以后是不是有银思派.兔，银思派.梭利，银思派.拂鸥，银思派.珐埃…… 咱就不得而知了）</p>
-
-<p>首先是官方的</p>
-
-<p>“DJI Inspire 1 产品介绍”</p>
-
-<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc2OTQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>“DJI Inspire 1- 展翅蓝天”</p>
-
-<p><embed src="http://player.youku.com/player.php/sid/XODI1NDc1MjIw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>DJI 的飞行器竟然有SDK，这也是极其令人兴奋的事情，特别对于我们这种做软件开发的爱好者来说（虽说我目前还算不上是个合格的爱好者）。 <a href="https://dev.dji.com">https://dev.dji.com</a></p>
-
-<h2>收集各路评测：</h2>
-
-<p>Fro Knows Photo 对DJI Inspire 1的Review</p>
-
-<!--more-->
-
-
-<p><embed src="http://player.youku.com/player.php/sid/XODI2Mzk2MDM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>【触动力】全新DJI专业一体化航拍飞行器 Inspire 1  （同官方视频，配中文说明而已）</p>
-
-<p><embed src="http://player.youku.com/player.php/sid/XODI2Njk2MzQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></p>
-
-<p>The Verge Review</p>
-
-<p><embed src="http://player.56.com/v_MTMwMjI1OTMz.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
-
-<p>Dronefly 评测</p>
-
-<p><embed src="http://player.56.com/v_MTMwMTk4MDg4.swf" type="application/x-shockwave-flash" width="320" height="270" allowfullscreen="true" allownetworking="all" allowscriptaccess="always"></embed></p>
-
-<p>暂时没找到更多的视频了，真正Inspire 1出来之后估计会更好 :-) 期待吧！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[喜欢这个TED演讲]]></title>
-    <link href="http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk/"/>
-    <updated>2014-11-15T15:40:37+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/11/15/i-like-this-ted-talk</id>
-    <content type="html"><![CDATA[<p>This TED talk is from Philippe Starck: “Design and destiny”。</p>
-
-<p>Philippe的英语口音听起来特别有意思——嗯……很有喜感。</p>
-
-<p>他说话的和风格和生动的配音都引入入胜。当然，还有他演讲的内容也很能激发思考的。</p>
-
-<p>目光的高度注定文明的程度，不过不要把目光放到头顶，因为那便到了胡扯的神的位置。</p>
-
-<p>45亿年以来，人类不过是地球文明故事过程中间的一个环节，回望那个地球生命初期“愚蠢的”细菌，40多亿年之后的东西会怎么看人类呢？</p>
-
-<p>这个TED很欢乐且会让你有所收获，推荐大家看看：</p>
-
-<p>设计师 Philippe Starck—没有秀什么漂亮幻灯片—以 18 分钟追根究底探索「为什么要设计？」 这个问题。</p>
-
-<!--more-->
-
-
-
-
-<iframe src="https://embed-ssl.ted.com/talks/lang/zh-cn/philippe_starck_thinks_deep_on_design.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-
-
-<p>喜欢优酷的可以到这里看： <a href="http://v.youku.com/v_show/id_XNDYwMDExMzY4.html">Philippe Starck:对设计的深入思考</a></p>
 ]]></content>
   </entry>
   
