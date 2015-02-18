@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title>Valentine Greetings with Drone</title>
-  <meta name="keywords" content="Valentine, WeChat, Love, Heart, DJI, Mindon">
-  <meta name="description" content="Valentine Greetings with Drone">
+  <title>春节快乐，喜气羊羊！</title>
+  <meta name="keywords" content="春节, WeChat, Love, Heart, DJI, Mindon">
+  <meta name="description" content="春节快乐，喜气羊羊！ with Drone">
   <meta property="og:image" content="">
-  <meta property="og:title" content="Valentine Greetings with Drone">
-  <meta property="og:description" content="Valentine Greetings with Drone">
+  <meta property="og:title" content="春节快乐，喜气羊羊！ with Drone">
+  <meta property="og:description" content="春节快乐，喜气羊羊！ with Drone">
 </head>
 <body>
 <style>
@@ -134,16 +134,16 @@ body {/*#d00110*/
 var lang = navigator.language;
 if(/^zh-CN$/i.test(lang)) {lang = "zh-CN";}else if(/^zh/i.test(lang)){lang = "zh-TW";}else{lang = "en";}
 if(lang != "en"){document.body.className = 'LANG_' + lang;}
-var t={'en':'Valentine Greetings with Drone', 'zh-CN':'情人节快乐', 'zh-TW':'情人節快樂'}; document.title = t[lang]||t['en'];
+var t={'en':'春节快乐，喜气羊羊！ Inspire', 'zh-CN':'春节快乐，喜气羊羊！', 'zh-TW':'春節快樂，喜氣羊羊！'}; document.title = t[lang]||t['en'];
 </script>
 <div id="dji">drone pic from <a href="http://dji.com/cn?r=tjkeQC">DJI(大疆)</a></div>
 <div id="mindon">dev by <a href="http://mindon.github.io">mindon</a></div>
 <div id="stage">
-<div id="mydrone" class="gpu"><div id="mytext">情人节快乐～</div></div>
+<div id="mydrone" class="gpu"><div id="mytext">春节快乐，喜气羊羊！</div></div>
 </div>
 <script src="assets/zepto.min.js"></script>
 <script>
-var tracks = [[50,27], [36, 18], [24, 21], [16, 40], [32, 75], [50, 100], [68, 75], [84, 40], [76, 21], [64, 18], [50, 27]], i = 0;
+var tracks = [[0,100], [0, 0], [20, 70], [20, 100], [20, 70], [50, 0], [80, 70], [80, 100], [80, 70], [100, 0], [100, 100], [50,100]], i = 0;
 function flight() {
   setTimeout(function(){
     var d = tracks[i], tn = tracks[i>0?i-1:tracks.length-1][2], param = {left: d[0]+'%', top: d[1]+'%', scale: d[1] < 50 ? Math.min(0.3 +d[1]/50, 1.0) : 1.0};
@@ -167,7 +167,7 @@ if (qsearch) {
 
 var SharePack = {
     "appid": "",
-    "img_url": 'http://mindon.github.io/greetings/drone/assets/dji-valentine.jpg',
+    "img_url": 'http://mindon.github.io/greetings/drone/assets/y.png',
     "img_width": "120",
     "img_height": "120",
     "link": window.location.href,
@@ -189,7 +189,6 @@ $(function(){
   if(qparam.t) {
     $('#mytext').html(qparam.t);
     SharePack.desc = $('#mytext').text();
-    document.title = SharePack.desc;
   }
   if(/^1?\d{1,2},1?\d{1,2}(,\d+)?(;1?\d{1,2},1?\d{1,2}(,\d+)?)+;?$/.test(qparam.d)) {
     var d = [];
@@ -199,7 +198,7 @@ $(function(){
     if(d.length>1) tracks = d;
   }
   $('#mydrone').click(function(){
-    var t = prompt("祝福语", $('#mytext').text());
+    var t = prompt("春節祝福語", $('#mytext').text());
     if(t) {
       window.location.href = '?u=' + encodeURIComponent(u.indexOf('://')>0?u:bgkey) +'&t=' + encodeURIComponent(t);
     }
@@ -230,6 +229,6 @@ if(document.addEventListener){
    document.attachEvent('onWeixinJSBridgeReady' , onWxReady);
 }
 </script>
-<div style="display:none"><img src="assets/dji-valentine.jpg" /></div>
+<div style="display:none"><img src="assets/y.png" /></div>
  </body>
 </html>
