@@ -176,10 +176,11 @@ var SharePack = {
 };
 
 $(function(){
-  var u = qparam.u, f = ['snowfield', 'sea', 'flower'];
+  var u = qparam.u, f = ['snowfield', 'sea', 'flower', 'http://img0.bdstatic.com/img/image/img_home_newyear_skin.jpg'];
   var bgkey = f[Math.floor(Math.random()*f.length)%f.length];
   if(!u) {
-    u = 'demo/' + bgkey +'.jpg';
+    u = bgkey;
+    u = /^http:\/\//i.test(u)?u:'demo/' + bgkey +'.jpg';
   } else {
     if(/^[\w\-\.]+$/.test(u)) bgkey = u;
     u = (/^http:\/\//i.test(u)?u:'demo/'+bgkey+'.jpg');
