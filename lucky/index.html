@@ -1,4 +1,17 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>
+Lucky Wheel
+  </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta charset="utf-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+</head>
 <body>
 <style>
 
@@ -47,6 +60,25 @@
 #mystart.busying {
 	opacity: 0.8;
 }
+
+@media only screen and (max-device-width : 320px) { 
+  #fubox {
+    width: 160px;
+    height: 149px;
+  }
+  #lotto {
+    margin-top: 4px;
+    width: 126px;
+    height: 126px;
+  }
+  #mystart {
+    width: 46px;
+    height: 50px;
+    top: 45px;
+    left: 56px;
+  }
+}
+
 </style>
   <div id="fubox">
 	<img id="lotto" class="gpu" src="assets/wheel.png" />
