@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="I&rsquo;ve tried more than 3 times before: to upgrade my HP Mini winxp to sp3 Lots of time spended on this stupid issue &ndash; winxp sp3 upgrade &hellip;">
+  <meta name="description" content="String encoded in PHP needs to decode in NodeJS? Or encoded in NodeJS needs to decode in PHP? Here&rsquo;s a match result with aes-128-cbc &amp; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,183 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Match Encrypt &amp; Decrypt in PHP and NodeJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-31T00:20:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>12:20 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>String encoded in PHP needs to decode in NodeJS?</p>
+
+<p>Or encoded in NodeJS needs to decode in PHP?</p>
+
+<p>Here&rsquo;s a match result with aes-128-cbc &amp; their demo code, you could choose your 16 characters key &amp; a different iv(initial vector):</p>
+
+<p>NodeJS</p>
+
+<pre><code>var crypto = require('crypto')
+  , key = 'abcdefghijklmnop'
+  , iv = '0123456789123456'
+  , cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
+
+var text = 'Clipher Message'
+  , crypted = cipher.update(text, 'utf-8', 'hex');
+
+crypted += cipher.final('hex');
+
+// encrypted
+console.log(crypted);
+
+
+var decipher = crypto.createDecipheriv('aes-128-cbc', key, iv)
+  , decrypted = decipher.update(crypted, 'hex', 'utf-8');
+
+decrypted += decipher.final('utf-8');
+
+// decrypted
+console.log(decrypted);
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/31/match-encrypt-and-decrypt-in-php-and-nodejs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Amazing WebGL and HTML5 Apps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-26T22:13:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:13 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><strong>Cell Cycle</strong>
+Creating 3d-printable cellular models.</li>
+</ul>
+
+
+<p>You can shape, twist, and subdivide, transforming a simple mesh to a complex patterned structure.</p>
+
+<p><img src="/images/blog/chrome/nervous.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/cell-cycle/">Chrome Experiments</a> | <a href="http://n-e-r-v-o-u-s.com/">Nervous System</a></p>
+
+<ul>
+<li><strong>Fluid Simulation with Turing Patterns</strong>
+Author: <strong>Felix Woitzel</strong> <a href="http://www.cake23.de">http://www.cake23.de</a></li>
+</ul>
+
+
+<p>This demo is built on the Reaction-Diffusion template from the WebGL playground and Evgeny Demidov&rsquo;s fluid simulation.</p>
+
+<p><img src="/images/blog/chrome/fluid.png" alt="" />
+Visit: <a href="http://www.chromeexperiments.com/detail/fluid-simulation-with-turing-patterns/">Chrome Experiments</a></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/amazing-webgl-and-html5-apps/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">眼干或视力模糊（中医验方）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-26T21:43:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>9:43 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Improve eyes dry or eyesight blur problem</p>
+
+<h2>1.枸杞鲫鱼汤（中医验方）</h2>
+
+<p><strong>主治</strong>：近视眼，视物模糊。</p>
+
+<p><strong>配方</strong>：鲫鱼一尾（约2000克），枸杞10克。</p>
+
+<p><strong>用法</strong>：将鲫鱼洗净去内脏，和枸杞一起煮汤，吃肉饮汤。</p>
+
+<p><strong>按注</strong>：一方用白鱼或其他鱼代鲫鱼也可。</p>
+
+<h2>2.牛奶鸡蛋饮（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：鸡蛋1只，牛奶1杯，蜂蜜1匙。</p>
+
+<p><strong>用法</strong>：将鸡蛋打碎，冲入加热的牛奶中，用小火煮沸，鸡蛋熟后待温，再加蜂蜜服食。</p>
+
+<h2>3.猪肝蛋汤（民间方）</h2>
+
+<p><strong>主治</strong>：近视眼。</p>
+
+<p><strong>配方</strong>：猪肝150克，鸡蛋1只。</p>
+
+<p><strong>用法</strong>：将猪肝洗净切片，入锅内加油煸炒，烹黄酒，加水煮沸，打入鸡蛋，加盐少许，服食。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/26/improve-eyes-dry-or-eyesight-blur-problem/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -449,165 +626,6 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/17/notes-on-mongodb/">Notes on MongoDB</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-03-17T11:12:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:12 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>MongoDB资料汇总专题</strong>
-<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
-
-<h2>MongoDB 最佳实践</h2>
-
-<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
-
-<p><strong>1. 始终启用备份</strong></p>
-
-<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
-二节点可以迅速启用，你的应用不会中断。</p>
-
-<p><strong>2. 使用最新版本</strong></p>
-
-<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
-和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
-，你应该尽快升级。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/03/17/notes-on-mongodb/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/15/lasers-can-be-used-to-steer-lightning-in-mid-strike/">Lasers Can Be Used to Steer Lightning in Mid-Strike</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-03-15T22:23:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:23 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Laser light can not only trigger lightning but redirect it, causing it to strike in the same place over and over, according to new research. This means lasers could serve as lightning rods. Because that would be awesome.</p>
-
-<p>Laser lightning rods have been a research subject for several decades, because they could trigger lightning and guide it to a specific place. Firing a laser would create an ionized channel in the atmosphere, which could conduct the lightning to the ground. Laser lightning rods could be an alternative to lightning rockets, according to Aurlien Houard of the Laboratoire d&#8217;Optique Appliquée in Palaiseau, France, a co-author of this study. Lightning rockets can apparently trigger a lightning strike by bringing a conductive material, like some type of salts, toward the static layer of a thunderhead. But a laser would be easier to control than a rocket.</p>
-
-<p>A team of French researchers set out to test how well lasers can harness and control lightning. They sent a laser beam past a spherical electrode toward an oppositely charged flat electrode. The laser stripped away the outer electrons from the atoms in its way, ionizing the pathway between the electrodes and creating a plasma filament — like lab lightning — that channeled an electrical discharge from the flat electrode to the spherical one.</p>
-
-<p>Then the team added a longer, pointed electrode to their set of electrode shapes and watched what happened. Left to its own devices, lightning follows the path of least resistance, striking the first thing it comes across — in a thunderstorm, that’s the tallest thing, and in this experiment, it’s the nearest thing. With no laser lightning rod, the discharge predictably hit the tall pointed electrode first. But when the researchers used the laser filament to guide it, the electrical discharge followed the ionized path and hit the spherical electrode instead.</p>
-
-<p>The team found they could pull this off even after the discharge was already on its way, meaning they could divert the path of lightning. The research appears in the American Institute of Physics journal <a href="http://aipadvances.aip.org/resource/1/aaidbi/v2/i1/p012151_s1?bypassSSO=1">AIP Advances</a>.</p>
-
-<p>Original from POPSCI: <a href="http://www.popsci.com/technology/article/2012-03/lightning-can-strike-twice-if-you-have-some-lasers">Lasers Can Be Used to Steer Lightning In Mid-Strike</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/15/words-that-sound-different/">Absurd</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-03-15T20:30:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:30 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The video from youtube <a href="http://www.youtube.com/watch?v=R281PhQufHo"><strong>GDC 2012</strong> - Porting your game to NaCl</a>.</p>
-
-<p>When I finished watching this video at noon, I visit the speaker&rsquo;s Google+. There I see this sentence as his motto</p>
-
-<p><strong>Colt McAnlis</strong> &ndash; &ldquo;If at first, the idea is not absurd, then there is no hope for it&rdquo;</p>
-
-<p>This is the first time I met the word: <strong>absurd</strong>!</p>
-
-<p>Another article “Man, give it five minutes.”</p>
-
-<p><a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">http://37signals.com/svn/posts/3124-give-it-five-minutes</a></p>
-
-<blockquote><p>There are two things in this world that take no skill: 1. Spending other people’s money and 2. Dismissing an idea.</p>
-
-<p>Dismissing an idea is so easy because it doesn’t involve any work. You can scoff at it. You can ignore it. You can puff some smoke at it. That’s easy. The hard thing to do is protect it, think about it, let it marinate, explore it, riff on it, and try it. The right idea could start out life as the wrong idea.</p>
-
-<p>So next time you hear something, or someone, talk about an idea, pitch an idea, or suggest an idea, give it five minutes. Think about it a little bit before pushing back, before saying it’s too hard or it’s too much work. Those things may be true, but there may be another truth in there too: It may be worth it.</p></blockquote>
-
-<p>“Your first design may be the best, but you won&rsquo;t know until you can&rsquo;t find a better one.”</p>
-
-<p><a href="http://blog.intercom.io/criticism-and-two-way-streets/">http://blog.intercom.io/criticism-and-two-way-streets/</a></p>
-
-<h2>Working on TikTalk</h2>
-
-<p>This time, when we start a new product. I need a name for it: I choose tiktalk hoping the product could be someting like a drop of water in the ocean of internet: providing a kind of driving force of a website&rsquo;s life.</p>
-
-<p>A name for product is importance to express our idea, activate our creative power to push it forward. (I learn this from the global mail project last year.)</p>
-
-<p>It&rsquo;s a hard work during these 3 weeks:</p>
-
-<ol>
-<li><p> Design the front-end &amp; back-end frameworks</p></li>
-<li><p> Setup service of back-end</p></li>
-<li><p> Rewrite front-end codes</p></li>
-</ol>
-
-
-<p>Today, finish front-end demo: a few features in detail, fixing bugs&hellip;</p>
-
-<p>TikTalk is working fine! :-)</p>
-
-<p>Next week, making back-end service more stable &amp; flexible is big challenge for me.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/14">&larr; Older</a>
@@ -657,13 +675,13 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 96 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 98 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 16 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 17 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -678,23 +696,23 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/26/the-lean-startup/">The Lean Startup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/26/my-first-flight-with-dji-phantom-3-professional/">My First Flight With DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
       <li class="post">
         <a href="/blog/2015/02/18/what-makes-everything-connected/">连接一切？是什么让连接建立起来了？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/thanks-giving-and-wedding-anniversary/">感恩节和周年纪念</a>
       </li>
     
   </ul>

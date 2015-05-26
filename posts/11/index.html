@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="中国象棋棋谱生成器是自己2007年开发的一个CorelDraw插件。与其让其腐烂在电脑里头，还不如免费给大家享用 :-p 可按棋谱生成矢量图。 下载：CD插件：中国象棋棋谱生成器 使用说明： 1，把gms文件放到draw/GMS/文件夹 2，运行CorelDraw ">
+  <meta name="description" content="When we want our product &ndash; a webpage for example &ndash; servered in multi-languages, what would we do? Simple once working method is copy-n- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,197 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/serve-in-multi-languages/">Serve in Multi-Languages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-06-12T23:00:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:00 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When we want our product &ndash; a webpage for example &ndash; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&rsquo;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &hellip;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/12/serve-in-multi-languages/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/11/build-node-expat-under-windows/">Build Node-Expat Under Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-06-11T09:22:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>9:22 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Preparea Developemtn Environment</h2>
+
+<p>To build node-expat module under windows, you need the nodejs addon development env ready.</p>
+
+<ul>
+<li><p>Get and install VC++ 2010 Express from microsoft: 【<a href="http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express">Download VC++ 2010 Express</a>】</p></li>
+<li><p>Download and unzip the NodeJS source code from Joyent&rsquo;s github project: 【<a href="https://github.com/joyent/node">Download NodeJS source code</a>】</p></li>
+<li><p>Get and install Python 2.7</p></li>
+<li><p>Run <code>vcbuild.bat Release</code> under such as <strong>joyen-node/</strong> (where you unzip the source of nodejs) to build NodeJS.</p></li>
+</ul>
+
+
+<h2>Tools for building a NodeJS Module</h2>
+
+<ul>
+<li><p>Env variable set <strong>NODE_ROOT</strong>=<em>where-your-joyent-node-located</em></p></li>
+<li><p>Check the <strong>tools/</strong> folder in the joyent-node/: file <strong>gyp_addon</strong>, and <strong>addon.gypi</strong> are needed.</p></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/11/build-node-expat-under-windows/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Zettabyte FileSystem: ZFS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-06-08T10:50:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:50 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>知道ZFS: Zettabyte FileSystem 说到头是从NodeJS开始的。</p>
+
+<p>因为NodeJS开发下需要关注CPU占用和内存泄漏问题，了解到了 DTrace, mdb —— 这些 Solaris 系统下的跟踪调试工具。后来接触到了 SmartOS 系统 —— Joyent已经把这个基于Illumos的操作系统开源了。（2010 年 8 月 3 日，illumos 正式可用。「Illumos」这个词来自 Illuminare，也即拉丁语的 Illuminate，「照明、照亮」的意思。illumos 项目的最终目标有两个：一是使用开源代码取代所有仍在 OpenSolaris 使用的专有代码，二是围绕之前的OpenSolaris 代码库建立一个独立的社区。）</p>
+
+<p>SmartOS由Illumos内核（包括ZFS，DTrace，Zones，OS级虚拟化以及下一代KVM）、BSD包管理器和GNU工具链组成。【<a href="https://github.com/joyent/smartos-live">源码</a>】,【<a href="https://download.joyent.com/pub/iso/">Live ISO</a>】</p>
+
+<h2>Why SmartOS?</h2>
+
+<ul>
+<li>Scale as fast and big as you need</li>
+</ul>
+
+
+<p>SmartOS is a hypervisor lean enough to run entirely in memory, powerful enough to run as much as you want to throw at it. Provisioning is blindingly fast, thanks to zones and ZFS file system creation.</p>
+
+<ul>
+<li>Trust it to keep your data safe</li>
+</ul>
+
+
+<p>The ZFS file system guarantees data integrity, with particular emphasis on preventing silent data corruption.</p>
+
+<ul>
+<li>Keep your system secure with &ldquo;double hulled&rdquo; virtualization</li>
+</ul>
+
+
+<p>OS virtualization with highly secure sparse zones (most system software is read-only), and KVM for legacy apps, provide the most secure virtualization on the market.</p>
+
+<ul>
+<li>Rely on It</li>
+</ul>
+
+
+<p>Based on the <a href="http://illumos.org/">illumos</a> kernel, a descendant of Solaris - the most trusted enterprise operating system in computing history. Additionally, SmartOS runs from a live image: there&rsquo;s no such thing as a failed upgrade when you can simply roll back to an earlier image.</p>
+
+<ul>
+<li>Use and extend freely: it’s open source</li>
+</ul>
+
+
+<p>SmartOS is and will remain <a href="http://smartos.org/cddl/">open source</a>. Joyent contributes <a href="https://github.com/joyent/smartos-live">our core kernel</a> work to the <a href="http://illumos.org/">illumos</a> project.</p>
+
+<ul>
+<li>Manage resources better</li>
+</ul>
+
+
+<p>The Service Management Facility (SMF) helps you recover more quickly from system failures and manage through service slowdowns. Fair share scheduling, CPU caps, and disk I/O throttling ensure good neighbor behavior in massively multi-tenant environments.</p>
+
+<ul>
+<li>See what’s going on throughout the software stack, in real time</li>
+</ul>
+
+
+<p>When something doesn’t behave as it should, you need to be able to find out quickly what is wrong and why. <a href="http://wiki.smartos.org/display/DOC/DTrace+Resources">Dynamic tracing</a> lets you see everything that&rsquo;s happening throughout the software stack - safely, in real time, in production.</p>
+
+<h2>ZFS特性介绍(转载)</h2>
+
+<p><img src="/images/blog/zfstour.png" alt="" /></p>
+
+<p>from <a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/source">http://hub.opensolaris.org/bin/view/Community+Group+zfs/source</a></p>
+
+<p>ZFS是第一个128位的文件系统，同时ZFS又被Sun Microsystems称作史上最后一个文件系统。因为这个文件系统含有多项创新技术，不仅成功地解决现有文件系统的问题和陋习，而且前瞻性地考量了未来对存储空间的需求，单个文件系统可以达到256 quadrillion（264） Zettabytes（221）。ZFS不仅符合POSIX文件系统的标准，而且提供了许多高级功能比如：Quota(配额)，Reservation(预留), Compression(压缩)， Snapshot(快照)，Clone（克隆）等。如果你还在坚持使用现有32位或者64位的文件系统，如果你还在“痛并不快乐着”地用着各式各样的Volume Manager，那就很值得看看这里列出的使用ZFS的十条理由。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/08/zettabyte-filesystem-zfs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -466,134 +657,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/11/spleen-power-and-health/">健脾與養生</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-11T07:32:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:32 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>转载。作者：<strong>王煥華</strong></p>
-
-<p>脾為後天之本，人類健康長壽與否，與脾胃有直接關係。</p>
-
-<p>人體氣血來源於脾胃運化的水穀精微。氣血充足，則面色紅潤，肌肉豐滿堅實，肌膚和毛髮光亮潤澤，外邪不易侵犯，身體不易發病，容光煥發，身體矯健，自然也就健康長壽。</p>
-
-<p>反之，脾胃運化失常，氣血化源不足，則會出現面色萎黃，肌肉消瘦，肌膚毛髮枯萎無光澤，外邪極易入侵，體內易發疾病，面色枯槁，髮疏易脫，身形萎縮，多病夭橫。</p>
-
-<p>津液也是來自脾胃運化的水穀津微，津液和調則外可布散體表，滋養肌膚毛髮，上可流注孔竅，滋養眼耳口鼻，內可滋養五臟六腑，維持正常活動，旁可充骨填髓，流注關節，使髓滿骨壯，關節自如，還可化生血液，灌溉全身。</p>
-
-<p>如果脾胃運化失常，則可破壞津液的代謝平衡，從而導致津液生成不足，或環流障礙，水液停滯不動，或津液大量流失等病理改變，直接影響到人的長壽健康。</p>
-
-<p>正因如此，中醫經常強調脾胃的調養與補益，古代就有醫家提出：「補腎不如補脾」。對於脾胃虛弱的病人或中老年人，都主張運用「益氣」、或「補中」的辦法來加強後天功能。</p>
-
-<p>所謂「益氣」，是針對「脾胃氣虛」而言，氣虛是衰老過程中的主要病理改變，表現為人體多種生理機能的減退，抵抗能力的下降。因此補氣益氣，就是通過加強脾胃後天消化吸收的能力，來增強機體的各系統器官的生理機能，提高機體防禦能力，這是抗衰老的重要途徑。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/11/spleen-power-and-health/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/">Artist Suspends Objects in Parks Around the World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-04-28T08:18:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:18 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>German artist <a href="http://www.cokonrads.de/">Cornelia Konrads</a> goes around the world installing gravity-defying artworks in natural settings like public parks and private gardens.</p>
-
-<p>Her large-scale installations consist of objects like logs and fences suspended mid-air, giving off the illusion of weightlessness created by an “invisible” force.</p>
-
-<p>Check out her “magical” works displayed in countries like Germany, France and Japan below.</p>
-
-<p><img src="/images/blog/iv-force/8.jpg" alt="" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">The Eye Limits the Brain&#8217;s Learning Potential</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-04-26T08:12:00+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:12 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The concept of a critical period for visual development early in life during which sensory experience is essential to normal neural development is now well established. However recent evidence suggests that a limited degree of plasticity remains after this period and well into adulthood. Here, we ask the question, &ldquo;what limits the degree of plasticity in adulthood?&rdquo; Although this limit has been assumed to be due to neural factors, we show that the optical quality of the retinal image ultimately limits the brain potential for change. We correct the high-order aberrations (HOAs) normally present in the eye&rsquo;s optics using adaptive optics, and reveal a greater degree of neuronal plasticity than previously appreciated.</p>
-
-<p>[<a href="http://www.nature.com/srep/2012/120413/srep00364/full/srep00364.html">read the full version article</a>]</p>
-
-<p>Nature集团新刊《Scientific Reports》于4月16日在线发表了中国科学技术大学脑功能与脑疾病中科院重点实验室及生命科学学院周逸峰研究小组和中国科学院成都光电技术研究所自适应光学重点实验室张雨东研究小组的合作研究成果。</p>
-
-<p>他们通过实验证明，即便是发育成熟之后正常成年视觉神经系统仍具有相当程度的可塑性，但这些可塑性的发挥受限于人眼的光学系统质量。在使用人眼自适应光学矫正仪提高人眼光学系统质量后进行知觉学习训练可以大幅度提高正常成人的视觉功能。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/04/26/the-eye-limits-the-brains-learning-potential/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -643,13 +706,13 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 96 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 98 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 16 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 17 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -664,23 +727,23 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/26/the-lean-startup/">The Lean Startup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/26/my-first-flight-with-dji-phantom-3-professional/">My First Flight With DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
       <li class="post">
         <a href="/blog/2015/02/18/what-makes-everything-connected/">连接一切？是什么让连接建立起来了？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/thanks-giving-and-wedding-anniversary/">感恩节和周年纪念</a>
       </li>
     
   </ul>

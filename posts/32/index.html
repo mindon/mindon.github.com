@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1000141910, blog id: airoff
-History stat: 浏览/评论：392/0 , 日期：2005年1月7日 10:05 package com.mindon.util &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1000142164, blog id: airoff
+History stat: 浏览/评论：483/0 , 日期：2005年1月7日 13:27 My mother always talked to me a lot about the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,302 @@ History stat: 浏览/评论：392/0 , 日期：2005年1月7日 10:05 package com
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000142164/">Allie Narrations in 《Taken》</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-01-07T13:27:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>1:27 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000142164, blog id: airoff
+History stat: 浏览/评论：483/0  ,  日期：2005年1月7日 13:27</p>
+
+<p><b>M</b>y mother always talked to me a lot about the sky. She liked to watch the clouds in the day and the stars at night&hellip;especially the stars. We would play a game sometimes; a game called &quot;What&rsquo;s Beyond the Sky?&quot; We would imagine darkness or a blinding light or something else that we didn&rsquo;t know how to name. But of course, that was just a game. There&rsquo;s nothing beyond the sky. The sky just is, and it goes on and on, and we play all of our games beneath it.</p>
+
+<p><b>P</b>eople are lonely in this world for lots of different reasons. Some people have something in their disposition. Maybe they were just born too mean, or maybe they were born too tender. But most people are brought to where they are by circumstance, by calamity or a broken heart or something else happening in their lives that wasn&rsquo;t anything they planned on. People are lonely in this world for lots of different reasons. The one thing that I do know is, it doesn&rsquo;t matter what any one of them might tell you&ndash;nobody wants to be alone.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/07/old-blogms-1000142164/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141979/">Use XML & XPath in Flash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-01-07T11:01:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>11:01 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141979, blog id: airoff
+History stat: 浏览/评论：260/0  ,  日期：2005年1月7日 11:01</p>
+
+<p><font color=#00008B><font size=2 style="line-height:14pt"></p>
+
+<p>/* mindon actionscript for flash 7.0 or upper</p>
+
+<ul>
+<li><p>@date    07/29, 2004</p></li>
+<li><p>@author      Feng Rongjun from Shenzhen China</p></li>
+<li><p>@e-mail      <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x69;&#x73;&#101;&#97;&#115;&#x6b;&#121;&#x40;&#x68;&#x6f;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x69;&#x73;&#101;&#x61;&#x73;&#x6b;&#121;&#64;&#104;&#111;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></p></li>
+</ul>
+
+
+<p>*/</p>
+
+<p>import com.xfactorstudio.xml.xpath.*;</p>
+
+<p>/<em> load xml into a textarea component with stylesheet </em>/</p>
+
+<p>function styleXML(areatxt, xmlfile, cssfile)</p>
+
+<p>{</p>
+
+<p>var areatxt, xmlfile, cssfile;</p>
+
+<p>try {</p>
+
+<p>//init TextArea component</p>
+
+<p>areatxt.html = true;</p>
+
+<p>areatxt.wordWrap = true;</p>
+
+<p>areatxt.multiline = true;</p>
+
+<p>areatxt.label.condenseWhite=true;</p>
+
+<p>//load css</p>
+
+<p>if(cssfile) {</p>
+
+<p>var csstyle = new TextField.StyleSheet();</p>
+
+<p>csstyle.load(cssfile);</p>
+
+<p>areatxt.styleSheet = csstyle;</p>
+
+<p>}</p>
+
+<p>//load XML CONTENT</p>
+
+<p>if(xmlfile) {</p>
+
+<p>var xmlc = new XML();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>areatxt.text = xmlc;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/<em> load xml file </em>/</p>
+
+<p>_global.xmldocs = {};</p>
+
+<p>function loadXML(xmlfile, xmlfunc)</p>
+
+<p>{</p>
+
+<p>var xmlfile, xmlfunc;</p>
+
+<p>try {</p>
+
+<p>if(xmlfile &amp;&amp; xmlfunc &amp;&amp; typeof xmlfunc == &quot;function&quot;) {</p>
+
+<p>var xmlc = new XPathDocument();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>xmldocs[xmlfile] = this;</p>
+
+<p>xmlfunc(this);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/ loader example</p>
+
+<p>function xmlLoader(xdoc)</p>
+
+<p>{</p>
+
+<p>var xdoc;</p>
+
+<p>if(xdoc) {</p>
+
+<p>var nod = xdoc.selectSingleNode(&quot;/mindon/name&quot;);</p>
+
+<p>if(nod) {</p>
+
+<p>if(String(nod.stringValue())==&quot;derek.f&quot;) {</p>
+
+<p>trace(&quot;true&quot;);</p>
+
+<p>} else {</p>
+
+<p>trace(nod.stringValue());</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&quot;cannot find node mindon/name&quot;);</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&quot;xml read fail&quot;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/</p>
+
+<p></font></font></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/01/07/old-blogms-1000141972/">Corel Draw Script</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-01-07T10:57:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>10:57 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1000141972, blog id: airoff
+History stat: 浏览/评论：424/0  ,  日期：2005年1月7日 10:57</p>
+
+<p>REM 90 Deg. Swirl with 10 step blend      Font used: AvantGarde Bk BT</p>
+
+<p>WITHOBJECT &quot;CorelDraw.Automation.10&quot;</p>
+
+<pre><code>.StartOfRecording 
+
+.SuppressPainting 
+
+.RecorderStorePreselectedObjects TRUE
+</code></pre>
+
+<p>REM 选择物体</p>
+
+<pre><code>.RecorderSelectObjectByIndex TRUE, 1
+</code></pre>
+
+<p>REM 旋转 Angel,,Center H,Center V</p>
+
+<pre><code>.RotateObject 90000000, TRUE, 0, 0
+</code></pre>
+
+<p>REM 拷贝</p>
+
+<pre><code>.DuplicateObject 20000,30000
+</code></pre>
+
+<p>REM .ApplyLensEffect 10, FALSE, FALSE, FALSE, 0, 0, 500</p>
+
+<pre><code>.ApplyLensEffect 0, TRUE, TRUE, FALSE, 22061944, 1242708, 20971701
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2005/01/07/old-blogms-1000141972/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -2465,131 +2761,6 @@ History stat: 浏览/评论：550/0  ,  日期：2005年1月7日 09:03</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139280/">WMA</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2005-01-04T13:12:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>1:12 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000139280, blog id: airoff
-History stat: 浏览/评论：126/2  ,  日期：2005年1月4日 13:12</p>
-
-<p>WMA，记得似乎是windows媒体播放器播放的一种媒体格式。（查了google，解释为“WMA的全称是Windows Media Audio，它是微软公司推出的与MP3格式齐名的一种新的音频格式。”）</p>
-
-<p>不过我想说的并不是这个解释，而是我2号出门瞎逛时想到的另一个意思——Weak Moment Actions（脆弱时刻行为）。本来打消了写这个的念头了的，因为没有那天的情绪实在很难写出点什么，可看到june的《2005年第一个工作日》让我又想起这个来。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139280/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/04/old-blogms-1000139151/">2005的开始</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2005-01-04T08:51:00+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>8:51 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000139151, blog id: airoff
-History stat: 浏览/评论：97/1  ,  日期：2005年1月4日 08:51</p>
-
-<p>1月2日，在待屋里编了一整天程序后，决定出门做点什么。想起了在何香凝美术馆的毕加索版画展。因为美术馆离住的地方不外两站路，于是就走了过去，顺便给自己点活动量。票价35块，进去的时候还经过了如机场安检一般的程序，保安看到我带了相机还特意提醒不允许拍照——有点失望。美术馆里同时有另外一个画家（刘贵宾）的油画展，就是圣诞节在美术馆外拍照片时看到在招贴底下留影的那位。</p>
-
-<p>看版画展的人不少，还有很多小朋友随他们的老师来学习的。我也不懂什么版画，只是凭自己的感觉和知道的一丁点有限的了解来理解自己眼前的线条和画面。我想，看展览不外是两种目的：企图理解艺术家所要表达的内容和找寻自己期待的内容。我的知识和理解能力大概对艺术家原本的表达意图揣测是十分有限的，大多时候我只是在找寻自己所期待的线条和意境，至于符不符合作者最初想表达的东西，我并不是太在意。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2005/01/04/old-blogms-1000139151/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/12/30/old-blogms-1000132461/">wHERE dECEMBER eNDS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2004-12-30T14:12:00+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2004</span></span> <span class='time'>2:12 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1000132461, blog id: airoff
-History stat: 浏览/评论：94/2  ,  日期：2004年12月30日 14:12</p>
-
-<p>2005 is comming, i just wonder, where the December ends and where the news year starts.</p>
-
-<p>day comes and goes one after another, but nothing improved.</p>
-
-<p>prey,</p>
-
-<p>pray</p>
-
-<p>still being where i stay.</p>
-
-<p>what could i say?</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2004/12/30/old-blogms-1000132461/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/33">&larr; Older</a>
@@ -2639,13 +2810,13 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 96 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 98 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 16 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/readings/">readings</a> ( 17 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/chinese-balance-heal/">chinese-balance-heal</a> ( 8 )</li>
 
@@ -2660,23 +2831,23 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/26/the-lean-startup/">The Lean Startup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/26/my-first-flight-with-dji-phantom-3-professional/">My First Flight With DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
       <li class="post">
         <a href="/blog/2015/02/18/what-makes-everything-connected/">连接一切？是什么让连接建立起来了？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/07/the-future-new-high-tech-park-area/">深圳科技园南区——产学研与高科技密集的未来</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/the-science-of-awesome/">The Science of Awesome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/29/thanks-giving-and-wedding-anniversary/">感恩节和周年纪念</a>
       </li>
     
   </ul>
