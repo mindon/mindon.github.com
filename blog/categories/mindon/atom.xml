@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mindon | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/mindon/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-05-27T06:13:42+08:00</updated>
+  <updated>2015-06-19T22:14:21+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Maker Faire 2015 ShenZhen]]></title>
+    <link href="http://mindon.github.io/blog/2015/06/19/maker-faire-2015-shenzhen/"/>
+    <updated>2015-06-19T21:35:52+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/06/19/maker-faire-2015-shenzhen</id>
+    <content type="html"><![CDATA[<p>深圳国际创客周。</p>
+
+<p>想起来都很兴奋。</p>
+
+<p>今天上午休年假半天，来到了创客活动的主场——深圳软件产业基地。（我是坐公交车到滨海之窗走过去的，听说地铁科苑站有免费巴士到现场）。</p>
+
+<p>创客活动主场离深圳大学不远，顺着学府路往东走个十多分钟也能到。周边有芒果网大楼，A8音乐大厦，在建的腾讯滨海总部大厦……</p>
+
+<p>其实昨天就开始了，今天是正式开幕第一天，那个……目不暇接啊，作为一个码农，只感觉自己接触的知识不够多，对电子电路没有应用经验。</p>
+
+<p>遇到尼尔·哥申菲尔德(Neil Gershenfeld)—Fablab创始人、美国麻省理工学院比特和原子研究中心主任尼尔•哥申菲尔德博士。他是创客群体中的领军人物，还被芝加哥科学工业博物馆评选为“当代达芬奇”。TED视频：<a href="http://www.ted.com/talks/neil_gershenfeld_on_fab_labs/transcript?language=zh-cn">Unleash your creativity in a Fab Lab</a></p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_0958.JPG" alt="" /></p>
+
+<!-- more -->
+
+
+<p>自用拥有了无人机Phantom 3 Pro，最近周末有时间都会出去飞个20分钟学习飞行，拍点好玩的照片。今天在DJI大疆的展位，触摸到了刚刚新鲜发布的开放SDK的Matrice 100！这款可以用SDK自定义的带避障系统Guidance，且可以携带双电的无人机。怎能不兴奋？另外也看到了Inspire 1。</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_0988.JPG" alt="" /></p>
+
+<p>更多大疆（DJI）展台的照片可以看我在大疆论坛的帖子：<a href="http://bbs.dji.com/forum.php?mod=viewthread&amp;tid=14813">http://bbs.dji.com/forum.php?mod=viewthread&amp;tid=14813</a></p>
+
+<p>另外，那个拉低整条街调调的简陋的JD智能奶茶店里，看到了“猫王2”——众筹的高端手工hi-fi收音机——外观和触感做得还是得赞。其实我是为了看“猫王2”才进的这家奶茶店，要不是绝不会进去的。</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_1119.JPG" alt="" /></p>
+
+<p>今天看到了N多各种各样的3D打印机，绝大部分是单色的。在其中一个摊位看到了这个，让我惊叹不已，听介绍是进口的3D打印机的作品。另外还有打印出来的逼真的苹果、香蕉和芦笋。</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_0975.JPG" alt="" /></p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_0978.JPG" alt="" /></p>
+
+<p>这次的Maker Faire 让这片新建的，聚集百度、腾讯、顺丰…… 各大公司的科技园新区充满了硅谷味道（虽然我也没感受过硅谷，哈哈，很有感觉就是了）。</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_1043.JPG" alt="" /></p>
+
+<p>烈日炎炎…</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_1120.JPG" alt="" /></p>
+
+<p>在电视屏幕上常见的主持人</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_0938.JPG" alt="" /></p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_1065.JPG" alt="" /></p>
+
+<p>还有我们家在附近上班，同样兴奋的Aby</p>
+
+<p><img src="/images/blog/maker-faire-2015/DSC_1094.JPG" alt="" /></p>
+
+<p>各种各样的机器人，交通工具，教育装置，自动设备方案，IoT方案…</p>
+
+<p>了不起的创客来自世界各地——欧洲、美国、韩国、日本…</p>
+
+<p>Yes, It&rsquo;s the Maker Faire 2015 in ShenZhen —— 这个神奇的创客之城。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My First Flight With DJI Phantom 3 Professional]]></title>
@@ -222,40 +286,6 @@
 <p>这个社会貌似不需要这样的角色，其实是这个世界需要这样的角色才可能突破，正如科学界需要跨学科的合作一样的。没有突破，正是因为我们没有重视具有这个角色能力的资源。</p>
 
 <p>要连接一切，就需要产生“连接者”这个职业，产生规划和管理连接的人才和工具。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[深圳科技园南区——产学研与高科技密集的未来]]></title>
-    <link href="http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area/"/>
-    <updated>2015-02-07T22:33:22+08:00</updated>
-    <id>http://mindon.github.io/blog/2015/02/07/the-future-new-high-tech-park-area</id>
-    <content type="html"><![CDATA[<p>腾讯滨海新总部大厦前两天封顶了。目光把大家带到了这个神秘区域。</p>
-
-<p>其实科技园南区早已进驻了不少大小企业，创新小企业更是数不胜数。</p>
-
-<p><img src="/images/blog/binhai-area.jpg" alt="" /></p>
-
-<p>先看看简单的平面图吧，这是新建区域部分。</p>
-
-<p><img src="/images/blog/binhai-map.jpg" alt="" /></p>
-
-<p>未来一两年，这里将聚集大量高科技人才和资源。这里西贴着深圳大学，东边是虚拟大学园区一带，布满中国各大学的产学研基地。</p>
-
-<p>滨海大道另一边则是深圳南山区的最热闹的中心地带——海岸城。</p>
-
-<!--more-->
-
-
-<p><img src="/images/blog/buildings.jpg" alt="" /></p>
-
-<p>Hmm&hellip; 这两天大家觉得有趣的则是这个了：360手机在深圳的办公地点——怡化金融科技大厦就在腾讯滨海大厦距离100余米的地方，怡化金融科技大厦边上是粤海派出所。</p>
-
-<p><img src="/images/blog/t360.jpg" alt="" /></p>
-
-<p>最近Aby公司架构调整，办公地点也从福田转移到了这个片区——航天大厦靠学府路的对面。这里离家近好多了。走路的距离也在25分钟左右。</p>
-
-<p>今天Aby加班，借机去这片未来科技浓度最高的区域逛逛，了解一下环境，估计几年后的活动中心就在这片区了。</p>
 ]]></content>
   </entry>
   

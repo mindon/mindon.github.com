@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-05-27T06:13:42+08:00</updated>
+  <updated>2015-06-19T22:13:10+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Maker Faire 2015 ShenZhen]]></title>
+    <link href="http://mindon.github.io/blog/2015/06/19/maker-faire-2015-shenzhen/"/>
+    <updated>2015-06-19T21:35:52+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/06/19/maker-faire-2015-shenzhen</id>
+    <content type="html"><![CDATA[<p>深圳国际创客周。</p>
+
+<p>想起来都很兴奋。</p>
+
+<p>今天上午休年假半天，来到了创客活动的主场——深圳软件产业基地。（我是坐公交车到滨海之窗走过去的，听说地铁科苑站有免费巴士到现场）。</p>
+
+<p>创客活动主场离深圳大学不远，顺着学府路往东走个十多分钟也能到。周边有芒果网大楼，A8音乐大厦，在建的腾讯滨海总部大厦……</p>
+
+<p>其实昨天就开始了，今天是正式开幕第一天，那个……目不暇接啊，作为一个码农，只感觉自己接触的知识不够多，对电子电路没有应用经验。</p>
+
+<p>遇到尼尔·哥申菲尔德(Neil Gershenfeld)—Fablab创始人、美国麻省理工学院比特和原子研究中心主任尼尔•哥申菲尔德博士。他是创客群体中的领军人物，还被芝加哥科学工业博物馆评选为“当代达芬奇”。TED视频：<a href="http://www.ted.com/talks/neil_gershenfeld_on_fab_labs/transcript?language=zh-cn">Unleash your creativity in a Fab Lab</a></p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_0958.JPG" alt="" /></p>
+
+<!-- more -->
+
+
+<p>自用拥有了无人机Phantom 3 Pro，最近周末有时间都会出去飞个20分钟学习飞行，拍点好玩的照片。今天在DJI大疆的展位，触摸到了刚刚新鲜发布的开放SDK的Matrice 100！这款可以用SDK自定义的带避障系统Guidance，且可以携带双电的无人机。怎能不兴奋？另外也看到了Inspire 1。</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_0988.JPG" alt="" /></p>
+
+<p>更多大疆（DJI）展台的照片可以看我在大疆论坛的帖子：<a href="http://bbs.dji.com/forum.php?mod=viewthread&amp;tid=14813">http://bbs.dji.com/forum.php?mod=viewthread&amp;tid=14813</a></p>
+
+<p>另外，那个拉低整条街调调的简陋的JD智能奶茶店里，看到了“猫王2”——众筹的高端手工hi-fi收音机——外观和触感做得还是得赞。其实我是为了看“猫王2”才进的这家奶茶店，要不是绝不会进去的。</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_1119.JPG" alt="" /></p>
+
+<p>今天看到了N多各种各样的3D打印机，绝大部分是单色的。在其中一个摊位看到了这个，让我惊叹不已，听介绍是进口的3D打印机的作品。另外还有打印出来的逼真的苹果、香蕉和芦笋。</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_0975.JPG" alt="" /></p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_0978.JPG" alt="" /></p>
+
+<p>这次的Maker Faire 让这片新建的，聚集百度、腾讯、顺丰…… 各大公司的科技园新区充满了硅谷味道（虽然我也没感受过硅谷，哈哈，很有感觉就是了）。</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_1043.JPG" alt="" /></p>
+
+<p>烈日炎炎…</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_1120.JPG" alt="" /></p>
+
+<p>在电视屏幕上常见的主持人</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_0938.JPG" alt="" /></p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_1065.JPG" alt="" /></p>
+
+<p>还有我们家在附近上班，同样兴奋的Aby</p>
+
+<p><img src="http://mindon.github.io/images/blog/maker-faire-2015/DSC_1094.JPG" alt="" /></p>
+
+<p>各种各样的机器人，交通工具，教育装置，自动设备方案，IoT方案…</p>
+
+<p>了不起的创客来自世界各地——欧洲、美国、韩国、日本…</p>
+
+<p>Yes, It&rsquo;s the Maker Faire 2015 in ShenZhen —— 这个神奇的创客之城。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Lean Startup]]></title>
@@ -865,38 +929,6 @@
 <p>有一定年限的房子，积尘和设计上缺陷带来的漏水问题一直是让人头大的问题，有什么技术和办法能改善一下呢？</p>
 
 <p>有待探讨。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[西少爷.肉夹馍，开分店啦]]></title>
-    <link href="http://mindon.github.io/blog/2014/08/23/about-xishaoye-roujiamo/"/>
-    <updated>2014-08-23T17:41:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/08/23/about-xishaoye-roujiamo</id>
-    <content type="html"><![CDATA[<p>这个周日（Aug 23, 2014），<a href="http://baike.baidu.com/view/12500068.htm">西少爷肉夹馍</a>望京分店要开业了。这个肉夹馍品牌今年可算是IT圈里的热门话题。主题团队均来自BAT等大公司的离职员工——他们传递出一种信息：选择的自由，奋斗的激情，学习的能力和感染的力量。</p>
-
-<p>孟兵，是个我没有认识和见面之前就能感受到他行动能力的小伙子。他在T工作期间，学习和工作都异于常人地努力和拼命，而且方向很明确和坚定。</p>
-
-<p>昨天微信上看到他的分店开张的消息，可以感觉到他在一步步朝着自己的目标前行，很棒！</p>
-
-<p>其实写这篇日志，不是因为他的新店开张，而是因为看到“肉夹馍”几个字，有点造字的一个想法，作品是……</p>
-
-<!-- more -->
-
-
-<p><img src="http://mindon.github.io/images/blog/r.png" alt="" /></p>
-
-<p>要表达什么？嗯… 不解释。不同的人理解产生不同的诠释，才是最有意思的地方。</p>
-
-<p>当然，顺便宣传一下也是要的 :-p</p>
-
-<p>第一个店开在五道口，Aby在北京很熟悉和喜欢的地方，被称为“宇宙的中心”的位置。</p>
-
-<p>第二个店：8-24（本周日）上午10：30，西少爷望京凯德Mall店准时开业！（地下一层扶梯正对第3家店）这个新店会有三种新品，据说“牛馍王”就是其中之一。免费送馍是他们店的传统了，附近的大公司工卡也能免费领。</p>
-
-<p>祝他们生意兴隆 :-) 西少爷们，加油！</p>
-
-<p>IT码农的才能不仅仅是Coding，我们强大的学习能力，适应能力和其他行业能力也是不容忽视的。Fighting!</p>
 ]]></content>
   </entry>
   

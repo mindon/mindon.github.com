@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="When we want our product &ndash; a webpage for example &ndash; servered in multi-languages, what would we do? Simple once working method is copy-n- &hellip;">
+  <meta name="description" content="昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。 目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/14/lost-in-the-tech-way/">Lost in the Tech Way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-06-14T22:40:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。</p>
+
+<p>目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL API：登录验证和发邮件，却只调通了登录验证。另外一个用来发邮件提交的xml内容总是不如意，导致调用失败。node-soap模块这个github上的开源模块确实还存在太多问题，还不能处理稍微复杂一点的 WSDL。</p>
+
+<p>因为时间原因，对soap也不太熟悉，想着——如果用这个模块不行，干脆改用 php 或 python，这个有现成的例子——于是，便尝试了一下php和python的调用。自然，API的调用很顺利，而且在 nodejs 调用 php 和 python 也不是什么麻烦的事情。可能大家觉得这样问题就解决了。</p>
+
+<p>当然这个方案貌似没什么问题，能绕过node-soap模块的糟糕表现。可总不是自己想的那样直接用NodeJS处理。不过事情的转折出现在我找 python 例子的过程中：第一个例子是Google到的 suds 模块，用来处理 soap 的，表现不错，达到了效果。不过我却在内部知识分享平台找到了一个python封装好的现成py脚本，却没有用到任何额外模块！这让我感觉到了异常。</p>
+
+<p>于是，大略看了一下另外部门同事分享的python脚本。突然觉醒——自己这些天都迷失在了技术中，而忘记了自己的目标是：成功调用并使用这两个 Web Service API。</p>
+
+<p>这个python脚本是通过把需要提交的xml内容做成字符串模板形式，然后直接用 POST 提交，在HTTP头里指定 SOAPAction。这是针对具体 WSDL 调用的最直接的办法。我折腾了3天却没有想到，完全是脑子不会转弯，迷失在解决技术问题里了，而不是解决真正的问题。</p>
+
+<p>醒了，自然不再需要node-soap，自然就不用管node-expat（虽然已经不是问题），于是按照这个python脚本的思路，花了1+个小时：写代码、封装调试、自测，把原来的登录验证改为新的调用方式。</p>
+
+<p>问题解决了，可这个事情让不断在提“要牢记最终目标是什么”的我无法平静，这个警醒必须是深刻的 —— 切不能迷失在过程之中。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -613,50 +656,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Good and Bad Reasons for Believing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-19T12:04:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:04 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>(這篇文章找到英文的還真不容易，中文的都沒有註明英文文出處。曾在七年前在敏思博客上轉載過。——麥盾)</p>
-
-<p>by <strong>Richard Dawkins</strong></p>
-
-<p>&ldquo;Tell a devout Christian that his wife is cheating on him, or that frozen yogurt can make a man invisible, and he is likely to require as much evidence as anyone else, and to be persuaded only to the extent that you give it. Tell him that the book he keeps by his bed was written by an invisible deity who will punish him with fire for eternity if he fails to accept its every incredible claim about the universe, and he seems to require no evidence whatsoever.&rdquo; —SAM HARRIS</p>
-
-<p>NOTE: The following letter was written by Richard Dawkins, one of the world&rsquo;s most respected scientists. It is addressed to his daughter Juliet, who was ten years old at the time. The letter originally appeared as the last chapter of his 2003 book, A Devil&rsquo;s Chaplain. It is reprinted as an appendix in my book, Thank God for Evolution, by permission of the author. I included it for three reasons. First, it powerfully distinguishes the relative value today of, what I like to call, private and public revelation. Second, it provides an invaluable critique of traditional, flat-earth faith, while offering sound guidance for an evidence-based, naturalized faith. Third, it shows why scientific, historical, and cross-cultural evidence provide a far more accurate and useful map of reality than do tradition and authority.</p>
-
-<p>&ldquo;Good and Bad Reasons for Believing&rdquo; — by Richard Dawkins</p>
-
-<p>（注：附中文译文）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/good-and-bad-reasons-for-believing/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -706,7 +705,7 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 98 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 99 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
 
@@ -727,6 +726,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/19/maker-faire-2015-shenzhen/">Maker Faire 2015 ShenZhen</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/05/26/the-lean-startup/">The Lean Startup</a>
       </li>
     
@@ -740,10 +743,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/18/what-makes-everything-connected/">连接一切？是什么让连接建立起来了？</a>
       </li>
     
   </ul>
