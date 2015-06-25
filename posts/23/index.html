@@ -9,8 +9,8 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="BlogMS original blog key: 1001206154, blog id: airoff
-History stat: 浏览/评论：255/0 , 日期：2006年4月28日 10:36 致信人基本情况： 姓名：邹涛，性别：男。深圳市民。中华人民共和国公民，资深民间公益志愿者， &hellip;">
+  <meta name="description" content="BlogMS original blog key: 1001240372, blog id: airoff
+History stat: 浏览/评论：358/3 , 日期：2006年5月12日 09:03 永州之野产异蛇，黑质而白章，触草木尽死，以啮人，无御之者。然得而腊之以为饵，可以已大风、挛踠、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,43 @@ History stat: 浏览/评论：255/0 , 日期：2006年4月28日 10:36 致信人�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/05/12/old-blogms-1001240372/">捕蛇者说</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2006-05-12T09:03:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2006</span></span> <span class='time'>9:03 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BlogMS original blog key: 1001240372, blog id: airoff
+History stat: 浏览/评论：358/3  ,  日期：2006年5月12日 09:03</p>
+
+<p>永州之野产异蛇，黑质而白章，触草木尽死，以啮人，无御之者。然得而腊之以为饵，可以已大风、挛踠、瘘、疠，去死肌，杀三虫。其始，太医以王命聚之，岁赋其二，募有能捕之者，当其租入，永之人争奔走焉。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2006/05/12/old-blogms-1001240372/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -418,382 +455,6 @@ History stat: 浏览/评论：222/1  ,  日期：2006年4月7日 12:47</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/03/29/old-blogms-1001125911/">数据库汉字搜索</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2006-03-29T16:06:00+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2006</span></span> <span class='time'>4:06 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>BlogMS original blog key: 1001125911, blog id: airoff
-History stat: 浏览/评论：535/1  ,  日期：2006年3月29日 16:06</p>
-
-<p><b><font color=#DC143C>MySQL5 之汉字首拼音字母查询存储过程</p>
-
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</font></b></p>
-
-<p>DROP TABLE IF EXISTS <code>hz2py</code>;</p>
-
-<p>CREATE TABLE <code>hz2py</code> (</p>
-
-<p><code>PY</code> char(1) character set utf8 NOT NULL,</p>
-
-<p><code>HZ</code> char(1) NOT NULL default &lsquo;&rsquo;,</p>
-
-<p>PRIMARY KEY  (<code>PY</code>)</p>
-
-<p>) ENGINE=InnoDB DEFAULT CHARSET=gbk;</p>
-
-<p>INSERT INTO <code>hz2py</code> (<code>PY</code>,<code>HZ</code>) VALUES</p>
-
-<p>(&lsquo;A&rsquo;,&lsquo;驁&rsquo;),</p>
-
-<p>(&lsquo;B&rsquo;,&lsquo;簿&rsquo;),</p>
-
-<p>(&lsquo;C&rsquo;,&lsquo;錯&rsquo;),</p>
-
-<p>(&rsquo;D&#8217;,&lsquo;鵽&rsquo;),</p>
-
-<p>(&lsquo;E&rsquo;,&lsquo;樲&rsquo;),</p>
-
-<p>(&lsquo;F&rsquo;,&lsquo;鰒&rsquo;),</p>
-
-<p>(&lsquo;G&rsquo;,&lsquo;腂&rsquo;),</p>
-
-<p>(&lsquo;H&rsquo;,&lsquo;夻&rsquo;),</p>
-
-<p>(&lsquo;J&rsquo;,&lsquo;攈&rsquo;),</p>
-
-<p>(&lsquo;K&rsquo;,&lsquo;穒&rsquo;),</p>
-
-<p>(&lsquo;L&rsquo;,&lsquo;鱳&rsquo;),</p>
-
-<p>(&rsquo;M&#8217;,&lsquo;旀&rsquo;),</p>
-
-<p>(&lsquo;N&rsquo;,&lsquo;桛&rsquo;),</p>
-
-<p>(&lsquo;O&rsquo;,&lsquo;漚&rsquo;),</p>
-
-<p>(&lsquo;P&rsquo;,&lsquo;曝&rsquo;),</p>
-
-<p>(&lsquo;Q&rsquo;,&lsquo;囕&rsquo;),</p>
-
-<p>(&lsquo;R&rsquo;,&lsquo;鶸&rsquo;),</p>
-
-<p>(&rsquo;S&#8217;,&lsquo;蜶&rsquo;),</p>
-
-<p>(&rsquo;T&#8217;,&lsquo;籜&rsquo;),</p>
-
-<p>(&lsquo;W&rsquo;,&lsquo;鶩&rsquo;),</p>
-
-<p>(&lsquo;X&rsquo;,&lsquo;鑂&rsquo;),</p>
-
-<p>(&lsquo;Y&rsquo;,&lsquo;韻&rsquo;),</p>
-
-<p>(&lsquo;Z&rsquo;,&lsquo;咗&rsquo;);</p>
-
-<p>CREATE FUNCTION <code>more</code>.<code>firstPY</code>(words varchar(255)) RETURNS mediumtext</p>
-
-<p>BEGIN</p>
-
-<p>declare fpy char(1);</p>
-
-<p>declare pc char(1);</p>
-
-<p>declare cc char(4);</p>
-
-<p>set @fpy = UPPER(left(words,1));</p>
-
-<p>set @pc = (CONVERT(@fpy USING gbk));</p>
-
-<p>set @cc = hex(@pc);</p>
-
-<p>if @cc &gt;= &quot;8140&quot; and @cc &lt;=&quot;FEA0&quot; then</p>
-
-<p>begin</p>
-
-<p>select PY into @fpy from HZ2PY where hz&gt;=@pc limit 1;</p>
-
-<p>end;</p>
-
-<p>elseif Instr(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;,@fpy) = 0 then</p>
-
-<p>set @fpy = &quot;&quot;;</p>
-
-<p>end if;</p>
-
-<p>Return @fpy;</p>
-
-<p>END</p>
-
-<p><b><font color=#DC143C>MS-SQL-SERVER 之汉字笔画，首拼音字母查询存储过程</p>
-
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</font></b></p>
-
-<p>if exists (select * from dbo.sysobjects where id = object_id(N&#8217;[dbo].[chineseBH]&lsquo;) and xtype in (N&#8217;FN&rsquo;, N&#8217;IF&#8217;, N&#8217;TF&#8217;))</p>
-
-<p>drop function [dbo].[chineseBH]</p>
-
-<p>GO</p>
-
-<p>if exists (select * from dbo.sysobjects where id = object_id(N&#8217;[dbo].[firstAllPY]&lsquo;) and xtype in (N&#8217;FN&rsquo;, N&#8217;IF&#8217;, N&#8217;TF&#8217;))</p>
-
-<p>drop function [dbo].[firstAllPY]</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS OFF</p>
-
-<p>GO</p>
-
-<p>create function chineseBH(@str nvarchar(4000))</p>
-
-<p>returns int</p>
-
-<p>as</p>
-
-<p>begin</p>
-
-<p>declare @word nchar(1),@n int</p>
-
-<p>set @n=0</p>
-
-<p>while len(@str)&gt;0</p>
-
-<p>begin</p>
-
-<p>set @word=left(@str,1)</p>
-
-<p>&ndash;如果非汉字，笔划当0计</p>
-
-<p>set @n=@n+(case when unicode(@word) between 19968 and 19968+20901</p>
-
-<p>then (select top 1 id from (</p>
-
-<p>select 1 as id,N&#8217;亅&#8217; as word</p>
-
-<p>union all select 2,N&#8217;阝&#8217;</p>
-
-<p>union all select 3,N&#8217;马&#8217;</p>
-
-<p>union all select 4,N&#8217;风&#8217;</p>
-
-<p>union all select 5,N&#8217;龙&#8217;</p>
-
-<p>union all select 6,N&#8217;齐&#8217;</p>
-
-<p>union all select 7,N&#8217;龟&#8217;</p>
-
-<p>union all select 8,N&#8217;齿&#8217;</p>
-
-<p>union all select 9,N&#8217;鸩&#8217;</p>
-
-<p>union all select 10,N&#8217;龀&#8217;</p>
-
-<p>union all select 11,N&#8217;龛&#8217;</p>
-
-<p>union all select 12,N&#8217;龂&#8217;</p>
-
-<p>union all select 13,N&#8217;龆&#8217;</p>
-
-<p>union all select 14,N&#8217;龈&#8217;</p>
-
-<p>union all select 15,N&#8217;龊&#8217;</p>
-
-<p>union all select 16,N&#8217;龍&#8217;</p>
-
-<p>union all select 17,N&#8217;龠&#8217;</p>
-
-<p>union all select 18,N&#8217;龎&#8217;</p>
-
-<p>union all select 19,N&#8217;龐&#8217;</p>
-
-<p>union all select 20,N&#8217;龑&#8217;</p>
-
-<p>union all select 21,N&#8217;龡&#8217;</p>
-
-<p>union all select 22,N&#8217;龢&#8217;</p>
-
-<p>union all select 23,N&#8217;龝&#8217;</p>
-
-<p>union all select 24,N&#8217;齹&#8217;</p>
-
-<p>union all select 25,N&#8217;龣&#8217;</p>
-
-<p>union all select 26,N&#8217;龥&#8217;</p>
-
-<p>union all select 27,N&#8217;齈&#8217;</p>
-
-<p>union all select 28,N&#8217;龞&#8217;</p>
-
-<p>union all select 29,N&#8217;麷&#8217;</p>
-
-<p>union all select 30,N&#8217;鸞&#8217;</p>
-
-<p>union all select 31,N&#8217;麣&#8217;</p>
-
-<p>union all select 32,N&#8217;龖&#8217;</p>
-
-<p>union all select 33,N&#8217;龗&#8217;</p>
-
-<p>union all select 35,N&#8217;齾&#8217;</p>
-
-<p>union all select 36,N&#8217;齉&#8217;</p>
-
-<p>union all select 39,N&#8217;靐&#8217;</p>
-
-<p>union all select 64,N&#8217;龘&#8217;</p>
-
-<p>) T</p>
-
-<p>where word&gt;=@word collate Chinese_PRC_Stroke_CS_AS_KS_WS</p>
-
-<p>order by id ASC) else 0 end)</p>
-
-<p>set @str=right(@str,len(@str)-1)</p>
-
-<p>end</p>
-
-<p>return @n</p>
-
-<p>end</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS ON</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS OFF</p>
-
-<p>GO</p>
-
-<p>create function firstAllPY(@str nvarchar(4000))</p>
-
-<p>returns nvarchar(4000)</p>
-
-<p>as</p>
-
-<p>begin</p>
-
-<p>declare @word nchar(1),@PY nvarchar(4000)</p>
-
-<p>set @PY=&lsquo;&rsquo;</p>
-
-<p>while len(@str)&gt;0</p>
-
-<p>begin</p>
-
-<p>set @word=left(@str,1)</p>
-
-<p>&ndash;如果非汉字字符，返回原字符</p>
-
-<p>set @PY=@PY+(case when unicode(@word) between 19968 and 19968+20901</p>
-
-<p>then (select top 1 PY from (</p>
-
-<p>select &lsquo;A&rsquo; as PY,N&#8217;驁&#8217; as word</p>
-
-<p>union all select &lsquo;B&rsquo;,N&#8217;簿&#8217;</p>
-
-<p>union all select &lsquo;C&rsquo;,N&#8217;錯&#8217;</p>
-
-<p>union all select &rsquo;D&#8217;,N&#8217;鵽&#8217;</p>
-
-<p>union all select &lsquo;E&rsquo;,N&#8217;樲&#8217;</p>
-
-<p>union all select &lsquo;F&rsquo;,N&#8217;鰒&#8217;</p>
-
-<p>union all select &lsquo;G&rsquo;,N&#8217;腂&#8217;</p>
-
-<p>union all select &lsquo;H&rsquo;,N&#8217;夻&#8217;</p>
-
-<p>union all select &lsquo;J&rsquo;,N&#8217;攈&#8217;</p>
-
-<p>union all select &lsquo;K&rsquo;,N&#8217;穒&#8217;</p>
-
-<p>union all select &lsquo;L&rsquo;,N&#8217;鱳&#8217;</p>
-
-<p>union all select &rsquo;M&#8217;,N&#8217;旀&#8217;</p>
-
-<p>union all select &lsquo;N&rsquo;,N&#8217;桛&#8217;</p>
-
-<p>union all select &lsquo;O&rsquo;,N&#8217;漚&#8217;</p>
-
-<p>union all select &lsquo;P&rsquo;,N&#8217;曝&#8217;</p>
-
-<p>union all select &lsquo;Q&rsquo;,N&#8217;囕&#8217;</p>
-
-<p>union all select &lsquo;R&rsquo;,N&#8217;鶸&#8217;</p>
-
-<p>union all select &rsquo;S&#8217;,N&#8217;蜶&#8217;</p>
-
-<p>union all select &rsquo;T&#8217;,N&#8217;籜&#8217;</p>
-
-<p>union all select &lsquo;W&rsquo;,N&#8217;鶩&#8217;</p>
-
-<p>union all select &lsquo;X&rsquo;,N&#8217;鑂&#8217;</p>
-
-<p>union all select &lsquo;Y&rsquo;,N&#8217;韻&#8217;</p>
-
-<p>union all select &lsquo;Z&rsquo;,N&#8217;咗&#8217;</p>
-
-<p>) T</p>
-
-<p>where word&gt;=@word collate Chinese_PRC_CS_AS_KS_WS</p>
-
-<p>order by PY ASC) else @word end)</p>
-
-<p>set @str=right(@str,len(@str)-1)</p>
-
-<p>end</p>
-
-<p>return @PY</p>
-
-<p>end</p>
-
-<p>GO</p>
-
-<p>SET QUOTED_IDENTIFIER OFF</p>
-
-<p>GO</p>
-
-<p>SET ANSI_NULLS ON</p>
-
-<p>GO</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/24">&larr; Older</a>
@@ -843,9 +504,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 99 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 100 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 35 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
@@ -864,6 +525,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/25/how-to-keep-comments-in-golang-template/">How to Keep Comments in Golang Template?</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/19/maker-faire-2015-shenzhen/">Maker Faire 2015 ShenZhen</a>
       </li>
     
@@ -877,10 +542,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
   </ul>
@@ -949,6 +610,15 @@ document.getElementById('mydonate').onclick = function(){
 		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
 		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
 	</ul>
+</section>
+<section>
+  <center>
+  <a href="http://click.dji.com/2qg4H1xueyHMQMRU" target="_blank" title="Easy to fly and ready to go out of the box, the iconic DJI Phantom series makes flight accessible to everyone." style="text-decoration:none">
+  <img src="/images/phantom3.png" width="250" />
+  <br/>Got my DJI Drone<br/>
+  <img src="/images/dji-chart.png" width="168" alt="Got my DJI Phantom 3" />
+  </a>
+  </center>
 </section>
 
   

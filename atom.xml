@@ -4,7 +4,7 @@
   <title><![CDATA[Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-06-19T22:13:10+08:00</updated>
+  <updated>2015-06-25T18:53:11+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Keep Comments in Golang Template?]]></title>
+    <link href="http://mindon.github.io/blog/2015/06/25/how-to-keep-comments-in-golang-template/"/>
+    <updated>2015-06-25T18:02:44+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/06/25/how-to-keep-comments-in-golang-template</id>
+    <content type="html"><![CDATA[<p>When Using Golang templates, it removes all comments from the template output.</p>
+
+<p>All IE condition comments lost and other features based on comments will be gone.</p>
+
+<p>Here&rsquo;s how to keep comments as they are from html/template output:</p>
+
+<pre><code>templates := template.Must(template.New("view").Funcs(template.FuncMap{
+    "comment": func(t string) template.HTML {return template.HTML(t)}
+}).ParseGlob("view/*.tpl"))
+</code></pre>
+
+<p>in the template</p>
+
+<p><code>  {{ comment &ldquo;html-comment-source-code&rdquo; }} </code></p>
+
+<p>Aha, it works.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Maker Faire 2015 ShenZhen]]></title>
@@ -914,21 +938,6 @@
 <p>I have a Nexus 7(2013) and a Kindle, they are awesome devices.</p>
 
 <p>But choosing a mobile phone, I could wait.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[那些恼人的尘灰]]></title>
-    <link href="http://mindon.github.io/blog/2014/09/18/dust-in-a-old-building/"/>
-    <updated>2014-09-18T22:32:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/09/18/dust-in-a-old-building</id>
-    <content type="html"><![CDATA[<p>前两天台风“海鸥”的飞过，让周末刚大扫除干净的房子又满是尘灰。我们家在一栋有些老的高楼里，一到刮大风的时候就不知道哪刮出的尘灰，弄得到处都是，每次我都会想：要是有个一大的吸尘器，把整栋楼吸吸尘就好了 :p</p>
-
-<p><img src="http://mindon.github.io/images/blog/dust.jpg" alt="" /></p>
-
-<p>有一定年限的房子，积尘和设计上缺陷带来的漏水问题一直是让人头大的问题，有什么技术和办法能改善一下呢？</p>
-
-<p>有待探讨。</p>
 ]]></content>
   </entry>
   

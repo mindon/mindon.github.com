@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="昨天察觉到的一件事情，在技术开发里可能也是比较容易出现的问题——技术迷失，特此分享和作为自我的警醒。 目标，使用 NodeJS 的 soap 模块，这个模块需要 node-expat 支持。在 windows 下这个模块是比较令人头疼的，虽然周末把这个问题解决了。但是我需要用的两个 WSDL &hellip;">
+  <meta name="description" content="NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL. But when I tried to update my NodeJS to version 0.8+, problems keep &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/20/solve-nodejs-0.8-build-problem/">Solve NodeJS 0.8+ Build Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-07-20T22:04:00+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:04 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>NodeJS before 0.8 is very easy to make &amp; install, which only needs OpenSSL.</p>
+
+<p>But when I tried to update my NodeJS to version 0.8+, problems keep coming&hellip;</p>
+
+<p>Here&rsquo;s a few pre-conditions for a successful make of NodeJS v0.8+:</p>
+
+<ol>
+<li><p> GNU make 3.8.1+</p></li>
+<li><p> Python 2.6 or 2.7</p></li>
+<li><p> export LINK=g++ or setenv LINK g++</p></li>
+</ol>
+
+
+<p>Do remember check these issues when you try to build new version (v0.8+) of NodeJS.</p>
+
+<p><i id="link-tags">make;python;nodejs</i></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -614,48 +658,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/19/final-solution/">Final Solution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-19T12:21:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:21 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>若一切皆可實現，我們會如何解決眼前的問題？</strong>  &ndash; 麥盾</p>
-
-<p>对于这个问题的思考，大概是从讨论行人闯红绿灯过马路的事情开始的。</p>
-
-<p>前段时间看个视频，讨论关于道德的问题，看后同事Carl说道：这类选择本就与道德无关，均是基于自我保护（损害最小）的选择——真是一语道中了问题核心。</p>
-
-<p>至少，若是方圆几里都没车的话，等人行绿灯就是个死板的傻行为，没什么值得称赞的。因为红绿灯系统并不是个很完善的产品。（对于闯红灯的认可，那些不要命想要跟汽车赛跑闯红灯的案例除外）</p>
-
-<p>现在，让我们假设能做到一切，那么红绿灯系统改是怎么样的？</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/05/19/final-solution/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/12">&larr; Older</a>
@@ -705,9 +707,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 99 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 100 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 35 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
@@ -726,6 +728,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/25/how-to-keep-comments-in-golang-template/">How to Keep Comments in Golang Template?</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/19/maker-faire-2015-shenzhen/">Maker Faire 2015 ShenZhen</a>
       </li>
     
@@ -739,10 +745,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
   </ul>
@@ -811,6 +813,15 @@ document.getElementById('mydonate').onclick = function(){
 		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
 		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
 	</ul>
+</section>
+<section>
+  <center>
+  <a href="http://click.dji.com/2qg4H1xueyHMQMRU" target="_blank" title="Easy to fly and ready to go out of the box, the iconic DJI Phantom series makes flight accessible to everyone." style="text-decoration:none">
+  <img src="/images/phantom3.png" width="250" />
+  <br/>Got my DJI Drone<br/>
+  <img src="/images/dji-chart.png" width="168" alt="Got my DJI Phantom 3" />
+  </a>
+  </center>
 </section>
 
   

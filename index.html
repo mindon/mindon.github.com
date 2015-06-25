@@ -9,7 +9,7 @@
   <meta name="author" content="Mindon Feng">
 
   
-  <meta name="description" content="深圳国际创客周。 想起来都很兴奋。 今天上午休年假半天，来到了创客活动的主场——深圳软件产业基地。（我是坐公交车到滨海之窗走过去的，听说地铁科苑站有免费巴士到现场）。 创客活动主场离深圳大学不远，顺着学府路往东走个十多分钟也能到。周边有芒果网大楼，A8音乐大厦，在建的腾讯滨海总部大厦…… &hellip;">
+  <meta name="description" content="When Using Golang templates, it removes all comments from the template output. All IE condition comments lost and other features based on comments &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/06/25/how-to-keep-comments-in-golang-template/">How to Keep Comments in Golang Template?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-06-25T18:02:44+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>6:02 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When Using Golang templates, it removes all comments from the template output.</p>
+
+<p>All IE condition comments lost and other features based on comments will be gone.</p>
+
+<p>Here&rsquo;s how to keep comments as they are from html/template output:</p>
+
+<pre><code>templates := template.Must(template.New("view").Funcs(template.FuncMap{
+    "comment": func(t string) template.HTML {return template.HTML(t)}
+}).ParseGlob("view/*.tpl"))
+</code></pre>
+
+<p>in the template</p>
+
+<p><code>  {{ comment &ldquo;html-comment-source-code&rdquo; }} </code></p>
+
+<p>Aha, it works.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -479,45 +523,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/18/what-is-singularity-university/">What Is Singularity University</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-11-18T00:28:34+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:28 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Our mission is to educate, inspire and empower leaders to apply exponential technologies to address humanity’s grand challenges.</p>
-
-<p>&ldquo;Singularity University, where the world&rsquo;s brightest minds convene to attack the world&rsquo;s toughest challenges.&rdquo;
-—BloombergTV</p>
-
-<p>奇点大学（Singularity University，简称SU ）设在加州硅谷心脏地带，美国宇航局埃姆斯研究中心内，是为迎接电脑优于人脑的时代来临，谷歌（Google）与美国宇航局（NASA）展开合作，是致力开办一所培养未来科学家的学校。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/11/18/what-is-singularity-university/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -565,9 +570,9 @@ document.getElementById('mydonate').onclick = function(){
 
     <li>&raquo; <a class='category' href="/blog/categories/blogms/">blogms</a> ( 308 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 99 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/mindon/">mindon</a> ( 100 )</li>
 
-    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 34 )</li>
+    <li>&raquo; <a class='category' href="/blog/categories/web-tech/">web-tech</a> ( 35 )</li>
 
     <li>&raquo; <a class='category' href="/blog/categories/light-air-water-m-sci/">light-air-water-m-sci</a> ( 14 )</li>
 
@@ -586,6 +591,10 @@ document.getElementById('mydonate').onclick = function(){
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/06/25/how-to-keep-comments-in-golang-template/">How to Keep Comments in Golang Template?</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/06/19/maker-faire-2015-shenzhen/">Maker Faire 2015 ShenZhen</a>
       </li>
     
@@ -599,10 +608,6 @@ document.getElementById('mydonate').onclick = function(){
     
       <li class="post">
         <a href="/blog/2015/05/06/my-first-drone-a-dji-phantom-3-professional/">My First Drone: A DJI Phantom 3 Professional</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/18/embarrassed-2014/">尴尬的2014</a>
       </li>
     
   </ul>
@@ -671,6 +676,15 @@ document.getElementById('mydonate').onclick = function(){
 		<li><a href="http://www.google.com/intl/zh-CN/goodtoknow/" target="_blank" title="安全健康上网">Good To Know</a></li>
 		<li><a href="http://open.163.com/ted" target="_blank">网易公开课 - TED演讲</a></li>
 	</ul>
+</section>
+<section>
+  <center>
+  <a href="http://click.dji.com/2qg4H1xueyHMQMRU" target="_blank" title="Easy to fly and ready to go out of the box, the iconic DJI Phantom series makes flight accessible to everyone." style="text-decoration:none">
+  <img src="/images/phantom3.png" width="250" />
+  <br/>Got my DJI Drone<br/>
+  <img src="/images/dji-chart.png" width="168" alt="Got my DJI Phantom 3" />
+  </a>
+  </center>
 </section>
 
   

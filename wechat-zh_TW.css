@@ -7,6 +7,6 @@
 #wx_default_tip:after {content:"請使用WeChat掃描QR Code登入JOOX";font-size:14px}
 #wx_after_scan .status_txt, #wx_after_cancel .status_txt {display: block !important; color:#434343;font-size:14px}
 #wx_after_scan .status_txt:after {content:"掃描成功";font-size:16px}
-#wx_after_scan:after {content:"請在WeChat中點擊確認即可登入"}
+#wx_after_scan:after {content:"請在WeChat中點擊確認以登入"}
 #wx_after_cancel .status_txt:after {content:"你已取消此次登入"}
-#wx_after_cancel:after {content:"你可再次掃描登入，或關閉視窗"}
+#wx_after_cancel:after {content:"你可再次掃描QR Code登入，或關閉視窗"}

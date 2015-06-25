@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web-tech | Mindon.IDEA]]></title>
   <link href="http://mindon.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://mindon.github.io/"/>
-  <updated>2015-06-19T22:14:21+08:00</updated>
+  <updated>2015-06-25T18:54:09+08:00</updated>
   <id>http://mindon.github.io/</id>
   <author>
     <name><![CDATA[Mindon Feng]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Keep Comments in Golang Template?]]></title>
+    <link href="http://mindon.github.io/blog/2015/06/25/how-to-keep-comments-in-golang-template/"/>
+    <updated>2015-06-25T18:02:44+08:00</updated>
+    <id>http://mindon.github.io/blog/2015/06/25/how-to-keep-comments-in-golang-template</id>
+    <content type="html"><![CDATA[<p>When Using Golang templates, it removes all comments from the template output.</p>
+
+<p>All IE condition comments lost and other features based on comments will be gone.</p>
+
+<p>Here&rsquo;s how to keep comments as they are from html/template output:</p>
+
+<pre><code>templates := template.Must(template.New("view").Funcs(template.FuncMap{
+    "comment": func(t string) template.HTML {return template.HTML(t)}
+}).ParseGlob("view/*.tpl"))
+</code></pre>
+
+<p>in the template</p>
+
+<p><code>  {{ comment &ldquo;html-comment-source-code&rdquo; }} </code></p>
+
+<p>Aha, it works.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Discuz安装错误]]></title>
@@ -116,37 +140,6 @@
 <p>I try to update the core js to testing the idea - it works: Using syntax highlight library to extract strings.</p>
 
 <p>It&rsquo;s great!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[All Kinds of 2048!]]></title>
-    <link href="http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048/"/>
-    <updated>2014-05-02T08:17:00+08:00</updated>
-    <id>http://mindon.github.io/blog/2014/05/02/all-kinds-of-2048</id>
-    <content type="html"><![CDATA[<p>在 Flappy Bird 的疯狂Clone之后，又有了 2048 复制 three 的疯狂。</p>
-
-<p>Exploring the open source 2048 game javascript examples</p>
-
-<p><a href="http://learnjs.io/blog/2014/03/17/exploring-open-source-2048-game-javascript-examples/">http://learnjs.io/blog/2014/03/17/exploring-open-source-2048-game-javascript-examples/</a></p>
-
-<p>2048玩法思路【果壳日志】</p>
-
-<p><a href="http://www.guokr.com/blog/748078/">http://www.guokr.com/blog/748078/</a></p>
-
-<!--more-->
-
-
-<p>More 2048
-<a href="http://cyberzhg.github.io/2048/">http://cyberzhg.github.io/2048/</a></p>
-
-<p>源码：<a href="https://github.com/CyberZHG/2048">https://github.com/CyberZHG/2048</a></p>
-
-<p>从2 到 2048 需要</p>
-
-<p>2 - 4 - 8 - 16 - 32 - 64 - 128 - 256 - 512 - 1024 - 2048 - &hellip;</p>
-
-<p>即 2<sup>1</sup>  &hellip;. 2<sup>11</sup>， 需提供11种状态即可到2048</p>
 ]]></content>
   </entry>
   
