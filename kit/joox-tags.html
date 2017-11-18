@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<meta name="viewport" content="width=device-width">
-<title>TAGING / JOOX</title>
+<title>TAGGING / JOOX</title>
 <style>
 body {font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei UI,Microsoft YaHei,Source Han Sans CN,sans-serif;}
 
@@ -1183,6 +1183,7 @@ function play(e) {
 	mymusic.src = e.target.href;
 	mymusic.play();
 	e.preventDefault();
+	mymusic.title = e.target.parentNode.innerText;
 	return false;
 }
 document.addEventListener('DOMContentLoaded', ()=>{
