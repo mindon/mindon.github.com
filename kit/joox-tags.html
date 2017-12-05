@@ -1229,7 +1229,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	for(var k=0; k<list.length; k++) {
 		list[k].addEventListener('click', play);
 	}
+
+	var s = document.createElement("script");
+	s.type = 'text/javascript';
+	s.src = (window.location.search.match(/[\?&]32/) ? "similar5_32.js" : "similar5.js?updated");
+	document.body.appendChild(s);
 });
 </script>
-<script src="similar5.js?updated" async defer></script>
 </body>
