@@ -1213,7 +1213,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 	var s = document.createElement("script");
 	s.type = 'text/javascript';
-	s.src = 'demo-features/' +(window.location.search.match(/[\?&]32/) ? "similar5_32.js?20171206x" : "similar5.js?20171206x");
+	s.src = (window.location.search.match(/[\?&]32/) ? "similar5_32.js?20171206x" : "similar5.js?20171206x");
 	document.body.appendChild(s);
 });
 </script>
