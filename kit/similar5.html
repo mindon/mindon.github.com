@@ -1211,9 +1211,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		list[k].addEventListener('click', play);
 	}
 
+	var q = window.location.search;
 	var s = document.createElement("script");
 	s.type = 'text/javascript';
-	s.src = (window.location.search.match(/[\?&]32/) ? "similar5_32.js?20171206x" : "similar5.js?20171206x");
+	s.src = (q.match(/[\?&,]32/) ? "similar5_32.js?20171206z" : (q.match(/[\?&,]50/) ? "similar5-t.js": "similar5.js?20171206x"));
 	document.body.appendChild(s);
 });
 </script>
