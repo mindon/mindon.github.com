@@ -43,6 +43,20 @@ div.s a {
 	margin-bottom: 4px;
 	font-size: .6em;
 }
+i.score {
+	padding-left: 1em;
+	color: #ccc;
+}
+div.more span {
+	display: none;
+}
+div.hidden span {
+	display: block;
+	color: #d90;
+}
+div.hidden a {
+	display: none;
+}
 </style>
 </head>
 <body>
@@ -1199,7 +1213,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 	var s = document.createElement("script");
 	s.type = 'text/javascript';
-	s.src = (window.location.search.match(/[\?&]32/) ? "similar5_32.js?20171206" : "similar5.js?20171206");
+	s.src = 'demo-features/' +(window.location.search.match(/[\?&]32/) ? "similar5_32.js?20171206x" : "similar5.js?20171206x");
 	document.body.appendChild(s);
 });
 </script>
