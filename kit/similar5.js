@@ -1130,33 +1130,23 @@ var similar5 = {"100137":[139358,108754450,202455000,202155612,101787873],
 "97815":[5130069,9091227,5106590,102063075,104866324]
 };
 
-function similar(e) {
-	var id = e.target.id;
-	if(!id || id.charAt(0) != "t") return;
-	var s = document.querySelector('#s' + id.substr(1));
+function similar(id) {
+	if(!id) return;
+	var s = document.querySelector('#s' + id);
 	if(!s) return
-	if(s && s.ready) {
-		s.style.display = s.style.display == 'none' ? 'block' : 'none';
-		return;
-	}
-	var d = similar5[id.substr(1)];
+	var d = similar5[id];
 	if(!d) return;
-	s.ready = true;
 	for(var i in d) {
 		var k = d[i];
-		var t = document.querySelector('#t' + k);
+		var t = document.querySelector('#s' + k);
 		if(t) {
 			var ta = t.parentNode.firstChild.cloneNode(true);
 			ta.addEventListener('click', play);
 			s.appendChild(ta);
 		}
 	}
-	s.style.display = 'block';
 }
 
 for(var k in similar5) {
-	var t = document.querySelector('#t' + k);
-	if(t) {
-		t.addEventListener('click', similar);
-	}
+	similar(k);
 }
