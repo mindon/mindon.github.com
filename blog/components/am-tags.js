@@ -26,6 +26,7 @@ a.tag {
     text-decoration:none;
     color:#333;
     padding: 2px 4px;
+    margin-bottom: 1px;
 }
 div.block a.tag {
     margin-bottom: 2px;

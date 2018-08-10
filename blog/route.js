@@ -125,7 +125,6 @@ div.main {flex: 1}
     #mindon-if { flex-flow: column }
     div.sides { max-width:none; margin-left: 0; flex-direction: row; flex-wrap: wrap}
 }
-div.copyright {border-top:thin solid #eee; padding-top: 8px; margin:2em auto; color:#666; font-size:12px; clear: both; text-align:center;}
 </style>
 <div id="mindon-if"><div class="main">
 <am-banner home="/blog/">
@@ -148,8 +147,7 @@ ${fetch(u).then(r => {
                 return r.text().then(v => unsafeHTML(v))
             })}
 ${bar}
-</div>
-</div>
+</div></div>
 <div class="sides">
 <am-card topic="About Me">
   <a href="/blog/about"><img src="/images/mindon.png" width="128" height="128" title="Mindon Logo" /></a>
@@ -163,9 +161,7 @@ ${fetch('/blog/card/links.html').then(r => {
     if (r.status >= 400) return r.status;
     return r.text().then(v => unsafeHTML(v))
 })}
-</div>
-</div>
-<div class="copyright">Copyright © 2012 - 2018, Mindon Feng</div>`
+</div></div>`
     }
 }
 
