@@ -13,7 +13,7 @@ class AmBanner extends LitElement {
 a {text-decoration:none; color:#000}
 slot[name=nav] {text-transform: uppercase; font-size:1.2em}
 ::slotted(h1) {margin:4px 0}
-div.slogan {font-size:1.2em; color:#333}
+div.slogan {font-size:1.1em; color:#333}
 </style>
 <div>
         <div class="title"><a href="${home}"><slot name="title"></slot></a></div>
