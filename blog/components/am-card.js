@@ -5,19 +5,20 @@ class AmCard extends LitElement {
         return {
             topic: String,
             links: String,
+            target: String,
             itemStyle: String,
         }
     }
 
-    _link(item) {
-        return item.inline ? html`${ item.inline.map(i=>this._link(i)) }`:
+    _link(item, target) {
+        return item.inline ? html`${ item.inline.map(i=>this._link(i, target)) }`:
                 html`${item.prefix ? item.prefix : ''}<a
                  href="${item.href}"
-                 target="_blank"
+                 target="${target ? target :'_blank'}"
                  title="${item.title}">${item.text}</a>`
     }
 
-    _render({ topic, links, itemStyle }) {
+    _render({ topic, links, target, itemStyle }) {
         let lnk = links ? JSON.parse(unescape(links)): null;
         return html`<style>
 :host{display: block; border-bottom: thin solid #eee; margin: 0 .5em 1em .5em; padding: .2em 0;}
@@ -38,7 +39,7 @@ ${ lnk ? html`<ul>${
     lnk.map(item => html`<li class$="${itemStyle}">
         ${item.links ? html`<b>${item.topic || ''}</b><ul>${
             item.links.map(j=>html`<li>${this._link(j)}</li>`)
-        }</ul>` : html`${this._link(item)}`}</li>`)
+        }</ul>` : html`${this._link(item, target)}`}</li>`)
     }</ul>`: '' }
 </div>`;
     }
