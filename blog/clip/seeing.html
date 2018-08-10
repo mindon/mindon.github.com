@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>MINDON.if 麦盾.風</title>
+    <style>html, body{margin:0;padding:0}</style>
+</head>
+<body><svg id="illus" width="600" height="250"></svg>
+<ol>
+    <li> click vertical bars to switch between bars and pure background color;</li>
+    <li> click the color block to restart animation</li>
+</ol>
+<script src="/lib/snap.svg-min.js"></script>
+<script>
+var s = Snap('#illus');
+var p = s.path("M10 0 v250 h10 v-250z").attr({
+  fill: "#000000"
+}).pattern(0, 0, 20, 250);
+
+s.rect(0,0,600,250).attr({
+  fill: p
+}).click(function(){
+  this.attr({fill: !/url/.test(this.attr('fill')) ? p : '#666666'});
+});
+
+var r1 = s.rect(0,60,40,20).attr({
+  fill: '#ffff00'
+}).click(resetBlocks);
+
+var r2 = s.rect(0,160,40,20).attr({
+  fill: '#0000ff'
+}).click(resetBlocks);
+
+var blocks = Snap.set(r1, r2);
+function resetBlocks() {
+  blocks.attr({x:0}).animate({x: 560}, 18000, mina.linear, function(){
+	resetBlocks();
+  });
+}
+resetBlocks();
+</script>
+</body>
+</html>

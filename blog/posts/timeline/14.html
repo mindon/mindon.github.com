@@ -1,0 +1,294 @@
+
+<am-list>
+  
+  <am-summary href="/blog/2004/12/13/old-blogms-1000115620" time="2004-12-13 15:49:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/12/13/old-blogms-1000115620">Javascript之数字格式化</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000115620, blog id: airoff
+History stat: 浏览/评论：749/2  ,  日期：2004年12月13日 15:49</p>
+
+<p><FONT face=Arial><FONT color=#00008c>&amp;lt;!&ndash;  [ 数字格式化 ] 麦盾脚本开始  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  请勿删除注释信息以方便别人参考使用，谢谢 :-)  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash; mindon scripts 2004, china</p>
+
+<p>/* &ndash;&amp;gt; &amp;lt;script language=&ldquo;JavaScript&rdquo;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;</p>
+
+<p>// please keep the following TEST SAMPLES message when using the script, thanks</p>
+
+<p>var fRJTest = true; // 此处 true 改为 false 即可隐藏测试用例信息</p>
+
+<p>fRJTest &amp;&amp; document.write(&rdquo;&amp;lt;span style=\&ldquo;color:#0f0f0f;font-size:9pt;font-family:Arial\&rdquo;&amp;gt;&rdquo;,</p>
+
+<p>&ldquo;&amp;lt;a href=&lsquo;http:&rdquo;+&ldquo;//airoff.blogms.com/&rsquo;&amp;gt; 麦盾博客 &amp;lt;/a&amp;gt; MINDON SCRIPTS by fRJ, China 〖 iseasky@hotmail.com 】麦盾脚本 &amp;lt;/span&amp;gt;&rdquo;,</p>
+
+<p>&ldquo;&amp;lt;hr style=&lsquo;height:1pt;width:356pt&rsquo; align=&lsquo;left&rsquo;&amp;gt;&amp;lt;blockquote&amp;gt;&amp;lt;pre&amp;gt;&rdquo;,</p>
+
+<p>&rdquo; 使用方法例子 :\n &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-&ldquo;,</p>
+
+<p>&rdquo;\ndmask(12345, 16) = &ldquo; +dmask(12345, 16),</p>
+
+<p>&rdquo;\nfmask(123.4567, 10, 5) = &ldquo;+fmask(123.4567, 10, 5),</p>
+
+<p>&rdquo;\nfmask(-123.4567, 10, 3) = &ldquo;+fmask(-123.4567, 10, 3),</p>
+
+<p>&rdquo;\n\n 数制转换技巧提示:(使用toString(进制参数)) \n &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-&ldquo;,</p>
+
+<p>&rdquo;\n var d = (0127).toString(10) = &ldquo;+(0127).toString(10) +&rdquo;; // 8 进制数 0127 转为 10 进制 &ldquo;,</p>
+
+<p>&rdquo;\n var d = (0xf0).toString(10) = &ldquo; +(0xf0).toString(10) +&rdquo;; // 16 进制数 0xf0 转为 10 进制 &ldquo;,</p>
+
+<p>&rdquo;\n var hex = (315).toString(16) = &ldquo; +(315).toString(16) +&rdquo;; // 10 进制数 315 转为 16 进制 &ldquo;,</p>
+
+<p>&rdquo;&amp;lt;/pre&amp;gt;&amp;lt;/blockquote&amp;gt;&amp;lt;hr style=&lsquo;height:1pt;width:356pt&rsquo; align=&lsquo;left&rsquo;&amp;gt;&rdquo;,</p>
+
+<p>&rdquo; 设置 fRJTest = false 即可隐藏以上用例信息，请勿删除以方便参考使用，谢谢 :-)&ldquo;);</p>
+
+<p>//*/</p>
+
+<p>var zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>function dmask(value, n)</p>
+
+<p>/* 生成 n 位补零字符串 */</p>
+
+<p>{</p>
+
+<p>var value, n;</p>
+
+<p>if(!value &amp;&amp; value != 0) value = &ldquo;&rdquo;;</p>
+
+<p>if(!n || n &amp;lt;0) n = 0;</p>
+
+<p>var ds = String(value);</p>
+
+<p>var pref = ds.substr(0,1);</p>
+
+<p>if(!isNaN(value) &amp;&amp; pref == &ldquo;-&rdquo;) { // 数字符号提取</p>
+
+<p>if(n&amp;gt;0) n&ndash;; ds = ds.substr(1);</p>
+
+<p>} else {</p>
+
+<p>pref = &ldquo;&rdquo;;</p>
+
+<p>}</p>
+
+<p>if(!zerostr) zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>while(zerostr.length&amp;lt;n) zerostr += zerostr;</p>
+
+<p>ds = (n&amp;gt;ds.length?zerostr.substr(0, n -ds.length):&ldquo;&rdquo;) +ds;</p>
+
+<p>return pref +ds;</p>
+
+<p>}</p>
+
+<p>function fmask(value, n, dec)</p>
+
+<p>/* 生成数字 dec位小数(四舍五入) n 位长度(包括负号和小数点) 补零字符串 */</p>
+
+<p>{</p>
+
+<p>var value, n, dec;</p>
+
+<p>if((!value &amp;&amp; value != 0) || isNaN(value)) value = 0;</p>
+
+<p>if(!n || n &amp;lt;0) n = 0;</p>
+
+<p>if(!dec || dec &amp;lt; 0) dec = 0;</p>
+
+<p>var fs = String(parseFloat(value));</p>
+
+<p>var pref = fs.substr(0,1);</p>
+
+<p>if(pref == &ldquo;-&rdquo;) { // 符号提取</p>
+
+<p>if(n&amp;gt;0) n&ndash;; fs = fs.substr(1);</p>
+
+<p>} else {</p>
+
+<p>pref = &ldquo;&rdquo;;</p>
+
+<p>}</p>
+
+<p>if(dec &amp;gt; 0 &amp;&amp; n&amp;gt;0) n&ndash;; // 小数点长度</p>
+
+<p>if(!zerostr) zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>while(zerostr.length&amp;lt;n) zerostr += zerostr;</p>
+
+<p>var dot = fs.indexOf(&ldquo;.&rdquo;);</p>
+
+<p>if(dot &amp;lt; 0) { // 无小数点</p>
+
+<p>fs = (n -dec&amp;gt;fs.length?zerostr.substr(0, n-dec-fs.length):&ldquo;&rdquo;) +fs; // 整数部分</p>
+
+<p>fs += (dec&amp;gt;0?&ldquo;.&rdquo; +zerostr.substr(0, dec):&ldquo;&rdquo;); // 小数部分</p>
+
+<p>} else { // 带小数点</p>
+
+<p>var ids = fs.substr(0, dot);</p>
+
+<p>var jds = fs.substr(dot +1);</p>
+
+<p>ids = (n-dec&amp;gt;ids.length?zerostr.substr(0, n-dec-ids.length):&ldquo;&rdquo;) +ids; // 整数部分</p>
+
+<p>if(dec &amp;gt; 0) { // 小数部分</p>
+
+<p>if(dec &amp;gt;= jds.length) { // 补零</p>
+
+<p>jds = jds +zerostr.substr(0, dec - jds.length);</p>
+
+<p>} else { // 四舍五入</p>
+
+<p>var de = parseInt(jds.substr(dec-1,1)) +(parseInt(jds.substr(dec,1))&amp;gt;=5?1:0);</p>
+
+<p>jds = jds.substr(0, dec -1) +String(de);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>fs = ids +(dec&amp;gt;0?&ldquo;.&rdquo; +jds: &ldquo;&rdquo;);</p>
+
+<p>}</p>
+
+<p>return pref +fs;</p>
+
+<p>}</p>
+
+<p>function days(from, to) { var ds =1000 * 60 * 60 *24;</p>
+
+<p>alert(Math.round(Math.abs(Date.parse(to)/ds-Date.parse(from)/ds))</p>
+
+<p>+&rdquo; days between &ldquo;+from+&rdquo; and &ldquo;+to);</p>
+
+<p>} //计算两个日期(格式:月/日/年) 之间的天数</p>
+
+<p>//&ndash;&amp;gt;&amp;lt;/script&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  此完整脚本可放在 Javascript 脚本文件中，也可以直接放入 HTML  文档(需设置 fRJTest 隐藏用例信息)使用  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  [ 数字格式化 ] 麦盾脚本结束  &ndash;&amp;gt;</FONT></FONT></p>
+
+<p><FONT color=#00008c face=Arial></FONT></p>
+
+<p><FONT color=#ff0000 face=Arial>补充参考，考虑性能：</p>
+
+<p></FONT>function pad0(num, n) {</p>
+
+<p>var i = n - (num+&rdquo;).length;</p>
+
+<p>if(i&amp;lt;1) return num;</p>
+
+<p>var z = pad0.z||&ldquo;;</p>
+
+<p>var j = z.length;</p>
+
+<p>if(n&amp;gt;j) {</p>
+
+<p>while(n&amp;gt;j){z +=&lsquo;00000000&rsquo;; j+=8;}</p>
+
+<p>pad0.z = z;</p>
+
+<p>}</p>
+
+<p>return z.substr(0, i)+num;</p>
+
+<p>}</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/12/07/old-blogms-1000110286" time="2004-12-07 13:31:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/12/07/old-blogms-1000110286">照镜子的问题()</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000110286, blog id: airoff
+History stat: 浏览/评论：158/3  ,  日期：2004年12月7日 13:31</p>
+
+<p>之前我认为，每照一次镜子相当于——将周围环境的有害射线反射到脸上的量增加了一倍。于是，今天在google上搜了“镜子 辐射”——结果，找到的是相反的报道——“ <a href="http://www.chinanewsweek.com.cn/2004-08-27/1/4183.html">照镜子的好处</a> ”（中国新闻周刊 chinanewsweek）。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/12/03/old-blogms-1000105941" time="2004-12-03 16:54:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/12/03/old-blogms-1000105941">近日……</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000105941, blog id: airoff
+History stat: 浏览/评论：93/3  ,  日期：2004年12月3日 16:54</p>
+
+<p>不知为何，觉得自己有点让事情走到终点的本事。</p>
+
+<p>聊天的时候，我能让谈话进入无话可说的僵局；甚至论坛里的留言，只要我灌点什么，那贴子大多时候就缺乏营养而停止生长了。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/25/old-blogms-1000098268" time="2004-11-25 13:35:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/25/old-blogms-1000098268">电视频道污染</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000098268, blog id: airoff
+History stat: 浏览/评论：144/4  ,  日期：2004年11月25日 13:35</p>
+
+<p>在深圳生活了数年，ATV PEARL（明珠台）和ATV WORLD（世界台）一直是我最为喜欢的频道，然而，近来竟然发现越来越多的劣质广告出现，有时候深夜看world台一个很喜欢的节目时，突然被什么去疤丰胸的电视广告霸占——差点没给气个半死——发誓要进行投诉——当然，一直没付诸行动。</p>
+
+<p>本来，好的广告对我来说比一般的节目更有吸引力，那些铺天盖地的美容丰胸广告绝对是电视里一大堆发臭的垃圾！而且可信度很值得怀疑——要是虚假广告，播放这些广告的电视台也应视为同案犯（要是我建议就是要没收电视台在这广告的所有收入，并罚款）。而某些电视转播商利用收视率比较高的频道加入覆盖性垃圾广告的行为，更是一种令人厌恶的行为，简直让人无法忍受。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/24/old-blogms-1000097249" time="2004-11-24 13:01:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/24/old-blogms-1000097249">贪心</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000097249, blog id: airoff
+History stat: 浏览/评论：112/1  ,  日期：2004年11月24日 13:01</p>
+
+<p>那天去看文博会的名画展的时候，发觉要是整幅整幅画拍下来比较困难，特别是比例比较大的画，即使是能整幅画都拍下来，效果也不尽如人意。后来，想起自己平时拍风景什么的也遇到过类似的事情——我把这个现象的发生归结于贪心——过于想把所有好的东西全部收纳入镜头。于是，就决定放弃拍整幅画的念头，开始用自己的感觉和镜头来进行局部重新构图。（见： <a href="http://airoff.blogms.com/blog/CommList.aspx?TempleCode=1000000032&amp;BlogLogCode=1000095481">深圳文博会之名画展</a> ）</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/23/old-blogms-1000096613" time="2004-11-23 18:34:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/23/old-blogms-1000096613">英国科学家：“一夫一妻制”使动物更容易灭绝</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000096613, blog id: mindon
+History stat: 浏览/评论：265/2  ,  日期：2004年11月23日 18:34</p>
+
+<p><a href="http://www.rednet.com.cn">http://www.rednet.com.cn</a> ;2003-7-4 20:24:12 红网</p>
+
+<p>一夫一妻制，看起来是那么合乎情理，罗曼蒂克。但是研究表明，对于很多动物来说，这可能是一种致命的生活方式。</p>
+
+<p>科学家在加纳进行的一项最新研究着实让人大跌眼镜：坚持“一夫一妻制”的动物们面临着更高的灭绝危险。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/18/old-blogms-1000091800" time="2004-11-18 13:23:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/18/old-blogms-1000091800">记忆的细节</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000091800, blog id: airoff
+History stat: 浏览/评论：136/2  ,  日期：2004年11月18日 13:23</p>
+
+<p>终于，看完了《心理学与生活》的记忆部分，读到记忆的特征时候，以前的一个疑问就又冒出来了，这是个关于记忆的细节的疑问。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/17/old-blogms-1000090741" time="2004-11-17 08:46:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/17/old-blogms-1000090741">虚构样例</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000090741, blog id: airoff
+History stat: 浏览/评论：173/3  ,  日期：2004年11月17日 08:46</p>
+
+<p>“记忆的一项及本功能是将相似的经验整合在一起，找到环境中的模式。概念是范畴的心理表征。原型来自你对一个范畴成员的所有经验，因此当你每次遇到一个新的样例，原型就会发生轻微变化。”（《心理学与生活》第16版）</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/11/12/old-blogms-1000086774" time="2004-11-12 18:45:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/11/12/old-blogms-1000086774">……</a>
+    <div slot="summary"><p>BlogMS original blog key: 1000086774, blog id: airoff
+History stat: 浏览/评论：154/2  ,  日期：2004年11月12日 18:45</p>
+
+<p>倘若我走的路是一条信号通道，想必我就是那传输质量不错的信号，受干扰最小。我走在路上时候注意力常常不知道集中在哪了，可能只是看着路和想着如何以最高的效率、最安全的方式到达目的地吧。</p>
+ 
+    </div>
+  </am-summary>
+  
+</am-list>

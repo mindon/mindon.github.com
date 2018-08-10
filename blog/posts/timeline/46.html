@@ -1,0 +1,276 @@
+
+<am-list>
+  
+  <am-summary href="/blog/2013/11/09/justice-and-responsibility" time="2013-11-09 20:03:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
+    <a slot="title" href="/blog/2013/11/09/justice-and-responsibility">Justice and Responsibility</a>
+    <div slot="summary"><p>哈佛Michael Sandel教授的《<a href="http://www.myoops.org/main.php?act=course&amp;id=2258">正義：一場思辨之旅</a>》第一堂课就给全世界的道德和正义带了一场思考风暴。其中最为经典的争议和疑惑就是下面的两种场景：</p>
+
+<p>1）假設你是一個火車駕駛員，而你駕駛的這輛車正快速在軌道上行駛，時速六十英里，而在軌道盡頭有五個工人在工作，你試著想要煞車，但卻做不到，你的煞車失效了。你感到十分緊張，因為你知道，如果你撞上這五個工人，他們必死無疑。假設這是一個確定的結果，因此你感到非常無助，但接著你發現右邊有條岔路，而那條岔路底只有一個工人在工作，你的方向還可以控制，車輛還可以轉向，可以轉向岔路，撞死一名工人，但閃過五名工人。</p>
+
+<p>2）這次你不是火車的駕駛員，你是個站在橋上的旁觀者，你正觀察著鐵軌上的狀況，軌道上來了一輛火車，軌道的盡頭有五名工人，煞車同樣失靈，而火車正要撞死那五名工人，由於你不是駕駛員，你覺得非常無助，直到你注意到旁邊有個人，在橋邊站著一個非常胖的人，你可以推他一把，他會掉落軌道，正好擋住該輛車，他會死，但他的犧牲可以救那五個人。</p>
+
+<p>不管是哪中场景，如果作为决策者，你的决策是什么？为什么？</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/09/15/build-mobile-apps-from-command-line" time="2013-09-15 09:04:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
+    <a slot="title" href="/blog/2013/09/15/build-mobile-apps-from-command-line">Building mobile apps from the command line</a>
+    <div slot="summary"><p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
+
+<h1>Android</h1>
+
+<p>Managing Projects from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
+
+<h2>Creating an Android Project</h2>
+
+<p>android create project <br />
+&ndash;target <target_ID> <br />
+&ndash;name <your_project_name> <br />
+&ndash;path path/to/your/project <br />
+&ndash;activity <your_activity_name> <br />
+&ndash;package <your_package_namespace></p>
+
+<h2>Updating a Project</h2>
+
+<p>android update project &ndash;name <project_name> &ndash;target <target_ID>
+&ndash;path <path_to_your_project></p>
+
+<h2>Setting up a Library Project</h2>
+
+<p>android create lib-project &ndash;name <your_project_name> <br />
+&ndash;target <target_ID> <br />
+&ndash;path path/to/your/project <br />
+&ndash;package <your_library_package_namespace></p>
+
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/09/15/fix-adb-error-under-win8" time="2013-09-15 16:27:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
+    <a slot="title" href="/blog/2013/09/15/fix-adb-error-under-win8">fix adb error under win8</a>
+    <div slot="summary"><h2>error: device not found</h2>
+
+<p>1)  Find &ldquo;Device Manager&rdquo; in &ldquo;PC Info&rdquo;;</p>
+
+<p>2)  Get your device in the &ldquo;Other devices&rdquo;;</p>
+
+<p>3)  Update driver and choose your adt folder to install the driver.</p>
+
+<h2>Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]</h2>
+
+<p>Uninstall your old version app on your device before install the new apk.</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/07/20/android-data-and-folders" time="2013-07-20 11:16:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
+    <a slot="title" href="/blog/2013/07/20/android-data-and-folders">Android App Data & Folders</a>
+    <div slot="summary"><p>Context context = getApplicationContext();</p>
+
+<h2>SQLite Databases</h2>
+
+<p>context.getDatabasePath(&ldquo;myDbName&rdquo;)</p>
+
+<h2>Cache</h2>
+
+<p>System will clean it auto if low memory</p>
+
+<p>context.getCacheDir()</p>
+
+<h2>Lib</h2>
+
+<p>context.getFilesDir()</p>
+
+<h2>Apk &amp; resources path</h2>
+
+<p>context.getPackageCodePath()
+context.getPackageResourcePath</p>
+
+<h2>Shared Preferences</h2>
+
+<p>getSharedPreferences()
+getPreferences()</p>
+
+<h2>Internal Storage</h2>
+
+<p>removed when uninstall the app
+MODE_PRIVATE | MODE_APPEND | MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE</p>
+
+<p>FileOutputStream fos = openFileOutput(flName, Context.MODE_PRIVATE);
+fos.write(content.getBytes());
+fos.close();</p>
+
+<h2>Internal Files Operations</h2>
+
+<p>Internal files path</p>
+
+<p>.getDir()
+.getFilesDir()
+.deleteFile()
+.fileList</p>
+
+<h2>External Storage</h2>
+
+<p><strong>Checking media availability</strong></p>
+
+<p>.getExternalStorageState()</p>
+
+<p>Environment.MEDIA_MOUNTED | MEDIA_MOUNTED_READ_ONLY</p>
+
+<p>Environment.getExternalStorageDirectory()</p>
+
+<p>Environment.getExternalStoragePublicDirectory(
+Environment.DIRECTORY_PICTURES
+)</p>
+
+<p><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/></p>
+
+<p>.getExternalStoragePublicDirectory()</p>
+
+<p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
+
+<p>.getExternalCacheDir()</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/07/09/dasign-light-up-your-life" time="2013-07-09 22:54:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
+    <a slot="title" href="/blog/2013/07/09/dasign-light-up-your-life">DaSign: Light up your life</a>
+    <div slot="summary"><h2>DaSign</h2>
+
+<p>The  signs to light up your life.</p>
+
+<p>It&rsquo;s Mindon first Android app :D</p>
+
+<p>It&rsquo;s more than a SVG(Scalable Vector Graphics) viewer, but a powerful tool to declare yourself.</p>
+
+<p>Small install package size - 0.3MB only! 90+ super HD signs included!</p>
+
+<p>Show it with your nexus 7, it will be super cool!</p>
+
+<p>Do not hesitate to show it when your L8 ingress team taking photos.</p>
+
+<p><img src="/images/blog/dasign/prompt.png" alt="" /></p>
+
+<p>It&rsquo;s <strong>FREE</strong>, without any advertisements.</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/04/12/the-nrc-netbook-resolution-customizer" time="2013-04-12 22:35:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
+    <a slot="title" href="/blog/2013/04/12/the-nrc-netbook-resolution-customizer">The NRC: Netbook Resolution Customizer</a>
+    <div slot="summary"><p>I have a netbook HP mini 2140 with screen resolution 1024x576. It not enough for many daily work now. My Nexus 7 is 1280×800 pixels!</p>
+
+<p>How could I change the netbook resolution to make it easier for my development?</p>
+
+<p>First, I found the software &ndash; NRC: <strong>Netbook Resolution Customizer</strong> 1.0.8. It&rsquo;s amazing, and works fine for me. Though sometimes it is not as stable as I expected.</p>
+
+<p>There&rsquo;s another solution by editing the register of windows, Run command regedit and search keyword &ldquo;Display1_DownScalingEnabled&rdquo; or &ldquo;Display1_DownScalingSupported&rdquo;, and change them from 0 to 1. but i found that some of the value is in hex: 00 00 00 00, some binary.</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips" time="2013-03-23 21:42:00 +0800" slug="/blog/tags/%s" tags="[Mindon Mobile-App]">
+    <a slot="title" href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips">Cascades Native App Development Tips</a>
+    <div slot="summary"><p>Google+ Community - <a href="https://plus.google.com/communities/102767584651216621172">Blackberry 10 X-Dev : Cascades &amp; WebWorks for BB10</a></p>
+
+<p>News: <strong>BlackBerry Z10 Officially Available on AT&amp;T</strong></p>
+
+<blockquote>
+<p>The BlackBerry Z10 smartphone is now officially available on AT&amp;T.</p>
+
+<p>The struggling manufacturer — which is hopeful its new flagship device will ignite a company resurgence — announced on Friday the Z10 can finally be activated on AT&amp;T. It costs $199 with a two-year contract.</p>
+
+<p>BlackBerry, formerly known as Research In Motion (RIM), also sent a tweet at midnight ET announcing Best Buy will start selling the device on Friday for $199 with a two-year contract.</p>
+</blockquote>
+
+<p><a href="http://us.blackberry.com/smartphones/blackberry-z10.html">BlackBerry Z10: Built to Keep You Moving</a></p>
+
+<h2>Using proxy with the command line tools</h2>
+
+<p>Remember to use &ndash;proxyhost &amp; -proxyport as the FIRST two parameters when using command line tools from blackberry.tools.SDK.</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/03/23/how-to-heal-sprained-ankle" time="2013-03-23 17:34:00 +0800" slug="/blog/tags/%s" tags="[Mindon Chinese-Balance-Heal]">
+    <a slot="title" href="/blog/2013/03/23/how-to-heal-sprained-ankle">How to Heal Sprained Ankle</a>
+    <div slot="summary"><h2>脚踝扭伤了怎么办？千万要重视。</h2>
+
+<p>Aby最前段时间把左脚也扭到了。结果原来有旧伤未完全痊愈的右脚负担增加导致两个脚都不适，走路稍多就会感觉疼痛不适。</p>
+
+<p>曾到桂庙新村的社康中心看了中医，做了为期一周的针灸。有所改善，但没能完全好。因为要上班缘故，Aby一般都临近下班时间才到社康中心，那医生总是赶着下班，很不耐烦；态度和早上去时截然不同，这样的医生，还有什么话好说呢？也不能期待做一个疗程针灸能好到如何程度。</p>
+
+<p>于是，最近就每晚给Aby泡脚，擦活络油，或用刚买的随身灸给她的脚进行艾灸。</p>
+
+<p>从网上Google了一下，脚踝扭伤，大多都会持续很长时间，无法彻底恢复。一定的活动量之后总会有疼痛等不适的复发症状。</p>
+
+<p>这里特意整理一下搜索来的资料（注：这里所涉及的扭伤，不涉及骨头损伤和韧带断裂——需要手术治疗类型）</p>
+
+<p>网上的案例中，几乎找不到脚踝扭伤痊愈的。</p>
+
+<p>如果是刚崴伤的，处理如下：</p>
+
+<h2>【脚踝扭伤初期处理方式】</h2>
+
+<ul>
+<li><p>严重者需排除骨头有没有受伤；</p></li>
+
+<li><p>【西医】24小时内进行冷敷抑制内出血；之后温敷散淤</p></li>
+
+<li><p>【中医】放血舒缓伤处压力，清除血瘀；（24小时之后可温敷散淤）</p></li>
+
+<li><p>轻度用彈性繃帶、毛巾或布條等，重度用石膏或支架固定防止伤情恶化；</p></li>
+
+<li><p>后续治疗和恢复措施。</p></li>
+</ul>
+
+<h2>【扭伤处理<strong>P.R.I.C.E</strong>法则】（<a href="http://blog.yam.com/chujohn/article/13368917">来源</a>）</h2>
+
+<p><strong>P(保護，Protection)</strong></p>
+
+<p><strong>R(休息，Rest)</strong></p>
+
+<p><strong>I(冰敷，Ice)</strong></p>
+
+<p><strong>C(壓迫，Compression)</strong></p>
+
+<p><strong>E(抬高，Elevation)</strong></p>
+
+<p>不过，即使真正完全做到这些，扭伤真的就能完全痊愈吗？</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2013/03/02/ssh-connect-to-bb10-device" time="2013-03-02 00:23:00 +0800" slug="/blog/tags/%s" tags="[Mindon Mobile-App]">
+    <a slot="title" href="/blog/2013/03/02/ssh-connect-to-bb10-device">SSH Connect to BB10 Device</a>
+    <div slot="summary"><p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2:</h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<p>ssh-keygen -t rsa -b 4096</p>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3:</h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<p>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub</p>
+
+<p>keep this console there.</p>
+ 
+    </div>
+  </am-summary>
+  
+</am-list>

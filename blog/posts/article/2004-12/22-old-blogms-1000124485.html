@@ -1,0 +1,884 @@
+
+<am-article time="2004-12-22 17:19:00 +0800" tags="[BlogMS]" slug="2004/12/22/old-blogms-1000124485">
+    <h1 slot="title">Javascript之校验脚本</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000124485, blog id: airoff
+History stat: 浏览/评论：234/2  ,  日期：2004年12月22日 17:19</p>
+
+<p><code>
+/* value validity relative javascript</p>
+
+<ul>
+<li><p>@date  03/20, 2003</p></li>
+
+<li><p>@author  Rongjun Feng (derek.f)</p></li>
+
+<li><p>@e-mail  iseasky@hotmail.com</p></li>
+</ul>
+
+<p>*/</p>
+
+<p>var g_valid_func = new ValidFUNC();</p>
+
+<p>var valid_error_message = &amp;quot;&amp;quot;;</p>
+
+<p>var INVALID_USER_NAME = /\|\/|[|]|:|||&amp;lt;|&amp;gt;|+|\=|\;|\,|\?|*|&amp;|\%|`|\^|.|&amp;quot;| /;</p>
+
+<p>var INVALID_FILE_NAME = /\|\/|:|*|&amp;quot;|&amp;lt;|&amp;gt;||/;</p>
+
+<p>var REXP_DIGITAL = /^\d+＄/;</p>
+
+<p>var REXP_BLANK = /^\s*＄/;</p>
+
+<p>var TIME_FORMAT = &amp;quot;hh:mm:ss&amp;quot;;</p>
+
+<p>var TIME_RANGE = &amp;quot;hh:00~23, mm:00~59, ss:00~59&amp;quot;;</p>
+
+<p>var DATE_FORMAT = &amp;quot;YYYY-MM-DD&amp;quot;;</p>
+
+<p>var DATE_RANGE = &amp;quot;YYYY:0000~9999, MM:01~12, DD:01~28/29/30/31&amp;quot;;</p>
+
+<p>var R_GE = &amp;quot;大于等于 &amp;quot;;</p>
+
+<p>var R_LE = &amp;quot;小于等于 &amp;quot;;</p>
+
+<p>var R_EQ = &amp;quot;等于 &amp;quot;;</p>
+
+<p>var R_GT = &amp;quot;大于 &amp;quot;;</p>
+
+<p>var R_LT = &amp;quot;小于 &amp;quot;;</p>
+
+<p>var R_AND = &amp;quot;并且&amp;quot;;</p>
+
+<p>var EMPTY_ERRM = &amp;quot;不能为空&amp;quot;;</p>
+
+<p>var NONE_SELECTED_ERRM = &amp;quot;请选择&amp;quot;;</p>
+
+<p>var INVALID_USER_NAME_ERRM = &amp;quot;不能包含以下字符:\n| [ ] : &amp;lt; &amp;gt; + = ; , ? * / \ &amp; % ` ^ . &amp;quot; 空格&amp;quot;;</p>
+
+<p>var INVALUD_FILE_NAME_ERRM = &amp;quot;不能包含以下字符:\n| \ / : * &amp;quot; &amp;lt; &amp;gt;&amp;quot;;</p>
+
+<p>var EXCLUDED_ERRM = &amp;quot;不能取以下值:\n&amp;quot;;</p>
+
+<p>var NOT_INCLUDED_ERRM = &amp;quot;只能取以下值:\n&amp;quot;;</p>
+
+<p>var NOT_LENGTH_ERRM = &amp;quot;不符合串长度限制: &amp;quot;;</p>
+
+<p>var NOT_MAIL_ERRM = &amp;quot;不符合电子邮箱格式: 需含@,且@前后至少各一字母&amp;quot;;</p>
+
+<p>var NOT_RANGE_ERRM = &amp;quot;不符合串值范围限制: &amp;quot;;</p>
+
+<p>var DNOT_RANGE_ERRM = &amp;quot;不符合数字值范围限制: &amp;quot;;</p>
+
+<p>var DNOT_HEX_ERRM = &amp;quot;不符合十六进制数规格(0~9, A~F 或 a~f构成)&amp;quot;;</p>
+
+<p>var DNOT_LENGTH_ERRM = &amp;quot;不符合数字串长度限制: &amp;quot;;</p>
+
+<p>var DNOT_TIME_ERRM = &amp;quot;不符合有效时间格式: &amp;quot;;</p>
+
+<p>var DNOT_DATE_ERRM = &amp;quot;不符合有效日期格式: &amp;quot;;</p>
+
+<p>function validERR(field, label)</p>
+
+<p>// alert valid error message and return false</p>
+
+<p>// @param :field, field handle id</p>
+
+<p>// @param :label, field label</p>
+
+<p>// @return  :false</p>
+
+<p>{</p>
+
+<p>var field, label;</p>
+
+<p>var params = g_valid_func.params;</p>
+
+<p>var message = &amp;quot;&amp;quot;&amp;quot; +label +&amp;quot;&amp;quot; &amp;quot;;</p>
+
+<p>switch(g_valid_func.id) {</p>
+
+<p>case 50000: //gEmpty</p>
+
+<p>message += EMPTY_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50010: //gNotUserName</p>
+
+<p>message += INVALID_USER_NAME_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50020: //gNotFileName</p>
+
+<p>message += INVALID_FILE_NAME_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50030: //gExcluded</p>
+
+<p>message += EXCLUDED_ERRM + params[1].join(&amp;quot;, &amp;quot;);</p>
+
+<p>break;</p>
+
+<p>case 50040: //gNotFilter</p>
+
+<p>message += NOT_INCLUDED_ERRM + params[1].join(&amp;quot;, &amp;quot;);</p>
+
+<p>break;</p>
+
+<p>case 50050: //gNotLen</p>
+
+<p>message += NOT_LENGTH_ERRM;</p>
+
+<p>if(params[1] == &amp;quot;0&amp;quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &amp;quot;0&amp;quot; || params[2]) message += &amp;quot;, &amp;quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 50060: //gNotMail</p>
+
+<p>message += NOT_MAIL_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 50070: //gNotFit</p>
+
+<p>message += NOT_RANGE_ERRM;</p>
+
+<p>if(params[1] == &amp;quot;0&amp;quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &amp;quot;0&amp;quot; || params[2]) message += &amp;quot;, &amp;quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60010: //dNotFit</p>
+
+<p>message += DNOT_RANGE_ERRM;</p>
+
+<p>if(params[1] == &amp;quot;0&amp;quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &amp;quot;0&amp;quot; || params[2]) message += &amp;quot;, &amp;quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60020: //dNotHex</p>
+
+<p>message += DNOT_HEX_ERRM;</p>
+
+<p>break;</p>
+
+<p>case 60030: //dNotLen</p>
+
+<p>message += DNOT_LENGTH_ERRM;</p>
+
+<p>if(params[1] == &amp;quot;0&amp;quot; || params[1]) message += R_GE +params[1];</p>
+
+<p>if(params[2] == &amp;quot;0&amp;quot; || params[2]) message += &amp;quot;, &amp;quot; +R_LE +params[2];</p>
+
+<p>break;</p>
+
+<p>case 60040: //dNotTime</p>
+
+<p>message += DNOT_TIME_ERRM +TIME_FORMAT +&amp;quot;\n(&amp;quot; +TIME_RANGE + &amp;quot;)&amp;quot;;</p>
+
+<p>break;</p>
+
+<p>case 60050: //dNotDate</p>
+
+<p>message += DNOT_DATE_ERRM;</p>
+
+<p>message += DATE_FORMAT.substr(params[1]?2:0) +&amp;quot;\n(&amp;quot; +DATE_RANGE.substr(params[1]?2:0) + &amp;quot;)&amp;quot;;</p>
+
+<p>break;</p>
+
+<p>case 60060: //dNotDateTime</p>
+
+<p>message += DNOT_TIME_ERRM;</p>
+
+<p>message += DATE_FORMAT.substr(params[2]?2:0) +(params[1]?params[1]:&amp;quot;&amp;quot;) +TIME_FORMAT;</p>
+
+<p>message += &amp;quot;\n(&amp;quot; +DATE_RANGE.substr(params[2]?2:0) +&amp;quot;)\n(&amp;quot; +TIME_RANGE +&amp;quot;)&amp;quot;;</p>
+
+<p>break;</p>
+
+<p>case 90000: //gNone</p>
+
+<p>message = NONE_SELECTED_ERRM +message;</p>
+
+<p>break;</p>
+
+<p>}</p>
+
+<p>alert(message);</p>
+
+<p>try{ field.focus() } catch(e) {};</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function ValidFUNC()</p>
+
+<p>// valid special character parameters</p>
+
+<p>{</p>
+
+<p>this.id = &amp;quot;&amp;quot;;</p>
+
+<p>this.name = &amp;quot;&amp;quot;;</p>
+
+<p>this.description = &amp;quot;&amp;quot;;</p>
+
+<p>this.params = [];</p>
+
+<p>this.set = set;</p>
+
+<p>function set(id, params, name, description)</p>
+
+<p>{</p>
+
+<p>var id, params, name, description;</p>
+
+<p>if(id) this.id = id;</p>
+
+<p>if(params) this.params = params;</p>
+
+<p>if(name) this.name = name;</p>
+
+<p>if(description) this.description = description;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>function s2d(v) { var n = new Number(v); return parseInt(isNaN(n)?0:n); }</p>
+
+<p>function contains(varr, value)</p>
+
+<p>// judge if a value is contained in a array</p>
+
+<p>// @param :varr, value array</p>
+
+<p>// @param :value, value string</p>
+
+<p>// @return  :if value is in array, return true, else return false</p>
+
+<p>{</p>
+
+<p>var arrstr = varr.join(&amp;quot;,&amp;quot;);</p>
+
+<p>if(arrstr.indexOf(&amp;quot;,&amp;quot;) &amp;lt; 0) return (arrstr == value);</p>
+
+<p>var index = arrstr.indexOf(value.toString());</p>
+
+<p>var offset = value.toString().length;</p>
+
+<p>var hok = (index == 0 || arrstr.substr(index -1, 1) == &amp;quot;,&amp;quot;);</p>
+
+<p>var tok = (index == (arrstr.length - offset) || arrstr.substr(index +offset, 1) == &amp;quot;,&amp;quot;);</p>
+
+<p>return (index&amp;gt;=0 &amp;&amp; hok &amp;&amp; tok);</p>
+
+<p>}</p>
+
+<p>function gEmpty(value)</p>
+
+<p>// check if the value only contains blank character</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if only contains BLANK-charaters return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50000, arguments, &amp;quot;gEmpty&amp;quot;, &amp;quot;function gEmpty(value)&amp;quot;);</p>
+
+<p>if(!value &amp;&amp; value != &amp;quot;0&amp;quot;) return true;</p>
+
+<p>return REXP_BLANK.test(value);</p>
+
+<p>}</p>
+
+<p>function gNotUserName(value)</p>
+
+<p>// check if the name string is invalid</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if name string invalid return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50010, arguments, &amp;quot;gNotUserName&amp;quot;, &amp;quot;function gNotUserName(value)&amp;quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>return INVALID_USER_NAME.test(value);</p>
+
+<p>}</p>
+
+<p>function gNotFileName(value)</p>
+
+<p>// check if the filename string is invalid</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if filename string invalid return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50020, arguments, &amp;quot;gNotFileName&amp;quot;, &amp;quot;function gNotFileName(value)&amp;quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>return INVALID_FILE_NAME.test(value);</p>
+
+<p>}</p>
+
+<p>function gExcluded(value, filter)</p>
+
+<p>// check if the value is in the EXCLUDED-filter-array</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :filter, excluded-filter-array</p>
+
+<p>// @return  :if EXCLUDED return true, else false</p>
+
+<p>{</p>
+
+<p>var value, filter;</p>
+
+<p>g_valid_func.set(50030, arguments, &amp;quot;gExcluded&amp;quot;, &amp;quot;function gExcluded(value, filter)&amp;quot;);</p>
+
+<p>if(!filter || !filter.length) return false;</p>
+
+<p>return(contains(filter, value));</p>
+
+<p>}</p>
+
+<p>function gNotFilter(value, filter)</p>
+
+<p>// check if the value is NOT in the included-filter-array</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :filter, included-filter-array</p>
+
+<p>// @return  :if NOT included return true, else false</p>
+
+<p>{</p>
+
+<p>var value, filter;</p>
+
+<p>g_valid_func.set(50040, arguments, &amp;quot;gNotFilter&amp;quot;, &amp;quot;function gNotFilter(value, filter)&amp;quot;);</p>
+
+<p>if(!filter || !filter.length) return false;</p>
+
+<p>return(!contains(filter, value));</p>
+
+<p>}</p>
+
+<p>function gNotLen(value, sLmin, sLmax)</p>
+
+<p>// check if the string value length is NOT between sLmin and sLmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :sLmin, the min limitation of string length</p>
+
+<p>// @param :sLmax, the max limitation of string length</p>
+
+<p>// @return  :if NOT fits the length limitation return true, else false</p>
+
+<p>{</p>
+
+<p>var value, sLmin, sLmax;</p>
+
+<p>g_valid_func.set(50050, arguments, &amp;quot;gNotLen&amp;quot;, &amp;quot;function gNotLen(value, sLmin, sLmax)&amp;quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &amp;quot;0&amp;quot; &amp;&amp; value != &amp;quot;&amp;quot;) return !flag;</p>
+
+<p>if(sLmin || sLmin == &amp;quot;0&amp;quot;) {</p>
+
+<p>flag = (value.length &amp;gt;= sLmin);</p>
+
+<p>if(sLmax || sLmax == &amp;quot;0&amp;quot;) {</p>
+
+<p>flag = (flag &amp;&amp; value.length &amp;lt;= sLmax);</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>flag = true;</p>
+
+<p>}</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function gNotMail(value)</p>
+
+<p>// check if the value is NOT a valid email address</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT a valid email return true, else false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(50060, arguments, &amp;quot;gNotMail&amp;quot;, &amp;quot;function gNotMail(value)&amp;quot;);</p>
+
+<p>var rexp = /^[^@]+@[^@]+＄/g;</p>
+
+<p>var flag = false;</p>
+
+<p>var idx = value.indexOf(&amp;quot;@&amp;quot;);</p>
+
+<p>if(idx &amp;gt; 0) {</p>
+
+<p>flag = (!gNotUserName(value.substring(0, idx)) &amp;&amp; rexp.test(value));</p>
+
+<p>}</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function gNotFit(value, smin, smax)</p>
+
+<p>// check if the string value is NOT between smin and smax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :smin, the min string value limitation</p>
+
+<p>// @param :smax, the max string  value limitation</p>
+
+<p>// @return  :if NOT fits the string value limitation return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, smin, smax;</p>
+
+<p>g_valid_func.set(50070, arguments, &amp;quot;gNotFit&amp;quot;, &amp;quot;function gNotFit(value, smin, smax)&amp;quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &amp;quot;0&amp;quot; &amp;&amp; value !=&amp;quot;&amp;quot;)</p>
+
+<p>return !flag;</p>
+
+<p>if(smin || smin == &amp;quot;0&amp;quot; || smin ==&amp;quot;&amp;quot;)</p>
+
+<p>flag = (value &amp;gt;= smin);</p>
+
+<p>if(smax || smax == &amp;quot;0&amp;quot; || smax ==&amp;quot;&amp;quot;)</p>
+
+<p>flag = (flag &amp;&amp; value &amp;lt;= dmax);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotInt(value, type)</p>
+
+<p>// check if the digital value is NOT proper type of integer</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT proper int type return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, type;</p>
+
+<p>if(!type) type = &amp;quot;int&amp;quot;;</p>
+
+<p>switch(type.toLowerCase()) {</p>
+
+<p>case &amp;quot;int&amp;quot;:</p>
+
+<p>case &amp;quot;short&amp;quot;:</p>
+
+<p>return dNotFit(value, -32768, 32767);</p>
+
+<p>break;</p>
+
+<p>case &amp;quot;long&amp;quot;:</p>
+
+<p>return dNotFit(value, -2147483648, 2147483647);</p>
+
+<p>break;</p>
+
+<p>case &amp;quot;ushort&amp;quot;:</p>
+
+<p>return dNotFit(value, 0, 65535);</p>
+
+<p>break;</p>
+
+<p>case &amp;quot;ulong&amp;quot;:</p>
+
+<p>return dNotFit(value, 0, 4294967295);</p>
+
+<p>break;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>function dNotFit(value, dmin, dmax)</p>
+
+<p>// check if the digital value is NOT between dmin and dmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :dmin, the min value limitation</p>
+
+<p>// @param :dmax, the max value limitation</p>
+
+<p>// @return  :if NOT fits the value limitation return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, dmin, dmax;</p>
+
+<p>g_valid_func.set(60010, arguments, &amp;quot;dNotFit&amp;quot;, &amp;quot;function dNotFit(value, dmin, dmax)&amp;quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &amp;quot;0&amp;quot;) return !flag;</p>
+
+<p>flag = !isNaN(value);</p>
+
+<p>if(!dmin &amp;&amp; dmin != &amp;quot;0&amp;quot;) return !flag;</p>
+
+<p>flag = (flag &amp;&amp; value &amp;gt;= dmin);</p>
+
+<p>if(!dmax &amp;&amp; dmax != &amp;quot;0&amp;quot;) return !flag;</p>
+
+<p>flag = (flag &amp;&amp; value &amp;lt;= dmax);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotHex(value)</p>
+
+<p>// check if the digital value is NOT hex value</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT hex value return true, else false;</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(60020, arguments, &amp;quot;dNotHex&amp;quot;, &amp;quot;function dNotHex(value)&amp;quot;);</p>
+
+<p>var rexp = /^[0-9a-fA-F]+＄/;</p>
+
+<p>return !rexp.test(value);</p>
+
+<p>}</p>
+
+<p>function dNotLen(value, dLmin, dLmax)</p>
+
+<p>// check if the digital string value length is NOT between dLmin and dLmax</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :dLmin, the min limitation of string length</p>
+
+<p>// @param :dLmax, the max limitation of string length</p>
+
+<p>// @return  :if NOT fits the length limitation or contains NOT-digital-characters return true, else false;</p>
+
+<p>{</p>
+
+<p>var value, dLmin, dLmax;</p>
+
+<p>g_valid_func.set(60030, arguments, &amp;quot;dNotLen&amp;quot;, &amp;quot;function dNotLen(value, dLmin, dLmax)&amp;quot;);</p>
+
+<p>var flag = false;</p>
+
+<p>if(!value &amp;&amp; value != &amp;quot;0&amp;quot;) return !flag;</p>
+
+<p>var rexpstr = &amp;quot;^\d&amp;quot;;</p>
+
+<p>if((!dLmin &amp;&amp; dLmin != &amp;quot;0&amp;quot;) || isNaN(dLmin)) {</p>
+
+<p>rexpstr += &amp;quot;+＄&amp;quot;</p>
+
+<p>} else {</p>
+
+<p>rexpstr += &amp;quot;{&amp;quot; +dLmin +&amp;quot;,&amp;quot;;</p>
+
+<p>if((!dLmax &amp;&amp; dLmax != &amp;quot;0&amp;quot;) || isNaN(dLmax)) {</p>
+
+<p>rexpstr += &amp;quot;}＄&amp;quot;</p>
+
+<p>} else {</p>
+
+<p>rexpstr += dLmax +&amp;quot;}＄&amp;quot;;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>var rexp = new RegExp(rexpstr);</p>
+
+<p>flag = rexp.test(value);</p>
+
+<p>return !flag;</p>
+
+<p>}</p>
+
+<p>function dNotTime(value)</p>
+
+<p>// check if the value is NOT a time string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @return  :if NOT time string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value;</p>
+
+<p>g_valid_func.set(60040, arguments, &amp;quot;dNotTime&amp;quot;, &amp;quot;function dNotTime(value)&amp;quot;);</p>
+
+<p>var rexp = /[^\d]+/; // detect delimiter string</p>
+
+<p>if(!value) return true;</p>
+
+<p>var delimiter = value.match(rexp);</p>
+
+<p>if(delimiter) {</p>
+
+<p>delimiter = delimiter.toString();</p>
+
+<p>var dlen = delimiter.length;</p>
+
+<p>if(value.indexOf(delimiter) != 2) return true;</p>
+
+<p>value = value.substr(0,2) + value.substr(2 +dlen, 2) + value.substr(4 +2*dlen, 2);</p>
+
+<p>}</p>
+
+<p>var tarr = [];</p>
+
+<p>for(var k=0; k&amp;lt;3; k++) {</p>
+
+<p>tarr[k] = value.substr(2*k, 2);</p>
+
+<p>if(isNaN(tarr[k])) return true;</p>
+
+<p>tarr[k] = s2d(tarr[k]);</p>
+
+<p>}</p>
+
+<p>if(tarr[0] &amp;lt; 0 || tarr[0] &amp;gt;= 24</p>
+
+<p>|| tarr[1] &amp;lt; 0 || tarr[1] &amp;gt;= 60</p>
+
+<p>|| tarr[2] &amp;lt; 0 || tarr[2] &amp;gt;= 60) {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function dNotDate(value, y2d)</p>
+
+<p>// check if the value is NOT a date string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :y2d, two digital year flag</p>
+
+<p>// @return  :if NOT date string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value, y2d;</p>
+
+<p>g_valid_func.set(60050, arguments, &amp;quot;dNotDate&amp;quot;, &amp;quot;function dNotDate(value, y2d)&amp;quot;);</p>
+
+<p>var rexp = /[^\d]+/; // detect delimiter string</p>
+
+<p>if(!value) return true;</p>
+
+<p>var delimiter = value.match(rexp);</p>
+
+<p>var YRW = 4;</p>
+
+<p>if(y2d) YRW = 2;</p>
+
+<p>if(delimiter) {</p>
+
+<p>delimiter = delimiter.toString();</p>
+
+<p>var dlen = delimiter.length;</p>
+
+<p>if(value.indexOf(delimiter) != YRW) return true;</p>
+
+<p>value = value.substr(0,YRW) + value.substr(YRW +dlen, 2) + value.substr(YRW +2 +2*dlen, 2);</p>
+
+<p>}</p>
+
+<p>var tarr = [];</p>
+
+<p>try {</p>
+
+<p>for(var k=0; k&amp;lt;3; k++) {</p>
+
+<p>tarr[k] = value.substr((k==0?0:(YRW +2*(k-1))), (k==0?YRW:2));</p>
+
+<p>tarr[k] = new Number(tarr[k]);</p>
+
+<p>//tarr[k] = s2d(tarr[k]);</p>
+
+<p>if(y2d &amp;&amp; k==0) tarr[k] = 1900 +tarr[k]; //year 2 digital process</p>
+
+<p>}</p>
+
+<p>} catch(e) { return true; }</p>
+
+<p>var cd = new Date(tarr[0], tarr[1] -1, tarr[2]);</p>
+
+<p>var dfit = (cd.getFullYear() == tarr[0]);</p>
+
+<p>dfit = (dfit &amp;&amp; cd.getMonth() == tarr[1] -1);</p>
+
+<p>dfit = (dfit &amp;&amp; cd.getDate() == tarr[2]);</p>
+
+<p>if(!dfit) return true;</p>
+
+<p>/*//</p>
+
+<p>var febdays = ((tarr[0]%4 == 0) &amp;&amp; (tarr[0]%100 != 0) || (tarr[0]%400 == 0))?29:28;</p>
+
+<p>var mdarr = new Array(31,febdays,31,30,31,30,31,31,30,31,30,31);</p>
+
+<p>if(tarr[0] &amp;lt; 0</p>
+
+<p>|| tarr[1] &amp;lt; 1 || tarr[1] &amp;gt; 12</p>
+
+<p>|| tarr[2] &amp;lt; 1 || tarr[2] &amp;gt; mdarr[tarr[1] -1]) {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>//*/</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>function dNotDateTime(value, delimiter, y2d)</p>
+
+<p>// check if the value is NOT a datetime string</p>
+
+<p>// @param :value, value being checked</p>
+
+<p>// @param :delimiter, delimiter between date string and time string</p>
+
+<p>// @param :y2d, two digital year flag</p>
+
+<p>// @return  :if NOT datetime string return true, else return false</p>
+
+<p>{</p>
+
+<p>var value, delimiter, y2d;</p>
+
+<p>g_valid_func.set(60060, arguments, &amp;quot;dNotDateTime&amp;quot;, &amp;quot;function dNotDateTime(value, delimiter, y2d)&amp;quot;);</p>
+
+<p>if(!value) return true;</p>
+
+<p>if(!delimiter) delimiter = &amp;quot;&amp;quot;;</p>
+
+<p>var datestr, timestr;</p>
+
+<p>var DTW = 8;</p>
+
+<p>if(y2d) DTW = 6;</p>
+
+<p>if(!delimiter) {</p>
+
+<p>datestr = value.substr(0, DTW);</p>
+
+<p>timestr = value.substr(DTW, 6);</p>
+
+<p>} else {</p>
+
+<p>var dpos = value.indexOf(delimiter);</p>
+
+<p>datestr = value.substring(0, dpos);</p>
+
+<p>timestr = value.substring(dpos +delimiter.length, value.length);</p>
+
+<p>}</p>
+
+<p>return (dNotDate(datestr, y2d) || dNotTime(timestr));</p>
+
+<p>}</p>
+
+<p>function gNone(field)</p>
+
+<p>// check if value has been set by selection</p>
+
+<p>// @param :field, field to be check</p>
+
+<p>{</p>
+
+<p>var field;</p>
+
+<p>g_valid_func.set(90000, arguments, &amp;quot;gNone&amp;quot;, &amp;quot;function gNone(field)&amp;quot;);</p>
+
+<p>if(field.type &amp;&amp; field.type == &amp;quot;select-one&amp;quot; &amp;&amp; field.value==&amp;quot;&amp;quot;) return true;</p>
+
+<p>if(field.type &amp;&amp; field.type == &amp;quot;checkbox&amp;quot;) return (field.checked?false:true);</p>
+
+<p>if(!field.type &amp;&amp; field.length) {</p>
+
+<p>for(var k=0; k&amp;lt;field.length; k++) {</p>
+
+<p>if(field[k].checked) return false;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p></code></p>
+</div>
+    <a slot="next" href="/blog/2004/12/22/old-blogms-1000124591" title="纳米技术遭遇反科学思潮挑战">Newer</a>
+    <a slot="prev" href="/blog/2004/12/22/old-blogms-1000124479" title="Javascript之取消">Older</a>
+</am-article>

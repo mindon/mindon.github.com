@@ -1,0 +1,33 @@
+
+<am-article time="2005-09-28 13:53:00 +0800" tags="[BlogMS]" slug="2005/09/28/old-blogms-1000620058">
+    <h1 slot="title">页面开发留意</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000620058, blog id: airoff
+History stat: 浏览/评论：242/0  ,  日期：2005年9月28日 13:53</p>
+
+<p><font size=2 style="line-height:14pt">一、中文的别忘了在&amp;lt;html/&amp;gt;的&amp;lt;head/&amp;gt;中添加如下信息</p>
+
+<p>&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=GBK&amp;quot;&amp;gt;</p>
+
+<p>来指定页面编码。</p>
+
+<p>二、使用&amp;lt;form/&amp;gt;的时候，要注意避免用</p>
+
+<p>name=&amp;quot;submit&amp;quot; 以及 name=&amp;quot;action&amp;quot; 等等</p>
+
+<p>这类与&amp;lt;form/&amp;gt;的属性或者方法名称一样的元素。</p>
+
+<p>确实用到如name=&amp;quot;action&amp;quot;这样的元素的时候，你就只能通过</p>
+
+<p>document.forms[&amp;quot;myFormName&amp;quot;].attributes[&amp;quot;action&amp;quot;]</p>
+
+<p>得到提交的URL，而通过</p>
+
+<p>document.forms[&amp;quot;myFormName&amp;quot;].elements[&amp;quot;action&amp;quot;]</p>
+
+<p>来访问元素了。</p>
+
+<p></font></p>
+</div>
+    <a slot="next" href="/blog/2005/09/30/old-blogms-1000624131" title="骗扒盗抢的后果">Newer</a>
+    <a slot="prev" href="/blog/2005/09/26/old-blogms-1000614794" title="汉语与英语">Older</a>
+</am-article>

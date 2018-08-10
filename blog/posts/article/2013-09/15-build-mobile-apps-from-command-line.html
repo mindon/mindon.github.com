@@ -1,0 +1,192 @@
+
+<am-article time="2013-09-15 09:04:00 +0800" tags="[Mobile-App]" slug="2013/09/15/build-mobile-apps-from-command-line">
+    <h1 slot="title">Building mobile apps from the command line</h1>
+    <div slot="content"><p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
+
+<h1>Android</h1>
+
+<p>Managing Projects from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/projects/projects-cmdline.html">http://developer.android.com/tools/projects/projects-cmdline.html</a></p>
+
+<h2>Creating an Android Project</h2>
+
+<p>android create project <br />
+&ndash;target <target_ID> <br />
+&ndash;name <your_project_name> <br />
+&ndash;path path/to/your/project <br />
+&ndash;activity <your_activity_name> <br />
+&ndash;package <your_package_namespace></p>
+
+<h2>Updating a Project</h2>
+
+<p>android update project &ndash;name <project_name> &ndash;target <target_ID>
+&ndash;path <path_to_your_project></p>
+
+<h2>Setting up a Library Project</h2>
+
+<p>android create lib-project &ndash;name <your_project_name> <br />
+&ndash;target <target_ID> <br />
+&ndash;path path/to/your/project <br />
+&ndash;package <your_library_package_namespace></p>
+
+<p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
+
+<!--more-->
+
+<h2>Updating a library project</h2>
+
+<p>android update lib-project <br />
+&ndash;target <target_ID> <br />
+&ndash;path path/to/your/project</p>
+
+<h2>Referencing a Library Project</h2>
+
+<p>android update project <br />
+&ndash;target <target_ID> <br />
+&ndash;path path/to/your/project
+&ndash;library path/to/library_projectA</p>
+
+<p>This command updates the application project&rsquo;s build properties to include a reference to the library project. Specifically, it adds an android.library.reference.n property to the project&rsquo;s project.properties file.</p>
+
+<h2>Declaring library components in the manifest file</h2>
+
+<p>In the manifest file of the application project, you must add declarations of all components that the application will use that are imported from a library project. For example, you must declare any <activity>, <service>, <receiver>, <provider>, and so on, as well as <permission>, <uses-library>, and similar elements.</p>
+
+<p>Building and Running from the Command Line</p>
+
+<p><a href="http://developer.android.com/tools/building/building-cmdline.html">http://developer.android.com/tools/building/building-cmdline.html</a></p>
+
+<h2>Building in Debug/Release Mode</h2>
+
+<p>ant debug
+ant release</p>
+
+<p><a href="http://developer.android.com/tools/publishing/app-signing.html">Signing Your Applications</a></p>
+
+<h2>Running on a Device</h2>
+
+<p>adb -d install path/to/your/app.apk</p>
+
+<p>update installation</p>
+
+<p>adb -d -r install path/to/your/app.apk</p>
+
+<h1>iOS</h1>
+
+<p>To be able to find the command line, the trick was to watch the system console log while running a “build and archive” through Xcode.</p>
+
+<p>xcodebuild -project myproject1 -target target1</p>
+
+<p>/usr/bin/xcrun -sdk iphoneos PackageApplication -v &ldquo;${RELEASE_BUILDDIR}/${APPLICATION_NAME}.app&rdquo; -o &ldquo;${BUILD_HISTORY_DIR}/${APPLICATION_NAME}.ipa&rdquo; &ndash;sign &ldquo;${DEVELOPPER_NAME}&rdquo; &ndash;embed &ldquo;${PROVISONNING_PROFILE}&rdquo;</p>
+
+<p>RELEASE_BUILDDIR needs to be an absolute path.</p>
+
+<p>you don&rsquo;t need the &ndash;sign or &ndash;embed options if you wish to keep the same signing/profile used when the .app was built.</p>
+
+<p>Note that the ipa file path in -o &ldquo;${ipa_path}&rdquo; must be an absolute path. Otherwise you will probably get error: Unable to create &lsquo;&hellip;/&hellip;ipa&rsquo; or it will be silently ignored creating.</p>
+
+<p>xcodebuild -scheme <SchemeName> archive</p>
+
+<p>Make sure you have selected the correct Xcode release by using xcode-select <path to Xcode.app></p>
+
+<p>to resign a build</p>
+
+<p>codesign -f -vv -s &ldquo;$DistributionIdentity&rdquo; &ldquo;$APPDIR&rdquo;</p>
+
+<h2>Other References</h2>
+
+<p><a href="http://nachbaur.com/blog/building-ios-apps-for-over-the-air-adhoc-distribution">Building iOS apps for Over-The-Air AdHoc distribution</a></p>
+
+<p><a href="https://github.com/ghughes/fruitstrap">Fruitstrap</a> is a command line tool that uses the private MobileDevice API to install an iOS application on a physical device over USB. It’s pretty easy to get set up.</p>
+
+<p>xcodebuild -scheme fruitstrap-demo -sdk iphoneos build</p>
+
+<p>fruitstrap build/Debug-iphoneos/fruitstrap-demo.app</p>
+
+<p>One command to build and install the app on the device.</p>
+
+<p>FRUITSTRAP_CLI=1 xcodebuild -scheme fruitstrap-demo -sdk iphoneos build</p>
+
+<p><a href="https://github.com/facebook/xctool">xctool</a> is a replacement for Apple&rsquo;s xcodebuild that makes it easier to build and test iOS and Mac products. It&rsquo;s especially helpful for continuous integration.</p>
+
+<h1>BlackBerry 10</h1>
+
+<p>make -f [configuration]/makefile [target]</p>
+
+<p><a href="http://developer.blackberry.com/native/documentation/core/com.qnx.doc.ide.userguide/topic/devel_build_from_command_line.html">Build from the command line</a></p>
+
+<p>mkbuild -ws <workspace> [options]
+mkbuild [-project] <full_project_path> [options]
+mkbuild -ws <workspace> -projects <project1,project2> [options]</p>
+
+<p><a href="http://devblog.blackberry.com/2013/05/building-apps-without-an-ide/">Command Line Rocks! Building BlackBerry 10 Apps Without An IDE</a></p>
+
+<p>qcc -Vgcc_ntoarmv7le main.c -o main</p>
+
+<p>for simulator</p>
+
+<p>qcc -Vgcc_ntox86 main.c -o main</p>
+
+<p>bar-descriptor.xml file <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/r_blackberry_tablet_dtd_intro.html#r_blackberry_tablet_dtd_intro">full list of BAR application descriptor parameters</a></p>
+
+<p><qnx>
+<id>com.example.GoodbyeIDE</id>
+<versionNumber>1</versionNumber>
+<name>Goodbye IDE</name>
+<asset path="main" entry="true">main</asset>
+</qnx></p>
+
+<p>To create a BAR file: (<a href="https://www.blackberry.com/SignedKeys/codesigning.html">register with RIM to sign applications</a>, <a href="https://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.devguide/com.qnx.doc.native_sdk.devguide/topic/t_setup_manual_create_debug_token_cmdline.html">create a debug token</a>)</p>
+
+<p>blackberry-nativepackager -package GoodbyeIDE.bar bar-descriptor.xml -devMode -debugToken ~/Library/Research\ In\ Motion/debugtoken1.bar</p>
+
+<p>Deploy</p>
+
+<p>blackberry-deploy -installApp 169.254.0.1 -password pass GoodbyeIDE.bar</p>
+
+<h2>View logs over SSH</h2>
+
+<p>blackberry-connect 169.254.0.1 -password pass</p>
+
+<p>open another console and run</p>
+
+<p>ssh devuser@169.254.0.1</p>
+
+<p>run command</p>
+
+<p>slog2info -w</p>
+
+<p><a href="http://devblog.blackberry.com/2013/05/command-line-rocks-part-2/">Command Line Rocks! Part 2 – Adding Multiple Source Files and Libraries</a></p>
+
+<p><a href="http://devblog.blackberry.com/2013/08/command-line-rocks-part-3-make-and-makefiles/">Command Line Rocks! Part 3 – Make and Makefiles</a></p>
+
+<h1>Windows Phone 8</h1>
+
+<p>The output of the build process includes a file with the .XAP extension. The XAP file is a zipped package that contains all the files required by your app. It’s the XAP file that you deploy to the emulator or to a phone, and that you publish to Windows Phone Store.</p>
+
+<p>devenv NameOfSolution /Rebuild &ldquo;Release|Mixed Platforms&rdquo;</p>
+
+<p>MSBuild MyProject.csproj /p:OutDir=d:\builds\mindon-projs</p>
+
+<p>You can override the project-specific folder behavior by specifying.</p>
+
+<p>/p:GenerateProjectSpecificOutputFolder=false</p>
+
+<p>MSBuild.exe MyProject/project.jsproj /p:Configuration=Release /t:Build /m</p>
+
+<h2>MSBuild Command-Line Reference</h2>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/ms164311.aspx">http://msdn.microsoft.com/en-us/library/ms164311.aspx</a></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj681686.aspx">How to sign a company app by using XapSignTool</a></p>
+
+<p>set path=%path%;&ldquo;%ProgramFiles(x86)%\Microsoft SDKs\Windows Phone\v8.0\Tools\XapSignTool&rdquo;</p>
+
+<p>XapSignTool.exe sign /f PFXFile /p Password XAP</p>
+
+<p><a href="https://github.com/AndreasOM/wp8-directx-commandline">Simple Windows Phone 8 (C++/native only) DirectX project with Command Line Build</a></p>
+</div>
+    <a slot="next" href="/blog/2013/09/15/fix-adb-error-under-win8" title="fix adb error under win8">Newer</a>
+    <a slot="prev" href="/blog/2013/07/20/android-data-and-folders" title="Android App Data & Folders">Older</a>
+</am-article>

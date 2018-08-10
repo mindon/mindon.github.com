@@ -1,0 +1,41 @@
+
+<am-article time="2013-03-02 00:23:00 +0800" tags="[Mindon Mobile-App]" slug="2013/03/02/ssh-connect-to-bb10-device">
+    <h1 slot="title">SSH Connect to BB10 Device</h1>
+    <div slot="content"><p>How to connect to your BB10 device or simulator?</p>
+
+<h2>Step 1:</h2>
+
+<p><strong>Turn on Development Mode</strong></p>
+
+<h2>Step 2:</h2>
+
+<p><strong>Creating an RSA2 key</strong></p>
+
+<p>ssh-keygen -t rsa -b 4096</p>
+
+<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+
+<h2>Step 3:</h2>
+
+<p><strong>Start Connect Service</strong></p>
+
+<p>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub</p>
+
+<p>keep this console there.
+<!--more--></p>
+
+<h2>Step 4:</h2>
+
+<p><strong>Make the SSH connection</strong></p>
+
+<p>start another console, make the ssh connection</p>
+
+<p>ssh devuser@169.254.0.1 -i rsa-bbx</p>
+
+<p>If you are connecting to a simulator, find the IP at the bottom of simulator window.</p>
+
+<p>NOTICE: Make sure the file <strong>rsa-bbx</strong> and <strong>rsa-bbx.pub</strong> is in current path, or you could use its full path.</p>
+</div>
+    <a slot="next" href="/blog/2013/03/23/blackberry-cascades-native-app-development-tips" title="Cascades Native App Development Tips">Newer</a>
+    <a slot="prev" href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3" title="Print the Schengen VISA Application Form in A3">Older</a>
+</am-article>

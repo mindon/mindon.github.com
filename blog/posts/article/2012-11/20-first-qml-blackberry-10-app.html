@@ -1,0 +1,174 @@
+
+<am-article time="2012-11-21 21:14:00 +0800" tags="[Mobile-App Mindon]" slug="2012/11/20/first-qml-blackberry-10-app">
+    <h1 slot="title">Trying Cascades+QML App for Blackberry 10</h1>
+    <div slot="content"><p>&ldquo;Research In Motion made another step towards the release of its new BlackBerry smartphones on Monday, announcing that it plans to unveil the devices and its new operating system on Jan. 30.&rdquo;</p>
+
+<p>&ldquo;QML (Qt Meta Language or Qt Modeling Language) is a JavaScript-based, declarative language for designing user interface–centric applications. It is part of Qt Quick, the UI creation kit developed by Nokia within the Qt framework. QML is mainly used for mobile applications where touch input, fluid animations (60 FPS) and user experience are crucial. QML documents describe an object tree of elements.&rdquo;</p>
+
+<p>Here&rsquo;s something I met during my first development using QML under Blackberry Native SDK IDE.</p>
+
+<ul>
+<li>Link error or &ldquo;undefined reference to `vtable for someSymbol&rsquo;&rdquo; issue</li>
+</ul>
+
+<p>Update <strong>myproject.pro</strong> with something like <code>LIBS += -lsystem</code> to avoid lacking of libraries link error.</p>
+
+<p>Manage source folders and files, header folders to avoid &ldquo;undefined reference to `vtable for someSymbol&rsquo;&rdquo;</p>
+
+<!--more-->
+
+<ul>
+<li><p>Save QML files in folder <strong>assets/</strong> and make sure the folder is included in <strong>bar-description.xml</strong></p></li>
+
+<li><p>Seperated javascript file could be imported in QML by <code>import &ldquo;my.js&rdquo; as MyDemo</code> and functions could be called by <strong>MyDemo.method1</strong></p></li>
+
+<li><p>If using <strong>NavigationPane</strong>, you could import the public js in the QML of the <strong>NavigationPane</strong> and define public interface for all the pages.</p></li>
+</ul>
+
+<p>e.g. demo.qml</p>
+
+<p>import &ldquo;demo.js&rdquo; as Demo</p>
+
+<p>NavigationPane {
+id: nav
+function notify( message ) {
+Demo.notify( message )
+}
+}</p>
+
+<p>usage e.g. in a page loaded into the <strong>NavigationPane</strong></p>
+
+<p>Page {
+Container {
+}
+Button {
+text: qsTr(&ldquo;Test&rdquo;)
+onClicked: {
+nav.notify(&ldquo;something&rdquo;)
+}
+}
+}
+}</p>
+
+<ul>
+<li>Custom list item in a sub-folder <strong>share/</strong>DemoItem.qml</li>
+</ul>
+
+<p>something like</p>
+
+<p>import &ldquo;share&rdquo;
+//&hellip;
+ListView {
+listItemComponents: [
+ListItemComponent {
+type: &ldquo;item&rdquo;
+DemoItem {
+}
+}
+dataModel: GroupDataModel {
+id: recentlyDataModel
+}
+onCreationCompleted: {
+recentlyDataModel.clear()
+recentlyDataModel.insert({
+&ldquo;message&rdquo;: &ldquo;Hello world&rdquo;,
+&ldquo;image&rdquo;: &ldquo;asset:///images/demo.png&rdquo;
+})
+}
+]
+}</p>
+
+<ul>
+<li>Chat message display</li>
+</ul>
+
+<p>component to display chat message</p>
+
+<p>TextArea {
+editable: false
+text: &ldquo;Hello :-)&rdquo;
+inputMode: TextAreaInputMode.Chat
+}</p>
+
+<ul>
+<li>Using system dialogs inside QML</li>
+</ul>
+
+<p>call these to import system dialog methods into QML</p>
+
+<p>qmlRegisterType<a href="bb::system::SystemDialog">bb::system::SystemDialog</a>(&ldquo;bb.system&rdquo;, 1, 0, &ldquo;SystemDialog&rdquo;);
+qmlRegisterType<a href="bb::system::SystemPrompt">bb::system::SystemPrompt</a>(&ldquo;bb.system&rdquo;, 1, 0, &ldquo;SystemPrompt&rdquo;);
+qmlRegisterType<a href="bb::system::SystemToast">bb::system::SystemToast</a>(&ldquo;bb.system&rdquo;, 1, 0, &ldquo;SystemToast&rdquo;);</p>
+
+<ul>
+<li>Use subscribe/publish methods to comunicate between QML and C++</li>
+</ul>
+
+<p>set context</p>
+
+<p>#include <bb/cascades/Application>
+#include <bb/cascades/QmlDocument>
+#include <bb/cascades/NavigationPane></p>
+
+<p>#include <bb/system/SystemDialog>
+#include <bb/system/SystemPrompt>
+#include <bb/system/SystemToast></p>
+
+<dl>
+<dt>DemoTest::DemoTest(bb::cascades::Application *app)</dt>
+<dd>QObject(app)
+{</dd>
+</dl>
+
+<p>QmlDocument *qml = QmlDocument::create(&ldquo;asset:///demo.qml&rdquo;).parent(this);</p>
+
+<p>// create root object for the UI
+NavigationPane *navPane = qml-&gt;createRootObject<NavigationPane>();</p>
+
+<p>// set created root object as a scene
+if (navPane) {
+Demo *demo = new Demo();</p>
+
+<p>qml-&gt;setContextProperty(&ldquo;*demo&rdquo;, demo);</p>
+
+<p>// Set the main scene for the application to the NavigationPane.
+Application::instance()-&gt;setScene(navPane);
+}</p>
+
+<p>}</p>
+
+<p>definition in Demo class</p>
+
+<p>signals:
+void publish(QString, QVariant);</p>
+
+<p>called</p>
+
+<p>QVariantMap info;
+info.insert( &ldquo;from&rdquo;, &ldquo;mindon&rdquo; );
+info.insert( &ldquo;to&rdquo;, &ldquo;airoff&rdquo; );
+info.insert( &ldquo;message&rdquo;, &ldquo;mindon.github.com&rdquo; );</p>
+
+<p>emit publish( &ldquo;MSG&rdquo;, info );</p>
+
+<p>qml connect in demo.qml</p>
+
+<p>function publish( type, data ) {</p>
+
+<p>}
+function subscribe( type, cb ) {</p>
+
+<p>}
+onCreationCompleted: {
+demo.publish.connect( nav.publish )
+}</p>
+
+<p>Then we could call methods of Demo by demo instance in the QML, at the same time Demo class could inform the QML by the single event signal <strong>publish</strong>.</p>
+
+<p>Before this, Qt/QML is totally a stranger to me. Hope this helps when you start your first QML app for BB10.</p>
+
+<p><i id="link-tags">Blackberry;QML;Qt;Cascades</i></p>
+</div>
+    <a slot="next" href="/blog/2012/12/30/learning-lately" title="Learning Lately">Newer</a>
+    <a slot="prev" href="/blog/2012/10/31/make-a-blackberry-10-webworks-app" title="Make a Blackberry 10 WebWorks Application">Older</a>
+</am-article>

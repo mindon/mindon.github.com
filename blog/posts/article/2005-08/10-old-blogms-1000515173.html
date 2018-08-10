@@ -1,0 +1,221 @@
+
+<am-article time="2005-08-10 11:02:00 +0800" tags="[BlogMS]" slug="2005/08/10/old-blogms-1000515173">
+    <h1 slot="title">Batik应用-在SVG中使用Java</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000515173, blog id: airoff
+History stat: 浏览/评论：536/0  ,  日期：2005年8月10日 11:02</p>
+
+<p>在Batik中,支持SVG使用&amp;lt;script type=&amp;quot;application/java-archive&amp;quot;/&amp;gt;来调用java，用法如：</p>
+
+<p>&amp;lt;script type=&amp;quot;application/java-archive&amp;quot; xlink:href=&amp;quot;jevents.jar&amp;quot;/&amp;gt;</p>
+
+<p>要求 jevents.jar 中的 manifest 必须包含如下信息</p>
+
+<p>SVG-Handler-Class: classname</p>
+
+<p>如：</p>
+
+<p>SVG-Handle-Class: com.mindon.jevents.JEvents</p>
+
+<!--more-->
+
+<p>我的JEvents采用了配置方式来实现灵活调用的目的。</p>
+
+<p><b>  1，在SVG采用不需进行渲染的元素&amp;lt;desc/&amp;gt;来配置我的Java事件。</b></p>
+
+<p>如：</p>
+
+<p>&amp;lt;desc id=&amp;quot;jcalls&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;desc oid=&amp;quot;myob1&amp;quot; method=&amp;quot;test&amp;quot; params=&amp;quot;23|34&amp;quot;/&amp;gt;</p>
+
+<p>&amp;lt;desc oid=&amp;quot;myob2&amp;quot; event=&amp;quot;click&amp;quot; class=&amp;quot;com.mindon.jevents.JETest&amp;quot; method=&amp;quot;test&amp;quot;/&amp;gt;</p>
+
+<p>&amp;lt;/desc&amp;gt;</p>
+
+<p>这样来实现在指定 object id 的元素的指定事件event上调用指定类class的公用静态方法method，并传递字符串参数数组（元素由|分隔）。</p>
+
+<p><b>  2，JEvents.java 实现</b></p>
+
+<p><font size=2 style="line-height:14pt"><font color=#00008B>package com.mindon.jevents;</p>
+
+<p>import org.w3c.dom.Element;</p>
+
+<p>import org.w3c.dom.NodeList;</p>
+
+<p>import org.w3c.dom.Node;</p>
+
+<p>import org.w3c.dom.events.Event;</p>
+
+<p>import org.w3c.dom.events.EventListener;</p>
+
+<p>import org.w3c.dom.events.EventTarget;</p>
+
+<p>import java.lang.reflect.*;</p>
+
+<p>public class JEvents implements org.w3c.dom.svg.EventListenerInitializer</p>
+
+<p>{</p>
+
+<p>public void initializeEventListeners(org.w3c.dom.svg.SVGDocument doc) {</p>
+
+<p>// doc.createComment(&amp;quot;from jevents&amp;quot;);</p>
+
+<p>Element jcalls = doc.getElementById(&amp;quot;jcalls&amp;quot;);</p>
+
+<p>if(null != jcalls) {</p>
+
+<p>NodeList jcnods = jcalls.getElementsByTagName(&amp;quot;desc&amp;quot;);</p>
+
+<p>int kmax = jcnods.getLength();</p>
+
+<p>String jcmname = null;</p>
+
+<p>Method jcm = null;</p>
+
+<p>String jccname = null;</p>
+
+<p>Class jcc = null;</p>
+
+<p>for(int k=0; k&amp;lt;kmax; k++) { // call definitions</p>
+
+<p>Element jcall = (Element)jcnods.item(k);</p>
+
+<p>String jcoid = jcall.getAttribute(&amp;quot;oid&amp;quot;);</p>
+
+<p>EventTarget evtob = (EventTarget)doc.getElementById(jcoid);</p>
+
+<p>if(null != evtob) { // object with oid exists</p>
+
+<p>String evtname = jcall.getAttribute(&amp;quot;event&amp;quot;);</p>
+
+<p>if(null==evtname || evtname.length() == 0) {</p>
+
+<p>evtname = &amp;quot;click&amp;quot;; // default click event</p>
+
+<p>}</p>
+
+<p>try {</p>
+
+<p>String method = jcall.getAttribute(&amp;quot;method&amp;quot;);</p>
+
+<p>if(null!=method &amp;&amp; method.length() &amp;gt; 0) { // method defined</p>
+
+<p>String clsname = jcall.getAttribute(&amp;quot;class&amp;quot;);</p>
+
+<p>boolean isnewc = false;</p>
+
+<p>if(null == clsname || clsname.length() == 0) {</p>
+
+<p>clsname = &amp;quot;com.mindon.jevents.JEvents&amp;quot;; // default class</p>
+
+<p>}</p>
+
+<p>if(!clsname.equals(jccname)) {</p>
+
+<p>jcc = Class.forName(clsname);</p>
+
+<p>isnewc = true;</p>
+
+<p>}</p>
+
+<p>if(null != jcc) { // class exists</p>
+
+<p>if(!method.equals(jcmname) || isnewc) {</p>
+
+<p>//System.out.println(&amp;quot;[-&amp;gt;&amp;gt;new method:&amp;quot; +clsname +&amp;quot;.&amp;quot; +method);</p>
+
+<p>jcm = jcc.getMethod(method, new Class[] {Element.class});</p>
+
+<p>jcmname = method;</p>
+
+<p>jccname = clsname;</p>
+
+<p>}</p>
+
+<p>if(null != jcm) { // method exists</p>
+
+<p>String params = jcall.getAttribute(&amp;quot;params&amp;quot;);</p>
+
+<p>if(null==params) params = &amp;quot;&amp;quot;;</p>
+
+<p>((Element)evtob).setAttribute(&amp;quot;params&amp;quot;, params);</p>
+
+<p>final Method jmethod = jcm;</p>
+
+<p>evtob.addEventListener(evtname, new EventListener() {</p>
+
+<p>public void handleEvent(Event evt) {</p>
+
+<p>try {</p>
+
+<p>// method invoke</p>
+
+<p>jmethod.invoke(null, new Object[] {evt.getTarget()});</p>
+
+<p>} catch(Exception e) {</p>
+
+<p>//System.out.println(&amp;quot;[-&amp;gt;&amp;gt;method&amp;quot;);</p>
+
+<p>//e.printStackTrace();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}, false);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>System.out.println(&amp;quot;[-&amp;gt;&amp;gt;no method defined&amp;quot;);</p>
+
+<p>}</p>
+
+<p>} catch(Exception e) {</p>
+
+<p>System.out.println(&amp;quot;[-&amp;gt;&amp;gt;class or method exception&amp;quot;);</p>
+
+<p>//e.printStackTrace();</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>System.out.println(&amp;quot;[-&amp;gt;&amp;gt;object id=&amp;quot; +jcoid +&amp;quot; not found&amp;quot;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>public static void test(Element target) {</p>
+
+<p>System.out.println(&amp;quot;test::&amp;lt;&amp;quot; +target.getNodeName() +&amp;quot; id=&amp;quot;&amp;quot;</p>
+
+<p>+target.getAttribute(&amp;quot;id&amp;quot;)</p>
+
+<p>+&amp;quot;&amp;quot;/&amp;gt;::&amp;quot; +target.getAttribute(&amp;quot;params&amp;quot;));</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p></font></p>
+
+<p></font></p>
+
+<p>这样，SVG文件中只要增加配置就可以像在 ECMAScript 中动态指定事件一样来指定某个元素对某个事件的响应，来执行指定的 Java 代码。这意味着在Batik应用开发使用的SVG事件可以响应任意的Java程序，而Java通过 JNI 则可以调用其他语言开发的动态库……</p>
+
+<p>我的Batik应用环境是:J2SDK Standard Edition</p>
+
+<p>Version 1.4.2 + Apache Ant version 1.6.1 + batik_all.jar（下载batik 1.6 的源码，用ant all-jar 编译生成）</p>
+</div>
+    <a slot="next" href="/blog/2005/08/18/old-blogms-1000533343" title="Javascript之Mozilla XML">Newer</a>
+    <a slot="prev" href="/blog/2005/08/10/old-blogms-1000515471" title="JavaScript之正则表达式 replace">Older</a>
+</am-article>

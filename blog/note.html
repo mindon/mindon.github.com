@@ -1,0 +1,117 @@
+<am-article time="2012-02-24T09:49:00+08:00" tags="[Mindon Web-Tech Chrome-App Mobile-App]" slug="about">
+    <h1 slot="title">Notes &amp; Trouble/Solution</h1>
+    <div slot="content">
+<h2>Notes</h2>
+<ul>
+    <li><p>“做减法比做加法更能让灵魂成长 Soul grows more by subtraction than by addition. ” &ndash; Thoreau 梭罗</p></li>
+    <li><p>“I was looking at this thing just yesterday,” he said, smiling. “It was nine in the morning when I put it under the microscope. Outside it was sunny, just like today. I kept turning the rock around, looking at all the fissures, the intrusions, the dozen or more different crystal formations inside and around…then I looked up, and thought that a storm must be coming, because it had gotten so dark…then I realized that it was not overcast, but the sun had been setting – it was past seven in the evening.” &ndash; 《Good Business: Leadership, Flow, and the Making of Meaning》</p></li>
+    <li><p>“子為政焉用殺，子欲善而民善矣。君子之德風，小人之德草，草上之風必偃。”  &ndash; 《論語·顏淵》</p></li>
+    <li><p>“为了尘世的伟大，把所有天堂的安逸稀释成空气”  &ndash; April 21, 2012 读《瓦尔登湖》(Walden)</p></li>
+    <li><p>证据是相信某事的一个好的理由，它让你对相信某事的坏的理由产生警觉。这些坏的理由叫做“传统”、“权威”和“启示”。 &ndash; <a href="http://mindon.github.com/blog/2012/05/19/good-and-bad-reasons-for-believing/">Good and Bad Reasons for Believing</a></p></li>
+    <li><p>“谣言之所以流行，正是因为它们迎合了人们的偏见和期望” <a href="http://www.ftchinese.com/story/001044101">source</a></p></li>
+    <li><p>子曰:“德薄而位尊，智小而谋大，力(小)而任重，鲜不及矣。” ——《周易•系辞下》</p></li>
+    <li><p>Do Things, Tell People. <a href="http://carl.flax.ie/dothingstellpeople.html">source</a></p></li>
+    <li><p>“Man, give it five minutes.” <a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">source</a></p></li>
+    <li><p>“Your first design may be the best, but you won&rsquo;t know until you can&rsquo;t find a better one.”  <a href="http://blog.intercom.io/criticism-and-two-way-streets/">source</a></p></li>
+</ul>
+
+<h2>Trouble/Solution</h2>
+<ul>
+    <li><strong>NodeJS</strong> &ndash; build 0.8 failed</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> 1. GNU Make 3.8.1+; 2. Python 2.6/2.7; 3. <code>setenv FLOCK</code> or <code>export FLOCK</code>; 4. <code>setenv LINK=g++</code> or <code>export LINK=g++</code></p>
+    
+    <ul>
+    <li><strong>CSS</strong> &ndash; Text input component and button vertical align problem</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> It comes from the text vertical align, use table or change the padding-top to solve.</p>
+    
+    <ul>
+    <li><strong>NodeJS</strong> &ndash; http client request POST, data lost in php or other CGI recipients</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> do NOT forget the headers with correct &ldquo;Content-Length&rdquo;, it matters.</p>
+    
+    <ul>
+    <li><strong>Socket.IO</strong> &ndash; node: Memory Leak</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> skip websocket/flashsocket transports</p>
+    
+    <ul>
+    <li><strong>NodeJS</strong> &ndash; node: error while loading shared libraries: libssl.so.1.0.0: cannot open shared object file: No such file or directory</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> >export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:[include-libssl.so.1.0.0-path]</p>
+    
+    <ul>
+    <li><strong>NodeJS</strong> &ndash; build 0.6.15 failed (make failure: undefined reference to `SSL_select_next_proto&#8217;)</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> update openssl to version 1.0.0+</p>
+    
+    <ul>
+    <li><strong>NodeLoad</strong> &ndash; npm install nodeload, or manual download running problem under Windows</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> Problem comes from the log file name, it uses the time as part of file name. There&rsquo;s character &ldquo;:&rdquo;, which is invalid as file name under Windows. replace this with a valid one.</p>
+    
+    <ul>
+    <li><strong>NodeJS</strong> &ndash; configure fail, cannot find openssl in the path</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> config with &ldquo;<strong>shared</strong>&rdquo; option when building openssl. and configure with &ndash;openssl-* option to build node.</p>
+    
+    <pre><code>./config shared
+    make
+    make install
+    ln -s /usr/lib/libssl.so.1.0.0 /usr/local/ssl/lib/libssl.so.1.0.0
+    ln -s /usr/lib/libcrypt.so.1.0.0 /usr/local/ssl/lib/libcrypt.so.1.0.0
+    </code></pre>
+    
+    <ul>
+    <li><strong>干固油漆迹清除办法</strong></li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> 风油精（敏感衣物或朔料类勿试！）</p>
+    
+    <ul>
+    <li><strong>除尘方案</strong>/How to keep dust(aquatint) off my house?</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> [UNSOLVED]!</p>
+    
+    <ul>
+    <li><strong>通风+噪音消除问题</strong>/Can I have a window</li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> [UNSOLVED]!</p>
+    
+    <ul>
+    <li><strong>ADSL电信强推广告</strong></li>
+    </ul>
+    
+    
+    <p><strong>/S/</strong> [UNSOLVED]!</p>
+    
+<p>____________________</p>    
+    <p>Don&rsquo;t hesitate providing your suggestions.</p>
+    
+    <p>请分享您的解决之道 :-)</p>
+    
+    <p>Thanks！</p>
+    </div>
+</am-article>

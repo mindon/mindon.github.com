@@ -1,0 +1,91 @@
+
+<am-article time="2012-02-25 23:18:00 +0800" tags="[Web-Tech]" slug="2012/02/25/web-drawing-throwdown-paper-dot-js-vs-processing-dot-js-vs-raphael">
+    <h1 slot="title">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</h1>
+    <div slot="content"><p>Before drawing anything in a browser, ask yourself three questions:</p>
+
+<h2>Do you need to support older browsers?</h2>
+
+<p>If the answer is yes, then your only choice is Raphaël. It handles browsers all the way back to IE 7 and Firefox 3. Raphaël even has some support for IE 6, although some of its underlying technology cannot be implemented there.</p>
+
+<h2>Do you need to support Android?</h2>
+
+<p>Android doesn’t support SVG, so you’ll have to use Paper.js or Processing.js. Some rumors say that Android 4 will handle SVG, but the majority of Android devices won’t support it for years.</p>
+
+<h2>Is your drawing interactive?</h2>
+
+<p>Raphaël and Paper.js focus on interaction with drawn elements through clicking, dragging and touch. Processing.js doesn’t support any object-level events, so responding to user gestures is very difficult. Processing.js can draw a cool animation on your home page, but the other tools are better for interactive applications.</p>
+
+<p>Paper.js, Processing.js and Raphaël are the leading libraries for drawing on the Web right now. A couple of others are up and coming, and you can always use Flash, but these three work well with HTML5 and have the widest support among browser vendors.</p>
+
+<p>Choosing the right framework will determine the success of your project. This article covers the advantages and disadvantages of each, and the information you need to make the best choice.
+<!--more--></p>
+
+<p>All of the code in this article is open source and can be run on the demo page that accompanies this article.</p>
+
+<p>[Note: Have you already pre-ordered your copy of our Printed Smashing Book #3? The book is a professional guide on how to redesign websites and it also introduces a whole new mindset for progressive Web design, written by experts in the industry for you. Pre-order now and add your name into the book!]</p>
+
+<h2>Overview</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Paper.js</th>
+<th align="center">Processing.js</th>
+<th align="center">Raphaël.js</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Technology</td>
+<td align="center">canvas tag</td>
+<td align="center">canvas tag</td>
+</tr>
+
+<tr>
+<td align="center">Language</td>
+<td align="center">PaperScript</td>
+<td align="center">Processing script</td>
+</tr>
+
+<tr>
+<td align="center">Browsers</td>
+<td align="center">IE 9</td>
+<td align="center">IE 9</td>
+</tr>
+
+<tr>
+<td align="center">Mobile</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+</tr>
+
+<tr>
+<td align="center">Model</td>
+<td align="center">Vector and raster</td>
+<td align="center">Raster</td>
+</tr>
+
+<tr>
+<td align="center">Size</td>
+<td align="center">56 KB</td>
+<td align="center">64 KB</td>
+</tr>
+</tbody>
+</table>
+<p>It’s all JavaScript once the page runs, but the frameworks take different paths to get there. Raphaël is written directly in JavaScript, but Paper.js uses PaperScript, and Processing.js uses its own script. They all support Firefox, Chrome and Safari, but Internet Explorer is an issue — Paper.js and Processing.js use the canvas tag and thus require IE 9.</p>
+
+<p>{% include custom/gad-post.html %}</p>
+
+<p>PaperScript is a JavaScript extension that makes it possible to write scripts that don’t pollute the global namespace. This cuts down on JavaScript conflicts. PaperScript also supports direct math on objects such as Point and Size: you can add two points together as if they were numbers.</p>
+
+<p>Processing.js is based on a framework named Processing, which runs in the Java Virtual Machine. You define int and float instead of var, and you can use classes with Java-style inheritance. While the Processing.js script looks a little like Java, it’s more like JavaScript and doesn’t require many of the more complex features of Java.
+Using all three libraries is easy if you have some familiarity with JavaScript.</p>
+
+<p>Full article could be found from <em>Zack Grossbart</em>&rsquo;s <a href="http://coding.smashingmagazine.com/2012/02/22/web-drawing-throwdown-paper-processing-raphael/">Web-Drawing Throwdown: Paper.js Vs. Processing.js Vs. Raphael</a></p>
+
+<p>with demos <a href="http://zgrossbart.github.com/3gears/">http://zgrossbart.github.com/3gears/</a></p>
+</div>
+    <a slot="next" href="/blog/2012/02/29/goagent-make-your-own-fast-proxy-with-gae" title="GoAgent -- Make your own fast proxy with GAE">Newer</a>
+    <a slot="prev" href="/blog/2012/02/24/20-things-you-didnt-know-about-dot-dot-dot-magnetism" title="20 Things You Didn't Know About... Magnetism">Older</a>
+</am-article>

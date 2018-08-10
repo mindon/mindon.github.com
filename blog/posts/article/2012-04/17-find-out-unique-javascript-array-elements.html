@@ -1,0 +1,168 @@
+
+<am-article time="2012-04-17 22:53:00 +0800" tags="[Mindon Web-Tech]" slug="2012/04/17/find-out-unique-javascript-array-elements">
+    <h1 slot="title">Find out Unique Elements in a Javascript Array</h1>
+    <div slot="content"><p>To remove duplicate elements in a array, there are a few algorithms to implement.</p>
+
+<h2>Algorithm 1</h2>
+
+<p>function unique1(d) {
+var o = {}, i, l = d.length, r = [];
+for(i=0; i;i+=1) o[d[i]] = d[i];
+for(i in o) r.push(o[i]);
+return r;
+};</p>
+
+<p>This method has 2 loops, that&rsquo;s a big time-cost problem.</p>
+
+<h2>Algorithm 2</h2>
+
+<p>reduce one loop from the algorithm 1, improve a litter bit</p>
+
+<p>function unique2(d) {
+var r = [], i = {}, j = 0;
+for(var k=0, kmax=d.length; k<kmax; k++) {
+if(!i[d[k]]) {
+i[d[k]] = 1;
+r[j++]=d[k];
+}
+}
+return r;
+}</p>
+
+<h2>Algorithm 3</h2>
+
+<p>In ECMA-262 standard, there&rsquo;s a indexOf method for Array object, we use it to improve a lot.</p>
+
+<p>function unique3(d) {
+var r = [], j = 0;
+for(var k=0, kmax=d.length; k<kmax; k++) {
+if(r.indexOf(d[k]) &lt; 0) {
+r[j++]=d[k];
+}
+}
+return r;
+}</p>
+
+<p>and it could be better&hellip;
+<!--more--></p>
+
+<h2>Algorithm 4</h2>
+
+<p>jQuery.unique source ( Sizzle.uniqueSort ), it&rsquo;s the fastest one.</p>
+
+<p>function unique4( d ) {
+d.sort();
+for (var i = 1; i &lt; d.length; i++ ) {
+if ( d[i] === d[ i - 1 ] ) {
+d.splice( i&ndash;, 1 );
+}
+}</p>
+
+<p>return d;
+};</p>
+
+<h2>Compare these 4 algorithms:</h2>
+
+<p>Speed(Performance): 4 &gt; 3 &gt; 2 &gt; 1</p>
+
+<p>Testing code:</p>
+
+<p>var d = [1, 3, 2, &lsquo;2&rsquo;];</p>
+
+<p>function test(fn, count) {
+var t = new Date().getTime();
+for(var k =0 ; k &lt; count; k++) {
+fn(d);
+}</p>
+
+<p>return new Date().getTime() - t;
+}</p>
+
+<p>var t1 = test(unique1, 100000);
+var t2 = test(unique2, 100000);
+var t3 = test(unique3, 100000);
+var t4 = test(unique4, 100000);</p>
+
+<p>Time consume result sample:</p>
+
+<p>IE 9(in Editplus):</p>
+
+<p>[t1,t2,t3,t4] = [93, 55, 25, 25]</p>
+
+<p>IE 9(Browser):</p>
+
+<p>[t1,t2,t3,t4] = [508, 449, 432, 271]</p>
+
+<p>Chrome 18:</p>
+
+<p>[t1,t2,t3,t4] = [141, 59, 43, 43]</p>
+
+<p>Firefox 11:</p>
+
+<p>[t1,t2,t3,t4] = [129, 118, 25, 37]</p>
+
+<p>(use == instead of === in unique4 will make it a little bit faster.)</p>
+
+<h2>Problems</h2>
+
+<p>handling a array with different data types:</p>
+
+<p>var d = [1, 3, 2, &lsquo;2&rsquo;];</p>
+
+<p>results:</p>
+
+<p>unique1(d) : [1, &lsquo;2&rsquo;, 3]</p>
+
+<p>unique2(d) : [1, 3, 2]</p>
+
+<p>unique3(d) : [1, 3, 2, &lsquo;2&rsquo;]</p>
+
+<p>unique4(d) : [1, 2, &lsquo;2&rsquo;, 3]</p>
+
+<p>if we change the === in unique4 into ==, then the new result will be</p>
+
+<p>unique4(d) : [1, 2, 3]</p>
+
+<p>Another issue is the order problem:</p>
+
+<p>unique1 and unique4 will re-order elements.</p>
+
+<p>unique2 and unique3 will keep the original order.</p>
+
+<p>Algorithm 3: unique3 depends on indexOf of ECMA-262 standard implement, and it cannot handle different data types.</p>
+
+<h2>Conclusion</h2>
+
+<ul>
+<li>Same data-type elements</li>
+</ul>
+
+<p>orgianl order: <strong>unique3</strong></p>
+
+<p>sorted: <strong>unique4</strong></p>
+
+<ul>
+<li>Different data-type elements ( thinking &lsquo;2&rsquo; is the same as 2 )</li>
+</ul>
+
+<p>orgianl order: <strong>unique2</strong></p>
+
+<p>sorted: <strong>unique4</strong> (!NOTICE: change === into == )</p>
+
+<ul>
+<li>Different data-type elements ( thinking &lsquo;2&rsquo; is different from 2 )</li>
+</ul>
+
+<p>orgianl order: <strong>unique3</strong></p>
+
+<p>sorted: <strong>unique4</strong> (!NOTICE: keep === )</p>
+
+<p>以上为去除数组中的重复元素的各种算法，性能及问题。</p>
+
+<p>&mdash; Mindon(麦盾) Apri 18, 2012 Shenzhen(深圳)</p>
+
+<p>（整理这样一篇东西还挺耗时的，子时了zZzZZz&hellip; ）</p>
+</div>
+    <a slot="next" href="/blog/2012/04/25/aby-is-on-the-road-lhasa" title="Aby is on the road: Lhasa">Newer</a>
+    <a slot="prev" href="/blog/2012/04/17/abys-menu" title="外出Aby发回的菜谱">Older</a>
+</am-article>

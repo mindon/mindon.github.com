@@ -1,0 +1,28 @@
+
+<am-article time="2012-07-21 10:34:00 +0800" tags="[Web-Tech]" slug="2012/07/21/simple-auto-resize-images-in-web-pages">
+    <h1 slot="title">Simple Auto-Resize Images in Web Pages</h1>
+    <div slot="content"><p>Nowdays, Mobile web needs to handle different mobile devices with different screen resolutions. Most effective way may be providing different sizes images for different screens in server.</p>
+
+<p>Use this meta in your HTML header could reisze the web page to the device&rsquo;s resolution.</p>
+
+<p><meta name="viewport" content="width=device-width, initial-scale=1"></p>
+
+<p>How can we make the images auto-resize in web pages without a server or any javascript?</p>
+
+<p>Here&rsquo;s the simple HTML code:</p>
+
+<p><style type="text/css">img {display:block}</style>
+<table width="100%" style="table-layout:fixed">
+<tr>
+<td width="50%"><a style="width:100%" href="#"><img width="100%" border="0"
+src="http://mindon.github.com/images/mindon.png" /></a></td>
+<td width="50%"><a style="width:100%" href="#"><img width="100%" border="0"
+src="http://mindon.github.com/images/mindon.png" /></a></td>
+</tr>
+</table></p>
+
+<p>The CSS help to remove paddings around the images, and the <strong>table-layout:fixed</strong> help to make a smaller width of image than its origin width.</p>
+</div>
+    <a slot="next" href="/blog/2012/08/02/regeneration-of-a-plant" title="一棵植物的再生能力">Newer</a>
+    <a slot="prev" href="/blog/2012/07/21/the-most-terrible-thing" title="The Most Terrible Thing">Older</a>
+</am-article>

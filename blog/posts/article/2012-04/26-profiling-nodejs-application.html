@@ -1,0 +1,126 @@
+
+<am-article time="2012-04-26 07:22:00 +0800" tags="[Mindon Web-Tech]" slug="2012/04/26/profiling-nodejs-application">
+    <h1 slot="title">Profiling Node.JS Application</h1>
+    <div slot="content"><h2>NodeJS</h2>
+
+<p>Call something like &ldquo;ulimit -n 8192&rdquo; in your NodeJS App start shell script, before start your nodejs service.</p>
+
+<p>Running with &ndash;prof to generate the v8.log</p>
+
+<p>node &ndash;prof &ndash;prof_lazy app.js</p>
+
+<p>with tools in /node/deps/v8/, you can get report like following:</p>
+
+<p>(run <code>tools/linux-tick-processor path-of-v8.log</code>)</p>
+
+<p>[Shared libraries]:
+ticks  total  nonlib   name
+3    0.0%    0.0%  &hellip;/libc-2.13.so</p>
+
+<p>[JavaScript]:
+ticks  total  nonlib   name
+1    0.0%    0.0%  Stub: InstanceofStub</p>
+
+<p>[C++]:
+ticks  total  nonlib   name
+1    0.0%    0.0%  __write
+&hellip;</p>
+
+<p>[GC]:
+ticks  total  nonlib   name
+15    0.0%</p>
+
+<p>[Bottom up (heavy) profile]:
+Note: percentage shows a share of a particular caller in the total
+amount of its parent calls.
+Callers occupying less than 2.0% are not shown.</p>
+
+<p>ticks parent  name
+&hellip;</p>
+
+<p>trace log</p>
+
+<p>strace -o trace.log -cf node app.js:</p>
+
+<p>or simple get the time</p>
+
+<p>time node app.js</p>
+
+<h2>Other Modules &amp; Tools</h2>
+
+<ul>
+<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
+</ul>
+
+<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
+
+<p>dtrace -o stacks.out -n &lsquo;profile-97/execname == &ldquo;node&rdquo; &amp;&amp; arg1/{
+@[jstack(100, 8000)] = count(); } tick-60s { exit(0); }&rsquo;</p>
+
+<ul>
+<li><strong>v8-profiler</strong></li>
+</ul>
+
+<p>@Github <a href="https://github.com/dannycoates/v8-profiler">https://github.com/dannycoates/v8-profiler</a>
+<!--more--></p>
+
+<p>var profiler = require(&lsquo;v8-profiler&rsquo;);</p>
+
+<p>profiler.startProfiling(&lsquo;startup&rsquo;);
+slowStartupFoo();
+profiler.stopProfiling(&lsquo;startup&rsquo;);</p>
+
+<p>profiler.takeSnapshot(&lsquo;beforeLeak&rsquo;);
+leakyFoo();
+profiler.takeSnapshot(&lsquo;afterLeak&rsquo;);</p>
+
+<ul>
+<li><strong>node-inspector</strong></li>
+</ul>
+
+<p>@Github <a href="https://github.com/dannycoates/node-inspector">https://github.com/dannycoates/node-inspector</a></p>
+
+<p>node &ndash;debug app.js</p>
+
+<ul>
+<li><strong>node-profiler</strong></li>
+</ul>
+
+<p>@Github <a href="https://github.com/bnoordhuis/node-profiler">https://github.com/bnoordhuis/node-profiler</a></p>
+
+<p>var profiler = require(&lsquo;profiler&rsquo;);
+//
+// <here be code you don't want to profile>
+//
+profiler.resume();
+//
+// <performance critical code here>
+//
+profiler.pause();</p>
+
+<ul>
+<li><strong>Nodetime</strong>
+<a href="http://nodetime.com/">http://nodetime.com/</a></li>
+</ul>
+
+<p>Nodetime reveals response time and other internals of HTTP requests and underlying HTTP / database calls in your Node.js application. Coupled with related process and OS state information it enables tracing performance problems down to the root cause. Nodetime supports multiple native and external APIs and libraries.</p>
+
+<p>var nodetime = require(&lsquo;nodetime&rsquo;);
+nodetime.on(&lsquo;session&rsquo;, function(id) {
+// do something with session id here
+});
+nodetime.profile();</p>
+
+<ul>
+<li><strong>Callgrind</strong></li>
+</ul>
+
+<p>Callgrind is a profiling tool that records the call history among functions in a program&rsquo;s run as a call-graph. By default, the collected data consists of the number of instructions executed, their relationship to source lines, the caller/callee relationship between functions, and the numbers of such calls. Optionally, cache simulation and/or branch prediction (similar to Cachegrind) can produce further information about the runtime behavior of an application.</p>
+
+<p><a href="http://valgrind.org/docs/manual/cl-manual.html">http://valgrind.org/docs/manual/cl-manual.html</a></p>
+
+<p>valgrind &ndash;tool=callgrind node app.js</p>
+</div>
+    <a slot="next" href="/blog/2012/04/28/artist-suspends-objects-in-parks-around-the-world" title="Artist Suspends Objects In Parks Around The World">Newer</a>
+    <a slot="prev" href="/blog/2012/04/26/the-eye-limits-the-brains-learning-potential" title="The eye limits the brain's learning potential">Older</a>
+</am-article>

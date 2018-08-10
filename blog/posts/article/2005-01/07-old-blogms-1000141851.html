@@ -1,0 +1,865 @@
+
+<am-article time="2005-01-07 09:08:00 +0800" tags="[BlogMS]" slug="2005/01/07/old-blogms-1000141851">
+    <h1 slot="title">网页技巧[转]-IE5+</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000141851, blog id: airoff
+History stat: 浏览/评论：226/0  ,  日期：2005年1月7日 09:08</p>
+
+<ol>
+<li>oncontextmenu=&amp;quot;window.event.returnValue=false&amp;quot; 将彻底屏蔽鼠标右键</li>
+</ol>
+
+<p>&amp;lt;table border oncontextmenu=return(false)&amp;gt;&amp;lt;td&amp;gt;no&amp;lt;/table&amp;gt; 可用于Table</p>
+
+<ol>
+<li><p>&amp;lt;body onselectstart=&amp;quot;return false&amp;quot;&amp;gt; 取消选取、防止复制</p></li>
+
+<li><p>onpaste=&amp;quot;return false&amp;quot; 不准粘贴</p></li>
+</ol>
+
+<!--more-->
+
+<ol>
+<li><p>oncopy=&amp;quot;return false;&amp;quot; oncut=&amp;quot;return false;&amp;quot; 防止复制</p></li>
+
+<li><p>&amp;lt;link rel=&amp;quot;Shortcut Icon&amp;quot; href=&amp;quot;favicon.ico&amp;quot;&amp;gt; IE地址栏前换成自己的图标</p></li>
+
+<li><p>&amp;lt;link rel=&amp;quot;Bookmark&amp;quot; href=&amp;quot;favicon.ico&amp;quot;&amp;gt; 可以在收藏夹中显示出你的图标</p></li>
+
+<li><p>&amp;lt;input style=&amp;quot;ime-mode:-Disabled&amp;quot;&amp;gt; 关闭输入法</p></li>
+
+<li><p>永远都会带着框架</p></li>
+</ol>
+
+<p>&amp;lt;script language=&amp;quot;JavaScript&amp;quot;&amp;gt;&amp;lt;!&ndash;</p>
+
+<p>if (window == top)top.location.href = &amp;quot;frames.htm&amp;quot;; //frames.htm为框架网页</p>
+
+<p>// &ndash;&amp;gt;&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>防止被人frame</li>
+</ol>
+
+<p>&amp;lt;SCRIPT LANGUAGE=JAVASCRIPT&amp;gt;&amp;lt;!&ndash;</p>
+
+<p>if (top.location != self.location)top.location=self.location;</p>
+
+<p>// &ndash;&amp;gt;&amp;lt;/SCRIPT&amp;gt;</p>
+
+<ol>
+<li>网页将不能被另存为</li>
+</ol>
+
+<p>&amp;lt;noscript&amp;gt;&amp;lt;iframe src=*.html&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/noscript&amp;gt;</p>
+
+<ol>
+<li>&amp;lt;input type=button value=查看网页源代码</li>
+</ol>
+
+<p>onclick=&amp;quot;window.location = <code>view-source:</code>+  <a href="http://www.51js.com/`&quot;">http://www.51js.com/`&amp;quot</a> ;;&amp;gt;</p>
+
+<p>12.删除时确认</p>
+
+<p>&amp;lt;a href=<code>javascript:if(confirm(&amp;quot;确实要删除吗?&amp;quot;))location=&amp;quot;boos.asp?&amp;areyou=删除&amp;page=1&amp;quot;</code>&amp;gt;删</p>
+
+<p>除&amp;lt;/a&amp;gt;</p>
+
+<ol>
+<li>取得控件的绝对位置</li>
+</ol>
+
+<p>//Javascript</p>
+
+<p>&amp;lt;script language=&amp;quot;Javascript&amp;quot;&amp;gt;</p>
+
+<p>function getIE(E){</p>
+
+<p>var t=e.offsetTop;</p>
+
+<p>var l=e.offsetLeft;</p>
+
+<p>while(e=e.offsetParent){</p>
+
+<p>t+=e.offsetTop;</p>
+
+<p>l+=e.offsetLeft;</p>
+
+<p>}</p>
+
+<p>alert(&amp;quot;top=&amp;quot;+t+&amp;quot;/nleft=&amp;quot;+l);</p>
+
+<p>}</p>
+
+<p>&amp;lt;/script&amp;gt;</p>
+
+<p>//VBScript</p>
+
+<p>&amp;lt;script language=&amp;quot;VBScript&amp;quot;&amp;gt;&amp;lt;!&ndash;</p>
+
+<p>function getIE()</p>
+
+<p>dim t,l,a,b</p>
+
+<p>set a=document.all.img1</p>
+
+<p>t=document.all.img1.offsetTop</p>
+
+<p>l=document.all.img1.offsetLeft</p>
+
+<p>while a.tagName&amp;lt;&amp;gt;&amp;quot;BODY&amp;quot;</p>
+
+<p>set a = a.offsetParent</p>
+
+<p>t=t+a.offsetTop</p>
+
+<p>l=l+a.offsetLeft</p>
+
+<p>wend</p>
+
+<p>msgbox &amp;quot;top=&amp;quot;&amp;t&amp;chr(13)&amp;&amp;quot;left=&amp;quot;&amp;l,64,&amp;quot;得到控件的位置&amp;quot;</p>
+
+<p>end function</p>
+
+<p>&ndash;&amp;gt;&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>光标是停在文本框文字的最后</li>
+</ol>
+
+<p>&amp;lt;script language=&amp;quot;javascript&amp;quot;&amp;gt;</p>
+
+<p>function cc()</p>
+
+<p>{</p>
+
+<p>var e = event.srcElement;</p>
+
+<p>var r =e.createTextRange();</p>
+
+<p>r.moveStart(<code>character</code>,e.value.length);</p>
+
+<p>r.collapse(true);</p>
+
+<p>r.select();</p>
+
+<p>}</p>
+
+<p>&amp;lt;/script&amp;gt;</p>
+
+<p>&amp;lt;input type=text name=text1 value=&amp;quot;123&amp;quot; onfocus=&amp;quot;cc()&amp;quot;&amp;gt;</p>
+
+<ol>
+<li>判断上一页的来源</li>
+</ol>
+
+<p>javascript:</p>
+
+<p>document.referrer</p>
+
+<ol>
+<li>最小化、最大化、关闭窗口</li>
+</ol>
+
+<p>&amp;lt;object id=hh1 classid=&amp;quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;param name=&amp;quot;Command&amp;quot; value=&amp;quot;Minimize&amp;quot;&amp;gt;&amp;lt;/object&amp;gt;</p>
+
+<p>&amp;lt;object id=hh2 classid=&amp;quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;param name=&amp;quot;Command&amp;quot; value=&amp;quot;Maximize&amp;quot;&amp;gt;&amp;lt;/object&amp;gt;</p>
+
+<p>&amp;lt;OBJECT id=hh3 classid=&amp;quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;PARAM NAME=&amp;quot;Command&amp;quot; VALUE=&amp;quot;Close&amp;quot;&amp;gt;&amp;lt;/OBJECT&amp;gt;</p>
+
+<p>&amp;lt;input type=button value=最小化 onclick=hh1.Click()&amp;gt;</p>
+
+<p>&amp;lt;input type=button value=最大化 onclick=hh2.Click()&amp;gt;</p>
+
+<p>&amp;lt;input type=button value=关闭 onclick=hh3.Click()&amp;gt;</p>
+
+<p>本例适用于IE</p>
+
+<p>17.屏蔽功能键Shift,Alt,Ctrl</p>
+
+<p>&amp;lt;script&amp;gt;</p>
+
+<p>function look(){</p>
+
+<p>if(event.shiftKey)</p>
+
+<p>alert(&amp;quot;禁止按Shift键!&amp;quot;); //可以换成ALT　CTRL</p>
+
+<p>}</p>
+
+<p>document.onkeydown=look;</p>
+
+<p>&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>网页不会被缓存</li>
+</ol>
+
+<p>&amp;lt;META HTTP-EQUIV=&amp;quot;pragma&amp;quot; CONTENT=&amp;quot;no-cache&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;META HTTP-EQUIV=&amp;quot;Cache-Control&amp;quot; CONTENT=&amp;quot;no-cache, must-revalidate&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;META HTTP-EQUIV=&amp;quot;expires&amp;quot; CONTENT=&amp;quot;Wed, 26 Feb 1997 08:21:57 GMT&amp;quot;&amp;gt;</p>
+
+<p>或者&amp;lt;META HTTP-EQUIV=&amp;quot;expires&amp;quot; CONTENT=&amp;quot;0&amp;quot;&amp;gt;</p>
+
+<p>19.怎样让表单没有凹凸感？</p>
+
+<p>&amp;lt;input type=text style=&amp;quot;border:1 solid #000000&amp;quot;&amp;gt;</p>
+
+<p>或</p>
+
+<p>&amp;lt;input type=text style=&amp;quot;border-left:none; border-right:none; border-top:none; border-bottom:</p>
+
+<p>1 solid #000000&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;</p>
+
+<p>20.&amp;lt;div&amp;gt;&amp;lt;span&amp;gt;&amp;&amp;lt;layer&amp;gt;的区别？</p>
+
+<p>&amp;lt;div&amp;gt;(division)用来定义大段的页面元素，会产生转行</p>
+
+<p>&amp;lt;span&amp;gt;用来定义同一行内的元素，跟&amp;lt;div&amp;gt;的唯一区别是不产生转行</p>
+
+<p>&amp;lt;layer&amp;gt;是ns的标记，ie不支持，相当于&amp;lt;div&amp;gt;</p>
+
+<p>21.让弹出窗口总是在最上面:</p>
+
+<p>&amp;lt;body onblur=&amp;quot;this.focus();&amp;quot;&amp;gt;</p>
+
+<p>22.不要滚动条?</p>
+
+<p>让竖条没有:</p>
+
+<p>&amp;lt;body style=<code>overflow:-Scroll;overflow-y:hidden</code>&amp;gt;</p>
+
+<p>&amp;lt;/body&amp;gt;</p>
+
+<p>让横条没有:</p>
+
+<p>&amp;lt;body style=<code>overflow:-Scroll;overflow-x:hidden</code>&amp;gt;</p>
+
+<p>&amp;lt;/body&amp;gt;</p>
+
+<p>两个都去掉？更简单了</p>
+
+<p>&amp;lt;body scroll=&amp;quot;no&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;/body&amp;gt;</p>
+
+<p>23.怎样去掉图片链接点击后，图片周围的虚线？</p>
+
+<p>&amp;lt;a href=&amp;quot;#&amp;quot; onFocus=&amp;quot;this.blur()&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;logo.jpg&amp;quot; border=0&amp;gt;&amp;lt;/a&amp;gt;</p>
+
+<p>24.电子邮件处理提交表单</p>
+
+<p>&amp;lt;form name=&amp;quot;form1&amp;quot; method=&amp;quot;post&amp;quot; action=&amp;quot;mailto:*<strong><em>@</em></strong>.com&amp;quot; enctype=&amp;quot;text/plain&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;input type=submit&amp;gt;</p>
+
+<p>&amp;lt;/form&amp;gt;</p>
+
+<p>25.在打开的子窗口刷新父窗口的代码里如何写？</p>
+
+<p>window.opener.location.reload()</p>
+
+<p>26.如何设定打开页面的大小</p>
+
+<p>&amp;lt;body onload=&amp;quot;top.resizeTo(300,200);&amp;quot;&amp;gt;</p>
+
+<p>打开页面的位置&amp;lt;body onload=&amp;quot;top.moveBy(300,200);&amp;quot;&amp;gt;</p>
+
+<p>27.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动</p>
+
+<p>&amp;lt;STYLE&amp;gt;</p>
+
+<p>body</p>
+
+<p>{background-image:url(logo.gif); background-repeat:no-repeat;</p>
+
+<p>background-position:center;background-attachment: fixed}</p>
+
+<p>&amp;lt;/STYLE&amp;gt;</p>
+
+<ol>
+<li>检查一段字符串是否全由数字组成</li>
+</ol>
+
+<p>&amp;lt;script language=&amp;quot;Javascript&amp;quot;&amp;gt;&amp;lt;!&ndash;</p>
+
+<p>function checkNum(str){return str.match(//D/)==null}</p>
+
+<p>alert(checkNum(&amp;quot;1232142141&amp;quot;))</p>
+
+<p>alert(checkNum(&amp;quot;123214214a1&amp;quot;))</p>
+
+<p>// &ndash;&amp;gt;&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>获得一个窗口的大小</li>
+</ol>
+
+<p>document.body.clientWidth; document.body.clientHeight</p>
+
+<ol>
+<li>怎么判断是否是字符</li>
+</ol>
+
+<p>if (/[^/x00-/xff]/g.test(s)) alert(&amp;quot;含有汉字&amp;quot;);</p>
+
+<p>else alert(&amp;quot;全是字符&amp;quot;);</p>
+
+<p>31.TEXTAREA自适应文字行数的多少</p>
+
+<p>&amp;lt;textarea rows=1 name=s1 cols=27 onpropertychange=&amp;quot;this.style.posHeight=this.scrollHeight&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;/textarea&amp;gt;</p>
+
+<ol>
+<li>日期减去天数等于第二个日期</li>
+</ol>
+
+<p>&amp;lt;script language=Javascript&amp;gt;</p>
+
+<p>function cc(dd,dadd)</p>
+
+<p>{</p>
+
+<p>//可以加上错误处理</p>
+
+<p>var a = new Date(dd)</p>
+
+<p>a = a.valueOf()</p>
+
+<p>a = a - dadd * 24 * 60 * 60 * 1000</p>
+
+<p>a = new Date(A)</p>
+
+<p>alert(a.getFullYear() + &amp;quot;年&amp;quot; + (a.getMonth() + 1) + &amp;quot;月&amp;quot; + a.getDate() + &amp;quot;日&amp;quot;)</p>
+
+<p>}</p>
+
+<p>cc(&amp;quot;12/23/2002&amp;quot;,2)</p>
+
+<p>&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>选择了哪一个Radio</li>
+</ol>
+
+<p>&amp;lt;HTML&amp;gt;&amp;lt;script language=&amp;quot;vbscript&amp;quot;&amp;gt;</p>
+
+<p>function checkme()</p>
+
+<p>for each ob in radio1</p>
+
+<p>if ob.checked then window.alert ob.value</p>
+
+<p>next</p>
+
+<p>end function</p>
+
+<p>&amp;lt;/script&amp;gt;&amp;lt;BODY&amp;gt;</p>
+
+<p>&amp;lt;INPUT name=&amp;quot;radio1&amp;quot; type=&amp;quot;radio&amp;quot; value=&amp;quot;style&amp;quot; checked&amp;gt;Style</p>
+
+<p>&amp;lt;INPUT name=&amp;quot;radio1&amp;quot; type=&amp;quot;radio&amp;quot; value=&amp;quot;barcode&amp;quot;&amp;gt;Barcode</p>
+
+<p>&amp;lt;INPUT type=&amp;quot;button&amp;quot; value=&amp;quot;check&amp;quot; onclick=&amp;quot;checkme()&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;/BODY&amp;gt;&amp;lt;/HTML&amp;gt;</p>
+
+<p>34.脚本永不出错</p>
+
+<p>&amp;lt;SCRIPT LANGUAGE=&amp;quot;JavaScript&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash; Hide</p>
+
+<p>function killErrors() {</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>window.onerror = killErrors;</p>
+
+<p>// &ndash;&amp;gt;</p>
+
+<p>&amp;lt;/SCRIPT&amp;gt;</p>
+
+<p>35.ENTER键可以让光标移到下一个输入框</p>
+
+<p>&amp;lt;input onkeydown=&amp;quot;if(event.keyCode==13)event.keyCode=9&amp;quot;&amp;gt;</p>
+
+<ol>
+<li>检测某个网站的链接速度：</li>
+</ol>
+
+<p>把如下代码加入&amp;lt;body&amp;gt;区域中:</p>
+
+<p>&amp;lt;script language=Javascript&amp;gt;</p>
+
+<p>tim=1</p>
+
+<p>setInterval(&amp;quot;tim++&amp;quot;,100)</p>
+
+<p>b=1</p>
+
+<p>var autourl=new Array()</p>
+
+<p>autourl[1]=&amp;quot  <a href="http://www.njcatv.net/&quot;">http://www.njcatv.net/&amp;quot</a> ;;</p>
+
+<p>autourl[2]=&amp;quot;javacool.3322.net&amp;quot;</p>
+
+<p>autourl[3]=&amp;quot  <a href="http://www.sina.com.cn/&quot;">http://www.sina.com.cn/&amp;quot</a> ;;</p>
+
+<p>autourl[4]=&amp;quot  <a href="http://www.nuaa.edu.cn/&quot;">http://www.nuaa.edu.cn/&amp;quot</a> ;;</p>
+
+<p>autourl[5]=&amp;quot  <a href="http://www.cctv.com/&quot;">http://www.cctv.com/&amp;quot</a> ;;</p>
+
+<p>function butt(){</p>
+
+<p>document.write(&amp;quot;&amp;lt;form name=autof&amp;gt;&amp;quot;)</p>
+
+<p>for(var i=1;i&amp;lt;autourl.length;i++)</p>
+
+<p>document.write(&amp;quot;&amp;lt;input type=text name=txt&amp;quot;+i+&amp;quot; size=10 value=测试中……&amp;gt; =》&amp;lt;input type=text</p>
+
+<p>name=url&amp;quot;+i+&amp;quot; size=40&amp;gt; =》&amp;lt;input type=button value=GO</p>
+
+<p>onclick=window.open(this.form.url&amp;quot;+i+&amp;quot;.value)&amp;gt;&amp;lt;br&amp;gt;&amp;quot;)</p>
+
+<p>document.write(&amp;quot;&amp;lt;input type=submit value=刷新&amp;gt;&amp;lt;/form&amp;gt;&amp;quot;)</p>
+
+<p>}</p>
+
+<p>butt()</p>
+
+<p>function auto(url){</p>
+
+<p>document.forms[0][&amp;quot;url&amp;quot;+b].value=url</p>
+
+<p>if(tim&amp;gt;200)</p>
+
+<p>{document.forms[0][&amp;quot;txt&amp;quot;+b].value=&amp;quot;链接超时&amp;quot;}</p>
+
+<p>else</p>
+
+<p>{document.forms[0][&amp;quot;txt&amp;quot;+b].value=&amp;quot;时间&amp;quot;+tim/10+&amp;quot;秒&amp;quot;}</p>
+
+<p>b++</p>
+
+<p>}</p>
+
+<p>function run(){for(var i=1;i&amp;lt;autourl.length;i++)document.write(&amp;quot;&amp;lt;img</p>
+
+<p>src=http://&amp;quot;+autourl+&amp;quot;/&amp;quot;+Math.random()+&amp;quot; width=1 height=1</p>
+
+<p>onerror=auto  <a href="http://&quot;">http://&amp;quot</a> ;;+autourl+&amp;quot;`)&amp;gt;&amp;quot;)}</p>
+
+<p>run()&amp;lt;/script&amp;gt;</p>
+
+<ol>
+<li>各种样式的光标</li>
+</ol>
+
+<p>auto ：标准光标</p>
+
+<p>default ：标准箭头</p>
+
+<p>hand ：手形光标</p>
+
+<p>wait ：等待光标</p>
+
+<p>text ：I形光标</p>
+
+<p>vertical-text ：水平I形光标</p>
+
+<p>no-drop ：不可拖动光标</p>
+
+<p>not-allowed ：无效光标</p>
+
+<p>help ：?帮助光标</p>
+
+<p>all-scroll ：三角方向标</p>
+
+<p>move ：移动标</p>
+
+<p>crosshair ：十字标</p>
+
+<p>e-resize</p>
+
+<p>n-resize</p>
+
+<p>nw-resize</p>
+
+<p>w-resize</p>
+
+<p>s-resize</p>
+
+<p>se-resize</p>
+
+<p>sw-resize</p>
+
+<p>38.页面进入和退出的特效</p>
+
+<p>进入页面&amp;lt;meta http-equiv=&amp;quot;Page-Enter&amp;quot; content=&amp;quot;revealTrans(duration=x, transition=y)&amp;quot;&amp;gt;</p>
+
+<p>推出页面&amp;lt;meta http-equiv=&amp;quot;Page-Exit&amp;quot; content=&amp;quot;revealTrans(duration=x, transition=y)&amp;quot;&amp;gt;</p>
+
+<p>这个是页面被载入和调出时的一些特效。Duration表示特效的持续时间，以秒为单位。Transition表示使</p>
+
+<p>用哪种特效，取值为1-23:</p>
+
+<p>　　0 矩形缩小</p>
+
+<p>　　1 矩形扩大</p>
+
+<p>　　2 圆形缩小</p>
+
+<p>　　3 圆形扩大</p>
+
+<p>　　4 下到上刷新</p>
+
+<p>　　5 上到下刷新</p>
+
+<p>　　6 左到右刷新</p>
+
+<p>　　7 右到左刷新</p>
+
+<p>　　8 竖百叶窗</p>
+
+<p>　　9 横百叶窗</p>
+
+<p>　　10 错位横百叶窗</p>
+
+<p>　　11 错位竖百叶窗</p>
+
+<p>　　12 点扩散</p>
+
+<p>　　13 左右到中间刷新</p>
+
+<p>　　14 中间到左右刷新</p>
+
+<p>　　15 中间到上下</p>
+
+<p>　　16 上下到中间</p>
+
+<p>　　17 右下到左上</p>
+
+<p>　　18 右上到左下</p>
+
+<p>　　19 左上到右下</p>
+
+<p>　　20 左下到右上</p>
+
+<p>　　21 横条</p>
+
+<p>　　22 竖条</p>
+
+<p>　　23 以上22种随机选择一种</p>
+
+<p>39.在规定时间内跳转</p>
+
+<p>&amp;lt;META http-equiv=V=&amp;quot;REFRESH&amp;quot; content=&amp;quot;5;URL=<a href="http://www.51js.com&quot;&gt;">http://www.51js.com&amp;quot;&amp;gt;</a></p>
+
+<p>40.网页是否被检索</p>
+
+<p>&amp;lt;meta name=&amp;quot;ROBOTS&amp;quot; content=&amp;quot;属性值&amp;quot;&amp;gt;</p>
+
+<p>　　其中属性值有以下一些:</p>
+
+<p>　　属性值为&amp;quot;all&amp;quot;: 文件将被检索，且页上链接可被查询；</p>
+
+<p>　　属性值为&amp;quot;none&amp;quot;: 文件不被检索，而且不查询页上的链接；</p>
+
+<p>　　属性值为&amp;quot;index&amp;quot;: 文件将被检索；</p>
+
+<p>　　属性值为&amp;quot;follow&amp;quot;: 查询页上的链接；</p>
+
+<p>　　属性值为&amp;quot;noindex&amp;quot;: 文件不检索，但可被查询链接；</p>
+
+<p>　　属性值为&amp;quot;nofollow&amp;quot;: 文件不被检索，但可查询页上的链接。</p>
+
+<p>41.变换网页的鼠标光标</p>
+
+<p>&amp;lt;BODY style=&amp;quot;CURSOR: url  <a href="http://203.73.125.205/~liangmi2/farmfrog01.cur`">http://203.73.125.205/~liangmi2/farmfrog01.cur`</a> )&amp;quot;&amp;gt;</p>
+
+<p>42.怎样实现在任务栏显示小图标的效果？ (要使用绝对地址)</p>
+
+<p>有些站点，访问时会在地址栏地址前显出小图标，添加到收藏夹后也在收藏栏中显示图标，</p>
+
+<p>这样很好的与其它站点有了区别。</p>
+
+<p>要达到这个效果，先需做出这个图标文件，图像为16*16像素，不要超过16色。文件格式为ico，然后上传至你的网站。</p>
+
+<p>然后，在需要的页面中，加上以下html语句到文件的&amp;lt;head&amp;gt;和&amp;lt;/head&amp;gt;之间（假设以上ico文件的地  <a href="http://happyisland.126.com/icon.ico">http://happyisland.126.com/icon.ico</a> ）。</p>
+
+<p>&amp;lt;link REL=&amp;quot;SHORTCUT ICON&amp;quot;href=&amp;quot  <a href="http:///happyisland.126.com/icon.ico&quot;">http:///happyisland.126.com/icon.ico&amp;quot</a> ;;&amp;gt;</p>
+
+<p>如果访问者的浏览器是IE5.0，就不需加任何代码，只要将图标文件上传到网站的根目录下即可。</p>
+
+<p>1,META标签里的代码是什么意思？</p>
+
+<p>&amp;lt;META&amp;gt;是放于&amp;lt;HEAD&amp;gt;与&amp;lt;/HEAD&amp;gt;之间的标记.以下是我总结它在网页中最常见的几种。</p>
+
+<p>&amp;lt;meta name=&amp;quot;Keywords&amp;quot; content=&amp;quot;图片, 新闻, 音乐, 软件&amp;quot;&amp;gt;</p>
+
+<p>该网页的关键字，作用于搜索引擎的登录，事实上它在现在的网站中并没什么用。</p>
+
+<p>&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=gb2312&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=iso-8859-1&amp;quot;&amp;gt;</p>
+
+<p>设定这是 HTML 文件及其编码语系，简体中文网页使用charset=gb2312，繁体中文使用charset=big5，或者不设编码也可，纯英文网页建议使用 iso-8859-1。</p>
+
+<p>&amp;lt;meta name=&amp;quot;GENERATOR&amp;quot; content=&amp;quot;Microsoft FrontPage 5.0&amp;quot;&amp;gt;</p>
+
+<p>这只表示该网页由什么编辑器写的。</p>
+
+<p>&amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;10; url=<a href="http://www.hkiwc.com&quot;&gt;">http://www.hkiwc.com&amp;quot;&amp;gt;</a></p>
+
+<p>这行较为实用，能于预定秒数内自动转到指定网址。原代码中 10 表示 10秒。</p>
+
+<p>2，怎么改变滚动条的颜色，只有ie5.5版本以上才能支持。</p>
+
+<p>这是使用CSS语言，在次说明一下，它和我的浏览器版本有一定的关系。</p>
+
+<p>scrollbar-arrow-color：上下按钮上三角箭头的颜色。</p>
+
+<p>scrollbar-base-color：滚动条的基本颜色。</p>
+
+<p>scrollbar-dark-shadow-color：立体滚动条强阴影的颜色</p>
+
+<p>scrollbar-face-color：立体滚动条凸出部分的颜色</p>
+
+<p>scrollbar-highlight-color：滚动条空白部分的颜色</p>
+
+<p>scrollbar-shadow-color立体滚动条阴影的颜色。</p>
+
+<p>scrollbar-track-color:#99CC33;</p>
+
+<p>scrollbar-3dlight-color:#A8CBF1;</p>
+
+<p>代码如下：</p>
+
+<p>&amp;lt;style&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;</p>
+
+<p>BODY {</p>
+
+<p>scrollbar-face-color:#99CC33;//(立体滚动条凸出部分的颜色)</p>
+
+<p>scrollbar-highlight-color:#A8CBF1;//(滚动条空白部分的颜色)</p>
+
+<p>scrollbar-shadow-color:#A8CBF1;//(立体滚动条阴影的颜色)</p>
+
+<p>scrollbar-arrow-color:#FF9966;//(上下按钮上三角箭头的颜色)</p>
+
+<p>scrollbar-base-color:#A8CBF1; //(滚动条的基本颜色)</p>
+
+<p>scrollbar-darkshadow-color:#A8CBF1; //(立体滚动条强阴影的颜色)</p>
+
+<p>scrollbar-track-color:#99CC33;</p>
+
+<p>scrollbar-3dlight-color:#A8CBF1;</p>
+
+<p>}</p>
+
+<p>&ndash;&amp;gt;</p>
+
+<p>&amp;lt;/style&amp;gt;</p>
+
+<p>在这我补充几点：</p>
+
+<p>1.让浏览器窗口永远都不出现滚动条。</p>
+
+<p>&amp;lt;body style=&amp;quot;overflow-x:hidden;overflow-y:hidden&amp;quot;&amp;gt;或&amp;lt;body style=&amp;quot;overflow:hidden&amp;quot;&amp;gt; 或&amp;lt;body scroll=no&amp;gt;</p>
+
+<p>2，没有水平滚动条</p>
+
+<p>&amp;lt;body style=&amp;quot;overflow-x:hidden&amp;quot;&amp;gt;</p>
+
+<p>3，没有垂直滚动条</p>
+
+<p>&amp;lt;body style=&amp;quot;overflow-y:hidden&amp;quot;&amp;gt;</p>
+
+<p>3,如何给图片抖动怎做的.</p>
+
+<p>&amp;lt;SCRIPT language=JavaScript1.2&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;</p>
+
+<p>var rector=2</p>
+
+<p>var stopit=0</p>
+
+<p>var a=1</p>
+
+<p>var count=0</p>
+
+<p>function init(which){</p>
+
+<p>stopit=0</p>
+
+<p>shake=which</p>
+
+<p>shake.style.left=0</p>
+
+<p>shake.style.top=0</p>
+
+<p>}</p>
+
+<p>function rattleimage(){</p>
+
+<p>if ((!document.all&amp;&amp;!document.getElementById)||stopit==1||count==100)</p>
+
+<p>return</p>
+
+<p>count++</p>
+
+<p>if (a==1){</p>
+
+<p>shake.style.top=parseInt(shake.style.top)+rector</p>
+
+<p>}</p>
+
+<p>else if (a==2){</p>
+
+<p>shake.style.left=parseInt(shake.style.left)+rector</p>
+
+<p>}</p>
+
+<p>else if (a==3){</p>
+
+<p>shake.style.top=parseInt(shake.style.top)-rector</p>
+
+<p>}</p>
+
+<p>else{</p>
+
+<p>shake.style.left=parseInt(shake.style.left)-rector</p>
+
+<p>}</p>
+
+<p>if (a&amp;lt;4)</p>
+
+<p>a++</p>
+
+<p>else</p>
+
+<p>a=1</p>
+
+<p>setTimeout(&amp;quot;rattleimage()&amp;quot;,50)</p>
+
+<p>}</p>
+
+<p>function stoprattle(which){</p>
+
+<p>stopit=1</p>
+
+<p>count=0</p>
+
+<p>which.style.left=0</p>
+
+<p>which.style.top=0</p>
+
+<p>}</p>
+
+<p>//&ndash;&amp;gt;</p>
+
+<p>&amp;lt;/SCRIPT&amp;gt;</p>
+
+<p>&amp;lt;STYLE&amp;gt;.shakeimage {POSITION: relative}</p>
+
+<p>&amp;lt;/STYLE&amp;gt;</p>
+
+<p>&amp;lt;img src=&amp;quot;图片的路径&amp;quot; onmouseout=stoprattle(this) onmouseover=init(this);rattleimage() class=shakeimage&amp;gt;</p>
+
+<p>4，在DW如何给水平线加颜色。</p>
+
+<p>在DW中没有此项设置，你只能在HTML中加入代码：&amp;lt;hr color=red noshade&amp;gt;按F12的预览在能看到。由于在NC中不支持&amp;lt;hr&amp;gt;的COLOR属性，所以在DW中没有此项设置。</p>
+
+<p>　　　</p>
+
+<p>5，如何在网页中实现flash的全屏播放？</p>
+
+<p>只要在调用swf文件的HTML中将WIDTH和HEIGHT的参数设为100％即可，当然也可以在Flash导出HTML文件的设置中进行设置，方法是：打开File菜单；选Publish Settings弹出导出设置对话框；在HTML标签下的Dimensions选项,下拉后选中Percent（百分比）,并在WIDTH 和HEIGHT框中填100.就行了。</p>
+
+<p>6,为什么我在DW中插入的Flash动画缺看不找！</p>
+
+<p>如果你没有正确地安装Dreamweaver和Flash，那么在你预览的时候，Dreamweaver会提示你缺少播放的插件，请你按装InstallAXFlash.exe 并从新启动计算机。现在IE6已经捆绑这个程序。</p>
+
+<p>7，在Flash中，如果屏蔽鼠标右键?FS命令都是什么意思?</p>
+
+<p>fscommand (&amp;quot;fullscreen&amp;quot;, &amp;quot;true/false&amp;quot;);（全屏设置，TRUE开，FALSE关）</p>
+
+<p>fscommand (&amp;quot;showmenu&amp;quot;, &amp;quot;true/false&amp;quot;);（右键菜单设置，TRUE显示，FALSE不显示）</p>
+
+<p>fscommand (&amp;quot;allowscale&amp;quot;, &amp;quot;true/false&amp;quot;);（缩放设置，TRUE自由缩放，FALSE调整画面不影响影片本身的尺寸）</p>
+
+<p>fscommand (&amp;quot;trapallkeys&amp;quot;, &amp;quot;true/false&amp;quot;);（快捷键设置，TRUE快捷键开，FALSE快捷键关）</p>
+
+<p>fscommand (&amp;quot;exec&amp;quot;);（EXE程序调用）</p>
+
+<p>fscommand (&amp;quot;quit&amp;quot;);（退出关闭窗口）</p>
+
+<p>8，Flash中什么是隐形按钮。</p>
+
+<p>利用button中的hit帧来制作只有感应区域而完全透明的按钮。</p>
+
+<p>9，如何给Flash动画做链接。</p>
+
+<p>Dreamweaver是不能给Flash制作链接的，只能在Flash中用geturl()加链接，然后再插入Dreamweaver中。</p>
+
+<p>10，DW中的层的技巧。</p>
+
+<p>层是可以嵌套的，我个人给大家一个技巧，在层面板中按住CTRL再拖放层到你想去成为其子层的地方就行了，我认为这是最简单直观的方法了。</p>
+
+<p>11，如何改变鼠标的形状？</p>
+
+<p>在Dreamweaver4中CSS样式面板：</p>
+
+<p>按CTR+SHIFT+E&ndash;出现样式表对话框,点击NEW，出现编辑对话框,在左边最后一项extensions-cursor 选择你要改的指针形式就可以了，然后把你要想改变的地方运用样式表，如果整页都有在&amp;lt;body bgcolor=&amp;quot;#003063&amp;quot; text=&amp;quot;#ffffff&amp;quot; id=all&amp;gt;中加入就行了。</p>
+
+<p>&amp;lt;span style=&amp;quot;cursor:X`&amp;gt;样例&amp;lt;/span&amp;gt;</p>
+
+<p>这里选择（文本）作为对象，还可以自己改为其他的，如link等。</p>
+
+<p>x可以等于=hand（手形）、crosshair（十字）、text（文本光标）、wait（顾名思义啦）、default（默认效果）、help（问号）、e-size（向右箭头）、ne-resize（向右上的箭头）、nw-resize（向左上的箭头）、w-resize（向左的箭头）、sw-resize（左下箭头）、s-resize（向下箭头）、se-resize（向右下箭头）、auto（系统自动给出效果）。</p>
+
+<p>12，用CSS做邮票，看看吧！</p>
+
+<p>&amp;lt;input type=button value=我象不象邮票？ Style=&amp;quot;height:80px;border:2px dashed #cccccc&amp;quot;&amp;gt;</p>
+
+<p>13，经常上网的朋友可能会到过这样一些网站，一进入首页立刻会弹出一个窗口，怎么做呢！</p>
+
+<p>这Javascript代码即可实现，摘录蓝色论坛。</p>
+
+<p>【1、最基本的弹出窗口代码】</p>
+
+<p>其实代码非常简单：</p>
+
+<p>&amp;lt;SCRIPT LANGUAGE=&amp;quot;javascript&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;</p>
+
+<p>window.open (<code>page.html</code>)</p>
+
+<p>&ndash;&amp;gt;</p>
+
+<p>&amp;lt;/SCRIPT&amp;gt;</p>
+
+<p>因为着是一段javascripts代码，所以它们应该放?lt;SCRIPT LANGUAGE=&amp;quot;javascript&amp;quot;&amp;gt;标签和&amp;lt;/script&amp;gt;之间。&amp;lt;!&ndash; 和 &ndash;&amp;gt;是对一些版本低的浏览器起作用，在这些老浏览器中不会将标签中的代码作为文本显示出来。要养成这个好习惯啊。</p>
+
+<p>window.open (<code>page.html</code>) 用于控制弹出新的窗口page.html，如果page.html不与主窗口在同一路径下，前面应写明路径，绝对路径(http://)和相对路径(../)均可。用单引号和双引号都可以，只是不要混用。</p>
+
+<p>这一段代码可以加入HTML的任意位置，&amp;lt;head&amp;gt;和&amp;lt;/head&amp;gt;之间可以，&amp;lt;body bgcolor=&amp;quot;#003063&amp;quot; text=&amp;quot;#ffffff&amp;quot; id=all&amp;gt;间&amp;lt;/body&amp;gt;也梢裕</p>
+</div>
+    <a slot="next" href="/blog/2005/01/07/old-blogms-1000141850" title="Think in C++读书笔记">Newer</a>
+    <a slot="prev" href="/blog/2005/01/07/old-blogms-1000142164" title="Allie Narrations in 《Taken》">Older</a>
+</am-article>

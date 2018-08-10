@@ -1,0 +1,77 @@
+
+<am-article time="2004-09-10 13:53:00 +0800" tags="[BlogMS]" slug="2004/09/10/old-blogms-1000046547">
+    <h1 slot="title">再读悖论</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000046547, blog id: airoff
+History stat: 浏览/评论：321/1  ,  日期：2004年9月10日 13:53</p>
+
+<p>“这句话是错的”。</p>
+
+<p>所有论及悖论的文章或者书籍都几乎离不开这个例子。</p>
+
+<!--more-->
+
+<p>我总想尝试着用自己熟悉的方式来理解和分析这种悖论产生的原因。首先建立一个判断机制：Judge(Description, Status)，来判断Description所描述的状态Status，也就是说有</p>
+
+<p>Judge(Description, True) = True</p>
+
+<p>Judge(Description, False) = False</p>
+
+<p>用此表达“这句话是错的”悖论也就是得出了</p>
+
+<p>Judge(&amp;quot;这句话是错的&amp;quot;, True) = False 或者</p>
+
+<p>Judge(&amp;quot;这句话是错的&amp;quot;, False) = True</p>
+
+<p>这样的结果。</p>
+
+<p>Description = &amp;quot;这句话是错的&amp;quot; = &amp;quot;Judge(Description, False)&amp;quot;</p>
+
+<p>即有</p>
+
+<p>Judge(Description, True)</p>
+
+<p>= Judge(&amp;quot;Judge(Description, False)&amp;quot;, True)</p>
+
+<p>如果假定</p>
+
+<p>&amp;quot;Judge(Description, False)&amp;quot; = Judge(Description, False)</p>
+
+<p>的话，才会产生</p>
+
+<p>Judge(Description, True)</p>
+
+<p>= Judge(Judge(Description, False), True)</p>
+
+<p>= Judge(False, True)</p>
+
+<p>的悖论。也就是说当我们把描述等同于判断本身的时候，这就是一个悖论。事实上</p>
+
+<p>Judge(Description, True)</p>
+
+<p>= Judge(&amp;quot;Judge(Description, False)&amp;quot;, True)</p>
+
+<p>= Judge(&amp;quot;False&amp;quot;, True)</p>
+
+<p>产生悖论也就是要具备条件</p>
+
+<p>Judge(&amp;quot;False&amp;quot;, True) = Judge(False, True)</p>
+
+<p>由</p>
+
+<p>&amp;quot;False&amp;quot; = Description(False)</p>
+
+<p>False  = Judge(Description, False)</p>
+
+<p>&amp;quot;False&amp;quot; = False</p>
+
+<p>得</p>
+
+<p>Description(False) = Judge(Description, False)</p>
+
+<p>描述 = 对描述的判断</p>
+
+<p>“这句话是错的”的悖论就产生了。</p>
+</div>
+    <a slot="next" href="/blog/2004/09/15/old-blogms-1000048757" title="电磁虫">Newer</a>
+    <a slot="prev" href="/blog/2004/09/10/old-blogms-1000046516" title="Lullaby for Lucas">Older</a>
+</am-article>

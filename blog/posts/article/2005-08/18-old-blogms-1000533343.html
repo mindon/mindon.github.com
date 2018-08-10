@@ -1,0 +1,121 @@
+
+<am-article time="2005-08-18 17:30:00 +0800" tags="[BlogMS]" slug="2005/08/18/old-blogms-1000533343">
+    <h1 slot="title">Javascript之Mozilla XML</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000533343, blog id: airoff
+History stat: 浏览/评论：275/3  ,  日期：2005年8月18日 17:30</p>
+
+<p><font size=2 style="line-height:14pt"><font color=#A52A2A>var isMozilla = (true &amp;&amp; document.implementation &amp;&amp; document.implementation.createDocument);</p>
+
+<p>if(isMozilla) {</p>
+
+<p>isMozilla = true;</p>
+
+<p>Element.prototype.<strong>defineGetter</strong>(&amp;quot;text&amp;quot;, function () {</p>
+
+<p>return this.firstChild.nodeValue;</p>
+
+<p>});</p>
+
+<p>Element.prototype.<strong>defineGetter</strong>(&amp;quot;xml&amp;quot;, function () {</p>
+
+<p>return (new XMLSerializer()).serializeToString(this);</p>
+
+<p>});</p>
+
+<p>// why these two getters don&rsquo;t work? still wonderring&hellip;</p>
+
+<p>Element.prototype.selectSingleNode = function(xPath) {</p>
+
+<p>var xPath;</p>
+
+<p>var xresult = this.ownerDocument.evaluate(xPath, this</p>
+
+<p>, null</p>
+
+<p>, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);</p>
+
+<p>if(xresult &amp;&amp; xresult.snapshotLength &amp;gt; 0) {</p>
+
+<p>return xresult.snapshotItem(0);</p>
+
+<p>} else {</p>
+
+<p>return null;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>Element.prototype.selectNodes = function(xPath) {</p>
+
+<p>var xPath;</p>
+
+<p>var xresult = this.ownerDocument.evaluate(xPath, this</p>
+
+<p>, null</p>
+
+<p>, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);</p>
+
+<p>var nod = null, nods = [], k = 0;</p>
+
+<p>while((nod=xresult.iterateNext())!=null) {</p>
+
+<p>nods[k++] = nod;</p>
+
+<p>}</p>
+
+<p>return nods;</p>
+
+<p>}</p>
+
+<p>XMLDocument.prototype.selectSingleNode = function(xPath) {</p>
+
+<p>var xPath;</p>
+
+<p>var xresult = this.evaluate(xPath, this</p>
+
+<p>, null</p>
+
+<p>, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);</p>
+
+<p>if(xresult &amp;&amp; xresult.snapshotLength &amp;gt; 0) {</p>
+
+<p>return xresult.snapshotItem(0);</p>
+
+<p>} else {</p>
+
+<p>return null;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>XMLDocument.prototype.selectNodes = function(xPath) {</p>
+
+<p>var xPath;</p>
+
+<p>var xresult = this.evaluate(xPath, this</p>
+
+<p>, null</p>
+
+<p>, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);</p>
+
+<p>var nod = null, nods = [], k = 0;</p>
+
+<p>while((nod=xresult.iterateNext())!=null) {</p>
+
+<p>nods[k++] = nod;</p>
+
+<p>}</p>
+
+<p>return nods;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p></font></font></p>
+</div>
+    <a slot="next" href="/blog/2005/08/19/old-blogms-1000534718" title="手机异常">Newer</a>
+    <a slot="prev" href="/blog/2005/08/10/old-blogms-1000515173" title="Batik应用-在SVG中使用Java">Older</a>
+</am-article>

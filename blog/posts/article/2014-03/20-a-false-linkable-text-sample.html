@@ -1,0 +1,32 @@
+
+<am-article time="2014-03-20 05:08:00 +0800" tags="[Mindon Web-Tech]" slug="2014/03/20/a-false-linkable-text-sample">
+    <h1 slot="title">A false linkable text sample</h1>
+    <div slot="content"><p>I found a link in a Google+ post failed to be opened someday. It&rsquo;s awkful, right? It&rsquo;s on Google+! The Google - who leads the web tech.</p>
+
+<p>Then I confirmed the same false link sample showing up in BlackBerry 10.</p>
+
+<p>I&rsquo;ve double checked it in my WeChat under Android - it&rsquo;s there too. But not in the WeChat for BlackBerry 10.</p>
+
+<!--more-->
+
+<p>The false link sample is like this:</p>
+
+<p><strong>(<a href="http://mindon.github.io?testing)...something-else">http://mindon.github.io?testing)&hellip;something-else</a></strong></p>
+
+<p>Here&rsquo;s a snapshot from Google+</p>
+
+<p><img src="/images/blog/false-link.jpg" alt="" /></p>
+
+<p>The case is showing up almost everywhere - we are using the same library to detect links.</p>
+
+<p>Our test team and I could not accept this result in WeChat for BlackBerry 10, then here comes my customized linkable text detecting code in JavaScript.</p>
+
+<script src="https://gist.github.com/mindon/9317393.js"></script>
+
+<p>It helps to avoid this issue and provides you the customized possibility.</p>
+
+<p><span id="link-tags">WeChat;BlackBerry 10;Google+</span></p>
+</div>
+    <a slot="next" href="/blog/2014/03/20/android-wearable-sdk" title="Android Wear">Newer</a>
+    <a slot="prev" href="/blog/2014/03/20/a-callstack-trace-for-qml-js" title="A callstack trace for QML js">Older</a>
+</am-article>

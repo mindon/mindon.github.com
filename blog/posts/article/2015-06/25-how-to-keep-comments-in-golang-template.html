@@ -1,0 +1,22 @@
+
+<am-article time="2015-06-25 18:02:44 +0800" tags="[Mindon Web-Tech]" slug="2015/06/25/how-to-keep-comments-in-golang-template">
+    <h1 slot="title">How to keep comments in golang template?</h1>
+    <div slot="content"><p>When Using Golang templates, it removes all comments from the template output.</p>
+
+<p>All IE condition comments lost and other features based on comments will be gone.</p>
+
+<p>Here&rsquo;s how to keep comments as they are from html/template output:</p>
+
+<p>templates := template.Must(template.New(&ldquo;view&rdquo;).Funcs(template.FuncMap{
+&ldquo;comment&rdquo;: func(t string) template.HTML {return template.HTML(t)}
+}).ParseGlob(&ldquo;view/*.tpl&rdquo;))</p>
+
+<p>in the template</p>
+
+<p><code>	{{ comment &ldquo;html-comment-source-code&rdquo; }} </code></p>
+
+<p>Aha, it works.</p>
+</div>
+    
+    <a slot="prev" href="/blog/2015/06/19/maker-faire-2015-shenzhen" title="Maker Faire 2015 ShenZhen">Older</a>
+</am-article>

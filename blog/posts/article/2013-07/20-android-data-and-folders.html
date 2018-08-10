@@ -1,0 +1,72 @@
+
+<am-article time="2013-07-20 11:16:00 +0800" tags="[Mobile-App]" slug="2013/07/20/android-data-and-folders">
+    <h1 slot="title">Android App Data & Folders</h1>
+    <div slot="content"><p>Context context = getApplicationContext();</p>
+
+<h2>SQLite Databases</h2>
+
+<p>context.getDatabasePath(&ldquo;myDbName&rdquo;)</p>
+
+<h2>Cache</h2>
+
+<p>System will clean it auto if low memory</p>
+
+<p>context.getCacheDir()</p>
+
+<h2>Lib</h2>
+
+<p>context.getFilesDir()</p>
+
+<h2>Apk &amp; resources path</h2>
+
+<p>context.getPackageCodePath()
+context.getPackageResourcePath</p>
+
+<h2>Shared Preferences</h2>
+
+<p>getSharedPreferences()
+getPreferences()</p>
+
+<h2>Internal Storage</h2>
+
+<p>removed when uninstall the app
+MODE_PRIVATE | MODE_APPEND | MODE_WORLD_READABLE | MODE_WORLD_WRITEABLE</p>
+
+<p>FileOutputStream fos = openFileOutput(flName, Context.MODE_PRIVATE);
+fos.write(content.getBytes());
+fos.close();</p>
+
+<h2>Internal Files Operations</h2>
+
+<p>Internal files path</p>
+
+<p>.getDir()
+.getFilesDir()
+.deleteFile()
+.fileList</p>
+
+<h2>External Storage</h2>
+
+<p><strong>Checking media availability</strong></p>
+
+<p>.getExternalStorageState()</p>
+
+<p>Environment.MEDIA_MOUNTED | MEDIA_MOUNTED_READ_ONLY</p>
+
+<p>Environment.getExternalStorageDirectory()</p>
+
+<p>Environment.getExternalStoragePublicDirectory(
+Environment.DIRECTORY_PICTURES
+)</p>
+
+<p><uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/></p>
+
+<p>.getExternalStoragePublicDirectory()</p>
+
+<p>Environment.DIRECTORY_MUSIC | DIRECTORY_PICTURES | DIRECTORY_RINGTONES</p>
+
+<p>.getExternalCacheDir()</p>
+</div>
+    <a slot="next" href="/blog/2013/09/15/build-mobile-apps-from-command-line" title="Building mobile apps from the command line">Newer</a>
+    <a slot="prev" href="/blog/2013/07/09/dasign-light-up-your-life" title="DaSign: Light up your life">Older</a>
+</am-article>

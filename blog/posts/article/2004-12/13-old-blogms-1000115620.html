@@ -1,0 +1,203 @@
+
+<am-article time="2004-12-13 15:49:00 +0800" tags="[BlogMS]" slug="2004/12/13/old-blogms-1000115620">
+    <h1 slot="title">Javascript之数字格式化</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000115620, blog id: airoff
+History stat: 浏览/评论：749/2  ,  日期：2004年12月13日 15:49</p>
+
+<p><FONT face=Arial><FONT color=#00008c>&amp;lt;!&ndash;  [ 数字格式化 ] 麦盾脚本开始  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  请勿删除注释信息以方便别人参考使用，谢谢 :-)  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash; mindon scripts 2004, china</p>
+
+<p>/* &ndash;&amp;gt; &amp;lt;script language=&ldquo;JavaScript&rdquo;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;</p>
+
+<p>// please keep the following TEST SAMPLES message when using the script, thanks</p>
+
+<p>var fRJTest = true; // 此处 true 改为 false 即可隐藏测试用例信息</p>
+
+<p>fRJTest &amp;&amp; document.write(&rdquo;&amp;lt;span style=\&ldquo;color:#0f0f0f;font-size:9pt;font-family:Arial\&rdquo;&amp;gt;&rdquo;,</p>
+
+<p>&ldquo;&amp;lt;a href=&lsquo;http:&rdquo;+&ldquo;//airoff.blogms.com/&rsquo;&amp;gt; 麦盾博客 &amp;lt;/a&amp;gt; MINDON SCRIPTS by fRJ, China 〖 iseasky@hotmail.com 】麦盾脚本 &amp;lt;/span&amp;gt;&rdquo;,</p>
+
+<p>&ldquo;&amp;lt;hr style=&lsquo;height:1pt;width:356pt&rsquo; align=&lsquo;left&rsquo;&amp;gt;&amp;lt;blockquote&amp;gt;&amp;lt;pre&amp;gt;&rdquo;,</p>
+
+<p>&rdquo; 使用方法例子 :\n &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-&ldquo;,</p>
+
+<p>&rdquo;\ndmask(12345, 16) = &ldquo; +dmask(12345, 16),</p>
+
+<p>&rdquo;\nfmask(123.4567, 10, 5) = &ldquo;+fmask(123.4567, 10, 5),</p>
+
+<p>&rdquo;\nfmask(-123.4567, 10, 3) = &ldquo;+fmask(-123.4567, 10, 3),</p>
+
+<p>&rdquo;\n\n 数制转换技巧提示:(使用toString(进制参数)) \n &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-&ldquo;,</p>
+
+<p>&rdquo;\n var d = (0127).toString(10) = &ldquo;+(0127).toString(10) +&rdquo;; // 8 进制数 0127 转为 10 进制 &ldquo;,</p>
+
+<p>&rdquo;\n var d = (0xf0).toString(10) = &ldquo; +(0xf0).toString(10) +&rdquo;; // 16 进制数 0xf0 转为 10 进制 &ldquo;,</p>
+
+<p>&rdquo;\n var hex = (315).toString(16) = &ldquo; +(315).toString(16) +&rdquo;; // 10 进制数 315 转为 16 进制 &ldquo;,</p>
+
+<p>&rdquo;&amp;lt;/pre&amp;gt;&amp;lt;/blockquote&amp;gt;&amp;lt;hr style=&lsquo;height:1pt;width:356pt&rsquo; align=&lsquo;left&rsquo;&amp;gt;&rdquo;,</p>
+
+<p>&rdquo; 设置 fRJTest = false 即可隐藏以上用例信息，请勿删除以方便参考使用，谢谢 :-)&ldquo;);</p>
+
+<p>//*/</p>
+
+<p>var zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>function dmask(value, n)</p>
+
+<p>/* 生成 n 位补零字符串 */</p>
+
+<p>{</p>
+
+<p>var value, n;</p>
+
+<p>if(!value &amp;&amp; value != 0) value = &ldquo;&rdquo;;</p>
+
+<p>if(!n || n &amp;lt;0) n = 0;</p>
+
+<p>var ds = String(value);</p>
+
+<p>var pref = ds.substr(0,1);</p>
+
+<p>if(!isNaN(value) &amp;&amp; pref == &ldquo;-&rdquo;) { // 数字符号提取</p>
+
+<p>if(n&amp;gt;0) n&ndash;; ds = ds.substr(1);</p>
+
+<p>} else {</p>
+
+<p>pref = &ldquo;&rdquo;;</p>
+
+<p>}</p>
+
+<p>if(!zerostr) zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>while(zerostr.length&amp;lt;n) zerostr += zerostr;</p>
+
+<p>ds = (n&amp;gt;ds.length?zerostr.substr(0, n -ds.length):&ldquo;&rdquo;) +ds;</p>
+
+<p>return pref +ds;</p>
+
+<p>}</p>
+
+<p>function fmask(value, n, dec)</p>
+
+<p>/* 生成数字 dec位小数(四舍五入) n 位长度(包括负号和小数点) 补零字符串 */</p>
+
+<p>{</p>
+
+<p>var value, n, dec;</p>
+
+<p>if((!value &amp;&amp; value != 0) || isNaN(value)) value = 0;</p>
+
+<p>if(!n || n &amp;lt;0) n = 0;</p>
+
+<p>if(!dec || dec &amp;lt; 0) dec = 0;</p>
+
+<p>var fs = String(parseFloat(value));</p>
+
+<p>var pref = fs.substr(0,1);</p>
+
+<p>if(pref == &ldquo;-&rdquo;) { // 符号提取</p>
+
+<p>if(n&amp;gt;0) n&ndash;; fs = fs.substr(1);</p>
+
+<p>} else {</p>
+
+<p>pref = &ldquo;&rdquo;;</p>
+
+<p>}</p>
+
+<p>if(dec &amp;gt; 0 &amp;&amp; n&amp;gt;0) n&ndash;; // 小数点长度</p>
+
+<p>if(!zerostr) zerostr = &ldquo;00000000&rdquo;;</p>
+
+<p>while(zerostr.length&amp;lt;n) zerostr += zerostr;</p>
+
+<p>var dot = fs.indexOf(&ldquo;.&rdquo;);</p>
+
+<p>if(dot &amp;lt; 0) { // 无小数点</p>
+
+<p>fs = (n -dec&amp;gt;fs.length?zerostr.substr(0, n-dec-fs.length):&ldquo;&rdquo;) +fs; // 整数部分</p>
+
+<p>fs += (dec&amp;gt;0?&ldquo;.&rdquo; +zerostr.substr(0, dec):&ldquo;&rdquo;); // 小数部分</p>
+
+<p>} else { // 带小数点</p>
+
+<p>var ids = fs.substr(0, dot);</p>
+
+<p>var jds = fs.substr(dot +1);</p>
+
+<p>ids = (n-dec&amp;gt;ids.length?zerostr.substr(0, n-dec-ids.length):&ldquo;&rdquo;) +ids; // 整数部分</p>
+
+<p>if(dec &amp;gt; 0) { // 小数部分</p>
+
+<p>if(dec &amp;gt;= jds.length) { // 补零</p>
+
+<p>jds = jds +zerostr.substr(0, dec - jds.length);</p>
+
+<p>} else { // 四舍五入</p>
+
+<p>var de = parseInt(jds.substr(dec-1,1)) +(parseInt(jds.substr(dec,1))&amp;gt;=5?1:0);</p>
+
+<p>jds = jds.substr(0, dec -1) +String(de);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>fs = ids +(dec&amp;gt;0?&ldquo;.&rdquo; +jds: &ldquo;&rdquo;);</p>
+
+<p>}</p>
+
+<p>return pref +fs;</p>
+
+<p>}</p>
+
+<p>function days(from, to) { var ds =1000 * 60 * 60 *24;</p>
+
+<p>alert(Math.round(Math.abs(Date.parse(to)/ds-Date.parse(from)/ds))</p>
+
+<p>+&rdquo; days between &ldquo;+from+&rdquo; and &ldquo;+to);</p>
+
+<p>} //计算两个日期(格式:月/日/年) 之间的天数</p>
+
+<p>//&ndash;&amp;gt;&amp;lt;/script&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  此完整脚本可放在 Javascript 脚本文件中，也可以直接放入 HTML  文档(需设置 fRJTest 隐藏用例信息)使用  &ndash;&amp;gt;</p>
+
+<p>&amp;lt;!&ndash;  [ 数字格式化 ] 麦盾脚本结束  &ndash;&amp;gt;</FONT></FONT></p>
+
+<p><FONT color=#00008c face=Arial></FONT></p>
+
+<p><FONT color=#ff0000 face=Arial>补充参考，考虑性能：</p>
+
+<p></FONT>function pad0(num, n) {</p>
+
+<p>var i = n - (num+&rdquo;).length;</p>
+
+<p>if(i&amp;lt;1) return num;</p>
+
+<p>var z = pad0.z||&ldquo;;</p>
+
+<p>var j = z.length;</p>
+
+<p>if(n&amp;gt;j) {</p>
+
+<p>while(n&amp;gt;j){z +=&lsquo;00000000&rsquo;; j+=8;}</p>
+
+<p>pad0.z = z;</p>
+
+<p>}</p>
+
+<p>return z.substr(0, i)+num;</p>
+
+<p>}</p>
+</div>
+    <a slot="next" href="/blog/2004/12/13/old-blogms-1000115622" title="蝴蝶效应">Newer</a>
+    <a slot="prev" href="/blog/2004/12/07/old-blogms-1000110286" title="照镜子的问题()">Older</a>
+</am-article>

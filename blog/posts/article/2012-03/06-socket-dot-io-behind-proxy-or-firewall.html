@@ -1,0 +1,35 @@
+
+<am-article time="2012-03-06 06:32:00 +0800" tags="[Web-Tech]" slug="2012/03/06/socket-dot-io-behind-proxy-or-firewall">
+    <h1 slot="title">Socket.IO behind proxy or firewall</h1>
+    <div slot="content"><p>Independently of what transport you are using (WebSocket or Comet or both), a connection can always be closed by a Proxy or Firewall, or an expected network outage can close your connection. Why is it a problem? It’s problematic when a disconnection happens as you may loose server side events if you don’t architect your application correctly.</p>
+
+<ul>
+<li><strong>long-polling</strong>: between reconnection, servers side events may happens and if they aren’t persisted, those events will never reach your client.</li>
+<li><strong>websocket</strong>: Websocket are new and most if not all firewall will close them after some X idle times. Again, all server sides events will be lost</li>
+<li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
+<li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.
+<!--more--></li>
+</ul>
+
+<p><a href="https://github.com/LearnBoost/socket.io-client/issues/331">Query string management is messed up</a></p>
+
+<p><a href="https://github.com/LearnBoost/socket.io/wiki/Socket.IO-and-firewall-software">Socket.IO and firewall software</a></p>
+
+<p><a href="http://www.infoq.com/articles/Web-Sockets-Proxy-Servers">How HTML5 Web Sockets Interact With Proxy Servers</a></p>
+
+<p><img src="/images/blog/websocket-proxy.png" alt="Websocket Interact with proxy" /></p>
+
+<blockquote>
+<p>Using TLS/SSL is advised not only when you need to encrypt the traffic but also when you need to bypass proxy servers and firewalls, that otherwise will just block or not understand WebSockets connections.
+<a href="http://showmetheco.de/articles/2011/2/diving-into-html5-with-websockets-and-perl.html">Diving into HTML5 with WebSockets and Perl</a></p>
+</blockquote>
+
+<p>Socket.IO server configuring: <strong>match origin protocol</strong></p>
+
+<p><a href="https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO">https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO</a></p>
+
+<p><a href="http://www.letseehere.com/reverse-proxy-web-sockets">Reverse Proxy Web Sockets with Nginx and Socket.IO</a></p>
+</div>
+    <a slot="next" href="/blog/2012/03/08/for-my-dear-aby" title="For my darling: Aby">Newer</a>
+    <a slot="prev" href="/blog/2012/03/06/falling-leafs-life-system" title="落叶——中西医有感">Older</a>
+</am-article>

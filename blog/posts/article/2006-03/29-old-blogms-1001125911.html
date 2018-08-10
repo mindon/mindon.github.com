@@ -1,0 +1,355 @@
+
+<am-article time="2006-03-29 16:06:00 +0800" tags="[BlogMS]" slug="2006/03/29/old-blogms-1001125911">
+    <h1 slot="title">数据库汉字搜索</h1>
+    <div slot="content"><p>BlogMS original blog key: 1001125911, blog id: airoff
+History stat: 浏览/评论：535/1  ,  日期：2006年3月29日 16:06</p>
+
+<p><b><font color=#DC143C>MySQL5 之汉字首拼音字母查询存储过程</p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</font></b></p>
+
+<p>DROP TABLE IF EXISTS <code>hz2py</code>;</p>
+
+<p>CREATE TABLE <code>hz2py</code> (</p>
+
+<p><code>PY</code> char(1) character set utf8 NOT NULL,</p>
+
+<p><code>HZ</code> char(1) NOT NULL default &ldquo;,</p>
+
+<p>PRIMARY KEY  (<code>PY</code>)</p>
+
+<p>) ENGINE=InnoDB DEFAULT CHARSET=gbk;</p>
+
+<p>INSERT INTO <code>hz2py</code> (<code>PY</code>,<code>HZ</code>) VALUES</p>
+
+<p>(&lsquo;A&rsquo;,&lsquo;驁&rsquo;),</p>
+
+<p>(&lsquo;B&rsquo;,&lsquo;簿&rsquo;),</p>
+
+<p>(&lsquo;C&rsquo;,&lsquo;錯&rsquo;),</p>
+
+<p>(&rsquo;D&rsquo;,&lsquo;鵽&rsquo;),</p>
+
+<p>(&lsquo;E&rsquo;,&lsquo;樲&rsquo;),</p>
+
+<p>(&lsquo;F&rsquo;,&lsquo;鰒&rsquo;),</p>
+
+<p>(&lsquo;G&rsquo;,&lsquo;腂&rsquo;),</p>
+
+<p>(&lsquo;H&rsquo;,&lsquo;夻&rsquo;),</p>
+
+<p>(&lsquo;J&rsquo;,&lsquo;攈&rsquo;),</p>
+
+<p>(&lsquo;K&rsquo;,&lsquo;穒&rsquo;),</p>
+
+<p>(&lsquo;L&rsquo;,&lsquo;鱳&rsquo;),</p>
+
+<p>(&rsquo;M&rsquo;,&lsquo;旀&rsquo;),</p>
+
+<p>(&lsquo;N&rsquo;,&lsquo;桛&rsquo;),</p>
+
+<p>(&lsquo;O&rsquo;,&lsquo;漚&rsquo;),</p>
+
+<p>(&lsquo;P&rsquo;,&lsquo;曝&rsquo;),</p>
+
+<p>(&lsquo;Q&rsquo;,&lsquo;囕&rsquo;),</p>
+
+<p>(&lsquo;R&rsquo;,&lsquo;鶸&rsquo;),</p>
+
+<p>(&rsquo;S&rsquo;,&lsquo;蜶&rsquo;),</p>
+
+<p>(&rsquo;T&rsquo;,&lsquo;籜&rsquo;),</p>
+
+<p>(&lsquo;W&rsquo;,&lsquo;鶩&rsquo;),</p>
+
+<p>(&lsquo;X&rsquo;,&lsquo;鑂&rsquo;),</p>
+
+<p>(&lsquo;Y&rsquo;,&lsquo;韻&rsquo;),</p>
+
+<p>(&lsquo;Z&rsquo;,&lsquo;咗&rsquo;);</p>
+
+<p>CREATE FUNCTION <code>more</code>.<code>firstPY</code>(words varchar(255)) RETURNS mediumtext</p>
+
+<p>BEGIN</p>
+
+<p>declare fpy char(1);</p>
+
+<p>declare pc char(1);</p>
+
+<p>declare cc char(4);</p>
+
+<p>set @fpy = UPPER(left(words,1));</p>
+
+<p>set @pc = (CONVERT(@fpy USING gbk));</p>
+
+<p>set @cc = hex(@pc);</p>
+
+<p>if @cc &amp;gt;= &amp;quot;8140&amp;quot; and @cc &amp;lt;=&amp;quot;FEA0&amp;quot; then</p>
+
+<p>begin</p>
+
+<p>select PY into @fpy from HZ2PY where hz&amp;gt;=@pc limit 1;</p>
+
+<p>end;</p>
+
+<p>elseif Instr(&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;quot;,@fpy) = 0 then</p>
+
+<p>set @fpy = &amp;quot;&amp;quot;;</p>
+
+<p>end if;</p>
+
+<p>Return @fpy;</p>
+
+<p>END</p>
+
+<p><b><font color=#DC143C>MS-SQL-SERVER 之汉字笔画，首拼音字母查询存储过程</p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</font></b></p>
+
+<p>if exists (select * from dbo.sysobjects where id = object_id(N&rsquo;[dbo].[chineseBH]&lsquo;) and xtype in (N&rsquo;FN&rsquo;, N&rsquo;IF&rsquo;, N&rsquo;TF&rsquo;))</p>
+
+<p>drop function [dbo].[chineseBH]</p>
+
+<p>GO</p>
+
+<p>if exists (select * from dbo.sysobjects where id = object_id(N&rsquo;[dbo].[firstAllPY]&lsquo;) and xtype in (N&rsquo;FN&rsquo;, N&rsquo;IF&rsquo;, N&rsquo;TF&rsquo;))</p>
+
+<p>drop function [dbo].[firstAllPY]</p>
+
+<p>GO</p>
+
+<p>SET QUOTED_IDENTIFIER OFF</p>
+
+<p>GO</p>
+
+<p>SET ANSI_NULLS OFF</p>
+
+<p>GO</p>
+
+<p>create function chineseBH(@str nvarchar(4000))</p>
+
+<p>returns int</p>
+
+<p>as</p>
+
+<p>begin</p>
+
+<p>declare @word nchar(1),@n int</p>
+
+<p>set @n=0</p>
+
+<p>while len(@str)&amp;gt;0</p>
+
+<p>begin</p>
+
+<p>set @word=left(@str,1)</p>
+
+<p>&ndash;如果非汉字，笔划当0计</p>
+
+<p>set @n=@n+(case when unicode(@word) between 19968 and 19968+20901</p>
+
+<p>then (select top 1 id from (</p>
+
+<p>select 1 as id,N&rsquo;亅&rsquo; as word</p>
+
+<p>union all select 2,N&rsquo;阝&rsquo;</p>
+
+<p>union all select 3,N&rsquo;马&rsquo;</p>
+
+<p>union all select 4,N&rsquo;风&rsquo;</p>
+
+<p>union all select 5,N&rsquo;龙&rsquo;</p>
+
+<p>union all select 6,N&rsquo;齐&rsquo;</p>
+
+<p>union all select 7,N&rsquo;龟&rsquo;</p>
+
+<p>union all select 8,N&rsquo;齿&rsquo;</p>
+
+<p>union all select 9,N&rsquo;鸩&rsquo;</p>
+
+<p>union all select 10,N&rsquo;龀&rsquo;</p>
+
+<p>union all select 11,N&rsquo;龛&rsquo;</p>
+
+<p>union all select 12,N&rsquo;龂&rsquo;</p>
+
+<p>union all select 13,N&rsquo;龆&rsquo;</p>
+
+<p>union all select 14,N&rsquo;龈&rsquo;</p>
+
+<p>union all select 15,N&rsquo;龊&rsquo;</p>
+
+<p>union all select 16,N&rsquo;龍&rsquo;</p>
+
+<p>union all select 17,N&rsquo;龠&rsquo;</p>
+
+<p>union all select 18,N&rsquo;龎&rsquo;</p>
+
+<p>union all select 19,N&rsquo;龐&rsquo;</p>
+
+<p>union all select 20,N&rsquo;龑&rsquo;</p>
+
+<p>union all select 21,N&rsquo;龡&rsquo;</p>
+
+<p>union all select 22,N&rsquo;龢&rsquo;</p>
+
+<p>union all select 23,N&rsquo;龝&rsquo;</p>
+
+<p>union all select 24,N&rsquo;齹&rsquo;</p>
+
+<p>union all select 25,N&rsquo;龣&rsquo;</p>
+
+<p>union all select 26,N&rsquo;龥&rsquo;</p>
+
+<p>union all select 27,N&rsquo;齈&rsquo;</p>
+
+<p>union all select 28,N&rsquo;龞&rsquo;</p>
+
+<p>union all select 29,N&rsquo;麷&rsquo;</p>
+
+<p>union all select 30,N&rsquo;鸞&rsquo;</p>
+
+<p>union all select 31,N&rsquo;麣&rsquo;</p>
+
+<p>union all select 32,N&rsquo;龖&rsquo;</p>
+
+<p>union all select 33,N&rsquo;龗&rsquo;</p>
+
+<p>union all select 35,N&rsquo;齾&rsquo;</p>
+
+<p>union all select 36,N&rsquo;齉&rsquo;</p>
+
+<p>union all select 39,N&rsquo;靐&rsquo;</p>
+
+<p>union all select 64,N&rsquo;龘&rsquo;</p>
+
+<p>) T</p>
+
+<p>where word&amp;gt;=@word collate Chinese_PRC_Stroke_CS_AS_KS_WS</p>
+
+<p>order by id ASC) else 0 end)</p>
+
+<p>set @str=right(@str,len(@str)-1)</p>
+
+<p>end</p>
+
+<p>return @n</p>
+
+<p>end</p>
+
+<p>GO</p>
+
+<p>SET QUOTED_IDENTIFIER OFF</p>
+
+<p>GO</p>
+
+<p>SET ANSI_NULLS ON</p>
+
+<p>GO</p>
+
+<p>SET QUOTED_IDENTIFIER OFF</p>
+
+<p>GO</p>
+
+<p>SET ANSI_NULLS OFF</p>
+
+<p>GO</p>
+
+<p>create function firstAllPY(@str nvarchar(4000))</p>
+
+<p>returns nvarchar(4000)</p>
+
+<p>as</p>
+
+<p>begin</p>
+
+<p>declare @word nchar(1),@PY nvarchar(4000)</p>
+
+<p>set @PY=&rdquo;</p>
+
+<p>while len(@str)&amp;gt;0</p>
+
+<p>begin</p>
+
+<p>set @word=left(@str,1)</p>
+
+<p>&ndash;如果非汉字字符，返回原字符</p>
+
+<p>set @PY=@PY+(case when unicode(@word) between 19968 and 19968+20901</p>
+
+<p>then (select top 1 PY from (</p>
+
+<p>select &lsquo;A&rsquo; as PY,N&rsquo;驁&rsquo; as word</p>
+
+<p>union all select &lsquo;B&rsquo;,N&rsquo;簿&rsquo;</p>
+
+<p>union all select &lsquo;C&rsquo;,N&rsquo;錯&rsquo;</p>
+
+<p>union all select &rsquo;D&rsquo;,N&rsquo;鵽&rsquo;</p>
+
+<p>union all select &lsquo;E&rsquo;,N&rsquo;樲&rsquo;</p>
+
+<p>union all select &lsquo;F&rsquo;,N&rsquo;鰒&rsquo;</p>
+
+<p>union all select &lsquo;G&rsquo;,N&rsquo;腂&rsquo;</p>
+
+<p>union all select &lsquo;H&rsquo;,N&rsquo;夻&rsquo;</p>
+
+<p>union all select &lsquo;J&rsquo;,N&rsquo;攈&rsquo;</p>
+
+<p>union all select &lsquo;K&rsquo;,N&rsquo;穒&rsquo;</p>
+
+<p>union all select &lsquo;L&rsquo;,N&rsquo;鱳&rsquo;</p>
+
+<p>union all select &rsquo;M&rsquo;,N&rsquo;旀&rsquo;</p>
+
+<p>union all select &lsquo;N&rsquo;,N&rsquo;桛&rsquo;</p>
+
+<p>union all select &lsquo;O&rsquo;,N&rsquo;漚&rsquo;</p>
+
+<p>union all select &lsquo;P&rsquo;,N&rsquo;曝&rsquo;</p>
+
+<p>union all select &lsquo;Q&rsquo;,N&rsquo;囕&rsquo;</p>
+
+<p>union all select &lsquo;R&rsquo;,N&rsquo;鶸&rsquo;</p>
+
+<p>union all select &rsquo;S&rsquo;,N&rsquo;蜶&rsquo;</p>
+
+<p>union all select &rsquo;T&rsquo;,N&rsquo;籜&rsquo;</p>
+
+<p>union all select &lsquo;W&rsquo;,N&rsquo;鶩&rsquo;</p>
+
+<p>union all select &lsquo;X&rsquo;,N&rsquo;鑂&rsquo;</p>
+
+<p>union all select &lsquo;Y&rsquo;,N&rsquo;韻&rsquo;</p>
+
+<p>union all select &lsquo;Z&rsquo;,N&rsquo;咗&rsquo;</p>
+
+<p>) T</p>
+
+<p>where word&amp;gt;=@word collate Chinese_PRC_CS_AS_KS_WS</p>
+
+<p>order by PY ASC) else @word end)</p>
+
+<p>set @str=right(@str,len(@str)-1)</p>
+
+<p>end</p>
+
+<p>return @PY</p>
+
+<p>end</p>
+
+<p>GO</p>
+
+<p>SET QUOTED_IDENTIFIER OFF</p>
+
+<p>GO</p>
+
+<p>SET ANSI_NULLS ON</p>
+
+<p>GO</p>
+</div>
+    <a slot="next" href="/blog/2006/04/07/old-blogms-1001150541" title="中国排名[zt]">Newer</a>
+    <a slot="prev" href="/blog/2006/03/21/old-blogms-1001101942" title="未完成的日志…">Older</a>
+</am-article>

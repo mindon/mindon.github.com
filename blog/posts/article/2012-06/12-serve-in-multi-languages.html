@@ -1,0 +1,44 @@
+
+<am-article time="2012-06-12 23:00:00 +0800" tags="[Web-Tech Mindon]" slug="2012/06/12/serve-in-multi-languages">
+    <h1 slot="title">Serve in Multi-Languages</h1>
+    <div slot="content"><p>When we want our product &ndash; a webpage for example &ndash; servered in multi-languages, what would we do?</p>
+
+<p>Simple once working method is copy-n-translate:  Making a full copy of original language resource, translate and replace the texts. It&rsquo;s a hard and dirty work.</p>
+
+<p>Unless a few simple pages, no one will do it in this way nowdays.</p>
+
+<p>We like to use text-id and text resources in our projects: desktop applications, J2EE projects, php websites &hellip;</p>
+
+<p>But all of these are working in the same mode: Template + Text-Resources + Tool = Result</p>
+
+<!--more-->
+
+<p><img src="/images/blog/multi-langs.png" alt="" /></p>
+
+<p>(pro: proposition, con: contradition)</p>
+
+<h2>Template</h2>
+
+<ul>
+<li><strong>Raw language text as text-resource-id</strong></li>
+</ul>
+
+<p>pro: Readable, directly simple, no extra work but replacement. One language file is template itself.</p>
+
+<p>con: Dirty work, if same text appears, you have to manual replace them all.</p>
+
+<p>#q/s#: Could we make maual-process auto?</p>
+
+<ul>
+<li><strong>Named ID as text-resource-id</strong></li>
+</ul>
+
+<p>pro: Avoid repeat work on same phrases or sentences.</p>
+
+<p>con: Named IDs&rsquo; management, unintuitive templates using named IDs.</p>
+
+<p>#q/s#: Could we auto-generate the named IDs and avoid unintuitive templates?</p>
+</div>
+    <a slot="next" href="/blog/2012/06/14/lost-in-the-tech-way" title="Lost in the Tech Way">Newer</a>
+    <a slot="prev" href="/blog/2012/06/11/build-node-expat-under-windows" title="Build Node-Expat Under Windows">Older</a>
+</am-article>

@@ -1,0 +1,81 @@
+
+<am-article time="2005-08-04 10:38:00 +0800" tags="[BlogMS]" slug="2005/08/04/old-blogms-1000499939">
+    <h1 slot="title">php5 in tomcat</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000499939, blog id: airoff
+History stat: 浏览/评论：192/0  ,  日期：2005年8月4日 10:38</p>
+
+<p>use php-5.1.0b3-Win32 &amp; pecl-5.1.0b3-Win32 and Apache Tomcat 5.0.24 Server in win2000(win2k, windows2000):</p>
+
+<p>1, download php-5.1.0b3-Win32.zip &amp; pecl-5.1.0b3-Win32.zip from  <a href="http://www.php.net/.">http://www.php.net/.</a></p>
+
+<p>2, unzip php-5.1.0b3-Win32.zip into a folder named such as &amp;quot;d:\php&amp;quot;;</p>
+
+<!--more-->
+
+<p>3, unzip pecl-5.1.0b3-Win32.zip into a new folder under &amp;quot;d:\php&amp;quot; named &amp;quot;pecl&amp;quot;, i.e. &amp;quot;d:\php\pecl&amp;quot;;</p>
+
+<p>4, rename the file &amp;quot;php.ini.dist&amp;quot; in &amp;quot;d:\php&amp;quot; to &amp;quot;php.ini&amp;quot;;</p>
+
+<p>5, copy and rename &amp;quot;d:\php\pecl\php5servlet.dll&amp;quot; to &amp;quot;Tomcat\bin\php5srvlt.dll&amp;quot;, because in the packet phpsrvlt.jar the net/php/reflect.properties the configuration is library=php5srvlt, and the same with net/php/servlet.properties.</p>
+
+<p>6, copy &amp;quot;d:\php\pecl\phpsrvlt.jar&amp;quot; to &amp;quot;Tomcat\common\lib&amp;quot;;</p>
+
+<p>7, modify &amp;quot;Tomcat\conf\web.xml&amp;quot;</p>
+
+<p>add php servlet configuration:</p>
+
+<hr />
+
+<p>&amp;lt;servlet&amp;gt;</p>
+
+<p>&amp;lt;servlet-name&amp;gt;php&amp;lt;/servlet-name&amp;gt;</p>
+
+<p>&amp;lt;servlet-class&amp;gt;net.php.servlet&amp;lt;/servlet-class&amp;gt;</p>
+
+<p>&amp;lt;load-on-startup&amp;gt;3&amp;lt;/load-on-startup&amp;gt;</p>
+
+<p>&amp;lt;/servlet&amp;gt;</p>
+
+<hr />
+
+<p>and add its servlet-map as following:</p>
+
+<hr />
+
+<p>&amp;lt;servlet-mapping&amp;gt;</p>
+
+<p>&amp;lt;servlet-name&amp;gt;php&amp;lt;/servlet-name&amp;gt;</p>
+
+<p>&amp;lt;url-pattern&amp;gt;*.php&amp;lt;/url-pattern&amp;gt;</p>
+
+<p>&amp;lt;/servlet-mapping&amp;gt;</p>
+
+<hr />
+
+<p>8, set environment variables</p>
+
+<p>PHP_HOME=d:\php</p>
+
+<p>LD_LIBRARY_PATH=%PHP_HOME%/libs;%PHP_HOME%/pecl</p>
+
+<p>append %PHP_HOME%;;%PHP_HOME%/pecl; to the PATH variable.</p>
+
+<p>9, restart Tomcat</p>
+
+<ol>
+<li>prepare a test.php only with following single line</li>
+</ol>
+
+<hr />
+
+<p>&amp;lt;?php phpinfo(); ?&amp;gt;</p>
+
+<hr />
+
+<p>then put it into &amp;quot;Tomcat\webapps\Root&amp;quot;</p>
+
+<p>try to access the test.php in your browser.</p>
+</div>
+    <a slot="next" href="/blog/2005/08/08/old-blogms-1000511014" title="理辨">Newer</a>
+    <a slot="prev" href="/blog/2005/08/01/old-blogms-1000493558" title="拉阔爱的人">Older</a>
+</am-article>

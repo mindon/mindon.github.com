@@ -1,0 +1,44 @@
+
+<am-article time="2012-03-22 23:58:00 +0800" tags="[Mindon Web-Tech]" slug="2012/03/22/magic-code-switching-comment-syntax">
+    <h1 slot="title">Magic Code Switching Comment Syntax</h1>
+    <div slot="content"><p>This a kind of c-style code comments to switch two blocks of code for debug or testing.</p>
+
+<p>/<em>/
+//&hellip; Section A (commented)
+/</em>/
+//&hellip; Section B (working)
+//*/</p>
+
+<p>By adding one single / at the beginning, it turns into:</p>
+
+<p>//<em>/
+//&hellip; Section A (working)
+/</em>/
+//&hellip; Section B (commented)
+//*/</p>
+
+<p>Another simple section comment:</p>
+
+<p>//<em>/
+//&hellip; working
+//</em>/</p>
+
+<p>remove a single / at the beginning, it turns into:</p>
+
+<p>/<em>/
+//&hellip; commented
+//</em>/</p>
+
+<ul>
+<li><p>Curiosity</p></li>
+
+<li><p>Passion</p></li>
+
+<li><p>Focus</p></li>
+
+<li><p>Fun</p></li>
+</ul>
+</div>
+    <a slot="next" href="/blog/2012/03/24/how-to-write-a-mail-in-html" title="How to write a mail in HTML">Newer</a>
+    <a slot="prev" href="/blog/2012/03/21/javascript-micro-templating" title="Javascript Micro-Templating">Older</a>
+</am-article>

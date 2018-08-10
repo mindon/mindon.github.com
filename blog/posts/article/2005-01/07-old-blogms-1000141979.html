@@ -1,0 +1,171 @@
+
+<am-article time="2005-01-07 11:01:00 +0800" tags="[BlogMS]" slug="2005/01/07/old-blogms-1000141979">
+    <h1 slot="title">Use XML & XPath In Flash</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000141979, blog id: airoff
+History stat: 浏览/评论：260/0  ,  日期：2005年1月7日 11:01</p>
+
+<p><font color=#00008B><font size=2 style="line-height:14pt"></p>
+
+<p>/* mindon actionscript for flash 7.0 or upper</p>
+
+<ul>
+<li><p>@date    07/29, 2004</p></li>
+
+<li><p>@author      Feng Rongjun from Shenzhen China</p></li>
+
+<li><p>@e-mail      iseasky@hotmail.com</p></li>
+</ul>
+
+<p>*/</p>
+
+<p>import com.xfactorstudio.xml.xpath.*;</p>
+
+<p>/* load xml into a textarea component with stylesheet */</p>
+
+<p>function styleXML(areatxt, xmlfile, cssfile)</p>
+
+<p>{</p>
+
+<p>var areatxt, xmlfile, cssfile;</p>
+
+<p>try {</p>
+
+<p>//init TextArea component</p>
+
+<p>areatxt.html = true;</p>
+
+<p>areatxt.wordWrap = true;</p>
+
+<p>areatxt.multiline = true;</p>
+
+<p>areatxt.label.condenseWhite=true;</p>
+
+<p>//load css</p>
+
+<p>if(cssfile) {</p>
+
+<p>var csstyle = new TextField.StyleSheet();</p>
+
+<p>csstyle.load(cssfile);</p>
+
+<p>areatxt.styleSheet = csstyle;</p>
+
+<p>}</p>
+
+<p>//load XML CONTENT</p>
+
+<p>if(xmlfile) {</p>
+
+<p>var xmlc = new XML();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>areatxt.text = xmlc;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/* load xml file */</p>
+
+<p>_global.xmldocs = {};</p>
+
+<p>function loadXML(xmlfile, xmlfunc)</p>
+
+<p>{</p>
+
+<p>var xmlfile, xmlfunc;</p>
+
+<p>try {</p>
+
+<p>if(xmlfile &amp;&amp; xmlfunc &amp;&amp; typeof xmlfunc == &amp;quot;function&amp;quot;) {</p>
+
+<p>var xmlc = new XPathDocument();</p>
+
+<p>xmlc.ignoreWhite = false;</p>
+
+<p>xmlc.load(xmlfile);</p>
+
+<p>xmlc.onLoad = function(success) {</p>
+
+<p>if(success) {</p>
+
+<p>xmldocs[xmlfile] = this;</p>
+
+<p>xmlfunc(this);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch(e) {</p>
+
+<p>trace(e.description);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/ loader example</p>
+
+<p>function xmlLoader(xdoc)</p>
+
+<p>{</p>
+
+<p>var xdoc;</p>
+
+<p>if(xdoc) {</p>
+
+<p>var nod = xdoc.selectSingleNode(&amp;quot;/mindon/name&amp;quot;);</p>
+
+<p>if(nod) {</p>
+
+<p>if(String(nod.stringValue())==&amp;quot;derek.f&amp;quot;) {</p>
+
+<p>trace(&amp;quot;true&amp;quot;);</p>
+
+<p>} else {</p>
+
+<p>trace(nod.stringValue());</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&amp;quot;cannot find node mindon/name&amp;quot;);</p>
+
+<p>}</p>
+
+<p>} else {</p>
+
+<p>trace(&amp;quot;xml read fail&amp;quot;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>//*/</p>
+
+<p></font></font></p>
+</div>
+    <a slot="next" href="/blog/2005/01/07/old-blogms-1000141854" title="SVG Color Names & RGB Values">Newer</a>
+    <a slot="prev" href="/blog/2005/01/07/old-blogms-1000141972" title="Corel Draw Script">Older</a>
+</am-article>

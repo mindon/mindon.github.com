@@ -1,0 +1,145 @@
+
+<am-article time="2005-01-07 10:57:00 +0800" tags="[BlogMS]" slug="2005/01/07/old-blogms-1000141972">
+    <h1 slot="title">Corel Draw Script</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000141972, blog id: airoff
+History stat: 浏览/评论：424/0  ,  日期：2005年1月7日 10:57</p>
+
+<p>REM 90 Deg. Swirl with 10 step blend      Font used: AvantGarde Bk BT</p>
+
+<p>WITHOBJECT &amp;quot;CorelDraw.Automation.10&amp;quot;</p>
+
+<p>.StartOfRecording</p>
+
+<p>.SuppressPainting</p>
+
+<p>.RecorderStorePreselectedObjects TRUE</p>
+
+<p>REM 选择物体</p>
+
+<p>.RecorderSelectObjectByIndex TRUE, 1</p>
+
+<p>REM 旋转 Angel,,Center H,Center V</p>
+
+<p>.RotateObject 90000000, TRUE, 0, 0</p>
+
+<p>REM 拷贝</p>
+
+<p>.DuplicateObject 20000,30000</p>
+
+<p>REM	.ApplyLensEffect 10, FALSE, FALSE, FALSE, 0, 0, 500</p>
+
+<p>.ApplyLensEffect 0, TRUE, TRUE, FALSE, 22061944, 1242708, 20971701</p>
+
+<!--more-->
+
+<p>REM 选择物体</p>
+
+<p>.RecorderSelectObjectByIndex TRUE, 2</p>
+
+<p>REM 无填充</p>
+
+<p>.ApplyNoFill</p>
+
+<p>REM 移动</p>
+
+<p>.MoveObject 222000,333333</p>
+
+<p>REM 轮廓线  ,,Line Caps,Corners,,,,,,Behide file,(1 Square,2 Round),Color,Scale with Image</p>
+
+<p>REM	.ApplyOutline 1270, 1, 1, 1, 100, 0, 0, -1, -1, FALSE, 1, 0, TRUE</p>
+
+<p>.ApplyOutline 508, 1, 1, 1, 100, 0, 0, -1, -1, FALSE, 1, 0, TRUE</p>
+
+<p>REM 颜色 2,C,M,Y,K</p>
+
+<p>.StoreColor 2, 100, 100, 0, 0</p>
+
+<p>.SetOutlineColor</p>
+
+<p>REM 颜色 2,C,M,Y,K,C,M,Y,K</p>
+
+<p>.StoreColor 2, 0, 0, 100, 100, 0, 0, 100,  0</p>
+
+<p>.StoreColor 2, 0, 60, 100, 0, 0, 0, 100,  100</p>
+
+<p>REM 渐变填充</p>
+
+<p>REM 参数 Type,H offset, V offset, Angel(90.0),Steps,Color Blend(Two Color),From-To,Mid-point</p>
+
+<p>.ApplyFountainFill 0, 0, 0, 900, 256, 0, 0, 50</p>
+
+<p>REM 拉伸 H,,V,,,,</p>
+
+<p>.StretchObject 1, 2, 3, 1, FALSE, FALSE, 3</p>
+
+<p>REM	.RecorderSelectPreselectedObjects TRUE</p>
+
+<p>REM	.RecorderSelectObjectsByIndex FALSE, 2, -1, -1, -1, -1</p>
+
+<p>REM 混合 Steps,Angel</p>
+
+<p>REM	.ApplyBlend TRUE, 5, 50000000, TRUE, 0, FALSE, FALSE, 0, 0, 0, TRUE, TRUE, FALSE, FALSE, 0, 0, 0, 0</p>
+
+<p>REM	.Group</p>
+
+<p>REM 	.StoreColor 2, 0, 60, 100, 0</p>
+
+<p>REM	.ApplyUniformFillColor</p>
+
+<p>.StoreColor 2, 100, 100, 0, 0, 0, 0, 100,  0</p>
+
+<p>.StoreColor 2, 0, 100, 0, 0, 0, 0, 100,  46</p>
+
+<p>.StoreColor 2, 100, 100, 0, 0, 0, 0, 100,  100</p>
+
+<p>.ApplyFountainFill 0, 0, 0, 900, 256, 0, 3, 50</p>
+
+<p>.ApplyTextureFill &amp;quot;&amp;quot;, &amp;quot;Sky 5 Colors&amp;quot;, &amp;quot;Sky 5 Colors&amp;quot;</p>
+
+<p>.StoreColor 2, 0, 60, 100, 0</p>
+
+<p>.StoreColor 2, 0, 60, 100, 0</p>
+
+<p>.StoreColor 2, 0, 0, 0, 100</p>
+
+<p>.ApplyExtrude 4, 0, 0, 5, -177545, 62229, FALSE, 12, 100, 5, 58, 0, 0, 2</p>
+
+<p>.RecorderObjectScaleInfo 51942992, 17297388, 330197, -330197</p>
+
+<p>.CreateRectangle 0, 0, 0, 0, 0</p>
+
+<p>.StoreColor 2, 0, 100, 100, 0</p>
+
+<p>.StoreColor 2, 100, 100, 0, 0</p>
+
+<p>.StoreColor 2, 0, 0, 0, 0</p>
+
+<p>.ApplyContour 2, 1523, 5, 0</p>
+
+<p>.RecorderSelectObjectByIndex TRUE, 3</p>
+
+<p>.OrderToBack</p>
+
+<p>.RecorderObjectScaleInfo 4317989, 4317989, -23444161, 6146773</p>
+
+<p>.CreateEllipse 0, 0, 0, 0, 270000000, 270000000, TRUE</p>
+
+<p>.RecorderSelectObjectByIndex TRUE, 4</p>
+
+<p>.RecorderApplyPerspective 1, 0, -36829, -439927, -36829, 439927, 36321, 366013, 36321, -366013, 0, 0, 0, 0, 0, 0</p>
+
+<p>.ApplyUniformFillColor</p>
+
+<p>.OrderBackOne</p>
+
+<p>.SkewObject -2000000, 0, 6</p>
+
+<p>.ResumePainting</p>
+
+<p>.EndOfRecording</p>
+
+<p>END WITHOBJECT</p>
+</div>
+    <a slot="next" href="/blog/2005/01/07/old-blogms-1000141979" title="Use XML & XPath In Flash">Newer</a>
+    <a slot="prev" href="/blog/2005/01/07/old-blogms-1000141910" title="Struts ActionForm字段校验(JAVA)">Older</a>
+</am-article>

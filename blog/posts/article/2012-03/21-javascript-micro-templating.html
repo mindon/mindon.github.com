@@ -1,0 +1,153 @@
+
+<am-article time="2012-03-21 10:52:00 +0800" tags="[Web-Tech]" slug="2012/03/21/javascript-micro-templating">
+    <h1 slot="title">Javascript Micro-Templating</h1>
+    <div slot="content"><p>This is a modification version of <strong>John Resig</strong>&rsquo;s <a href="http://ejohn.org/blog/javascript-micro-templating/">Javascript Micro-Templating</a></p>
+
+<p>The modifications are mostly about filters for field values.</p>
+
+<p>I like this javascript mico-templating code from <a href="http://ejohn.org/"><strong>John Resig</strong></a>, it&rsquo;s really simple, easy-to-use.</p>
+
+<blockquote>
+<p>I&rsquo;ve had a little utility that I&rsquo;ve been kicking around for some time now that I&rsquo;ve found to be quite useful in my JavaScript application-building endeavors. It&rsquo;s a super-simple templating function that is fast, caches quickly, and is easy to use. I have a couple tricks that I use to make it real fun to mess with.
+<!--more--></p>
+
+<p>Here&rsquo;s the source code to the templating function (a more-refined version of this code will be in my upcoming book Secrets of the <a href="http://jsninja.com/">JavaScript Ninja</a>):</p>
+</blockquote>
+
+<p>original code:</p>
+
+<p>// Simple JavaScript Templating
+// John Resig - <a href="http://ejohn.org/">http://ejohn.org/</a> - MIT Licensed
+(function(){
+var cache = {};</p>
+
+<p>this.tmpl = function tmpl(str, data){
+// Figure out if we&rsquo;re getting a template, or if we need to
+// load the template - and be sure to cache the result.
+var fn = !/\W/.test(str) ?
+cache[str] = cache[str] ||
+tmpl(document.getElementById(str).innerHTML) :</p>
+
+<p>// Generate a reusable function that will serve as a template
+// generator (and which will be cached).
+new Function(&ldquo;obj&rdquo;,
+&ldquo;var p=[],print=function(){p.push.apply(p,arguments);};&rdquo; +</p>
+
+<p>// Introduce the data as local variables using with(){}
+&ldquo;with(obj){p.push(&lsquo;&rdquo; +</p>
+
+<p>// Convert the template into pure JavaScript
+str
+.replace(/[\r\t\n]/g, &ldquo; &ldquo;)
+.split(&rdquo;&lt;%&ldquo;).join(&rdquo;\t&rdquo;)
+.replace(/((^|%&gt;)[^\t]<em>)&rsquo;/g, &ldquo;$1\r&rdquo;)
+.replace(/\t=(.</em>?)%&gt;/g, &ldquo;&lsquo;,$1,&rsquo;&rdquo;)
+.split(&ldquo;\t&rdquo;).join(&ldquo;&lsquo;);&rdquo;)
+.split(&ldquo;%&gt;&rdquo;).join(&ldquo;p.push(&rsquo;&rdquo;)
+.split(&ldquo;\r&rdquo;).join(&rdquo;\&rsquo;&ldquo;)
++ &ldquo;&lsquo;);}return p.join(&rdquo;);&ldquo;);</p>
+
+<p>// Provide some basic currying to the user
+return data ? fn( data ) : fn;
+};
+})();</p>
+
+<p>modified code:</p>
+
+<p>// Simple JavaScript Templating
+// John Resig - <a href="http://ejohn.org/">http://ejohn.org/</a> - MIT Licensed
+(function(){
+var cache = {};</p>
+
+<dl>
+<dt>.replace(/&gt;/g,&rsquo;&amp;gt;&rsquo;).replace(/[ ]{2}/g, &lsquo;&amp;nbsp; &lsquo;)</dt>
+<dd>v;
+}
+, br: function(v) {
+return typeof v == &lsquo;string&rsquo;
+? v.replace(/\n{2,}/g, &lsquo;<br/><br/>&rsquo;).replace(/\n/g, &lsquo;<br/>&rsquo;)</dd>
+<dd>v;
+}
+};</dd>
+</dl>
+
+<dl>
+<dt>sp; &lsquo;)</dt>
+<dd>v;
+}
+, br: function(v) {
+return typeof v == &lsquo;string&rsquo;
+? v.replace(/\n{2,}/g, &lsquo;<br/><br/>&rsquo;).replace(/\n/g, &lsquo;<br/>&rsquo;)</dd>
+<dd>v;
+}
+};</dd>
+</dl>
+
+<p>// Updated by mindon@gmail.com Nov. 3, 2011 ( options parameter append )
+this.tmpl = function tmpl(str, data, opt){
+var _t, _f; // added by Mindon</p>
+
+<p>// Figure out if we&rsquo;re getting a template, or if we need to
+// load the template - and be sure to cache the result.
+var fn = !/\W/.test(str) ?
+cache[str] = cache[str] ||
+tmpl(document.getElementById(str).innerHTML, 0, opt) : // updated by Mindon</p>
+
+<p>// Appended by Mindon
+( (_t = opt &amp;&amp; opt.html ? 1: &lsquo;tmplCall.nohtml&rsquo;) &amp;&amp;
+(_f = opt &amp;&amp; opt.fields ? &lsquo;(&rsquo; +opt.fields +&lsquo;)(d)&rsquo; : 1) &amp;&amp;
+((_t===1&amp;&amp;(_t=0)) || (_f===1&amp;&amp;(_f=0))) &amp;&amp; 0
+// fields: function(){return {fieldName: handlefn(v){}}}
+) ||</p>
+
+<p>// Generate a reusable function that will serve as a template
+// generator (and which will be cached).
+new Function(&ldquo;d&rdquo;,
+&ldquo;var p=[],print=function(){p.push.apply(p,arguments);}, _f=&rdquo; + _f +&ldquo;, _t=&rdquo;
++_t +&ldquo;,_v=function(k,v){&rdquo;
++&lsquo;return tmplCall.br(&rsquo;
++(_f?&lsquo;_f[k]?_f[k](&rsquo;:&ldquo;) +(_t?&lsquo;_t(v)&rsquo;:&lsquo;v&rsquo;) +(_f?&lsquo;):&rsquo;
++(_t?&lsquo;_t(v)&rsquo;:&lsquo;v&rsquo;):&rdquo;) +&ldquo;)};&rdquo; + // updated</p>
+
+<p>// Introduce the data as local variables using with(){}
+&ldquo;p.push(&lsquo;&rdquo; +</p>
+
+<p>// Convert the template into pure JavaScript
+str.replace(/[\r\t\n]/g, &ldquo; &ldquo;)
+.split(&rdquo;&lt;%&ldquo;).join(&rdquo;\t&rdquo;)
+.replace(/((^|%&gt;)[^\t]<em>)&rsquo;/g, &ldquo;$1\r&rdquo;)
+.replace(/\t=(.</em>?)%&gt;/g, &ldquo;&lsquo;,_v(&rsquo;$1&rsquo;,d[&lsquo;$1&rsquo;]),&lsquo;&rdquo;) // updated
+.split(&ldquo;\t&rdquo;).join(&ldquo;&rsquo;);&rdquo;)
+.split(&ldquo;%&gt;&rdquo;).join(&ldquo;p.push(&lsquo;&rdquo;)
+.split(&ldquo;\r&rdquo;).join(&rdquo;\&rsquo;&ldquo;)
++ &ldquo;&lsquo;);return p.join(&rdquo;);&ldquo;);</p>
+
+<p>// Provide some basic currying to the user
+return data ? fn( data ) : fn;
+};
+})();</p>
+
+<p>Templates example:</p>
+
+<script type="text/html" id="item_tmpl">
+<div id="<%=id%>" class="<%=(i % 2 == 1 ? " even" : "")%>">
+<div class="grid_1 alpha right">
+<img class="righted" src="<%=profile_image_url%>"/>
+</div>
+<div class="grid_6 omega contents">
+<p><b><a href="/<%=from_user%>"><%=from_user%></a>:</b> <%=text%></p>
+</div>
+</div>
+</script>
+
+<p>Another with inline script:</p>
+
+<script type="text/html" id="user_tmpl">
+<% for ( var i = 0; i < users.length; i++ ) { %>
+<li><a href="<%=users[i].url%>"><%=users[i].name%></a></li>
+<% } %>
+</script>
+</div>
+    <a slot="next" href="/blog/2012/03/22/magic-code-switching-comment-syntax" title="Magic Code Switching Comment Syntax">Newer</a>
+    <a slot="prev" href="/blog/2012/03/17/redis-remote-dictionary-server" title="Redis: REmote DIctionary Server">Older</a>
+</am-article>

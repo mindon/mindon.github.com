@@ -1,0 +1,79 @@
+
+<am-article time="2013-03-23 21:42:00 +0800" tags="[Mindon Mobile-App]" slug="2013/03/23/blackberry-cascades-native-app-development-tips">
+    <h1 slot="title">Cascades Native App Development Tips</h1>
+    <div slot="content"><p>Google+ Community - <a href="https://plus.google.com/communities/102767584651216621172">Blackberry 10 X-Dev : Cascades &amp; WebWorks for BB10</a></p>
+
+<p>News: <strong>BlackBerry Z10 Officially Available on AT&amp;T</strong></p>
+
+<blockquote>
+<p>The BlackBerry Z10 smartphone is now officially available on AT&amp;T.</p>
+
+<p>The struggling manufacturer — which is hopeful its new flagship device will ignite a company resurgence — announced on Friday the Z10 can finally be activated on AT&amp;T. It costs $199 with a two-year contract.</p>
+
+<p>BlackBerry, formerly known as Research In Motion (RIM), also sent a tweet at midnight ET announcing Best Buy will start selling the device on Friday for $199 with a two-year contract.</p>
+</blockquote>
+
+<p><a href="http://us.blackberry.com/smartphones/blackberry-z10.html">BlackBerry Z10: Built to Keep You Moving</a></p>
+
+<h2>Using proxy with the command line tools</h2>
+
+<p>Remember to use &ndash;proxyhost &amp; -proxyport as the FIRST two parameters when using command line tools from blackberry.tools.SDK.
+<!--more--></p>
+
+<p>example:</p>
+
+<p>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 &hellip;.</p>
+
+<p>Download the Command-line Tools from <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
+
+<p>Unzip and set the path blackberry.tools.SDK/bin to env. variable PATH then you could use the apk2bar, blackberry-signer or other command line tools.</p>
+
+<h2>How to signed the .bar through a proxy?</h2>
+
+<p>Use <strong>batchbar-signer</strong> won&rsquo;t work. you could use blackberry-signer directly.</p>
+
+<p>Example:</p>
+
+<p>blackberry-signer -proxyhost 12.34.56.78 -proxyport 8080 -storepass your_store_pwd demo.bar</p>
+
+<p>the command tools could be found <a href="https://developer.blackberry.com/android/tools/">https://developer.blackberry.com/android/tools/</a></p>
+
+<h2><strong>config.pri</strong> NOT including sources &amp; headers, make failed error</h2>
+
+<p>When building project in QNX Momentics IDE, If nothing to compile. It may be lack of sources &amp; headers in your auto-generated config.pri</p>
+
+<p>This is caused by incorrect source folder settings, here&rsquo;s the steps to solve the problem:</p>
+
+<ol>
+<li><p>Right click on the project in &ldquo;Project Explorer&rdquo;, choose &ldquo;Properties&rdquo; at the bottom</p></li>
+
+<li><p>On the left top input field with tips &ldquo;type filter text&rdquo;, input &ldquo;paths&rdquo;</p></li>
+
+<li><p>Click on the item &ldquo;Paths and Symbols&rdquo; under &ldquo;C/C++ General&rdquo;</p></li>
+
+<li><p>Activate the 3rd tab named &ldquo;Source Location&rdquo;</p></li>
+
+<li><p>add the proper source folder by Click &ldquo;Add Folder&rdquo; and choose &ldquo;src&rdquo;</p></li>
+
+<li><p>&ldquo;Delete the&rdquo; incorrect source folder</p></li>
+</ol>
+
+<h2><strong>config.pri</strong> not auto generated or updated?</h2>
+
+<p>Update your SDK to 10.0.10+</p>
+
+<h2>Steps to test an app before submit to (Blackberry) App World</h2>
+
+<ol>
+<li><p>Upload app and place in DRAFT mode.</p></li>
+
+<li><p>Add user to the sandbox (BBID).</p></li>
+
+<li><p>Enter (Blackberry) <strong>App World</strong> on device, swipe down to see the app menu, choose <strong>settings</strong>, click <strong>Development Mode</strong>, enter content id.</p></li>
+</ol>
+
+<p><i id="link-tags">Blackberry Z10;Blackberry</i></p>
+</div>
+    <a slot="next" href="/blog/2013/03/23/how-to-heal-sprained-ankle" title="How to Heal Sprained Ankle">Newer</a>
+    <a slot="prev" href="/blog/2013/03/02/ssh-connect-to-bb10-device" title="SSH Connect to BB10 Device">Older</a>
+</am-article>

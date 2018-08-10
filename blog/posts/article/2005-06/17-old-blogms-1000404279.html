@@ -1,0 +1,45 @@
+
+<am-article time="2005-06-17 13:45:00 +0800" tags="[BlogMS]" slug="2005/06/17/old-blogms-1000404279">
+    <h1 slot="title">应用界面方案（WEB|FLASH）</h1>
+    <div slot="content"><p>BlogMS original blog key: 1000404279, blog id: airoff
+History stat: 浏览/评论：414/1  ,  日期：2005年6月17日 13:45</p>
+
+<p>应用程序的界面对于程序员来说是个噩梦，在运行效率要求不是特别高的情况下，可以考虑这样一些方案，这也是我做应用软件这一年多来摸索过来的：</p>
+
+<hr />
+
+<p><b>第一方案：使用WebBrowser控件，界面使用html页面完全替代。</b></p>
+
+<!--more-->
+
+<p>应用程序只是作为数据和逻辑处理的控制。这在VB里面是很容易实现的，通过WebBrowser控件，可以调用页面中的脚本。页面中的window在VB中对应 wbBrower.document.parentWindow。也就是说，页面中的任何元素都是可以直接访问的。而至于页面的响应，我曾经采用的方法就是，提交一个带特殊标志的无效URL（也可以是有效的），WebBrowser控件的事件BeforeNavigator2中捕捉这个URL，设置Cancle=True来阻止其浏览。这样一来就实现了应用程序与界面的交互。</p>
+
+<p>页面的内容可以由应用程序动态生成，也就是说应用程序相当于一个“服务器”，html页面就是“客户端”。而页面也可以放到一个资源动态库直接调用。</p>
+
+<p>其初始化可以在OnDocumentComplete事件进行。</p>
+
+<p>这样的方案缺点是采用了浏览器控件，其稳定性和资源占用状况都不太理想。优点是，非常灵活，可以使用页面的任何元素，如flash,gif动画，视频和声音都不用自己单独处理。甚至是svg都可以采用，只要是装了相应的控件，也可以调用java applet。</p>
+
+<p>这个方案的内容也可以使单一的flash。</p>
+
+<p>这个方案我在VB中试验过，是完全是行得通的。</p>
+
+<hr />
+
+<p><b>第二方案：直接采用FLASH控件。</b></p>
+
+<p>其实界面的方案只要实现了和应用程序间的数据和命令等信息交互就可以了。单独采用flash控件的方案，在VB和VC已经得到了应用。</p>
+
+<p>首先，应用程序对flash的控制，可以通过SetVariable以及TGotoAndPlay或者TGotoAndStop这样的方法实现，我觉得SetVariable就足够了，在Flash中使用ActionScript的watch或者其他的途径来监控变量的变化，然后做出相应的界面处理及可。</p>
+
+<p>其次，flash可以通过fscommand(command, arg)来给应用程序发消息，应用程序通过flash控件的OnFSCommand事件获取消息然后做出相应的处理。</p>
+
+<p>其初始化可以在OnReadyStateChange事件进行。</p>
+
+<p>这个方案效率比页面方案好一些，缺点是无法支持那么多的界面元素，如gif动画等，还可能因为界面的复杂程度太大而占用过多的CPU资源。优点是，界面效果很好，可以采用一切flash的动画效果，响应速度也可以，界面可以继承到单一文件中，也可以使用xml来配置动态加载。</p>
+
+<p>我对这个方案很有兴趣，后来发现macromedia的公司推出的flex其实就是使用xml来实现界面的。但直接使用普通的swf文件配合常用的Dephi,VC,VB则更有应用前景。而我也曾想过能否直接使用SVG控件来实现，但发觉SVG控件没有提供足够的事件和控制，其实要是使用SVG的话，那就更好了，完全是xml编写的界面，再和应用交互……</p>
+</div>
+    <a slot="next" href="/blog/2005/06/22/old-blogms-1000413332" title="追求什么，丢弃什么">Newer</a>
+    <a slot="prev" href="/blog/2005/06/10/old-blogms-1000390002" title="读者笔记">Older</a>
+</am-article>

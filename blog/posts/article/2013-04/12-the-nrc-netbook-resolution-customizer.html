@@ -1,0 +1,42 @@
+
+<am-article time="2013-04-12 22:35:00 +0800" tags="[Mindon]" slug="2013/04/12/the-nrc-netbook-resolution-customizer">
+    <h1 slot="title">The NRC: Netbook Resolution Customizer</h1>
+    <div slot="content"><p>I have a netbook HP mini 2140 with screen resolution 1024x576. It not enough for many daily work now. My Nexus 7 is 1280×800 pixels!</p>
+
+<p>How could I change the netbook resolution to make it easier for my development?</p>
+
+<p>First, I found the software &ndash; NRC: <strong>Netbook Resolution Customizer</strong> 1.0.8. It&rsquo;s amazing, and works fine for me. Though sometimes it is not as stable as I expected.</p>
+
+<p>There&rsquo;s another solution by editing the register of windows, Run command regedit and search keyword &ldquo;Display1_DownScalingEnabled&rdquo; or &ldquo;Display1_DownScalingSupported&rdquo;, and change them from 0 to 1. but i found that some of the value is in hex: 00 00 00 00, some binary.</p>
+
+<!--more-->
+
+<p>Though i have no idea which register item works, but maybe following items matters.</p>
+
+<p>&ldquo;Display1_EnableNoPruneSizeFlag&rdquo;=dword:00000001
+&ldquo;Display1_EnableDynamicScaling&rdquo;=dword:00000001
+&ldquo;EnableInterlacedModeRemoval&rdquo;=dword:00000001
+&ldquo;Display1_DownScalingEnabled&rdquo;=dword:00000001
+&ldquo;Display1_DownScalingSupported&rdquo;=dword:00000001
+&ldquo;Display1_FakeScaleX&rdquo;=hex:00,04,00,00
+&ldquo;Display1_FakeScaleY&rdquo;=hex:00,03,00,00</p>
+
+<p>These appears in the register path &ldquo;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ialm\Device0]&rdquo; of my HP mini 2140 (WinXP).</p>
+
+<p>Some items also found in [HKEY_LOCAL_MACHINE\SYSTEM**ControlSet003<strong>\Services\ialm\Device1] and [HKEY_LOCAL_MACHINE\SYSTEM</strong>ControlSet004**\Services\ialm\Device1]</p>
+
+<p>It may be different.</p>
+
+<p>No matter what, after I update the register and running the NRC, I could change the screen resolution now. Sometimes with scrollable large area, sometimes scaled without scrollable screen area.</p>
+
+<p>It&rsquo;s good enough! But I could not restore it to 1024 x 576 :-p</p>
+
+<p>There&rsquo;s another solution for Intel Graphics: <a href="http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/">http://software.intel.com/en-us/articles/custom-resolutions-on-intel-graphics/</a></p>
+
+<p>The <a href="http://www.entechtaiwan.com/util/ps.shtm">PowerStrip 3.9</a> is another tool.</p>
+
+<p><i id="link-tags">NRC;Netbook Resolution Customizer;HP mini 2140;Nexus 7</i></p>
+</div>
+    <a slot="next" href="/blog/2013/07/09/dasign-light-up-your-life" title="DaSign: Light up your life">Newer</a>
+    <a slot="prev" href="/blog/2013/03/23/how-to-heal-sprained-ankle" title="How to Heal Sprained Ankle">Older</a>
+</am-article>

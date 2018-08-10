@@ -1,0 +1,44 @@
+{
+  "/": {
+    "blog/am-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/route.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-banner.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-list.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-summary.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-paging.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-tags.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-article.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "blog/am-link.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  }
+}
