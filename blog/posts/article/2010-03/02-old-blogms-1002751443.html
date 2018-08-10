@@ -1,7 +1,7 @@
 
 <am-article time="2010-03-02 17:10:00 +0800" tags="[BlogMS]" slug="2010/03/02/old-blogms-1002751443">
     <h1 slot="title">建立Web应用的即时数据通道：WebSocket & Comet</h1>
-    <div slot="content"><style>img{max-width:100%}</style><p>BlogMS original blog key: 1002751443, blog id: airoff
+    <div slot="content"><style>img,embed,iframe{max-width:100%}</style><p>BlogMS original blog key: 1002751443, blog id: airoff
 History stat: 浏览/评论：248/0  ,  日期：2010年3月2日 17:10</p>
 
 <p>在web应用高速发展，SNS火爆的今天，基于web的即时数据通道的需求也越来越强烈了。于是COMET重新出来亮相了，HTML5更是加入了 WebSocket 和 EventSource 这样的技术标准。
@@ -48,7 +48,7 @@ wsock.send(&lsquo;hello world&rsquo;);
 ws.onmessage = function(evt) { alert(evt.data); };
 ws.onclose = function(evt){};</PRE></p>
 
-<p><DIV>至于<B>EventSource</B>，Opera 9 就开始试验性的支持&amp;lt;event-source id=&ldquo;myes&rdquo; src=&rdquo;<a href="http://mindon.demo/service?type=event-stream&quot;">http://mindon.demo/service?type=event-stream&rdquo;</a> /&amp;gt; 这样的标签。</DIV>
+<p><DIV>至于<B>EventSource</B>，Opera 9 就开始试验性的支持&amp;lt;event-source id=&ldquo;myes&rdquo; src=&ldquo;//mindon.demo/service?type=event-stream&rdquo; /&amp;gt; 这样的标签。</DIV>
 <A href="http://labs.opera.com/news/2006/09/01/"><U><FONT color=#0000ff><a href="http://labs.opera.com/news/2006/09/01/">http://labs.opera.com/news/2006/09/01/</a></FONT></U></A></p>
 
 <p><DIV>服务器输出: (Content-Type: application/x-dom-event-stream) </DIV></p>
