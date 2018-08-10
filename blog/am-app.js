@@ -1,15 +1,15 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement, html } from '../node_modules/@polymer/lit-element/lit-element.js';
 
 // import '@polymer/app-layout/app-drawer/app-drawer';
 // import '@polymer/app-layout/app-header/app-header';
 // import '@polymer/app-layout/app-scroll-effects/effects/waterfall';
 // import '@polymer/app-layout/app-toolbar/app-toolbar';
-import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
+import { setPassiveTouchGestures } from '../node_modules/@polymer/polymer/lib/utils/settings.js';
 
-import { installRouter } from 'pwa-helpers/router';
-import { installOfflineWatcher } from 'pwa-helpers/network';
-import { installMediaQueryWatcher } from 'pwa-helpers/media-query';
-import { updateMetadata } from 'pwa-helpers/metadata';
+import { installRouter } from '../node_modules/pwa-helpers/router.js';
+import { installOfflineWatcher } from '../node_modules/pwa-helpers/network.js';
+import { installMediaQueryWatcher } from '../node_modules/pwa-helpers/media-query.js';
+import { updateMetadata } from '../node_modules/pwa-helpers/metadata.js';
 
 class AmApp extends LitElement {
 

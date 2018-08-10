@@ -1,6 +1,6 @@
-import { LitElement, html } from '@polymer/lit-element';
-import { until } from 'lit-html/lib/until'
-import { unsafeHTML } from 'lit-html/lib/unsafe-html'
+import { LitElement, html } from '../node_modules/@polymer/lit-element/lit-element.js';
+import { until } from '../node_modules/lit-html/lib/until.js'
+import { unsafeHTML } from '../node_modules/lit-html/lib/unsafe-html.js'
 
 import './components/am-banner.js';
 import './components/am-list.js';

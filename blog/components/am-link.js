@@ -1,5 +1,5 @@
-import { LitElement, html } from '@polymer/lit-element'
-import { repeat } from 'lit-html/lib/repeat'
+import { LitElement, html } from '../../node_modules/@polymer/lit-element/lit-element.js'
+import { repeat } from '../../node_modules/lit-html/lib/repeat.js'
 import './am-tags.js'
 
 class AmLink extends LitElement {
