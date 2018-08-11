@@ -126,7 +126,7 @@ div.main {flex: 1}
     div.sides { max-width:none; margin-left: 0; flex-direction: row; flex-wrap: wrap}
 }
 .error {color:#f60; margin: 2em}
-.loader {margin:2em;color:#333;-webkit-animation: loading 1s infinite; animation: loading 2s infinite;}
+.loader {margin:2em;color:#333;-webkit-animation: loading 1s infinite; animation: loading 1s infinite;}
 @-webkit-keyframes loading { 50% {color:#d63} }
 @keyframes loading { 50% {color:#d63} }
 </style>

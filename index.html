@@ -46,7 +46,9 @@ body {
     -webkit-font-smoothing: antialiased;
     padding: 1em 1.5em;
 }
-div.dots {margin-top:2em; clear:both; text-align:center; color:#d63}
+div.dots {margin-top:2em; clear:both; text-align:center; color:#333;-webkit-animation: loading 1s 10; animation: loading 1s 10}
+@-webkit-keyframes loading { 50% {color:#d63} }
+@keyframes loading { 50% {color:#d63} }
 div.copyright {border-top:thin solid #eee; padding-top: 8px; margin:0 auto 2em auto; color:#666; font-size:12px; clear: both; text-align:center;}
     </style>
 </head>
