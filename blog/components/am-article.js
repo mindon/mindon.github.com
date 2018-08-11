@@ -13,7 +13,9 @@ class AmArticle extends LitElement {
 
     _render({ slug, time, tags, content }) {
         return html`<style>
-:host{display:block;margin-bottom: 2em;}
+:host{display:block;margin-bottom: 2em;
+max-width:100%;word-break:break-all;word-wrap:break-word;
+}
 div.meta {color:#999;}
 img {max-width:100%;}
 slot[name=title]::slotted(h1)::before {

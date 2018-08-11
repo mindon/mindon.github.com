@@ -9,7 +9,9 @@ class AmList extends LitElement {
 
     _render({ topic }) {
         return html`<style>
-:host{display:block; border: solid thin #eee; border-width: thin 0; padding: 1em 0;}
+:host{display:block; border: solid thin #eee;
+ max-width:100%;word-break:break-all;word-wrap:break-word;
+ border-width: thin 0; padding: 1em 0;}
 </style>
 ${ topic ? html`<style>
 div.topic {font-size: 2em; color:#666;}
