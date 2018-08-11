@@ -13,6 +13,7 @@ class AmCard extends LitElement {
     _link(item, target) {
         return item.inline ? html`${ item.inline.map(i=>this._link(i, target)) }`:
                 html`${item.prefix ? item.prefix : ''}<a
+                 rel="noopener"
                  href="${item.href}"
                  target="${target ? (target=='_self'?'':target) :'_blank'}"
                  title="${item.title}">${item.text}</a>`

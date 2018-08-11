@@ -125,6 +125,10 @@ div.main {flex: 1}
     #mindon-if { flex-flow: column }
     div.sides { max-width:none; margin-left: 0; flex-direction: row; flex-wrap: wrap}
 }
+.error {color:#f60; margin: 2em}
+.loader {margin:2em;color:#333;-webkit-animation: loading 1s infinite; animation: loading 2s infinite;}
+@-webkit-keyframes loading { 50% {color:#d63} }
+@keyframes loading { 50% {color:#d63} }
 </style>
 <div id="mindon-if"><div class="main">
 <am-banner home="/blog/">
@@ -142,10 +146,10 @@ ${ leading ? fetch('/blog/posts/tags/' + leading[1] + '.html').then(r => {
                 return r.text().then(v => unsafeHTML(v))
             }) : ''}
 ${bar}
-${fetch(u).then(r => {
-                if (r.status >= 400) return r.status;
+${until(fetch(u).then(r => {
+                if (r.status >= 400) return html`<p class="error">❜❜❜ 尷尬，敗了 ⎝(~_~)⎠ ${r.status}</p>`;
                 return r.text().then(v => unsafeHTML(v))
-            })}
+            }), html`<p class="loader">❜❜❜ 尷尬，慢了⋯</p>`)}
 ${bar}
 </div></div>
 <div class="sides">
