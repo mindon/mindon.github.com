@@ -62,7 +62,7 @@ class AmApp extends LitElement {
     }
 
     _locationChanged() {
-        const path = window.decodeURIComponent(window.location.pathname);
+        var path = window.decodeURIComponent(window.location.pathname);
         if(path=='/' && /^#~.+/.test(location.hash)){
             path = location.hash.substr(2);
             if(path.charAt(0) != '/') path = '/' +path;
