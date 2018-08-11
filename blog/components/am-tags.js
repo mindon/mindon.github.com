@@ -26,7 +26,6 @@ a.tag {
     text-decoration:none;
     color:#333;
     padding: 2px 4px;
-    margin-bottom: 1px;
 }
 div.block a.tag {
     margin-bottom: 2px;
@@ -40,7 +39,7 @@ div.inline a.tag {
     display: inline-block;
     background:#f0f6f9;
     color:#39f;
-    margin:0 2px;
+    margin:0 2px 1px 2px;
 }
 a.tag i {color:#963}
 </style><div class$="${blockStyle ? 'block' : 'inline'}">
