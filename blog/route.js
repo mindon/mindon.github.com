@@ -49,7 +49,6 @@ class BlogRoute extends LitElement {
 
     _render({ uri, state }) {
         let u = '', ubase = '/blog/posts/';
-
         let m = uri.match(/^blog\/(.*)/);
         let paging = '';
         if (m) {
