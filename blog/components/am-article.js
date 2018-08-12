@@ -13,7 +13,7 @@ class AmArticle extends LitElement {
 
     _render({ slug, time, tags, content }) {
         return html`<style>
-:host{display:block;margin-bottom: 2em;max-width:100%;overflow-x:hidden}
+:host{display:block;margin-bottom: 2em}
 div.meta {color:#999;}
 img {max-width:100%;}
 slot[name=title]::slotted(h1)::before {
@@ -22,6 +22,7 @@ slot[name=title]::slotted(h1)::before {
 div.body {
   padding-bottom: 1em;
   border-bottom: thin solid #eee;
+  max-width:100%; overflow-x:hidden;
 }
 slot[name=next]::slotted(a),slot[name=prev]::slotted(a){
     text-transform: uppercase;
