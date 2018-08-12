@@ -30,6 +30,15 @@ class AmApp extends LitElement {
         // To force all event listeners for gestures to be passive.
         // See https://www.polymer-project.org/2.0/docs/devguide/gesture-events#use-passive-gesture-listeners
         setPassiveTouchGestures(true);
+        window.addEventListener('meta-title', (e)=>{
+            if(!e.detail) return;
+            const pageTitle = e.detail +' - ' +this.appTitle;
+            updateMetadata({
+                title: pageTitle,
+                description: pageTitle
+                // This object also takes an image property, that points to an img src.
+            });
+        })
     }
 
     _firstRendered() {

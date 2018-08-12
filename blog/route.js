@@ -47,6 +47,24 @@ class BlogRoute extends LitElement {
         return props.active;
     }
 
+    _notifyTitle(c) {
+        let clue = '<h1 slot="title">', i = c.indexOf(clue), title = '';
+        if(i>0) {
+            i += clue.length;
+            title = c.substring(i, c.indexOf('</h1>', i));
+        } else {
+            clue = '<h1 slot="topic">';
+            i = c.indexOf(clue);
+            if(i > 0) {
+                i += clue.length;
+                title = c.substring(i, c.indexOf('</h1>', i));
+            }
+        }
+        if(title) {
+            window.dispatchEvent(new CustomEvent('meta-title', {detail: title}));
+        }
+    }
+
     _render({ uri, state }) {
         let u = '', ubase = '/blog/posts/';
         let m = uri.match(/^blog\/(.*)/);
@@ -131,24 +149,30 @@ div.main {flex: 1}
 @keyframes loading { 50% {color:#333} }
 </style>
 <div id="mindon-if"><div class="main">
-<am-banner home="/blog/">
+<am-banner home="/">
     <h1 slot="title">MINDON.if 麦盾.風</h1>
     <div slot="slogan">magic inside future 探寻未知的形态</div>
     <div slot="nav" class="nav">
         <style>.nav a{color:#333}.nav a:hover{color:#0181eb}</style>
-        ❯ <a href="/blog/">Home</a> |
+        ❯ <a href="/">Home</a> |
         <a href="/blog/archives">Archives</a> | 
         <a href="/note">Note</a> | <a href="/about">About</a>
     </div>
 </am-banner><div>
 ${ leading ? fetch('/blog/posts/tags/' + leading[1] + '.html').then(r => {
                 if (r.status >= 400) return '';
-                return r.text().then(v => unsafeHTML(v))
+                return r.text().then(v => {
+                    this._notifyTitle(v);
+                    return unsafeHTML(v)
+                })
             }) : ''}
 ${bar}
 ${until(fetch(u).then(r => {
                 if (r.status >= 400) return html`<p class="error">❜❜❜ 尷尬，敗了 ⎝(~_~)⎠ ${r.status}</p>`;
-                return r.text().then(v => unsafeHTML(v))
+                return r.text().then(v => {
+                    this._notifyTitle(v);
+                    return unsafeHTML(v)
+                })
             }), html`<p class="loader">❜❜❜ 尷尬，慢了⋯</p>`)}
 ${bar}
 </div></div>

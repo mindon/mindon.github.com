@@ -1,7 +1,7 @@
 
 <am-article time="2005-08-10 13:52:00 +0800" tags="[BlogMS]" slug="2005/08/10/old-blogms-1000515471">
     <h1 slot="title">JavaScript之正则表达式 replace</h1>
-    <div slot="content"><style>img,embed,iframe{max-width:100%}</style><p>BlogMS original blog key: 1000515471, blog id: airoff
+    <div slot="content"><style>img,embed,iframe{max-width:100%}code{max-width:100%;overflow-x:auto}</style><p>BlogMS original blog key: 1000515471, blog id: airoff
 History stat: 浏览/评论：780/0  ,  日期：2005年8月10日 13:52</p>
 
 <p>近来一直在研究 SVG，发现软件（如Illustrator）生成的SVG中的数据小数位数太多了，没必要如此精确，于是心想能否自动处理一下里面的数据，让所有的数都四舍五入精简一下，我头一个想到的就是我所熟悉的正则表达式，可我所接触到的javascript中的正则表达式（因为在html中就能执行，故没考虑在Perl或Java中使用）好像还没有能方便处理这种情况的方法，于是今天 google 了一下，但一开始也没看到自己想要的东西，但看到字符串replace方法的时候，心想javascript是不是存在 replace(rexp, function) 的用法，于是，用“javascript regular expression replace function”搜索了一下，果真发现了在mozilla网站上的 Core JavaScript 1.5 Reference 中提到了 replace(rexp, function) 的用法，看了例子后，稍微研究了一下，发现其中 function的参数是这样的：</p>
@@ -36,6 +36,6 @@ History stat: 浏览/评论：780/0  ,  日期：2005年8月10日 13:52</p>
 
 <p>（这里的例子取了两位小数，其实对于精度要求不是太高的SVG里，一位小数应该就足够了。）</p>
 </div>
-    <a slot="next" href="/blog/2005/08/18/old-blogms-1000533343" title="Javascript之Mozilla XML">Newer</a>
-    <a slot="prev" href="/blog/2005/08/10/old-blogms-1000515173" title="Batik应用-在SVG中使用Java">Older</a>
+     <a slot="next" href="/blog/2005/08/18/old-blogms-1000533343">Javascript之Mozilla XML</a>
+     <a slot="prev" href="/blog/2005/08/10/old-blogms-1000515173">Batik应用-在SVG中使用Java</a>
 </am-article>

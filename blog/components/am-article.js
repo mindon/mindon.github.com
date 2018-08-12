@@ -13,9 +13,7 @@ class AmArticle extends LitElement {
 
     _render({ slug, time, tags, content }) {
         return html`<style>
-:host{display:block;margin-bottom: 2em;
-max-width:100%;word-break:break-all;word-wrap:break-word;
-}
+:host{display:block;margin-bottom: 2em;max-width:100%;overflow-x:hidden}
 div.meta {color:#999;}
 img {max-width:100%;}
 slot[name=title]::slotted(h1)::before {
@@ -31,8 +29,10 @@ slot[name=next]::slotted(a),slot[name=prev]::slotted(a){
     margin-left: .5em;
     color: #09d;
 }
-slot[name=next]::slotted(a)::before {content:'«';color:#666}
-slot[name=prev]::slotted(a)::after {content:'»';color:#666}
+slot[name=next]::slotted(a)::before {content:'❛ ';color:#333}
+slot[name=next]::slotted(a)::after {content:' ❯  ';color:#d63}
+slot[name=prev]::slotted(a)::before {content:'  ❮ ';color:#d63}
+slot[name=prev]::slotted(a)::after {content:' ❜';color:#333}
 </style>
 <div>
 <div><slot name="title"></slot></div>
@@ -40,7 +40,7 @@ slot[name=prev]::slotted(a)::after {content:'»';color:#666}
 <div class="body"><slot name="content"></slot></div>
 <div class="meta">
 POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i>
-<slot name="next"></slot><slot name="prev"></slot>
+<slot name="next" title="Newer Post"></slot><slot name="prev" title="Older Post"></slot>
 </div>
 </div>
 `;

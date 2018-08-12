@@ -13,9 +13,7 @@ class AmSummary extends LitElement {
 
     _render({ href, time, slug, tags }) {
         return html`<style>
-:host{display:block; margin-bottom: 2.7em;
-max-width:100%;word-break:break-all;word-wrap:break-word;
-}
+:host{display:block; margin-bottom: 2.7em; max-width:100%;overflow-x:hidden}
 i {color:#999;}
 a {text-decoration:none}
 h2 {margin-bottom:0; font-size: 1.9em;}
