@@ -13,13 +13,13 @@ class AmSummary extends LitElement {
 
     _render({ href, time, slug, tags }) {
         return html`<style>
-:host{display:block; margin-bottom: 2.7em; max-width:100%;overflow-x:hidden}
+:host{display:block; margin-bottom: 2.7em}
 i {color:#999;}
 a {text-decoration:none}
 h2 {margin-bottom:0; font-size: 1.9em;}
 div.meta {color:#999;margin-left:1.1em}
 h2 ::slotted(a) {text-decoration:none;color:#000}
-h2 ::slotted(a)::before {content:'❜'; color: #d63;margin-right:.3em}
+h2::before {content:'❜'; color: #d63;margin-right:.3em}
 a.more {background:#666; color:#fff; padding: 4px 1em; border-radius:3px 9px 9px 3px}
 </style>
 

@@ -31,8 +31,7 @@ class AmApp extends LitElement {
         // See https://www.polymer-project.org/2.0/docs/devguide/gesture-events#use-passive-gesture-listeners
         setPassiveTouchGestures(true);
         window.addEventListener('meta-title', (e)=>{
-            if(!e.detail) return;
-            const pageTitle = e.detail +' - ' +this.appTitle;
+            const pageTitle = (e.detail ? e.detail +' - ' :'') +this.appTitle;
             updateMetadata({
                 title: pageTitle,
                 description: pageTitle

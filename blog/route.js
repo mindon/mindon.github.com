@@ -48,21 +48,26 @@ class BlogRoute extends LitElement {
     }
 
     _notifyTitle(c) {
+        if(this.titleUpdated) return;
         let clue = '<h1 slot="title">', i = c.indexOf(clue), title = '';
         if(i>0) {
             i += clue.length;
             title = c.substring(i, c.indexOf('</h1>', i));
+            this.titleUpdated = true;
         } else {
             clue = '<h1 slot="topic">';
             i = c.indexOf(clue);
             if(i > 0) {
                 i += clue.length;
                 title = c.substring(i, c.indexOf('</h1>', i));
+                this.titleUpdated = true;
             }
         }
-        if(title) {
-            window.dispatchEvent(new CustomEvent('meta-title', {detail: title}));
+        if(!title) {
+            const uri = this.uri;
+            title = uri.indexOf('monthly') > -1 || uri.indexOf('archives') > -1 ? 'Archives' : 'Blogs';
         }
+        window.dispatchEvent(new CustomEvent('meta-title', {detail: title}));
     }
 
     _render({ uri, state }) {
@@ -123,6 +128,7 @@ class BlogRoute extends LitElement {
         let leading = u.match(/\/tags\/([^\/]+)/);
         let bar = paging ? this._pagebar(paging) : '';
         window.scrollTo(0, 0);
+        this.titleUpdated = false;
     return html`<style>
 div.sides {
   display: -webkit-box;
