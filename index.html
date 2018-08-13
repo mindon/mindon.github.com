@@ -42,7 +42,7 @@
           if (location.hostname === 'localhost') return;
           window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
           ga('create', 'UA-28048168-2', 'auto');
-          window.addEventListener('meta-title', function(e) {
+          window.addEventListener('app-metas', function(e) {
             ga('set', 'page', location.pathname);
             ga('send', 'pageview');
           });

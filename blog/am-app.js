@@ -37,6 +37,7 @@ class AmApp extends LitElement {
                 description: pageTitle
                 // This object also takes an image property, that points to an img src.
             });
+            window.dispatchEvent(new CustomEvent('app-metas', {detail:{title: pageTitle}}));
         })
     }
 
