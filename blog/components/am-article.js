@@ -31,8 +31,8 @@ slot[name=prev]::after {content:'❜';color:#333;margin-left:4px}
 div.meta {color:#999;}
 .flex {display:-webkit-box;display:-ms-flexbox;display: flex;flex-direction:row;flex-wrap:wrap}
 img {max-width:100%}
-::slotted(h1){display:inline-block}
-slot[name=title]::before {font-size:2em;content:'❜'; color: #d63; margin-right:4px;}
+::slotted(h1){display:inline}
+::slotted(h1)::before {content:'❜'; color: #d63; margin-right:4px;}
 div.body {
   padding-bottom: 1em;
   border-bottom: thin solid #eee;
@@ -50,7 +50,9 @@ display:inline-block;background:rgba(200,200,200,.2)}
 </style>${dcc}<div>
 <div id="mydock">${
 !nav?html`<a class="home" href="/">❜❜❜</a>`:
-html`${nav.prev?html`<a id="myprev" href$="${nav.prev.href}" title$="${nav.prev.title}">❮</a>`:'❮ '}<a class="home" href="/" title="HOME">❛❛❛</a>${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title}">❯</a>`:' ❯'}`}
+html`${nav.prev?html`<a id="myprev" href$="${nav.prev.href}" title$="${nav.prev.title}">❮</a>`:'❮ '}
+<a class="home" href="/" title="HOME">❛❛❛</a>
+${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title}">❯</a>`:' ❯'}`}
 </div>
 <div><slot name="title"></slot></div>
 <div class="meta">POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i></div>
