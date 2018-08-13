@@ -36,6 +36,29 @@
         }
         window.process = { env: { NODE_ENV: "production" } };
     </script>
+    <script>
+        (function() {
+          'use strict';
+          if (location.hostname === 'localhost') return;
+          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+          ga('create', 'UA-28048168-2', 'auto');
+          window.addEventListener('meta-title', function(e) {
+            ga('set', 'page', location.pathname);
+            ga('send', 'pageview');
+          });
+          window.addEventListener('error', function(e) {
+            ga('send', 'exception', {
+              'exDescription': e.message,
+              'exFatal': false
+            });
+          });
+          window.addEventListener('WebComponentsReady', function(e) {
+            if (window.performance) {
+              ga('send', 'timing', 'JS Dependencies', 'WebComponentsReady', Math.round(performance.now()));
+            }
+          });
+        })();
+    </script>
     <style>
 body {
     margin: 0;
@@ -60,6 +83,6 @@ div.copyright {border-top:thin solid #eee; padding-top: 8px; margin:0 auto 2em a
     <script type="module" src="/blog/am-app.js" async></script>
     <div class="dots">❜❜❜ <a href="/">MINDON.if 麦盾.風</a> ❮</div>
     <div class="copyright">Copyright © 2012 - 2018, Mindon Feng</div>
+    <script src="//ssl.google-analytics.com/ga.js" async></script>
 </body>
-
 </html>

@@ -47,9 +47,9 @@ div.meta ::slotted(.next), div.meta ::slotted(.prev){
 text-align:center;width:2em;
 display:inline-block;background:rgba(200,200,200,.2)}
 #mydock a:hover {color:#0181eb}
-#thumbs-up {text-align:center;margin:1em auto}
+#thumbs-up {width:180px;margin:1em;text-align:center}
 #thumbs-up a {text-decoration:none;color:#39f}
-#thumbs-up p {font-size:7pt;color:#ccc;}
+#thumbs-up p {font-size:7pt;color:#ccc}
 </style>${dcc}<div>
 <div id="mydock">${
 !nav?html`<a class="home" href="/">❜❜❜</a>`:
@@ -81,6 +81,10 @@ ${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title
     _slotWatching(key) {
         const t = this.shadowRoot.querySelector('slot[name='+key+']');
         if(!t) return;
+        if(t.assignedNodes().length > 0) {
+            this._slotChanged(t, key);
+            return;
+        }
         t.addEventListener('slotchange', e => {
             this._slotChanged(e.target, key);
         })
