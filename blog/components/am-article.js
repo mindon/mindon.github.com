@@ -7,11 +7,12 @@ class AmArticle extends LitElement {
             slug: String,
             time: String,
             tags: String,
-            content: String,
+            nav: Object,
+            tagsOn: Boolean, 
         }
     }
 
-    _render({ slug, time, tags, content }) {
+    _render({ slug, time, tags, nav, tagsOn }) {
         let dcc = navigator.userAgent.indexOf(" Chrome/") > 0 ?
              html`<style>
 div.meta ::slotted(.next)::before {content:'❛ ';color:#333;margin-left:1em}
@@ -41,16 +42,52 @@ div.meta ::slotted(.next), div.meta ::slotted(.prev){
     text-decoration: none;
     color: #09d;
 }
+#mydock {color:#ccc;position:fixed;bottom:8px;right:4px;}
+#mydock a {text-decoration:none;color:#d63;
+text-align:center;width:2em;
+display:inline-block;background:rgba(200,200,200,.2)}
+#mydock a:hover {color:#0181eb}
 </style>${dcc}<div>
+<div id="mydock">${
+!nav?html`<a class="home" href="/">❜❜❜</a>`:
+html`${nav.prev?html`<a id="myprev" href$="${nav.prev.href}" title$="${nav.prev.title}">❮</a>`:'❮ '}<a class="home" href="/" title="HOME">❛❛❛</a>${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title}">❯</a>`:' ❯'}`}
+</div>
 <div><slot name="title"></slot></div>
 <div class="meta">POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i></div>
 <div class="body"><slot name="content"></slot></div>
 <div class="meta flex">
 <div>POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i> &nbsp; </div>
-<div class="flex"><slot name="next" title="Newer Post"></slot><slot name="prev" title="Older Post"></slot></div>
+<div class="flex"><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot></div>
 </div>
 </div>
 `;
+    }
+
+    _didRender() {
+        this._slotWatching("next");
+        this._slotWatching("prev");
+    }
+
+    _slotWatching(key) {
+        const t = this.shadowRoot.querySelector('slot[name='+key+']');
+        if(!t) return;
+        t.addEventListener('slotchange', e => {
+            this._slotChanged(e.target, key);
+        })
+    }
+
+    _slotChanged(slot, key) {
+        if(!slot || !slot.assignedNodes) return;
+        let elms = slot.assignedNodes();
+        let nav = this.nav || {};
+        if(!elms || elms.length == 0) {
+            return;
+        }
+        let a = elms[0];
+        if(a.href) {
+            nav[key] = {href:a.href, title:a.innerText.replace(/"/g, '&quot;')};
+        }
+        this.nav = nav;
     }
 }
 
