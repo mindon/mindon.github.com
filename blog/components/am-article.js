@@ -42,11 +42,16 @@ div.meta ::slotted(.next), div.meta ::slotted(.prev){
     text-decoration: none;
     color: #09d;
 }
-#mydock {color:#ccc;position:fixed;bottom:8px;right:4px;}
+#mydock {color:#ccc;position:fixed;top:8px;right:1em;}
 #mydock a {text-decoration:none;color:#d63;
 text-align:center;width:2em;
 display:inline-block;background:rgba(200,200,200,.2)}
 #mydock a:hover {color:#0181eb}
+#thumbs-up {
+display:block;text-decoration:none;
+width:180px;height:190px;
+text-align:center;font-size:7pt;color:#ccc;
+background:url(/images/thumbs-up.jpg) no-repeat center bottom;margin:1em auto}
 </style>${dcc}<div>
 <div id="mydock">${
 !nav?html`<a class="home" href="/">❜❜❜</a>`:
@@ -56,9 +61,12 @@ ${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title
 </div>
 <div><slot name="title"></slot></div>
 <div class="meta">POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i></div>
-<div class="body"><slot name="content"></slot></div>
-<div class="meta flex">
+<div class="body"><slot name="content"></slot>
+</div>
+<div class="meta">
 <div>POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i> &nbsp; </div>
+<p><a id="thumbs-up" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YSVEJMBLM3AFG">
+click to donate $0.99 by Paypal<br/>微信扫码赞赏</a></p>
 <div class="flex"><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot></div>
 </div>
 </div>
