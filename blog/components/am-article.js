@@ -47,10 +47,9 @@ div.meta ::slotted(.next), div.meta ::slotted(.prev){
 text-align:center;width:2em;
 display:inline-block;background:rgba(200,200,200,.2)}
 #mydock a:hover {color:#0181eb}
-#thumbs-up {
-display:block;text-decoration:none;
-width:180px;height:190px;
-text-align:center;font-size:7pt;color:#ccc;margin:1em auto}
+#thumbs-up {text-align:center;margin:1em auto}
+#thumbs-up a {text-decoration:none;color:#39f}
+#thumbs-up p {font-size:7pt;color:#ccc;}
 </style>${dcc}<div>
 <div id="mydock">${
 !nav?html`<a class="home" href="/">❜❜❜</a>`:
@@ -64,9 +63,11 @@ ${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title
 </div>
 <div class="meta">
 <div>POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i> &nbsp; </div>
-<p><a id="thumbs-up" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YSVEJMBLM3AFG">
-click to donate $0.99 by Paypal<br/>微信扫码赞赏<br/><img src="/images/thumbs-up.jpg" width="180" height="172" alt="WeChat Code" /></a></p>
-<div class="flex"><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot></div>
+<div id="thumbs-up">
+ <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YSVEJMBLM3AFG" target="paypal">Donate $0.99 through Paypal</a>
+ <p>微信扫码赞赏<br/><img src="/images/thumbs-up.jpg" width="180" height="172" alt="WeChat Code" /></p>
+</div>
+<div class="flex"><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot></div>
 </div>
 </div>
 `;
