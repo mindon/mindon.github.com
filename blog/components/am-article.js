@@ -47,7 +47,7 @@ div.meta ::slotted(.next), div.meta ::slotted(.prev){
 text-align:center;width:2em;
 display:inline-block;background:rgba(200,200,200,.2)}
 #mydock a:hover {color:#0181eb}
-#thumbs-up {width:180px;margin:1em;text-align:center}
+#thumbs-up {width:180px;margin:1em 0;text-align:center}
 #thumbs-up a {text-decoration:none;color:#39f}
 #thumbs-up p {font-size:7pt;color:#ccc}
 </style>${dcc}<div>
