@@ -63,11 +63,11 @@ ${nav.next?html`<a id="mynext" href$="${nav.next.href}" title$="${nav.next.title
 </div>
 <div class="meta">
 <div>POSTED IN <am-tags query="/blog/tags/%s" tags=${tags.substr(1, tags.length - 2).split(' ')}></am-tags><i>${time}</i> &nbsp; </div>
+<div class="flex"><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot></div>
 <div id="thumbs-up">
- <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YSVEJMBLM3AFG" target="paypal">Donate $0.99 through Paypal</a>
+ <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YSVEJMBLM3AFG" target="paypal">Donate $0.99 with Paypal</a>
  <p>微信扫码赞赏<br/><img src="/images/thumbs-up.jpg" width="180" height="172" alt="WeChat Code" /></p>
 </div>
-<div class="flex"><slot name="prev" title="Older Post" on-change=${this._slotChanged}></slot><slot name="next" title="Newer Post" on-changed=${this._slotChanged}></slot></div>
 </div>
 </div>
 `;
