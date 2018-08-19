@@ -1,27 +1,25 @@
 
 <am-list>
   
-  <am-summary href="/blog/2012/03/17/mongodb-the-internal-file-structure" time="2012-03-17 11:43:00 +0800" slug="/blog/tags/%s" tags="[Web-Tech]">
-    <a slot="title" href="/blog/2012/03/17/mongodb-the-internal-file-structure">MongoDB: The internal file structure</a>
-    <div slot="summary"><css-style/><p><a href="http://www.quora.com/Jared-Rosoff">Jared Rosoff</a></p>
+  <am-summary href="/blog/2012/03/17/notes-on-mongodb" time="2012-03-17 11:12:00 +0800" slug="/blog/tags/%s" tags="[Web-Tech]">
+    <a slot="title" href="/blog/2012/03/17/notes-on-mongodb">Notes on MongoDB</a>
+    <div slot="summary"><css-style/><p><strong>MongoDB资料汇总专题</strong>
+<a href="http://blog.nosqlfan.com/html/3548.html">http://blog.nosqlfan.com/html/3548.html</a></p>
 
-<p>Each logical db has its own set of files in your dbpath. You can find them as <dbname>.<file_number>. If you&rsquo;re using directory-per-db option, then they may be in separate directories.</p>
+<h2>MongoDB 最佳实践</h2>
 
-<p>The dbfiles themselves are broken up into extents. Each extent is assigned to a namespace and contains data for that namespace. Each collection is its own namespace. Also each Index is its own namespace.</p>
+<p>Original from <a href="http://www.oschina.net/question/12_38878">http://www.oschina.net/question/12_38878</a></p>
 
-<p>Documents in a collection are stored as a doubly linked list within extents. The document itself is formatted as BSON. There is a header that has, among other things, pointers to the next and previous document in the collection.</p>
+<p><strong>1. 始终启用备份</strong></p>
 
-<p>Index data is also stored in these files, but they are stored as B-Tree&rsquo;s rather than doubly linked lists.</p>
+<p>备份能保证你应用的高可用性。假如你的一个节点down了，第
+二节点可以迅速启用，你的应用不会中断。</p>
 
-<p>There is also a namespace file that contains namespace (collections, indexes, freelist) meta data and how they map to their extents.</p>
+<p><strong>2. 使用最新版本</strong></p>
 
-<p>If you&rsquo;re running with journaling enabled, then there is also a set of journal files that contain a history of changes to collection data.</p>
-
-<h2>MongoDB数据文件内部结构</h2>
-
-<p>Origin from <a href="http://blog.nosqlfan.com/html/3515.html">http://blog.nosqlfan.com/html/3515.html</a></p>
-
-<p>有人在Quora上提问：MongoDB数据文件内部的组织结构是什么样的。随后10gen的工程师Jared Rosoff出来做了简短的回答。</p>
+<p>10gen在不断的发布更新，特别是2.0.x包含了很高的性能提升
+和并行改进，索引改进和bug修复。如果你还在使用 1.6.3的话
+，你应该尽快升级。</p>
  
     </div>
   </am-summary>
@@ -94,25 +92,6 @@
     </div>
   </am-summary>
   
-  <am-summary href="/blog/2012/03/10/programmers-are-born-not-made" time="2012-03-10 14:04:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
-    <a slot="title" href="/blog/2012/03/10/programmers-are-born-not-made">激情 - Passion</a>
-    <div slot="summary"><css-style/><h2>Passion</h2>
-
-<blockquote>
-<p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
-
-<p>That’s passion!</p>
-
-<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
-
-<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
-
-<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p>
-</blockquote>
- 
-    </div>
-  </am-summary>
-  
   <am-summary href="/blog/2012/03/10/key-of-tcm-recommended-books" time="2012-03-10 15:13:00 +0800" slug="/blog/tags/%s" tags="[Chinese-Balance-Heal]">
     <a slot="title" href="/blog/2012/03/10/key-of-tcm-recommended-books">Key of TCM -- Recommended Books</a>
     <div slot="summary"><css-style/><h2>《醫鑰》推薦閱讀</h2>
@@ -164,6 +143,25 @@
     </div>
   </am-summary>
   
+  <am-summary href="/blog/2012/03/10/programmers-are-born-not-made" time="2012-03-10 14:04:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
+    <a slot="title" href="/blog/2012/03/10/programmers-are-born-not-made">激情 - Passion</a>
+    <div slot="summary"><css-style/><h2>Passion</h2>
+
+<blockquote>
+<p>Sometimes when you give an impressionable young mind (anybody deciding to learn to code, age is irrelevant) two tools and a problem, they will use the two tools to create four more tools. Then they will get on the internets and find some more tools … soon they have twenty tools and what was the problem you wanted me to solve again?</p>
+
+<p>That’s passion!</p>
+
+<p>Pure unadulterated passion for programming. When you can be fascinated, even excited, about this stuff without a need to solve a problem. Hell, even if you are solving a problem that you know is a meaningless exercise … that’s where greatness lies.</p>
+
+<p>It doesn’t matter what age you started coding at – many studies have shown experience is not a predictor of quality in our world – what matters is that you have a passion for this stuff.</p>
+
+<p>Because if you’ve got the passion, then you probably have everything else you need as well.</p>
+</blockquote>
+ 
+    </div>
+  </am-summary>
+  
   <am-summary href="/blog/2012/03/08/for-my-dear-aby" time="2012-03-08 13:15:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
     <a slot="title" href="/blog/2012/03/08/for-my-dear-aby">For my darling: Aby</a>
     <div slot="summary"><css-style/><p>Aby, 在一起的日子里，你带来了丰富多彩的生活，让我每天都能体会到幸福的滋味。谢谢你，宝贝。</p>
@@ -171,17 +169,6 @@
 <p>最想对你说的还是那三个字 :-) <a href="http://mindon.appspot.com/i-love-u">I love you</a>。其实，用多少种语言也难以表达这种从心底溢出的感情。</p>
 
 <p><img src="/images/blog/roses/red-rose.jpg" alt="Rose" /></p>
- 
-    </div>
-  </am-summary>
-  
-  <am-summary href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are" time="2012-03-06 05:24:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
-    <a slot="title" href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are">Crush tradition! Photograph things as they are!</a>
-    <div slot="summary"><css-style/><blockquote>
-<p><a href="http://en.wikipedia.org/wiki/Henri_Cartier-Bresson"><strong>Henri Cartier-Bresson</strong></a> (August 22, 1908 – August 3, 2004) was a French photographer considered to be the father of modern photojournalism. He was an early adopter of 35 mm format, and the master of candid photography. He helped develop the &ldquo;street photography&rdquo; or &ldquo;real life reportage&rdquo; style that has influenced generations of photographers who followed.</p>
-</blockquote>
-
-<p><img src="/images/blog/henri-cartier-bresson.jpg" alt="Henri Cartier-Bresson" /></p>
  
     </div>
   </am-summary>
@@ -207,6 +194,17 @@
 <li><strong>http-streaming</strong>: Some proxy really don’t like the http-streaming technique, and will close it right away. Again, possibility to loose server sides events.</li>
 <li><strong>Unexpected network outage</strong>: the connection can also be closed by something between your browser and server.</li>
 </ul>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are" time="2012-03-06 05:24:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
+    <a slot="title" href="/blog/2012/03/06/crush-tradition-photograph-things-as-they-are">Crush tradition! Photograph things as they are!</a>
+    <div slot="summary"><css-style/><blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Henri_Cartier-Bresson"><strong>Henri Cartier-Bresson</strong></a> (August 22, 1908 – August 3, 2004) was a French photographer considered to be the father of modern photojournalism. He was an early adopter of 35 mm format, and the master of candid photography. He helped develop the &ldquo;street photography&rdquo; or &ldquo;real life reportage&rdquo; style that has influenced generations of photographers who followed.</p>
+</blockquote>
+
+<p><img src="/images/blog/henri-cartier-bresson.jpg" alt="Henri Cartier-Bresson" /></p>
  
     </div>
   </am-summary>

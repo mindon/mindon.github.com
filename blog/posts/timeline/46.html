@@ -14,6 +14,23 @@
     </div>
   </am-summary>
   
+  <am-summary href="/blog/2013/09/15/fix-adb-error-under-win8" time="2013-09-15 16:27:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
+    <a slot="title" href="/blog/2013/09/15/fix-adb-error-under-win8">fix adb error under win8</a>
+    <div slot="summary"><css-style/><h2>error: device not found</h2>
+
+<p>1)  Find &ldquo;Device Manager&rdquo; in &ldquo;PC Info&rdquo;;</p>
+
+<p>2)  Get your device in the &ldquo;Other devices&rdquo;;</p>
+
+<p>3)  Update driver and choose your adt folder to install the driver.</p>
+
+<h2>Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]</h2>
+
+<p>Uninstall your old version app on your device before install the new apk.</p>
+ 
+    </div>
+  </am-summary>
+  
   <am-summary href="/blog/2013/09/15/build-mobile-apps-from-command-line" time="2013-09-15 09:04:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
     <a slot="title" href="/blog/2013/09/15/build-mobile-apps-from-command-line">Building mobile apps from the command line</a>
     <div slot="summary"><css-style/><p>Following are command line reference of building mobile apps for Android, iOS, BB10 and WP8.</p>
@@ -46,23 +63,6 @@
 &ndash;package <your_library_package_namespace></p>
 
 <p><a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">The AndroidManifest.xml File Reference</a></p>
- 
-    </div>
-  </am-summary>
-  
-  <am-summary href="/blog/2013/09/15/fix-adb-error-under-win8" time="2013-09-15 16:27:00 +0800" slug="/blog/tags/%s" tags="[Mobile-App]">
-    <a slot="title" href="/blog/2013/09/15/fix-adb-error-under-win8">fix adb error under win8</a>
-    <div slot="summary"><css-style/><h2>error: device not found</h2>
-
-<p>1)  Find &ldquo;Device Manager&rdquo; in &ldquo;PC Info&rdquo;;</p>
-
-<p>2)  Get your device in the &ldquo;Other devices&rdquo;;</p>
-
-<p>3)  Update driver and choose your adt folder to install the driver.</p>
-
-<h2>Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]</h2>
-
-<p>Uninstall your old version app on your device before install the new apk.</p>
  
     </div>
   </am-summary>
@@ -246,29 +246,35 @@ Environment.DIRECTORY_PICTURES
     </div>
   </am-summary>
   
-  <am-summary href="/blog/2013/03/02/ssh-connect-to-bb10-device" time="2013-03-02 00:23:00 +0800" slug="/blog/tags/%s" tags="[Mindon Mobile-App]">
-    <a slot="title" href="/blog/2013/03/02/ssh-connect-to-bb10-device">SSH Connect to BB10 Device</a>
-    <div slot="summary"><css-style/><p>How to connect to your BB10 device or simulator?</p>
+  <am-summary href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3" time="2013-03-02 00:39:00 +0800" slug="/blog/tags/%s" tags="[Mindon]">
+    <a slot="title" href="/blog/2013/03/02/print-the-schengen-visa-application-form-in-a3">Print the Schengen VISA Application Form in A3</a>
+    <div slot="summary"><css-style/><p>We are preparing the documents for the Schengen VISA to Italy &amp; France.</p>
 
-<h2>Step 1:</h2>
+<p>It&rsquo;s such a big project for a 15 days journey, and it will be our first time to Europe &ndash; attracted by its cultrue, landscape &amp; fresh air :p</p>
 
-<p><strong>Turn on Development Mode</strong></p>
+<p>Here the tips to print the Italy VISA application form in a A3 paper. Yes, I mean the printer settings(打印机设置):</p>
 
-<h2>Step 2:</h2>
+<h2>First,</h2>
 
-<p><strong>Creating an RSA2 key</strong></p>
+<ul>
+<li><p>Page Size（页面尺寸）: A4</p></li>
 
-<p>ssh-keygen -t rsa -b 4096</p>
+<li><p>Output Size（输出尺寸）: A3</p></li>
+</ul>
 
-<p>and choose a name as you like, here using <strong>rsa-bbx</strong></p>
+<h2>Second,</h2>
 
-<h2>Step 3:</h2>
+<ul>
+<li>Layout（布局）: 2 in 1</li>
+</ul>
 
-<p><strong>Start Connect Service</strong></p>
+<h2>Third,</h2>
 
-<p>blackberry-connect -targetHost 169.254.0.1 -devicePassword 1234 -sshPublicKey rsa-bbx.pub</p>
+<ul>
+<li><p>Double Side（双面打印）</p></li>
 
-<p>keep this console there.</p>
+<li><p>Short Edge （短边装订）</p></li>
+</ul>
  
     </div>
   </am-summary>

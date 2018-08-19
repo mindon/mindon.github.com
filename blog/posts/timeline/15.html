@@ -1,58 +1,6 @@
 
 <am-list>
   
-  <am-summary href="/blog/2004/12/22/old-blogms-1000124479" time="2004-12-22 17:12:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
-    <a slot="title" href="/blog/2004/12/22/old-blogms-1000124479">Javascript之取消</a>
-    <div slot="summary"><css-style/><p>BlogMS original blog key: 1000124479, blog id: airoff
-History stat: 浏览/评论：200/0  ,  日期：2004年12月22日 17:12</p>
-
-<p><font color=#00008C><font face=Arial>// cancel pop menu</p>
-
-<p>function cancelkey(e) {</p>
-
-<p>if(document.all) event.returnValue = false; return false;</p>
-
-<p>}</p>
-
-<p>document.oncontextmenu = cancelkey;</p>
-
-<p>// cancel shift-click/enter open new</p>
-
-<p>function cancelNew(e) {</p>
-
-<p>if(document.all) {</p>
-
-<p>if(event.shiftKey)</p>
-
-<p>if(event.keyCode == &amp;quot;13&amp;quot; || event.type==&amp;quot;click&amp;quot;) return false;</p>
-
-<p>} else {</p>
-
-<p>if(e.shiftKey)</p>
-
-<p>if(e.keyCode == &amp;quot;13&amp;quot; || e.type==&amp;quot;click&amp;quot;) return false;</p>
-
-<p>}</p>
-
-<p>return true;</p>
-
-<p>}</p>
-
-<p>document.onkeypress = cancelNew;</p>
-
-<p>//cancel select</p>
-
-<p>document.onselectstart = function(){ if(event.srcElement.tagName != &amp;quot;INPUT&amp;quot; &amp;&amp; event.srcElement.tagName != &amp;quot;TEXTAREA&amp;quot;) return false; return true;}</p>
-
-<p>//cancel drag</p>
-
-<p>document.ondragstart = function(){ if(event.srcElement.tagName != &amp;quot;INPUT&amp;quot; &amp;&amp; event.srcElement.tagName != &amp;quot;TEXTAREA&amp;quot;) return false; return true;}</p>
-
-<p></font></font></p>
- 
-    </div>
-  </am-summary>
-  
   <am-summary href="/blog/2004/12/22/old-blogms-1000124485" time="2004-12-22 17:19:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
     <a slot="title" href="/blog/2004/12/22/old-blogms-1000124485">Javascript之校验脚本</a>
     <div slot="summary"><css-style/><p>BlogMS original blog key: 1000124485, blog id: airoff
@@ -936,6 +884,58 @@ History stat: 浏览/评论：234/2  ,  日期：2004年12月22日 17:19</p>
     </div>
   </am-summary>
   
+  <am-summary href="/blog/2004/12/22/old-blogms-1000124479" time="2004-12-22 17:12:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/12/22/old-blogms-1000124479">Javascript之取消</a>
+    <div slot="summary"><css-style/><p>BlogMS original blog key: 1000124479, blog id: airoff
+History stat: 浏览/评论：200/0  ,  日期：2004年12月22日 17:12</p>
+
+<p><font color=#00008C><font face=Arial>// cancel pop menu</p>
+
+<p>function cancelkey(e) {</p>
+
+<p>if(document.all) event.returnValue = false; return false;</p>
+
+<p>}</p>
+
+<p>document.oncontextmenu = cancelkey;</p>
+
+<p>// cancel shift-click/enter open new</p>
+
+<p>function cancelNew(e) {</p>
+
+<p>if(document.all) {</p>
+
+<p>if(event.shiftKey)</p>
+
+<p>if(event.keyCode == &amp;quot;13&amp;quot; || event.type==&amp;quot;click&amp;quot;) return false;</p>
+
+<p>} else {</p>
+
+<p>if(e.shiftKey)</p>
+
+<p>if(e.keyCode == &amp;quot;13&amp;quot; || e.type==&amp;quot;click&amp;quot;) return false;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>document.onkeypress = cancelNew;</p>
+
+<p>//cancel select</p>
+
+<p>document.onselectstart = function(){ if(event.srcElement.tagName != &amp;quot;INPUT&amp;quot; &amp;&amp; event.srcElement.tagName != &amp;quot;TEXTAREA&amp;quot;) return false; return true;}</p>
+
+<p>//cancel drag</p>
+
+<p>document.ondragstart = function(){ if(event.srcElement.tagName != &amp;quot;INPUT&amp;quot; &amp;&amp; event.srcElement.tagName != &amp;quot;TEXTAREA&amp;quot;) return false; return true;}</p>
+
+<p></font></font></p>
+ 
+    </div>
+  </am-summary>
+  
   <am-summary href="/blog/2004/12/20/old-blogms-1000122012" time="2004-12-20 08:40:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
     <a slot="title" href="/blog/2004/12/20/old-blogms-1000122012">博弈，战争和辩论等</a>
     <div slot="summary"><css-style/><p>BlogMS original blog key: 1000122012, blog id: airoff
@@ -995,18 +995,6 @@ History stat: 浏览/评论：128/1  ,  日期：2004年12月14日 13:23</p>
     </div>
   </am-summary>
   
-  <am-summary href="/blog/2004/12/13/old-blogms-1000115622" time="2004-12-13 15:51:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
-    <a slot="title" href="/blog/2004/12/13/old-blogms-1000115622">蝴蝶效应</a>
-    <div slot="summary"><css-style/><p>BlogMS original blog key: 1000115622, blog id: airoff
-History stat: 浏览/评论：139/1  ,  日期：2004年12月13日 15:51</p>
-
-<p>It has been said that something as small as the flutter of a butterfly&rsquo;s wing can ultimately cause a typhoon halfway around the world. &mdash;- Chaos Theory</p>
-
-<p>“蝴蝶效应” - The Butterfly Effect，很久没有看过这样的片子了，很特别。让我想起了 Parallel  Universe Theory 也就是平行宇宙的理论，想起了 M Theory。</p>
- 
-    </div>
-  </am-summary>
-  
   <am-summary href="/blog/2004/12/13/old-blogms-1000115624" time="2004-12-13 15:54:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
     <a slot="title" href="/blog/2004/12/13/old-blogms-1000115624">六哥的处境</a>
     <div slot="summary"><css-style/><p>BlogMS original blog key: 1000115624, blog id: airoff
@@ -1015,6 +1003,18 @@ History stat: 浏览/评论：118/2  ,  日期：2004年12月13日 15:54</p>
 <p>在六哥初来深圳找工作的时候，看着他被晒黑的消瘦的脸，可以察觉出那种无奈和不安。有时候感觉自己的状况和他的非常类似，不同的只是我不用担心生计，但同样是不知道自己该走往何方——那种迷茫和不安是何等的相似。</p>
 
 <p>六哥是我儿时崇拜的对象，他中学时候就能写一笔不错的字，写文章也不错，好像还发表过一些。对于字写得不好并且文科偏差的我来说真是很为羡慕的。有一段时间他还自己拍照片来冲洗，在那个时候做这些事情对还很小的我来说是很了不起的了。他还拿过校运会短跑的奖牌。其实我总觉得他比我还聪明，很小就上学了，而且成绩很好，不象我8岁了都不愿意上学去，只可惜他没有走对发展的方向。对于他的现状，从我的偏见来看很大部分是由他中学交的朋友都比较不爱学习而引起的，再而就是他自己没什么踏实的目标，可能不能忽略的原因就是一直以来家人对他也没多大的信心。</p>
+ 
+    </div>
+  </am-summary>
+  
+  <am-summary href="/blog/2004/12/13/old-blogms-1000115622" time="2004-12-13 15:51:00 +0800" slug="/blog/tags/%s" tags="[BlogMS]">
+    <a slot="title" href="/blog/2004/12/13/old-blogms-1000115622">蝴蝶效应</a>
+    <div slot="summary"><css-style/><p>BlogMS original blog key: 1000115622, blog id: airoff
+History stat: 浏览/评论：139/1  ,  日期：2004年12月13日 15:51</p>
+
+<p>It has been said that something as small as the flutter of a butterfly&rsquo;s wing can ultimately cause a typhoon halfway around the world. &mdash;- Chaos Theory</p>
+
+<p>“蝴蝶效应” - The Butterfly Effect，很久没有看过这样的片子了，很特别。让我想起了 Parallel  Universe Theory 也就是平行宇宙的理论，想起了 M Theory。</p>
  
     </div>
   </am-summary>
