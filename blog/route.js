@@ -25,7 +25,7 @@ class BlogRoute extends LitElement {
         this.state = {"monthly":13,"timeline":52,"tags":{"blogms":{"Name":"BlogMS","Pages":35,"Count":308,"Latest":"2010-07-31 15:00:00 +0800"},"chinese-balance-heal":{"Name":"Chinese-Balance-Heal","Pages":1,"Count":8,"Latest":"2014-06-14 20:30:00 +0800"},"chrome-app":{"Name":"Chrome-App","Pages":2,"Count":13,"Latest":"2018-08-10 15:44:44 +0800"},"light-air-water-m-sci":{"Name":"Light-Air-Water-M-Sci","Pages":2,"Count":14,"Latest":"2014-08-23 16:18:00 +0800"},"mindon":{"Name":"Mindon","Pages":12,"Count":102,"Latest":"2018-08-19 21:21:21 +0800"},"mobile-app":{"Name":"Mobile-App","Pages":2,"Count":16,"Latest":"2014-05-02 08:17:00 +0800"},"readings":{"Name":"Readings","Pages":2,"Count":17,"Latest":"2015-05-26 22:05:49 +0800"},"web-tech":{"Name":"Web-Tech","Pages":4,"Count":36,"Latest":"2018-08-10 15:44:44 +0800"}}};
         this._shareStyle = `<style>
 img,embed,iframe{max-width:100%}
-code{max-width:100%;overflow-x:auto}
+code{max-width:100%;overflow-x:auto;white-space:pre}
 </style>`;
     }
 
