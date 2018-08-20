@@ -11,6 +11,8 @@ import { installOfflineWatcher } from '../node_modules/pwa-helpers/network.js';
 import { installMediaQueryWatcher } from '../node_modules/pwa-helpers/media-query.js';
 import { updateMetadata } from '../node_modules/pwa-helpers/metadata.js';
 
+import "./route.js";
+
 class AmApp extends LitElement {
 
     static get properties() {
@@ -99,7 +101,8 @@ class AmApp extends LitElement {
     }
 
     async _loadPage(page) {
-        await import('../' + this._verify(page) + '.js');
+        let u = '../' + this._verify(page) + '.js';
+        //await import(u);
     }
 
     _offlineChanged(offline) {

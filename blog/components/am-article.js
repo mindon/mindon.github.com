@@ -13,26 +13,28 @@ class AmArticle extends LitElement {
     }
 
     _render({ slug, time, tags, nav, tagsOn }) {
-        let dcc = navigator.userAgent.indexOf(" Chrome/") > 0 ?
+        let agent = navigator.userAgent, dcc = agent.indexOf("Chrome/") > 0 || agent.indexOf("Firefox/") > 0 ?
              html`<style>
-div.meta ::slotted(.next)::before {content:'❛ ';color:#333;margin-left:1em}
-div.meta ::slotted(.next)::after {content:' ❯ ';color:#d63}
-div.meta ::slotted(.prev)::before {content:' ❮ ';color:#d63;margin-left:1em}
-div.meta ::slotted(.prev)::after {content:' ❜';color:#333}
+div ::slotted(.next)::before {content:'❛ ';color:#333;margin-left:1em}
+div ::slotted(.next)::after {content:' ❯ ';color:#d63}
+div ::slotted(.prev)::before {content:' ❮ ';color:#d63;margin-left:1em}
+div ::slotted(.prev)::after {content:' ❜';color:#333}
 </style>` :
              html`<style>
 slot[name=next]::before {content:'❛';color:#333;margin-left:1em;margin-right:4px}
 slot[name=next]::after {content:'❯ ';color:#d63;margin-left:4px;}
 slot[name=prev]::before {content:'❮ ';color:#d63;margin-left:1em;margin-right:4px}
 slot[name=prev]::after {content:'❜';color:#333;margin-left:4px}
+slot[name=title]{display:inline}
+slot[name=title]::before {content:'❜'; color: #d63; margin-right:4px;font-size:2em}
 </style>`;
         return html`<style>
 :host{display:block;margin-bottom: 2em}
 div.meta {color:#999;}
 .flex {display:-webkit-box;display:-ms-flexbox;display: flex;flex-direction:row;flex-wrap:wrap}
 img {max-width:100%}
-::slotted(h1){display:inline}
-::slotted(h1)::before {content:'❜'; color: #d63; margin-right:4px;}
+div ::slotted(h1){display:inline}
+div ::slotted(h1)::before {content:'❜'; color: #d63; margin-right:4px;}
 div.body {
   padding-bottom: 1em;
   border-bottom: thin solid #eee;

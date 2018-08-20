@@ -35,23 +35,6 @@ if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () { navigator.serviceWorker.register("service-worker.js", { scope: "/" }) })
 }
 window.process = { env: { NODE_ENV: "production" } };
-function old(){
-    var p = document.createElement('div');
-    p.style.textAlign = 'center';
-    p.innerHTML = '<h1>MINDON.if 麦盾.風</h1><p style="margin:2em 8px">PWA may not working. 您的瀏覽器可能無法支持此網站。</p><p style="color:#39f">visit with latest Chrome or Safari or Opera instead, 謝謝!</p><div style="color:red;font-size:7pt">'+err+'</div>';
-    document.body.insertBefore(p, document.getElementById('dots'));
-}
-var agent = navigator.userAgent, err = '';
-if(/Firefox|Minefield|FxiOS/.test(agent) || !document.addEventListener) {
-    window.addEventListener('error', function(e) {
-        err = e.message;
-    });
-    if(document.addEventListener) {
-        document.addEventListener("DOMContentLoaded", old)
-    } else {
-        window.onload = old;
-    }
-}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28048168-2"></script>
 <script>
