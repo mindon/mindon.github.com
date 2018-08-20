@@ -40,7 +40,7 @@ div.body {
   border-bottom: thin solid #eee;
   max-width:100%; overflow-x:hidden;
 }
-div.meta ::slotted(.next), div.meta ::slotted(.prev){
+div ::slotted(.next), div ::slotted(.prev){
     text-decoration: none;
     color: #09d;
 }
