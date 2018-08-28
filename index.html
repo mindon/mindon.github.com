@@ -46,8 +46,12 @@ window.process = { env: { NODE_ENV: "production" } };
   gtag('config', 'UA-28048168-2');
 </script>
 <script>
+var title = document.title;
 window.addEventListener('app-metas', function(e) {
-    gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
+    if(document.title != title) {
+      title = document.title;
+      gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
+    }
 });
 window.addEventListener('error', function(e) {
     gtag('event', 'exception', {
