@@ -42,16 +42,10 @@ window.process = { env: { NODE_ENV: "production" } };
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'UA-28048168-2');
 </script>
 <script>
-var title = document.title;
 window.addEventListener('app-metas', function(e) {
-    if(document.title != title) {
-      title = document.title;
-      gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
-    }
+    gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
 });
 window.addEventListener('error', function(e) {
     gtag('event', 'exception', {
