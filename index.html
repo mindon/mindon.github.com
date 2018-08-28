@@ -44,6 +44,8 @@ window.process = { env: { NODE_ENV: "production" } };
   gtag('js', new Date());
 
   gtag('config', 'UA-28048168-2');
+</script>
+<script>
 window.addEventListener('app-metas', function(e) {
     gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
 });
