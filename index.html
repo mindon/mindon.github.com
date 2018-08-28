@@ -36,12 +36,14 @@ if ("serviceWorker" in navigator) {
 }
 window.process = { env: { NODE_ENV: "production" } };
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28048168-2"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-if(location.hostname != 'localhost') {
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28048168-2');
 window.addEventListener('app-metas', function(e) {
     gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
 });
@@ -60,7 +62,6 @@ window.addEventListener('WebComponentsReady', function(e) {
     'event_label': 'WebComponentsReady'
     });
 });
-}
 </script>
 <style>
 body {
