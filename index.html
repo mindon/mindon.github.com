@@ -43,7 +43,7 @@ function gtag(){dataLayer.push(arguments);}
 if(location.hostname != 'localhost') {
 gtag('js', new Date());
 window.addEventListener('app-metas', function(e) {
-    gtag('config', 'UA-28048168-2', {'page_path':location.pathname.replace(/#~\/?/, '')});
+    gtag('config', 'UA-28048168-2', {'page_path':location.pathname + location.hash});
 });
 window.addEventListener('error', function(e) {
     gtag('event', 'exception', {
