@@ -89,7 +89,7 @@ code{max-width:100%;overflow-x:auto;white-space:pre}
                     }
                 },
                 "timeline": {
-                    rule: /^(\d*)$/, goto: (m, u) => {
+                    rule: /^(?:posts\/)?(\d*)$/, goto: (m, u) => {
                         let pn = m[1] || state.timeline || '1';
                         return ubase + 'timeline/' + pn + '.html';
                     }
