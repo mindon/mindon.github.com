@@ -11,7 +11,6 @@
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-if(location.hostname != 'localhost') {
 gtag('js', new Date());
 gtag('config', 'UA-28048168-2');
 </script>
@@ -534,8 +533,10 @@ $('#myrel').on(_CLICK,function(){
 	$('#mypick').click();
 });
 $('#myrel2').on(_CLICK,function(){
-	$('#myhide').click();
 	$('#mypick').click();
+	setTimeout(function(){
+		$('#myhide').click();
+	});
 });</script>
 </body>
 </html>
