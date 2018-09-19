@@ -242,9 +242,9 @@ html, body{
   white-space: nowrap;
 }
 #listct img {
-  width: 21%;
-  max-width: 60px;
-  max-height: 60px;
+  width: 18%;
+  max-width: 48px;
+  max-height: 48px;
   margin: 0 0.5%;
   position: relative;
   top: 50%;
@@ -423,7 +423,7 @@ var t={'en':'USTC - 60TH ANNIVERSARY E-Card/Avatar', 'zh-CN':'中国科技大学
 <div style="display:none">
 <span id="t_SHARE"><en>USTC - 60TH ANNIVERSARY</en><zh-CN>中国科技大学60周年庆</zh-CN><zh-TW>中國科學技術大學六十週年慶</zh-TW></span>
 </div>
-<div id="mypreview" style="display:none">
+<div id="mypreview" style="display:none" class="nopan">
 <img id="myresult" width="160" title="电脑上右键保存" /><p>长按预览照片保存</p><a id="myhide">隐藏(HIDE)</a> <span id="myrel2">换照片…</span>
 </div>
 
@@ -533,10 +533,7 @@ $('#myrel').on(_CLICK,function(){
 	$('#mypick').click();
 });
 $('#myrel2').on(_CLICK,function(){
-	$('#myhide').click();
-	setTimeout(function(){
-		$('#mypick').click();
-	},50);
+	$('#myrel').click();
 });</script>
 </body>
 </html>
