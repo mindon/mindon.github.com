@@ -243,10 +243,13 @@ html, body{
   overflow: hidden;
   white-space: nowrap;
 }
+##listct {
+	vertical-align: middle;
+}
 #listct img {
-  width: 18%;
-  max-width: 48px;
-  max-height: 48px;
+  width: 21%;
+  max-width: 52px;
+  max-height: 52px;
   margin: 0 0.5%;
   position: relative;
   top: 50%;
@@ -443,16 +446,16 @@ var cards = {
   "area": {x:0, y:0, w:640, h:960},
   "music": false,//['canon-in-d-piano'],
  },
-'60th_x': {
-  "width": 886,
-  "height": 886,
-  "area": {x:0, y:0, w:886, h:886},
+'i_love_ustc_2018': {
+  "width": 600,
+  "height": 600,
+  "area": {x:0, y:0, w:600, h:600},
   "music": false,//['canon-in-d-piano'],
  },
-'60th_y': {
-  "width": 886,
-  "height": 886,
-  "area": {x:0, y:0, w:886, h:886},
+'i_love_ustc_60th': {
+  "width": 600,
+  "height": 600,
+  "area": {x:0, y:0, w:600, h:600},
   "music": false,//['canon-in-d-piano'],
  },
 'USTC-60red': {
@@ -466,9 +469,21 @@ var cards = {
   "height": 600,
   "area": {x:0, y:0, w:600, h:600},
   "music": false,//['canon-in-d-piano'],
+ },
+'60th_x': {
+  "width": 886,
+  "height": 886,
+  "area": {x:0, y:0, w:886, h:886},
+  "music": false,//['canon-in-d-piano'],
+ },
+'60th_y': {
+  "width": 886,
+  "height": 886,
+  "area": {x:0, y:0, w:886, h:886},
+  "music": false,//['canon-in-d-piano'],
  }
 };
-var npp = 5;
+var npp = 4;
 var afm = window.location.search.match(/[\?&]af=([a-z]+)/), af = afm?afm[1]:'';
 var cardStyles = [], cardThumbPos = 0;for(var k in cards) {if(!af || (cards[k].af && cards[k].af.indexOf(af)>-1)) cardStyles.push(k);}
 if(cardStyles.length==0) {cardStyles.push('holiday')}
