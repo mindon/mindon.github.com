@@ -93,11 +93,13 @@ html, body{
   position: absolute;
   left: 2%;
   width: 96%;
-  bottom: 6px;
+  bottom: 36px;
   max-height: 93px;
   z-index: 9999990;
   text-align: right;
   vertical-align: bottom;
+  color: #950700;
+  font-weight:bold;
 }
 #taskbar.create {
   bottom: 6px;
@@ -371,23 +373,24 @@ body.single #mystyle {
   transform: translateX(50%);
 }
 #mysave, #mystyle {
-padding: 4px 8px; color: #000;
-background-color: rgba(255,255,255,0.5);
+padding: 10px 6px; color: #950700;
+background-color: rgba(182,228,255,0.5);
 }
 #mypreview {
 	width: 240px;
 	position: fixed;
 	margin-left: -120px;
 	left: 50%;
-	bottom: 64px;
-	padding: 1em;
+	bottom: 72px;
+	padding: 1em 1em 2em 1em;
 	background: #fff;
 	border-radius: 3px;
 	border: 6px solid #960;
 	text-align: center;
 }
 #mypreview img {display: block;display:inline-block;margin-right:0}
-#mypreview a {color: #960; padding: 4px 9px; border: 1px solid #960;border-radius: 3px;}
+#mypreview a {color: #950700; padding: 8px; border: 1px solid #960;border-radius: 3px;}
+small {color:#999;font-size:7pt}
 </style>
 </head>
 <body class="LANG_en">
@@ -424,7 +427,7 @@ var t={'en':'USTC - 60TH ANNIVERSARY E-Card/Avatar', 'zh-CN':'中国科技大学
 <span id="t_SHARE"><en>USTC - 60TH ANNIVERSARY</en><zh-CN>中国科技大学60周年庆</zh-CN><zh-TW>中國科學技術大學六十週年慶</zh-TW></span>
 </div>
 <div id="mypreview" style="display:none" class="nopan">
-<img id="myresult" width="160" title="电脑上右键保存" /><p>长按预览照片保存</p><a id="myhide">隐藏(HIDE)</a>
+<img id="myresult" width="160" /><p>长按预览照片保存<br/><small>电脑上右键保存</small></p><a id="myhide">关闭预览</a>
 </div>
 
 <form id="upform" enctype="multipart/form-data" method="POST" class="nopan">
