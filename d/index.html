@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Mindon (mindon@live.com)">
+  <title>血糖状况图 - developed by Mindon</title>
+
+  <link rel="stylesheet" href="d.min.css">
+</head>
+
+<body>
+  <h3><a id="toggleCard">血糖状况图 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-chat-square-quote" viewBox="0 0 16 16">
+        <path
+          d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+        <path
+          d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z" />
+      </svg></a></h3>
+  <div id="container">
+    <div id="box">
+      <div id="main" class="text-center">
+        <div class="spinner-border text-primary collapse show" role="status" id="mybusying">
+          <span class="visually-hidden" style="display:block;text-align:center">加载中...</span>
+        </div>
+      </div>
+      <div id="data">
+        <div class="d-flex mb-3">
+          <div>
+            <p><small>直接填写或选择自己的文件（.csv）</small> <input id="myfile" type="file" placeholder="选择血糖数据文件"
+                accept=".csv,.tsv" multiple></p>
+            <p><small>文件格式每行内容格式为 <strong>日期,时间,血糖值,备注</strong>， 如
+                6-1,11:59,5.2,午餐前</small></p>
+          </div>
+          <div style="margin-left:auto;position:relative">
+            <a class="total"><span id="mycount">0</span> 条记录⬇</a>
+            <a class="reset">清空</a>
+            <a class="apply">保存</a>
+          </div>
+        </div>
+        <form>
+          <table id="mydata">
+            <thead>
+              <tr>
+                <th class="remove">-</th>
+                <th>日期</th>
+                <th>时间</th>
+                <th>血糖</th>
+                <th class="memo">备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- existing data could optionally be included here -->
+            </tbody>
+          </table>
+          <datalist id="memoList">
+            <option>早餐前</option>
+            <option>早餐后</option>
+            <option>午餐前</option>
+            <option>午餐后</option>
+            <option>晚餐前</option>
+            <option>晚餐后</option>
+            <option>睡前</option>
+            <option>随机</option>
+            <option>低血糖</option>
+          </datalist>
+        </form>
+        <template id="record">
+          <tr>
+            <td class="remove"><a></a></td>
+            <td><input class="date" type="date" pattern="[0-9]{4}-[0-9]{1,2}-[0-9]{1,2} [0-9]{1,2}:[0-9]{1,2}"
+                title="格式: 年-月-日 时:分，例如 2021-6-1 18:00" size="18" placeholder="格式 2021-6-1 18:00">
+            </td>
+            <td><input class="time" type="time" pattern="\d{1,2}:\d{1,2}" title="格式：时:分，例如 18:00" size="8"
+                placeholder="格式 18:00" required></td>
+            <td><input class="status" type="number" title="数值" min="0" max="256" step="0.1" size="12"
+                placeholder="mmol/l" required></td>
+            <td><input class="memo" type="text" placeholder="备注" maxlength="128" list="memoList"></td>
+          </tr>
+        </template>
+      </div>
+    </div>
+  </div>
+  <p class="center">更清晰的方式了解血糖变化，可下载数据和图片供医生参考! [<a id="enter" title="上传自己的数据文件或清空后进行编辑">体验</a>]</p>
+  <cite><a href="https://mindon.github.io" target="_mindon">Mindon</a>（麦盾）开发，powered by <a
+      href="https://echarts.apache.org/zh/" target="_echarts">Apache ECharts</a></cite>
+  <script type="module" src="d.min.js" defer></script>
+</body>
+
+</html>
