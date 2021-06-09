@@ -8,7 +8,7 @@
   <meta name="author" content="Mindon (mindon@live.com)">
   <meta name="description" content="血糖状况图 Blood glucose monitoring status chart - developed by Mindon">
   <title>血糖状况图 - developed by Mindon</title>
-  <link rel="stylesheet" href="d.min.css?0608">
+  <link rel="stylesheet" href="d.min.css?0609">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28048168-2"></script>
   <script>
@@ -38,13 +38,14 @@
       <div id="data">
         <div class="d-flex mb-3">
           <div>
-            <p><small>直接填写或选择自己的文件（.csv）</small> <input id="myfile" type="file" placeholder="选择血糖数据文件"
-                accept=".csv,.tsv" multiple></p>
+            <p><small>直接填写或选择文件（.csv）</small> <input id="myfile" type="file" placeholder="选择血糖数据文件" accept=".csv,.tsv"
+                multiple></p>
             <p class="hide"><small>文件格式每行内容格式为 <strong>日期,时间,血糖值,备注</strong>， 如
                 6-1,11:59,5.2,午餐前</small></p>
           </div>
           <div style="margin-left:auto;position:relative">
             <a class="total"><span id="mycount">0</span> 条记录⬇</a>
+            <a id="myback">&#10150;</a>
             <a class="reset">清空</a>
             <a class="apply">保存</a>
           </div>
@@ -99,7 +100,7 @@
       href="https://echarts.apache.org/zh/" target="_echarts">Apache ECharts</a></cite>
   <script crossorigin="anonymous" integrity="sha384-Dr98ddmUw2QkdCarNQ+OL7xLty7cSxgR0T7v1tq4UErS/qLV0132sBYTolRAFuOV"
     src="https://lib.baomitu.com/qrious/4.0.2/qrious.min.js" defer></script>
-  <script type="module" src="d.min.js?0608" defer></script>
+  <script type="module" src="d.min.js?0609" defer></script>
 </body>
 
 </html>
