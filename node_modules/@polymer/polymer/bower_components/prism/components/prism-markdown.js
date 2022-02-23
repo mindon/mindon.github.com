@@ -61,10 +61,10 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 		alias: 'punctuation'
 	},
 	'url-reference': {
-		// [id]: http://example.com "Optional title"
-		// [id]: http://example.com 'Optional title'
-		// [id]: http://example.com (Optional title)
-		// [id]: <http://example.com> "Optional title"
+		// [id]: https://example.com "Optional title"
+		// [id]: https://example.com 'Optional title'
+		// [id]: https://example.com (Optional title)
+		// [id]: <https://example.com> "Optional title"
 		pattern: /!?\[[^\]]+\]:[\t ]+(?:\S+|<(?:\\.|[^>\\])+>)(?:[\t ]+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^)\\])*\)))?/,
 		inside: {
 			'variable': {
@@ -99,7 +99,7 @@ Prism.languages.insertBefore('markdown', 'prolog', {
 		}
 	},
 	'url': {
-		// [example](http://example.com "Optional title")
+		// [example](https://example.com "Optional title")
 		// [example] [id]
 		pattern: /!?\[[^\]]+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)| ?\[[^\]\n]*\])/,
 		inside: {

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="mindon/at/gmail.com" site="http://mindon.github.com/" />
+    <meta name="author" content="mindon/at/gmail.com" site="https://mindon.github.io/" />
     <title>
 Memory Challenge
     </title>
@@ -311,9 +311,12 @@ html * {
       <div id="restart">Start</div>
       <div id="mycontinue">Continue</div>
     </div>
-  <a class="notify" href="http://weixin.qq.com/r/XHVhbhvEziWxhwoNnyB4">Add "<b>QiPlay</b>" to play more games</a>
+  <a class="notify" href="https://weixin.qq.com/r/XHVhbhvEziWxhwoNnyB4">Add "<b>QiPlay</b>" to play more games</a>
   </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
 <script type="text/javascript">
 function checkfn(){var e=$(this),t=e.data("i");clicked[0]===0&&clicked[1]===0&&(timestart=(new Date).getTime());if(!e.hasClass("hide"))return e=null,!0;if(t===m[0]){clicked[0]++,m.shift(),e.removeClass("hide").addClass("hit"+Math.round(Math.random())),e=null,bonus+=30;if(m.length==0){level>=25&&$("#next").html("Great!").unbind("click"),setTimeout(function(){$("#fin").show()},150),$("#playground ul li").filter(".number").removeClass("hide").removeClass("hit0").removeClass("hit1").html("").removeClass("number").unbind("click"),$("#score b").html(bonus);var n=Math.round(clicked[0]*100/(clicked[0]+clicked[1]));$("#accuracy").html(n),$("#timecost").html((((new Date).getTime()-timestart)/1e3).toFixed(1)),$("#mask").css("height",Math.round((100-n)*1.6)),n<99?$("#next").addClass("disabled"):$("#next").removeClass("disabled"),record(bonus)}}else clicked[1]++,bonus-=50,e.removeClass("hide"),setTimeout(function(){e.addClass("hide"),e=null},250)}function record(e){window.localStorage?typeof e=="number"?(localStorage["bonus-M"]=(localStorage["bonus-M"]?parseInt(localStorage["bonus-M"])||0:0)+e,localStorage["level-M"]=level,localStorage.bonus=(localStorage.bonus?parseInt(localStorage.bonus)||0:_SPARK)+e,$("#mybonus").html(localStorage["bonus-M"])):($("#mybonus").html(localStorage["bonus-M"]||0),localStorage.bonus||(localStorage.bonus=_SPARK),localStorage["level-M"]&&(level=parseInt(localStorage["level-M"])),level<3&&(level=3),$("#mybonus").html(localStorage["bonus-M"]||0)):e&&$("#mybonus").html((parseInt($("#mybonus").html())||0)+e)}function shuffle(e){var t=$("#playground ul li"),n=0,r={};for(var i=1;i<=e;i++){do n=Math.floor(25*Math.random());while(r[n]);r[n]=i,t.eq(n).addClass("number").html("<span>"+i+"</span>").click(checkfn),m.push(n)}setTimeout(function(){$("#playground ul li.number").addClass("hide")},250+e*100),t=null,$("#logo").css("background-position",27-106*Math.floor(15*Math.random())+"px 27px"),bonus=0,clicked=[0,0]}var level=3,bonus=0,m=[],conf=window.QiPlayCONF||{},_SPARK=conf._SPARK||100,clicked=[0,0],timestart=0;$(document).ready(function(){var e=0;$("#playground ul li").each(function(){$(this).css("margin-top",Math.floor(20*Math.random())).data("i",e++)}),$("#playground ul").find("li:first").each(function(){$(this).css("margin-left",Math.floor(36*Math.random()))}),record(),$("#retry,#logo").click(function(){$("#fin").hide(),shuffle(level)}),$("#next").click(function(){if($(this).hasClass("disabled"))return!0;level+=1,$("#fin").hide(),shuffle(level),window.localStorage&&(localStorage["level-M"]=level)}),$("#mycontinue").click(function(){$("#start").hide(),shuffle(level)}),$("#restart").click(function(){$("#start").hide(),level=3,shuffle(level)}),level===3&&($("#mycontinue").hide(),$("#restart").css("left",110))});
 </script>

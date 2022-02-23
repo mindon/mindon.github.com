@@ -3,23 +3,23 @@
     <h1 slot="title">Swift - The new iOS Language</h1>
     <div slot="content"><css-style/><p>** Apple&rsquo;s top secret Swift language grew from work to sustain Objective-C, which it now aims to replace **</p>
 
-<p>Feature	By <a href="http://twitter.com/danieleran">Daniel Eran Dilger</a></p>
+<p>Feature	By <a href="https://twitter.com/danieleran">Daniel Eran Dilger</a></p>
 
 <p>Work on Swift—Apple&rsquo;s surprise new programming language unveiled at WWDC—started development four years ago in conjunction with efforts to keep Objective-C relevant. Swift now aims to quickly replace Objective-C for modern Cocoa development on iOS and OS X.</p>
 
 <p><strong>LLVM</strong></p>
 
-<p>Rather than being an entirely new &ldquo;beta&rdquo; idea, work on Swift started in the summer of 2010, <a href="http://nondot.org/sabre/">according</a> to the new language&rsquo;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
+<p>Rather than being an entirely new &ldquo;beta&rdquo; idea, work on Swift started in the summer of 2010, <a href="https://nondot.org/sabre/">according</a> to the new language&rsquo;s originator Chris Lattner (below), who has worked at Apple since 2005. Lattner is probably best known for LLVM, the Low Level Virtual Machine compiler infrastructure project with a wyvern dragon mascot (above).</p>
 
 <h2>LLVM: A new compiler for Objective-C</h2>
 
-<p>LLVM <a href="http://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&rsquo;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
+<p>LLVM <a href="https://appleinsider.com/articles/08/06/20/apples_other_open_secret_the_llvm_complier/page/1">originated</a> as Lattner&rsquo;s research project while a student at the University of Illinois, Urbana-Champaign in 2000. It was first publicly released as version 1.0 in 2003. In 2004, Lattner was a summer intern at Microsoft Research, where he worked on the Phoenix complier infrastructure, working to allow LLVM to compile and run .NET code.</p>
 
 <p><strong>Chris Lattner</strong></p>
 
 <p>Lattner caught the attention of Apple after posting questions about Objective-C to the company&rsquo;s objc-language mailing list. Apple in turn began contributing to Lattner&rsquo;s LLVM open source project in 2005 and subsequently hired Lattner and began funding his work.</p>
 
-<p>In 2007, the LLVM project released <a href="http://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&rsquo;s Xcode.</p>
+<p>In 2007, the LLVM project released <a href="https://clang.llvm.org/">Clang</a>, a front end code parser for Objective-C/C/C++ aimed to provide fast compiling with low memory use, expressive diagnostics, a modular library-based architecture, and tight integration within an IDE such as Apple&rsquo;s Xcode.</p>
 
 <!--more-->
 
@@ -29,17 +29,17 @@
 
 <p>Apple began aggressively using LLVM in OS X, providing LLVM-GCC to its Mac developers in order to provide access to the new LLVM compiler and benefit from its code optimizations without requiring substantial changes to their workflow based on the previous GCC.</p>
 
-<p>The company also integrated LLVM into the <a href="http://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
+<p>The company also integrated LLVM into the <a href="https://lists.cs.uiuc.edu/pipermail/llvmdev/2006-August/006492.html">OpenGL stack</a> of OS X 10.5 Leopard in 2006, and leveraged LLVM to help in migrating the Mac to Intel beginning in 2005 and to the ARM architecture for the iPhone in 2007.</p>
 
 <p>By the 2012 release of OS X Mountain Lion and iOS 6, Apple had moved entirely to Clang, leaving both LLVM-GCC and GCC behind. LLVM not only powers Apple&rsquo;s software, but is also tightly integrated into the development of Apple&rsquo;s custom silicon, including the A6 and A7 Application Processors.</p>
 
-<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="http://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&rsquo;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
+<p>LLVM also plays a key role in other Apple technologies, from the LLDB debugger to new APIs including <a href="https://appleinsider.com/articles/14/06/04/apples-top-secret-swift-language-grew-from-work-to-sustain-objective-c-which-it-now-aims-to-replace">Metal</a>, Apple&rsquo;s new layer for high performance graphics on iOS that exposes the graphics capabilities of the newest A7 with the least possible overhead, delivering a significant performance boost over using the more general purpose OpenGL.</p>
 
 <h2>Swift: A new language for LLVM</h2>
 
 <p>By 2010, LLVM&rsquo;s solution to GCC&rsquo;s stagnant Objective-C support created a new scenario where LLVM could now support more features than could be easily added to Objective-C. Lattner began working on a new programming language that summer, and a year later was joined by &ldquo;a few other (amazing) people.&rdquo;</p>
 
-<p>By July 2013, Lattner noted that the new Swift project had become &ldquo;major focus for the Apple Developer Tools group.&rdquo; It remained a <a href="http://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="http://nondot.org/sabre/Resume.html#Apple">resume</a> that he &ldquo;took over management and leadership of the entire Developer Tools department at Apple&rdquo; at the beginning of 2013.</p>
+<p>By July 2013, Lattner noted that the new Swift project had become &ldquo;major focus for the Apple Developer Tools group.&rdquo; It remained a <a href="https://appleinsider.com/articles/14/06/03/monday-at-wwdc-apple-delivers-big-surprises-as-most-predictions-ended-up-wrong">secret</a> to the public for the next year. Lattner notes in his <a href="https://nondot.org/sabre/Resume.html#Apple">resume</a> that he &ldquo;took over management and leadership of the entire Developer Tools department at Apple&rdquo; at the beginning of 2013.</p>
 
 <p>&ldquo;In addition to compilers and low-level tools,&rdquo; Lattner notes, &ldquo;I am now responsible for the Xcode IDE, Instruments performance analysis tool, Apple Java releases, and a variety of internal tools. Xcode 5 is the first result of this work, though much of the feature planning and implementation was complete before I took over. I drove convergence and defined a few key features that were released at WWDC.&rdquo;</p>
 
@@ -59,7 +59,7 @@
 
 <p>&ldquo;The Xcode Playgrounds feature and REPL were a personal passion of mine, to make programming more interactive and approachable,&rdquo; Lattner noted. &ldquo;The Xcode and LLDB teams have done a phenomenal job turning crazy ideas into something truly great.</p>
 
-<p>&ldquo;Playgrounds were heavily influenced by Bret Victor&rsquo;s <a href="http://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&rsquo;s online environment for <a href="http://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="http://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
+<p>&ldquo;Playgrounds were heavily influenced by Bret Victor&rsquo;s <a href="https://worrydream.com/#!/LearnableProgramming">ideas</a> [ which are cited as a inspiration for Khan Academy&rsquo;s online environment for <a href="https://www.khanacademy.org/computing/cs">learning to program</a> ], by <a href="https://www.chris-granger.com/lighttable/">Light Table</a> [an open source IDE designed to provide realtime feedback about code and how programs work] and by many other interactive systems.</p>
 
 <p>&ldquo;I hope that by making programming more approachable and fun, we&rsquo;ll appeal to the next generation of programmers and to help redefine how Computer Science is taught,&rdquo; Lattner stated.</p>
 

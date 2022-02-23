@@ -2,7 +2,7 @@
  * jquery.Jcrop.js v0.9.12
  * jQuery Image Cropping Plugin - released under MIT License 
  * Author: Kelly Hallman <khallman@gmail.com>
- * http://github.com/tapmodo/Jcrop
+ * https://github.com/tapmodo/Jcrop
  * Copyright (c) 2008-2013 Tapmodo Interactive LLC {{{
  *
  * Permission is hereby granted, free of charge, to any person
@@ -396,7 +396,7 @@
     // Touch Module {{{ 
     var Touch = (function () {
       // Touch support detection function adapted (under MIT License)
-      // from code by Jeffrey Sambells - http://github.com/iamamused/
+      // from code by Jeffrey Sambells - https://github.com/iamamused/
       function hasTouchSupport() {
         var support = {}, events = ['touchstart', 'touchmove', 'touchend'],
             el = document.createElement('div'), i;

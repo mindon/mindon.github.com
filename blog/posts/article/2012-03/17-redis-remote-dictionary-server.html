@@ -3,14 +3,14 @@
     <h1 slot="title">Redis: REmote DIctionary Server</h1>
     <div slot="content"><css-style/><h2>Redis tutorial</h2>
 
-<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="http://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
+<p>These slides and notes were originally written to accompany a three hour Redis tutorial I gave at the NoSQL Europe conference on the 22nd of April 2010. <a href="https://simonwillison.net/static/2010/redis-tutorial/"><strong>Redis tutorial</strong></a></p>
 
 <p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
 
-<p><a href="http://www.petermao.com/redis/65.html">redis源代码分析</a></p>
+<p><a href="https://www.petermao.com/redis/65.html">redis源代码分析</a></p>
 
-<p><a href="http://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
-<a href="http://www.redis.io/topics/internals-eventlib">http://www.redis.io/topics/internals-eventlib</a></p>
+<p><a href="https://blog.csdn.net/archimedes_zht/article/details/6909074">Redis为什么不使用Libevent或者Libev</a>
+<a href="https://www.redis.io/topics/internals-eventlib">https://www.redis.io/topics/internals-eventlib</a></p>
 
 <p><strong>Salvatore Sanfilippo：</strong>
 Redis使用一个简洁的事件循环（event loop），我能够完全控制它。Libevent库自身的代码量已经是Redis目前代码量的3倍大了。
@@ -19,7 +19,7 @@ Redis使用一个简洁的事件循环（event loop），我能够完全控制�
 <p>大的库也并不总是每个方面都没有瑕疵的。例如，Libevent的稳定发布版在运行时对事件的数组做无意义的重新分配（Libevent在2.0版本里改进了这一点，但是这个版本还不是稳定的）。我修改了ae.c让它模块化，并且通过多分配一些内存为代价来避免在事件循环内部的各种类型的O(N)操作（但是这个多分配的内存对于Redis这个内存数据库来说并不是一个问题，因为可能只占总占用内存的0.001% :)）。现在添加和删除一个event是O(1)了，这对于有10K个客户端连接来说很重要。现在我们在Redis里面仅仅使用一个Timer，但是如果以后我们需要更多的，我可以修改ae.c通过使用skip list（跳跃表）来达到O(log(N))。我们现在有了2个模块：ae_select.c和ae_epoll.c，考虑到写一个新的模块的工作是如此的少，我肯定会增加ae_kevent.c。</p>
 
 <p><strong>Sergey Shepelev：</strong>
-Yeah，Libevent比较差劲，相反，libev是一个小巧、well thought、clean的库，它并没有提供任何高级的feature比如Http，但是它确实提供了非常好的底层feature。可以试一下：<a href="http://software.schmorp.de/pkg/libev.html">http://software.schmorp.de/pkg/libev.html</a></p>
+Yeah，Libevent比较差劲，相反，libev是一个小巧、well thought、clean的库，它并没有提供任何高级的feature比如Http，但是它确实提供了非常好的底层feature。可以试一下：<a href="https://software.schmorp.de/pkg/libev.html">https://software.schmorp.de/pkg/libev.html</a></p>
 
 <p><strong>Pedro Melo：</strong>
 赞同使用Libev，使用它，你将会非常高兴满意。:)</p>
@@ -50,7 +50,7 @@ Yeah，Libevent比较差劲，相反，libev是一个小巧、well thought、cle
 <p>因此，从一个绝对的观点来看，你是正确的。但是我有一些我自己的主观原因在Redis中使用ae.c。</p>
 
 <p><strong>Pedro Melo：</strong>
-当然，不存在没有bug的库。我仅仅能够说的是libev非常的活跃，作者对在maillist上报告的bug也反应的非常快。我相信timer是O(log(N))，你可以看看文档的算法复杂度部分：<a href="http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP..">http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP..</a>. 。事实上，libev是将它使用的算法的复杂度文档化的少有的几个库之一。总之，我确信它将能够很好的工作。</p>
+当然，不存在没有bug的库。我仅仅能够说的是libev非常的活跃，作者对在maillist上报告的bug也反应的非常快。我相信timer是O(log(N))，你可以看看文档的算法复杂度部分：<a href="https://pod.tst.eu/https://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP..">https://pod.tst.eu/https://cvs.schmorp.de/libev/ev.pod#ALGORITHMIC_COMP..</a>. 。事实上，libev是将它使用的算法的复杂度文档化的少有的几个库之一。总之，我确信它将能够很好的工作。</p>
 
 <p><strong>Salvatore Sanfilippo：</strong>
 Pedro，没有任何问题，我认为你的观点是很好的，我今天读了一会儿libev代码后，也同意libev的代码很好。如果我们把这个问题当作一个纯粹的软件工程问题，换句话说，假如我们将为宇宙飞船写一个组件，毫无疑问正确的做法是使用能够工作并且被很好测试过的库。</p>

@@ -10,7 +10,7 @@
  * Achim Stöhr.
  *
  * Licensed under the MIT license:
- * http://www.opensource.org/licenses/MIT
+ * https://www.opensource.org/licenses/MIT
  */
 
 /*jslint continue:true */

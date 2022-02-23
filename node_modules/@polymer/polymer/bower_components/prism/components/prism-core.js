@@ -8,8 +8,8 @@ var _self = (typeof window !== 'undefined')
 
 /**
  * Prism: Lightweight, robust, elegant syntax highlighting
- * MIT license http://www.opensource.org/licenses/mit-license.php/
- * @author Lea Verou http://lea.verou.me
+ * MIT license https://www.opensource.org/licenses/mit-license.php/
+ * @author Lea Verou https://lea.verou.me
  */
 
 var Prism = (function(){

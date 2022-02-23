@@ -57,7 +57,7 @@ echo $encrypted.&rsquo;<br/>&rsquo;;
 echo iDecrypt($encrypted, $key, $iv);
 ?&gt;</p>
 
-<p><a href="http://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
+<p><a href="https://stackoverflow.com/questions/3716691/relation-between-input-and-ciphertext-length-in-aes">Relation between input and ciphertext length in AES</a></p>
 
 <blockquote>
 <p>Some encryption algorithms are stream ciphers which encrypt data &ldquo;bit by bit&rdquo; (or &ldquo;byte by byte&rdquo;). Most of them produce a key-dependent stream of pseudo-random bytes, and encryption is performed by XORing that stream with the data (decryption is identical). With a stream cipher, the encrypted length is equal to the plain data length.</p>
@@ -73,7 +73,7 @@ echo iDecrypt($encrypted, $key, $iv);
 <p>Warning: about all encryption systems (including stream ciphers) and modes require an extra value called the IV (Initial Value). Each message shall have its IV, and no two messages encrypted with the same key shall use the same IV. Some modes have extra requirements; in particular, for both CBC and CTR, the IV shall be selected randomly and uniformly with a cryptographically strong pseudo-random number generator. The IV is not secret, but must be known by the decrypter. Since each message gets its own IV, it is often needed to encode the IV along with the encrypted message. With CBC or CTR, the IV has length n, so, for AES, that&rsquo;s an extra 16 bytes. I do not know what mcrypt does with the IV, but, cryptographically speaking, the IV must be managed at some point.</p>
 </blockquote>
 
-<p>An article on AES cliper (in Chinese) <a href="http://blog.csdn.net/searchsun/article/details/2516191">http://blog.csdn.net/searchsun/article/details/2516191</a></p>
+<p>An article on AES cliper (in Chinese) <a href="https://blog.csdn.net/searchsun/article/details/2516191">https://blog.csdn.net/searchsun/article/details/2516191</a></p>
 </div>
      <a slot="next" class="next" href="/blog/2012/04/15/there-are-other-choices">There are other choices</a>
      <a slot="prev" class="prev" href="/blog/2012/03/26/amazing-webgl-and-html5-apps">Amazing WebGL and HTML5 Apps</a>

@@ -49,10 +49,10 @@ Callers occupying less than 2.0% are not shown.</p>
 <h2>Other Modules &amp; Tools</h2>
 
 <ul>
-<li><a href="http://dtrace.org"><strong>dtrace</strong></a></li>
+<li><a href="https://dtrace.org"><strong>dtrace</strong></a></li>
 </ul>
 
-<p>read the nodejs blog <a href="http://blog.nodejs.org/2012/04/25/profiling-node-js/">http://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
+<p>read the nodejs blog <a href="https://blog.nodejs.org/2012/04/25/profiling-node-js/">https://blog.nodejs.org/2012/04/25/profiling-node-js/</a></p>
 
 <p>dtrace -o stacks.out -n &lsquo;profile-97/execname == &ldquo;node&rdquo; &amp;&amp; arg1/{
 @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }&rsquo;</p>
@@ -100,7 +100,7 @@ profiler.pause();</p>
 
 <ul>
 <li><strong>Nodetime</strong>
-<a href="http://nodetime.com/">http://nodetime.com/</a></li>
+<a href="https://nodetime.com/">https://nodetime.com/</a></li>
 </ul>
 
 <p>Nodetime reveals response time and other internals of HTTP requests and underlying HTTP / database calls in your Node.js application. Coupled with related process and OS state information it enables tracing performance problems down to the root cause. Nodetime supports multiple native and external APIs and libraries.</p>
@@ -117,7 +117,7 @@ nodetime.profile();</p>
 
 <p>Callgrind is a profiling tool that records the call history among functions in a program&rsquo;s run as a call-graph. By default, the collected data consists of the number of instructions executed, their relationship to source lines, the caller/callee relationship between functions, and the numbers of such calls. Optionally, cache simulation and/or branch prediction (similar to Cachegrind) can produce further information about the runtime behavior of an application.</p>
 
-<p><a href="http://valgrind.org/docs/manual/cl-manual.html">http://valgrind.org/docs/manual/cl-manual.html</a></p>
+<p><a href="https://valgrind.org/docs/manual/cl-manual.html">https://valgrind.org/docs/manual/cl-manual.html</a></p>
 
 <p>valgrind &ndash;tool=callgrind node app.js</p>
 </div>

@@ -11,7 +11,7 @@
 <li><p>不要在style里面写float、position这些style，因为会被过滤。那么如何实现左右布局或者更复杂的布局呢？用table。</p></li>
 
 <li><p>style内容里面background可以设置color，但是img会被过滤，就是说不能通过CSS来设置背景图片了。但是有一个很有意思的元素属性，也叫background，里面可以定义一个图片路径，这是个不错的替代方案，虽然这样功能有限，比如无法定位背景图片了，有总比没有好。例如要给一个单元格加一个背景，必须这样写：
-<code>&amp;lt;td background=”<a href="http://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;">http://image1.koubei.com/images/common/logo_koubei.gif”&amp;gt;&amp;lt;/td&amp;gt;</a></code></p></li>
+<code>&amp;lt;td background=”<a href="https://image1.koubei.com/images/common/logo_koubei.gif”&gt;&lt;/td&gt;">https://image1.koubei.com/images/common/logo_koubei.gif”&amp;gt;&amp;lt;/td&amp;gt;</a></code></p></li>
 
 <li><p>div模式的邮箱不支持flash，iframe模式的有待验证。</p></li>
 </ol>
@@ -76,7 +76,7 @@ font-* 族的CSS属性不允许使用缩写，请分别定义 font-size, font-we
 注意表格不会继承外部的font等属性，请务必，在每个<code>&amp;lt;td&amp;gt;</code>元素上都定义字体属性和颜色。</p></li>
 
 <li><p>背景的处理
-不允许使用style=”background:url(http://…)”，请使用<code>&amp;lt;td&amp;gt;</code>的属性(attribute) background=“http://…”。（由于CSS背景图片是一种会影响页面渲染速度的定义，因此大多数Web邮件系统会过滤它。）</p></li>
+不允许使用style=”background:url(https://…)”，请使用<code>&amp;lt;td&amp;gt;</code>的属性(attribute) background=“https://…”。（由于CSS背景图片是一种会影响页面渲染速度的定义，因此大多数Web邮件系统会过滤它。）</p></li>
 </ul>
 
 <p>背景颜色，也请使用表格的bgcolor属性。</p>
@@ -121,7 +121,7 @@ font-* 族的CSS属性不允许使用缩写，请分别定义 font-size, font-we
 请使用空白的<code>&amp;lt;td&amp;gt;</code>元素，设置height属性来起到站位的作用。</li>
 </ul>
 
-<p>origin from <a href="http://user.qzone.qq.com/21195254/blog/1296205414">http://user.qzone.qq.com/21195254/blog/1296205414</a></p>
+<p>origin from <a href="https://user.qzone.qq.com/21195254/blog/1296205414">https://user.qzone.qq.com/21195254/blog/1296205414</a></p>
 </div>
      <a slot="next" class="next" href="/blog/2012/03/24/start-a-nodejs-addon-under-windows">Start a NodeJS addon under windows</a>
      <a slot="prev" class="prev" href="/blog/2012/03/22/magic-code-switching-comment-syntax">Magic Code Switching Comment Syntax</a>

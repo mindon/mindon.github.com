@@ -133,7 +133,7 @@
 					}
 				},
 
-				// [alias]http://example.com
+				// [alias]https://example.com
 				'link-ref': {
 					pattern: /^\[[^\]]+\]\S+$/m,
 					inside: {
@@ -149,7 +149,7 @@
 					}
 				},
 
-				// "text":http://example.com
+				// "text":https://example.com
 				// "text":link-ref
 				'link': {
 					pattern: RegExp('"(?:' + modifierRegex + ')?[^"]+":.+?(?=[^\\w/]?(?:\\s|$))'),
@@ -172,7 +172,7 @@
 				},
 
 				// !image.jpg!
-				// !image.jpg(Title)!:http://example.com
+				// !image.jpg(Title)!:https://example.com
 				'image': {
 					pattern: RegExp('!(?:' + modifierRegex + '|[<>=()])*[^!\\s()]+(?:\\([^)]+\\))?!(?::.+?(?=[^\\w/]?(?:\\s|$)))?'),
 					inside: {
