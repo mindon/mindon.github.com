@@ -35,32 +35,7 @@ if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () { navigator.serviceWorker.register("service-worker.js", { scope: "/" }) })
 }
 window.process = { env: { NODE_ENV: "production" } };
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28048168-2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-if(location.hostname != 'localhost') {
-gtag('js', new Date());
-window.addEventListener('app-metas', function(e) {
-    gtag('config', 'UA-28048168-2', {'page_path':location.pathname + location.hash});
-});
-window.addEventListener('error', function(e) {
-    gtag('event', 'exception', {
-    'description': e.message,
-    'fatal': false
-    });
-});
-window.addEventListener('WebComponentsReady', function(e) {
-    if(!window.performance) return;
-    gtag('event', 'timing_complete', {
-    'name': 'WebComponentsReady',
-    'value': Math.round(performance.now()),
-    'event_category': 'JS Dependencies',
-    'event_label': 'WebComponentsReady'
-    });
-});
-}
+function gtag(){} // avoid error
 </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
