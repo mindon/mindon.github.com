@@ -1,204 +1,115 @@
-@-webkit-keyframes r {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(-360deg); }
-}
-@-webkit-keyframes c1 {
-  from { background-color: #333; }
-  50% { background-color: #c30; }
-  to { background-color: #333; }
-}
-@-webkit-keyframes c2 {
-  from { background-color: #c30; }
-  50% { background-color: #333; }
-  to { background-color: #c30; }
-}
-
-@-moz-keyframes r {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(-360deg); }
-}
-@-moz-keyframes c1 {
-  from { background-color: #333; }
-  50% { background-color: #c30; }
-  to { background-color: #333; }
-}
-@-moz-keyframes c2 {
-  from { background-color: #c30; }
-  50% { background-color: #333; }
-  to { background-color: #c30; }
-}
-
-@-o-keyframes r {
-  from { -o-transform: rotate(0deg); }
-  to { -o-transform: rotate(-360deg); }
-}
-@-o-keyframes c1 {
-  from { background-color: #333; }
-  50% { background-color: #c30; }
-  to { background-color: #333; }
-}
-@-o-keyframes c2 {
-  from { background-color: #c30; }
-  50% { background-color: #333; }
-  to { background-color: #c30; }
-}
-
-@keyframes r {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-@keyframes c1 {
-  from { background-color: #333; }
-  50% { background-color: #c30; }
-  to { background-color: #333; }
-}
-@keyframes c2 {
-  from { background-color: #c30; }
-  50% { background-color: #333; }
-  to { background-color: #c30; }
-}
-
 .yinyang {
-  width:360px; height: 360px;
-  overflow: hidden;
-	margin: 64px auto;
-}
-
-.yinyang, #svgelem {
-
-  -webkit-animation-name: r; 
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-
-  -moz-animation-name: r; 
-  -moz-animation-duration: 3s; 
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-
-  -o-animation-name: r; 
-  -o-animation-duration: 3s; 
-  -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: linear;
-
-  animation-name: r; 
-  animation-duration: 3s; 
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    --size: 360px;
+    --dot: 60px;
+    --yin: #222;
+    --yang: #c30;
+    --duration: 8s;
+    width:var(--size);
+    height:var(--size);
+    position: relative;
+    overflow: hidden;
+    transform: rotate(90deg);
+    animation-name: loop;
+    animation-duration: var(--duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .yin, .yang {
-  width: 50%;
-  height: 100%;
-  float: left;
-  position: relative;
+    width: 50%;
+    height: 100%;
+    position: absolute;
 }
 
 .yin {
-  background-color: #333;
-  -webkit-border-radius: 180px 0 0 180px;
-  -moz-border-radius: 180px 0 0 180px;
-  border-radius: 180px 0 0 180px;
+    --front: var(--yin);
+    --back: var(--yang);
+    background-color: var(--front);
+    border-radius: calc(var(--size)/2) 0 0 calc(var(--size)/2);
 }
 
-.yin, .yinc, .yangd {
-  -webkit-animation-name: c1; 
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in;
-
-  -moz-animation-name: c1; 
-  -moz-animation-duration: 3s; 
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: ease-in;
-
-  -o-animation-name: c1; 
-  -o-animation-duration: 3s; 
-  -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: ease-in;
-
-  animation-name: c1; 
-  animation-duration: 3s; 
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
+.yin, .yin::before,.yin::after,
+.yang, .yang::before,.yang::after {
+    animation-duration: var(--duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.yin::after,
+.yang::after {
+    animation-timing-function: ease-out;
 }
 
-.yang, .yangc, .yind {
-  -webkit-animation-name: c2; 
-  -webkit-animation-duration: 3s; 
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in;
-
-  -moz-animation-name: c2; 
-  -moz-animation-duration: 3s; 
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: ease-in;
-
-  -o-animation-name: c2; 
-  -o-animation-duration: 3s; 
-  -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: ease-in;
-
-  animation-name: c2; 
-  animation-duration: 3s; 
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
+.yin, .yin::before, .yang::after {
+    animation-name: yin;
+}
+.yang, .yang::before, .yin::after {
+    animation-name: yang;
 }
 
 .yang {
-  background-color: #c30;
-  -webkit-border-radius: 0 180px 180px 0;
-  border-radius: 0 180px 180px 0;
+    --front: var(--yang);
+    --back: var(--yin);
+    right: 0;
+    background-color: var(--front);
+    border-radius: 0 calc(var(--size)/2) calc(var(--size)/2) 0;
 }
 
-.yinc {
-  width: 100%;
-  height: 50%;
-  background-color: #333;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  z-index: 11;
+.yin::before,
+.yang::before {
+    content: ' ';
+    width: 100%;
+    height: 50%;
+    background-color: var(--front);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9;
 }
 
-.yangc {
-  width: 100%;
-  height: 50%;
-  background-color: #c30;
-  -webkit-border-radius: 50%;
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  right: 50%;
-  z-index: 9;
+.yin::before {
+    bottom: 0;
+    left: 50%;
 }
-
-.yind {
-  width: 25%;
-  height: 25%;
-  background-color: #c30;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 10;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -12.5%;
-  margin-top: -12.5%;
+.yang::before {
+    top: 0;
+    right: 50%;
 }
-
-.yangd {
-  width: 25%;
-  height: 25%;
-  background-color: #333;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 10;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -12.5%;
-  margin-top: -12.5%;
+.yin::after,
+.yang::after {
+    content: '';
+    width: var(--dot);
+    height: var(--dot);
+    background-color: var(--back);
+    border-radius: calc(var(--dot)/2);
+    z-index: 12;
+    position: absolute;
+    --x: calc(var(--dot) / -2);
+    --y: calc(25% - var(--dot) / 2);
 }
+.yin::after {
+    right: var(--x);
+    bottom: var(--y);
+}
+.yang::after {
+    left: var(--x);
+    top: var(--y);
+}
+@keyframes loop {
+    from { transform: rotate(90deg); }
+    to { transform: rotate(-270deg); }
+}
+@keyframes yin {
+    from { background-color: var(--yin); }
+    50% { background-color: var(--yang); }
+    to { background-color: var(--yin); }
+}
+@keyframes yang {
+    from { background-color: var(--yang); }
+    50% { background-color: var(--yin); }
+    to { background-color: var(--yang); }
+}
+/**
+<!--https://mindon.dev -->
+<div class="yinyang">
+    <div class="yin"></div><div class="yang"></div>
+</div>
+**/
